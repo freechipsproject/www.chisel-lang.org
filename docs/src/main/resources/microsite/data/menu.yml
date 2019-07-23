@@ -1,0 +1,135 @@
+options:
+  - title: Chisel3
+    url: chisel3.html
+    menu_type: chisel3
+    menu_section: chisel3
+    nested_options:
+      - title: FAQs
+        url: chisel3/faqs.html
+      - title: Cookbook
+        url: chisel3/cookbook.html
+      - title: Troubleshooting
+        url: chisel3/troubleshooting
+  - title: Introduction
+    url: chisel3/introduction.html
+    menu_type: chisel3
+    menu_section: introduction
+  - title: Supported Hardware
+    url: chisel3/supported-hardware.html
+    menu_type: chisel3
+    menu_section: supported-hardware
+  - title: Data Types
+    url: chisel3/data-types.html
+    menu_type: chisel3
+    menu_section: data-types
+  - title: Combinational Circuits
+    url: chisel3/combinational-circuits.html
+    menu_type: chisel3
+    menu_section: combinational-circuits
+  - title: Operators
+    url: chisel3/operators.html
+    menu_type: chisel3
+    menu_section: operators
+  - title: Width Inference
+    url: chisel3/width-inference.html
+    menu_type: chisel3
+    menu_section: width-inference
+  - title: Functional Abstraction
+    url: chisel3/functional-abstraction.html
+    menu_type: chisel3
+    menu_section: functional-abstraction
+  - title: Bundles and Vecs
+    url: chisel3/bundles-and-vecs.html
+    menu_type: chisel3
+    menu_section: bundles-and-vecs
+  - title: Ports
+    url: chisel3/ports.html
+    menu_type: chisel3
+    menu_section: ports
+  - title: Modules
+    url: chisel3/modules.html
+    menu_type: chisel3
+    menu_section: modules
+  - title: Blackboxes
+    url: chisel3/blackboxes.html
+    menu_type: chisel3
+    menu_section: blackboxes
+  - title: Sequential Circuits
+    url: chisel3/sequential-circuits.html
+    menu_type: chisel3
+    menu_section: sequential-circuits
+  - title: Memories
+    url: chisel3/memories.html
+    menu_type: chisel3
+    menu_section: memories
+  - title: Interfaces and Connections
+    url: chisel3/interfaces-and-connections.html
+    menu_type: chisel3
+    menu_section: interfaces-and-connections
+  - title: Functional Module Creation
+    url: chisel3/functional-module-creation.html
+    menu_type: chisel3
+    menu_section: functional-module-creation
+  - title: Muxes and Input Selection
+    url: chisel3/muxes-and-input-selection.html
+    menu_type: chisel3
+    menu_section: muxes-and-input-selection
+  - title: Polymorphism and Parameterization
+    url: chisel3/polymorphism-and-parameterization.html
+    menu_type: chisel3
+    menu_section: polymorphism-and-parameterization
+  - title: Multiple Clock Domains
+    url: chisel3/multi-clock.html
+    menu_type: chisel3
+    menu_section: multi-clock
+  - title: Printing in Chisel
+    url: chisel3/printing.html
+    menu_type: chisel3
+    menu_section: printing
+  - title: Annotations
+    url: chisel3/annotations.html
+    menu_type: chisel3
+    menu_section: annotations
+  - title: Unconnected Wires
+    url: chisel3/unconnected-wires.html
+    menu_type: chisel3
+    menu_section: unconnected-wires
+  - title: Appendix
+    url: chisel3/chisel3-vs-chisel2.html
+    menu_type: chisel3
+    menu_section: appendix
+    nested_options:
+      - title: Chisel3 vs. Chisel3
+        url: chisel3/chisel3-vs-chisel2.html
+      - title: Experimental Features
+        url: chisel3/experimental-features.html
+  - title: Developers
+    url: chisel3/developers.html
+    menu_type: chisel3
+    menu_section: developers
+    nested_options:
+      - title: sbt Subproject
+        url: chisel3/sbt-subproject.html
+      - title: Test Coverage
+        url: chisel3/test-coverage.html
+  # FIRRTL tab/site
+  - title: FIRRTL
+    url: firrtl/README.html
+    menu_type: firrtl
+  - title: API Documentation
+    url: api/firrtl/index.html
+    menu_type: firrtl
+  # Treadle tab/site
+  - title: Treadle
+    url: treadle/README.html
+    menu_type: treadle
+  - title: API Documentation
+    url: api/treadle/index.html
+    menu_type: treadle
+  # Diagrammer tab/site
+  - title: Diagrammer
+    url: diagrammer/README.html
+    menu_type: diagrammer
+  - title: API Documentation
+    url: api/diagrammer/index.html
+    menu_type: diagrammer
