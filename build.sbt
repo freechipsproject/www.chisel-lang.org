@@ -10,13 +10,11 @@ val commonSettings = Seq.empty
 
 lazy val chisel = (project in file("chisel3"))
   .settings(commonSettings)
-  .settings(
-    scalacOptions in (ScalaUnidoc, unidoc) ++= docSourceUrl("chisel3"),
-    target in (Compile, doc) := baseDirectory.value / "foo/bar/baz/api")
+  .settings(scalacOptions ++= docSourceUrl("chisel3"))
 
 lazy val testers = (project in file("chisel-testers"))
   .settings(commonSettings)
-  .settings(scalacOptions in (ScalaUnidoc, unidoc) ++= docSourceUrl("chisel-testers"))
+  .settings(scalacOptions ++= docSourceUrl("chisel-testers"))
 
 fork := true
 
@@ -39,7 +37,7 @@ lazy val micrositeSettings = Seq(
   micrositeGithubRepo := "chisel3",
   micrositeGithubLinks := false,
   micrositeShareOnSocial := false,
-  micrositeDocumentationUrl := "api/chisel3",
+  micrositeDocumentationUrl := "api/chisel3/latest",
   micrositeDocumentationLabelDescription := "API Documentation",
   micrositeExtraMdFiles := Map(
     file("chisel3/README.md") -> ExtraMdFileConfig(
@@ -47,21 +45,26 @@ lazy val micrositeSettings = Seq(
       Map("title" -> "Home",
           "section" -> "home",
           "technologies" -> technologies)),
+    file("chisel-testers/README.md") -> ExtraMdFileConfig(
+      "chisel-testers/README.md", "docs",
+      Map("title" -> "Testers",
+          "section" -> "chisel-testers",
+          "position" -> "2")),
     file("firrtl/README.md") -> ExtraMdFileConfig(
       "firrtl/README.md", "docs",
       Map("title" -> "FIRRTL",
           "section" -> "firrtl",
-          "position" -> "2")),
+          "position" -> "3")),
     file("treadle/README.md") -> ExtraMdFileConfig(
       "treadle/README.md", "docs",
       Map("title" -> "Treadle",
           "section" -> "treadle",
-          "position" -> "3")),
+          "position" -> "4")),
     file("diagrammer/README.md") -> ExtraMdFileConfig(
       "diagrammer/README.md", "docs",
       Map("title" -> "Diagrammer",
           "section" -> "diagrammer",
-          "position" -> "4")),
+          "position" -> "5")),
   ),
   micrositeStaticDirectory := file("docs/target/site/api"),
   /* Known colors:
@@ -81,7 +84,6 @@ lazy val micrositeSettings = Seq(
   docsMappingsAPIDir := "api/chisel3",
   ghpagesNoJekyll := false,
   scalacOptions in (ScalaUnidoc, unidoc) ++= Seq(
-    // "-Xsource:2.11",
     "-groups",
     "-sourcepath",
     baseDirectory.in(LocalRootProject).value.getAbsolutePath,
