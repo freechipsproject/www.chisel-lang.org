@@ -4,7 +4,7 @@ scalaVersion = 2.12
 scalaMinorVersion = 6
 
 www-src = \
-	$(shell find docs/src/main/tut/ -name *.md) \
+	$(shell find docs/src/main/mdoc/ -name *.md) \
 	$(shell find docs/src/main/resources)
 chisel-src = $(shell find chisel3/ chisel-testers/ -name *.scala)
 
@@ -77,7 +77,7 @@ serve: all
 
 # Build the sbt-microsite
 docs/target/site/index.html: build.sbt $(www-src) $(chisel-src) $(api-copy)
-	sbt docs/makeMicrosite
+	sbt ++$(scalaVersion).$(scalaMinorVersion) docs/makeMicrosite
 
 # Build API of subprojects
 chisel3/target/scala-$(scalaVersion)/unidoc/index.html: $(shell find chisel3/src chisel-testers/src -name *.scala) | chisel3/.git chisel-testers/.git
@@ -137,7 +137,7 @@ $(buildDir)/firrtl/%/.git:
 $(buildDir)/chisel-testers/%/.git:
 	git clone "https://github.com/freechipsproject/chisel-testers.git" --depth 1 --branch $* $(dir $@)
 $(buildDir)/treadle/%/.git:
-	git clone "https://github.com/freechipsproject/treadle.git" --depth 1 --branch $* $(dir $@)
+p	git clone "https://github.com/freechipsproject/treadle.git" --depth 1 --branch $* $(dir $@)
 $(buildDir)/diagrammer/%/.git:
 	git clone "https://github.com/freechipsproject/diagrammer.git" --depth 1 --branch $* $(dir $@)
 docs/target/site/api/%/:

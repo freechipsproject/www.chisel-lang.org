@@ -4,8 +4,6 @@ import microsites.{MicrositeFavicon, ExtraMdFileConfig}
 
 import Version._
 
-scalaVersion := "2.12.6"
-
 val commonSettings = Seq.empty
 
 lazy val chisel = (project in file("chisel3"))
@@ -28,6 +26,7 @@ val technologies: String =
 lazy val docsMappingsAPIDir = settingKey[String]("Name of subdirectory in site target directory for api docs")
 
 lazy val micrositeSettings = Seq(
+  scalaVersion := "2.12.6",
   micrositeName := "Chisel/FIRRTL",
   micrositeDescription := "Chisel/FIRRTL\nHardware Compiler Framework",
   micrositeUrl := "https://chisel.eecs.berkeley.edu",
@@ -39,9 +38,11 @@ lazy val micrositeSettings = Seq(
   micrositeShareOnSocial := false,
   micrositeDocumentationUrl := "api/chisel3/latest",
   micrositeDocumentationLabelDescription := "API Documentation",
+  micrositeCompilingDocsTool := WithMdoc,
+  mdocIn := file("docs/src/main/mdoc"),
   micrositeExtraMdFiles := Map(
     file("chisel3/README.md") -> ExtraMdFileConfig(
-      "index.md", "home",
+      "chisel3/chisel3.md", "home",
       Map("title" -> "Home",
           "section" -> "home",
           "technologies" -> technologies)),
@@ -89,7 +90,6 @@ lazy val micrositeSettings = Seq(
     baseDirectory.in(LocalRootProject).value.getAbsolutePath,
     "-diagrams"
   ),
-  scalacOptions in Tut ~= (_.filterNot(Set("-Ywarn-unused-import", "-Ywarn-unused:imports", "-Ywarn-dead-code"))),
   git.remoteRepo := "git@github.com:freechipsproject/chisel3.git",
   includeFilter in makeSite := "*.html" | "*.css" | "*.png" | "*.jpg" | "*.gif" | "*.js" | "*.swf" | "*.yml" | "*.md" | "*.svg",
   includeFilter in Jekyll := (includeFilter in makeSite).value
@@ -104,4 +104,5 @@ lazy val docs = project
   .enablePlugins(MicrositesPlugin)
   .settings(commonSettings)
   .settings(micrositeSettings)
+  .settings(scalacOptions ++= (Seq("-Xsource:2.11")))
   .dependsOn(chisel)

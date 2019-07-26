@@ -16,7 +16,7 @@ defined as a *class* which:
 
 As an example, consider defining your own two-input multiplexer as a
 module:
-```tut:silent
+```scala mdoc:silent
 import chisel3._
 class Mux2IO extends Bundle {
   val sel = Input(UInt(1.W))
@@ -47,7 +47,7 @@ of smaller sub-modules.  For example, we can build a 4-input
 multiplexer module in terms of the ```Mux2``` module by wiring
 together three 2-input multiplexers:
 
-```tut:silent
+```scala mdoc:silent
 class Mux4IO extends Bundle {
   val in0 = Input(UInt(1.W))
   val in1 = Input(UInt(1.W))

@@ -7,15 +7,16 @@ Annotations are used to mark modules and their elements in a way that can be acc
 
 ### Imports
 We need a few basic imports to reference the components we need.  The chisel3 is a standard
-```scala
+```scala mdoc
 import chisel3._
+import chisel3.experimental.ChiselAnnotation
 import chisel3.internal.InstanceId
 import firrtl.{CircuitForm, CircuitState, LowForm, Transform}
 import firrtl.annotations.{Annotation, ModuleName, Named}
 ```
 ### Write a transform
 This is an identity transform that returns whatever it is passed without alteration.  See [Writing Firrtl Transforms](/ucb-bar/firrtl/wiki) for the gory details on writing transforms that actually do something.
-```scala
+```scala mdoc:silent
 class IdentityTransform extends Transform {
   override def inputForm: CircuitForm = LowForm
   override def outputForm: CircuitForm = LowForm
@@ -34,7 +35,7 @@ class IdentityTransform extends Transform {
 This creates a transform that operates on low Firrtl (LowForm) and returns low Firrtl.  ```getMyAnnotations``` returns a list of annotations for your pass.  This example does nothing with those annotations.
 ### Create an Annotation Factory
 The following creates an annotation that is connected to your transform, note the ```classOf[IdentityTransform]```.  The unapply is a convenience method for extracting information from your annotation by using the Scala ```match``` operator.
-```scala
+```scala mdoc:silent
 object IdentityAnnotation {
   def apply(target: Named, value: String): Annotation = Annotation(target, classOf[IdentityTransform], value)
 
@@ -52,7 +53,7 @@ An Annotator is a trait that only be applied to a Module.  It provides an abstra
 > The ```value``` passed to the Annotator does not have to be a string, but it must serializable into a string
 > for the ```value``` parameter of the ```ChiselAnnotation``` being created.
 
-```scala
+```scala mdoc:silent
 trait IdentityAnnotator {
   self: Module =>
   def identify(component: InstanceId, value: String): Unit = {
@@ -63,7 +64,7 @@ trait IdentityAnnotator {
 
 ### Using the Annotator
 Here is a module that uses our ```IdentityAnnotator```
-```scala
+```scala mdoc:silent
 class ModC(widthC: Int) extends Module with IdentityAnnotator {
   val io = IO(new Bundle {
     val in = Input(UInt(widthC.W))
@@ -76,4 +77,5 @@ class ModC(widthC: Int) extends Module with IdentityAnnotator {
   identify(io.out, s"ModC(ignore param)")
 }
 ```
+
 There are several things to note here.  ModC includes the ```with IdentityAnnotator``` which adds the identity method to it.  The ```identify(this, s"ModC($widthC)")``` annotates an instance of ModC as it is created.  It value annotations includes the ```widthC``` parameter to the constructor.  In this case that could be used to distinguish transformation behavior between different instances of ModC.  The ```identify(io.out, s"ModC(ignore param)")``` annotates io.out but with a fixed string.  In contrast the previous annotation, multiple instances of ModC would have result in a single ```io.out``` annotation here.

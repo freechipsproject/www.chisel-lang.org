@@ -2,7 +2,7 @@ options:
 
   # Chisel Site
   - title: Chisel3
-    url: chisel3.html
+    url: chisel3/chisel3.html
     menu_type: chisel3
     menu_section: chisel3
     nested_options:
