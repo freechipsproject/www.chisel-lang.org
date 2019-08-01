@@ -81,7 +81,7 @@ docs/target/site/index.html: build.sbt $(www-src) $(chisel-src) $(api-copy)
 
 # Build API of subprojects
 chisel3/target/scala-$(scalaVersion)/unidoc/index.html: $(shell find chisel3/src chisel-testers/src -name *.scala) | chisel3/.git chisel-testers/.git
-	sbt ++$(scalaVersion).$(scalaMinorVersion) unidoc
+	(cd chisel3/ && sbt ++$(scalaVersion).$(scalaMinorVersion) unidoc)
 firrtl/target/scala-$(scalaVersion)/unidoc/index.html: $(shell find firrtl/src -name *.scala) | firrtl/.git
 	(cd firrtl/ && sbt ++$(scalaVersion).$(scalaMinorVersion) unidoc)
 chisel-testers/target/scala-$(scalaVersion)/api/index.html: $(shell find chisel-testers/src -name *.scala) | chisel-testers/.git
