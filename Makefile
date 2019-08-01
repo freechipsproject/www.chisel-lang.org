@@ -53,7 +53,7 @@ apis-chisel: $(chiselTags:%=$(subprojects)/chisel3/%/target/scala-$(scalaVersion
 apis-firrtl: $(firrtlTags:%=$(subprojects)/firrtl/%/target/scala-$(scalaVersion)/unidoc/index.html)
 apis-testers: $(testersTags:%=$(subprojects)/chisel-testers/%/target/scala-$(scalaVersion)/api/index.html)
 apis-treadle: $(treadleTags:%=$(subprojects)/treadle/%/target/scala-$(scalaVersion)/api/index.html)
-apis-diagrammer: $(diagrammerTags:%=$(subprojects)/diagrammer/%/target/scala-$(scalaVersion)/api/index.html
+apis-diagrammer: $(diagrammerTags:%=$(subprojects)/diagrammer/%/target/scala-$(scalaVersion)/api/index.html)
 
 info:
 	@echo FIRRTL tags: $(call getTags,firrtl)

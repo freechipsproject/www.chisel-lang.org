@@ -1,8 +1,6 @@
 language: scala
 dist: xenial
 
-scala: 2.12.6
-
 cache:
   directories:
     $HOME/.ivy2
@@ -26,19 +24,22 @@ install:
   - gem update --system
   - gem install sass
   - gem install jekyll -v 3.8.5
-after_success:
-  - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then bash
-    scripts/publishMicrosite.sh; fi
-  - if [ "$TRAVIS_PULL_REQUEST" = "true" ]; then echo "Not in master branch, skipping
-    deploy and release"; fi
 
 jobs:
   include:
-    - stage: api
+    - stage: "Legacy APIs"
+      name: "Legacy Chisel APIs"
       script: make apis-chisel
     - script: make apis-firrtl
-    - script: make apis-chisel-testers
+      name: "Legacy FIRRTL APIs"
+    - script: make apis-testers
+      name: "Legacy Chisel Testers APIs"
     - script: make apis-treadle
+      name: "Legacy Treadle APIs"
     - script: make apis-diagrammer
-    - stage: site
-      script: make
+      name: "Legacy Diagrammer APIs"
+    - stage: "Website"
+      script:
+        - make
+        - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then bash scripts/publishMicrosite.sh; fi
+        - if [ "$TRAVIS_PULL_REQUEST" = "true" ]; then echo "Not in master branch, skipping deploy and release"; fi
