@@ -7,6 +7,11 @@ cache:
   directories:
     $HOME/.ivy2
     $HOME/.sbt
+    $HOME/apis
+    $HOME/.rvm/gems
+
+env:
+  - buildDir=$HOME/siteBuild
 
 branches:
   only:
@@ -21,10 +26,19 @@ install:
   - gem update --system
   - gem install sass
   - gem install jekyll -v 3.8.5
-script:
-  - make
 after_success:
   - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then bash
     scripts/publishMicrosite.sh; fi
   - if [ "$TRAVIS_PULL_REQUEST" = "true" ]; then echo "Not in master branch, skipping
     deploy and release"; fi
+
+jobs:
+  include:
+    - stage: api
+      script: make apis-chisel
+    - script: make apis-firrtl
+    - script: make apis-chisel-testers
+    - script: make apis-treadle
+    - script: make apis-diagrammer
+    - stage: site
+      script: make
