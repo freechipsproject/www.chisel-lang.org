@@ -20,7 +20,7 @@ Verilog parameters can be passed as an argument to the BlackBox constructor.
 
 For example, consider instantiating a Xilinx differential clock buffer (IBUFDS) in a Chisel design:
 
-```scala mdoc:silent
+```tut:silent
 import chisel3._
 import chisel3.util._
 import chisel3.experimental._ // To enable experimental features

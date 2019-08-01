@@ -38,34 +38,39 @@ lazy val micrositeSettings = Seq(
   micrositeShareOnSocial := false,
   micrositeDocumentationUrl := "api/chisel3/latest",
   micrositeDocumentationLabelDescription := "API Documentation",
-  micrositeCompilingDocsTool := WithMdoc,
-  mdocIn := file("docs/src/main/mdoc"),
+  /* mdoc doesn't work with extraMDFiles so this is disabled for now */
+  // micrositeCompilingDocsTool := WithMdoc,
+  // mdocIn := file("docs/src/main/mdoc"),
+  /* Copy markdown files from each of the submodules to build out the website:
+   * - Chisel3 README becomes the landing page
+   * - Other READMEs become the landing pages of each sub-project's documentation
+   */
   micrositeExtraMdFiles := Map(
     file("chisel3/README.md") -> ExtraMdFileConfig(
-      "chisel3/chisel3.md", "home",
+      "index.md", "home",
       Map("title" -> "Home",
           "section" -> "home",
           "technologies" -> technologies)),
     file("chisel-testers/README.md") -> ExtraMdFileConfig(
-      "chisel-testers/README.md", "docs",
+      "chisel-testers/index.md", "docs",
       Map("title" -> "Testers",
           "section" -> "chisel-testers",
           "position" -> "2")),
     file("firrtl/README.md") -> ExtraMdFileConfig(
-      "firrtl/README.md", "docs",
+      "firrtl/index.md", "docs",
       Map("title" -> "FIRRTL",
           "section" -> "firrtl",
           "position" -> "3")),
     file("treadle/README.md") -> ExtraMdFileConfig(
-      "treadle/README.md", "docs",
+      "treadle/index.md", "docs",
       Map("title" -> "Treadle",
           "section" -> "treadle",
           "position" -> "4")),
     file("diagrammer/README.md") -> ExtraMdFileConfig(
-      "diagrammer/README.md", "docs",
+      "diagrammer/index.md", "docs",
       Map("title" -> "Diagrammer",
           "section" -> "diagrammer",
-          "position" -> "5")),
+          "position" -> "5"))
   ),
   micrositeStaticDirectory := file("docs/target/site/api"),
   /* Known colors:

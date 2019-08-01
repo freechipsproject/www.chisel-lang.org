@@ -4,7 +4,7 @@ scalaVersion = 2.12
 scalaMinorVersion = 6
 
 www-src = \
-	$(shell find docs/src/main/mdoc/ -name *.md) \
+	$(shell find docs/src/main/tut/ -name *.md) \
 	$(shell find docs/src/main/resources)
 chisel-src = $(shell find chisel3/ chisel-testers/ -name *.scala)
 
