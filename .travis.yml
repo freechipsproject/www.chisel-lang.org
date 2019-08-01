@@ -11,6 +11,9 @@ cache:
 env:
   - buildDir=$HOME/siteBuild
 
+jdk:
+  - openjdk8
+
 branches:
   only:
     - master
