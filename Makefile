@@ -34,8 +34,8 @@ api-copy = \
 	$(treadleTags:%=docs/target/site/api/treadle/%/index.html) \
 	$(diagrammerTags:%=docs/target/site/api/diagrammer/%/index.html)
 
-.PHONY: all clean info mrproper serve \
-	apis-chisel apis-firrtl apis-testers apis-treadle apis-diagrammer
+.PHONY: all clean mrproper serve \
+	apis-chisel apis-firrtl apis-chisel-testers apis-treadle apis-diagrammer
 .PRECIOUS: \
 	$(subprojects)/chisel3/%/.git $(subprojects)/chisel3/%/target/scala-$(scalaVersion)/unidoc/index.html \
 	$(subprojects)/firrtl/%/.git $(subprojects)/firrtl/%/target/scala-$(scalaVersion)/unidoc/index.html \
@@ -51,19 +51,12 @@ api-copy = \
 # Build the site into the default directory (docs/target/site)
 all: docs/target/site/index.html
 
-# Build targets to build individual APIs
-apis-chisel: $(chiselTags:%=$(subprojects)/chisel3/%/target/scala-$(scalaVersion)/unidoc/index.html)
-apis-firrtl: $(firrtlTags:%=$(subprojects)/firrtl/%/target/scala-$(scalaVersion)/unidoc/index.html)
-apis-testers: $(testersTags:%=$(subprojects)/chisel-testers/%/target/scala-$(scalaVersion)/api/index.html)
-apis-treadle: $(treadleTags:%=$(subprojects)/treadle/%/target/scala-$(scalaVersion)/api/index.html)
-apis-diagrammer: $(diagrammerTags:%=$(subprojects)/diagrammer/%/target/scala-$(scalaVersion)/api/index.html)
-
-info:
-	@echo FIRRTL tags: $(call getTags,firrtl)
-	@echo Chisel tags: $(call getTags,chisel3)
-	@echo Testers tags: $(call getTags,chisel-testers)
-	@echo Diagrammer tags: $(call getTags,diagrammer)
-	@echo Treadle tags: $(call getTags,treadle)
+# Targets to build the legacy APIS of only a specific subproject
+apis-chisel: $(chiselTags:%=$(apis)/chisel3/%/index.html)
+apis-firrtl: $(firrtlTags:%=$(apis)/firrtl/%/index.html)
+apis-chisel-testers: $(testersTags:%=$(apis)/chisel-testers/%/index.html)
+apis-treadle: $(treadleTags:%=$(apis)/treadle/%/index.html)
+apis-diagrammer: $(diagrammerTags:%=$(apis)/diagrammer/%/index.html)
 
 # Remove the output of all build targets
 clean:
@@ -94,16 +87,16 @@ diagrammer/target/scala-$(scalaVersion)/api/index.html: $(shell find diagrammer/
 	(cd diagrammer/ && sbt ++$(scalaVersion).$(scalaMinorVersion) doc)
 
 # Copy built API into site
-docs/target/site/api/chisel3/latest/index.html: chisel3/target/scala-$(scalaVersion)/unidoc/index.html | docs/target/site/api/chisel3/
-	cp -r $(dir $<) $(dir $@)
-docs/target/site/api/firrtl/latest/index.html: firrtl/target/scala-$(scalaVersion)/unidoc/index.html | docs/target/site/api/firrtl/
-	cp -r $(dir $<) $(dir $@)
-docs/target/site/api/treadle/latest/index.html: treadle/target/scala-$(scalaVersion)/api/index.html | docs/target/site/api/treadle/
-	cp -r $(dir $<) $(dir $@)
-docs/target/site/api/chisel-testers/latest/index.html: chisel-testers/target/scala-$(scalaVersion)/api/index.html | docs/target/site/api/chisel-testers/
-	cp -r $(dir $<) $(dir $@)
-docs/target/site/api/diagrammer/latest/index.html: diagrammer/target/scala-$(scalaVersion)/api/index.html | docs/target/site/api/diagrammer/
-	cp -r $(dir $<) $(dir $@)
+docs/target/site/api/chisel3/latest/index.html: chisel3/target/scala-$(scalaVersion)/unidoc/index.html | docs/target/site/api/chisel3/latest/
+	cp -r $(dir $<)* $(dir $@)
+docs/target/site/api/firrtl/latest/index.html: firrtl/target/scala-$(scalaVersion)/unidoc/index.html | docs/target/site/api/firrtl/latest/
+	cp -r $(dir $<)* $(dir $@)
+docs/target/site/api/treadle/latest/index.html: treadle/target/scala-$(scalaVersion)/api/index.html | docs/target/site/api/treadle/latest/
+	cp -r $(dir $<)* $(dir $@)
+docs/target/site/api/chisel-testers/latest/index.html: chisel-testers/target/scala-$(scalaVersion)/api/index.html | docs/target/site/api/chisel-testers/latest/
+	cp -r $(dir $<)* $(dir $@)
+docs/target/site/api/diagrammer/latest/index.html: diagrammer/target/scala-$(scalaVersion)/api/index.html | docs/target/site/api/diagrammer/latest/
+	cp -r $(dir $<)* $(dir $@)
 
 # Build *old* API of subprojects
 $(subprojects)/chisel3/%/target/scala-$(scalaVersion)/unidoc/index.html: $(subprojects)/chisel3/%/.git
@@ -119,27 +112,27 @@ $(subprojects)/diagrammer/%/target/scala-$(scalaVersion)/api/index.html: $(subpr
 
 # Copy *old* API of subprojects into API diretory
 $(apis)/chisel3/%/index.html: $(subprojects)/chisel3/%/target/scala-$(scalaVersion)/unidoc/index.html | $(apis)/chisel3/%/
-	cp -r $(dir $<) $(dir $@)
+	cp -r $(dir $<)* $(dir $@)
 $(apis)/firrtl/%/index.html: $(subprojects)/firrtl/%/target/scala-$(scalaVersion)/unidoc/index.html | $(apis)/firrtl/%/
-	cp -r $(dir $<) $(dir $@)
+	cp -r $(dir $<)* $(dir $@)
 $(apis)/chisel-testers/%/index.html: $(subprojects)/chisel-testers/%/target/scala-$(scalaVersion)/api/index.html | $(apis)/chisel-testers/%/
-	cp -r $(dir $<) $(dir $@)
+	cp -r $(dir $<)* $(dir $@)
 $(apis)/treadle/%/index.html: $(subprojects)/treadle/%/target/scala-$(scalaVersion)/api/index.html | $(apis)/treadle/%/
-	cp -r $(dir $<) $(dir $@)
+	cp -r $(dir $<)* $(dir $@)
 $(apis)/diagrammer/%/index.html: $(subprojects)/diagrammer/%/target/scala-$(scalaVersion)/api/index.html | $(apis)/diagrammer/%/
-	cp -r $(dir $<) $(dir $@)
+	cp -r $(dir $<)* $(dir $@)
 
 # Copy *old* API of subprojects from API directory into website
 docs/target/site/api/chisel3/%/index.html: $(apis)/chisel3/%/index.html | docs/target/site/api/chisel3/%/
-	cp -r $(dir $<) $(dir $@)
+	cp -r $(dir $<)* $(dir $@)
 docs/target/site/api/firrtl/%/index.html: $(apis)/firrtl/%/index.html | docs/target/site/api/firrtl/%/
-	cp -r $(dir $<) $(dir $@)
+	cp -r $(dir $<)* $(dir $@)
 docs/target/site/api/chisel-testers/%/index.html: $(apis)/chisel-testers/%/index.html | docs/target/site/api/chisel-testers/%/
-	cp -r $(dir $<) $(dir $@)
+	cp -r $(dir $<)* $(dir $@)
 docs/target/site/api/treadle/%/index.html: $(apis)/treadle/%/index.html | docs/target/site/api/treadle/%/
-	cp -r $(dir $<) $(dir $@)
+	cp -r $(dir $<)* $(dir $@)
 docs/target/site/api/diagrammer/%/index.html: $(apis)/diagrammer/%/index.html | docs/target/site/api/diagrammer/%/
-	cp -r $(dir $<) $(dir $@)
+	cp -r $(dir $<)* $(dir $@)
 
 # Utilities to either fetch submodules or create directories
 %/.git:
@@ -154,7 +147,23 @@ $(subprojects)/treadle/%/.git:
 	git clone "https://github.com/freechipsproject/treadle.git" --depth 1 --branch $* $(dir $@)
 $(subprojects)/diagrammer/%/.git:
 	git clone "https://github.com/freechipsproject/diagrammer.git" --depth 1 --branch $* $(dir $@)
-$(apis)/chisel3/%/ $(apis)/firrtl/%/ $(apis)/chisel-testers/%/ $(apis)/treadle/%/ $(apis)/diagrammer/%/:
+$(apis)/chisel3/%/:
 	mkdir -p $@
-docs/target/site/api/chisel3/%/ docs/target/site/api/firrtl/%/ docs/target/site/api/chisel-testers/%/ docs/target/site/api/treadle/%/ docs/target/site/api/diagrammer/%/:
+$(apis)/firrtl/%/:
+	mkdir -p $@
+$(apis)/chisel-testers/%/:
+	mkdir -p $@
+$(apis)/treadle/%/:
+	mkdir -p $@
+$(apis)/diagrammer/%/:
+	mkdir -p $@
+docs/target/site/api/chisel3/%/:
+	mkdir -p $@
+docs/target/site/api/firrtl/%/:
+	mkdir -p $@
+docs/target/site/api/chisel-testers/%/:
+	mkdir -p $@
+docs/target/site/api/treadle/%/:
+	mkdir -p $@
+docs/target/site/api/diagrammer/%/:
 	mkdir -p $@

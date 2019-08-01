@@ -5,11 +5,11 @@ cache:
   directories:
     $HOME/.ivy2
     $HOME/.sbt
-    $HOME/apis
     $HOME/.rvm/gems
+    $HOME/apis/api
 
 env:
-  - buildDir=$HOME/siteBuild
+  - buildDir=$HOME/apis
 
 jdk:
   - openjdk8
@@ -35,13 +35,14 @@ jobs:
       script: make apis-chisel
     - script: make apis-firrtl
       name: "firrtl"
-    - script: make apis-testers
+    - script: make apis-chisel-testers
       name: "chisel-testers (iotesters)"
     - script: make apis-treadle
       name: "treadle"
     - script: make apis-diagrammer
       name: "diagrammer"
     - stage: "Website"
+      name: "Latest API and sbt-microsite"
       script:
         - make
         - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then bash scripts/publishMicrosite.sh; fi
