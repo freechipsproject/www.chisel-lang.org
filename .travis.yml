@@ -28,16 +28,16 @@ install:
 jobs:
   include:
     - stage: "Legacy APIs"
-      name: "Legacy Chisel APIs"
+      name: "chisel3"
       script: make apis-chisel
     - script: make apis-firrtl
-      name: "Legacy FIRRTL APIs"
+      name: "firrtl"
     - script: make apis-testers
-      name: "Legacy Chisel Testers APIs"
+      name: "chisel-testers (iotesters)"
     - script: make apis-treadle
-      name: "Legacy Treadle APIs"
+      name: "treadle"
     - script: make apis-diagrammer
-      name: "Legacy Diagrammer APIs"
+      name: "diagrammer"
     - stage: "Website"
       script:
         - make

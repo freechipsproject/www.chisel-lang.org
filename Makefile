@@ -43,7 +43,10 @@ api-copy = \
 	$(subprojects)/treadle/%/.git $(subprojects)/treadle/%/target/scala-$(scalaVersion)/api/index.html \
 	$(subprojects)/diagrammer/%/.git $(subprojects)/diagrammer/%/target/scala-$(scalaVersion)/api/index.html \
 	$(apis)/chisel3/%/index.html $(apis)/firrtl/%/index.html $(apis)/chisel-testers/%/index.html \
-	$(apis)/treadle/%/index.html $(apis)/diagrammer/%/index.html
+	$(apis)/treadle/%/index.html $(apis)/diagrammer/%/index.html \
+	docs/target/site/api/chisel3/%/ docs/target/site/api/firrtl/%/ docs/target/site/api/chisel-testers/%/ \
+	docs/target/site/api/treadle/%/ docs/target/site/api/diagrammer/%/ \
+	$(apis)/chisel3/%/ $(apis)/firrtl/%/ $(apis)/chisel-testers/%/ $(apis)/treadle/%/ $(apis)/diagrammer/%/
 
 # Build the site into the default directory (docs/target/site)
 all: docs/target/site/index.html
@@ -115,27 +118,27 @@ $(subprojects)/diagrammer/%/target/scala-$(scalaVersion)/api/index.html: $(subpr
 	(cd $(subprojects)/diagrammer/$* && sbt ++$(scalaVersion).$(scalaMinorVersion) doc)
 
 # Copy *old* API of subprojects into API diretory
-$(apis)/chisel3/%/index.html: $(subprojects)/chisel3/%/target/scala-$(scalaVersion)/unidoc/index.html
+$(apis)/chisel3/%/index.html: $(subprojects)/chisel3/%/target/scala-$(scalaVersion)/unidoc/index.html | $(apis)/chisel3/%/
 	cp -r $(dir $<) $(dir $@)
-$(apis)/firrtl/%/index.html: $(subprojects)/firrtl/%/target/scala-$(scalaVersion)/unidoc/index.html
+$(apis)/firrtl/%/index.html: $(subprojects)/firrtl/%/target/scala-$(scalaVersion)/unidoc/index.html | $(apis)/firrtl/%/
 	cp -r $(dir $<) $(dir $@)
-$(apis)/chisel-testers/%/index.html: $(subprojects)/chisel-testers/%/target/scala-$(scalaVersion)/api/index.html
+$(apis)/chisel-testers/%/index.html: $(subprojects)/chisel-testers/%/target/scala-$(scalaVersion)/api/index.html | $(apis)/chisel-testers/%/
 	cp -r $(dir $<) $(dir $@)
-$(apis)/treadle/%/index.html: $(subprojects)/treadle/%/target/scala-$(scalaVersion)/api/index.html
+$(apis)/treadle/%/index.html: $(subprojects)/treadle/%/target/scala-$(scalaVersion)/api/index.html | $(apis)/treadle/%/
 	cp -r $(dir $<) $(dir $@)
-$(apis)/diagrammer/%/index.html: $(subprojects)/diagrammer/%/target/scala-$(scalaVersion)/api/index.html
+$(apis)/diagrammer/%/index.html: $(subprojects)/diagrammer/%/target/scala-$(scalaVersion)/api/index.html | $(apis)/diagrammer/%/
 	cp -r $(dir $<) $(dir $@)
 
 # Copy *old* API of subprojects from API directory into website
-docs/target/site/api/chisel3/%/index.html: $(apis)/chisel3/%/index.html
+docs/target/site/api/chisel3/%/index.html: $(apis)/chisel3/%/index.html | docs/target/site/api/chisel3/%/
 	cp -r $(dir $<) $(dir $@)
-docs/target/site/api/firrtl/%/index.html: $(apis)/firrtl/%/index.html
+docs/target/site/api/firrtl/%/index.html: $(apis)/firrtl/%/index.html | docs/target/site/api/firrtl/%/
 	cp -r $(dir $<) $(dir $@)
-docs/target/site/api/chisel-testers/%/index.html: $(apis)/chisel-testers/%/index.html
+docs/target/site/api/chisel-testers/%/index.html: $(apis)/chisel-testers/%/index.html | docs/target/site/api/chisel-testers/%/
 	cp -r $(dir $<) $(dir $@)
-docs/target/site/api/treadle/%/index.html: $(apis)/treadle/%/index.html
+docs/target/site/api/treadle/%/index.html: $(apis)/treadle/%/index.html | docs/target/site/api/treadle/%/
 	cp -r $(dir $<) $(dir $@)
-docs/target/site/api/diagrammer/%/index.html: $(apis)/diagrammer/%/index.html
+docs/target/site/api/diagrammer/%/index.html: $(apis)/diagrammer/%/index.html | docs/target/site/api/diagrammer/%/
 	cp -r $(dir $<) $(dir $@)
 
 # Utilities to either fetch submodules or create directories
@@ -151,5 +154,7 @@ $(subprojects)/treadle/%/.git:
 	git clone "https://github.com/freechipsproject/treadle.git" --depth 1 --branch $* $(dir $@)
 $(subprojects)/diagrammer/%/.git:
 	git clone "https://github.com/freechipsproject/diagrammer.git" --depth 1 --branch $* $(dir $@)
-docs/target/site/api/%/:
+$(apis)/chisel3/%/ $(apis)/firrtl/%/ $(apis)/chisel-testers/%/ $(apis)/treadle/%/ $(apis)/diagrammer/%/:
+	mkdir -p $@
+docs/target/site/api/chisel3/%/ docs/target/site/api/firrtl/%/ docs/target/site/api/chisel-testers/%/ docs/target/site/api/treadle/%/ docs/target/site/api/diagrammer/%/:
 	mkdir -p $@
