@@ -3,13 +3,17 @@ dist: xenial
 
 cache:
   directories:
-    $HOME/.ivy2
-    $HOME/.sbt
-    $HOME/.rvm/gems
-    $HOME/apis/api
+    - $HOME/.ivy2
+    - $HOME/.sbt
+    - $HOME/.rvm/gems
+    - $HOME/build/api/chisel3
+    - $HOME/build/api/firrtl
+    - $HOME/build/api/chisel-testers
+    - $HOME/build/api/treadle
+    - $HOME/build/api/diagrammer
 
 env:
-  - buildDir=$HOME/apis
+  - buildDir=$HOME/build
 
 jdk:
   - openjdk8
