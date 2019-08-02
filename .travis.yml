@@ -28,35 +28,6 @@ branches:
 
 jobs:
   include:
-    - stage: "Legacy APIs"
-      name: "chisel3"
-      script:
-        - make -n --debug apis-chisel
-        - make apis-chisel
-        - make -n --debug apis-chisel
-    - script:
-        - make -n --debug apis-firrtl
-        - make apis-firrtl
-        - make -n --debug apis-firrtl
-      name: "firrtl"
-    - script:
-        - make -n --debug apis-chisel-testers
-        - make apis-chisel-testers
-        - make -n --debug apis-chisel-testers
-      name: "chisel-testers (iotesters)"
-    - script:
-        - make -n --debug apis-treadle
-        - make apis-treadle
-        - make -n --debug apis-treadle
-      name: "treadle"
-    - script:
-        - make -n --debug apis-diagrammer
-        - make apis-diagrammer
-        - make -n --debug apis-diagrammer
-      name: "diagrammer"
-    - stage: "Inspect Cache"
-      script:
-        - find $buildDir/api -maxdepth 2
     - stage: "Website"
       name: "Latest API and sbt-microsite"
       script:
