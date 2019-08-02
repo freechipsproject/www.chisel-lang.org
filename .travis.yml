@@ -18,6 +18,10 @@ env:
 jdk:
   - openjdk8
 
+# The Makefile will take care of fetching submodules
+git:
+  submodules: false
+
 branches:
   only:
     - master

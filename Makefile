@@ -75,7 +75,7 @@ docs/target/site/index.html: build.sbt $(www-src) $(chisel-src) $(api-copy)
 	sbt ++$(scalaVersion).$(scalaMinorVersion) docs/makeMicrosite
 
 # Build API of subprojects
-chisel3/target/scala-$(scalaVersion)/unidoc/index.html: $(shell find chisel3/src chisel-testers/src -name *.scala) | chisel3/.git chisel-testers/.git
+chisel3/target/scala-$(scalaVersion)/unidoc/index.html: $(shell find chisel3/src chisel-testers/src -name *.scala) | chisel3/.git
 	(cd chisel3/ && sbt ++$(scalaVersion).$(scalaMinorVersion) unidoc)
 firrtl/target/scala-$(scalaVersion)/unidoc/index.html: $(shell find firrtl/src -name *.scala) | firrtl/.git
 	(cd firrtl/ && sbt ++$(scalaVersion).$(scalaMinorVersion) unidoc)
@@ -136,7 +136,7 @@ docs/target/site/api/diagrammer/%/index.html: $(apis)/diagrammer/%/index.html | 
 
 # Utilities to either fetch submodules or create directories
 %/.git:
-	git submodule update --init $*
+	git submodule update --init --depth 1 $*
 $(subprojects)/chisel3/%/.git:
 	git clone "https://github.com/freechipsproject/chisel3.git" --depth 1 --branch $* $(dir $@)
 $(subprojects)/firrtl/%/.git:
