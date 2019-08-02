@@ -45,6 +45,8 @@ jobs:
       name: "treadle"
     - script: make apis-diagrammer
       name: "diagrammer"
+    - stage: "Inspect Cache"
+      script: find $buildDir/api -maxdepth 3 -name index.html
     - stage: "Website"
       name: "Latest API and sbt-microsite"
       script:
