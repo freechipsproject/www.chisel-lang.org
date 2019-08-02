@@ -26,17 +26,33 @@ jobs:
   include:
     - stage: "Legacy APIs"
       name: "chisel3"
-      script: make apis-chisel
-    - script: make apis-firrtl
+      script:
+        - make -n --debug apis-chisel
+        - make apis-chisel
+        - make -n --debug apis-chisel
+    - script:
+        - make -n --debug apis-firrtl
+        - make apis-firrtl
+        - make -n --debug apis-firrtl
       name: "firrtl"
-    - script: make apis-chisel-testers
+    - script:
+        - make -n --debug apis-chisel-testers
+        - make apis-chisel-testers
+        - make -n --debug apis-chisel-testers
       name: "chisel-testers (iotesters)"
-    - script: make apis-treadle
+    - script:
+        - make -n --debug apis-treadle
+        - make apis-treadle
+        - make -n --debug apis-treadle
       name: "treadle"
-    - script: make apis-diagrammer
+    - script:
+        - make -n --debug apis-diagrammer
+        - make apis-diagrammer
+        - make -n --debug apis-diagrammer
       name: "diagrammer"
     - stage: "Inspect Cache"
-      script: find $buildDir/api -maxdepth 3 -name index.html
+      script:
+        - find $buildDir/api -maxdepth 2
     - stage: "Website"
       name: "Latest API and sbt-microsite"
       script:
@@ -46,6 +62,8 @@ jobs:
         - gem update --system
         - gem install sass
         - gem install jekyll -v 3.8.5
+        - make -n --debug
         - make
+        - make -n --debug
         - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then bash scripts/publishMicrosite.sh; fi
         - if [ "$TRAVIS_PULL_REQUEST" = "true" ]; then echo "Not in master branch, skipping deploy and release"; fi

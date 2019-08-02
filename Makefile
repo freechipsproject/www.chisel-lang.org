@@ -99,15 +99,15 @@ docs/target/site/api/diagrammer/latest/index.html: diagrammer/target/scala-$(sca
 	cp -r $(dir $<)* $(dir $@)
 
 # Build *old* API of subprojects
-$(subprojects)/chisel3/%/target/scala-$(scalaVersion)/unidoc/index.html: $(subprojects)/chisel3/%/.git
+$(subprojects)/chisel3/%/target/scala-$(scalaVersion)/unidoc/index.html: | $(subprojects)/chisel3/%/.git
 	(cd $(subprojects)/chisel3/$* && sbt ++$(scalaVersion).$(scalaMinorVersion) unidoc)
-$(subprojects)/firrtl/%/target/scala-$(scalaVersion)/unidoc/index.html: $(subprojects)/firrtl/%/.git
+$(subprojects)/firrtl/%/target/scala-$(scalaVersion)/unidoc/index.html: | $(subprojects)/firrtl/%/.git
 	(cd $(subprojects)/firrtl/$* && sbt ++$(scalaVersion).$(scalaMinorVersion) unidoc)
-$(subprojects)/chisel-testers/%/target/scala-$(scalaVersion)/api/index.html: $(subprojects)/chisel-testers/%/.git
+$(subprojects)/chisel-testers/%/target/scala-$(scalaVersion)/api/index.html: | $(subprojects)/chisel-testers/%/.git
 	(cd $(subprojects)/chisel-testers/$* && sbt ++$(scalaVersion).$(scalaMinorVersion) doc)
-$(subprojects)/treadle/%/target/scala-$(scalaVersion)/api/index.html: $(subprojects)/treadle/%/.git
+$(subprojects)/treadle/%/target/scala-$(scalaVersion)/api/index.html: | $(subprojects)/treadle/%/.git
 	(cd $(subprojects)/treadle/$* && sbt ++$(scalaVersion).$(scalaMinorVersion) doc)
-$(subprojects)/diagrammer/%/target/scala-$(scalaVersion)/api/index.html: $(subprojects)/diagrammer/%/.git
+$(subprojects)/diagrammer/%/target/scala-$(scalaVersion)/api/index.html: | $(subprojects)/diagrammer/%/.git
 	(cd $(subprojects)/diagrammer/$* && sbt ++$(scalaVersion).$(scalaMinorVersion) doc)
 
 # Copy *old* API of subprojects into API diretory
