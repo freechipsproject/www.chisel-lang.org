@@ -27,8 +27,17 @@ branches:
 
 jobs:
   include:
-    - stage: "Website"
-      name: "Latest API and sbt-microsite"
+    - stage: "legacy chisel apis"
+      script: make apis-chisel
+    - stage: "legacy firrtl apis"
+      script: make apis-firrtl
+    - stage: "legacy chisel-testers (iotesters) apis"
+      script: make apis-chisel-testers
+    - stage: "legacy treadle apis"
+      script: make apis-treadle
+    - stage: "legacy diagrammer apis"
+      script: make apis-diagrammer
+    - stage: "website"
       script:
         - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then bash scripts/decrypt-keys.sh; fi
         - export PATH=${PATH}:./vendor/bundle
@@ -37,8 +46,6 @@ jobs:
         - gem install sass
         - gem install jekyll -v 3.8.5
         - git submodule update --init --recursive
-        - make -n --debug
         - make
-        - make -n --debug
         - if [ "$TRAVIS_BRANCH" = "master" -a "$TRAVIS_PULL_REQUEST" = "false" ]; then bash scripts/publishMicrosite.sh; fi
         - if [ "$TRAVIS_PULL_REQUEST" = "true" ]; then echo "Not in master branch, skipping deploy and release"; fi
