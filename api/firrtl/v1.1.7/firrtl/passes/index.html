@@ -1,0 +1,1330 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>firrtl 1.1.7 - firrtl.passes</title>
+          <meta name="description" content="firrtl 1.1.7 - firrtl.passes" />
+          <meta name="keywords" content="firrtl 1.1.7 firrtl.passes" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../lib/index.js"></script>
+      <script type="text/javascript" src="../../index.js"></script>
+      <script type="text/javascript" src="../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../lib/template.js"></script>
+      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">firrtl<span id="doc-version">1.1.7</span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="index.html#_root_" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="This is the documentation for Firrtl." href="../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">This is the documentation for Firrtl.</p><div class="fullcomment"><div class="comment cmt"><p>This is the documentation for Firrtl.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.firrtl" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="firrtl"></a><a id="firrtl:firrtl"></a>
+      <span class="permalink">
+      <a href="index.html#firrtl" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">firrtl</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="firrtl.altIR" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="altIR"></a><a id="altIR:altIR"></a>
+      <span class="permalink">
+      <a href="../firrtl/index.html#altIR" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../altIR/index.html"><span class="name">altIR</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
+    </li><li name="firrtl.analyses" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="analyses"></a><a id="analyses:analyses"></a>
+      <span class="permalink">
+      <a href="../firrtl/index.html#analyses" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../analyses/index.html"><span class="name">analyses</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
+    </li><li name="firrtl.annotations" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="annotations"></a><a id="annotations:annotations"></a>
+      <span class="permalink">
+      <a href="../firrtl/index.html#annotations" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../annotations/index.html"><span class="name">annotations</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
+    </li><li name="firrtl.antlr" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="antlr"></a><a id="antlr:antlr"></a>
+      <span class="permalink">
+      <a href="../firrtl/index.html#antlr" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../antlr/index.html"><span class="name">antlr</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
+    </li><li name="firrtl.graph" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="graph"></a><a id="graph:graph"></a>
+      <span class="permalink">
+      <a href="../firrtl/index.html#graph" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../graph/index.html"><span class="name">graph</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
+    </li><li name="firrtl.ir" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ir"></a><a id="ir:ir"></a>
+      <span class="permalink">
+      <a href="../firrtl/index.html#ir" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../ir/index.html"><span class="name">ir</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
+    </li><li name="firrtl.passes" visbl="pub" class="indented2 current" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="passes"></a><a id="passes:passes"></a>
+      <span class="permalink">
+      <a href="../firrtl/index.html#passes" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">passes</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
+    </li><li name="firrtl.passes.clocklist" visbl="pub" class="indented3 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="clocklist"></a><a id="clocklist:clocklist"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#clocklist" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="clocklist/index.html"><span class="name">clocklist</span></a>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.memlib" visbl="pub" class="indented3 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="memlib"></a><a id="memlib:memlib"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#memlib" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="memlib/index.html"><span class="name">memlib</span></a>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.wiring" visbl="pub" class="indented3 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="wiring"></a><a id="wiring:wiring"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#wiring" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="wiring/index.html"><span class="name">wiring</span></a>
+      </span>
+      
+      
+    </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="CInferMDir$.html" title=""></a>
+                        <a href="CInferMDir$.html" title="">CInferMDir</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="CInferTypes$.html" title=""></a>
+                        <a href="CInferTypes$.html" title="">CInferTypes</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="CheckChirrtl$.html" title=""></a>
+                        <a href="CheckChirrtl$.html" title="">CheckChirrtl</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="CheckGenders$.html" title=""></a>
+                        <a href="CheckGenders$.html" title="">CheckGenders</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="CheckHighForm$.html" title=""></a>
+                        <a href="CheckHighForm$.html" title="">CheckHighForm</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="CheckInitialization$.html" title="Reports errors for any references that are not fully initialized"></a>
+                        <a href="CheckInitialization$.html" title="Reports errors for any references that are not fully initialized">CheckInitialization</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="CheckTypes$.html" title=""></a>
+                        <a href="CheckTypes$.html" title="">CheckTypes</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="CheckWidths$.html" title=""></a>
+                        <a href="CheckWidths$.html" title="">CheckWidths</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="CommonSubexpressionElimination$.html" title=""></a>
+                        <a href="CommonSubexpressionElimination$.html" title="">CommonSubexpressionElimination</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="ConvertFixedToSInt$.html" title="Replaces FixedType with SIntType, and correctly aligns all binary points"></a>
+                        <a href="ConvertFixedToSInt$.html" title="Replaces FixedType with SIntType, and correctly aligns all binary points">ConvertFixedToSInt</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="DataRef.html" title=""></a>
+                        <a href="DataRef.html" title="">DataRef</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="DeadCodeElimination$.html" title=""></a>
+                        <a href="DeadCodeElimination$.html" title="">DeadCodeElimination</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="Errors.html" title=""></a>
+                        <a href="Errors.html" title="">Errors</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="ExpandConnects$.html" title=""></a>
+                        <a href="ExpandConnects$.html" title="">ExpandConnects</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="ExpandWhens$.html" title="Expand Whens"></a>
+                        <a href="ExpandWhens$.html" title="Expand Whens">ExpandWhens</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="InferTypes$.html" title=""></a>
+                        <a href="InferTypes$.html" title="">InferTypes</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="InferWidths$.html" title=""></a>
+                        <a href="InferWidths$.html" title="">InferWidths</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="InlineAnnotation.html" title="Indicates that something should be inlined"></a>
+                        <a href="InlineAnnotation.html" title="Indicates that something should be inlined">InlineAnnotation</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="InlineInstances.html" title=""></a>
+                        <a href="InlineInstances.html" title="">InlineInstances</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="Legalize$.html" title=""></a>
+                        <a href="Legalize$.html" title="">Legalize</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="LowerTypes$.html" title="Removes all aggregate types from a firrtl.ir.Circuit"></a>
+                        <a href="LowerTypes$.html" title="Removes all aggregate types from a firrtl.ir.Circuit">LowerTypes</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="MPort.html" title=""></a>
+                        <a href="MPort.html" title="">MPort</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="MPorts.html" title=""></a>
+                        <a href="MPorts.html" title="">MPorts</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="MemPortUtils$.html" title=""></a>
+                        <a href="MemPortUtils$.html" title="">MemPortUtils</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="PadWidths$.html" title=""></a>
+                        <a href="PadWidths$.html" title="">PadWidths</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="Pass.html" title="Pass is simple transform that is generally part of a larger Transform Has an UnknownForm, because larger Transform should specify form"></a>
+                        <a href="Pass.html" title="Pass is simple transform that is generally part of a larger Transform Has an UnknownForm, because larger Transform should specify form">Pass</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="PassException.html" title=""></a>
+                        <a href="PassException.html" title="">PassException</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="PassExceptions.html" title=""></a>
+                        <a href="PassExceptions.html" title="">PassExceptions</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="PullMuxes$.html" title=""></a>
+                        <a href="PullMuxes$.html" title="">PullMuxes</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="RemoveAccesses$.html" title="Removes all firrtl.WSubAccess from circuit"></a>
+                        <a href="RemoveAccesses$.html" title="Removes all firrtl.WSubAccess from circuit">RemoveAccesses</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="RemoveCHIRRTL$.html" title=""></a>
+                        <a href="RemoveCHIRRTL$.html" title="">RemoveCHIRRTL</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="RemoveEmpty$.html" title=""></a>
+                        <a href="RemoveEmpty$.html" title="">RemoveEmpty</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="RemoveValidIf$.html" title="Remove ValidIf and replace IsInvalid with a connection to zero"></a>
+                        <a href="RemoveValidIf$.html" title="Remove ValidIf and replace IsInvalid with a connection to zero">RemoveValidIf</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="ReplaceAccesses$.html" title="Replaces constant firrtl.WSubAccess with firrtl.WSubIndex TODO Fold in to High Firrtl Const Prop"></a>
+                        <a href="ReplaceAccesses$.html" title="Replaces constant firrtl.WSubAccess with firrtl.WSubIndex TODO Fold in to High Firrtl Const Prop">ReplaceAccesses</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="ResolveGenders$.html" title=""></a>
+                        <a href="ResolveGenders$.html" title="">ResolveGenders</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="ResolveKinds$.html" title=""></a>
+                        <a href="ResolveKinds$.html" title="">ResolveKinds</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="SplitExpressions$.html" title=""></a>
+                        <a href="SplitExpressions$.html" title="">SplitExpressions</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="ToWorkingIR$.html" title=""></a>
+                        <a href="ToWorkingIR$.html" title="">ToWorkingIR</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="Uniquify$.html" title="Resolve name collisions that would occur in LowerTypes"></a>
+                        <a href="Uniquify$.html" title="Resolve name collisions that would occur in LowerTypes">Uniquify</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="VerilogModulusCleanup$.html" title="Verilog has the width of (a % b) = Max(W(a), W(b)) FIRRTL has the width of (a % b) = Min(W(a), W(b)), which makes more sense, but nevertheless is a problem when emitting verilog"></a>
+                        <a href="VerilogModulusCleanup$.html" title="Verilog has the width of (a % b) = Max(W(a), W(b)) FIRRTL has the width of (a % b) = Min(W(a), W(b)), which makes more sense, but nevertheless is a problem when emitting verilog">VerilogModulusCleanup</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="VerilogPrep$.html" title="Makes changes to the Firrtl AST to make Verilog emission easier"></a>
+                        <a href="VerilogPrep$.html" title="Makes changes to the Firrtl AST to make Verilog emission easier">VerilogPrep</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="VerilogRename$.html" title=""></a>
+                        <a href="VerilogRename$.html" title="">VerilogRename</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="ZeroWidth$.html" title=""></a>
+                        <a href="ZeroWidth$.html" title="">ZeroWidth</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="createMask$.html" title=""></a>
+                        <a href="createMask$.html" title="">createMask</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="toBitMask$.html" title="Given a mask, return a bitmask corresponding to the desired datatype."></a>
+                        <a href="toBitMask$.html" title="Given a mask, return a bitmask corresponding to the desired datatype.">toBitMask</a>
+                      </li><li name="firrtl.transforms" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="transforms"></a><a id="transforms:transforms"></a>
+      <span class="permalink">
+      <a href="../firrtl/index.html#transforms" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../transforms/index.html"><span class="name">transforms</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
+    </li><li name="firrtl.util" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="util"></a><a id="util:util"></a>
+      <span class="permalink">
+      <a href="../firrtl/index.html#util" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../util/index.html"><span class="name">util</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
+    </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="package value">
+      <div id="definition">
+        <div class="big-circle package">p</div>
+        <p id="owner"><a href="../index.html" class="extype" name="firrtl">firrtl</a></p>
+        <h1>passes<span class="permalink">
+      <a href="../../firrtl/passes/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">passes</span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              
+            </ol>
+          </div>
+          
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="firrtl.passes.DataRef" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DataRefextendsProductwithSerializable"></a><a id="DataRef:DataRef"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#DataRefextendsProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="DataRef.html"><span class="name">DataRef</span></a><span class="params">(<span name="exp">exp: <a href="../ir/Expression.html" class="extype" name="firrtl.ir.Expression">Expression</a></span>, <span name="male">male: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="female">female: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="mask">mask: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="rdwrite">rdwrite: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.Errors" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ErrorsextendsAnyRef"></a><a id="Errors:Errors"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#ErrorsextendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Errors.html"><span class="name">Errors</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.InlineAnnotation" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InlineAnnotationextendsSingleTargetAnnotation[firrtl.annotations.Named]withProductwithSerializable"></a><a id="InlineAnnotation:InlineAnnotation"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#InlineAnnotationextendsSingleTargetAnnotation[firrtl.annotations.Named]withProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Indicates that something should be inlined" href="InlineAnnotation.html"><span class="name">InlineAnnotation</span></a><span class="params">(<span name="target">target: <a href="../annotations/Named.html" class="extype" name="firrtl.annotations.Named">Named</a></span>)</span><span class="result"> extends <a href="../annotations/SingleTargetAnnotation.html" class="extype" name="firrtl.annotations.SingleTargetAnnotation">SingleTargetAnnotation</a>[<a href="../annotations/Named.html" class="extype" name="firrtl.annotations.Named">Named</a>] with <a href="http://www.scala-lang.org/api/2.12.6/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Indicates that something should be inlined</p>
+    </li><li name="firrtl.passes.InlineInstances" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InlineInstancesextendsTransform"></a><a id="InlineInstances:InlineInstances"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#InlineInstancesextendsTransform" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="InlineInstances.html"><span class="name">InlineInstances</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a></span>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.MPort" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MPortextendsProductwithSerializable"></a><a id="MPort:MPort"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#MPortextendsProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="MPort.html"><span class="name">MPort</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="clk">clk: <a href="../ir/Expression.html" class="extype" name="firrtl.ir.Expression">Expression</a></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.MPorts" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MPortsextendsProductwithSerializable"></a><a id="MPorts:MPorts"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#MPortsextendsProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="MPorts.html"><span class="name">MPorts</span></a><span class="params">(<span name="readers">readers: <span class="extype" name="scala.collection.mutable.ArrayBuffer">ArrayBuffer</span>[<a href="MPort.html" class="extype" name="firrtl.passes.MPort">MPort</a>]</span>, <span name="writers">writers: <span class="extype" name="scala.collection.mutable.ArrayBuffer">ArrayBuffer</span>[<a href="MPort.html" class="extype" name="firrtl.passes.MPort">MPort</a>]</span>, <span name="readwriters">readwriters: <span class="extype" name="scala.collection.mutable.ArrayBuffer">ArrayBuffer</span>[<a href="MPort.html" class="extype" name="firrtl.passes.MPort">MPort</a>]</span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.Pass" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="PassextendsTransform"></a><a id="Pass:Pass"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#PassextendsTransform" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Pass is simple transform that is generally part of a larger Transform Has an UnknownForm, because larger Transform should specify form" href="Pass.html"><span class="name">Pass</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a></span>
+      </span>
+      
+      <p class="shortcomment cmt"><a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a> is simple transform that is generally part of a larger <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a>
+Has an <a href="../UnknownForm$.html" class="extype" name="firrtl.UnknownForm">UnknownForm</a>, because larger <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> should specify form
+</p>
+    </li><li name="firrtl.passes.PassException" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PassExceptionextendsException"></a><a id="PassException:PassException"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#PassExceptionextendsException" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="PassException.html"><span class="name">PassException</span></a><span class="result"> extends <span class="extype" name="scala.Exception">Exception</span></span>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.PassExceptions" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PassExceptionsextendsException"></a><a id="PassExceptions:PassExceptions"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#PassExceptionsextendsException" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="PassExceptions.html"><span class="name">PassExceptions</span></a><span class="result"> extends <span class="extype" name="scala.Exception">Exception</span></span>
+      </span>
+      
+      
+    </li></ol>
+            </div>
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="firrtl.passes.CInferMDir" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CInferMDir"></a><a id="CInferMDir:CInferMDir"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#CInferMDir" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="CInferMDir$.html"><span class="name">CInferMDir</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></span>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.CInferTypes" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CInferTypes"></a><a id="CInferTypes:CInferTypes"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#CInferTypes" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="CInferTypes$.html"><span class="name">CInferTypes</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></span>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.CheckChirrtl" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CheckChirrtl"></a><a id="CheckChirrtl:CheckChirrtl"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#CheckChirrtl" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="CheckChirrtl$.html"><span class="name">CheckChirrtl</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></span>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.CheckGenders" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CheckGenders"></a><a id="CheckGenders:CheckGenders"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#CheckGenders" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="CheckGenders$.html"><span class="name">CheckGenders</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></span>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.CheckHighForm" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CheckHighForm"></a><a id="CheckHighForm:CheckHighForm"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#CheckHighForm" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="CheckHighForm$.html"><span class="name">CheckHighForm</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></span>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.CheckInitialization" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="CheckInitialization"></a><a id="CheckInitialization:CheckInitialization"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#CheckInitialization" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="Reports errors for any references that are not fully initialized" href="CheckInitialization$.html"><span class="name">CheckInitialization</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Reports errors for any references that are not fully initialized
+</p><div class="fullcomment"><div class="comment cmt"><p>Reports errors for any references that are not fully initialized
+</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>This pass looks for <a href="../WVoid$.html" class="extype" name="firrtl.WVoid">firrtl.WVoid</a>s left behind by <a href="ExpandWhens$.html" class="extype" name="firrtl.passes.ExpandWhens">ExpandWhens</a></p></span>, <span class="cmt"><p>Assumes single connection (ie. no last connect semantics)</p></span></dd></dl></div>
+    </li><li name="firrtl.passes.CheckTypes" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CheckTypes"></a><a id="CheckTypes:CheckTypes"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#CheckTypes" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="CheckTypes$.html"><span class="name">CheckTypes</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></span>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.CheckWidths" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CheckWidths"></a><a id="CheckWidths:CheckWidths"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#CheckWidths" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="CheckWidths$.html"><span class="name">CheckWidths</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></span>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.CommonSubexpressionElimination" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CommonSubexpressionElimination"></a><a id="CommonSubexpressionElimination:CommonSubexpressionElimination"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#CommonSubexpressionElimination" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="CommonSubexpressionElimination$.html"><span class="name">CommonSubexpressionElimination</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></span>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.ConvertFixedToSInt" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ConvertFixedToSInt"></a><a id="ConvertFixedToSInt:ConvertFixedToSInt"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#ConvertFixedToSInt" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="Replaces FixedType with SIntType, and correctly aligns all binary points" href="ConvertFixedToSInt$.html"><span class="name">ConvertFixedToSInt</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Replaces FixedType with SIntType, and correctly aligns all binary points
+</p>
+    </li><li name="firrtl.passes.DeadCodeElimination" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DeadCodeElimination"></a><a id="DeadCodeElimination:DeadCodeElimination"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#DeadCodeElimination" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="DeadCodeElimination$.html"><span class="name">DeadCodeElimination</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a></span>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.ExpandConnects" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ExpandConnects"></a><a id="ExpandConnects:ExpandConnects"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#ExpandConnects" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ExpandConnects$.html"><span class="name">ExpandConnects</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></span>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.ExpandWhens" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ExpandWhens"></a><a id="ExpandWhens:ExpandWhens"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#ExpandWhens" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="Expand Whens" href="ExpandWhens$.html"><span class="name">ExpandWhens</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Expand Whens</p><div class="fullcomment"><div class="comment cmt"><p>Expand Whens</p><p>This pass does the following things:
+$ - Remove last connect semantics
+$ - Remove conditional blocks
+$ - Eliminate concept of scoping
+$ - Consolidate attaches
+</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>Assumes bulk connects and isInvalids have been expanded</p></span>, <span class="cmt"><p>Assumes all references are declared</p></span></dd></dl></div>
+    </li><li name="firrtl.passes.InferTypes" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InferTypes"></a><a id="InferTypes:InferTypes"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#InferTypes" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="InferTypes$.html"><span class="name">InferTypes</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></span>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.InferWidths" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InferWidths"></a><a id="InferWidths:InferWidths"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#InferWidths" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="InferWidths$.html"><span class="name">InferWidths</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></span>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.Legalize" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Legalize"></a><a id="Legalize:Legalize"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#Legalize" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="Legalize$.html"><span class="name">Legalize</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></span>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.LowerTypes" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="LowerTypes"></a><a id="LowerTypes:LowerTypes"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#LowerTypes" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="Removes all aggregate types from a firrtl.ir.Circuit" href="LowerTypes$.html"><span class="name">LowerTypes</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Removes all aggregate types from a <a href="../ir/Circuit.html" class="extype" name="firrtl.ir.Circuit">firrtl.ir.Circuit</a>
+</p><div class="fullcomment"><div class="comment cmt"><p>Removes all aggregate types from a <a href="../ir/Circuit.html" class="extype" name="firrtl.ir.Circuit">firrtl.ir.Circuit</a>
+</p></div><dl class="attributes block"> <div class="block">Example:
+               <ol><li class="cmt"><p></p><pre>wire foo : { a : UInt&lt;<span class="num">32</span>&gt;, b : UInt&lt;<span class="num">16</span>&gt; }</pre><p> lowers to</p><pre>wire foo_a : UInt&lt;<span class="num">32</span>&gt;
+wire foo_b : UInt&lt;<span class="num">16</span>&gt;</pre></li></ol>
+            </div><dt>Note</dt><dd><span class="cmt"><p>Assumes <a href="../ir/SubAccess.html" class="extype" name="firrtl.ir.SubAccess">firrtl.ir.SubAccess</a>es have been removed</p></span>, <span class="cmt"><p>Assumes <a href="../ir/Connect.html" class="extype" name="firrtl.ir.Connect">firrtl.ir.Connect</a>s and <a href="../ir/IsInvalid.html" class="extype" name="firrtl.ir.IsInvalid">firrtl.ir.IsInvalid</a>s only operate on <a href="../ir/Expression.html" class="extype" name="firrtl.ir.Expression">firrtl.ir.Expression</a>s of ground type</p></span></dd></dl></div>
+    </li><li name="firrtl.passes.MemPortUtils" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MemPortUtils"></a><a id="MemPortUtils:MemPortUtils"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#MemPortUtils" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="MemPortUtils$.html"><span class="name">MemPortUtils</span></a>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.PadWidths" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PadWidths"></a><a id="PadWidths:PadWidths"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#PadWidths" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="PadWidths$.html"><span class="name">PadWidths</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></span>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.PullMuxes" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PullMuxes"></a><a id="PullMuxes:PullMuxes"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#PullMuxes" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="PullMuxes$.html"><span class="name">PullMuxes</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></span>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.RemoveAccesses" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RemoveAccesses"></a><a id="RemoveAccesses:RemoveAccesses"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#RemoveAccesses" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="Removes all firrtl.WSubAccess from circuit" href="RemoveAccesses$.html"><span class="name">RemoveAccesses</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Removes all <a href="../WSubAccess.html" class="extype" name="firrtl.WSubAccess">firrtl.WSubAccess</a> from circuit
+</p>
+    </li><li name="firrtl.passes.RemoveCHIRRTL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RemoveCHIRRTL"></a><a id="RemoveCHIRRTL:RemoveCHIRRTL"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#RemoveCHIRRTL" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="RemoveCHIRRTL$.html"><span class="name">RemoveCHIRRTL</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a></span>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.RemoveEmpty" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RemoveEmpty"></a><a id="RemoveEmpty:RemoveEmpty"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#RemoveEmpty" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="RemoveEmpty$.html"><span class="name">RemoveEmpty</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></span>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.RemoveValidIf" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="RemoveValidIf"></a><a id="RemoveValidIf:RemoveValidIf"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#RemoveValidIf" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="Remove ValidIf and replace IsInvalid with a connection to zero" href="RemoveValidIf$.html"><span class="name">RemoveValidIf</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Remove ValidIf and replace IsInvalid with a connection to zero</p>
+    </li><li name="firrtl.passes.ReplaceAccesses" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReplaceAccesses"></a><a id="ReplaceAccesses:ReplaceAccesses"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#ReplaceAccesses" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="Replaces constant firrtl.WSubAccess with firrtl.WSubIndex TODO Fold in to High Firrtl Const Prop" href="ReplaceAccesses$.html"><span class="name">ReplaceAccesses</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Replaces constant <a href="../WSubAccess.html" class="extype" name="firrtl.WSubAccess">firrtl.WSubAccess</a> with <a href="../WSubIndex.html" class="extype" name="firrtl.WSubIndex">firrtl.WSubIndex</a>
+TODO Fold in to High Firrtl Const Prop
+</p>
+    </li><li name="firrtl.passes.ResolveGenders" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ResolveGenders"></a><a id="ResolveGenders:ResolveGenders"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#ResolveGenders" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ResolveGenders$.html"><span class="name">ResolveGenders</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></span>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.ResolveKinds" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ResolveKinds"></a><a id="ResolveKinds:ResolveKinds"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#ResolveKinds" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ResolveKinds$.html"><span class="name">ResolveKinds</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></span>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.SplitExpressions" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SplitExpressions"></a><a id="SplitExpressions:SplitExpressions"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#SplitExpressions" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="SplitExpressions$.html"><span class="name">SplitExpressions</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></span>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.ToWorkingIR" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ToWorkingIR"></a><a id="ToWorkingIR:ToWorkingIR"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#ToWorkingIR" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ToWorkingIR$.html"><span class="name">ToWorkingIR</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></span>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.Uniquify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Uniquify"></a><a id="Uniquify:Uniquify"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#Uniquify" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="Resolve name collisions that would occur in LowerTypes" href="Uniquify$.html"><span class="name">Uniquify</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Resolve name collisions that would occur in <a href="LowerTypes$.html" class="extype" name="firrtl.passes.LowerTypes">LowerTypes</a>
+</p><div class="fullcomment"><div class="comment cmt"><p>Resolve name collisions that would occur in <a href="LowerTypes$.html" class="extype" name="firrtl.passes.LowerTypes">LowerTypes</a>
+</p></div><dl class="attributes block"> <div class="block">Example:
+               <ol><li class="cmt"><p></p><pre>wire a = { b, c }[<span class="num">2</span>]
+wire a_0</pre><p>   This lowers to:</p><pre>wire a__0_b
+wire a__0_c
+wire a__1_b
+wire a__1_c
+wire a_0</pre><p>   There wouldn't be a collision even if we didn't map a -&gt; a_, but
+     there WOULD be collisions in references a[0] and a_0 so we still have
+     to rename a</p></li></ol>
+            </div><dt>Note</dt><dd><span class="cmt"><p>Must be run after <a href="InferTypes$.html" class="extype" name="firrtl.passes.InferTypes">InferTypes</a> because <a href="../ir/DefNode.html" class="extype" name="firrtl.ir.DefNode">ir.DefNode</a>s need type</p></span></dd></dl></div>
+    </li><li name="firrtl.passes.VerilogModulusCleanup" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="VerilogModulusCleanup"></a><a id="VerilogModulusCleanup:VerilogModulusCleanup"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#VerilogModulusCleanup" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="Verilog has the width of (a % b) = Max(W(a), W(b)) FIRRTL has the width of (a % b) = Min(W(a), W(b)), which makes more sense, but nevertheless is a problem when emitting verilog" href="VerilogModulusCleanup$.html"><span class="name">VerilogModulusCleanup</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Verilog has the width of (a % b) = Max(W(a), W(b))
+FIRRTL has the width of (a % b) = Min(W(a), W(b)), which makes more sense,
+but nevertheless is a problem when emitting verilog</p><div class="fullcomment"><div class="comment cmt"><p>Verilog has the width of (a % b) = Max(W(a), W(b))
+FIRRTL has the width of (a % b) = Min(W(a), W(b)), which makes more sense,
+but nevertheless is a problem when emitting verilog</p><p>This pass finds every instance of (a % b) and:
+  1) adds a temporary node equal to (a % b) with width Max(W(a), W(b))
+  2) replaces the reference to (a % b) with a bitslice of the temporary node
+     to get back down to width Min(W(a), W(b))</p><p> This is technically incorrect firrtl, but allows the verilog emitter
+ to emit correct verilog without needing to add temporary nodes
+</p></div></div>
+    </li><li name="firrtl.passes.VerilogPrep" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="VerilogPrep"></a><a id="VerilogPrep:VerilogPrep"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#VerilogPrep" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="Makes changes to the Firrtl AST to make Verilog emission easier" href="VerilogPrep$.html"><span class="name">VerilogPrep</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Makes changes to the Firrtl AST to make Verilog emission easier</p><div class="fullcomment"><div class="comment cmt"><p>Makes changes to the Firrtl AST to make Verilog emission easier</p><p>- For each instance, adds wires to connect to each port</p><ul><li>Note that no Namespace is required because Uniquify ensures that there will be no
+    collisions with the lowered names of instance ports
+- Also removes Attaches where a single Port OR Wire connects to 1 or more instance ports</li><li>These are expressed in the portCons of WDefInstConnectors
+</li></ul></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>The result of this pass is NOT legal Firrtl</p></span></dd></dl></div>
+    </li><li name="firrtl.passes.VerilogRename" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VerilogRename"></a><a id="VerilogRename:VerilogRename"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#VerilogRename" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="VerilogRename$.html"><span class="name">VerilogRename</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></span>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.ZeroWidth" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ZeroWidth"></a><a id="ZeroWidth:ZeroWidth"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#ZeroWidth" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ZeroWidth$.html"><span class="name">ZeroWidth</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a></span>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.createMask" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="createMask"></a><a id="createMask:createMask"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#createMask" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="createMask$.html"><span class="name">createMask</span></a>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.toBitMask" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toBitMask"></a><a id="toBitMask:toBitMask"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/index.html#toBitMask" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="Given a mask, return a bitmask corresponding to the desired datatype." href="toBitMask$.html"><span class="name">toBitMask</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Given a mask, return a bitmask corresponding to the desired datatype.</p><div class="fullcomment"><div class="comment cmt"><p>Given a mask, return a bitmask corresponding to the desired datatype.
+ Requirements:</p><ul><li>The mask type and datatype must be equivalent, except any ground type in
+        datatype must be matched by a 1-bit wide UIntType.</li><li>The mask must be a reference, subfield, or subindex
+ The bitmask is a series of concatenations of the single mask bit over the
+   length of the corresponding ground type, e.g.:</li></ul><pre>wire mask: {x: UInt&lt;<span class="num">1</span>&gt;, y: UInt&lt;<span class="num">1</span>&gt;}
+wire data: {x: UInt&lt;<span class="num">2</span>&gt;, y: SInt&lt;<span class="num">2</span>&gt;}
+<span class="cmt">// this would return:</span>
+cat(cat(mask.x, mask.x), cat(mask.y, mask.y))</pre></div></div>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>
