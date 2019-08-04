@@ -1,0 +1,242 @@
+<html><head><title>Chisel/FIRRTL: Home</title><meta charset="utf-8" /><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="the Chisel/FIRRTL Developers" /><meta name="description" content="Chisel/FIRRTL
+Hardware Compiler Framework" /><meta name="og:image" content="/img/poster.png" /><meta name="image" property="og:image" content="/img/poster.png" /><meta name="og:title" content="Chisel/FIRRTL: Home" /><meta name="title" property="og:title" content="Chisel/FIRRTL: Home" /><meta name="og:site_name" content="Chisel/FIRRTL" /><meta name="og:url" content="" /><meta name="og:type" content="website" /><meta name="og:description" content="Chisel/FIRRTL
+Hardware Compiler Framework" /><link rel="icon" type="image/png" href="/img/favicon.png" /><meta name="twitter:title" content="Chisel/FIRRTL: Home" /><meta name="twitter:image" content="https://freechipsproject.github.io/www.chisel-lang.org//img/poster.png" /><meta name="twitter:description" content="Chisel/FIRRTL
+Hardware Compiler Framework" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:site" content="@chisel_lang" /><link rel="icon" type="image/png" sizes="16x16" href="/img/favicon16x16.png" /><link rel="icon" type="image/png" sizes="24x24" href="/img/favicon24x24.png" /><link rel="icon" type="image/png" sizes="32x32" href="/img/favicon32x32.png" /><link rel="icon" type="image/png" sizes="48x48" href="/img/favicon48x48.png" /><link rel="icon" type="image/png" sizes="57x57" href="/img/favicon57x57.png" /><link rel="icon" type="image/png" sizes="60x60" href="/img/favicon60x60.png" /><link rel="icon" type="image/png" sizes="64x64" href="/img/favicon64x64.png" /><link rel="icon" type="image/png" sizes="70x70" href="/img/favicon70x70.png" /><link rel="icon" type="image/png" sizes="72x72" href="/img/favicon72x72.png" /><link rel="icon" type="image/png" sizes="76x76" href="/img/favicon76x76.png" /><link rel="icon" type="image/png" sizes="96x96" href="/img/favicon96x96.png" /><link rel="icon" type="image/png" sizes="114x114" href="/img/favicon114x114.png" /><link rel="icon" type="image/png" sizes="120x120" href="/img/favicon120x120.png" /><link rel="icon" type="image/png" sizes="128x128" href="/img/favicon128x128.png" /><link rel="icon" type="image/png" sizes="144x144" href="/img/favicon144x144.png" /><link rel="icon" type="image/png" sizes="150x150" href="/img/favicon150x150.png" /><link rel="icon" type="image/png" sizes="152x152" href="/img/favicon152x152.png" /><link rel="icon" type="image/png" sizes="196x196" href="/img/favicon196x196.png" /><link rel="icon" type="image/png" sizes="310x310" href="/img/favicon310x310.png" /><link rel="icon" type="image/png" sizes="310x150" href="/img/favicon310x150.png" /><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" /><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" /><link rel="stylesheet" href="/highlight/styles/default.css" /><link rel="stylesheet" href="/css/style.css" /><link rel="stylesheet" href="/css/palette.css" /><link rel="stylesheet" href="/css/codemirror.css" /></head><body><header id="site-header"><div class="navbar-wrapper"><div class="container"><div class="row"><div class="col-xs-6"><a href="/" class="brand"><div class="icon-wrapper"><span>Chisel/FIRRTL</span></div></a></div><div class="col-xs-6"><nav class="text-right"><ul class=""><li><a href="https://github.com/freechipsproject/www.chisel-lang.org"><i class="fa fa-github"></i><span class="hidden-xs">GitHub</span></a></li><li><a href="api/chisel3/latest"><i class="fa fa-file-text"></i><span class="hidden-xs">API Documentation</span></a></li></ul></nav></div></div></div></div><div class="jumbotron"><div class="container"><h1 class="text-center">Chisel/FIRRTL
+Hardware Compiler Framework</h1><h2></h2><p class="text-center"><a href="https://github.com/freechipsproject/www.chisel-lang.org" class="btn btn-outline-inverse">View on GitHub</a></p></div></div><div><ul class="horizontalNav">                                                                 <li><a class="" href="/chisel3/">Chisel3</a></li>  <li><a class="" href="/chisel-testers/">Testers</a></li>  <li><a class="" href="/firrtl/">FIRRTL</a></li>  <li><a class="" href="/treadle/">Treadle</a></li>  <li><a class="" href="/diagrammer/">Diagrammer</a></li>  <li><a class="" href="/acknowledgements.html">Acknowledgements</a></li> </ul></div></header><main id="site-main"><section class="use"><div class="container"><div id="content"><p><img src="https://raw.githubusercontent.com/freechipsproject/chisel3/master/doc/images/chisel_logo.svg?sanitize=true" alt="Chisel 3" /></p>
+
+<p>#</p>
+
+<p><a href="https://gitter.im/freechipsproject/chisel3?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/freechipsproject/chisel3.svg" alt="Join the chat at https://gitter.im/freechipsproject/chisel3" /></a></p>
+
+<p>Chisel is a new hardware construction language to support advanced hardware design and circuit generation.
+The latest iteration of <a href="https://chisel.eecs.berkeley.edu/">Chisel</a> is Chisel3,
+which uses Firrtl as an intermediate hardware representation language.</p>
+
+<p>Chisel3 releases are available as jars on Sonatype/Nexus/Maven and as tagged branches on the <a href="https://github.com/freechipsproject/chisel3/releases">releases tab</a> of this repository.
+The latest release is 3.1.3.</p>
+
+<p>Please visit the <a href="https://github.com/ucb-bar/chisel3/wiki">Wiki</a> for documentation!</p>
+
+<p>The ScalaDoc for Chisel3 is available at the <a href="https://chisel.eecs.berkeley.edu/api/latest/index.html">API tab on the Chisel web site.</a></p>
+
+<h2 id="overview">Overview</h2>
+<p>The standard Chisel3 compilation pipeline looks like:</p>
+<ul>
+  <li>Chisel3 (Scala) to Firrtl (this is your “Chisel RTL”).</li>
+  <li><a href="https://github.com/ucb-bar/firrtl">Firrtl</a> to Verilog (which can then be passed into FPGA or ASIC tools).</li>
+  <li>Verilog to C++ for simulation and testing using <a href="http://www.veripool.org/wiki/verilator">Verilator</a>.</li>
+</ul>
+
+<h2 id="installation">Installation</h2>
+<p>This will walk you through installing Chisel and its dependencies:</p>
+<ul>
+  <li><a href="http://www.scala-sbt.org/">sbt</a>, which is the preferred Scala build system and what Chisel uses.</li>
+  <li><a href="https://github.com/ucb-bar/firrtl">Firrtl</a>, which compiles Chisel’s IR down to Verilog.
+If you’re building from a release branch of Chisel3, separate installation of Firrtl is no longer required: the required jar will be automatically downloaded by sbt.
+If you’re building chisel3 from the master branch, you’ll need to follow the directions on the <a href="https://github.com/ucb-bar/firrtl">Firrtl repository</a> to publish a local copy of the required jar.</li>
+  <li><a href="http://www.veripool.org/wiki/verilator">Verilator</a>, which compiles Verilog down to C++ for simulation.
+The included unit testing infrastructure uses this.</li>
+</ul>
+
+<h3 id="ubuntu-like-linux">(Ubuntu-like) Linux</h3>
+
+<ol>
+  <li>Install Java
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install default-jdk
+</code></pre></div>    </div>
+  </li>
+  <li><a href="http://www.scala-sbt.org/release/docs/Installing-sbt-on-Linux.html">Install sbt</a>,
+ which isn’t available by default in the system package manager:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
+ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 642AC823
+ sudo apt-get update
+ sudo apt-get install sbt
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Install Verilator.
+ We currently recommend Verilator version 3.922.
+ Follow these instructions to compile it from source.</p>
+
+    <ol>
+      <li>Install prerequisites (if not installed already):
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> sudo apt-get install git make autoconf g++ flex bison
+</code></pre></div>        </div>
+      </li>
+      <li>Clone the Verilator repository:
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git clone http://git.veripool.org/git/verilator
+</code></pre></div>        </div>
+      </li>
+      <li>In the Verilator repository directory, check out a known good version:
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git pull
+ git checkout verilator_3_922
+</code></pre></div>        </div>
+      </li>
+      <li>In the Verilator repository directory, build and install:
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> unset VERILATOR_ROOT # For bash, unsetenv for csh
+ autoconf # Create ./configure script
+ ./configure
+ make
+ sudo make install
+</code></pre></div>        </div>
+      </li>
+    </ol>
+  </li>
+</ol>
+
+<h3 id="arch-linux">Arch Linux</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yaourt -S firrtl-git verilator sbt
+</code></pre></div></div>
+
+<h3 id="windows">Windows</h3>
+
+<p><em>TODO: write me. If you <strong>really</strong> want to see this happen, let us know by filing a bug report!</em></p>
+
+<h3 id="mac-os-x">Mac OS X</h3>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install sbt verilator
+</code></pre></div></div>
+
+<h2 id="getting-started">Getting Started</h2>
+<p>If you are migrating to Chisel3 from Chisel2, please visit
+<a href="https://github.com/ucb-bar/chisel3/wiki/Chisel3-vs-Chisel2">Chisel3 vs Chisel2</a></p>
+
+<h3 id="data-types-overview">Data Types Overview</h3>
+<p>These are the base data types for defining circuit wires (abstract types which
+may not be instantiated are greyed out):</p>
+
+<p><img src="doc/images/type_hierarchy.png?raw=true" alt="Image" /></p>
+
+<h3 id="chisel-tutorial"><a href="https://github.com/ucb-bar/chisel-tutorial">Chisel Tutorial</a></h3>
+
+<h2 id="for-hardware-engineers">For Hardware Engineers</h2>
+<p>This section describes how to get started using Chisel to create a new RTL
+design from scratch.</p>
+
+<h3 id="project-setup"><a href="https://github.com/ucb-bar/chisel-template">Project Setup</a></h3>
+
+<h3 id="rtl">RTL</h3>
+<p><em>TODO: toy example</em></p>
+
+<h3 id="verification">Verification</h3>
+<p><em>The simulation unit testing infrastructure is still a work in progress.</em></p>
+
+<p>See <code class="highlighter-rouge">src/test/scala/chiselTests</code> for example unit tests. Assert.scala is a
+pretty bare-bones unittest which also somewhat verifies the testing system
+itself.</p>
+
+<p>Unit tests are written with the ScalaTest unit testing framework, optionally
+with ScalaCheck generators to sweep the parameter space where desired.</p>
+
+<p><code class="highlighter-rouge">BasicTester</code>-based tests run a single circuit in simulation until either the
+test finishes or times out after a set amount of cycles. After compilation,
+there is no communication between the testdriver and simulation (unlike
+Chisel2’s Tester, which allowed dynamic peeks and pokes), so all testvectors
+must be determined at compile time.</p>
+
+<p>The circuits run must subclass <code class="highlighter-rouge">BasicTester</code>, which is a Module with the
+addition of a <code class="highlighter-rouge">stop</code> function which finishes the testbench and reports success.
+Any <code class="highlighter-rouge">assert</code>s that trigger (in either the <code class="highlighter-rouge">BasicTester</code> or a submodule) will
+cause the test to fail. <code class="highlighter-rouge">printf</code>s will forward to the console.</p>
+
+<p>To write a test using the <code class="highlighter-rouge">BasicTester</code> that integrates with sbt test, create
+a class that extends either <code class="highlighter-rouge">ChiselFlatSpec</code> (BDD-style testing) or
+<code class="highlighter-rouge">ChiselPropSpec</code> (ScalaCheck generators). In the test content, use</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>assert(execute{ new MyTestModule })
+</code></pre></div></div>
+<p>where <code class="highlighter-rouge">MyTestModule</code> is your top-level test circuit that extends
+<code class="highlighter-rouge">BasicTester</code>.</p>
+
+<p><em>A more Chisel2-like tester may come in the future.</em></p>
+
+<h3 id="compiling-to-simulation">Compiling to Simulation</h3>
+<p><em>TODO: commands to compile project to simulation</em></p>
+
+<p><em>TODO: running testbenches</em></p>
+
+<h2 id="for-chisel-developers">For Chisel Developers</h2>
+<p>This section describes how to get started developing Chisel itself, including
+how to test your version locally against other projects that pull in Chisel
+using <a href="https://www.scala-sbt.org/1.x/docs/Library-Dependencies.html">sbt’s managed dependencies</a>.</p>
+
+<h3 id="compiling-and-testing-chisel">Compiling and Testing Chisel</h3>
+<p>In the Chisel repository directory, run:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sbt compile
+</code></pre></div></div>
+<p>to compile the Chisel library. If the compilation succeeded, you can then run
+the included unit tests by invoking:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sbt test
+</code></pre></div></div>
+
+<h3 id="running-projects-against-local-chisel">Running Projects Against Local Chisel</h3>
+<p>To use the development version of Chisel (<code class="highlighter-rouge">master</code> branch), you will need to build from source and <code class="highlighter-rouge">publishLocal</code>.
+The repo version can be found in the build.sbt file.
+As of the time of writing it was:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>version := "3.2-SNAPSHOT",
+</code></pre></div></div>
+
+<p>To publish your version of Chisel to the local Ivy (sbt’s dependency manager)
+repository, run:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sbt publishLocal
+</code></pre></div></div>
+
+<p><em>PROTIP</em>: sbt can automatically run commands on a source change if you prefix
+the command with <code class="highlighter-rouge">~</code>. For example, the above command to publish Chisel locally
+becomes <code class="highlighter-rouge">sbt ~publishLocal</code>.</p>
+
+<p><a href="https://www.scala-sbt.org/1.x/docs/Publishing.html#Publishing+Locally">sbt’s manual</a>
+recommends that you use a <code class="highlighter-rouge">SNAPSHOT</code> version suffix to ensure that the local
+repository is checked for updates. Since the current default is a <code class="highlighter-rouge">SNAPSHOT</code>,
+and the version number is already incremented compared to the currently
+published snapshot, you dont need to change version.</p>
+
+<p>The compiled version gets placed in <code class="highlighter-rouge">~/.ivy2/local/</code>. You can nuke the relevant
+subfolder to un-publish your local copy of Chisel.</p>
+
+<p>In order to have your projects use this version of Chisel, you should update
+the libraryDependencies setting in your project’s build.sbt file to:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>libraryDependencies += "edu.berkeley.cs" %% "chisel3" % "3.2-SNAPSHOT"
+</code></pre></div></div>
+
+<p>The version specifier in libraryDependencies in the project’s build.sbt should
+match the version string in your local copy of Chisel’s build.sbt.</p>
+
+<h2 id="technical-documentation">Technical Documentation</h2>
+
+<h3 id="chisel3-architecture-overview">Chisel3 Architecture Overview</h3>
+
+<p>The Chisel3 compiler consists of these main parts:</p>
+
+<ul>
+  <li><strong>The frontend</strong>, <code class="highlighter-rouge">chisel3.*</code>, which is the publicly visible “API” of Chisel
+and what is used in Chisel RTL. These just add data to the…</li>
+  <li><strong>The Builder</strong>, <code class="highlighter-rouge">chisel3.internal.Builder</code>, which maintains global state
+(like the currently open Module) and contains commands, generating…</li>
+  <li><strong>The intermediate data structures</strong>, <code class="highlighter-rouge">chisel3.firrtl.*</code>, which are
+syntactically very similar to Firrtl. Once the entire circuit has been
+elaborated, the top-level object (a <code class="highlighter-rouge">Circuit</code>) is then passed to…</li>
+  <li><strong>The Firrtl emitter</strong>, <code class="highlighter-rouge">chisel3.firrtl.Emitter</code>, which turns the
+intermediate data structures into a string that can be written out into a
+Firrtl file for further processing.</li>
+</ul>
+
+<p>Also included is:</p>
+<ul>
+  <li><strong>The standard library</strong> of circuit generators, <code class="highlighter-rouge">chisel3.util.*</code>. These
+contain commonly used interfaces and constructors (like <code class="highlighter-rouge">Decoupled</code>, which
+wraps a signal with a ready-valid pair) as well as fully parameterizable
+circuit generators (like arbiters and muxes).</li>
+  <li><strong>Driver utilities</strong>, <code class="highlighter-rouge">chisel3.Driver</code>, which contains compilation and test
+functions that are invoked in the standard Verilog generation and simulation
+testing infrastructure. These can also be used as part of custom flows.</li>
+</ul>
+
+</div></div></section><section class="technologies"><div class="container"><div class="row">
+            <div class="col-md-4"><div class="first-icon-wrapper"></div><h3>Scala</h3><p>Chisel is powered by Scala and brings all the power of object-oriented and functional programming to type-safe hardware design and generation.</p></div>
+          
+            <div class="col-md-4"><div class="second-icon-wrapper"></div><h3>Chisel</h3><p>Chisel, the Chisel standard library, and Chisel testing infrastructure enable agile, expressive, and reusable hardware design methodologies.</p></div>
+          
+            <div class="col-md-4"><div class="third-icon-wrapper"></div><h3>FIRRTL</h3><p>The FIRRTL circuit compiler starts after Chisel and enables backend (FPGA, ASIC, technology) specialization, automated circuit transformation, and Verilog generation.</p></div>
+          </div></div></section></main><footer id="site-footer"><div class="container"><div class="row"><div class="col-xs-6"><p>Chisel/FIRRTL is designed and developed by <a href="" target="_blank">the Chisel/FIRRTL Developers</a></p></div><div class="col-xs-6"><p class="text-right"><a href="https://github.com/freechipsproject/www.chisel-lang.org"><span class="fa fa-github"></span>View on GitHub</a></p></div></div><div class="row"><div class="col-xs-6"><p>Website built with <a href="https://47deg.github.io/sbt-microsites/" target="_blank">Sbt-microsites</a> - © 2016 <a href="https://www.47deg.com/" target="_blank">47 Degrees</a></p></div></div></div></footer></body></html>
