@@ -5,13 +5,13 @@ Hardware Compiler Framework" /><meta name="twitter:card" content="summary_large_
 
 <p>Bundles group together several named fields of potentially different types into a coherent unit, much like a <code class="highlighter-rouge">struct</code> in C. Users define their own bundles by defining a class as a subclass of <code class="highlighter-rouge">Bundle</code>.</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">MyFloat</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="n">sign</span>        <span class="k">=</span> <span class="nc">Bool</span><span class="o">()</span>
-  <span class="k">val</span> <span class="n">exponent</span>    <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">)</span>
-  <span class="k">val</span> <span class="n">significand</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">23.</span><span class="n">W</span><span class="o">)</span>
+  <span class="k">val</span> <span class="nv">sign</span>        <span class="k">=</span> <span class="nc">Bool</span><span class="o">()</span>
+  <span class="k">val</span> <span class="nv">exponent</span>    <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">)</span>
+  <span class="k">val</span> <span class="nv">significand</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">23.</span><span class="n">W</span><span class="o">)</span>
 <span class="o">}</span>
 
-<span class="k">val</span> <span class="n">x</span>  <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyFloat</span><span class="o">)</span>
-<span class="k">val</span> <span class="n">xs</span> <span class="k">=</span> <span class="n">x</span><span class="o">.</span><span class="n">sign</span>
+<span class="k">val</span> <span class="nv">x</span>  <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyFloat</span><span class="o">)</span>
+<span class="k">val</span> <span class="nv">xs</span> <span class="k">=</span> <span class="nv">x</span><span class="o">.</span><span class="py">sign</span>
 </code></pre></div></div>
 
 <blockquote>
@@ -26,10 +26,10 @@ Hardware Compiler Framework" /><meta name="twitter:card" content="summary_large_
 </blockquote>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Floating point constant.
-</span><span class="k">val</span> <span class="n">floatConst</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyFloat</span><span class="o">)</span>
-<span class="n">floatConst</span><span class="o">.</span><span class="n">sign</span> <span class="o">:=</span> <span class="kc">true</span><span class="o">.</span><span class="n">B</span>
-<span class="n">floatConst</span><span class="o">.</span><span class="n">exponent</span> <span class="o">:=</span> <span class="mf">10.</span><span class="n">U</span>
-<span class="n">floatConst</span><span class="o">.</span><span class="n">significand</span> <span class="o">:=</span> <span class="mf">128.</span><span class="n">U</span>
+</span><span class="k">val</span> <span class="nv">floatConst</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyFloat</span><span class="o">)</span>
+<span class="nv">floatConst</span><span class="o">.</span><span class="py">sign</span> <span class="o">:=</span> <span class="nv">true</span><span class="o">.</span><span class="py">B</span>
+<span class="nv">floatConst</span><span class="o">.</span><span class="py">exponent</span> <span class="o">:=</span> <span class="mf">10.</span><span class="n">U</span>
+<span class="nv">floatConst</span><span class="o">.</span><span class="py">significand</span> <span class="o">:=</span> <span class="mf">128.</span><span class="n">U</span>
 </code></pre></div></div>
 
 <p>A Scala convention is to capitalize the name of new classes and we suggest you follow that convention in Chisel too.</p>
@@ -37,10 +37,10 @@ Hardware Compiler Framework" /><meta name="twitter:card" content="summary_large_
 <p>Vecs create an indexable vector of elements, and are constructed as
 follows:</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Vector of 5 23-bit signed integers.
-</span><span class="k">val</span> <span class="n">myVec</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="nc">Vec</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="nc">SInt</span><span class="o">(</span><span class="mf">23.</span><span class="n">W</span><span class="o">)))</span>
+</span><span class="k">val</span> <span class="nv">myVec</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="nc">Vec</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="nc">SInt</span><span class="o">(</span><span class="mf">23.</span><span class="n">W</span><span class="o">)))</span>
 
 <span class="c1">// Connect to one element of vector.
-</span><span class="k">val</span> <span class="n">reg3</span> <span class="k">=</span> <span class="n">myVec</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span>
+</span><span class="k">val</span> <span class="nv">reg3</span> <span class="k">=</span> <span class="nf">myVec</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span>
 </code></pre></div></div>
 
 <p>(Note that we specify the number followed by the type of the <code class="highlighter-rouge">Vec</code> elements. We also specifiy the width of the <code class="highlighter-rouge">SInt</code>)</p>
@@ -55,10 +55,10 @@ superclass, <code class="highlighter-rouge">Data</code>.  Every object that ulti
 structures:</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">BigBundle</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
  <span class="c1">// Vector of 5 23-bit signed integers.
-</span> <span class="k">val</span> <span class="n">myVec</span> <span class="k">=</span> <span class="nc">Vec</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="nc">SInt</span><span class="o">(</span><span class="mf">23.</span><span class="n">W</span><span class="o">))</span>
- <span class="k">val</span> <span class="n">flag</span>  <span class="k">=</span> <span class="nc">Bool</span><span class="o">()</span>
+</span> <span class="k">val</span> <span class="nv">myVec</span> <span class="k">=</span> <span class="nc">Vec</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="nc">SInt</span><span class="o">(</span><span class="mf">23.</span><span class="n">W</span><span class="o">))</span>
+ <span class="k">val</span> <span class="nv">flag</span>  <span class="k">=</span> <span class="nc">Bool</span><span class="o">()</span>
  <span class="c1">// Previously defined bundle.
-</span> <span class="k">val</span> <span class="n">f</span>     <span class="k">=</span> <span class="k">new</span> <span class="nc">MyFloat</span>
+</span> <span class="k">val</span> <span class="nv">f</span>     <span class="k">=</span> <span class="k">new</span> <span class="nc">MyFloat</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
@@ -74,32 +74,32 @@ that a user datatype also does not require <code class="highlighter-rouge">new</
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3.experimental.RawModule</span>
 <span class="k">class</span> <span class="nc">MyBundle</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="n">a</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
-  <span class="k">val</span> <span class="n">b</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+  <span class="k">val</span> <span class="nv">a</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+  <span class="k">val</span> <span class="nv">b</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
 <span class="o">}</span>
 <span class="k">class</span> <span class="nc">MyModule</span> <span class="k">extends</span> <span class="nc">RawModule</span> <span class="o">{</span>
   <span class="c1">// Normal instantiation of the bundle
 </span>  <span class="c1">// 'a' is an Input and 'b' is an Output
-</span>  <span class="k">val</span> <span class="n">normalBundle</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyBundle</span><span class="o">)</span>
-  <span class="n">normalBundle</span><span class="o">.</span><span class="n">b</span> <span class="o">:=</span> <span class="n">normalBundle</span><span class="o">.</span><span class="n">a</span>
+</span>  <span class="k">val</span> <span class="nv">normalBundle</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyBundle</span><span class="o">)</span>
+  <span class="nv">normalBundle</span><span class="o">.</span><span class="py">b</span> <span class="o">:=</span> <span class="nv">normalBundle</span><span class="o">.</span><span class="py">a</span>
 
   <span class="c1">// Flipped recursively flips the direction of all Bundle fields
 </span>  <span class="c1">// Now 'a' is an Output and 'b' is an Input
-</span>  <span class="k">val</span> <span class="n">flippedBundle</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Flipped</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyBundle</span><span class="o">))</span>
-  <span class="n">flippedBundle</span><span class="o">.</span><span class="n">a</span> <span class="o">:=</span> <span class="n">flippedBundle</span><span class="o">.</span><span class="n">b</span>
+</span>  <span class="k">val</span> <span class="nv">flippedBundle</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Flipped</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyBundle</span><span class="o">))</span>
+  <span class="nv">flippedBundle</span><span class="o">.</span><span class="py">a</span> <span class="o">:=</span> <span class="nv">flippedBundle</span><span class="o">.</span><span class="py">b</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
 <p>This generates the following Verilog:</p>
 
 <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">MyModule</span><span class="p">(</span> <span class="c1">// @[:@3.2]
-</span>  <span class="kt">input</span>   <span class="n">normalBundle_a</span><span class="o">,</span> <span class="c1">// @[:@4.4]
-</span>  <span class="kt">output</span>  <span class="n">normalBundle_b</span><span class="o">,</span> <span class="c1">// @[:@4.4]
-</span>  <span class="kt">output</span>  <span class="n">flippedBundle_a</span><span class="o">,</span> <span class="c1">// @[:@5.4]
+</span>  <span class="kt">input</span>   <span class="n">normalBundle_a</span><span class="p">,</span> <span class="c1">// @[:@4.4]
+</span>  <span class="kt">output</span>  <span class="n">normalBundle_b</span><span class="p">,</span> <span class="c1">// @[:@4.4]
+</span>  <span class="kt">output</span>  <span class="n">flippedBundle_a</span><span class="p">,</span> <span class="c1">// @[:@5.4]
 </span>  <span class="kt">input</span>   <span class="n">flippedBundle_b</span> <span class="c1">// @[:@5.4]
-</span><span class="p">)</span><span class="o">;</span>
-  <span class="k">assign</span> <span class="n">normalBundle_b</span> <span class="o">=</span> <span class="n">normalBundle_a</span><span class="o">;</span>
-  <span class="k">assign</span> <span class="n">flippedBundle_a</span> <span class="o">=</span> <span class="n">flippedBundle_b</span><span class="o">;</span>
+</span><span class="p">);</span>
+  <span class="k">assign</span> <span class="n">normalBundle_b</span> <span class="o">=</span> <span class="n">normalBundle_a</span><span class="p">;</span>
+  <span class="k">assign</span> <span class="n">flippedBundle_a</span> <span class="o">=</span> <span class="n">flippedBundle_b</span><span class="p">;</span>
 <span class="k">endmodule</span>
 </code></pre></div></div>
 
@@ -110,21 +110,21 @@ that a user datatype also does not require <code class="highlighter-rouge">new</
 <p>All elements of a <code class="highlighter-rouge">Vec</code> must be of the same time. If we want to create a Vec where the elements have different types, we can use a MixedVec:</p>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">MyModule</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="n">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
-    <span class="k">val</span> <span class="n">x</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">3.</span><span class="n">W</span><span class="o">))</span>
-    <span class="k">val</span> <span class="n">y</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">10.</span><span class="n">W</span><span class="o">))</span>
-    <span class="k">val</span> <span class="n">vec</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">MixedVec</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">3.</span><span class="n">W</span><span class="o">),</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">10.</span><span class="n">W</span><span class="o">)))</span>
+  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="nv">x</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">3.</span><span class="n">W</span><span class="o">))</span>
+    <span class="k">val</span> <span class="nv">y</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">10.</span><span class="n">W</span><span class="o">))</span>
+    <span class="k">val</span> <span class="nv">vec</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">MixedVec</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">3.</span><span class="n">W</span><span class="o">),</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">10.</span><span class="n">W</span><span class="o">)))</span>
   <span class="o">})</span>
-  <span class="n">io</span><span class="o">.</span><span class="n">vec</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span> <span class="o">:=</span> <span class="n">io</span><span class="o">.</span><span class="n">x</span>
-  <span class="n">io</span><span class="o">.</span><span class="n">vec</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span> <span class="o">:=</span> <span class="n">io</span><span class="o">.</span><span class="n">y</span>
+  <span class="nv">io</span><span class="o">.</span><span class="py">vec</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span> <span class="o">:=</span> <span class="nv">io</span><span class="o">.</span><span class="py">x</span>
+  <span class="nv">io</span><span class="o">.</span><span class="py">vec</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span> <span class="o">:=</span> <span class="nv">io</span><span class="o">.</span><span class="py">y</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
 <p>We can also programmatically create the types in a MixedVec:</p>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">MyModule</span><span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">y</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="n">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
-    <span class="k">val</span> <span class="n">vec</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">MixedVec</span><span class="o">((</span><span class="n">x</span> <span class="n">to</span> <span class="n">y</span><span class="o">)</span> <span class="n">map</span> <span class="o">{</span> <span class="n">i</span> <span class="k">=&gt;</span> <span class="nc">UInt</span><span class="o">(</span><span class="n">i</span><span class="o">.</span><span class="n">W</span><span class="o">)</span> <span class="o">}))</span>
+  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="nv">vec</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">MixedVec</span><span class="o">((</span><span class="n">x</span> <span class="n">to</span> <span class="n">y</span><span class="o">)</span> <span class="n">map</span> <span class="o">{</span> <span class="n">i</span> <span class="k">=&gt;</span> <span class="nc">UInt</span><span class="o">(</span><span class="nv">i</span><span class="o">.</span><span class="py">W</span><span class="o">)</span> <span class="o">}))</span>
     <span class="c1">// ...
 </span>  <span class="o">})</span>
   <span class="c1">// ...rest of the module goes here...
@@ -139,37 +139,37 @@ that a user datatype also does not require <code class="highlighter-rouge">new</
 
 <p>Here is an example of a parametrized bundle (<code class="highlighter-rouge">ExampleBundle</code>) that features a custom <code class="highlighter-rouge">cloneType</code>.</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ExampleBundle</span><span class="o">(</span><span class="n">a</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
-    <span class="k">val</span> <span class="n">foo</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="n">a</span><span class="o">.</span><span class="n">W</span><span class="o">)</span>
-    <span class="k">val</span> <span class="n">bar</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="n">b</span><span class="o">.</span><span class="n">W</span><span class="o">)</span>
-    <span class="k">override</span> <span class="k">def</span> <span class="n">cloneType</span> <span class="k">=</span> <span class="o">(</span><span class="k">new</span> <span class="nc">ExampleBundle</span><span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">b</span><span class="o">)).</span><span class="n">asInstanceOf</span><span class="o">[</span><span class="kt">this.</span><span class="k">type</span><span class="o">]</span>
+    <span class="k">val</span> <span class="nv">foo</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="nv">a</span><span class="o">.</span><span class="py">W</span><span class="o">)</span>
+    <span class="k">val</span> <span class="nv">bar</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="nv">b</span><span class="o">.</span><span class="py">W</span><span class="o">)</span>
+    <span class="k">override</span> <span class="k">def</span> <span class="nf">cloneType</span> <span class="k">=</span> <span class="o">(</span><span class="k">new</span> <span class="nc">ExampleBundle</span><span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">b</span><span class="o">)).</span><span class="py">asInstanceOf</span><span class="o">[</span><span class="kt">this.</span><span class="k">type</span><span class="o">]</span>
 <span class="o">}</span>
 
 <span class="k">class</span> <span class="nc">ExampleBundleModule</span><span class="o">(</span><span class="n">btype</span><span class="k">:</span> <span class="kt">ExampleBundle</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
-    <span class="k">val</span> <span class="n">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
-        <span class="k">val</span> <span class="n">out</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">))</span>
-        <span class="k">val</span> <span class="n">b</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="n">chiselTypeOf</span><span class="o">(</span><span class="n">btype</span><span class="o">))</span>
+    <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
+        <span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">))</span>
+        <span class="k">val</span> <span class="nv">b</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nf">chiselTypeOf</span><span class="o">(</span><span class="n">btype</span><span class="o">))</span>
     <span class="o">})</span>
-    <span class="n">io</span><span class="o">.</span><span class="n">out</span> <span class="o">:=</span> <span class="n">io</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">foo</span> <span class="o">+</span> <span class="n">io</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">bar</span>
+    <span class="nv">io</span><span class="o">.</span><span class="py">out</span> <span class="o">:=</span> <span class="nv">io</span><span class="o">.</span><span class="py">b</span><span class="o">.</span><span class="py">foo</span> <span class="o">+</span> <span class="nv">io</span><span class="o">.</span><span class="py">b</span><span class="o">.</span><span class="py">bar</span>
 <span class="o">}</span>
 
 <span class="k">class</span> <span class="nc">Top</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
-    <span class="k">val</span> <span class="n">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
-        <span class="k">val</span> <span class="n">out</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">))</span>
-        <span class="k">val</span> <span class="n">in</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">17.</span><span class="n">W</span><span class="o">))</span>
+    <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
+        <span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">))</span>
+        <span class="k">val</span> <span class="nv">in</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">17.</span><span class="n">W</span><span class="o">))</span>
     <span class="o">})</span>
-    <span class="k">val</span> <span class="n">x</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="k">new</span> <span class="nc">ExampleBundle</span><span class="o">(</span><span class="mi">31</span><span class="o">,</span> <span class="mi">17</span><span class="o">))</span>
+    <span class="k">val</span> <span class="nv">x</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="k">new</span> <span class="nc">ExampleBundle</span><span class="o">(</span><span class="mi">31</span><span class="o">,</span> <span class="mi">17</span><span class="o">))</span>
     <span class="n">x</span> <span class="o">:=</span> <span class="nc">DontCare</span>
-    <span class="k">val</span> <span class="n">m</span> <span class="k">=</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">ExampleBundleModule</span><span class="o">(</span><span class="n">x</span><span class="o">))</span>
-    <span class="n">m</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">foo</span> <span class="o">:=</span> <span class="n">io</span><span class="o">.</span><span class="n">in</span>
-    <span class="n">m</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">b</span><span class="o">.</span><span class="n">bar</span> <span class="o">:=</span> <span class="n">io</span><span class="o">.</span><span class="n">in</span>
-    <span class="n">io</span><span class="o">.</span><span class="n">out</span> <span class="o">:=</span> <span class="n">m</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">out</span>
+    <span class="k">val</span> <span class="nv">m</span> <span class="k">=</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">ExampleBundleModule</span><span class="o">(</span><span class="n">x</span><span class="o">))</span>
+    <span class="nv">m</span><span class="o">.</span><span class="py">io</span><span class="o">.</span><span class="py">b</span><span class="o">.</span><span class="py">foo</span> <span class="o">:=</span> <span class="nv">io</span><span class="o">.</span><span class="py">in</span>
+    <span class="nv">m</span><span class="o">.</span><span class="py">io</span><span class="o">.</span><span class="py">b</span><span class="o">.</span><span class="py">bar</span> <span class="o">:=</span> <span class="nv">io</span><span class="o">.</span><span class="py">in</span>
+    <span class="nv">io</span><span class="o">.</span><span class="py">out</span> <span class="o">:=</span> <span class="nv">m</span><span class="o">.</span><span class="py">io</span><span class="o">.</span><span class="py">out</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
 <p>Generally cloneType can be automatically defined if all arguments to the Bundle are vals e.g.</p>
 
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">MyBundle</span><span class="o">(</span><span class="k">val</span> <span class="n">width</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
-   <span class="k">val</span> <span class="n">field</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="n">width</span><span class="o">.</span><span class="n">W</span><span class="o">)</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">MyBundle</span><span class="o">(</span><span class="k">val</span> <span class="nv">width</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
+   <span class="k">val</span> <span class="nv">field</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="nv">width</span><span class="o">.</span><span class="py">W</span><span class="o">)</span>
    <span class="c1">// ...
 </span><span class="o">}</span>
 </code></pre></div></div>
@@ -179,18 +179,18 @@ that a user datatype also does not require <code class="highlighter-rouge">new</
 <p>For example, consider the following Bundle:</p>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">RegisterWriteIO</span><span class="o">[</span><span class="kt">T</span> <span class="k">&lt;:</span> <span class="kt">Data</span><span class="o">](</span><span class="n">gen</span><span class="k">:</span> <span class="kt">T</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="n">request</span>  <span class="k">=</span> <span class="nc">Flipped</span><span class="o">(</span><span class="nc">Decoupled</span><span class="o">(</span><span class="n">gen</span><span class="o">))</span>
-  <span class="k">val</span> <span class="n">response</span> <span class="k">=</span> <span class="nc">Irrevocable</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span> <span class="c1">// ignore .bits
+  <span class="k">val</span> <span class="nv">request</span>  <span class="k">=</span> <span class="nc">Flipped</span><span class="o">(</span><span class="nc">Decoupled</span><span class="o">(</span><span class="n">gen</span><span class="o">))</span>
+  <span class="k">val</span> <span class="nv">response</span> <span class="k">=</span> <span class="nc">Irrevocable</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span> <span class="c1">// ignore .bits
 </span>
-  <span class="k">override</span> <span class="k">def</span> <span class="n">cloneType</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">RegisterWriteIO</span><span class="o">(</span><span class="n">gen</span><span class="o">).</span><span class="n">asInstanceOf</span><span class="o">[</span><span class="kt">this.</span><span class="k">type</span><span class="o">]</span>
+  <span class="k">override</span> <span class="k">def</span> <span class="nf">cloneType</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">RegisterWriteIO</span><span class="o">(</span><span class="n">gen</span><span class="o">).</span><span class="py">asInstanceOf</span><span class="o">[</span><span class="kt">this.</span><span class="k">type</span><span class="o">]</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
 <p>We can make this this infer cloneType by making <code class="highlighter-rouge">gen</code> private since it is a “type parameter”:</p>
 
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">RegisterWriteIO</span><span class="o">[</span><span class="kt">T</span> <span class="k">&lt;:</span> <span class="kt">Data</span><span class="o">](</span><span class="k">private</span> <span class="k">val</span> <span class="n">gen</span><span class="k">:</span> <span class="kt">T</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="n">request</span>  <span class="k">=</span> <span class="nc">Flipped</span><span class="o">(</span><span class="nc">Decoupled</span><span class="o">(</span><span class="n">gen</span><span class="o">))</span>
-  <span class="k">val</span> <span class="n">response</span> <span class="k">=</span> <span class="nc">Irrevocable</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span> <span class="c1">// ignore .bits
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">RegisterWriteIO</span><span class="o">[</span><span class="kt">T</span> <span class="k">&lt;:</span> <span class="kt">Data</span><span class="o">](</span><span class="k">private</span> <span class="k">val</span> <span class="nv">gen</span><span class="k">:</span> <span class="kt">T</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">request</span>  <span class="k">=</span> <span class="nc">Flipped</span><span class="o">(</span><span class="nc">Decoupled</span><span class="o">(</span><span class="n">gen</span><span class="o">))</span>
+  <span class="k">val</span> <span class="nv">response</span> <span class="k">=</span> <span class="nc">Irrevocable</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span> <span class="c1">// ignore .bits
 </span><span class="o">}</span>
 </code></pre></div></div>
 </section></div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/www.chisel-lang.org/highlight/highlight.pack.js"></script><script>hljs.configure({languages:['scala','java','bash']});

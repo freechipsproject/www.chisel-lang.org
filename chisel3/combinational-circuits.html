@@ -29,8 +29,8 @@ a wire that holds a subexpression that we can then reference multiple
 times in subsequent expressions.  We name a wire in Chisel by
 declaring a variable.  For example, consider the select expression,
 which is used twice in the following multiplexer description:</p>
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="n">sel</span> <span class="k">=</span> <span class="n">a</span> <span class="o">|</span> <span class="n">b</span>
-<span class="k">val</span> <span class="n">out</span> <span class="k">=</span> <span class="o">(</span><span class="n">sel</span> <span class="o">&amp;</span> <span class="n">in1</span><span class="o">)</span> <span class="o">|</span> <span class="o">(~</span><span class="n">sel</span> <span class="o">&amp;</span> <span class="n">in0</span><span class="o">)</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">sel</span> <span class="k">=</span> <span class="n">a</span> <span class="o">|</span> <span class="n">b</span>
+<span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="o">(</span><span class="n">sel</span> <span class="o">&amp;</span> <span class="n">in1</span><span class="o">)</span> <span class="o">|</span> <span class="o">(~</span><span class="n">sel</span> <span class="o">&amp;</span> <span class="n">in0</span><span class="o">)</span>
 </code></pre></div></div>
 
 <p>The keyword <code class="highlighter-rouge">val</code> is part of Scala, and is used to name variables
@@ -43,32 +43,32 @@ expression.</p>
 
 <p>Chisel also supports wires as hardware nodes to which one can assign values or connect other nodes.</p>
 
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="n">myNode</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">))</span>
-<span class="n">when</span> <span class="o">(</span><span class="n">isReady</span><span class="o">)</span> <span class="o">{</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">myNode</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">))</span>
+<span class="nf">when</span> <span class="o">(</span><span class="n">isReady</span><span class="o">)</span> <span class="o">{</span>
   <span class="n">myNode</span> <span class="o">:=</span> <span class="mf">255.</span><span class="n">U</span>
-<span class="o">}</span> <span class="o">.</span><span class="n">otherwise</span> <span class="o">{</span>
+<span class="o">}</span> <span class="o">.</span><span class="py">otherwise</span> <span class="o">{</span>
   <span class="n">myNode</span> <span class="o">:=</span> <span class="mf">0.</span><span class="n">U</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="n">myNode</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">))</span>
-<span class="n">when</span> <span class="o">(</span><span class="n">input</span> <span class="o">&gt;</span> <span class="mf">128.</span><span class="n">U</span><span class="o">)</span> <span class="o">{</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">myNode</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">))</span>
+<span class="nf">when</span> <span class="o">(</span><span class="n">input</span> <span class="o">&gt;</span> <span class="mf">128.</span><span class="n">U</span><span class="o">)</span> <span class="o">{</span>
   <span class="n">myNode</span> <span class="o">:=</span> <span class="mf">255.</span><span class="n">U</span>
-<span class="o">}</span> <span class="o">.</span><span class="n">elsewhen</span> <span class="o">(</span><span class="n">input</span> <span class="o">&gt;</span> <span class="mf">64.</span><span class="n">U</span><span class="o">)</span> <span class="o">{</span>
+<span class="o">}</span> <span class="o">.</span><span class="py">elsewhen</span> <span class="o">(</span><span class="n">input</span> <span class="o">&gt;</span> <span class="mf">64.</span><span class="n">U</span><span class="o">)</span> <span class="o">{</span>
   <span class="n">myNode</span> <span class="o">:=</span> <span class="mf">1.</span><span class="n">U</span>
-<span class="o">}</span> <span class="o">.</span><span class="n">otherwise</span> <span class="o">{</span>
+<span class="o">}</span> <span class="o">.</span><span class="py">otherwise</span> <span class="o">{</span>
   <span class="n">myNode</span> <span class="o">:=</span> <span class="mf">0.</span><span class="n">U</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
 <p>Note that the last connection to a Wire takes effect. For example, the following two Chisel circuits are equivalent:</p>
 
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="n">myNode</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">))</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">myNode</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">))</span>
 <span class="n">myNode</span> <span class="o">:=</span> <span class="mf">10.</span><span class="n">U</span>
 <span class="n">myNode</span> <span class="o">:=</span> <span class="mf">0.</span><span class="n">U</span>
 </code></pre></div></div>
 
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="n">myNode</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">))</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">myNode</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">))</span>
 <span class="n">myNode</span> <span class="o">:=</span> <span class="mf">0.</span><span class="n">U</span>
 </code></pre></div></div>
 </section></div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/www.chisel-lang.org/highlight/highlight.pack.js"></script><script>hljs.configure({languages:['scala','java','bash']});
