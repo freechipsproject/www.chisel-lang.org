@@ -51,12 +51,12 @@ ClassicTester, it’s api consists of poke, peek and expect statements. Here is 
 <span class="k">import</span> <span class="nn">org.scalatest.</span><span class="o">{</span><span class="nc">Matchers</span><span class="o">,</span> <span class="nc">FlatSpec</span><span class="o">}</span>
 
 <span class="k">object</span> <span class="nc">GCDCalculator</span> <span class="o">{</span>
-  <span class="k">def</span> <span class="n">computeGcd</span><span class="o">(</span><span class="n">a</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span><span class="k">:</span> <span class="o">(</span><span class="kt">Int</span><span class="o">,</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="nf">computeGcd</span><span class="o">(</span><span class="n">a</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span><span class="k">:</span> <span class="o">(</span><span class="kt">Int</span><span class="o">,</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=</span> <span class="o">{</span>
     <span class="k">var</span> <span class="n">x</span> <span class="k">=</span> <span class="n">a</span>
     <span class="k">var</span> <span class="n">y</span> <span class="k">=</span> <span class="n">b</span>
     <span class="k">var</span> <span class="n">depth</span> <span class="k">=</span> <span class="mi">1</span>
-    <span class="k">while</span><span class="o">(</span><span class="n">y</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">)</span> <span class="o">{</span>
-      <span class="k">if</span> <span class="o">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nf">while</span><span class="o">(</span><span class="n">y</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">)</span> <span class="o">{</span>
+      <span class="nf">if</span> <span class="o">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="o">)</span> <span class="o">{</span>
         <span class="n">x</span> <span class="o">-=</span> <span class="n">y</span>
       <span class="o">}</span>
       <span class="k">else</span> <span class="o">{</span>
@@ -69,49 +69,49 @@ ClassicTester, it’s api consists of poke, peek and expect statements. Here is 
 <span class="o">}</span>
 
 <span class="k">class</span> <span class="nc">GCD</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="n">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
-    <span class="k">val</span> <span class="n">a</span>  <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">16.</span><span class="n">W</span><span class="o">))</span>
-    <span class="k">val</span> <span class="n">b</span>  <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">16.</span><span class="n">W</span><span class="o">)))</span>
-    <span class="k">val</span> <span class="n">e</span>  <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
-    <span class="k">val</span> <span class="n">z</span>  <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">16.</span><span class="n">W</span><span class="o">))</span>
-    <span class="k">val</span> <span class="n">v</span>  <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="nv">a</span>  <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">16.</span><span class="n">W</span><span class="o">))</span>
+    <span class="k">val</span> <span class="nv">b</span>  <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">16.</span><span class="n">W</span><span class="o">)))</span>
+    <span class="k">val</span> <span class="nv">e</span>  <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+    <span class="k">val</span> <span class="nv">z</span>  <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">16.</span><span class="n">W</span><span class="o">))</span>
+    <span class="k">val</span> <span class="nv">v</span>  <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
   <span class="o">})</span>
-  <span class="k">val</span> <span class="n">x</span>  <span class="k">=</span> <span class="nc">Reg</span><span class="o">(</span><span class="nc">UInt</span><span class="o">())</span>
-  <span class="k">val</span> <span class="n">y</span>  <span class="k">=</span> <span class="nc">Reg</span><span class="o">(</span><span class="nc">UInt</span><span class="o">())</span>
-  <span class="n">when</span><span class="o">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="o">)</span> <span class="o">{</span> <span class="n">x</span> <span class="o">:=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span> <span class="o">}</span>
-    <span class="o">.</span><span class="n">elsewhen</span><span class="o">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="n">y</span><span class="o">)</span> <span class="o">{</span> <span class="n">y</span> <span class="o">:=</span> <span class="n">y</span> <span class="o">-</span> <span class="n">x</span> <span class="o">}</span>
-  <span class="n">when</span> <span class="o">(</span><span class="n">io</span><span class="o">.</span><span class="n">e</span><span class="o">)</span> <span class="o">{</span> <span class="n">x</span> <span class="o">:=</span> <span class="n">io</span><span class="o">.</span><span class="n">a</span><span class="o">;</span> <span class="n">y</span> <span class="o">:=</span> <span class="n">io</span><span class="o">.</span><span class="n">b</span> <span class="o">}</span>
-  <span class="n">io</span><span class="o">.</span><span class="n">z</span> <span class="o">:=</span> <span class="n">x</span>
-  <span class="n">io</span><span class="o">.</span><span class="n">v</span> <span class="o">:=</span> <span class="n">y</span> <span class="o">===</span> <span class="nc">UInt</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span>
+  <span class="k">val</span> <span class="nv">x</span>  <span class="k">=</span> <span class="nc">Reg</span><span class="o">(</span><span class="nc">UInt</span><span class="o">())</span>
+  <span class="k">val</span> <span class="nv">y</span>  <span class="k">=</span> <span class="nc">Reg</span><span class="o">(</span><span class="nc">UInt</span><span class="o">())</span>
+  <span class="nf">when</span><span class="o">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="o">)</span> <span class="o">{</span> <span class="n">x</span> <span class="o">:=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span> <span class="o">}</span>
+    <span class="o">.</span><span class="py">elsewhen</span><span class="o">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="n">y</span><span class="o">)</span> <span class="o">{</span> <span class="n">y</span> <span class="o">:=</span> <span class="n">y</span> <span class="o">-</span> <span class="n">x</span> <span class="o">}</span>
+  <span class="nf">when</span> <span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">e</span><span class="o">)</span> <span class="o">{</span> <span class="n">x</span> <span class="o">:=</span> <span class="nv">io</span><span class="o">.</span><span class="py">a</span><span class="o">;</span> <span class="n">y</span> <span class="o">:=</span> <span class="nv">io</span><span class="o">.</span><span class="py">b</span> <span class="o">}</span>
+  <span class="nv">io</span><span class="o">.</span><span class="py">z</span> <span class="o">:=</span> <span class="n">x</span>
+  <span class="nv">io</span><span class="o">.</span><span class="py">v</span> <span class="o">:=</span> <span class="n">y</span> <span class="o">===</span> <span class="nc">UInt</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span>
 <span class="o">}</span>
 
 <span class="k">class</span> <span class="nc">TreadleUsageSpec</span> <span class="k">extends</span> <span class="nc">FlatSpec</span> <span class="k">with</span> <span class="nc">Matchers</span> <span class="o">{</span>
 
   <span class="s">"GCD"</span> <span class="n">should</span> <span class="s">"return correct values for a range of inputs"</span> <span class="n">in</span> <span class="o">{</span>
-    <span class="k">val</span> <span class="n">s</span> <span class="k">=</span> <span class="nc">Driver</span><span class="o">.</span><span class="n">emit</span><span class="o">(()</span> <span class="k">=&gt;</span> <span class="k">new</span> <span class="nc">GCD</span><span class="o">)</span>
+    <span class="k">val</span> <span class="nv">s</span> <span class="k">=</span> <span class="nv">Driver</span><span class="o">.</span><span class="py">emit</span><span class="o">(()</span> <span class="k">=&gt;</span> <span class="k">new</span> <span class="nc">GCD</span><span class="o">)</span>
 
-    <span class="k">val</span> <span class="n">tester</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">TreadleTester</span><span class="o">(</span><span class="n">s</span><span class="o">)</span>
+    <span class="k">val</span> <span class="nv">tester</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">TreadleTester</span><span class="o">(</span><span class="n">s</span><span class="o">)</span>
 
     <span class="k">for</span> <span class="o">{</span>
       <span class="n">i</span> <span class="k">&lt;-</span> <span class="mi">1</span> <span class="n">to</span> <span class="mi">100</span>
       <span class="n">j</span> <span class="k">&lt;-</span> <span class="mi">1</span> <span class="n">to</span> <span class="mi">100</span>
     <span class="o">}</span> <span class="o">{</span>
-      <span class="n">tester</span><span class="o">.</span><span class="n">poke</span><span class="o">(</span><span class="s">"io_a"</span><span class="o">,</span> <span class="n">i</span><span class="o">)</span>
-      <span class="n">tester</span><span class="o">.</span><span class="n">poke</span><span class="o">(</span><span class="s">"io_b"</span><span class="o">,</span> <span class="n">j</span><span class="o">)</span>
-      <span class="n">tester</span><span class="o">.</span><span class="n">poke</span><span class="o">(</span><span class="s">"io_e"</span><span class="o">,</span> <span class="mi">1</span><span class="o">)</span>
-      <span class="n">tester</span><span class="o">.</span><span class="n">step</span><span class="o">()</span>
-      <span class="n">tester</span><span class="o">.</span><span class="n">poke</span><span class="o">(</span><span class="s">"io_e"</span><span class="o">,</span> <span class="mi">0</span><span class="o">)</span>
+      <span class="nv">tester</span><span class="o">.</span><span class="py">poke</span><span class="o">(</span><span class="s">"io_a"</span><span class="o">,</span> <span class="n">i</span><span class="o">)</span>
+      <span class="nv">tester</span><span class="o">.</span><span class="py">poke</span><span class="o">(</span><span class="s">"io_b"</span><span class="o">,</span> <span class="n">j</span><span class="o">)</span>
+      <span class="nv">tester</span><span class="o">.</span><span class="py">poke</span><span class="o">(</span><span class="s">"io_e"</span><span class="o">,</span> <span class="mi">1</span><span class="o">)</span>
+      <span class="nv">tester</span><span class="o">.</span><span class="py">step</span><span class="o">()</span>
+      <span class="nv">tester</span><span class="o">.</span><span class="py">poke</span><span class="o">(</span><span class="s">"io_e"</span><span class="o">,</span> <span class="mi">0</span><span class="o">)</span>
 
       <span class="k">var</span> <span class="n">cycles</span> <span class="k">=</span> <span class="mi">0</span>
-      <span class="k">while</span> <span class="o">(</span><span class="n">tester</span><span class="o">.</span><span class="n">peek</span><span class="o">(</span><span class="s">"io_v"</span><span class="o">)</span> <span class="o">!=</span> <span class="nc">BigInt</span><span class="o">(</span><span class="mi">1</span><span class="o">))</span> <span class="o">{</span>
-        <span class="n">tester</span><span class="o">.</span><span class="n">step</span><span class="o">()</span>
+      <span class="nf">while</span> <span class="o">(</span><span class="nv">tester</span><span class="o">.</span><span class="py">peek</span><span class="o">(</span><span class="s">"io_v"</span><span class="o">)</span> <span class="o">!=</span> <span class="nc">BigInt</span><span class="o">(</span><span class="mi">1</span><span class="o">))</span> <span class="o">{</span>
+        <span class="nv">tester</span><span class="o">.</span><span class="py">step</span><span class="o">()</span>
         <span class="n">cycles</span> <span class="o">+=</span> <span class="mi">1</span>
       <span class="o">}</span>
-      <span class="n">tester</span><span class="o">.</span><span class="n">expect</span><span class="o">(</span><span class="s">"io_z"</span><span class="o">,</span> <span class="nc">BigInt</span><span class="o">(</span><span class="nc">GCDCalculator</span><span class="o">.</span><span class="n">computeGcd</span><span class="o">(</span><span class="n">i</span><span class="o">,</span> <span class="n">j</span><span class="o">).</span><span class="n">_1</span><span class="o">))</span>
+      <span class="nv">tester</span><span class="o">.</span><span class="py">expect</span><span class="o">(</span><span class="s">"io_z"</span><span class="o">,</span> <span class="nc">BigInt</span><span class="o">(</span><span class="nv">GCDCalculator</span><span class="o">.</span><span class="py">computeGcd</span><span class="o">(</span><span class="n">i</span><span class="o">,</span> <span class="n">j</span><span class="o">).</span><span class="py">_1</span><span class="o">))</span>
       <span class="c1">// uncomment the println to see a lot of output
 </span>      <span class="c1">// println(f"GCD(${i}%3d, ${j}%3d) =&gt; ${interpretiveTester.peek("io_z")}%3d in $cycles%3d cycles")
 </span>    <span class="o">}</span>
-    <span class="n">tester</span><span class="o">.</span><span class="n">report</span><span class="o">()</span>
+    <span class="nv">tester</span><span class="o">.</span><span class="py">report</span><span class="o">()</span>
   <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div></div>
