@@ -141,13 +141,13 @@ domain-specific languages.</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">package</span> <span class="nn">intro</span>
 <span class="k">import</span> <span class="nn">chisel3._</span>
 <span class="k">class</span> <span class="nc">HelloWorld</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span><span class="o">{})</span>
-  <span class="nf">printf</span><span class="o">(</span><span class="s">"hello world\n"</span><span class="o">)</span>
+  <span class="k">val</span> <span class="n">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span><span class="o">{})</span>
+  <span class="n">printf</span><span class="o">(</span><span class="s">"hello world\n"</span><span class="o">)</span>
 <span class="o">}</span>
 </code></pre></div></div>
 <p>Add the following</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">object</span> <span class="nc">HelloWorld</span> <span class="k">extends</span> <span class="nc">App</span> <span class="o">{</span>
-  <span class="nv">chisel3</span><span class="o">.</span><span class="py">Driver</span><span class="o">.</span><span class="py">execute</span><span class="o">(</span><span class="n">args</span><span class="o">,</span> <span class="o">()</span> <span class="k">=&gt;</span> <span class="k">new</span> <span class="nc">HelloWorld</span><span class="o">)</span>
+  <span class="n">chisel3</span><span class="o">.</span><span class="nc">Driver</span><span class="o">.</span><span class="n">execute</span><span class="o">(</span><span class="n">args</span><span class="o">,</span> <span class="o">()</span> <span class="k">=&gt;</span> <span class="k">new</span> <span class="nc">HelloWorld</span><span class="o">)</span>
 <span class="o">}</span>
 </code></pre></div></div>
 <p>Now you can get some Verilog. Start sbt:</p>
@@ -200,8 +200,8 @@ res3: chisel3.ChiselExecutionResult = [...]
 <span class="k">import</span> <span class="nn">java.io.File</span>
 
 <span class="k">object</span> <span class="nc">Main</span> <span class="k">extends</span> <span class="nc">App</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="nv">f</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="s">"Multiplier.fir"</span><span class="o">)</span>
-  <span class="nv">chisel3</span><span class="o">.</span><span class="py">Driver</span><span class="o">.</span><span class="py">dumpFirrtl</span><span class="o">(</span><span class="nv">chisel3</span><span class="o">.</span><span class="py">Driver</span><span class="o">.</span><span class="py">elaborate</span><span class="o">(()</span> <span class="k">=&gt;</span> <span class="k">new</span> <span class="nc">Multiplier</span><span class="o">),</span> <span class="nc">Option</span><span class="o">(</span><span class="n">f</span><span class="o">))</span>
+  <span class="k">val</span> <span class="n">f</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">File</span><span class="o">(</span><span class="s">"Multiplier.fir"</span><span class="o">)</span>
+  <span class="n">chisel3</span><span class="o">.</span><span class="nc">Driver</span><span class="o">.</span><span class="n">dumpFirrtl</span><span class="o">(</span><span class="n">chisel3</span><span class="o">.</span><span class="nc">Driver</span><span class="o">.</span><span class="n">elaborate</span><span class="o">(()</span> <span class="k">=&gt;</span> <span class="k">new</span> <span class="nc">Multiplier</span><span class="o">),</span> <span class="nc">Option</span><span class="o">(</span><span class="n">f</span><span class="o">))</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
