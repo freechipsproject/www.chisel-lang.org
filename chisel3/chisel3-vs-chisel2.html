@@ -10,28 +10,28 @@ modifications are:</p>
 
 <ul>
   <li>Wire declaration style:
-    <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">wire</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="n">width</span> <span class="k">=</span> <span class="mi">15</span><span class="o">)</span>
+    <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="n">wire</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="n">width</span> <span class="k">=</span> <span class="mi">15</span><span class="o">)</span>
 </code></pre></div>    </div>
     <p>becomes (in Chisel3):</p>
-    <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">wire</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">15.</span><span class="n">W</span><span class="o">))</span>
+    <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="n">wire</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">15.</span><span class="n">W</span><span class="o">))</span>
 </code></pre></div>    </div>
   </li>
   <li>I/O declaration style:
-    <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">done</span> <span class="k">=</span> <span class="nc">Bool</span><span class="o">(</span><span class="nc">OUTPUT</span><span class="o">)</span>
+    <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="n">done</span> <span class="k">=</span> <span class="nc">Bool</span><span class="o">(</span><span class="nc">OUTPUT</span><span class="o">)</span>
 </code></pre></div>    </div>
     <p>becomes (in Chisel3):</p>
-    <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">wire</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+    <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="n">wire</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
 </code></pre></div>    </div>
   </li>
   <li>Sequential memories:
-    <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">addr</span> <span class="k">=</span> <span class="nc">Reg</span><span class="o">(</span><span class="nc">UInt</span><span class="o">())</span>
-<span class="k">val</span> <span class="nv">mem</span> <span class="k">=</span> <span class="nc">Mem</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">),</span> <span class="mi">1024</span><span class="o">,</span> <span class="n">seqRead</span> <span class="k">=</span> <span class="kc">true</span><span class="o">)</span>
-<span class="k">val</span> <span class="nv">dout</span> <span class="k">=</span> <span class="nf">when</span><span class="o">(</span><span class="n">enable</span><span class="o">)</span> <span class="o">{</span> <span class="nf">mem</span><span class="o">(</span><span class="n">addr</span><span class="o">)</span> <span class="o">}</span>
+    <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="n">addr</span> <span class="k">=</span> <span class="nc">Reg</span><span class="o">(</span><span class="nc">UInt</span><span class="o">())</span>
+<span class="k">val</span> <span class="n">mem</span> <span class="k">=</span> <span class="nc">Mem</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">),</span> <span class="mi">1024</span><span class="o">,</span> <span class="n">seqRead</span> <span class="k">=</span> <span class="kc">true</span><span class="o">)</span>
+<span class="k">val</span> <span class="n">dout</span> <span class="k">=</span> <span class="n">when</span><span class="o">(</span><span class="n">enable</span><span class="o">)</span> <span class="o">{</span> <span class="n">mem</span><span class="o">(</span><span class="n">addr</span><span class="o">)</span> <span class="o">}</span>
 </code></pre></div>    </div>
     <p>becomes (in Chisel3):</p>
-    <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">addr</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">()</span>
-<span class="k">val</span> <span class="nv">mem</span> <span class="k">=</span> <span class="nc">SyncReadMem</span><span class="o">(</span><span class="mi">1024</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">))</span>
-<span class="k">val</span> <span class="nv">dout</span> <span class="k">=</span> <span class="nv">mem</span><span class="o">.</span><span class="py">read</span><span class="o">(</span><span class="n">addr</span><span class="o">,</span> <span class="n">enable</span><span class="o">)</span>
+    <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="n">addr</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">()</span>
+<span class="k">val</span> <span class="n">mem</span> <span class="k">=</span> <span class="nc">SyncReadMem</span><span class="o">(</span><span class="mi">1024</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">))</span>
+<span class="k">val</span> <span class="n">dout</span> <span class="k">=</span> <span class="n">mem</span><span class="o">.</span><span class="n">read</span><span class="o">(</span><span class="n">addr</span><span class="o">,</span> <span class="n">enable</span><span class="o">)</span>
 </code></pre></div>    </div>
 
     <p>Notice the address register is now internal to the SyncReadMem(), but the data
@@ -39,15 +39,15 @@ will still return on the subsequent cycle.</p>
   </li>
   <li>Generating Verilog with
     <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">object</span> <span class="nc">Hello</span> <span class="o">{</span>
-  <span class="k">def</span> <span class="nf">main</span><span class="o">(</span><span class="n">args</span><span class="k">:</span> <span class="kt">Array</span><span class="o">[</span><span class="kt">String</span><span class="o">])</span><span class="k">:</span> <span class="kt">Unit</span> <span class="o">=</span> <span class="o">{</span>
-    <span class="nf">chiselMain</span><span class="o">(</span><span class="nc">Array</span><span class="o">(</span><span class="s">"--backend"</span><span class="o">,</span> <span class="s">"v"</span><span class="o">),</span> <span class="o">()</span> <span class="k">=&gt;</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">Hello</span><span class="o">()))</span>
+  <span class="k">def</span> <span class="n">main</span><span class="o">(</span><span class="n">args</span><span class="k">:</span> <span class="kt">Array</span><span class="o">[</span><span class="kt">String</span><span class="o">])</span><span class="k">:</span> <span class="kt">Unit</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="n">chiselMain</span><span class="o">(</span><span class="nc">Array</span><span class="o">(</span><span class="s">"--backend"</span><span class="o">,</span> <span class="s">"v"</span><span class="o">),</span> <span class="o">()</span> <span class="k">=&gt;</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">Hello</span><span class="o">()))</span>
   <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div>    </div>
     <p>becomes (in Chisel3):</p>
     <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">object</span> <span class="nc">Hello</span> <span class="o">{</span>
-  <span class="k">def</span> <span class="nf">main</span><span class="o">(</span><span class="n">args</span><span class="k">:</span> <span class="kt">Array</span><span class="o">[</span><span class="kt">String</span><span class="o">])</span><span class="k">:</span> <span class="kt">Unit</span> <span class="o">=</span> <span class="o">{</span>
-    <span class="nv">chisel3</span><span class="o">.</span><span class="py">Driver</span><span class="o">.</span><span class="py">execute</span><span class="o">(</span><span class="nc">Array</span><span class="o">[</span><span class="kt">String</span><span class="o">](),</span> <span class="o">()</span> <span class="k">=&gt;</span> <span class="k">new</span> <span class="nc">Hello</span><span class="o">())</span>
+  <span class="k">def</span> <span class="n">main</span><span class="o">(</span><span class="n">args</span><span class="k">:</span> <span class="kt">Array</span><span class="o">[</span><span class="kt">String</span><span class="o">])</span><span class="k">:</span> <span class="kt">Unit</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="n">chisel3</span><span class="o">.</span><span class="nc">Driver</span><span class="o">.</span><span class="n">execute</span><span class="o">(</span><span class="nc">Array</span><span class="o">[</span><span class="kt">String</span><span class="o">](),</span> <span class="o">()</span> <span class="k">=&gt;</span> <span class="k">new</span> <span class="nc">Hello</span><span class="o">())</span>
   <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div>    </div>
@@ -179,20 +179,20 @@ on a file by file basis, by adjusting specific import statements.</p>
       <span class="c1">// Should Bundle connections require a strict match of fields.
 </span>      <span class="c1">// If true and the same fields aren't present in both source and sink, a MissingFieldException,
 </span>      <span class="c1">// MissingLeftFieldException, or MissingRightFieldException will be thrown.
-</span>      <span class="k">val</span> <span class="nv">connectFieldsMustMatch</span><span class="k">:</span> <span class="kt">Boolean</span>
+</span>      <span class="k">val</span> <span class="n">connectFieldsMustMatch</span><span class="k">:</span> <span class="kt">Boolean</span>
       <span class="c1">// When creating an object that takes a type argument, the argument must be unbound (a pure type).
-</span>      <span class="k">val</span> <span class="nv">declaredTypeMustBeUnbound</span><span class="k">:</span> <span class="kt">Boolean</span>
+</span>      <span class="k">val</span> <span class="n">declaredTypeMustBeUnbound</span><span class="k">:</span> <span class="kt">Boolean</span>
       <span class="c1">// Module IOs should be wrapped in an IO() to define their bindings before the reset of the module is defined.
-</span>      <span class="k">val</span> <span class="nv">requireIOWrap</span><span class="k">:</span> <span class="kt">Boolean</span>
+</span>      <span class="k">val</span> <span class="n">requireIOWrap</span><span class="k">:</span> <span class="kt">Boolean</span>
       <span class="c1">// If a connection operator fails, don't try the connection with the operands (source and sink) reversed.
-</span>      <span class="k">val</span> <span class="nv">dontTryConnectionsSwapped</span><span class="k">:</span> <span class="kt">Boolean</span>
+</span>      <span class="k">val</span> <span class="n">dontTryConnectionsSwapped</span><span class="k">:</span> <span class="kt">Boolean</span>
       <span class="c1">// If connection directionality is not explicit, do not use heuristics to attempt to determine it.
-</span>      <span class="k">val</span> <span class="nv">dontAssumeDirectionality</span><span class="k">:</span> <span class="kt">Boolean</span>
+</span>      <span class="k">val</span> <span class="n">dontAssumeDirectionality</span><span class="k">:</span> <span class="kt">Boolean</span>
       <span class="c1">// Issue a deprecation warning if Data.{flip, asInput,asOutput} is used
 </span>      <span class="c1">// instead of Flipped, Input, or Output.
-</span>      <span class="k">val</span> <span class="nv">deprecateOldDirectionMethods</span><span class="k">:</span> <span class="kt">Boolean</span>
+</span>      <span class="k">val</span> <span class="n">deprecateOldDirectionMethods</span><span class="k">:</span> <span class="kt">Boolean</span>
       <span class="c1">// Check that referenced Data have actually been declared.
-</span>      <span class="k">val</span> <span class="nv">checkSynthesizable</span><span class="k">:</span> <span class="kt">Boolean</span>
+</span>      <span class="k">val</span> <span class="n">checkSynthesizable</span><span class="k">:</span> <span class="kt">Boolean</span>
     <span class="o">}</span>
 </code></pre></div></div>
 

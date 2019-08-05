@@ -1,0 +1,729 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+          <title>firrtl 1.2-SNAPSHOT - firrtl.stage.FirrtlOptions</title>
+          <meta name="description" content="firrtl 1.2 - SNAPSHOT - firrtl.stage.FirrtlOptions" />
+          <meta name="keywords" content="firrtl 1.2 SNAPSHOT firrtl.stage.FirrtlOptions" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../lib/jquery.panzoom.min.js"></script>
+      <script type="text/javascript" src="../../lib/jquery.mousewheel.min.js"></script>
+      <script type="text/javascript" src="../../lib/index.js"></script>
+      <script type="text/javascript" src="../../index.js"></script>
+      <script type="text/javascript" src="../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../lib/template.js"></script>
+      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+        /* this variable can be used by the JS to determine the path to the root document */
+        var toRoot = '../../';
+      </script>
+    
+        </head>
+        <body>
+      <div id="search">
+        <span id="doc-title">firrtl<span id="doc-version">1.2-SNAPSHOT</span></span>
+        <span class="close-results"><span class="left">&lt;</span> Back</span>
+        <div id="textfilter">
+          <span class="input">
+            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
+            <i class="clear material-icons"></i>
+            <i id="search-icon" class="material-icons"></i>
+          </span>
+        </div>
+    </div>
+      <div id="search-results">
+        <div id="search-progress">
+          <div id="progress-fill"></div>
+        </div>
+        <div id="results-content">
+          <div id="entity-results"></div>
+          <div id="member-results"></div>
+        </div>
+      </div>
+      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
+        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
+          <div id="subpackage-spacer">
+            <div id="packages">
+              <h1>Packages</h1>
+              <ul>
+                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="_root_"></a><a id="root:_root_"></a>
+      <span class="permalink">
+      <a href="index.html#_root_" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="This is the documentation for Firrtl." href="../../index.html"><span class="name">root</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">This is the documentation for Firrtl.</p><div class="fullcomment"><div class="comment cmt"><p>This is the documentation for Firrtl.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="_root_.firrtl" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="firrtl"></a><a id="firrtl:firrtl"></a>
+      <span class="permalink">
+      <a href="index.html#firrtl" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../index.html"><span class="name">firrtl</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="firrtl.stage" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="stage"></a><a id="stage:stage"></a>
+      <span class="permalink">
+      <a href="../firrtl/index.html#stage" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="The stage package provides an implementation of the FIRRTL compiler using the firrtl.options package." href="index.html"><span class="name">stage</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">The <a href="index.html" class="extype" name="firrtl.stage">stage</a> package provides an implementation of the FIRRTL compiler using the <a href="../options/index.html" class="extype" name="firrtl.options">firrtl.options</a> package.</p><div class="fullcomment"><div class="comment cmt"><p>The <a href="index.html" class="extype" name="firrtl.stage">stage</a> package provides an implementation of the FIRRTL compiler using the <a href="../options/index.html" class="extype" name="firrtl.options">firrtl.options</a> package. This
+primarily consists of:</p><ul><li><a href="FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a>, the internal and external (command line) interface to the FIRRTL compiler</li><li>A number of <a href="../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a>s that support and compartmentalize the individual operations of
+    <a href="FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a></li><li><a href="" class="extype" name="firrtl.stage.FirrtlOptions">FirrtlOptions</a>, a class representing options that are necessary to drive the <a href="FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a> and its
+    <a href="../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a>s</li><li><a href="package$$FirrtlOptionsView$.html" class="extype" name="firrtl.stage.FirrtlOptionsView">FirrtlOptionsView</a>, a utility that constructs an <a href="../options/OptionsView.html" class="extype" name="firrtl.options.OptionsView">OptionsView</a> of <a href="" class="extype" name="firrtl.stage.FirrtlOptions">FirrtlOptions</a>
+    from an <a href="../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a></li><li><a href="FirrtlCli.html" class="extype" name="firrtl.stage.FirrtlCli">FirrtlCli</a>, the command line options that the <a href="FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a> supports</li><li><a href="FirrtlStageUtils$.html" class="extype" name="firrtl.stage.FirrtlStageUtils">FirrtlStageUtils</a> containing miscellaneous utilities for <a href="index.html" class="extype" name="firrtl.stage">stage</a>
+</li></ul></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
+    </li><li name="firrtl.stage.phases" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="phases"></a><a id="phases:phases"></a>
+      <span class="permalink">
+      <a href="../../firrtl/stage/index.html#phases" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="phases/index.html"><span class="name">phases</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="firrtl.stage">stage</a></dd></dl></div>
+    </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="CircuitOption.html" title="Indicates that this Annotation contains information that is directly convertable to a FIRRTL Circuit."></a>
+                        <a href="CircuitOption.html" title="Indicates that this Annotation contains information that is directly convertable to a FIRRTL Circuit.">CircuitOption</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="CompilerAnnotation$.html" title=""></a>
+                        <a class="class" href="CompilerAnnotation.html" title="helpValueName a Compiler that should be run"></a>
+                        <a href="CompilerAnnotation.html" title="helpValueName a Compiler that should be run">CompilerAnnotation</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="FirrtlCircuitAnnotation.html" title="Holds a FIRRTL Circuit"></a>
+                        <a href="FirrtlCircuitAnnotation.html" title="Holds a FIRRTL Circuit">FirrtlCircuitAnnotation</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="FirrtlCli.html" title="Shell mixin that provides command line options for FIRRTL."></a>
+                        <a href="FirrtlCli.html" title="Shell mixin that provides command line options for FIRRTL.">FirrtlCli</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="FirrtlFileAnnotation$.html" title=""></a>
+                        <a class="class" href="FirrtlFileAnnotation.html" title="An explicit input FIRRTL file to read"></a>
+                        <a href="FirrtlFileAnnotation.html" title="An explicit input FIRRTL file to read">FirrtlFileAnnotation</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="FirrtlMain$.html" title=""></a>
+                        <a href="FirrtlMain$.html" title="">FirrtlMain</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="FirrtlOption.html" title="Indicates that this is an Annotation directly used in the construction of a FirrtlOptions view."></a>
+                        <a href="FirrtlOption.html" title="Indicates that this is an Annotation directly used in the construction of a FirrtlOptions view.">FirrtlOption</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="" title="Internal options used to control the FIRRTL compiler stage."></a>
+                        <a href="" title="Internal options used to control the FIRRTL compiler stage.">FirrtlOptions</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="package$$FirrtlOptionsView$.html" title=""></a>
+                        <a href="package$$FirrtlOptionsView$.html" title="">FirrtlOptionsView</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="FirrtlSourceAnnotation$.html" title=""></a>
+                        <a class="class" href="FirrtlSourceAnnotation.html" title="Holds a String containing FIRRTL source to read as input"></a>
+                        <a href="FirrtlSourceAnnotation.html" title="Holds a String containing FIRRTL source to read as input">FirrtlSourceAnnotation</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="FirrtlStage.html" title=""></a>
+                        <a href="FirrtlStage.html" title="">FirrtlStage</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="FirrtlStageUtils$.html" title="Utilities that help with processing FIRRTL options"></a>
+                        <a href="FirrtlStageUtils$.html" title="Utilities that help with processing FIRRTL options">FirrtlStageUtils</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="InfoModeAnnotation$.html" title=""></a>
+                        <a class="class" href="InfoModeAnnotation.html" title="Sets the info mode style"></a>
+                        <a href="InfoModeAnnotation.html" title="Sets the info mode style">InfoModeAnnotation</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="OutputFileAnnotation$.html" title=""></a>
+                        <a class="class" href="OutputFileAnnotation.html" title="An explicit output file the emitter will write to"></a>
+                        <a href="OutputFileAnnotation.html" title="An explicit output file the emitter will write to">OutputFileAnnotation</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="RunFirrtlTransformAnnotation$.html" title=""></a>
+                        <a class="class" href="RunFirrtlTransformAnnotation.html" title="Holds the unambiguous class name of a Transform to run"></a>
+                        <a href="RunFirrtlTransformAnnotation.html" title="Holds the unambiguous class name of a Transform to run">RunFirrtlTransformAnnotation</a>
+                      </li>
+              </ul>
+            </div>
+          </div>
+          <div id="content">
+            <body class="class type">
+      <div id="definition">
+        <div class="big-circle class">c</div>
+        <p id="owner"><a href="../index.html" class="extype" name="firrtl">firrtl</a>.<a href="index.html" class="extype" name="firrtl.stage">stage</a></p>
+        <h1>FirrtlOptions<span class="permalink">
+      <a href="../../firrtl/stage/FirrtlOptions.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span></h1>
+        <h3><span class="morelinks"></span></h3>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <span class="name">FirrtlOptions</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      </h4>
+
+      
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Internal options used to control the FIRRTL compiler stage.</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/master/src/main/scala/firrtl/stage/FirrtlOptions.scala" target="_blank">FirrtlOptions.scala</a></dd></dl><div class="toggleContainer block">
+          <span class="toggle">
+            Linear Supertypes
+          </span>
+          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+        </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
+                <span class="toggle diagram-link">
+                  Type Hierarchy
+                </span>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 152.00 118.00" height="118pt" width="152pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 114)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-114 148,-114 148,4 -4,4" stroke="transparent" fill="#ffffff"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this class" id="graph1_0"><g id="a_this class|graph1_0"><a xlink:title="firrtl.stage.FirrtlOptions (this class)" xlink:href="#inheritance-diagram"><path d="M111.6667,-49C111.6667,-49 32.3333,-49 32.3333,-49 28.1667,-49 24,-44.8333 24,-40.6667 24,-40.6667 24,-32.3333 24,-32.3333 24,-28.1667 28.1667,-24 32.3333,-24 32.3333,-24 111.6667,-24 111.6667,-24 115.8333,-24 120,-28.1667 120,-32.3333 120,-32.3333 120,-40.6667 120,-40.6667 120,-44.8333 115.8333,-49 111.6667,-49" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-43.5" x="34" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-34.1" x="55" text-anchor="start">FirrtlOptions</text></a></g></g><!-- node1 --><g class="node class" id="graph1_1"><g id="a_class|graph1_1"><a xlink:title="scala.AnyRef"><path d="M101.1667,-110C101.1667,-110 42.8333,-110 42.8333,-110 38.6667,-110 34.5,-105.8333 34.5,-101.6667 34.5,-101.6667 34.5,-93.3333 34.5,-93.3333 34.5,-89.1667 38.6667,-85 42.8333,-85 42.8333,-85 101.1667,-85 101.1667,-85 105.3333,-85 109.5,-89.1667 109.5,-93.3333 109.5,-93.3333 109.5,-101.6667 109.5,-101.6667 109.5,-105.8333 105.3333,-110 101.1667,-110" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-104.5" x="45" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-95.1" x="66" text-anchor="start">AnyRef</text></a></g></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph1_1_0"><g id="a_inheritance|graph1_1_0"><a xlink:title="FirrtlOptions is a subtype of AnyRef"><path d="M72,-77.7386C72,-68.3393 72,-57.3803 72,-49.123" stroke="#d4d4d4" fill="none"></path><polygon points="69.5501,-77.8607 72,-84.8608 74.4501,-77.8608 69.5501,-77.8607" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
+                <div id="diagram-controls" class="hiddenContent">
+                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
+                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
+                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
+                </div>
+              </div></div>
+        
+
+      <div id="mbrsel">
+        <div class="toggle"></div>
+        <div id="memberfilter">
+          <i class="material-icons arrow"></i>
+          <span class="input">
+            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
+          </span>
+          <i class="clear material-icons"></i>
+        </div>
+        <div id="filterby">
+          <div id="order">
+            <span class="filtertype">Ordering</span>
+            <ol>
+              
+              <li class="alpha in"><span>Alphabetic</span></li>
+              <li class="inherit out"><span>By Inheritance</span></li>
+            </ol>
+          </div>
+          <div class="ancestors">
+                  <span class="filtertype">Inherited<br />
+                  </span>
+                  <ol id="linearization">
+                    <li class="in" name="firrtl.stage.FirrtlOptions"><span>FirrtlOptions</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                  </ol>
+                </div><div class="ancestors">
+              <span class="filtertype"></span>
+              <ol>
+                <li class="hideall out"><span>Hide All</span></li>
+                <li class="showall in"><span>Show All</span></li>
+              </ol>
+            </div>
+          <div id="visbl">
+              <span class="filtertype">Visibility</span>
+              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+            </div>
+        </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        
+
+        
+
+        <div class="values members">
+              <h3>Value Members</h3>
+              <ol>
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../firrtl/stage/FirrtlOptions.html#!=(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="##():Int"></a>
+      <span class="permalink">
+      <a href="../../firrtl/stage/FirrtlOptions.html###():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../firrtl/stage/FirrtlOptions.html#==(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <span class="permalink">
+      <a href="../../firrtl/stage/FirrtlOptions.html#asInstanceOf[T0]:T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
+      <span class="permalink">
+      <a href="../../firrtl/stage/FirrtlOptions.html#clone():Object" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="firrtl.stage.FirrtlOptions#compiler" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="compiler:firrtl.Compiler"></a><a id="compiler:Compiler"></a>
+      <span class="permalink">
+      <a href="../../firrtl/stage/FirrtlOptions.html#compiler:firrtl.Compiler" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">compiler</span><span class="result">: <a href="../Compiler.html" class="extype" name="firrtl.Compiler">Compiler</a></span>
+      </span>
+      
+      
+    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../firrtl/stage/FirrtlOptions.html#eq(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+      <span class="permalink">
+      <a href="../../firrtl/stage/FirrtlOptions.html#equals(x$1:Any):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="finalize():Unit"></a>
+      <span class="permalink">
+      <a href="../../firrtl/stage/FirrtlOptions.html#finalize():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="symbol">classOf[java.lang.Throwable]</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="firrtl.stage.FirrtlOptions#firrtlCircuit" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="firrtlCircuit:Option[firrtl.ir.Circuit]"></a><a id="firrtlCircuit:Option[Circuit]"></a>
+      <span class="permalink">
+      <a href="../../firrtl/stage/FirrtlOptions.html#firrtlCircuit:Option[firrtl.ir.Circuit]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">firrtlCircuit</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="../ir/Circuit.html" class="extype" name="firrtl.ir.Circuit">Circuit</a>]</span>
+      </span>
+      
+      
+    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getClass():Class[_]"></a>
+      <span class="permalink">
+      <a href="../../firrtl/stage/FirrtlOptions.html#getClass():Class[_]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <span class="permalink">
+      <a href="../../firrtl/stage/FirrtlOptions.html#hashCode():Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="firrtl.stage.FirrtlOptions#infoModeName" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="infoModeName:String"></a>
+      <span class="permalink">
+      <a href="../../firrtl/stage/FirrtlOptions.html#infoModeName:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">infoModeName</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <span class="permalink">
+      <a href="../../firrtl/stage/FirrtlOptions.html#isInstanceOf[T0]:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
+      <span class="permalink">
+      <a href="../../firrtl/stage/FirrtlOptions.html#ne(x$1:AnyRef):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notify():Unit"></a>
+      <span class="permalink">
+      <a href="../../firrtl/stage/FirrtlOptions.html#notify():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="notifyAll():Unit"></a>
+      <span class="permalink">
+      <a href="../../firrtl/stage/FirrtlOptions.html#notifyAll():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+        </dd></dl></div>
+    </li><li name="firrtl.stage.FirrtlOptions#outputFileName" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="outputFileName:Option[String]"></a>
+      <span class="permalink">
+      <a href="../../firrtl/stage/FirrtlOptions.html#outputFileName:Option[String]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">outputFileName</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      
+      
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
+      <span class="permalink">
+      <a href="../../firrtl/stage/FirrtlOptions.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <span class="permalink">
+      <a href="../../firrtl/stage/FirrtlOptions.html#toString():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait():Unit"></a>
+      <span class="permalink">
+      <a href="../../firrtl/stage/FirrtlOptions.html#wait():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
+      <span class="permalink">
+      <a href="../../firrtl/stage/FirrtlOptions.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
+      <span class="permalink">
+      <a href="../../firrtl/stage/FirrtlOptions.html#wait(x$1:Long):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+                <span class="name">@native</span><span class="args">()</span>
+              
+                <span class="name">@throws</span><span class="args">(<span>
+      
+      <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
+    </span>)</span>
+              
+        </dd></dl></div>
+    </li>
+              </ol>
+            </div>
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        <div class="parent" name="scala.AnyRef">
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+            </div><div class="parent" name="scala.Any">
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
+            </div>
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+    </body>
+          </div>
+        </div>
+      </div>
+    </body>
+      </html>
