@@ -24,47 +24,47 @@ in the IO Bundle will be generated with the requested name (ie. no preceding <co
 </span>
 <span class="k">class</span> <span class="nc">IBUFDS</span> <span class="k">extends</span> <span class="nc">BlackBox</span><span class="o">(</span><span class="nc">Map</span><span class="o">(</span><span class="s">"DIFF_TERM"</span> <span class="o">-&gt;</span> <span class="s">"TRUE"</span><span class="o">,</span>
                                   <span class="s">"IOSTANDARD"</span> <span class="o">-&gt;</span> <span class="s">"DEFAULT"</span><span class="o">))</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="n">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
-    <span class="k">val</span> <span class="n">O</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">Clock</span><span class="o">())</span>
-    <span class="k">val</span> <span class="n">I</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Clock</span><span class="o">())</span>
-    <span class="k">val</span> <span class="nc">IB</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Clock</span><span class="o">())</span>
+  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="nv">O</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">Clock</span><span class="o">())</span>
+    <span class="k">val</span> <span class="nv">I</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Clock</span><span class="o">())</span>
+    <span class="k">val</span> <span class="nv">IB</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Clock</span><span class="o">())</span>
   <span class="o">})</span>
 <span class="o">}</span>
 
 <span class="k">class</span> <span class="nc">Top</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="n">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span><span class="o">{})</span>
-  <span class="k">val</span> <span class="n">ibufds</span> <span class="k">=</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">IBUFDS</span><span class="o">)</span>
+  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span><span class="o">{})</span>
+  <span class="k">val</span> <span class="nv">ibufds</span> <span class="k">=</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">IBUFDS</span><span class="o">)</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
 <p>In the Chisel-generated Verilog code, <code class="highlighter-rouge">IBUFDS</code> will be instantiated as:</p>
 
-<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">IBUFDS</span> <span class="p">#(</span><span class="o">.</span><span class="n">DIFF_TERM</span><span class="p">(</span><span class="s">"TRUE"</span><span class="p">)</span><span class="o">,</span> <span class="o">.</span><span class="n">IOSTANDARD</span><span class="p">(</span><span class="s">"DEFAULT"</span><span class="p">))</span> <span class="n">ibufds</span> <span class="p">(</span>
-  <span class="o">.</span><span class="n">IB</span><span class="p">(</span><span class="n">ibufds_IB</span><span class="p">)</span><span class="o">,</span>
-  <span class="o">.</span><span class="n">I</span><span class="p">(</span><span class="n">ibufds_I</span><span class="p">)</span><span class="o">,</span>
-  <span class="o">.</span><span class="n">O</span><span class="p">(</span><span class="n">ibufds_O</span><span class="p">)</span>
-<span class="p">)</span><span class="o">;</span>
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">IBUFDS</span> <span class="p">#(.</span><span class="n">DIFF_TERM</span><span class="p">(</span><span class="s">"TRUE"</span><span class="p">),</span> <span class="p">.</span><span class="n">IOSTANDARD</span><span class="p">(</span><span class="s">"DEFAULT"</span><span class="p">))</span> <span class="n">ibufds</span> <span class="p">(</span>
+  <span class="p">.</span><span class="n">IB</span><span class="p">(</span><span class="n">ibufds_IB</span><span class="p">),</span>
+  <span class="p">.</span><span class="n">I</span><span class="p">(</span><span class="n">ibufds_I</span><span class="p">),</span>
+  <span class="p">.</span><span class="n">O</span><span class="p">(</span><span class="n">ibufds_O</span><span class="p">)</span>
+<span class="p">);</span>
 </code></pre></div></div>
 
 <h3 id="providing-implementations-for-blackboxes">Providing Implementations for Blackboxes</h3>
 <p>The Chisel Execution Harness (see <a href="Running-Stuff">Running Stuff</a>) provides the following ways of delivering the code underlying the blackbox.  Consider the following blackbox that adds two real numbers together.  The numbers are represented in chisel3 as 64-bit unsigned integers.</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">BlackBoxRealAdd</span> <span class="k">extends</span> <span class="nc">BlackBox</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="n">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span><span class="o">()</span> <span class="o">{</span>
-    <span class="k">val</span> <span class="n">in1</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">64.</span><span class="n">W</span><span class="o">))</span>
-    <span class="k">val</span> <span class="n">in2</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">64.</span><span class="n">W</span><span class="o">))</span>
-    <span class="k">val</span> <span class="n">out</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">64.</span><span class="n">W</span><span class="o">))</span>
+  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="nv">in1</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">64.</span><span class="n">W</span><span class="o">))</span>
+    <span class="k">val</span> <span class="nv">in2</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">64.</span><span class="n">W</span><span class="o">))</span>
+    <span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">64.</span><span class="n">W</span><span class="o">))</span>
   <span class="o">})</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
 <p>The implementation is described by the following verilog</p>
 <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">BlackBoxRealAdd</span><span class="p">(</span>
-    <span class="kt">input</span>  <span class="p">[</span><span class="mi">63</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in1</span><span class="o">,</span>
-    <span class="kt">input</span>  <span class="p">[</span><span class="mi">63</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in2</span><span class="o">,</span>
+    <span class="kt">input</span>  <span class="p">[</span><span class="mi">63</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in1</span><span class="p">,</span>
+    <span class="kt">input</span>  <span class="p">[</span><span class="mi">63</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in2</span><span class="p">,</span>
     <span class="kt">output</span> <span class="kt">reg</span> <span class="p">[</span><span class="mi">63</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span>
-<span class="p">)</span><span class="o">;</span>
+<span class="p">);</span>
   <span class="k">always</span> <span class="o">@*</span> <span class="k">begin</span>
-  <span class="n">out</span> <span class="o">&lt;=</span> <span class="p">$</span><span class="nb">realtobits</span><span class="p">($</span><span class="nb">bitstoreal</span><span class="p">(</span><span class="n">in1</span><span class="p">)</span> <span class="o">+</span> <span class="p">$</span><span class="nb">bitstoreal</span><span class="p">(</span><span class="n">in2</span><span class="p">))</span><span class="o">;</span>
+  <span class="n">out</span> <span class="o">&lt;=</span> <span class="p">$</span><span class="nb">realtobits</span><span class="p">($</span><span class="nb">bitstoreal</span><span class="p">(</span><span class="n">in1</span><span class="p">)</span> <span class="o">+</span> <span class="p">$</span><span class="nb">bitstoreal</span><span class="p">(</span><span class="n">in2</span><span class="p">));</span>
   <span class="k">end</span>
 <span class="k">endmodule</span>
 </code></pre></div></div>
@@ -72,12 +72,12 @@ in the IO Bundle will be generated with the requested name (ie. no preceding <co
 <h3 id="blackboxes-with-verilog-in-a-resource-file">Blackboxes with Verilog in a Resource File</h3>
 <p>In order to deliver the verilog snippet above to the backend simulator, chisel3 provides the following tools based on the chisel/firrtl <a href="Annotations-Extending-Chisel-and-Firrtl">annotation system</a>.  Add the trait <code class="highlighter-rouge">HasBlackBoxResource</code> to the declaration, and then call a function in the body to say where the system can find the verilog.  The Module now looks like</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">BlackBoxRealAdd</span> <span class="k">extends</span> <span class="nc">BlackBox</span> <span class="k">with</span> <span class="nc">HasBlackBoxResource</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="n">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span><span class="o">()</span> <span class="o">{</span>
-    <span class="k">val</span> <span class="n">in1</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">64.</span><span class="n">W</span><span class="o">))</span>
-    <span class="k">val</span> <span class="n">in2</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">64.</span><span class="n">W</span><span class="o">))</span>
-    <span class="k">val</span> <span class="n">out</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">64.</span><span class="n">W</span><span class="o">))</span>
+  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="nv">in1</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">64.</span><span class="n">W</span><span class="o">))</span>
+    <span class="k">val</span> <span class="nv">in2</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">64.</span><span class="n">W</span><span class="o">))</span>
+    <span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">64.</span><span class="n">W</span><span class="o">))</span>
   <span class="o">})</span>
-  <span class="n">setResource</span><span class="o">(</span><span class="s">"/real_math.v"</span><span class="o">)</span>
+  <span class="nf">setResource</span><span class="o">(</span><span class="s">"/real_math.v"</span><span class="o">)</span>
 <span class="o">}</span>
 </code></pre></div></div>
 <p>The verilog snippet above gets put into a resource file names <code class="highlighter-rouge">real_math.v</code>.  What is a resource file? It comes from a java convention of keeping files in a project that are automatically included in library distributions. In a typical chisel3 project, see <a href="https://github.com/ucb-bar/chisel-template">chisel-template</a>, this would be a directory in the source hierarchy</p>
@@ -87,12 +87,12 @@ in the IO Bundle will be generated with the requested name (ie. no preceding <co
 <h3 id="blackboxes-with-in-line-verilog">Blackboxes with In-line Verilog</h3>
 <p>It is also possible to place this verilog directly in the scala source.  Instead of <code class="highlighter-rouge">HasBlackBoxResource</code> use <code class="highlighter-rouge">HasBlackBoxInline</code> and instead of <code class="highlighter-rouge">setResource</code> use <code class="highlighter-rouge">setInline</code>.  The code will look like this.</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">BlackBoxRealAdd</span> <span class="k">extends</span> <span class="nc">BlackBox</span> <span class="k">with</span> <span class="nc">HasBlackBoxInline</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="n">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span><span class="o">()</span> <span class="o">{</span>
-    <span class="k">val</span> <span class="n">in1</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">64.</span><span class="n">W</span><span class="o">))</span>
-    <span class="k">val</span> <span class="n">in2</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">64.</span><span class="n">W</span><span class="o">))</span>
-    <span class="k">val</span> <span class="n">out</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">64.</span><span class="n">W</span><span class="o">))</span>
+  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span><span class="o">()</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="nv">in1</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">64.</span><span class="n">W</span><span class="o">))</span>
+    <span class="k">val</span> <span class="nv">in2</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">64.</span><span class="n">W</span><span class="o">))</span>
+    <span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">64.</span><span class="n">W</span><span class="o">))</span>
   <span class="o">})</span>
-  <span class="n">setInline</span><span class="o">(</span><span class="s">"BlackBoxRealAdd.v"</span><span class="o">,</span>
+  <span class="nf">setInline</span><span class="o">(</span><span class="s">"BlackBoxRealAdd.v"</span><span class="o">,</span>
     <span class="n">s</span><span class="s">"""
       |module BlackBoxRealAdd(
       |    input  [15:0] in1,
@@ -103,7 +103,7 @@ in the IO Bundle will be generated with the requested name (ie. no preceding <co
       |  out &lt;= $realtobits($bitstoreal(in1) + $bitstoreal(in2));
       |end
       |endmodule
-    """</span><span class="o">.</span><span class="n">stripMargin</span><span class="o">)</span>
+    """</span><span class="o">.</span><span class="py">stripMargin</span><span class="o">)</span>
 <span class="o">}</span>
 </code></pre></div></div>
 <p>This technique will copy the inline verilog into the target directory under the name <code class="highlighter-rouge">BlackBoxRealAdd.v</code></p>

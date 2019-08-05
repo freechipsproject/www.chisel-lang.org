@@ -5,7 +5,7 @@ Hardware Compiler Framework" /><meta name="twitter:card" content="summary_large_
 we later reuse multiple times in a design.  For example, we can wrap
 up our earlier example of a simple combinational logic block as
 follows:</p>
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="n">clb</span><span class="o">(</span><span class="n">a</span><span class="k">:</span> <span class="kt">UInt</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span> <span class="kt">UInt</span><span class="o">,</span> <span class="n">c</span><span class="k">:</span> <span class="kt">UInt</span><span class="o">,</span> <span class="n">d</span><span class="k">:</span> <span class="kt">UInt</span><span class="o">)</span><span class="k">:</span> <span class="kt">UInt</span> <span class="o">=</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">clb</span><span class="o">(</span><span class="n">a</span><span class="k">:</span> <span class="kt">UInt</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span> <span class="kt">UInt</span><span class="o">,</span> <span class="n">c</span><span class="k">:</span> <span class="kt">UInt</span><span class="o">,</span> <span class="n">d</span><span class="k">:</span> <span class="kt">UInt</span><span class="o">)</span><span class="k">:</span> <span class="kt">UInt</span> <span class="o">=</span>
   <span class="o">(</span><span class="n">a</span> <span class="o">&amp;</span> <span class="n">b</span><span class="o">)</span> <span class="o">|</span> <span class="o">(~</span><span class="n">c</span> <span class="o">&amp;</span> <span class="n">d</span><span class="o">)</span>
 </code></pre></div></div>
 
@@ -18,7 +18,7 @@ argument list.  The equals (<code class="highlighter-rouge">=})</code>sign separ
 definition.</p>
 
 <p>We can then use the block in another circuit as follows:</p>
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="n">out</span> <span class="k">=</span> <span class="n">clb</span><span class="o">(</span><span class="n">a</span><span class="o">,</span><span class="n">b</span><span class="o">,</span><span class="n">c</span><span class="o">,</span><span class="n">d</span><span class="o">)</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="nf">clb</span><span class="o">(</span><span class="n">a</span><span class="o">,</span><span class="n">b</span><span class="o">,</span><span class="n">c</span><span class="o">,</span><span class="n">d</span><span class="o">)</span>
 </code></pre></div></div>
 
 <p>We will later describe many powerful ways to use functions to
