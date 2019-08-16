@@ -81,8 +81,9 @@ for instructions on preparing your Chisel2 designs for Chisel3.</p>
   <li>the con and alt inputs to a Mux must be type-compatible - both signed or both unsigned,</li>
   <li>bulk-connection to a node that has been procedurally assigned-to is illegal,</li>
   <li><code class="highlighter-rouge">!=</code> is deprecated, use <code class="highlighter-rouge">=/=</code> instead,</li>
-  <li>use <code class="highlighter-rouge">SeqMem(...)</code> instead of <code class="highlighter-rouge">Mem(..., seqRead)</code>,</li>
-  <li>use <code class="highlighter-rouge">SeqMem(n:Int, out: =&gt; T)</code> instead of <code class="highlighter-rouge">SeqMem(out: =&gt; T, n:Int)</code>,</li>
+  <li>use <code class="highlighter-rouge">SyncReadMem(...)</code> instead of <code class="highlighter-rouge">Mem(..., seqRead)</code>,</li>
+  <li>use <code class="highlighter-rouge">SyncReadMem(n:Int, out: =&gt; T)</code> instead of <code class="highlighter-rouge">SyncReadMem(out: =&gt; T, n:Int)</code>,</li>
+  <li>use <code class="highlighter-rouge">SyncReadMem(...)</code> instead of <code class="highlighter-rouge">SeqMem(...)</code>,</li>
   <li>use <code class="highlighter-rouge">Mem(n:Int, t:T)</code> instead of <code class="highlighter-rouge">Mem(out:T, n:Int)</code>,</li>
   <li>use <code class="highlighter-rouge">Vec(n:Int, gen: =&gt; T)</code> instead of <code class="highlighter-rouge">Vec(gen: =&gt; T, n:Int)</code>,</li>
   <li>module io’s must be wrapped in <code class="highlighter-rouge">IO()</code>.</li>
