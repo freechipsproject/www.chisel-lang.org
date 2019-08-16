@@ -47,6 +47,7 @@
 - [`@nyuichi`](https://github.com/nyuichi)
 - [`@oharboe`](https://github.com/oharboe)
 - [`@palmer-dabbelt`](https://github.com/palmer-dabbelt)
+- [`@richardxia`](https://github.com/richardxia)
 - [`@rupertlssmith`](https://github.com/rupertlssmith)
 - [`@sbeamer`](https://github.com/sbeamer)
 - [`@schoeberl`](https://github.com/schoeberl)
