@@ -16,11 +16,11 @@ define getTags
 	$(shell cd $(1) && git tag | grep "^v\([0-9]\+\.\)\{2\}[0-9]\+$$")
 endef
 
-firrtlTags = $(call getTags,firrtl)
-chiselTags = $(call getTags,chisel3)
-testersTags = $(call getTags,chisel-testers)
-treadleTags = $(call getTags,treadle)
-diagrammerTags = $(call getTags,diagrammer)
+firrtlTags = $(call getTags,firrtl) master
+chiselTags = $(call getTags,chisel3) master
+testersTags = $(call getTags,chisel-testers) master
+treadleTags = $(call getTags,treadle) master
+diagrammerTags = $(call getTags,diagrammer) master
 
 api-copy = \
 	docs/target/site/api/chisel3/latest/index.html \
