@@ -14,71 +14,71 @@ ga('send', 'pageview');
 <p>Note that in order to cross clock domains safely, you will need appropriate synchronization logic (such as an asynchronous FIFO). You can use the <a href="https://github.com/ucb-bar/asyncqueue">AsyncQueue library</a> to do this easily.</p>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">MultiClockModule</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
-    <span class="k">val</span> <span class="nv">clockB</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Clock</span><span class="o">())</span>
-    <span class="k">val</span> <span class="nv">resetB</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
-    <span class="k">val</span> <span class="nv">stuff</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+  <span class="k">val</span> <span class="n">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="n">clockB</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Clock</span><span class="o">())</span>
+    <span class="k">val</span> <span class="n">resetB</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+    <span class="k">val</span> <span class="n">stuff</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
   <span class="o">})</span>
 
   <span class="c1">// This register is clocked against the module clock.
-</span>  <span class="k">val</span> <span class="nv">regClock</span> <span class="k">=</span> <span class="nc">RegNext</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">stuff</span><span class="o">)</span>
+</span>  <span class="k">val</span> <span class="n">regClock</span> <span class="k">=</span> <span class="nc">RegNext</span><span class="o">(</span><span class="n">io</span><span class="o">.</span><span class="n">stuff</span><span class="o">)</span>
 
-  <span class="nf">withClockAndReset</span> <span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">clockB</span><span class="o">,</span> <span class="nv">io</span><span class="o">.</span><span class="py">resetB</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">withClockAndReset</span> <span class="o">(</span><span class="n">io</span><span class="o">.</span><span class="n">clockB</span><span class="o">,</span> <span class="n">io</span><span class="o">.</span><span class="n">resetB</span><span class="o">)</span> <span class="o">{</span>
     <span class="c1">// In this withClock scope, all synchronous elements are clocked against io.clockB.
 </span>    <span class="c1">// Reset for flops in this domain is using the explicitly provided reset io.resetB.
 </span>
     <span class="c1">// This register is clocked against io.clockB.
-</span>    <span class="k">val</span> <span class="nv">regClockB</span> <span class="k">=</span> <span class="nc">RegNext</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">stuff</span><span class="o">)</span>
+</span>    <span class="k">val</span> <span class="n">regClockB</span> <span class="k">=</span> <span class="nc">RegNext</span><span class="o">(</span><span class="n">io</span><span class="o">.</span><span class="n">stuff</span><span class="o">)</span>
   <span class="o">}</span>
 
   <span class="c1">// This register is also clocked against the module clock.
-</span>  <span class="k">val</span> <span class="nv">regClock2</span> <span class="k">=</span> <span class="nc">RegNext</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">stuff</span><span class="o">)</span>
+</span>  <span class="k">val</span> <span class="n">regClock2</span> <span class="k">=</span> <span class="nc">RegNext</span><span class="o">(</span><span class="n">io</span><span class="o">.</span><span class="n">stuff</span><span class="o">)</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
 <p>You can also instantiate modules in another clock domain:</p>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">MultiClockModule</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
-    <span class="k">val</span> <span class="nv">clockB</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Clock</span><span class="o">())</span>
-    <span class="k">val</span> <span class="nv">resetB</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
-    <span class="k">val</span> <span class="nv">stuff</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+  <span class="k">val</span> <span class="n">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="n">clockB</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Clock</span><span class="o">())</span>
+    <span class="k">val</span> <span class="n">resetB</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+    <span class="k">val</span> <span class="n">stuff</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
   <span class="o">})</span>
-  <span class="k">val</span> <span class="nv">clockB_child</span> <span class="k">=</span> <span class="nf">withClockAndReset</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">clockB</span><span class="o">,</span> <span class="nv">io</span><span class="o">.</span><span class="py">resetB</span><span class="o">)</span> <span class="o">{</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">ChildModule</span><span class="o">)</span> <span class="o">}</span>
-  <span class="nv">clockB_child</span><span class="o">.</span><span class="py">io</span><span class="o">.</span><span class="py">in</span> <span class="o">:=</span> <span class="nv">io</span><span class="o">.</span><span class="py">stuff</span>
+  <span class="k">val</span> <span class="n">clockB_child</span> <span class="k">=</span> <span class="n">withClockAndReset</span><span class="o">(</span><span class="n">io</span><span class="o">.</span><span class="n">clockB</span><span class="o">,</span> <span class="n">io</span><span class="o">.</span><span class="n">resetB</span><span class="o">)</span> <span class="o">{</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">ChildModule</span><span class="o">)</span> <span class="o">}</span>
+  <span class="n">clockB_child</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">in</span> <span class="o">:=</span> <span class="n">io</span><span class="o">.</span><span class="n">stuff</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
 <p>If you only want to connect your clock to a new clock domain and use the regular implicit reset signal, you can use <code class="highlighter-rouge">withClock(clock)</code> instead of <code class="highlighter-rouge">withClockAndReset</code>.</p>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">MultiClockModule</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
-    <span class="k">val</span> <span class="nv">clockB</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Clock</span><span class="o">())</span>
-    <span class="k">val</span> <span class="nv">stuff</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+  <span class="k">val</span> <span class="n">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="n">clockB</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Clock</span><span class="o">())</span>
+    <span class="k">val</span> <span class="n">stuff</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
   <span class="o">})</span>
 
   <span class="c1">// This register is clocked against the module clock.
-</span>  <span class="k">val</span> <span class="nv">regClock</span> <span class="k">=</span> <span class="nc">RegNext</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">stuff</span><span class="o">)</span>
+</span>  <span class="k">val</span> <span class="n">regClock</span> <span class="k">=</span> <span class="nc">RegNext</span><span class="o">(</span><span class="n">io</span><span class="o">.</span><span class="n">stuff</span><span class="o">)</span>
 
-  <span class="nf">withClock</span> <span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">clockB</span><span class="o">)</span> <span class="o">{</span>
+  <span class="n">withClock</span> <span class="o">(</span><span class="n">io</span><span class="o">.</span><span class="n">clockB</span><span class="o">)</span> <span class="o">{</span>
     <span class="c1">// In this withClock scope, all synchronous elements are clocked against io.clockB.
 </span>
     <span class="c1">// This register is clocked against io.clockB, but uses implict reset from the parent context.
-</span>    <span class="k">val</span> <span class="nv">regClockB</span> <span class="k">=</span> <span class="nc">RegNext</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">stuff</span><span class="o">)</span>
+</span>    <span class="k">val</span> <span class="n">regClockB</span> <span class="k">=</span> <span class="nc">RegNext</span><span class="o">(</span><span class="n">io</span><span class="o">.</span><span class="n">stuff</span><span class="o">)</span>
   <span class="o">}</span>
 
   <span class="c1">// This register is also clocked against the module clock.
-</span>  <span class="k">val</span> <span class="nv">regClock2</span> <span class="k">=</span> <span class="nc">RegNext</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">stuff</span><span class="o">)</span>
+</span>  <span class="k">val</span> <span class="n">regClock2</span> <span class="k">=</span> <span class="nc">RegNext</span><span class="o">(</span><span class="n">io</span><span class="o">.</span><span class="n">stuff</span><span class="o">)</span>
 <span class="o">}</span>
 
 <span class="c1">// Instantiate module in another clock domain with implicit reset.
 </span><span class="k">class</span> <span class="nc">MultiClockModule</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
-    <span class="k">val</span> <span class="nv">clockB</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Clock</span><span class="o">())</span>
-    <span class="k">val</span> <span class="nv">stuff</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+  <span class="k">val</span> <span class="n">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="n">clockB</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Clock</span><span class="o">())</span>
+    <span class="k">val</span> <span class="n">stuff</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
   <span class="o">})</span>
-  <span class="k">val</span> <span class="nv">clockB_child</span> <span class="k">=</span> <span class="nf">withClock</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">clockB</span><span class="o">)</span> <span class="o">{</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">ChildModule</span><span class="o">)</span> <span class="o">}</span>
-  <span class="nv">clockB_child</span><span class="o">.</span><span class="py">io</span><span class="o">.</span><span class="py">in</span> <span class="o">:=</span> <span class="nv">io</span><span class="o">.</span><span class="py">stuff</span>
+  <span class="k">val</span> <span class="n">clockB_child</span> <span class="k">=</span> <span class="n">withClock</span><span class="o">(</span><span class="n">io</span><span class="o">.</span><span class="n">clockB</span><span class="o">)</span> <span class="o">{</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">ChildModule</span><span class="o">)</span> <span class="o">}</span>
+  <span class="n">clockB_child</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">in</span> <span class="o">:=</span> <span class="n">io</span><span class="o">.</span><span class="n">stuff</span>
 <span class="o">}</span>
 
 </code></pre></div></div>

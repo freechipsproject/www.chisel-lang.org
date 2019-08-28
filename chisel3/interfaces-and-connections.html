@@ -22,29 +22,29 @@ ga('send', 'pageview');
 <p>As we saw earlier, users can define their own interfaces by defining a class that subclasses Bundle. For example, a user could define a simple link for hand-shaking data as follows:</p>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">SimpleLink</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="nv">data</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">16.</span><span class="n">W</span><span class="o">))</span>
-  <span class="k">val</span> <span class="nv">valid</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+  <span class="k">val</span> <span class="n">data</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">16.</span><span class="n">W</span><span class="o">))</span>
+  <span class="k">val</span> <span class="n">valid</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
 <p>We can then extend SimpleLink by adding parity bits using bundle inheritance:</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">PLink</span> <span class="k">extends</span> <span class="nc">SimpleLink</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="nv">parity</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">5.</span><span class="n">W</span><span class="o">))</span>
+  <span class="k">val</span> <span class="n">parity</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">5.</span><span class="n">W</span><span class="o">))</span>
 <span class="o">}</span>
 </code></pre></div></div>
 <p>In general, users can organize their interfaces into hierarchies using inheritance.</p>
 
 <p>From there we can define a filter interface by nesting two PLinks into a new FilterIO bundle:</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">FilterIO</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="nv">x</span> <span class="k">=</span> <span class="nc">Flipped</span><span class="o">(</span><span class="k">new</span> <span class="nc">PLink</span><span class="o">)</span>
-  <span class="k">val</span> <span class="nv">y</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">PLink</span>
+  <span class="k">val</span> <span class="n">x</span> <span class="k">=</span> <span class="nc">Flipped</span><span class="o">(</span><span class="k">new</span> <span class="nc">PLink</span><span class="o">)</span>
+  <span class="k">val</span> <span class="n">y</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">PLink</span>
 <span class="o">}</span>
 </code></pre></div></div>
 <p>where flip recursively changes the direction of a bundle, changing input to output and output to input.</p>
 
 <p>We can now define a filter by defining a filter class extending module:</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Filter</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">FilterIO</span><span class="o">)</span>
+  <span class="k">val</span> <span class="n">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">FilterIO</span><span class="o">)</span>
   <span class="o">...</span>
 <span class="o">}</span>
 </code></pre></div></div>
@@ -55,9 +55,9 @@ ga('send', 'pageview');
 <p>Beyond single elements, vectors of elements form richer hierarchical interfaces. For example, in order to create a crossbar with a vector of inputs, producing a vector of outputs, and selected by a UInt input, we utilize the Vec constructor:</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3.util.log2Ceil</span>
 <span class="k">class</span> <span class="nc">CrossbarIo</span><span class="o">(</span><span class="n">n</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="nv">in</span> <span class="k">=</span> <span class="nc">Vec</span><span class="o">(</span><span class="n">n</span><span class="o">,</span> <span class="nc">Flipped</span><span class="o">(</span><span class="k">new</span> <span class="nc">PLink</span><span class="o">))</span>
-  <span class="k">val</span> <span class="nv">sel</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="nf">log2Ceil</span><span class="o">(</span><span class="n">n</span><span class="o">).</span><span class="py">W</span><span class="o">))</span>
-  <span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="nc">Vec</span><span class="o">(</span><span class="n">n</span><span class="o">,</span> <span class="k">new</span> <span class="nc">PLink</span><span class="o">)</span>
+  <span class="k">val</span> <span class="n">in</span> <span class="k">=</span> <span class="nc">Vec</span><span class="o">(</span><span class="n">n</span><span class="o">,</span> <span class="nc">Flipped</span><span class="o">(</span><span class="k">new</span> <span class="nc">PLink</span><span class="o">))</span>
+  <span class="k">val</span> <span class="n">sel</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="n">log2Ceil</span><span class="o">(</span><span class="n">n</span><span class="o">).</span><span class="n">W</span><span class="o">))</span>
+  <span class="k">val</span> <span class="n">out</span> <span class="k">=</span> <span class="nc">Vec</span><span class="o">(</span><span class="n">n</span><span class="o">,</span> <span class="k">new</span> <span class="nc">PLink</span><span class="o">)</span>
 <span class="o">}</span>
 </code></pre></div></div>
 <p>where Vec takes a size as the first argument and a block returning a port as the second argument.</p>
@@ -66,12 +66,12 @@ ga('send', 'pageview');
 
 <p>We can now compose two filters into a filter block as follows:</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Block</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">FilterIO</span><span class="o">)</span>
-  <span class="k">val</span> <span class="nv">f1</span> <span class="k">=</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">Filter</span><span class="o">)</span>
-  <span class="k">val</span> <span class="nv">f2</span> <span class="k">=</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">Filter</span><span class="o">)</span>
-  <span class="nv">f1</span><span class="o">.</span><span class="py">io</span><span class="o">.</span><span class="py">x</span> <span class="o">&lt;&gt;</span> <span class="nv">io</span><span class="o">.</span><span class="py">x</span>
-  <span class="nv">f1</span><span class="o">.</span><span class="py">io</span><span class="o">.</span><span class="py">y</span> <span class="o">&lt;&gt;</span> <span class="nv">f2</span><span class="o">.</span><span class="py">io</span><span class="o">.</span><span class="py">x</span>
-  <span class="nv">f2</span><span class="o">.</span><span class="py">io</span><span class="o">.</span><span class="py">y</span> <span class="o">&lt;&gt;</span> <span class="nv">io</span><span class="o">.</span><span class="py">y</span>
+  <span class="k">val</span> <span class="n">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">FilterIO</span><span class="o">)</span>
+  <span class="k">val</span> <span class="n">f1</span> <span class="k">=</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">Filter</span><span class="o">)</span>
+  <span class="k">val</span> <span class="n">f2</span> <span class="k">=</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">Filter</span><span class="o">)</span>
+  <span class="n">f1</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">x</span> <span class="o">&lt;&gt;</span> <span class="n">io</span><span class="o">.</span><span class="n">x</span>
+  <span class="n">f1</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">y</span> <span class="o">&lt;&gt;</span> <span class="n">f2</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">x</span>
+  <span class="n">f2</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">y</span> <span class="o">&lt;&gt;</span> <span class="n">io</span><span class="o">.</span><span class="n">y</span>
 <span class="o">}</span>
 </code></pre></div></div>
 <p>where &lt;&gt; bulk connects interfaces of opposite gender between sibling modules or interfaces of the same gender between parent/child modules.</p>
@@ -105,12 +105,12 @@ ga('send', 'pageview');
   *   output [31:0] io_readyValid_bits
   */</span>
 <span class="k">class</span> <span class="nc">ProducingData</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
-    <span class="k">val</span> <span class="nv">readyValid</span> <span class="k">=</span> <span class="nc">Decoupled</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">))</span>
+  <span class="k">val</span> <span class="n">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="n">readyValid</span> <span class="k">=</span> <span class="nc">Decoupled</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">))</span>
   <span class="o">})</span>
   <span class="c1">// do something with io.readyValid.ready
-</span>  <span class="nv">io</span><span class="o">.</span><span class="py">readyValid</span><span class="o">.</span><span class="py">valid</span> <span class="o">:=</span> <span class="nv">true</span><span class="o">.</span><span class="py">B</span>
-  <span class="nv">io</span><span class="o">.</span><span class="py">readyValid</span><span class="o">.</span><span class="py">bits</span> <span class="o">:=</span> <span class="mf">5.</span><span class="n">U</span>
+</span>  <span class="n">io</span><span class="o">.</span><span class="n">readyValid</span><span class="o">.</span><span class="n">valid</span> <span class="o">:=</span> <span class="kc">true</span><span class="o">.</span><span class="n">B</span>
+  <span class="n">io</span><span class="o">.</span><span class="n">readyValid</span><span class="o">.</span><span class="n">bits</span> <span class="o">:=</span> <span class="mf">5.</span><span class="n">U</span>
 <span class="o">}</span>
 
 <span class="cm">/**
@@ -122,10 +122,10 @@ ga('send', 'pageview');
   *   input  [31:0] io_readyValid_bits
   */</span>
 <span class="k">class</span> <span class="nc">ConsumingData</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
-    <span class="k">val</span> <span class="nv">readyValid</span> <span class="k">=</span> <span class="nc">Flipped</span><span class="o">(</span><span class="nc">Decoupled</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">)))</span>
+  <span class="k">val</span> <span class="n">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="n">readyValid</span> <span class="k">=</span> <span class="nc">Flipped</span><span class="o">(</span><span class="nc">Decoupled</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">)))</span>
   <span class="o">})</span>
-  <span class="nv">io</span><span class="o">.</span><span class="py">readyValid</span><span class="o">.</span><span class="py">ready</span> <span class="o">:=</span> <span class="nv">false</span><span class="o">.</span><span class="py">B</span>
+  <span class="n">io</span><span class="o">.</span><span class="n">readyValid</span><span class="o">.</span><span class="n">ready</span> <span class="o">:=</span> <span class="kc">false</span><span class="o">.</span><span class="n">B</span>
   <span class="c1">// do something with io.readyValid.valid
 </span>  <span class="c1">// do something with io.readyValid.bits
 </span><span class="o">}</span>

@@ -18,9 +18,9 @@ constructors wrap the type of the port in <code class="highlighter-rouge">Input<
 
 <p>An example port declaration is as follows:</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Decoupled</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="nv">ready</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
-  <span class="k">val</span> <span class="nv">data</span>  <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">))</span>
-  <span class="k">val</span> <span class="nv">valid</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+  <span class="k">val</span> <span class="n">ready</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+  <span class="k">val</span> <span class="n">data</span>  <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">))</span>
+  <span class="k">val</span> <span class="n">valid</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
@@ -42,17 +42,17 @@ provide powerful wiring constructs described later.</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3.experimental.DataMirror</span>
 
 <span class="k">class</span> <span class="nc">Adder</span> <span class="k">extends</span> <span class="nc">MultiIOModule</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="nv">a</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">)))</span>
-  <span class="k">val</span> <span class="nv">b</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">)))</span>
-  <span class="k">val</span> <span class="nv">c</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">)))</span>
+  <span class="k">val</span> <span class="n">a</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">)))</span>
+  <span class="k">val</span> <span class="n">b</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">)))</span>
+  <span class="k">val</span> <span class="n">c</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">)))</span>
   <span class="n">c</span> <span class="o">:=</span> <span class="n">a</span> <span class="o">+&amp;</span> <span class="n">b</span>
 <span class="o">}</span>
 
 <span class="k">class</span> <span class="nc">Test</span> <span class="k">extends</span> <span class="nc">MultiIOModule</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="nv">adder</span> <span class="k">=</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">Adder</span><span class="o">)</span>
+  <span class="k">val</span> <span class="n">adder</span> <span class="k">=</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">Adder</span><span class="o">)</span>
   <span class="c1">// for debug only
-</span>  <span class="nv">adder</span><span class="o">.</span><span class="py">a</span> <span class="o">:=</span> <span class="nc">DontCare</span>
-  <span class="nv">adder</span><span class="o">.</span><span class="py">b</span> <span class="o">:=</span> <span class="nc">DontCare</span>
+</span>  <span class="n">adder</span><span class="o">.</span><span class="n">a</span> <span class="o">:=</span> <span class="nc">DontCare</span>
+  <span class="n">adder</span><span class="o">.</span><span class="n">b</span> <span class="o">:=</span> <span class="nc">DontCare</span>
 
   <span class="c1">// Inspect ports of adder
 </span>  <span class="c1">// Prints something like this
@@ -63,12 +63,12 @@ provide powerful wiring constructs described later.</p>
     * Found port b: UInt&lt;8&gt;(IO b in Adder)
     * Found port c: UInt&lt;8&gt;(IO c in Adder)
     */</span>
-  <span class="nv">DataMirror</span><span class="o">.</span><span class="py">modulePorts</span><span class="o">(</span><span class="n">adder</span><span class="o">).</span><span class="py">foreach</span> <span class="o">{</span> <span class="nf">case</span> <span class="o">(</span><span class="n">name</span><span class="o">,</span> <span class="n">port</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="o">{</span>
-    <span class="nf">println</span><span class="o">(</span><span class="n">s</span><span class="s">"Found port $name: $port"</span><span class="o">)</span>
+  <span class="nc">DataMirror</span><span class="o">.</span><span class="n">modulePorts</span><span class="o">(</span><span class="n">adder</span><span class="o">).</span><span class="n">foreach</span> <span class="o">{</span> <span class="k">case</span> <span class="o">(</span><span class="n">name</span><span class="o">,</span> <span class="n">port</span><span class="o">)</span> <span class="k">=&gt;</span> <span class="o">{</span>
+    <span class="n">println</span><span class="o">(</span><span class="n">s</span><span class="s">"Found port $name: $port"</span><span class="o">)</span>
   <span class="o">}}</span>
 <span class="o">}</span>
 
-<span class="nv">chisel3</span><span class="o">.</span><span class="py">Driver</span><span class="o">.</span><span class="py">execute</span><span class="o">(</span><span class="nc">Array</span><span class="o">[</span><span class="kt">String</span><span class="o">](),</span> <span class="o">()</span> <span class="k">=&gt;</span> <span class="k">new</span> <span class="nc">Test</span><span class="o">)</span>
+<span class="n">chisel3</span><span class="o">.</span><span class="nc">Driver</span><span class="o">.</span><span class="n">execute</span><span class="o">(</span><span class="nc">Array</span><span class="o">[</span><span class="kt">String</span><span class="o">](),</span> <span class="o">()</span> <span class="k">=&gt;</span> <span class="k">new</span> <span class="nc">Test</span><span class="o">)</span>
 </code></pre></div></div>
 </section></div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/highlight/highlight.pack.js"></script><script>hljs.configure({languages:['scala','java','bash']});
 hljs.initHighlighting();
