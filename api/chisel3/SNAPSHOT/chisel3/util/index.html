@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.2-050719-SNAPSHOT - chisel3.util</title>
-          <meta name="description" content="chisel3 3.2 - 050719 - SNAPSHOT - chisel3.util" />
-          <meta name="keywords" content="chisel3 3.2 050719 SNAPSHOT chisel3.util" />
+          <title>chisel3 3.2-081319-SNAPSHOT - chisel3.util</title>
+          <meta name="description" content="chisel3 3.2 - 081319 - SNAPSHOT - chisel3.util" />
+          <meta name="keywords" content="chisel3 3.2 081319 SNAPSHOT chisel3.util" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.2-050719-SNAPSHOT</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.2-081319-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -69,9 +69,9 @@
       </span>
       
       <p class="shortcomment cmt">This is the documentation for Chisel.</p><div class="fullcomment"><div class="comment cmt"><p>This is the documentation for Chisel.</p><h4> Package structure </h4><p>The <a href="../index.html" class="extype" name="chisel3">chisel3</a> package presents the public API of Chisel.
-It contains the concrete core types <a href="../core/UInt.html" class="extype" name="chisel3.core.UInt"><code>UInt</code></a>, <a href="../core/SInt.html" class="extype" name="chisel3.core.SInt"><code>SInt</code></a>, <a href="../core/Bool.html" class="extype" name="chisel3.core.Bool"><code>Bool</code></a>, <a href="../core/FixedPoint.html" class="extype" name="chisel3.core.FixedPoint"><code>FixedPoint</code></a>, <a href="../core/Clock.html" class="extype" name="chisel3.core.Clock"><code>Clock</code></a>, and <a href="../core/Reg$.html" class="extype" name="chisel3.core.Reg"><code>Reg</code></a>,
-the abstract types <a href="../core/Bits.html" class="extype" name="chisel3.core.Bits"><code>Bits</code></a>, <a href="../core/Aggregate.html" class="extype" name="chisel3.core.Aggregate"><code>Aggregate</code></a>, and <a href="../core/Data.html" class="extype" name="chisel3.core.Data"><code>Data</code></a>,
-and the aggregate types <a href="../core/Bundle.html" class="extype" name="chisel3.core.Bundle"><code>Bundle</code></a> and <a href="../core/Vec.html" class="extype" name="chisel3.core.Vec"><code>Vec</code></a>.</p><p>The <a href="../../Chisel/index.html" class="extype" name="Chisel">Chisel</a> package is a compatibility layer that attempts to provide chisel2 compatibility in chisel3.</p><p>Utility objects and methods are found in the <a href="" class="extype" name="chisel3.util"><code>util</code></a> package.</p><p>The <a href="../testers/index.html" class="extype" name="chisel3.testers"><code>testers</code></a> package defines the basic interface for chisel testers.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+It contains the concrete core types <a href="../UInt.html" class="extype" name="chisel3.UInt"><code>UInt</code></a>, <a href="../SInt.html" class="extype" name="chisel3.SInt"><code>SInt</code></a>, <a href="../Bool.html" class="extype" name="chisel3.Bool"><code>Bool</code></a>, <a href="../experimental/FixedPoint.html" class="extype" name="chisel3.experimental.FixedPoint"><code>FixedPoint</code></a>, <a href="../Clock.html" class="extype" name="chisel3.Clock"><code>Clock</code></a>, and <a href="../Reg$.html" class="extype" name="chisel3.Reg"><code>Reg</code></a>,
+the abstract types <a href="../Bits.html" class="extype" name="chisel3.Bits"><code>Bits</code></a>, <a href="../Aggregate.html" class="extype" name="chisel3.Aggregate"><code>Aggregate</code></a>, and <a href="../Data.html" class="extype" name="chisel3.Data"><code>Data</code></a>,
+and the aggregate types <a href="../Bundle.html" class="extype" name="chisel3.Bundle"><code>Bundle</code></a> and <a href="../Vec.html" class="extype" name="chisel3.Vec"><code>Vec</code></a>.</p><p>The <a href="../../Chisel/index.html" class="extype" name="Chisel">Chisel</a> package is a compatibility layer that attempts to provide chisel2 compatibility in chisel3.</p><p>Utility objects and methods are found in the <a href="" class="extype" name="chisel3.util"><code>util</code></a> package.</p><p>The <a href="../testers/index.html" class="extype" name="chisel3.testers"><code>testers</code></a> package defines the basic interface for chisel testers.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
     </li><li name="_root_.chisel3" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="chisel3"></a><a id="chisel3:chisel3"></a>
       <span class="permalink">
@@ -84,12 +84,27 @@ and the aggregate types <a href="../core/Bundle.html" class="extype" name="chise
         <span class="kind">package</span>
       </span>
       <span class="symbol">
-        <a title="The chisel3 package contains the chisel3 API." href="../index.html"><span class="name">chisel3</span></a>
+        <a title="This package contains the main chisel3 API." href="../index.html"><span class="name">chisel3</span></a>
       </span>
       
-      <p class="shortcomment cmt">The chisel3 package contains the chisel3 API.</p><div class="fullcomment"><div class="comment cmt"><p>The chisel3 package contains the chisel3 API.
-It maps core components into the public chisel3 namespace.
+      <p class="shortcomment cmt">This package contains the main chisel3 API.</p><div class="fullcomment"><div class="comment cmt"><p>This package contains the main chisel3 API.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="chisel3.aop" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="aop"></a><a id="aop:aop"></a>
+      <span class="permalink">
+      <a href="../chisel3/index.html#aop" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../aop/index.html"><span class="name">aop</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="chisel3">chisel3</a></dd></dl></div>
     </li><li name="chisel3.core" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="core"></a><a id="core:core"></a>
       <span class="permalink">
@@ -102,7 +117,43 @@ It maps core components into the public chisel3 namespace.
         <span class="kind">package</span>
       </span>
       <span class="symbol">
-        <a title="" href="../core/index.html"><span class="name">core</span></a>
+        <a title="These definitions exist to deal with those clients that relied on chisel3.core." href="../core/index.html"><span class="name">core</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">These definitions exist to deal with those clients that relied on chisel3.core.</p><div class="fullcomment"><div class="comment cmt"><p>These definitions exist to deal with those clients that relied on chisel3.core.
+They are deprecated and will be removed in the future.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="chisel3">chisel3</a></dd></dl></div>
+    </li><li name="chisel3.experimental" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="experimental"></a><a id="experimental:experimental"></a>
+      <span class="permalink">
+      <a href="../chisel3/index.html#experimental" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Package for experimental features, which may have their API changed, be removed, etc." href="../experimental/index.html"><span class="name">experimental</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Package for experimental features, which may have their API changed, be removed, etc.</p><div class="fullcomment"><div class="comment cmt"><p>Package for experimental features, which may have their API changed, be removed, etc.</p><p>Because its contents won't necessarily have the same level of stability and support as
+non-experimental, you must explicitly import this package to use its contents.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="chisel3">chisel3</a></dd></dl></div>
+    </li><li name="chisel3.stage" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="stage"></a><a id="stage:stage"></a>
+      <span class="permalink">
+      <a href="../chisel3/index.html#stage" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../stage/index.html"><span class="name">stage</span></a>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="chisel3">chisel3</a></dd></dl></div>
@@ -158,6 +209,22 @@ functions
       </span>
       
       
+    </li><li name="chisel3.util.random" visbl="pub" class="indented3 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="random"></a><a id="random:random"></a>
+      <span class="permalink">
+      <a href="../../chisel3/util/index.html#random" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="random/index.html"><span class="name">random</span></a>
+      </span>
+      
+      
     </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="class" href="Arbiter.html" title="Hardware module that is used to sequence n producers into 1 consumer."></a>
@@ -176,8 +243,8 @@ functions
                         <a href="Cat$.html" title="Concatenates elements of the input, in order, together.">Cat</a>
                       </li><li class="current-entities indented2">
                         <a class="object" href="Counter$.html" title=""></a>
-                        <a class="class" href="Counter.html" title="A counter module"></a>
-                        <a href="Counter.html" title="A counter module">Counter</a>
+                        <a class="class" href="Counter.html" title="Used to generate an inline (logic directly in the containing Module, no internal Module is created) hardware counter."></a>
+                        <a href="Counter.html" title="Used to generate an inline (logic directly in the containing Module, no internal Module is created) hardware counter.">Counter</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="object" href="Decoupled$.html" title="This factory adds a decoupled handshaking protocol to a data bundle."></a>
@@ -372,12 +439,20 @@ functions
                         <a href="log2Up$.html" title="Compute the log2 of a Scala integer, rounded up, with min value of 1.">log2Up</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
+                        <a class="object" href="signedBitLength$.html" title=""></a>
+                        <a href="signedBitLength$.html" title="">signedBitLength</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
                         <a class="object" href="switch$.html" title="Conditional logic to form a switch block."></a>
                         <a href="switch$.html" title="Conditional logic to form a switch block.">switch</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="object" href="unless$.html" title=""></a>
                         <a href="unless$.html" title="">unless</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="unsignedBitLength$.html" title=""></a>
+                        <a href="unsignedBitLength$.html" title="">unsignedBitLength</a>
                       </li>
               </ul>
             </div>
@@ -408,22 +483,12 @@ functions
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The util package provides extensions to core chisel for common hardware components and utility
 functions
-</p></div><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/master//src/main/scala/chisel3/util/util.scala" target="_blank">util.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
           <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
-        </div><div class="toggleContainer block diagram-container" id="content-diagram-container">
-                <span class="toggle diagram-link">
-                  Content Hierarchy
-                </span>
-                <div class="diagram" id="content-diagram"><svg class="package-diagram" id="graph1" viewBox="0.00 0.00 610.00 155.00" height="155pt" width="610pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 151)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-151 606,-151 606,4 -4,4" stroke="transparent" fill="white"></polygon><!-- node0 --><g class="node object" id="graph1_0"><g id="a_object|graph1_0"><a xlink:title="chisel3.util.Enum" xlink:href="Enum$.html#inheritance-diagram"><path d="M59.67,-86C59.67,-86 8.33,-86 8.33,-86 4.17,-86 0,-81.83 0,-77.67 0,-77.67 0,-69.33 0,-69.33 0,-65.17 4.17,-61 8.33,-61 8.33,-61 59.67,-61 59.67,-61 63.83,-61 68,-65.17 68,-69.33 68,-69.33 68,-77.67 68,-77.67 68,-81.83 63.83,-86 59.67,-86" stroke="#103a51" fill="#103a51"></path><image xlink:href="../../lib/object_diagram.png" y="-80.5" x="10" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="31" text-anchor="start">Enum</text></a></g></g><!-- node1 --><g class="node trait" id="graph1_1"><g id="a_trait|graph1_1"><a xlink:title="chisel3.util.Enum" xlink:href="Enum.html#inheritance-diagram"><path d="M59.67,-147C59.67,-147 8.33,-147 8.33,-147 4.17,-147 0,-142.83 0,-138.67 0,-138.67 0,-130.33 0,-130.33 0,-126.17 4.17,-122 8.33,-122 8.33,-122 59.67,-122 59.67,-122 63.83,-122 68,-126.17 68,-130.33 68,-130.33 68,-138.67 68,-138.67 68,-142.83 63.83,-147 59.67,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-141.5" x="10" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="31" text-anchor="start">Enum</text></a></g></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph1_1_0"><g id="a_inheritance|graph1_1_0"><a xlink:title="Enum is a subtype of Enum"><path d="M34,-114.76C34,-105.37 34,-94.29 34,-86.13" stroke="#d4d4d4" fill="none"></path><polygon points="31.55,-114.84 34,-121.84 36.45,-114.84 31.55,-114.84" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node class" id="graph1_2"><g id="a_class|graph1_2"><a xlink:title="chisel3.util.IrrevocableIO" xlink:href="IrrevocableIO.html#inheritance-diagram"><path d="M189.17,-86C189.17,-86 94.83,-86 94.83,-86 90.67,-86 86.5,-81.83 86.5,-77.67 86.5,-77.67 86.5,-69.33 86.5,-69.33 86.5,-65.17 90.67,-61 94.83,-61 94.83,-61 189.17,-61 189.17,-61 193.33,-61 197.5,-65.17 197.5,-69.33 197.5,-69.33 197.5,-77.67 197.5,-77.67 197.5,-81.83 193.33,-86 189.17,-86" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-80.5" x="97" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="118" text-anchor="start">IrrevocableIO[T]</text></a></g></g><!-- node3 --><g class="node class" id="graph1_3"><g id="a_class|graph1_3"><a xlink:title="chisel3.util.DecoupledIO" xlink:href="DecoupledIO.html#inheritance-diagram"><path d="M315.67,-86C315.67,-86 224.33,-86 224.33,-86 220.17,-86 216,-81.83 216,-77.67 216,-77.67 216,-69.33 216,-69.33 216,-65.17 220.17,-61 224.33,-61 224.33,-61 315.67,-61 315.67,-61 319.83,-61 324,-65.17 324,-69.33 324,-69.33 324,-77.67 324,-77.67 324,-81.83 319.83,-86 315.67,-86" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-80.5" x="226" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="247" text-anchor="start">DecoupledIO[T]</text></a></g></g><!-- node4 --><g class="node class" id="graph1_4"><g id="a_class|graph1_4"><a xlink:title="chisel3.util.ReadyValidIO" xlink:href="ReadyValidIO.html#inheritance-diagram"><path d="M247.67,-147C247.67,-147 154.33,-147 154.33,-147 150.17,-147 146,-142.83 146,-138.67 146,-138.67 146,-130.33 146,-130.33 146,-126.17 150.17,-122 154.33,-122 154.33,-122 247.67,-122 247.67,-122 251.83,-122 256,-126.17 256,-130.33 256,-130.33 256,-138.67 256,-138.67 256,-142.83 251.83,-147 247.67,-147" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-141.5" x="156" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="177" text-anchor="start">ReadyValidIO[T]</text></a></g></g><!-- node4&#45;&gt;node2 --><g class="edge inheritance" id="graph1_4_2"><g id="a_inheritance|graph1_4_2"><a xlink:title="IrrevocableIO[T] is a subtype of ReadyValidIO[T]"><path d="M184.19,-116.69C174.42,-106.92 162.35,-94.85 153.63,-86.13" stroke="#d4d4d4" fill="none"></path><polygon points="182.66,-118.63 189.34,-121.84 186.13,-115.16 182.66,-118.63" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node4&#45;&gt;node3 --><g class="edge inheritance" id="graph1_4_3"><g id="a_inheritance|graph1_4_3"><a xlink:title="DecoupledIO[T] is a subtype of ReadyValidIO[T]"><path d="M220.03,-117.23C231.56,-107.37 246.01,-95.01 256.4,-86.13" stroke="#d4d4d4" fill="none"></path><polygon points="218.36,-115.43 214.63,-121.84 221.54,-119.16 218.36,-115.43" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node5 --><g class="node class" id="graph1_5"><g id="a_class|graph1_5"><a xlink:title="chisel3.util.RRArbiter" xlink:href="RRArbiter.html#inheritance-diagram"><path d="M577.67,-25C577.67,-25 500.33,-25 500.33,-25 496.17,-25 492,-20.83 492,-16.67 492,-16.67 492,-8.33 492,-8.33 492,-4.17 496.17,0 500.33,0 500.33,0 577.67,0 577.67,0 581.83,0 586,-4.17 586,-8.33 586,-8.33 586,-16.67 586,-16.67 586,-20.83 581.83,-25 577.67,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-19.5" x="502" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="523" text-anchor="start">RRArbiter[T]</text></a></g></g><!-- node6 --><g class="node class" id="graph1_6"><g id="a_class|graph1_6"><a xlink:title="chisel3.util.LockingArbiter" xlink:href="LockingArbiter.html#inheritance-diagram"><path d="M449.17,-86C449.17,-86 350.83,-86 350.83,-86 346.67,-86 342.5,-81.83 342.5,-77.67 342.5,-77.67 342.5,-69.33 342.5,-69.33 342.5,-65.17 346.67,-61 350.83,-61 350.83,-61 449.17,-61 449.17,-61 453.33,-61 457.5,-65.17 457.5,-69.33 457.5,-69.33 457.5,-77.67 457.5,-77.67 457.5,-81.83 453.33,-86 449.17,-86" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-80.5" x="353" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="374" text-anchor="start">LockingArbiter[T]</text></a></g></g><!-- node7 --><g class="node class" id="graph1_7"><g id="a_class|graph1_7"><a xlink:title="chisel3.util.LockingRRArbiter" xlink:href="LockingRRArbiter.html#inheritance-diagram"><path d="M593.67,-86C593.67,-86 484.33,-86 484.33,-86 480.17,-86 476,-81.83 476,-77.67 476,-77.67 476,-69.33 476,-69.33 476,-65.17 480.17,-61 484.33,-61 484.33,-61 593.67,-61 593.67,-61 597.83,-61 602,-65.17 602,-69.33 602,-69.33 602,-77.67 602,-77.67 602,-81.83 597.83,-86 593.67,-86" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-80.5" x="486" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="507" text-anchor="start">LockingRRArbiter[T]</text></a></g></g><!-- node7&#45;&gt;node5 --><g class="edge inheritance" id="graph1_7_5"><g id="a_inheritance|graph1_7_5"><a xlink:title="RRArbiter[T] is a subtype of LockingRRArbiter[T]"><path d="M539,-53.76C539,-44.37 539,-33.29 539,-25.13" stroke="#d4d4d4" fill="none"></path><polygon points="536.55,-53.84 539,-60.84 541.45,-53.84 536.55,-53.84" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node8 --><g class="node class" id="graph1_8"><g id="a_class|graph1_8"><a xlink:title="chisel3.util.LockingArbiterLike" xlink:href="LockingArbiterLike.html#inheritance-diagram"><path d="M526.67,-147C526.67,-147 411.33,-147 411.33,-147 407.17,-147 403,-142.83 403,-138.67 403,-138.67 403,-130.33 403,-130.33 403,-126.17 407.17,-122 411.33,-122 411.33,-122 526.67,-122 526.67,-122 530.83,-122 535,-126.17 535,-130.33 535,-130.33 535,-138.67 535,-138.67 535,-142.83 530.83,-147 526.67,-147" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-141.5" x="413" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="434" text-anchor="start">LockingArbiterLike[T]</text></a></g></g><!-- node8&#45;&gt;node6 --><g class="edge inheritance" id="graph1_8_6"><g id="a_inheritance|graph1_8_6"><a xlink:title="LockingArbiter[T] is a subtype of LockingArbiterLike[T]"><path d="M449.97,-117.23C438.44,-107.37 423.99,-95.01 413.6,-86.13" stroke="#d4d4d4" fill="none"></path><polygon points="448.46,-119.16 455.37,-121.84 451.64,-115.43 448.46,-119.16" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node8&#45;&gt;node7 --><g class="edge inheritance" id="graph1_8_7"><g id="a_inheritance|graph1_8_7"><a xlink:title="LockingRRArbiter[T] is a subtype of LockingArbiterLike[T]"><path d="M488.31,-117.23C500.01,-107.37 514.66,-95.01 525.2,-86.13" stroke="#d4d4d4" fill="none"></path><polygon points="486.6,-115.46 482.83,-121.84 489.76,-119.21 486.6,-115.46" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
-                <div id="diagram-controls" class="hiddenContent">
-                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
-                </div>
-              </div></div>
+        </div></div>
         
 
       <div id="mbrsel">
@@ -482,7 +547,7 @@ functions
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Hardware module that is used to sequence n producers into 1 consumer." href="Arbiter.html"><span class="name">Arbiter</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../index.html#Data=chisel3.core.Data" class="extmbr" name="chisel3.Data">Data</a></span>]</span><span class="result"> extends <a href="../index.html#Module=chisel3.core.LegacyModule" class="extmbr" name="chisel3.Module">Module</a></span>
+        <a title="Hardware module that is used to sequence n producers into 1 consumer." href="Arbiter.html"><span class="name">Arbiter</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></span>]</span><span class="result"> extends <a href="../index.html#Module=chisel3.experimental.LegacyModule" class="extmbr" name="chisel3.Module">Module</a></span>
       </span>
       
       <p class="shortcomment cmt">Hardware module that is used to sequence n producers into 1 consumer.</p><div class="fullcomment"><div class="comment cmt"><p>Hardware module that is used to sequence n producers into 1 consumer.
@@ -497,9 +562,9 @@ arb.io.in(<span class="num">1</span>) &lt;&gt; producer1.io.out
 consumer.io.in &lt;&gt; arb.io.out</pre></li></ol>
             </div></dl></div>
     </li><li name="chisel3.util.ArbiterIO" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ArbiterIO[T&lt;:chisel3.Data]extendschisel3.Bundle"></a><a id="ArbiterIO[T&lt;:Data]:ArbiterIO[T]"></a>
+      <a id="ArbiterIO[T&lt;:chisel3.Data]extendsBundle"></a><a id="ArbiterIO[T&lt;:Data]:ArbiterIO[T]"></a>
       <span class="permalink">
-      <a href="../../chisel3/util/index.html#ArbiterIO[T&lt;:chisel3.Data]extendschisel3.Bundle" title="Permalink">
+      <a href="../../chisel3/util/index.html#ArbiterIO[T&lt;:chisel3.Data]extendsBundle" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -508,7 +573,7 @@ consumer.io.in &lt;&gt; arb.io.out</pre></li></ol>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="IO bundle definition for an Arbiter, which takes some number of ready-valid inputs and outputs (selects) at most one." href="ArbiterIO.html"><span class="name">ArbiterIO</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../index.html#Data=chisel3.core.Data" class="extmbr" name="chisel3.Data">Data</a></span>]</span><span class="result"> extends <a href="../index.html#Bundle=chisel3.core.Bundle" class="extmbr" name="chisel3.Bundle">Bundle</a></span>
+        <a title="IO bundle definition for an Arbiter, which takes some number of ready-valid inputs and outputs (selects) at most one." href="ArbiterIO.html"><span class="name">ArbiterIO</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></span>]</span><span class="result"> extends <a href="../Bundle.html" class="extype" name="chisel3.Bundle">Bundle</a></span>
       </span>
       
       <p class="shortcomment cmt">IO bundle definition for an Arbiter, which takes some number of ready-valid inputs and outputs
@@ -548,10 +613,12 @@ care bits. Equality comparisons will ignore don't care bits.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="A counter module" href="Counter.html"><span class="name">Counter</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="Used to generate an inline (logic directly in the containing Module, no internal Module is created) hardware counter." href="Counter.html"><span class="name">Counter</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
-      <p class="shortcomment cmt">A counter module</p><div class="fullcomment"><div class="comment cmt"><p>A counter module</p><p>Typically instantiated with apply methods in <a href="Counter$.html" class="extype" name="chisel3.util.Counter">object Counter</a>
+      <p class="shortcomment cmt">Used to generate an inline (logic directly in the containing Module, no internal Module is created)
+hardware counter.</p><div class="fullcomment"><div class="comment cmt"><p>Used to generate an inline (logic directly in the containing Module, no internal Module is created)
+hardware counter.</p><p>Typically instantiated with apply methods in <a href="Counter$.html" class="extype" name="chisel3.util.Counter">object Counter</a></p><p>Does not create a new Chisel Module
 </p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
                 <span class="name">@chiselName</span><span class="args">()</span>
               
@@ -574,7 +641,7 @@ when (counterValue === <span class="num">3.</span>U) {
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="A concrete subclass of ReadyValidIO signaling that the user expects a &quot;decoupled&quot; interface: 'valid' indicates that the producer has put valid data in 'bits', and 'ready' indicates that the consumer is ready to accept the data this cycle." href="DecoupledIO.html"><span class="name">DecoupledIO</span></a><span class="tparams">[<span name="T">+T &lt;: <a href="../index.html#Data=chisel3.core.Data" class="extmbr" name="chisel3.Data">Data</a></span>]</span><span class="result"> extends <a href="ReadyValidIO.html" class="extype" name="chisel3.util.ReadyValidIO">ReadyValidIO</a>[<span class="extype" name="chisel3.util.DecoupledIO.T">T</span>]</span>
+        <a title="A concrete subclass of ReadyValidIO signaling that the user expects a &quot;decoupled&quot; interface: 'valid' indicates that the producer has put valid data in 'bits', and 'ready' indicates that the consumer is ready to accept the data this cycle." href="DecoupledIO.html"><span class="name">DecoupledIO</span></a><span class="tparams">[<span name="T">+T &lt;: <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></span>]</span><span class="result"> extends <a href="ReadyValidIO.html" class="extype" name="chisel3.util.ReadyValidIO">ReadyValidIO</a>[<span class="extype" name="chisel3.util.DecoupledIO.T">T</span>]</span>
       </span>
       
       <p class="shortcomment cmt">A concrete subclass of ReadyValidIO signaling that the user expects a
@@ -615,9 +682,9 @@ switch (current_state) {
 }</pre></li></ol>
             </div></dl></div>
     </li><li name="chisel3.util.HasBlackBoxInline" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="HasBlackBoxInlineextendschisel3.BlackBox"></a><a id="HasBlackBoxInline:HasBlackBoxInline"></a>
+      <a id="HasBlackBoxInlineextendsBlackBox"></a><a id="HasBlackBoxInline:HasBlackBoxInline"></a>
       <span class="permalink">
-      <a href="../../chisel3/util/index.html#HasBlackBoxInlineextendschisel3.BlackBox" title="Permalink">
+      <a href="../../chisel3/util/index.html#HasBlackBoxInlineextendsBlackBox" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -626,14 +693,14 @@ switch (current_state) {
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="HasBlackBoxInline.html"><span class="name">HasBlackBoxInline</span></a><span class="result"> extends <a href="../index.html#BlackBox=chisel3.core.BlackBox" class="extmbr" name="chisel3.BlackBox">BlackBox</a></span>
+        <a title="" href="HasBlackBoxInline.html"><span class="name">HasBlackBoxInline</span></a><span class="result"> extends <a href="../BlackBox.html" class="extype" name="chisel3.BlackBox">BlackBox</a></span>
       </span>
       
       
     </li><li name="chisel3.util.HasBlackBoxPath" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="HasBlackBoxPathextendschisel3.BlackBox"></a><a id="HasBlackBoxPath:HasBlackBoxPath"></a>
+      <a id="HasBlackBoxPathextendsBlackBox"></a><a id="HasBlackBoxPath:HasBlackBoxPath"></a>
       <span class="permalink">
-      <a href="../../chisel3/util/index.html#HasBlackBoxPathextendschisel3.BlackBox" title="Permalink">
+      <a href="../../chisel3/util/index.html#HasBlackBoxPathextendsBlackBox" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -642,14 +709,14 @@ switch (current_state) {
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="HasBlackBoxPath.html"><span class="name">HasBlackBoxPath</span></a><span class="result"> extends <a href="../index.html#BlackBox=chisel3.core.BlackBox" class="extmbr" name="chisel3.BlackBox">BlackBox</a></span>
+        <a title="" href="HasBlackBoxPath.html"><span class="name">HasBlackBoxPath</span></a><span class="result"> extends <a href="../BlackBox.html" class="extype" name="chisel3.BlackBox">BlackBox</a></span>
       </span>
       
       
     </li><li name="chisel3.util.HasBlackBoxResource" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="HasBlackBoxResourceextendschisel3.BlackBox"></a><a id="HasBlackBoxResource:HasBlackBoxResource"></a>
+      <a id="HasBlackBoxResourceextendsBlackBox"></a><a id="HasBlackBoxResource:HasBlackBoxResource"></a>
       <span class="permalink">
-      <a href="../../chisel3/util/index.html#HasBlackBoxResourceextendschisel3.BlackBox" title="Permalink">
+      <a href="../../chisel3/util/index.html#HasBlackBoxResourceextendsBlackBox" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -658,7 +725,7 @@ switch (current_state) {
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="HasBlackBoxResource.html"><span class="name">HasBlackBoxResource</span></a><span class="result"> extends <a href="../index.html#BlackBox=chisel3.core.BlackBox" class="extmbr" name="chisel3.BlackBox">BlackBox</a></span>
+        <a title="" href="HasBlackBoxResource.html"><span class="name">HasBlackBoxResource</span></a><span class="result"> extends <a href="../BlackBox.html" class="extype" name="chisel3.BlackBox">BlackBox</a></span>
       </span>
       
       
@@ -674,7 +741,7 @@ switch (current_state) {
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="A concrete subclass of ReadyValidIO that promises to not change the value of 'bits' after a cycle where 'valid' is high and 'ready' is low." href="IrrevocableIO.html"><span class="name">IrrevocableIO</span></a><span class="tparams">[<span name="T">+T &lt;: <a href="../index.html#Data=chisel3.core.Data" class="extmbr" name="chisel3.Data">Data</a></span>]</span><span class="result"> extends <a href="ReadyValidIO.html" class="extype" name="chisel3.util.ReadyValidIO">ReadyValidIO</a>[<span class="extype" name="chisel3.util.IrrevocableIO.T">T</span>]</span>
+        <a title="A concrete subclass of ReadyValidIO that promises to not change the value of 'bits' after a cycle where 'valid' is high and 'ready' is low." href="IrrevocableIO.html"><span class="name">IrrevocableIO</span></a><span class="tparams">[<span name="T">+T &lt;: <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></span>]</span><span class="result"> extends <a href="ReadyValidIO.html" class="extype" name="chisel3.util.ReadyValidIO">ReadyValidIO</a>[<span class="extype" name="chisel3.util.IrrevocableIO.T">T</span>]</span>
       </span>
       
       <p class="shortcomment cmt">A concrete subclass of ReadyValidIO that promises to not change
@@ -694,7 +761,7 @@ Additionally, once 'valid' is raised it will never be lowered until after
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="LockingArbiter.html"><span class="name">LockingArbiter</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../index.html#Data=chisel3.core.Data" class="extmbr" name="chisel3.Data">Data</a></span>]</span><span class="result"> extends <a href="LockingArbiterLike.html" class="extype" name="chisel3.util.LockingArbiterLike">LockingArbiterLike</a>[<span class="extype" name="chisel3.util.LockingArbiter.T">T</span>]</span>
+        <a title="" href="LockingArbiter.html"><span class="name">LockingArbiter</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></span>]</span><span class="result"> extends <a href="LockingArbiterLike.html" class="extype" name="chisel3.util.LockingArbiterLike">LockingArbiterLike</a>[<span class="extype" name="chisel3.util.LockingArbiter.T">T</span>]</span>
       </span>
       
       
@@ -710,7 +777,7 @@ Additionally, once 'valid' is raised it will never be lowered until after
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="LockingArbiterLike.html"><span class="name">LockingArbiterLike</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../index.html#Data=chisel3.core.Data" class="extmbr" name="chisel3.Data">Data</a></span>]</span><span class="result"> extends <a href="../index.html#Module=chisel3.core.LegacyModule" class="extmbr" name="chisel3.Module">Module</a></span>
+        <a title="" href="LockingArbiterLike.html"><span class="name">LockingArbiterLike</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></span>]</span><span class="result"> extends <a href="../index.html#Module=chisel3.experimental.LegacyModule" class="extmbr" name="chisel3.Module">Module</a></span>
       </span>
       
       
@@ -726,14 +793,14 @@ Additionally, once 'valid' is raised it will never be lowered until after
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="LockingRRArbiter.html"><span class="name">LockingRRArbiter</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../index.html#Data=chisel3.core.Data" class="extmbr" name="chisel3.Data">Data</a></span>]</span><span class="result"> extends <a href="LockingArbiterLike.html" class="extype" name="chisel3.util.LockingArbiterLike">LockingArbiterLike</a>[<span class="extype" name="chisel3.util.LockingRRArbiter.T">T</span>]</span>
+        <a title="" href="LockingRRArbiter.html"><span class="name">LockingRRArbiter</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></span>]</span><span class="result"> extends <a href="LockingArbiterLike.html" class="extype" name="chisel3.util.LockingArbiterLike">LockingArbiterLike</a>[<span class="extype" name="chisel3.util.LockingRRArbiter.T">T</span>]</span>
       </span>
       
       
     </li><li name="chisel3.util.MixedVec" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="MixedVec[T&lt;:chisel3.core.Data]extendschisel3.RecordwithIndexedSeq[T]"></a><a id="MixedVec[T&lt;:core.Data]:MixedVec[T]"></a>
+      <a id="MixedVec[T&lt;:chisel3.Data]extendsRecordwithIndexedSeq[T]"></a><a id="MixedVec[T&lt;:Data]:MixedVec[T]"></a>
       <span class="permalink">
-      <a href="../../chisel3/util/index.html#MixedVec[T&lt;:chisel3.core.Data]extendschisel3.RecordwithIndexedSeq[T]" title="Permalink">
+      <a href="../../chisel3/util/index.html#MixedVec[T&lt;:chisel3.Data]extendsRecordwithIndexedSeq[T]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -742,7 +809,7 @@ Additionally, once 'valid' is raised it will never be lowered until after
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="A hardware array of elements that can hold values of different types/widths, unlike Vec which can only hold elements of the same type/width." href="MixedVec.html"><span class="name">MixedVec</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../core/Data.html" class="extype" name="chisel3.core.Data">core.Data</a></span>]</span><span class="result"> extends <a href="../index.html#Record=chisel3.core.Record" class="extmbr" name="chisel3.Record">Record</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/collection/IndexedSeq.html#scala.collection.IndexedSeq" class="extype" name="scala.collection.IndexedSeq">IndexedSeq</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>]</span>
+        <a title="A hardware array of elements that can hold values of different types/widths, unlike Vec which can only hold elements of the same type/width." href="MixedVec.html"><span class="name">MixedVec</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></span>]</span><span class="result"> extends <a href="../Record.html" class="extype" name="chisel3.Record">Record</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/collection/IndexedSeq.html#scala.collection.IndexedSeq" class="extype" name="scala.collection.IndexedSeq">IndexedSeq</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>]</span>
       </span>
       
       <p class="shortcomment cmt">A hardware array of elements that can hold values of different types/widths,
@@ -766,13 +833,13 @@ v(<span class="num">2</span>) := <span class="num">101.</span>U(<span class="num
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Pipeline module generator parameterized by data type and latency." href="Pipe.html"><span class="name">Pipe</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../index.html#Data=chisel3.core.Data" class="extmbr" name="chisel3.Data">Data</a></span>]</span><span class="result"> extends <a href="../index.html#Module=chisel3.core.LegacyModule" class="extmbr" name="chisel3.Module">Module</a></span>
+        <a title="Pipeline module generator parameterized by data type and latency." href="Pipe.html"><span class="name">Pipe</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></span>]</span><span class="result"> extends <a href="../index.html#Module=chisel3.experimental.LegacyModule" class="extmbr" name="chisel3.Module">Module</a></span>
       </span>
       
       <p class="shortcomment cmt">Pipeline module generator parameterized by data type and latency.</p><div class="fullcomment"><div class="comment cmt"><p>Pipeline module generator parameterized by data type and latency.</p><p>This defines a module with one input, <code>enq</code>, and one output, <code>deq</code>. The input and output are <a href="Valid.html" class="extype" name="chisel3.util.Valid">Valid</a> interfaces
-that wrap some Chisel type, e.g., a <a href="../index.html#UInt=chisel3.core.UInt" class="extmbr" name="chisel3.UInt">UInt</a> or a <a href="../index.html#Bundle=chisel3.core.Bundle" class="extmbr" name="chisel3.Bundle">Bundle</a>. This generator will then chain together a number of
+that wrap some Chisel type, e.g., a <a href="../UInt.html" class="extype" name="chisel3.UInt">UInt</a> or a <a href="../Bundle.html" class="extype" name="chisel3.Bundle">Bundle</a>. This generator will then chain together a number of
 pipeline stages that all advance when the input <a href="Valid.html" class="extype" name="chisel3.util.Valid">Valid</a> <code>enq</code> fires. The output <code>deq</code> <a href="Valid.html" class="extype" name="chisel3.util.Valid">Valid</a> will fire only
-when valid data has made it all the way through the pipeline.</p><p>As an example, to construct a 4-stage pipe of 8-bit <a href="../index.html#UInt=chisel3.core.UInt" class="extmbr" name="chisel3.UInt">UInt</a>s and connect it to a producer and consumer, you can use
+when valid data has made it all the way through the pipeline.</p><p>As an example, to construct a 4-stage pipe of 8-bit <a href="../UInt.html" class="extype" name="chisel3.UInt">UInt</a>s and connect it to a producer and consumer, you can use
 the following:</p><pre><span class="kw">val</span> foo = Module(<span class="kw">new</span> Pipe(UInt(<span class="num">8.</span>W)), <span class="num">4</span>)
 pipe.io.enq := producer.io
 consumer.io := pipe.io.deq</pre><p>If you already have the <a href="Valid.html" class="extype" name="chisel3.util.Valid">Valid</a> input or the components of a <a href="Valid.html" class="extype" name="chisel3.util.Valid">Valid</a> interface, it may be simpler to use the
@@ -791,7 +858,7 @@ input for you.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="A hardware module implementing a Queue" href="Queue.html"><span class="name">Queue</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../index.html#Data=chisel3.core.Data" class="extmbr" name="chisel3.Data">Data</a></span>]</span><span class="result"> extends <a href="../index.html#Module=chisel3.core.LegacyModule" class="extmbr" name="chisel3.Module">Module</a></span>
+        <a title="A hardware module implementing a Queue" href="Queue.html"><span class="name">Queue</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></span>]</span><span class="result"> extends <a href="../index.html#Module=chisel3.experimental.LegacyModule" class="extmbr" name="chisel3.Module">Module</a></span>
       </span>
       
       <p class="shortcomment cmt">A hardware module implementing a Queue</p><div class="fullcomment"><div class="comment cmt"><p>A hardware module implementing a Queue</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
@@ -803,9 +870,9 @@ q.io.enq &lt;&gt; producer.io.out
 consumer.io.in &lt;&gt; q.io.deq</pre></li></ol>
             </div></dl></div>
     </li><li name="chisel3.util.QueueIO" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="QueueIO[T&lt;:chisel3.Data]extendschisel3.Bundle"></a><a id="QueueIO[T&lt;:Data]:QueueIO[T]"></a>
+      <a id="QueueIO[T&lt;:chisel3.Data]extendsBundle"></a><a id="QueueIO[T&lt;:Data]:QueueIO[T]"></a>
       <span class="permalink">
-      <a href="../../chisel3/util/index.html#QueueIO[T&lt;:chisel3.Data]extendschisel3.Bundle" title="Permalink">
+      <a href="../../chisel3/util/index.html#QueueIO[T&lt;:chisel3.Data]extendsBundle" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -814,7 +881,7 @@ consumer.io.in &lt;&gt; q.io.deq</pre></li></ol>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="An I/O Bundle for Queues" href="QueueIO.html"><span class="name">QueueIO</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../index.html#Data=chisel3.core.Data" class="extmbr" name="chisel3.Data">Data</a></span>]</span><span class="result"> extends <a href="../index.html#Bundle=chisel3.core.Bundle" class="extmbr" name="chisel3.Bundle">Bundle</a></span>
+        <a title="An I/O Bundle for Queues" href="QueueIO.html"><span class="name">QueueIO</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></span>]</span><span class="result"> extends <a href="../Bundle.html" class="extype" name="chisel3.Bundle">Bundle</a></span>
       </span>
       
       <p class="shortcomment cmt">An I/O Bundle for Queues</p>
@@ -830,7 +897,7 @@ consumer.io.in &lt;&gt; q.io.deq</pre></li></ol>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Hardware module that is used to sequence n producers into 1 consumer." href="RRArbiter.html"><span class="name">RRArbiter</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../index.html#Data=chisel3.core.Data" class="extmbr" name="chisel3.Data">Data</a></span>]</span><span class="result"> extends <a href="LockingRRArbiter.html" class="extype" name="chisel3.util.LockingRRArbiter">LockingRRArbiter</a>[<span class="extype" name="chisel3.util.RRArbiter.T">T</span>]</span>
+        <a title="Hardware module that is used to sequence n producers into 1 consumer." href="RRArbiter.html"><span class="name">RRArbiter</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></span>]</span><span class="result"> extends <a href="LockingRRArbiter.html" class="extype" name="chisel3.util.LockingRRArbiter">LockingRRArbiter</a>[<span class="extype" name="chisel3.util.RRArbiter.T">T</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Hardware module that is used to sequence n producers into 1 consumer.</p><div class="fullcomment"><div class="comment cmt"><p>Hardware module that is used to sequence n producers into 1 consumer.
@@ -845,9 +912,9 @@ arb.io.in(<span class="num">1</span>) &lt;&gt; producer1.io.out
 consumer.io.in &lt;&gt; arb.io.out</pre></li></ol>
             </div></dl></div>
     </li><li name="chisel3.util.ReadyValidIO" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="ReadyValidIO[+T&lt;:chisel3.Data]extendschisel3.Bundle"></a><a id="ReadyValidIO[+T&lt;:Data]:ReadyValidIO[T]"></a>
+      <a id="ReadyValidIO[+T&lt;:chisel3.Data]extendsBundle"></a><a id="ReadyValidIO[+T&lt;:Data]:ReadyValidIO[T]"></a>
       <span class="permalink">
-      <a href="../../chisel3/util/index.html#ReadyValidIO[+T&lt;:chisel3.Data]extendschisel3.Bundle" title="Permalink">
+      <a href="../../chisel3/util/index.html#ReadyValidIO[+T&lt;:chisel3.Data]extendsBundle" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -856,7 +923,7 @@ consumer.io.in &lt;&gt; arb.io.out</pre></li></ol>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="An I/O Bundle containing 'valid' and 'ready' signals that handshake the transfer of data stored in the 'bits' subfield." href="ReadyValidIO.html"><span class="name">ReadyValidIO</span></a><span class="tparams">[<span name="T">+T &lt;: <a href="../index.html#Data=chisel3.core.Data" class="extmbr" name="chisel3.Data">Data</a></span>]</span><span class="result"> extends <a href="../index.html#Bundle=chisel3.core.Bundle" class="extmbr" name="chisel3.Bundle">Bundle</a></span>
+        <a title="An I/O Bundle containing 'valid' and 'ready' signals that handshake the transfer of data stored in the 'bits' subfield." href="ReadyValidIO.html"><span class="name">ReadyValidIO</span></a><span class="tparams">[<span name="T">+T &lt;: <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></span>]</span><span class="result"> extends <a href="../Bundle.html" class="extype" name="chisel3.Bundle">Bundle</a></span>
       </span>
       
       <p class="shortcomment cmt">An I/O Bundle containing 'valid' and 'ready' signals that handshake
@@ -878,15 +945,15 @@ The actual semantics of ready/valid are enforced via the use of concrete subclas
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Implementation details for switch." href="SwitchContext.html"><span class="name">SwitchContext</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../index.html#Element=chisel3.core.Element" class="extmbr" name="chisel3.Element">Element</a></span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="Implementation details for switch." href="SwitchContext.html"><span class="name">SwitchContext</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../Element.html" class="extype" name="chisel3.Element">Element</a></span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <p class="shortcomment cmt">Implementation details for <a href="switch$.html" class="extype" name="chisel3.util.switch">switch</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Implementation details for <a href="switch$.html" class="extype" name="chisel3.util.switch">switch</a>. See <a href="switch$.html" class="extype" name="chisel3.util.switch">switch</a> and <a href="is$.html" class="extype" name="chisel3.util.is">is</a> for the
 user-facing API.</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>DO NOT USE. This API is subject to change without warning.</p></span></dd></dl></div>
     </li><li name="chisel3.util.Valid" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="Valid[+T&lt;:chisel3.Data]extendschisel3.Bundle"></a><a id="Valid[+T&lt;:Data]:Valid[T]"></a>
+      <a id="Valid[+T&lt;:chisel3.Data]extendsBundle"></a><a id="Valid[+T&lt;:Data]:Valid[T]"></a>
       <span class="permalink">
-      <a href="../../chisel3/util/index.html#Valid[+T&lt;:chisel3.Data]extendschisel3.Bundle" title="Permalink">
+      <a href="../../chisel3/util/index.html#Valid[+T&lt;:chisel3.Data]extendsBundle" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -895,10 +962,10 @@ user-facing API.</p></div><dl class="attributes block"> <dt>Note</dt><dd><span c
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="A Bundle that adds a valid bit to some data." href="Valid.html"><span class="name">Valid</span></a><span class="tparams">[<span name="T">+T &lt;: <a href="../index.html#Data=chisel3.core.Data" class="extmbr" name="chisel3.Data">Data</a></span>]</span><span class="result"> extends <a href="../index.html#Bundle=chisel3.core.Bundle" class="extmbr" name="chisel3.Bundle">Bundle</a></span>
+        <a title="A Bundle that adds a valid bit to some data." href="Valid.html"><span class="name">Valid</span></a><span class="tparams">[<span name="T">+T &lt;: <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></span>]</span><span class="result"> extends <a href="../Bundle.html" class="extype" name="chisel3.Bundle">Bundle</a></span>
       </span>
       
-      <p class="shortcomment cmt">A <a href="../index.html#Bundle=chisel3.core.Bundle" class="extmbr" name="chisel3.Bundle">Bundle</a> that adds a <code>valid</code> bit to some data.</p><div class="fullcomment"><div class="comment cmt"><p>A <a href="../index.html#Bundle=chisel3.core.Bundle" class="extmbr" name="chisel3.Bundle">Bundle</a> that adds a <code>valid</code> bit to some data. This indicates that the user expects a &quot;valid&quot; interface between
+      <p class="shortcomment cmt">A <a href="../Bundle.html" class="extype" name="chisel3.Bundle">Bundle</a> that adds a <code>valid</code> bit to some data.</p><div class="fullcomment"><div class="comment cmt"><p>A <a href="../Bundle.html" class="extype" name="chisel3.Bundle">Bundle</a> that adds a <code>valid</code> bit to some data. This indicates that the user expects a &quot;valid&quot; interface between
 a producer and a consumer. Here, the producer asserts the <code>valid</code> bit when data on the <code>bits</code> line contains valid
 data. This differs from <a href="DecoupledIO.html" class="extype" name="chisel3.util.DecoupledIO">DecoupledIO</a> or <a href="IrrevocableIO.html" class="extype" name="chisel3.util.IrrevocableIO">IrrevocableIO</a> as there is no <code>ready</code> line that the consumer can use
 to put back pressure on the producer.</p><p>In most scenarios, the <code>Valid</code> class will <i>not</i> be used directly. Instead, users will create <code>Valid</code> interfaces
@@ -915,7 +982,7 @@ using the <a href="Valid$.html" class="extype" name="chisel3.util.Valid">Valid f
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">ValidIO</span><span class="tparams">[<span name="T">+T &lt;: <a href="../index.html#Data=chisel3.core.Data" class="extmbr" name="chisel3.Data">Data</a></span>]</span><span class="result alias"> = <a href="Valid.html" class="extype" name="chisel3.util.Valid">Valid</a>[<span class="extype" name="chisel3.util.ValidIO.T">T</span>]</span>
+        <span class="name">ValidIO</span><span class="tparams">[<span name="T">+T &lt;: <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></span>]</span><span class="result alias"> = <a href="Valid.html" class="extype" name="chisel3.util.Valid">Valid</a>[<span class="extype" name="chisel3.util.ValidIO.T">T</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Synonyms, moved from main package object - maintain scope.</p>
@@ -1138,8 +1205,8 @@ FillInterleaved(<span class="num">2</span>, <span class="std">Seq</span>(<span c
         <a title="Implicit conversions to automatically convert scala.Boolean and scala.Int to Bool and UInt respectively" href="ImplicitConversions$.html"><span class="name">ImplicitConversions</span></a>
       </span>
       
-      <p class="shortcomment cmt">Implicit conversions to automatically convert <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html" class="extype" name="scala.Boolean">scala.Boolean</a> and <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html" class="extype" name="scala.Int">scala.Int</a> to <a href="../index.html#Bool=chisel3.core.Bool" class="extmbr" name="chisel3.Bool">Bool</a>
- and <a href="../index.html#UInt=chisel3.core.UInt" class="extmbr" name="chisel3.UInt">UInt</a> respectively
+      <p class="shortcomment cmt">Implicit conversions to automatically convert <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html" class="extype" name="scala.Boolean">scala.Boolean</a> and <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html" class="extype" name="scala.Int">scala.Int</a> to <a href="../Bool.html" class="extype" name="chisel3.Bool">Bool</a>
+ and <a href="../UInt.html" class="extype" name="chisel3.UInt">UInt</a> respectively
 </p>
     </li><li name="chisel3.util.Irrevocable" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Irrevocable"></a><a id="Irrevocable:Irrevocable"></a>
@@ -1157,34 +1224,6 @@ FillInterleaved(<span class="num">2</span>, <span class="std">Seq</span>(<span c
       </span>
       
       <p class="shortcomment cmt">Factory adds an irrevocable handshaking protocol to a data bundle.</p>
-    </li><li name="chisel3.util.LFSR16" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="LFSR16"></a><a id="LFSR16:LFSR16"></a>
-      <span class="permalink">
-      <a href="../../chisel3/util/index.html#LFSR16" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a title="LFSR16 generates a 16-bit linear feedback shift register, returning the register contents." href="LFSR16$.html"><span class="name">LFSR16</span></a>
-      </span>
-      
-      <p class="shortcomment cmt">LFSR16 generates a 16-bit linear feedback shift register, returning the register contents.</p><div class="fullcomment"><div class="comment cmt"><p>LFSR16 generates a 16-bit linear feedback shift register, returning the register contents.
-This is useful for generating a pseudo-random sequence.</p><p>The example below, taken from the unit tests, creates two 4-sided dice using <code>LFSR16</code> primitives:</p></div><dl class="attributes block"> <div class="block">Example:
-               <ol><li class="cmt"><p></p><pre><span class="kw">val</span> bins = Reg(Vec(<span class="num">8</span>, UInt(<span class="num">32.</span>W)))
-
-<span class="cmt">// Create two 4 sided dice and roll them each cycle.</span>
-<span class="cmt">// Use tap points on each LFSR so values are more independent</span>
-<span class="kw">val</span> die0 = Cat(<span class="std">Seq</span>.tabulate(<span class="num">2</span>) { i <span class="kw">=&gt;</span> LFSR16()(i) })
-<span class="kw">val</span> die1 = Cat(<span class="std">Seq</span>.tabulate(<span class="num">2</span>) { i <span class="kw">=&gt;</span> LFSR16()(i + <span class="num">2</span>) })
-
-<span class="kw">val</span> rollValue = die0 +&amp; die1  <span class="cmt">// Note +& is critical because sum will need an extra bit.</span>
-
-bins(rollValue) := bins(rollValue) + <span class="num">1.</span>U</pre></li></ol>
-            </div></dl></div>
     </li><li name="chisel3.util.ListLookup" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ListLookup"></a><a id="ListLookup:ListLookup"></a>
       <span class="permalink">
@@ -1289,7 +1328,7 @@ Similar to <a href="MuxLookup$.html" class="extype" name="chisel3.util.MuxLookup
       
       <p class="shortcomment cmt">Create a MixedVec wire with default values as specified, and type of each element inferred from
 those default values.</p><div class="fullcomment"><div class="comment cmt"><p>Create a MixedVec wire with default values as specified, and type of each element inferred from
-those default values.</p><p>This is analogous to <a href="../core/VecInit$.html" class="extype" name="chisel3.core.VecInit">chisel3.core.VecInit</a>.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>MixedVec with given values assigned</p></dd></dl><dl class="attributes block"> <div class="block">Example:
+those default values.</p><p>This is analogous to <a href="../VecInit$.html" class="extype" name="chisel3.VecInit">VecInit</a>.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>MixedVec with given values assigned</p></dd></dl><dl class="attributes block"> <div class="block">Example:
                <ol><li class="cmt"><p></p><pre>MixedVecInit(<span class="std">Seq</span>(<span class="num">100.</span>U(<span class="num">8.</span>W), <span class="num">10000.</span>U(<span class="num">16.</span>W), <span class="num">101.</span>U(<span class="num">32.</span>W)))</pre></li></ol>
             </div></dl></div>
     </li><li name="chisel3.util.Mux1H" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -1657,14 +1696,14 @@ Method Pattern</a> where modules may be instantiated inside an enclosing scope. 
       
       <p class="shortcomment cmt">Factory for generating &quot;valid&quot; interfaces.</p><div class="fullcomment"><div class="comment cmt"><p>Factory for generating &quot;valid&quot; interfaces. A &quot;valid&quot; interface is a data-communicating interface between a producer
 and a consumer where the producer does not wait for the consumer. Concretely, this means that one additional bit is
-added to the data indicating its validity.</p><p>As an example, consider the following <a href="../index.html#Bundle=chisel3.core.Bundle" class="extmbr" name="chisel3.Bundle">Bundle</a>, <code>MyBundle</code>:</p><pre><span class="kw">class</span> MyBundle <span class="kw">extends</span> Bundle {
+added to the data indicating its validity.</p><p>As an example, consider the following <a href="../Bundle.html" class="extype" name="chisel3.Bundle">Bundle</a>, <code>MyBundle</code>:</p><pre><span class="kw">class</span> MyBundle <span class="kw">extends</span> Bundle {
   <span class="kw">val</span> foo = Output(UInt(<span class="num">8.</span>W))
 }</pre><p>To convert this to a &quot;valid&quot; interface, you wrap it with a call to the <a href="Valid$.html#apply[T&lt;:chisel3.Data](gen:T):chisel3.util.Valid[T]" class="extmbr" name="chisel3.util.Valid#apply"><code>Valid</code> companion object's
 apply method</a>:</p><pre><span class="kw">val</span> bar = Valid(<span class="kw">new</span> MyBundle)</pre><p>The resulting interface is <i>structurally</i> equivalent to the following:</p><pre><span class="kw">class</span> MyValidBundle <span class="kw">extends</span> Bundle {
   <span class="kw">val</span> valid = Output(Bool())
   <span class="kw">val</span> bits = Output(<span class="kw">new</span> MyBundle)
 }</pre><p>In addition to adding the <code>valid</code> bit, a <a href="Valid.html#fire(dummy:Int):chisel3.Bool" class="extmbr" name="chisel3.util.Valid#fire">Valid.fire</a> method is also added that returns the <code>valid</code> bit. This
-provides a similarly named interface to <span class="extype" name="DecoupledIO.fire">DecoupledIO.fire</span>.
+provides a similarly named interface to <a href="DecoupledIO.html" class="extype" name="chisel3.util.DecoupledIO">DecoupledIO</a>'s fire.
 </p></div><dl class="attributes block"> <dt>See also</dt><dd><span class="cmt"><p><a href="Decoupled$.html" class="extype" name="chisel3.util.Decoupled">DecoupledIO Factory</a></p></span><span class="cmt"><p><a href="Irrevocable$.html" class="extype" name="chisel3.util.Irrevocable">IrrevocableIO Factory</a></p></span></dd></dl></div>
     </li><li name="chisel3.util.is" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="is"></a><a id="is:is"></a>
@@ -1681,8 +1720,8 @@ provides a similarly named interface to <span class="extype" name="DecoupledIO.f
         <a title="Use to specify cases in a switch block, equivalent to a when block comparing to the condition variable." href="is$.html"><span class="name">is</span></a>
       </span>
       
-      <p class="shortcomment cmt">Use to specify cases in a <a href="switch$.html" class="extype" name="chisel3.util.switch">switch</a> block, equivalent to a <a href="../index.html#when:chisel3.core.when.type" class="extmbr" name="chisel3#when">when</a> block comparing to
-the condition variable.</p><div class="fullcomment"><div class="comment cmt"><p>Use to specify cases in a <a href="switch$.html" class="extype" name="chisel3.util.switch">switch</a> block, equivalent to a <a href="../index.html#when:chisel3.core.when.type" class="extmbr" name="chisel3#when">when</a> block comparing to
+      <p class="shortcomment cmt">Use to specify cases in a <a href="switch$.html" class="extype" name="chisel3.util.switch">switch</a> block, equivalent to a <a href="../when$.html" class="extype" name="chisel3.when">when</a> block comparing to
+the condition variable.</p><div class="fullcomment"><div class="comment cmt"><p>Use to specify cases in a <a href="switch$.html" class="extype" name="chisel3.util.switch">switch</a> block, equivalent to a <a href="../when$.html" class="extype" name="chisel3.when">when</a> block comparing to
 the condition variable.
 </p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>illegal outside a <a href="switch$.html" class="extype" name="chisel3.util.switch">switch</a> block</p></span>, <span class="cmt"><p>must be a literal</p></span>, <span class="cmt"><p>each is must be mutually exclusive</p></span>, <span class="cmt"><p>dummy implementation, a macro inside <a href="switch$.html" class="extype" name="chisel3.util.switch">switch</a> transforms this into the actual
 implementation</p></span></dd></dl></div>
@@ -1803,6 +1842,22 @@ log2Up(<span class="num">2</span>)  <span class="cmt">// returns 1</span>
 log2Up(<span class="num">3</span>)  <span class="cmt">// returns 2</span>
 log2Up(<span class="num">4</span>)  <span class="cmt">// returns 2</span></pre></li></ol>
             </div></dl></div>
+    </li><li name="chisel3.util.signedBitLength" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="signedBitLength"></a><a id="signedBitLength:signedBitLength"></a>
+      <span class="permalink">
+      <a href="../../chisel3/util/index.html#signedBitLength" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="signedBitLength$.html"><span class="name">signedBitLength</span></a>
+      </span>
+      
+      
     </li><li name="chisel3.util.switch" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="switch"></a><a id="switch:switch"></a>
       <span class="permalink">
@@ -1829,7 +1884,62 @@ log2Up(<span class="num">4</span>)  <span class="cmt">// returns 2</span></pre><
   }
 }</pre></li></ol>
             </div></dl></div>
-    </li><li name="chisel3.util.unless" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="chisel3.util.unsignedBitLength" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="unsignedBitLength"></a><a id="unsignedBitLength:unsignedBitLength"></a>
+      <span class="permalink">
+      <a href="../../chisel3/util/index.html#unsignedBitLength" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="unsignedBitLength$.html"><span class="name">unsignedBitLength</span></a>
+      </span>
+      
+      
+    </li>
+              </ol>
+            </div>
+
+        
+
+        <div class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="chisel3.util.LFSR16" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="LFSR16"></a><a id="LFSR16:LFSR16"></a>
+      <span class="permalink">
+      <a href="../../chisel3/util/index.html#LFSR16" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="LFSR16 generates a 16-bit linear feedback shift register, returning the register contents." href="LFSR16$.html"><span class="name deprecated" title="Deprecated: (Since version 3.2) LFSR16 is deprecated in favor of the parameterized chisel3.util.random.LFSR">LFSR16</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">LFSR16 generates a 16-bit linear feedback shift register, returning the register contents.</p><div class="fullcomment"><div class="comment cmt"><p>LFSR16 generates a 16-bit linear feedback shift register, returning the register contents.
+This is useful for generating a pseudo-random sequence.</p><p>The example below, taken from the unit tests, creates two 4-sided dice using <code>LFSR16</code> primitives:</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 3.2)</i> LFSR16 is deprecated in favor of the parameterized chisel3.util.random.LFSR</p></dd><div class="block">Example:
+               <ol><li class="cmt"><p></p><pre><span class="kw">val</span> bins = Reg(Vec(<span class="num">8</span>, UInt(<span class="num">32.</span>W)))
+
+<span class="cmt">// Create two 4 sided dice and roll them each cycle.</span>
+<span class="cmt">// Use tap points on each LFSR so values are more independent</span>
+<span class="kw">val</span> die0 = Cat(<span class="std">Seq</span>.tabulate(<span class="num">2</span>) { i <span class="kw">=&gt;</span> LFSR16()(i) })
+<span class="kw">val</span> die1 = Cat(<span class="std">Seq</span>.tabulate(<span class="num">2</span>) { i <span class="kw">=&gt;</span> LFSR16()(i + <span class="num">2</span>) })
+
+<span class="kw">val</span> rollValue = die0 +&amp; die1  <span class="cmt">// Note +& is critical because sum will need an extra bit.</span>
+
+bins(rollValue) := bins(rollValue) + <span class="num">1.</span>U</pre></li></ol>
+            </div></dl></div>
+    </li><li name="chisel3.util.unless" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="unless"></a><a id="unless:unless"></a>
       <span class="permalink">
       <a href="../../chisel3/util/index.html#unless" title="Permalink">
@@ -1841,17 +1951,15 @@ log2Up(<span class="num">4</span>)  <span class="cmt">// returns 2</span></pre><
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="unless$.html"><span class="name">unless</span></a>
+        <a title="" href="unless$.html"><span class="name deprecated" title="Deprecated: (Since version 3.2) The unless conditional is deprecated, use when(!condition){...} instead">unless</span></a>
       </span>
       
-      
-    </li>
-              </ol>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 3.2)</i> The unless conditional is deprecated, use when(!condition){...} instead</p></dd></dl></div>
+    </li></ol>
             </div>
-
-        
-
-        
         </div>
 
         <div id="inheritedMembers">

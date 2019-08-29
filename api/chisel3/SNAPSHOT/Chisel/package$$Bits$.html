@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.2-050719-SNAPSHOT - Chisel.Bits</title>
-          <meta name="description" content="chisel3 3.2 - 050719 - SNAPSHOT - Chisel.Bits" />
-          <meta name="keywords" content="chisel3 3.2 050719 SNAPSHOT Chisel.Bits" />
+          <title>chisel3 3.2-081319-SNAPSHOT - Chisel.Bits</title>
+          <meta name="description" content="chisel3 3.2 - 081319 - SNAPSHOT - Chisel.Bits" />
+          <meta name="keywords" content="chisel3 3.2 081319 SNAPSHOT Chisel.Bits" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.2-050719-SNAPSHOT</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.2-081319-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -69,9 +69,9 @@
       </span>
       
       <p class="shortcomment cmt">This is the documentation for Chisel.</p><div class="fullcomment"><div class="comment cmt"><p>This is the documentation for Chisel.</p><h4> Package structure </h4><p>The <a href="../chisel3/index.html" class="extype" name="chisel3">chisel3</a> package presents the public API of Chisel.
-It contains the concrete core types <a href="../chisel3/core/UInt.html" class="extype" name="chisel3.core.UInt"><code>UInt</code></a>, <a href="../chisel3/core/SInt.html" class="extype" name="chisel3.core.SInt"><code>SInt</code></a>, <a href="../chisel3/core/Bool.html" class="extype" name="chisel3.core.Bool"><code>Bool</code></a>, <a href="../chisel3/core/FixedPoint.html" class="extype" name="chisel3.core.FixedPoint"><code>FixedPoint</code></a>, <a href="../chisel3/core/Clock.html" class="extype" name="chisel3.core.Clock"><code>Clock</code></a>, and <a href="../chisel3/core/Reg$.html" class="extype" name="chisel3.core.Reg"><code>Reg</code></a>,
-the abstract types <a href="../chisel3/core/Bits.html" class="extype" name="chisel3.core.Bits"><code>Bits</code></a>, <a href="../chisel3/core/Aggregate.html" class="extype" name="chisel3.core.Aggregate"><code>Aggregate</code></a>, and <a href="../chisel3/core/Data.html" class="extype" name="chisel3.core.Data"><code>Data</code></a>,
-and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" name="chisel3.core.Bundle"><code>Bundle</code></a> and <a href="../chisel3/core/Vec.html" class="extype" name="chisel3.core.Vec"><code>Vec</code></a>.</p><p>The <a href="index.html" class="extype" name="Chisel">Chisel</a> package is a compatibility layer that attempts to provide chisel2 compatibility in chisel3.</p><p>Utility objects and methods are found in the <a href="../chisel3/util/index.html" class="extype" name="chisel3.util"><code>util</code></a> package.</p><p>The <a href="../chisel3/testers/index.html" class="extype" name="chisel3.testers"><code>testers</code></a> package defines the basic interface for chisel testers.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+It contains the concrete core types <a href="../chisel3/UInt.html" class="extype" name="chisel3.UInt"><code>UInt</code></a>, <a href="../chisel3/SInt.html" class="extype" name="chisel3.SInt"><code>SInt</code></a>, <a href="../chisel3/Bool.html" class="extype" name="chisel3.Bool"><code>Bool</code></a>, <a href="../chisel3/experimental/FixedPoint.html" class="extype" name="chisel3.experimental.FixedPoint"><code>FixedPoint</code></a>, <a href="../chisel3/Clock.html" class="extype" name="chisel3.Clock"><code>Clock</code></a>, and <a href="../chisel3/Reg$.html" class="extype" name="chisel3.Reg"><code>Reg</code></a>,
+the abstract types <a href="../chisel3/Bits.html" class="extype" name="chisel3.Bits"><code>Bits</code></a>, <a href="../chisel3/Aggregate.html" class="extype" name="chisel3.Aggregate"><code>Aggregate</code></a>, and <a href="../chisel3/Data.html" class="extype" name="chisel3.Data"><code>Data</code></a>,
+and the aggregate types <a href="../chisel3/Bundle.html" class="extype" name="chisel3.Bundle"><code>Bundle</code></a> and <a href="../chisel3/Vec.html" class="extype" name="chisel3.Vec"><code>Vec</code></a>.</p><p>The <a href="index.html" class="extype" name="Chisel">Chisel</a> package is a compatibility layer that attempts to provide chisel2 compatibility in chisel3.</p><p>Utility objects and methods are found in the <a href="../chisel3/util/index.html" class="extype" name="chisel3.util"><code>util</code></a> package.</p><p>The <a href="../chisel3/testers/index.html" class="extype" name="chisel3.testers"><code>testers</code></a> package defines the basic interface for chisel testers.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="_root_">root</a></dd></dl></div>
     </li><li name="_root_.Chisel" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="Chisel"></a><a id="Chisel:Chisel"></a>
       <span class="permalink">
@@ -84,13 +84,10 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">package</span>
       </span>
       <span class="symbol">
-        <a title="The Chisel compatibility package allows legacy users to continue using the Chisel (capital C) package name while moving to the more standard package naming convention chisel3 (lowercase c)." href="index.html"><span class="name">Chisel</span></a>
+        <a title="" href="index.html"><span class="name">Chisel</span></a>
       </span>
       
-      <p class="shortcomment cmt">The Chisel compatibility package allows legacy users to continue using the <code>Chisel</code> (capital C) package name
- while moving to the more standard package naming convention <code>chisel3</code> (lowercase c).</p><div class="fullcomment"><div class="comment cmt"><p>The Chisel compatibility package allows legacy users to continue using the <code>Chisel</code> (capital C) package name
- while moving to the more standard package naming convention <code>chisel3</code> (lowercase c).
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="_root_">root</a></dd></dl></div>
     </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="class" href="package$$AddDirMethodToData.html" title=""></a>
@@ -103,6 +100,14 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
                         <span class="separator"></span>
                         <a class="object" href="" title=""></a>
                         <a href="" title="">Bits</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$BitsCompatibility.html" title=""></a>
+                        <a href="package$$BitsCompatibility.html" title="">BitsCompatibility</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$BitsObjectCompatibility.html" title=""></a>
+                        <a href="package$$BitsObjectCompatibility.html" title="">BitsObjectCompatibility</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="class" href="package$$BlackBox.html" title=""></a>
@@ -125,6 +130,10 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
                         <a href="package$$CompatibilityModule.html" title="">CompatibilityModule</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
+                        <a class="class" href="package$$DataCompatibility.html" title=""></a>
+                        <a href="package$$DataCompatibility.html" title="">DataCompatibility</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
                         <a class="class" href="package$$Direction.html" title=""></a>
                         <a href="package$$Direction.html" title="">Direction</a>
                       </li><li class="current-entities indented1">
@@ -141,12 +150,20 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
                         <a href="package$$INPUT$.html" title="">INPUT</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
+                        <a class="class" href="package$$MemCompatibility.html" title=""></a>
+                        <a href="package$$MemCompatibility.html" title="">MemCompatibility</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
                         <a class="object" href="package$$NODIR$.html" title=""></a>
                         <a href="package$$NODIR$.html" title="">NODIR</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="object" href="package$$OUTPUT$.html" title=""></a>
                         <a href="package$$OUTPUT$.html" title="">OUTPUT</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$QueueCompatibility.html" title=""></a>
+                        <a href="package$$QueueCompatibility.html" title="">QueueCompatibility</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="object" href="package$$Reg$.html" title=""></a>
@@ -161,6 +178,10 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
                         <a href="package$$SIntFactory.html" title="This contains literal constructor factory methods that are deprecated as of Chisel3.">SIntFactory</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
+                        <a class="class" href="package$$SeqMemCompatibility.html" title=""></a>
+                        <a href="package$$SeqMemCompatibility.html" title="">SeqMemCompatibility</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
                         <a class="object" href="package$$UInt$.html" title=""></a>
                         <a href="package$$UInt$.html" title="">UInt</a>
                       </li><li class="current-entities indented1">
@@ -171,6 +192,10 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
                         <span class="separator"></span>
                         <a class="object" href="package$$Vec$.html" title=""></a>
                         <a href="package$$Vec$.html" title="">Vec</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$VecLikeCompatibility.html" title=""></a>
+                        <a href="package$$VecLikeCompatibility.html" title="">VecLikeCompatibility</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="object" href="package$$Wire$.html" title=""></a>
@@ -263,11 +288,11 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/master//src/main/scala/chisel3/compatibility.scala" target="_blank">compatibility.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="package$$UIntFactory.html" class="extype" name="Chisel.UIntFactory">UIntFactory</a>, <a href="../chisel3/core/UIntFactory.html" class="extype" name="chisel3.core.UIntFactory">chisel3.core.UIntFactory</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="package$$UIntFactory.html" class="extype" name="Chisel.UIntFactory">UIntFactory</a>, <a href="../chisel3/UIntFactory.html" class="extype" name="chisel3.UIntFactory">chisel3.UIntFactory</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div></div>
         
 
@@ -293,7 +318,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="Chisel.Bits"><span>Bits</span></li><li class="in" name="Chisel.UIntFactory"><span>UIntFactory</span></li><li class="in" name="chisel3.core.UIntFactory"><span>UIntFactory</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="Chisel.Bits"><span>Bits</span></li><li class="in" name="Chisel.UIntFactory"><span>UIntFactory</span></li><li class="in" name="chisel3.UIntFactory"><span>UIntFactory</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -368,10 +393,10 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="chisel3.core.UIntFactory#Lit" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="Lit(value:BigInt,width:chisel3.internal.firrtl.Width):chisel3.core.UInt"></a><a id="Lit(BigInt,Width):chisel3.core.UInt"></a>
+    </li><li name="chisel3.UIntFactory#Lit" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Lit(value:BigInt,width:chisel3.internal.firrtl.Width):chisel3.UInt"></a><a id="Lit(BigInt,Width):chisel3.UInt"></a>
       <span class="permalink">
-      <a href="../Chisel/package$$Bits$.html#Lit(value:BigInt,width:chisel3.internal.firrtl.Width):chisel3.core.UInt" title="Permalink">
+      <a href="../Chisel/package$$Bits$.html#Lit(value:BigInt,width:chisel3.internal.firrtl.Width):chisel3.UInt" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -380,10 +405,10 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">Lit</span><span class="params">(<span name="value">value: <span class="extype" name="scala.BigInt">BigInt</span></span>, <span name="width">width: <span class="extype" name="chisel3.internal.firrtl.Width">Width</span></span>)</span><span class="result">: <a href="../chisel3/core/UInt.html" class="extype" name="chisel3.core.UInt">chisel3.core.UInt</a></span>
+        <span class="name">Lit</span><span class="params">(<span name="value">value: <span class="extype" name="scala.BigInt">BigInt</span></span>, <span name="width">width: <span class="extype" name="chisel3.internal.firrtl.Width">Width</span></span>)</span><span class="result">: <a href="../chisel3/UInt.html" class="extype" name="chisel3.UInt">chisel3.UInt</a></span>
       </span>
       
-      <p class="shortcomment cmt">Create a UInt literal with specified width.</p><div class="fullcomment"><div class="comment cmt"><p>Create a UInt literal with specified width.</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../chisel3/index.html" class="extype" name="chisel3">chisel3</a>] </dd><dt>Definition Classes</dt><dd><a href="../chisel3/core/UIntFactory.html" class="extype" name="chisel3.core.UIntFactory">UIntFactory</a></dd></dl></div>
+      <p class="shortcomment cmt">Create a UInt literal with specified width.</p><div class="fullcomment"><div class="comment cmt"><p>Create a UInt literal with specified width.</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../chisel3/index.html" class="extype" name="chisel3">chisel3</a>] </dd><dt>Definition Classes</dt><dd><a href="../chisel3/UIntFactory.html" class="extype" name="chisel3.UIntFactory">UIntFactory</a></dd></dl></div>
     </li><li name="Chisel.UIntFactory#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="apply(dir:Chisel.package.Direction,width:chisel3.internal.firrtl.Width):Chisel.package.UInt"></a><a id="apply(Direction,Width):UInt"></a>
       <span class="permalink">
@@ -396,7 +421,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="dir">dir: <a href="package$$Direction.html" class="extype" name="Chisel.Direction">Direction</a></span>, <span name="width">width: <span class="extype" name="chisel3.internal.firrtl.Width">Width</span></span>)</span><span class="result">: <a href="index.html#UInt=chisel3.core.UInt" class="extmbr" name="Chisel.UInt">UInt</a></span>
+        <span class="name">apply</span><span class="params">(<span name="dir">dir: <a href="package$$Direction.html" class="extype" name="Chisel.Direction">Direction</a></span>, <span name="width">width: <span class="extype" name="chisel3.internal.firrtl.Width">Width</span></span>)</span><span class="result">: <a href="index.html#UInt=chisel3.UInt" class="extmbr" name="Chisel.UInt">UInt</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="package$$UIntFactory.html" class="extype" name="Chisel.UIntFactory">UIntFactory</a></dd></dl></div>
@@ -412,7 +437,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="dir">dir: <a href="package$$Direction.html" class="extype" name="Chisel.Direction">Direction</a></span>)</span><span class="result">: <a href="index.html#UInt=chisel3.core.UInt" class="extmbr" name="Chisel.UInt">UInt</a></span>
+        <span class="name">apply</span><span class="params">(<span name="dir">dir: <a href="package$$Direction.html" class="extype" name="Chisel.Direction">Direction</a></span>)</span><span class="result">: <a href="index.html#UInt=chisel3.UInt" class="extmbr" name="Chisel.UInt">UInt</a></span>
       </span>
       
       <p class="shortcomment cmt">Create a UInt with a specified direction, but unspecified width - compatibility with Chisel2.</p><div class="fullcomment"><div class="comment cmt"><p>Create a UInt with a specified direction, but unspecified width - compatibility with Chisel2.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="package$$UIntFactory.html" class="extype" name="Chisel.UIntFactory">UIntFactory</a></dd></dl></div>
@@ -428,7 +453,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="dir">dir: <a href="package$$Direction.html" class="extype" name="Chisel.Direction">Direction</a></span>, <span name="width">width: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="index.html#UInt=chisel3.core.UInt" class="extmbr" name="Chisel.UInt">UInt</a></span>
+        <span class="name">apply</span><span class="params">(<span name="dir">dir: <a href="package$$Direction.html" class="extype" name="Chisel.Direction">Direction</a></span>, <span name="width">width: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="index.html#UInt=chisel3.UInt" class="extmbr" name="Chisel.UInt">UInt</a></span>
       </span>
       
       <p class="shortcomment cmt">Create a UInt with a specified direction and width - compatibility with Chisel2.</p><div class="fullcomment"><div class="comment cmt"><p>Create a UInt with a specified direction and width - compatibility with Chisel2.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="package$$UIntFactory.html" class="extype" name="Chisel.UIntFactory">UIntFactory</a></dd></dl></div>
@@ -444,7 +469,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="value">value: <span class="extype" name="scala.BigInt">BigInt</span></span>)</span><span class="result">: <a href="index.html#UInt=chisel3.core.UInt" class="extmbr" name="Chisel.UInt">UInt</a></span>
+        <span class="name">apply</span><span class="params">(<span name="value">value: <span class="extype" name="scala.BigInt">BigInt</span></span>)</span><span class="result">: <a href="index.html#UInt=chisel3.UInt" class="extmbr" name="Chisel.UInt">UInt</a></span>
       </span>
       
       <p class="shortcomment cmt">Create a UInt literal with inferred width.- compatibility with Chisel2.</p><div class="fullcomment"><div class="comment cmt"><p>Create a UInt literal with inferred width.- compatibility with Chisel2.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="package$$UIntFactory.html" class="extype" name="Chisel.UIntFactory">UIntFactory</a></dd></dl></div>
@@ -460,7 +485,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="dir">dir: <a href="http://www.scala-lang.org/api/2.12.6/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="package$$Direction.html" class="extype" name="Chisel.Direction">Direction</a>] = <span class="symbol">None</span></span>, <span name="width">width: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="index.html#UInt=chisel3.core.UInt" class="extmbr" name="Chisel.UInt">UInt</a></span>
+        <span class="name">apply</span><span class="params">(<span name="dir">dir: <a href="http://www.scala-lang.org/api/2.12.6/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="package$$Direction.html" class="extype" name="Chisel.Direction">Direction</a>] = <span class="symbol">None</span></span>, <span name="width">width: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="index.html#UInt=chisel3.UInt" class="extmbr" name="Chisel.UInt">UInt</a></span>
       </span>
       
       <p class="shortcomment cmt">Create a UInt with a specified width - compatibility with Chisel2.</p><div class="fullcomment"><div class="comment cmt"><p>Create a UInt with a specified width - compatibility with Chisel2.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="package$$UIntFactory.html" class="extype" name="Chisel.UIntFactory">UIntFactory</a></dd></dl></div>
@@ -476,7 +501,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="value">value: <span class="extype" name="scala.BigInt">BigInt</span></span>, <span name="width">width: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="index.html#UInt=chisel3.core.UInt" class="extmbr" name="Chisel.UInt">UInt</a></span>
+        <span class="name">apply</span><span class="params">(<span name="value">value: <span class="extype" name="scala.BigInt">BigInt</span></span>, <span name="width">width: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="index.html#UInt=chisel3.UInt" class="extmbr" name="Chisel.UInt">UInt</a></span>
       </span>
       
       <p class="shortcomment cmt">Create a UInt literal with fixed width.</p><div class="fullcomment"><div class="comment cmt"><p>Create a UInt literal with fixed width.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="package$$UIntFactory.html" class="extype" name="Chisel.UIntFactory">UIntFactory</a></dd></dl></div>
@@ -492,7 +517,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="value">value: <span class="extype" name="scala.BigInt">BigInt</span></span>, <span name="width">width: <span class="extype" name="chisel3.internal.firrtl.Width">Width</span></span>)</span><span class="result">: <a href="index.html#UInt=chisel3.core.UInt" class="extmbr" name="Chisel.UInt">UInt</a></span>
+        <span class="name">apply</span><span class="params">(<span name="value">value: <span class="extype" name="scala.BigInt">BigInt</span></span>, <span name="width">width: <span class="extype" name="chisel3.internal.firrtl.Width">Width</span></span>)</span><span class="result">: <a href="index.html#UInt=chisel3.UInt" class="extmbr" name="Chisel.UInt">UInt</a></span>
       </span>
       
       <p class="shortcomment cmt">Create a UInt literal with specified width.</p><div class="fullcomment"><div class="comment cmt"><p>Create a UInt literal with specified width.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="package$$UIntFactory.html" class="extype" name="Chisel.UIntFactory">UIntFactory</a></dd></dl></div>
@@ -508,7 +533,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="width">width: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="index.html#UInt=chisel3.core.UInt" class="extmbr" name="Chisel.UInt">UInt</a></span>
+        <span class="name">apply</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="width">width: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="index.html#UInt=chisel3.UInt" class="extmbr" name="Chisel.UInt">UInt</a></span>
       </span>
       
       <p class="shortcomment cmt">Create a UInt literal with fixed width.</p><div class="fullcomment"><div class="comment cmt"><p>Create a UInt literal with fixed width.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="package$$UIntFactory.html" class="extype" name="Chisel.UIntFactory">UIntFactory</a></dd></dl></div>
@@ -524,14 +549,14 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="index.html#UInt=chisel3.core.UInt" class="extmbr" name="Chisel.UInt">UInt</a></span>
+        <span class="name">apply</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="index.html#UInt=chisel3.UInt" class="extmbr" name="Chisel.UInt">UInt</a></span>
       </span>
       
       <p class="shortcomment cmt">Create a UInt literal with inferred width.</p><div class="fullcomment"><div class="comment cmt"><p>Create a UInt literal with inferred width.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="package$$UIntFactory.html" class="extype" name="Chisel.UIntFactory">UIntFactory</a></dd></dl></div>
-    </li><li name="chisel3.core.UIntFactory#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="apply(range:(chisel3.internal.firrtl.NumericBound[Int],chisel3.internal.firrtl.NumericBound[Int])):chisel3.core.UInt"></a><a id="apply((NumericBound[Int],NumericBound[Int])):chisel3.core.UInt"></a>
+    </li><li name="chisel3.UIntFactory#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply(range:(chisel3.internal.firrtl.NumericBound[Int],chisel3.internal.firrtl.NumericBound[Int])):chisel3.UInt"></a><a id="apply((NumericBound[Int],NumericBound[Int])):chisel3.UInt"></a>
       <span class="permalink">
-      <a href="../Chisel/package$$Bits$.html#apply(range:(chisel3.internal.firrtl.NumericBound[Int],chisel3.internal.firrtl.NumericBound[Int])):chisel3.core.UInt" title="Permalink">
+      <a href="../Chisel/package$$Bits$.html#apply(range:(chisel3.internal.firrtl.NumericBound[Int],chisel3.internal.firrtl.NumericBound[Int])):chisel3.UInt" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -540,14 +565,14 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="range">range: (<span class="extype" name="chisel3.internal.firrtl.NumericBound">NumericBound</span>[<a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>], <span class="extype" name="chisel3.internal.firrtl.NumericBound">NumericBound</span>[<a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>])</span>)</span><span class="result">: <a href="../chisel3/core/UInt.html" class="extype" name="chisel3.core.UInt">chisel3.core.UInt</a></span>
+        <span class="name">apply</span><span class="params">(<span name="range">range: (<span class="extype" name="chisel3.internal.firrtl.NumericBound">NumericBound</span>[<a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>], <span class="extype" name="chisel3.internal.firrtl.NumericBound">NumericBound</span>[<a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>])</span>)</span><span class="result">: <a href="../chisel3/UInt.html" class="extype" name="chisel3.UInt">chisel3.UInt</a></span>
       </span>
       
-      <p class="shortcomment cmt">Create a UInt with the specified range</p><div class="fullcomment"><div class="comment cmt"><p>Create a UInt with the specified range</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../chisel3/core/UIntFactory.html" class="extype" name="chisel3.core.UIntFactory">UIntFactory</a></dd></dl></div>
-    </li><li name="chisel3.core.UIntFactory#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="apply(range:chisel3.internal.firrtl.Range):chisel3.core.UInt"></a><a id="apply(Range):chisel3.core.UInt"></a>
+      <p class="shortcomment cmt">Create a UInt with the specified range</p><div class="fullcomment"><div class="comment cmt"><p>Create a UInt with the specified range</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../chisel3/UIntFactory.html" class="extype" name="chisel3.UIntFactory">UIntFactory</a></dd></dl></div>
+    </li><li name="chisel3.UIntFactory#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply(range:chisel3.internal.firrtl.Range):chisel3.UInt"></a><a id="apply(Range):chisel3.UInt"></a>
       <span class="permalink">
-      <a href="../Chisel/package$$Bits$.html#apply(range:chisel3.internal.firrtl.Range):chisel3.core.UInt" title="Permalink">
+      <a href="../Chisel/package$$Bits$.html#apply(range:chisel3.internal.firrtl.Range):chisel3.UInt" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -556,14 +581,14 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="range">range: <span class="extype" name="chisel3.internal.firrtl.Range">Range</span></span>)</span><span class="result">: <a href="../chisel3/core/UInt.html" class="extype" name="chisel3.core.UInt">chisel3.core.UInt</a></span>
+        <span class="name">apply</span><span class="params">(<span name="range">range: <span class="extype" name="chisel3.internal.firrtl.Range">Range</span></span>)</span><span class="result">: <a href="../chisel3/UInt.html" class="extype" name="chisel3.UInt">chisel3.UInt</a></span>
       </span>
       
-      <p class="shortcomment cmt">Create a UInt with the specified range</p><div class="fullcomment"><div class="comment cmt"><p>Create a UInt with the specified range</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../chisel3/core/UIntFactory.html" class="extype" name="chisel3.core.UIntFactory">UIntFactory</a></dd></dl></div>
-    </li><li name="chisel3.core.UIntFactory#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="apply(width:chisel3.internal.firrtl.Width):chisel3.core.UInt"></a><a id="apply(Width):chisel3.core.UInt"></a>
+      <p class="shortcomment cmt">Create a UInt with the specified range</p><div class="fullcomment"><div class="comment cmt"><p>Create a UInt with the specified range</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../chisel3/UIntFactory.html" class="extype" name="chisel3.UIntFactory">UIntFactory</a></dd></dl></div>
+    </li><li name="chisel3.UIntFactory#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply(width:chisel3.internal.firrtl.Width):chisel3.UInt"></a><a id="apply(Width):chisel3.UInt"></a>
       <span class="permalink">
-      <a href="../Chisel/package$$Bits$.html#apply(width:chisel3.internal.firrtl.Width):chisel3.core.UInt" title="Permalink">
+      <a href="../Chisel/package$$Bits$.html#apply(width:chisel3.internal.firrtl.Width):chisel3.UInt" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -572,14 +597,14 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="width">width: <span class="extype" name="chisel3.internal.firrtl.Width">Width</span></span>)</span><span class="result">: <a href="../chisel3/core/UInt.html" class="extype" name="chisel3.core.UInt">chisel3.core.UInt</a></span>
+        <span class="name">apply</span><span class="params">(<span name="width">width: <span class="extype" name="chisel3.internal.firrtl.Width">Width</span></span>)</span><span class="result">: <a href="../chisel3/UInt.html" class="extype" name="chisel3.UInt">chisel3.UInt</a></span>
       </span>
       
-      <p class="shortcomment cmt">Create a UInt port with specified width.</p><div class="fullcomment"><div class="comment cmt"><p>Create a UInt port with specified width.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../chisel3/core/UIntFactory.html" class="extype" name="chisel3.core.UIntFactory">UIntFactory</a></dd></dl></div>
-    </li><li name="chisel3.core.UIntFactory#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="apply():chisel3.core.UInt"></a>
+      <p class="shortcomment cmt">Create a UInt port with specified width.</p><div class="fullcomment"><div class="comment cmt"><p>Create a UInt port with specified width.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../chisel3/UIntFactory.html" class="extype" name="chisel3.UIntFactory">UIntFactory</a></dd></dl></div>
+    </li><li name="chisel3.UIntFactory#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply():chisel3.UInt"></a>
       <span class="permalink">
-      <a href="../Chisel/package$$Bits$.html#apply():chisel3.core.UInt" title="Permalink">
+      <a href="../Chisel/package$$Bits$.html#apply():chisel3.UInt" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -588,10 +613,10 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">()</span><span class="result">: <a href="../chisel3/core/UInt.html" class="extype" name="chisel3.core.UInt">chisel3.core.UInt</a></span>
+        <span class="name">apply</span><span class="params">()</span><span class="result">: <a href="../chisel3/UInt.html" class="extype" name="chisel3.UInt">chisel3.UInt</a></span>
       </span>
       
-      <p class="shortcomment cmt">Create a UInt type with inferred width.</p><div class="fullcomment"><div class="comment cmt"><p>Create a UInt type with inferred width.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../chisel3/core/UIntFactory.html" class="extype" name="chisel3.core.UIntFactory">UIntFactory</a></dd></dl></div>
+      <p class="shortcomment cmt">Create a UInt type with inferred width.</p><div class="fullcomment"><div class="comment cmt"><p>Create a UInt type with inferred width.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../chisel3/UIntFactory.html" class="extype" name="chisel3.UIntFactory">UIntFactory</a></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
@@ -906,7 +931,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">width</span><span class="params">(<span name="width">width: <span class="extype" name="chisel3.internal.firrtl.Width">Width</span></span>)</span><span class="result">: <a href="index.html#UInt=chisel3.core.UInt" class="extmbr" name="Chisel.UInt">UInt</a></span>
+        <span class="name">width</span><span class="params">(<span name="width">width: <span class="extype" name="chisel3.internal.firrtl.Width">Width</span></span>)</span><span class="result">: <a href="index.html#UInt=chisel3.UInt" class="extmbr" name="Chisel.UInt">UInt</a></span>
       </span>
       
       <p class="shortcomment cmt">Create a UInt port with specified width.</p><div class="fullcomment"><div class="comment cmt"><p>Create a UInt port with specified width.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="package$$UIntFactory.html" class="extype" name="Chisel.UIntFactory">UIntFactory</a></dd></dl></div>
@@ -922,7 +947,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">width</span><span class="params">(<span name="width">width: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="index.html#UInt=chisel3.core.UInt" class="extmbr" name="Chisel.UInt">UInt</a></span>
+        <span class="name">width</span><span class="params">(<span name="width">width: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="index.html#UInt=chisel3.UInt" class="extmbr" name="Chisel.UInt">UInt</a></span>
       </span>
       
       <p class="shortcomment cmt">Create a UInt with a specified width</p><div class="fullcomment"><div class="comment cmt"><p>Create a UInt with a specified width</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="package$$UIntFactory.html" class="extype" name="Chisel.UIntFactory">UIntFactory</a></dd></dl></div>
@@ -938,8 +963,8 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <div id="inheritedMembers">
         <div class="parent" name="Chisel.UIntFactory">
               <h3>Inherited from <a href="package$$UIntFactory.html" class="extype" name="Chisel.UIntFactory">UIntFactory</a></h3>
-            </div><div class="parent" name="chisel3.core.UIntFactory">
-              <h3>Inherited from <a href="../chisel3/core/UIntFactory.html" class="extype" name="chisel3.core.UIntFactory">chisel3.core.UIntFactory</a></h3>
+            </div><div class="parent" name="chisel3.UIntFactory">
+              <h3>Inherited from <a href="../chisel3/UIntFactory.html" class="extype" name="chisel3.UIntFactory">chisel3.UIntFactory</a></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">

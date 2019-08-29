@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.2-050719-SNAPSHOT - Chisel.fromIntToWidth</title>
-          <meta name="description" content="chisel3 3.2 - 050719 - SNAPSHOT - Chisel.fromIntToWidth" />
-          <meta name="keywords" content="chisel3 3.2 050719 SNAPSHOT Chisel.fromIntToWidth" />
+          <title>chisel3 3.2-081319-SNAPSHOT - Chisel.fromIntToWidth</title>
+          <meta name="description" content="chisel3 3.2 - 081319 - SNAPSHOT - Chisel.fromIntToWidth" />
+          <meta name="keywords" content="chisel3 3.2 081319 SNAPSHOT Chisel.fromIntToWidth" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.2-050719-SNAPSHOT</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.2-081319-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -69,9 +69,9 @@
       </span>
       
       <p class="shortcomment cmt">This is the documentation for Chisel.</p><div class="fullcomment"><div class="comment cmt"><p>This is the documentation for Chisel.</p><h4> Package structure </h4><p>The <a href="../chisel3/index.html" class="extype" name="chisel3">chisel3</a> package presents the public API of Chisel.
-It contains the concrete core types <a href="../chisel3/core/UInt.html" class="extype" name="chisel3.core.UInt"><code>UInt</code></a>, <a href="../chisel3/core/SInt.html" class="extype" name="chisel3.core.SInt"><code>SInt</code></a>, <a href="../chisel3/core/Bool.html" class="extype" name="chisel3.core.Bool"><code>Bool</code></a>, <a href="../chisel3/core/FixedPoint.html" class="extype" name="chisel3.core.FixedPoint"><code>FixedPoint</code></a>, <a href="../chisel3/core/Clock.html" class="extype" name="chisel3.core.Clock"><code>Clock</code></a>, and <a href="../chisel3/core/Reg$.html" class="extype" name="chisel3.core.Reg"><code>Reg</code></a>,
-the abstract types <a href="../chisel3/core/Bits.html" class="extype" name="chisel3.core.Bits"><code>Bits</code></a>, <a href="../chisel3/core/Aggregate.html" class="extype" name="chisel3.core.Aggregate"><code>Aggregate</code></a>, and <a href="../chisel3/core/Data.html" class="extype" name="chisel3.core.Data"><code>Data</code></a>,
-and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" name="chisel3.core.Bundle"><code>Bundle</code></a> and <a href="../chisel3/core/Vec.html" class="extype" name="chisel3.core.Vec"><code>Vec</code></a>.</p><p>The <a href="index.html" class="extype" name="Chisel">Chisel</a> package is a compatibility layer that attempts to provide chisel2 compatibility in chisel3.</p><p>Utility objects and methods are found in the <a href="../chisel3/util/index.html" class="extype" name="chisel3.util"><code>util</code></a> package.</p><p>The <a href="../chisel3/testers/index.html" class="extype" name="chisel3.testers"><code>testers</code></a> package defines the basic interface for chisel testers.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+It contains the concrete core types <a href="../chisel3/UInt.html" class="extype" name="chisel3.UInt"><code>UInt</code></a>, <a href="../chisel3/SInt.html" class="extype" name="chisel3.SInt"><code>SInt</code></a>, <a href="../chisel3/Bool.html" class="extype" name="chisel3.Bool"><code>Bool</code></a>, <a href="../chisel3/experimental/FixedPoint.html" class="extype" name="chisel3.experimental.FixedPoint"><code>FixedPoint</code></a>, <a href="../chisel3/Clock.html" class="extype" name="chisel3.Clock"><code>Clock</code></a>, and <a href="../chisel3/Reg$.html" class="extype" name="chisel3.Reg"><code>Reg</code></a>,
+the abstract types <a href="../chisel3/Bits.html" class="extype" name="chisel3.Bits"><code>Bits</code></a>, <a href="../chisel3/Aggregate.html" class="extype" name="chisel3.Aggregate"><code>Aggregate</code></a>, and <a href="../chisel3/Data.html" class="extype" name="chisel3.Data"><code>Data</code></a>,
+and the aggregate types <a href="../chisel3/Bundle.html" class="extype" name="chisel3.Bundle"><code>Bundle</code></a> and <a href="../chisel3/Vec.html" class="extype" name="chisel3.Vec"><code>Vec</code></a>.</p><p>The <a href="index.html" class="extype" name="Chisel">Chisel</a> package is a compatibility layer that attempts to provide chisel2 compatibility in chisel3.</p><p>Utility objects and methods are found in the <a href="../chisel3/util/index.html" class="extype" name="chisel3.util"><code>util</code></a> package.</p><p>The <a href="../chisel3/testers/index.html" class="extype" name="chisel3.testers"><code>testers</code></a> package defines the basic interface for chisel testers.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="_root_">root</a></dd></dl></div>
     </li><li name="_root_.Chisel" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="Chisel"></a><a id="Chisel:Chisel"></a>
       <span class="permalink">
@@ -84,13 +84,10 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">package</span>
       </span>
       <span class="symbol">
-        <a title="The Chisel compatibility package allows legacy users to continue using the Chisel (capital C) package name while moving to the more standard package naming convention chisel3 (lowercase c)." href="index.html"><span class="name">Chisel</span></a>
+        <a title="" href="index.html"><span class="name">Chisel</span></a>
       </span>
       
-      <p class="shortcomment cmt">The Chisel compatibility package allows legacy users to continue using the <code>Chisel</code> (capital C) package name
- while moving to the more standard package naming convention <code>chisel3</code> (lowercase c).</p><div class="fullcomment"><div class="comment cmt"><p>The Chisel compatibility package allows legacy users to continue using the <code>Chisel</code> (capital C) package name
- while moving to the more standard package naming convention <code>chisel3</code> (lowercase c).
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="_root_">root</a></dd></dl></div>
     </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="class" href="package$$AddDirMethodToData.html" title=""></a>
@@ -103,6 +100,14 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
                         <span class="separator"></span>
                         <a class="object" href="package$$Bits$.html" title=""></a>
                         <a href="package$$Bits$.html" title="">Bits</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$BitsCompatibility.html" title=""></a>
+                        <a href="package$$BitsCompatibility.html" title="">BitsCompatibility</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$BitsObjectCompatibility.html" title=""></a>
+                        <a href="package$$BitsObjectCompatibility.html" title="">BitsObjectCompatibility</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="class" href="package$$BlackBox.html" title=""></a>
@@ -125,6 +130,10 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
                         <a href="package$$CompatibilityModule.html" title="">CompatibilityModule</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
+                        <a class="class" href="package$$DataCompatibility.html" title=""></a>
+                        <a href="package$$DataCompatibility.html" title="">DataCompatibility</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
                         <a class="class" href="package$$Direction.html" title=""></a>
                         <a href="package$$Direction.html" title="">Direction</a>
                       </li><li class="current-entities indented1">
@@ -141,12 +150,20 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
                         <a href="package$$INPUT$.html" title="">INPUT</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
+                        <a class="class" href="package$$MemCompatibility.html" title=""></a>
+                        <a href="package$$MemCompatibility.html" title="">MemCompatibility</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
                         <a class="object" href="package$$NODIR$.html" title=""></a>
                         <a href="package$$NODIR$.html" title="">NODIR</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="object" href="package$$OUTPUT$.html" title=""></a>
                         <a href="package$$OUTPUT$.html" title="">OUTPUT</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$QueueCompatibility.html" title=""></a>
+                        <a href="package$$QueueCompatibility.html" title="">QueueCompatibility</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="object" href="package$$Reg$.html" title=""></a>
@@ -161,6 +178,10 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
                         <a href="package$$SIntFactory.html" title="This contains literal constructor factory methods that are deprecated as of Chisel3.">SIntFactory</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
+                        <a class="class" href="package$$SeqMemCompatibility.html" title=""></a>
+                        <a href="package$$SeqMemCompatibility.html" title="">SeqMemCompatibility</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
                         <a class="object" href="package$$UInt$.html" title=""></a>
                         <a href="package$$UInt$.html" title="">UInt</a>
                       </li><li class="current-entities indented1">
@@ -171,6 +192,10 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
                         <span class="separator"></span>
                         <a class="object" href="package$$Vec$.html" title=""></a>
                         <a href="package$$Vec$.html" title="">Vec</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$VecLikeCompatibility.html" title=""></a>
+                        <a href="package$$VecLikeCompatibility.html" title="">VecLikeCompatibility</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="object" href="package$$Wire$.html" title=""></a>
@@ -258,27 +283,17 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">fromIntToWidth</span><span class="result"> extends <a href="../chisel3/core/package$$fromIntToWidth.html" class="extype" name="chisel3.core.fromIntToWidth">chisel3.core.fromIntToWidth</a></span>
+        <span class="name">fromIntToWidth</span><span class="result"> extends <a href="../chisel3/package$$fromIntToWidth.html" class="extype" name="chisel3.fromIntToWidth">chisel3.fromIntToWidth</a></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/master//src/main/scala/chisel3/compatibility.scala" target="_blank">compatibility.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="../chisel3/core/package$$fromIntToWidth.html" class="extype" name="chisel3.core.fromIntToWidth">chisel3.core.fromIntToWidth</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
-        </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
-                <span class="toggle diagram-link">
-                  Type Hierarchy
-                </span>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 170.00 118.00" height="118pt" width="170pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 114)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-114 166,-114 166,4 -4,4" stroke="transparent" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this class" id="graph1_0"><g id="a_this class|graph1_0"><a xlink:title="Chisel.fromIntToWidth (this class)" xlink:href="#inheritance-diagram"><path d="M126.67,-49C126.67,-49 35.33,-49 35.33,-49 31.17,-49 27,-44.83 27,-40.67 27,-40.67 27,-32.33 27,-32.33 27,-28.17 31.17,-24 35.33,-24 35.33,-24 126.67,-24 126.67,-24 130.83,-24 135,-28.17 135,-32.33 135,-32.33 135,-40.67 135,-40.67 135,-44.83 130.83,-49 126.67,-49" stroke="#418565" fill="#418565"></path><image xlink:href="../lib/class_diagram.png" y="-43.5" x="37" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-34.1" x="58" text-anchor="start">fromIntToWidth</text></a></g></g><!-- node1 --><g class="node class" id="graph1_1"><g id="a_class|graph1_1"><a xlink:title="chisel3.core.fromIntToWidth" xlink:href="../chisel3/core/package$$fromIntToWidth.html#inheritance-diagram"><path d="M153.67,-110C153.67,-110 8.33,-110 8.33,-110 4.17,-110 0,-105.83 0,-101.67 0,-101.67 0,-93.33 0,-93.33 0,-89.17 4.17,-85 8.33,-85 8.33,-85 153.67,-85 153.67,-85 157.83,-85 162,-89.17 162,-93.33 162,-93.33 162,-101.67 162,-101.67 162,-105.83 157.83,-110 153.67,-110" stroke="#418565" fill="#418565"></path><image xlink:href="../lib/class_diagram.png" y="-104.5" x="10" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-95.1" x="31" text-anchor="start">chisel3.core.fromIntToWidth</text></a></g></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph1_1_0"><g id="a_inheritance|graph1_1_0"><a xlink:title="fromIntToWidth is a subtype of chisel3.core.fromIntToWidth"><path d="M81,-77.76C81,-68.37 81,-57.29 81,-49.13" stroke="#d4d4d4" fill="none"></path><polygon points="78.55,-77.84 81,-84.84 83.45,-77.84 78.55,-77.84" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
-                <div id="diagram-controls" class="hiddenContent">
-                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
-                </div>
-              </div></div>
+          <div class="superTypes hiddenContent"><a href="../chisel3/package$$fromIntToWidth.html" class="extype" name="chisel3.fromIntToWidth">chisel3.fromIntToWidth</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+        </div></div>
         
 
       <div id="mbrsel">
@@ -303,7 +318,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="Chisel.fromIntToWidth"><span>fromIntToWidth</span></li><li class="in" name="chisel3.core.fromIntToWidth"><span>fromIntToWidth</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="Chisel.fromIntToWidth"><span>fromIntToWidth</span></li><li class="in" name="chisel3.fromIntToWidth"><span>fromIntToWidth</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -397,7 +412,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="chisel3.core.fromIntToWidth#W" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="chisel3.fromIntToWidth#W" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="W:chisel3.internal.firrtl.Width"></a><a id="W:Width"></a>
       <span class="permalink">
       <a href="../Chisel/package$$fromIntToWidth.html#W:chisel3.internal.firrtl.Width" title="Permalink">
@@ -412,7 +427,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="name">W</span><span class="result">: <span class="extype" name="chisel3.internal.firrtl.Width">Width</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../chisel3/core/package$$fromIntToWidth.html" class="extype" name="chisel3.core.fromIntToWidth">fromIntToWidth</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../chisel3/package$$fromIntToWidth.html" class="extype" name="chisel3.fromIntToWidth">fromIntToWidth</a></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
@@ -725,8 +740,8 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="chisel3.core.fromIntToWidth">
-              <h3>Inherited from <a href="../chisel3/core/package$$fromIntToWidth.html" class="extype" name="chisel3.core.fromIntToWidth">chisel3.core.fromIntToWidth</a></h3>
+        <div class="parent" name="chisel3.fromIntToWidth">
+              <h3>Inherited from <a href="../chisel3/package$$fromIntToWidth.html" class="extype" name="chisel3.fromIntToWidth">chisel3.fromIntToWidth</a></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">

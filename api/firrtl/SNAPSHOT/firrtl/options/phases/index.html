@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.2-050719-SNAPSHOT - firrtl.options.phases</title>
-          <meta name="description" content="firrtl 1.2 - 050719 - SNAPSHOT - firrtl.options.phases" />
-          <meta name="keywords" content="firrtl 1.2 050719 SNAPSHOT firrtl.options.phases" />
+          <title>firrtl 1.2-081319-SNAPSHOT - firrtl.options.phases</title>
+          <meta name="description" content="firrtl 1.2 - 081319 - SNAPSHOT - firrtl.options.phases" />
+          <meta name="keywords" content="firrtl 1.2 081319 SNAPSHOT firrtl.options.phases" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.2-050719-SNAPSHOT</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.2-081319-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -119,16 +119,28 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="firrtl.options">options</a></dd></dl></div>
     </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="object" href="AddDefaults$.html" title="Add default annotations for a Stage"></a>
-                        <a href="AddDefaults$.html" title="Add default annotations for a Stage">AddDefaults</a>
+                        <a class="class" href="AddDefaults.html" title="Add default annotations for a Stage"></a>
+                        <a href="AddDefaults.html" title="Add default annotations for a Stage">AddDefaults</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="object" href="ConvertLegacyAnnotations$.html" title="Convert any LegacyAnnotations to non-legacy variants"></a>
-                        <a href="ConvertLegacyAnnotations$.html" title="Convert any LegacyAnnotations to non-legacy variants">ConvertLegacyAnnotations</a>
+                        <a class="class" href="Checks.html" title="Phase that validates an AnnotationSeq."></a>
+                        <a href="Checks.html" title="Phase that validates an AnnotationSeq.">Checks</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="object" href="GetIncludes$.html" title="Recursively expand all InputAnnotationFileAnnotations in an AnnotationSeq"></a>
-                        <a href="GetIncludes$.html" title="Recursively expand all InputAnnotationFileAnnotations in an AnnotationSeq">GetIncludes</a>
+                        <a class="class" href="ConvertLegacyAnnotations.html" title="Convert any LegacyAnnotations to non-legacy variants"></a>
+                        <a href="ConvertLegacyAnnotations.html" title="Convert any LegacyAnnotations to non-legacy variants">ConvertLegacyAnnotations</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="DeletedWrapper$.html" title=""></a>
+                        <a class="class" href="DeletedWrapper.html" title="Wrap a Phase such that any Annotation removed by the wrapped Phase will be added as DeletedAnnotations."></a>
+                        <a href="DeletedWrapper.html" title="Wrap a Phase such that any Annotation removed by the wrapped Phase will be added as DeletedAnnotations.">DeletedWrapper</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="GetIncludes.html" title="Recursively expand all InputAnnotationFileAnnotations in an AnnotationSeq"></a>
+                        <a href="GetIncludes.html" title="Recursively expand all InputAnnotationFileAnnotations in an AnnotationSeq">GetIncludes</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="WriteOutputAnnotations.html" title="Phase that writes an AnnotationSeq to a file."></a>
+                        <a href="WriteOutputAnnotations.html" title="Phase that writes an AnnotationSeq to a file.">WriteOutputAnnotations</a>
                       </li>
               </ul>
             </div>
@@ -190,17 +202,123 @@
         <div id="allMembers">
         
 
-        
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="firrtl.options.phases.AddDefaults" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AddDefaultsextendsPhase"></a><a id="AddDefaults:AddDefaults"></a>
+      <span class="permalink">
+      <a href="../../../firrtl/options/phases/index.html#AddDefaultsextendsPhase" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Add default annotations for a Stage" href="AddDefaults.html"><span class="name">AddDefaults</span></a><span class="result"> extends <a href="../Phase.html" class="extype" name="firrtl.options.Phase">Phase</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Add default annotations for a <a href="../Stage.html" class="extype" name="firrtl.options.Stage">Stage</a></p><div class="fullcomment"><div class="comment cmt"><p>Add default annotations for a <a href="../Stage.html" class="extype" name="firrtl.options.Stage">Stage</a></p><p>This currently only adds a <a href="../TargetDirAnnotation.html" class="extype" name="firrtl.options.TargetDirAnnotation">TargetDirAnnotation</a>. This isn't necessary for a <a href="../package$$StageOptionsView$.html" class="extype" name="firrtl.options.StageOptionsView">StageOptionsView</a>, but downstream
+tools may expect a <a href="../TargetDirAnnotation.html" class="extype" name="firrtl.options.TargetDirAnnotation">TargetDirAnnotation</a> to exist.
+</p></div></div>
+    </li><li name="firrtl.options.phases.Checks" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ChecksextendsPhase"></a><a id="Checks:Checks"></a>
+      <span class="permalink">
+      <a href="../../../firrtl/options/phases/index.html#ChecksextendsPhase" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Phase that validates an AnnotationSeq." href="Checks.html"><span class="name">Checks</span></a><span class="result"> extends <a href="../Phase.html" class="extype" name="firrtl.options.Phase">Phase</a></span>
+      </span>
+      
+      <p class="shortcomment cmt"><a href="../Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> that validates an <a href="../../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a>.</p><div class="fullcomment"><div class="comment cmt"><p><a href="../Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> that validates an <a href="../../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a>. If successful, views of this <a href="../../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a>
+as <a href="../StageOptions.html" class="extype" name="firrtl.options.StageOptions">StageOptions</a> are guaranteed to succeed.
+</p></div></div>
+    </li><li name="firrtl.options.phases.ConvertLegacyAnnotations" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ConvertLegacyAnnotationsextendsPhase"></a><a id="ConvertLegacyAnnotations:ConvertLegacyAnnotations"></a>
+      <span class="permalink">
+      <a href="../../../firrtl/options/phases/index.html#ConvertLegacyAnnotationsextendsPhase" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Convert any LegacyAnnotations to non-legacy variants" href="ConvertLegacyAnnotations.html"><span class="name">ConvertLegacyAnnotations</span></a><span class="result"> extends <a href="../Phase.html" class="extype" name="firrtl.options.Phase">Phase</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Convert any <a href="../../annotations/LegacyAnnotation.html" class="extype" name="firrtl.annotations.LegacyAnnotation">LegacyAnnotation</a>s to non-legacy variants</p>
+    </li><li name="firrtl.options.phases.DeletedWrapper" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DeletedWrapperextendsPhasewithTranslator[firrtl.AnnotationSeq,(firrtl.AnnotationSeq,firrtl.AnnotationSeq)]"></a><a id="DeletedWrapper:DeletedWrapper"></a>
+      <span class="permalink">
+      <a href="../../../firrtl/options/phases/index.html#DeletedWrapperextendsPhasewithTranslator[firrtl.AnnotationSeq,(firrtl.AnnotationSeq,firrtl.AnnotationSeq)]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Wrap a Phase such that any Annotation removed by the wrapped Phase will be added as DeletedAnnotations." href="DeletedWrapper.html"><span class="name">DeletedWrapper</span></a><span class="result"> extends <a href="../Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> with <a href="../Translator.html" class="extype" name="firrtl.options.Translator">Translator</a>[<a href="../../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a>, (<a href="../../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a>, <a href="../../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a>)]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Wrap a <a href="../Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> such that any <a href="../../annotations/Annotation.html" class="extype" name="firrtl.annotations.Annotation">Annotation</a> removed by the
+wrapped <a href="../Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> will be added as <a href="../../annotations/DeletedAnnotation.html" class="extype" name="firrtl.annotations.DeletedAnnotation">DeletedAnnotation</a>s.</p>
+    </li><li name="firrtl.options.phases.GetIncludes" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="GetIncludesextendsPhase"></a><a id="GetIncludes:GetIncludes"></a>
+      <span class="permalink">
+      <a href="../../../firrtl/options/phases/index.html#GetIncludesextendsPhase" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Recursively expand all InputAnnotationFileAnnotations in an AnnotationSeq" href="GetIncludes.html"><span class="name">GetIncludes</span></a><span class="result"> extends <a href="../Phase.html" class="extype" name="firrtl.options.Phase">Phase</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Recursively expand all <a href="../InputAnnotationFileAnnotation.html" class="extype" name="firrtl.options.InputAnnotationFileAnnotation">InputAnnotationFileAnnotation</a>s in an <a href="../../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a></p>
+    </li><li name="firrtl.options.phases.WriteOutputAnnotations" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="WriteOutputAnnotationsextendsPhase"></a><a id="WriteOutputAnnotations:WriteOutputAnnotations"></a>
+      <span class="permalink">
+      <a href="../../../firrtl/options/phases/index.html#WriteOutputAnnotationsextendsPhase" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Phase that writes an AnnotationSeq to a file." href="WriteOutputAnnotations.html"><span class="name">WriteOutputAnnotations</span></a><span class="result"> extends <a href="../Phase.html" class="extype" name="firrtl.options.Phase">Phase</a></span>
+      </span>
+      
+      <p class="shortcomment cmt"><a href="../Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> that writes an <a href="../../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a> to a file.</p><div class="fullcomment"><div class="comment cmt"><p><a href="../Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> that writes an <a href="../../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a> to a file. A file is written if and only if a
+<a href="../StageOptions.html" class="extype" name="firrtl.options.StageOptions">StageOptions</a> view has a non-empty <a href="../StageOptions.html#annotationFileOut:Option[String]" class="extmbr" name="firrtl.options.StageOptions#annotationFileOut">annotationFileOut</a>.
+</p></div></div>
+    </li></ol>
+            </div>
 
         
 
         <div class="values members">
               <h3>Value Members</h3>
               <ol>
-                <li name="firrtl.options.phases.AddDefaults" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="AddDefaults"></a><a id="AddDefaults:AddDefaults"></a>
+                <li name="firrtl.options.phases.DeletedWrapper" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DeletedWrapper"></a><a id="DeletedWrapper:DeletedWrapper"></a>
       <span class="permalink">
-      <a href="../../../firrtl/options/phases/index.html#AddDefaults" title="Permalink">
+      <a href="../../../firrtl/options/phases/index.html#DeletedWrapper" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -209,44 +327,10 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="Add default annotations for a Stage" href="AddDefaults$.html"><span class="name">AddDefaults</span></a><span class="result"> extends <a href="../Phase.html" class="extype" name="firrtl.options.Phase">Phase</a></span>
+        <a title="" href="DeletedWrapper$.html"><span class="name">DeletedWrapper</span></a>
       </span>
       
-      <p class="shortcomment cmt">Add default annotations for a <a href="../Stage.html" class="extype" name="firrtl.options.Stage">Stage</a></p><div class="fullcomment"><div class="comment cmt"><p>Add default annotations for a <a href="../Stage.html" class="extype" name="firrtl.options.Stage">Stage</a></p><p>This currently only adds a <a href="../TargetDirAnnotation.html" class="extype" name="firrtl.options.TargetDirAnnotation">TargetDirAnnotation</a>. This isn't necessary for a <a href="../package$$StageOptionsView$.html" class="extype" name="firrtl.options.StageOptionsView">StageOptionsView</a>, but downstream
-tools may expect a <a href="../TargetDirAnnotation.html" class="extype" name="firrtl.options.TargetDirAnnotation">TargetDirAnnotation</a> to exist.
-</p></div></div>
-    </li><li name="firrtl.options.phases.ConvertLegacyAnnotations" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ConvertLegacyAnnotations"></a><a id="ConvertLegacyAnnotations:ConvertLegacyAnnotations"></a>
-      <span class="permalink">
-      <a href="../../../firrtl/options/phases/index.html#ConvertLegacyAnnotations" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a title="Convert any LegacyAnnotations to non-legacy variants" href="ConvertLegacyAnnotations$.html"><span class="name">ConvertLegacyAnnotations</span></a><span class="result"> extends <a href="../Phase.html" class="extype" name="firrtl.options.Phase">Phase</a></span>
-      </span>
       
-      <p class="shortcomment cmt">Convert any <a href="../../annotations/LegacyAnnotation.html" class="extype" name="firrtl.annotations.LegacyAnnotation">LegacyAnnotation</a>s to non-legacy variants</p>
-    </li><li name="firrtl.options.phases.GetIncludes" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="GetIncludes"></a><a id="GetIncludes:GetIncludes"></a>
-      <span class="permalink">
-      <a href="../../../firrtl/options/phases/index.html#GetIncludes" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a title="Recursively expand all InputAnnotationFileAnnotations in an AnnotationSeq" href="GetIncludes$.html"><span class="name">GetIncludes</span></a><span class="result"> extends <a href="../Phase.html" class="extype" name="firrtl.options.Phase">Phase</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Recursively expand all <a href="../InputAnnotationFileAnnotation.html" class="extype" name="firrtl.options.InputAnnotationFileAnnotation">InputAnnotationFileAnnotation</a>s in an <a href="../../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a></p>
     </li>
               </ol>
             </div>

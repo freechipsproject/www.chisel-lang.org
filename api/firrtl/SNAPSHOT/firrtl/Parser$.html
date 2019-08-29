@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.2-050719-SNAPSHOT - firrtl.Parser</title>
-          <meta name="description" content="firrtl 1.2 - 050719 - SNAPSHOT - firrtl.Parser" />
-          <meta name="keywords" content="firrtl 1.2 050719 SNAPSHOT firrtl.Parser" />
+          <title>firrtl 1.2-081319-SNAPSHOT - firrtl.Parser</title>
+          <meta name="description" content="firrtl 1.2 - 081319 - SNAPSHOT - firrtl.Parser" />
+          <meta name="keywords" content="firrtl 1.2 081319 SNAPSHOT firrtl.Parser" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.2-050719-SNAPSHOT</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.2-081319-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -133,6 +133,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
+    </li><li name="firrtl.checks" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="checks"></a><a id="checks:checks"></a>
+      <span class="permalink">
+      <a href="../firrtl/index.html#checks" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="checks/index.html"><span class="name">checks</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
     </li><li name="firrtl.graph" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="graph"></a><a id="graph:graph"></a>
       <span class="permalink">
@@ -225,10 +241,15 @@
         <span class="kind">package</span>
       </span>
       <span class="symbol">
-        <a title="" href="stage/index.html"><span class="name">stage</span></a>
+        <a title="The stage package provides an implementation of the FIRRTL compiler using the firrtl.options package." href="stage/index.html"><span class="name">stage</span></a>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
+      <p class="shortcomment cmt">The <a href="stage/index.html" class="extype" name="firrtl.stage">stage</a> package provides an implementation of the FIRRTL compiler using the <a href="options/index.html" class="extype" name="firrtl.options">firrtl.options</a> package.</p><div class="fullcomment"><div class="comment cmt"><p>The <a href="stage/index.html" class="extype" name="firrtl.stage">stage</a> package provides an implementation of the FIRRTL compiler using the <a href="options/index.html" class="extype" name="firrtl.options">firrtl.options</a> package. This
+primarily consists of:</p><ul><li><a href="stage/FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a>, the internal and external (command line) interface to the FIRRTL compiler</li><li>A number of <a href="options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a>s that support and compartmentalize the individual operations of
+    <a href="stage/FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a></li><li><a href="stage/FirrtlOptions.html" class="extype" name="firrtl.stage.FirrtlOptions">FirrtlOptions</a>, a class representing options that are necessary to drive the <a href="stage/FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a> and its
+    <a href="options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a>s</li><li><a href="stage/package$$FirrtlOptionsView$.html" class="extype" name="firrtl.stage.FirrtlOptionsView">FirrtlOptionsView</a>, a utility that constructs an <a href="options/OptionsView.html" class="extype" name="firrtl.options.OptionsView">OptionsView</a> of <a href="stage/FirrtlOptions.html" class="extype" name="firrtl.stage.FirrtlOptions">FirrtlOptions</a>
+    from an <a href="AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a></li><li><a href="stage/FirrtlCli.html" class="extype" name="firrtl.stage.FirrtlCli">FirrtlCli</a>, the command line options that the <a href="stage/FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a> supports</li><li><a href="stage/FirrtlStageUtils$.html" class="extype" name="firrtl.stage.FirrtlStageUtils">FirrtlStageUtils</a> containing miscellaneous utilities for <a href="stage/index.html" class="extype" name="firrtl.stage">stage</a>
+</li></ul></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
     </li><li name="firrtl.transforms" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="transforms"></a><a id="transforms:transforms"></a>
       <span class="permalink">
@@ -362,7 +383,7 @@
                         <a class="object" href="Dshlw$.html" title=""></a>
                         <a href="Dshlw$.html" title="">Dshlw</a>
                       </li><li class="current-entities indented1">
-                        <span class="separator"></span>
+                        <a class="object" href="EmitAllModulesAnnotation$.html" title=""></a>
                         <a class="class" href="EmitAllModulesAnnotation.html" title=""></a>
                         <a href="EmitAllModulesAnnotation.html" title="">EmitAllModulesAnnotation</a>
                       </li><li class="current-entities indented1">
@@ -370,7 +391,7 @@
                         <a class="trait" href="EmitAnnotation.html" title=""></a>
                         <a href="EmitAnnotation.html" title="">EmitAnnotation</a>
                       </li><li class="current-entities indented1">
-                        <span class="separator"></span>
+                        <a class="object" href="EmitCircuitAnnotation$.html" title=""></a>
                         <a class="class" href="EmitCircuitAnnotation.html" title=""></a>
                         <a href="EmitCircuitAnnotation.html" title="">EmitCircuitAnnotation</a>
                       </li><li class="current-entities indented1">
@@ -735,6 +756,10 @@
                         <a href="SystemVerilogCompiler.html" title="Currently just an alias for the VerilogCompiler">SystemVerilogCompiler</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
+                        <a class="class" href="SystemVerilogEmitter.html" title=""></a>
+                        <a href="SystemVerilogEmitter.html" title="">SystemVerilogEmitter</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
                         <a class="class" href="Transform.html" title="The basic unit of operating on a Firrtl AST"></a>
                         <a href="Transform.html" title="The basic unit of operating on a Firrtl AST">Transform</a>
                       </li><li class="current-entities indented1">
@@ -745,6 +770,10 @@
                         <span class="separator"></span>
                         <a class="object" href="UnknownForm$.html" title="Unknown Form"></a>
                         <a href="UnknownForm$.html" title="Unknown Form">UnknownForm</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="object" href="UnknownKind$.html" title=""></a>
+                        <a href="UnknownKind$.html" title="">UnknownKind</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="object" href="Utils$.html" title=""></a>
@@ -886,17 +915,7 @@
             Linear Supertypes
           </span>
           <div class="superTypes hiddenContent"><span class="extype" name="com.typesafe.scalalogging.LazyLogging">LazyLogging</span>, <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
-        </div><div class="toggleContainer block diagram-container" id="content-diagram-container">
-                <span class="toggle diagram-link">
-                  Content Hierarchy
-                </span>
-                <div class="diagram" id="content-diagram"><svg class="package-diagram" id="graph1" viewBox="0.00 0.00 394.00 94.00" height="94pt" width="394pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 90)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-90 390,-90 390,4 -4,4" stroke="transparent" fill="white"></polygon><!-- node0 --><g class="node class" id="graph1_0"><g id="a_class|graph1_0"><a xlink:title="firrtl.Parser.AppendInfo" xlink:href="Parser$$AppendInfo.html#inheritance-diagram"><path d="M82.67,-25C82.67,-25 8.33,-25 8.33,-25 4.17,-25 0,-20.83 0,-16.67 0,-16.67 0,-8.33 0,-8.33 0,-4.17 4.17,0 8.33,0 8.33,0 82.67,0 82.67,0 86.83,0 91,-4.17 91,-8.33 91,-8.33 91,-16.67 91,-16.67 91,-20.83 86.83,-25 82.67,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../lib/class_diagram.png" y="-19.5" x="10.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="31.5" text-anchor="start">AppendInfo</text></a></g></g><!-- node1 --><g class="node class" id="graph1_1"><g id="a_class|graph1_1"><a xlink:title="firrtl.Parser.GenInfo" xlink:href="Parser$$GenInfo.html#inheritance-diagram"><path d="M177.67,-25C177.67,-25 117.33,-25 117.33,-25 113.17,-25 109,-20.83 109,-16.67 109,-16.67 109,-8.33 109,-8.33 109,-4.17 113.17,0 117.33,0 117.33,0 177.67,0 177.67,0 181.83,0 186,-4.17 186,-8.33 186,-8.33 186,-16.67 186,-16.67 186,-20.83 181.83,-25 177.67,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../lib/class_diagram.png" y="-19.5" x="119.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="140.5" text-anchor="start">GenInfo</text></a></g></g><!-- node2 --><g class="node object" id="graph1_2"><g id="a_object|graph1_2"><a xlink:title="firrtl.Parser.UseInfo" xlink:href="Parser$$UseInfo$.html#inheritance-diagram"><path d="M272.17,-25C272.17,-25 212.83,-25 212.83,-25 208.67,-25 204.5,-20.83 204.5,-16.67 204.5,-16.67 204.5,-8.33 204.5,-8.33 204.5,-4.17 208.67,0 212.83,0 212.83,0 272.17,0 272.17,0 276.33,0 280.5,-4.17 280.5,-8.33 280.5,-8.33 280.5,-16.67 280.5,-16.67 280.5,-20.83 276.33,-25 272.17,-25" stroke="#103a51" fill="#103a51"></path><image xlink:href="../lib/object_diagram.png" y="-19.5" x="214.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="235.5" text-anchor="start">UseInfo</text></a></g></g><!-- node3 --><g class="node object" id="graph1_3"><g id="a_object|graph1_3"><a xlink:title="firrtl.Parser.IgnoreInfo" xlink:href="Parser$$IgnoreInfo$.html#inheritance-diagram"><path d="M377.67,-25C377.67,-25 307.33,-25 307.33,-25 303.17,-25 299,-20.83 299,-16.67 299,-16.67 299,-8.33 299,-8.33 299,-4.17 303.17,0 307.33,0 307.33,0 377.67,0 377.67,0 381.83,0 386,-4.17 386,-8.33 386,-8.33 386,-16.67 386,-16.67 386,-20.83 381.83,-25 377.67,-25" stroke="#103a51" fill="#103a51"></path><image xlink:href="../lib/object_diagram.png" y="-19.5" x="309.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="330.5" text-anchor="start">IgnoreInfo</text></a></g></g><!-- node4 --><g class="node class" id="graph1_4"><g id="a_class|graph1_4"><a xlink:title="firrtl.Parser.InfoMode" xlink:href="Parser$$InfoMode.html#inheritance-diagram"><path d="M227.17,-86C227.17,-86 161.83,-86 161.83,-86 157.67,-86 153.5,-81.83 153.5,-77.67 153.5,-77.67 153.5,-69.33 153.5,-69.33 153.5,-65.17 157.67,-61 161.83,-61 161.83,-61 227.17,-61 227.17,-61 231.33,-61 235.5,-65.17 235.5,-69.33 235.5,-69.33 235.5,-77.67 235.5,-77.67 235.5,-81.83 231.33,-86 227.17,-86" stroke="#418565" fill="#418565"></path><image xlink:href="../lib/class_diagram.png" y="-80.5" x="163.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="184.5" text-anchor="start">InfoMode</text></a></g></g><!-- node4&#45;&gt;node0 --><g class="edge inheritance" id="graph1_4_0"><g id="a_inheritance|graph1_4_0"><a xlink:title="AppendInfo is a subtype of InfoMode"><path d="M158.75,-58.34C133.05,-48.17 98.84,-34.62 74.76,-25.09" stroke="#d4d4d4" fill="none"></path><polygon points="158.01,-60.68 165.42,-60.98 159.81,-56.13 158.01,-60.68" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node4&#45;&gt;node1 --><g class="edge inheritance" id="graph1_4_1"><g id="a_inheritance|graph1_4_1"><a xlink:title="GenInfo is a subtype of InfoMode"><path d="M180.67,-55.14C172.97,-45.47 163.59,-33.69 156.77,-25.13" stroke="#d4d4d4" fill="none"></path><polygon points="178.94,-56.89 185.21,-60.84 182.77,-53.84 178.94,-56.89" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node4&#45;&gt;node2 --><g class="edge inheritance" id="graph1_4_2"><g id="a_inheritance|graph1_4_2"><a xlink:title="UseInfo is a subtype of InfoMode"><path d="M208.62,-55.14C216.49,-45.47 226.07,-33.69 233.04,-25.13" stroke="#d4d4d4" fill="none"></path><polygon points="206.5,-53.87 203.98,-60.84 210.3,-56.96 206.5,-53.87" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node4&#45;&gt;node3 --><g class="edge inheritance" id="graph1_4_3"><g id="a_inheritance|graph1_4_3"><a xlink:title="IgnoreInfo is a subtype of InfoMode"><path d="M230.01,-58.34C255.54,-48.17 289.52,-34.62 313.43,-25.09" stroke="#d4d4d4" fill="none"></path><polygon points="228.98,-56.12 223.39,-60.98 230.8,-60.67 228.98,-56.12" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
-                <div id="diagram-controls" class="hiddenContent">
-                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
-                </div>
-              </div></div>
+        </div></div>
         
 
       <div id="mbrsel">

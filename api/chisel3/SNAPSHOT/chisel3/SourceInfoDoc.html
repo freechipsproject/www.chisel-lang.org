@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.2-050719-SNAPSHOT - chisel3.SourceInfoDoc</title>
-          <meta name="description" content="chisel3 3.2 - 050719 - SNAPSHOT - chisel3.SourceInfoDoc" />
-          <meta name="keywords" content="chisel3 3.2 050719 SNAPSHOT chisel3.SourceInfoDoc" />
+          <title>chisel3 3.2-081319-SNAPSHOT - chisel3.SourceInfoDoc</title>
+          <meta name="description" content="chisel3 3.2 - 081319 - SNAPSHOT - chisel3.SourceInfoDoc" />
+          <meta name="keywords" content="chisel3 3.2 081319 SNAPSHOT chisel3.SourceInfoDoc" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.2-050719-SNAPSHOT</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.2-081319-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -69,9 +69,9 @@
       </span>
       
       <p class="shortcomment cmt">This is the documentation for Chisel.</p><div class="fullcomment"><div class="comment cmt"><p>This is the documentation for Chisel.</p><h4> Package structure </h4><p>The <a href="index.html" class="extype" name="chisel3">chisel3</a> package presents the public API of Chisel.
-It contains the concrete core types <a href="core/UInt.html" class="extype" name="chisel3.core.UInt"><code>UInt</code></a>, <a href="core/SInt.html" class="extype" name="chisel3.core.SInt"><code>SInt</code></a>, <a href="core/Bool.html" class="extype" name="chisel3.core.Bool"><code>Bool</code></a>, <a href="core/FixedPoint.html" class="extype" name="chisel3.core.FixedPoint"><code>FixedPoint</code></a>, <a href="core/Clock.html" class="extype" name="chisel3.core.Clock"><code>Clock</code></a>, and <a href="core/Reg$.html" class="extype" name="chisel3.core.Reg"><code>Reg</code></a>,
-the abstract types <a href="core/Bits.html" class="extype" name="chisel3.core.Bits"><code>Bits</code></a>, <a href="core/Aggregate.html" class="extype" name="chisel3.core.Aggregate"><code>Aggregate</code></a>, and <a href="core/Data.html" class="extype" name="chisel3.core.Data"><code>Data</code></a>,
-and the aggregate types <a href="core/Bundle.html" class="extype" name="chisel3.core.Bundle"><code>Bundle</code></a> and <a href="core/Vec.html" class="extype" name="chisel3.core.Vec"><code>Vec</code></a>.</p><p>The <a href="../Chisel/index.html" class="extype" name="Chisel">Chisel</a> package is a compatibility layer that attempts to provide chisel2 compatibility in chisel3.</p><p>Utility objects and methods are found in the <a href="util/index.html" class="extype" name="chisel3.util"><code>util</code></a> package.</p><p>The <a href="testers/index.html" class="extype" name="chisel3.testers"><code>testers</code></a> package defines the basic interface for chisel testers.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+It contains the concrete core types <a href="UInt.html" class="extype" name="chisel3.UInt"><code>UInt</code></a>, <a href="SInt.html" class="extype" name="chisel3.SInt"><code>SInt</code></a>, <a href="Bool.html" class="extype" name="chisel3.Bool"><code>Bool</code></a>, <a href="experimental/FixedPoint.html" class="extype" name="chisel3.experimental.FixedPoint"><code>FixedPoint</code></a>, <a href="Clock.html" class="extype" name="chisel3.Clock"><code>Clock</code></a>, and <a href="Reg$.html" class="extype" name="chisel3.Reg"><code>Reg</code></a>,
+the abstract types <a href="Bits.html" class="extype" name="chisel3.Bits"><code>Bits</code></a>, <a href="Aggregate.html" class="extype" name="chisel3.Aggregate"><code>Aggregate</code></a>, and <a href="Data.html" class="extype" name="chisel3.Data"><code>Data</code></a>,
+and the aggregate types <a href="Bundle.html" class="extype" name="chisel3.Bundle"><code>Bundle</code></a> and <a href="Vec.html" class="extype" name="chisel3.Vec"><code>Vec</code></a>.</p><p>The <a href="../Chisel/index.html" class="extype" name="Chisel">Chisel</a> package is a compatibility layer that attempts to provide chisel2 compatibility in chisel3.</p><p>Utility objects and methods are found in the <a href="util/index.html" class="extype" name="chisel3.util"><code>util</code></a> package.</p><p>The <a href="testers/index.html" class="extype" name="chisel3.testers"><code>testers</code></a> package defines the basic interface for chisel testers.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="_root_">root</a></dd></dl></div>
     </li><li name="_root_.chisel3" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="chisel3"></a><a id="chisel3:chisel3"></a>
       <span class="permalink">
@@ -84,12 +84,27 @@ and the aggregate types <a href="core/Bundle.html" class="extype" name="chisel3.
         <span class="kind">package</span>
       </span>
       <span class="symbol">
-        <a title="The chisel3 package contains the chisel3 API." href="index.html"><span class="name">chisel3</span></a>
+        <a title="This package contains the main chisel3 API." href="index.html"><span class="name">chisel3</span></a>
       </span>
       
-      <p class="shortcomment cmt">The chisel3 package contains the chisel3 API.</p><div class="fullcomment"><div class="comment cmt"><p>The chisel3 package contains the chisel3 API.
-It maps core components into the public chisel3 namespace.
+      <p class="shortcomment cmt">This package contains the main chisel3 API.</p><div class="fullcomment"><div class="comment cmt"><p>This package contains the main chisel3 API.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="chisel3.aop" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="aop"></a><a id="aop:aop"></a>
+      <span class="permalink">
+      <a href="../chisel3/index.html#aop" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="aop/index.html"><span class="name">aop</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="chisel3">chisel3</a></dd></dl></div>
     </li><li name="chisel3.core" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="core"></a><a id="core:core"></a>
       <span class="permalink">
@@ -102,7 +117,43 @@ It maps core components into the public chisel3 namespace.
         <span class="kind">package</span>
       </span>
       <span class="symbol">
-        <a title="" href="core/index.html"><span class="name">core</span></a>
+        <a title="These definitions exist to deal with those clients that relied on chisel3.core." href="core/index.html"><span class="name">core</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">These definitions exist to deal with those clients that relied on chisel3.core.</p><div class="fullcomment"><div class="comment cmt"><p>These definitions exist to deal with those clients that relied on chisel3.core.
+They are deprecated and will be removed in the future.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="chisel3">chisel3</a></dd></dl></div>
+    </li><li name="chisel3.experimental" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="experimental"></a><a id="experimental:experimental"></a>
+      <span class="permalink">
+      <a href="../chisel3/index.html#experimental" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Package for experimental features, which may have their API changed, be removed, etc." href="experimental/index.html"><span class="name">experimental</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Package for experimental features, which may have their API changed, be removed, etc.</p><div class="fullcomment"><div class="comment cmt"><p>Package for experimental features, which may have their API changed, be removed, etc.</p><p>Because its contents won't necessarily have the same level of stability and support as
+non-experimental, you must explicitly import this package to use its contents.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="chisel3">chisel3</a></dd></dl></div>
+    </li><li name="chisel3.stage" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="stage"></a><a id="stage:stage"></a>
+      <span class="permalink">
+      <a href="../chisel3/index.html#stage" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="stage/index.html"><span class="name">stage</span></a>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="chisel3">chisel3</a></dd></dl></div>
@@ -143,29 +194,77 @@ functions
 functions
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="chisel3">chisel3</a></dd></dl></div>
     </li><li class="current-entities indented1">
-                        <span class="separator"></span>
-                        <a class="class" href="package$$AddDirectionToData.html" title=""></a>
-                        <a href="package$$AddDirectionToData.html" title="">AddDirectionToData</a>
+                        <a class="object" href="ActualDirection$.html" title=""></a>
+                        <a class="class" href="ActualDirection.html" title="Resolved directions for both leaf and container nodes, only visible after a node is bound (since higher-level specifications like Input and Output can override directions)."></a>
+                        <a href="ActualDirection.html" title="Resolved directions for both leaf and container nodes, only visible after a node is bound (since higher-level specifications like Input and Output can override directions).">ActualDirection</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="trait" href="BackendCompilationUtilities.html" title=""></a>
-                        <a href="BackendCompilationUtilities.html" title="">BackendCompilationUtilities</a>
+                        <a class="class" href="Aggregate.html" title="An abstract class for data types that solely consist of (are an aggregate of) other Data objects."></a>
+                        <a href="Aggregate.html" title="An abstract class for data types that solely consist of (are an aggregate of) other Data objects.">Aggregate</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="AliasedAggregateFieldException.html" title=""></a>
+                        <a href="AliasedAggregateFieldException.html" title="">AliasedAggregateFieldException</a>
+                      </li><li class="current-entities indented1">
+                        <a class="object" href="AsyncReset$.html" title=""></a>
+                        <a class="class" href="AsyncReset.html" title="Data type representing asynchronous reset signals"></a>
+                        <a href="AsyncReset.html" title="Data type representing asynchronous reset signals">AsyncReset</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="AutoClonetypeException.html" title=""></a>
+                        <a href="AutoClonetypeException.html" title="">AutoClonetypeException</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="trait" href="BackendCompilationUtilities.html" title="The Driver provides methods to invoke the chisel3 compiler and the firrtl compiler."></a>
+                        <a href="BackendCompilationUtilities.html" title="The Driver provides methods to invoke the chisel3 compiler and the firrtl compiler.">BackendCompilationUtilities</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$BiConnectException.html" title=""></a>
+                        <a href="package$$BiConnectException.html" title="">BiConnectException</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="Binary.html" title="Format bits as Binary"></a>
+                        <a href="Binary.html" title="Format bits as Binary">Binary</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$BindingException.html" title=""></a>
+                        <a href="package$$BindingException.html" title="">BindingException</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="object" href="package$$Bits$.html" title=""></a>
                         <a href="package$$Bits$.html" title="">Bits</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
+                        <a class="class" href="Bits.html" title="A data type for values represented by a single bitvector."></a>
+                        <a href="Bits.html" title="A data type for values represented by a single bitvector.">Bits</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="BlackBox.html" title="Defines a black box, which is a module that can be referenced from within Chisel, but is not defined in the emitted Verilog."></a>
+                        <a href="BlackBox.html" title="Defines a black box, which is a module that can be referenced from within Chisel, but is not defined in the emitted Verilog.">BlackBox</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
                         <a class="object" href="package$$Bool$.html" title=""></a>
                         <a href="package$$Bool$.html" title="">Bool</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="trait" href="package$$BoolFactory.html" title="This contains literal constructor factory methods that are deprecated as of Chisel3."></a>
-                        <a href="package$$BoolFactory.html" title="This contains literal constructor factory methods that are deprecated as of Chisel3.">BoolFactory</a>
+                        <a class="class" href="Bool.html" title="A data type for booleans, defined as a single bit indicating true or false."></a>
+                        <a href="Bool.html" title="A data type for booleans, defined as a single bit indicating true or false.">Bool</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="trait" href="BoolFactory.html" title=""></a>
+                        <a href="BoolFactory.html" title="">BoolFactory</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="object" href="BuildInfo$.html" title="This object was generated by sbt-buildinfo."></a>
                         <a href="BuildInfo$.html" title="This object was generated by sbt-buildinfo.">BuildInfo</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="Bundle.html" title="Base class for data types defined as a bundle of other data types."></a>
+                        <a href="Bundle.html" title="Base class for data types defined as a bundle of other data types.">Bundle</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="Character.html" title="Format bits as Character"></a>
+                        <a href="Character.html" title="Format bits as Character">Character</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="class" href="ChiselExecutionFailure.html" title="Getting one of these indicates failure of some sort."></a>
@@ -183,65 +282,241 @@ functions
                         <a class="class" href="ChiselExecutionSuccess.html" title=""></a>
                         <a href="ChiselExecutionSuccess.html" title="">ChiselExecutionSuccess</a>
                       </li><li class="current-entities indented1">
+                        <a class="object" href="Clock$.html" title=""></a>
+                        <a class="class" href="Clock.html" title=""></a>
+                        <a href="Clock.html" title="">Clock</a>
+                      </li><li class="current-entities indented1">
+                        <a class="object" href="CompileOptions$.html" title=""></a>
+                        <a class="trait" href="CompileOptions.html" title=""></a>
+                        <a href="CompileOptions.html" title="">CompileOptions</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="Data.html" title="This forms the root of the type system for wire data types."></a>
+                        <a href="Data.html" title="This forms the root of the type system for wire data types.">Data</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="Decimal.html" title="Format bits as Decimal"></a>
+                        <a href="Decimal.html" title="Format bits as Decimal">Decimal</a>
+                      </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="object" href="Driver$.html" title=""></a>
                         <a href="Driver$.html" title="">Driver</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="Element.html" title="Element is a leaf data type: it cannot contain other Data objects."></a>
+                        <a href="Element.html" title="Element is a leaf data type: it cannot contain other Data objects.">Element</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$ExpectedChiselTypeException.html" title="A function expected a Chisel type but got a hardware object"></a>
+                        <a href="package$$ExpectedChiselTypeException.html" title="A function expected a Chisel type but got a hardware object">ExpectedChiselTypeException</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$ExpectedHardwareException.html" title="A function expected a hardware object but got a Chisel type"></a>
+                        <a href="package$$ExpectedHardwareException.html" title="A function expected a hardware object but got a Chisel type">ExpectedHardwareException</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="object" href="ExplicitCompileOptions$.html" title=""></a>
+                        <a href="ExplicitCompileOptions$.html" title="">ExplicitCompileOptions</a>
+                      </li><li class="current-entities indented1">
+                        <a class="object" href="FirrtlFormat$.html" title=""></a>
+                        <a class="class" href="FirrtlFormat.html" title="Superclass for Firrtl format specifiers for Bits"></a>
+                        <a href="FirrtlFormat.html" title="Superclass for Firrtl format specifiers for Bits">FirrtlFormat</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="object" href="Flipped$.html" title=""></a>
+                        <a href="Flipped$.html" title="">Flipped</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="FullName.html" title="Put full name within parent namespace (eg."></a>
+                        <a href="FullName.html" title="Put full name within parent namespace (eg.">FullName</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="trait" href="HasChiselExecutionOptions.html" title=""></a>
                         <a href="HasChiselExecutionOptions.html" title="">HasChiselExecutionOptions</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
+                        <a class="class" href="Hexadecimal.html" title="Format bits as Hexidecimal"></a>
+                        <a href="Hexadecimal.html" title="Format bits as Hexidecimal">Hexadecimal</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="trait" href="IgnoreSeqInBundle.html" title="Mix-in for Bundles that have arbitrary Seqs of Chisel types that aren't involved in hardware construction."></a>
+                        <a href="IgnoreSeqInBundle.html" title="Mix-in for Bundles that have arbitrary Seqs of Chisel types that aren't involved in hardware construction.">IgnoreSeqInBundle</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="object" href="Input$.html" title="Input, Output, and Flipped are used to define the directions of Module IOs."></a>
+                        <a href="Input$.html" title="Input, Output, and Flipped are used to define the directions of Module IOs.">Input</a>
+                      </li><li class="current-entities indented1">
+                        <a class="object" href="Mem$.html" title=""></a>
+                        <a class="class" href="Mem.html" title="A combinational/asynchronous-read, sequential/synchronous-write memory."></a>
+                        <a href="Mem.html" title="A combinational/asynchronous-read, sequential/synchronous-write memory.">Mem</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="MemBase.html" title=""></a>
+                        <a href="MemBase.html" title="">MemBase</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$MixedDirectionAggregateException.html" title="An aggregate had a mix of specified and unspecified directionality children"></a>
+                        <a href="package$$MixedDirectionAggregateException.html" title="An aggregate had a mix of specified and unspecified directionality children">MixedDirectionAggregateException</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="object" href="Module$.html" title=""></a>
+                        <a href="Module$.html" title="">Module</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="ModuleAspect.html" title="Used by Chisel Aspects to inject Chisel code into modules, after they have been elaborated."></a>
+                        <a href="ModuleAspect.html" title="Used by Chisel Aspects to inject Chisel code into modules, after they have been elaborated.">ModuleAspect</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$MonoConnectException.html" title=""></a>
+                        <a href="package$$MonoConnectException.html" title="">MonoConnectException</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="object" href="Mux$.html" title=""></a>
+                        <a href="Mux$.html" title="">Mux</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="Name.html" title="Put innermost name (eg."></a>
+                        <a href="Name.html" title="Put innermost name (eg.">Name</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="trait" href="Num.html" title="Abstract trait defining operations available on numeric-like hardware data types."></a>
+                        <a href="Num.html" title="Abstract trait defining operations available on numeric-like hardware data types.">Num</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="object" href="Output$.html" title=""></a>
+                        <a href="Output$.html" title="">Output</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="PString.html" title="Wrapper for printing Scala Strings"></a>
+                        <a href="PString.html" title="Wrapper for printing Scala Strings">PString</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="object" href="Percent$.html" title="Represents escaped percents"></a>
+                        <a href="Percent$.html" title="Represents escaped percents">Percent</a>
+                      </li><li class="current-entities indented1">
+                        <a class="object" href="Printable$.html" title=""></a>
+                        <a class="class" href="Printable.html" title="Superclass of things that can be printed in the resulting circuit"></a>
+                        <a href="Printable.html" title="Superclass of things that can be printed in the resulting circuit">Printable</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
                         <a class="class" href="package$$PrintableHelper.html" title="Implicit for custom Printable string interpolator"></a>
                         <a href="package$$PrintableHelper.html" title="Implicit for custom Printable string interpolator">PrintableHelper</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="object" href="package$$Reg$.html" title=""></a>
-                        <a href="package$$Reg$.html" title="">Reg</a>
+                        <a class="class" href="Printables.html" title=""></a>
+                        <a href="Printables.html" title="">Printables</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$RebindingException.html" title="Attempted to re-bind an already bound (directionality or hardware) object"></a>
+                        <a href="package$$RebindingException.html" title="Attempted to re-bind an already bound (directionality or hardware) object">RebindingException</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="Record.html" title="Base class for Aggregates based on key values pairs of String and Data"></a>
+                        <a href="Record.html" title="Base class for Aggregates based on key values pairs of String and Data">Record</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="object" href="Reg$.html" title="Utility for constructing hardware registers"></a>
+                        <a href="Reg$.html" title="Utility for constructing hardware registers">Reg</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="object" href="RegInit$.html" title="Utility for constructing hardware registers with an initialization value."></a>
+                        <a href="RegInit$.html" title="Utility for constructing hardware registers with an initialization value.">RegInit</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="object" href="RegNext$.html" title=""></a>
+                        <a href="RegNext$.html" title="">RegNext</a>
+                      </li><li class="current-entities indented1">
+                        <a class="object" href="Reset$.html" title=""></a>
+                        <a class="trait" href="Reset.html" title=""></a>
+                        <a href="Reset.html" title="">Reset</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="ResetType.html" title="&quot;Abstract&quot; Reset Type inferred in FIRRTL to either AsyncReset or Bool"></a>
+                        <a href="ResetType.html" title="&quot;Abstract&quot; Reset Type inferred in FIRRTL to either AsyncReset or Bool">ResetType</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="object" href="package$$SInt$.html" title=""></a>
                         <a href="package$$SInt$.html" title="">SInt</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="trait" href="package$$SIntFactory.html" title="This contains literal constructor factory methods that are deprecated as of Chisel3."></a>
-                        <a href="package$$SIntFactory.html" title="This contains literal constructor factory methods that are deprecated as of Chisel3.">SIntFactory</a>
+                        <a class="class" href="SInt.html" title="A data type for signed integers, represented as a binary bitvector."></a>
+                        <a href="SInt.html" title="A data type for signed integers, represented as a binary bitvector.">SInt</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="trait" href="SIntFactory.html" title=""></a>
+                        <a href="SIntFactory.html" title="">SIntFactory</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="trait" href="" title="Provides ScalaDoc information for &quot;hidden&quot; do_* methods"></a>
                         <a href="" title="Provides ScalaDoc information for &quot;hidden&quot; do_* methods">SourceInfoDoc</a>
+                      </li><li class="current-entities indented1">
+                        <a class="object" href="SpecifiedDirection$.html" title=""></a>
+                        <a class="class" href="SpecifiedDirection.html" title="User-specified directions."></a>
+                        <a href="SpecifiedDirection.html" title="User-specified directions.">SpecifiedDirection</a>
+                      </li><li class="current-entities indented1">
+                        <a class="object" href="SyncReadMem$.html" title=""></a>
+                        <a class="class" href="SyncReadMem.html" title="A sequential/synchronous-read, sequential/synchronous-write memory."></a>
+                        <a href="SyncReadMem.html" title="A sequential/synchronous-read, sequential/synchronous-write memory.">SyncReadMem</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="object" href="package$$UInt$.html" title=""></a>
                         <a href="package$$UInt$.html" title="">UInt</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="trait" href="package$$UIntFactory.html" title="This contains literal constructor factory methods that are deprecated as of Chisel3."></a>
-                        <a href="package$$UIntFactory.html" title="This contains literal constructor factory methods that are deprecated as of Chisel3.">UIntFactory</a>
+                        <a class="class" href="UInt.html" title="A data type for unsigned integers, represented as a binary bitvector."></a>
+                        <a href="UInt.html" title="A data type for unsigned integers, represented as a binary bitvector.">UInt</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="trait" href="UIntFactory.html" title=""></a>
+                        <a href="UIntFactory.html" title="">UIntFactory</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="object" href="package$$Vec$.html" title=""></a>
                         <a href="package$$Vec$.html" title="">Vec</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="object" href="package$$Wire$.html" title=""></a>
-                        <a href="package$$Wire$.html" title="">Wire</a>
+                        <a class="class" href="Vec.html" title="A vector (array) of Data elements."></a>
+                        <a href="Vec.html" title="A vector (array) of Data elements.">Vec</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="class" href="package$$cloneTypeable.html" title=""></a>
-                        <a href="package$$cloneTypeable.html" title="">cloneTypeable</a>
+                        <a class="trait" href="VecFactory.html" title=""></a>
+                        <a href="VecFactory.html" title="">VecFactory</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="object" href="package$$experimental$.html" title="Package for experimental features, which may have their API changed, be removed, etc."></a>
-                        <a href="package$$experimental$.html" title="Package for experimental features, which may have their API changed, be removed, etc.">experimental</a>
+                        <a class="object" href="VecInit$.html" title=""></a>
+                        <a href="VecInit$.html" title="">VecInit</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="class" href="package$$fromBigIntToLiteral.html" title=""></a>
-                        <a href="package$$fromBigIntToLiteral.html" title="">fromBigIntToLiteral</a>
+                        <a class="trait" href="VecLike.html" title="A trait for Vecs containing common hardware generators for collection operations."></a>
+                        <a href="VecLike.html" title="A trait for Vecs containing common hardware generators for collection operations.">VecLike</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="class" href="package$$fromBitsable.html" title=""></a>
-                        <a href="package$$fromBitsable.html" title="">fromBitsable</a>
+                        <a class="class" href="WhenContext.html" title="A WhenContext may represent a when, and elsewhen, or an otherwise."></a>
+                        <a href="WhenContext.html" title="A WhenContext may represent a when, and elsewhen, or an otherwise.">WhenContext</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="object" href="Wire$.html" title="Utility for constructing hardware wires"></a>
+                        <a href="Wire$.html" title="Utility for constructing hardware wires">Wire</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="object" href="WireDefault$.html" title="Utility for constructing hardware wires with a default connection"></a>
+                        <a href="WireDefault$.html" title="Utility for constructing hardware wires with a default connection">WireDefault</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="trait" href="WireFactory.html" title=""></a>
+                        <a href="WireFactory.html" title="">WireFactory</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="object" href="assert$.html" title=""></a>
+                        <a href="assert$.html" title="">assert</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="object" href="chiselTypeOf$.html" title="Returns the chisel type of a hardware object, allowing other hardware to be constructed from it."></a>
+                        <a href="chiselTypeOf$.html" title="Returns the chisel type of a hardware object, allowing other hardware to be constructed from it.">chiselTypeOf</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$fromBigIntToLiteral.html" title="These implicit classes allow one to convert scala.Int|scala.BigInt to Chisel.UInt|Chisel.SInt by calling .asUInt|.asSInt on them, respectively."></a>
+                        <a href="package$$fromBigIntToLiteral.html" title="These implicit classes allow one to convert scala.Int|scala.BigInt to Chisel.UInt|Chisel.SInt by calling .asUInt|.asSInt on them, respectively.">fromBigIntToLiteral</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="class" href="package$$fromBooleanToLiteral.html" title=""></a>
@@ -256,24 +531,44 @@ functions
                         <a href="package$$fromIntToBinaryPoint.html" title="">fromIntToBinaryPoint</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
+                        <a class="class" href="package$$fromIntToLiteral.html" title=""></a>
+                        <a href="package$$fromIntToLiteral.html" title="">fromIntToLiteral</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
                         <a class="class" href="package$$fromIntToWidth.html" title=""></a>
                         <a href="package$$fromIntToWidth.html" title="">fromIntToWidth</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$fromLongToLiteral.html" title=""></a>
+                        <a href="package$$fromLongToLiteral.html" title="">fromLongToLiteral</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="class" href="package$$fromStringToLiteral.html" title=""></a>
                         <a href="package$$fromStringToLiteral.html" title="">fromStringToLiteral</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="class" href="package$$fromUIntToBitPatComparable.html" title=""></a>
-                        <a href="package$$fromUIntToBitPatComparable.html" title="">fromUIntToBitPatComparable</a>
+                        <a class="object" href="printf$.html" title="Prints a message in simulation"></a>
+                        <a href="printf$.html" title="Prints a message in simulation">printf</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="class" href="package$$fromtIntToLiteral.html" title=""></a>
-                        <a href="package$$fromtIntToLiteral.html" title="">fromtIntToLiteral</a>
+                        <a class="object" href="stop$.html" title=""></a>
+                        <a href="stop$.html" title="">stop</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="class" href="package$$fromtLongToLiteral.html" title=""></a>
-                        <a href="package$$fromtLongToLiteral.html" title="">fromtLongToLiteral</a>
+                        <a class="object" href="when$.html" title=""></a>
+                        <a href="when$.html" title="">when</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="object" href="withClock$.html" title=""></a>
+                        <a href="withClock$.html" title="">withClock</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="object" href="withClockAndReset$.html" title=""></a>
+                        <a href="withClockAndReset$.html" title="">withClockAndReset</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="object" href="withReset$.html" title=""></a>
+                        <a href="withReset$.html" title="">withReset</a>
                       </li>
               </ul>
             </div>
@@ -304,7 +599,7 @@ functions
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Provides ScalaDoc information for &quot;hidden&quot; <code>do_*</code> methods</p><p>Mix this into classes/objects that have <code>do_*</code> methods to get access to the shared <code>SourceInfoTransformMacro</code>
 ScalaDoc group and the lengthy <code>groupdesc</code> below.
-</p></div><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/master//coreMacros/src/main/scala/chisel3/SourceInfoDoc.scala" target="_blank">SourceInfoDoc.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -313,18 +608,8 @@ ScalaDoc group and the lengthy <code>groupdesc</code> below.
             <span class="toggle">
               Known Subclasses
             </span>
-            <div class="subClasses hiddenContent"><a href="../Chisel/package$$Vec$.html" class="extype" name="Chisel.Vec">Vec</a>, <a href="package$$Vec$.html" class="extype" name="chisel3.Vec">Vec</a>, <a href="core/Aggregate.html" class="extype" name="chisel3.core.Aggregate">Aggregate</a>, <a href="core/Analog.html" class="extype" name="chisel3.core.Analog">Analog</a>, <a href="core/Bits.html" class="extype" name="chisel3.core.Bits">Bits</a>, <a href="core/Bool.html" class="extype" name="chisel3.core.Bool">Bool</a>, <a href="core/Bundle.html" class="extype" name="chisel3.core.Bundle">Bundle</a>, <a href="core/Clock.html" class="extype" name="chisel3.core.Clock">Clock</a>, <a href="core/Data.html" class="extype" name="chisel3.core.Data">Data</a>, <a href="core/Element.html" class="extype" name="chisel3.core.Element">Element</a>, <a href="core/EnumFactory$Type.html" class="extype" name="chisel3.core.EnumFactory.Type">Type</a>, <a href="core/EnumType.html" class="extype" name="chisel3.core.EnumType">EnumType</a>, <a href="core/FixedPoint.html" class="extype" name="chisel3.core.FixedPoint">FixedPoint</a>, <a href="core/Mem.html" class="extype" name="chisel3.core.Mem">Mem</a>, <a href="core/MemBase.html" class="extype" name="chisel3.core.MemBase">MemBase</a>, <a href="core/Module$.html" class="extype" name="chisel3.core.Module">Module</a>, <a href="core/Mux$.html" class="extype" name="chisel3.core.Mux">Mux</a>, <a href="core/Record.html" class="extype" name="chisel3.core.Record">Record</a>, <a href="core/Reset.html" class="extype" name="chisel3.core.Reset">Reset</a>, <a href="core/SInt.html" class="extype" name="chisel3.core.SInt">SInt</a>, <a href="core/SyncReadMem.html" class="extype" name="chisel3.core.SyncReadMem">SyncReadMem</a>, <a href="core/UInt.html" class="extype" name="chisel3.core.UInt">UInt</a>, <a href="core/Vec.html" class="extype" name="chisel3.core.Vec">Vec</a>, <a href="core/Vec$.html" class="extype" name="chisel3.core.Vec">Vec</a>, <a href="core/VecFactory.html" class="extype" name="chisel3.core.VecFactory">VecFactory</a>, <a href="core/VecInit$.html" class="extype" name="chisel3.core.VecInit">VecInit</a>, <a href="core/VecLike.html" class="extype" name="chisel3.core.VecLike">VecLike</a>, <a href="package$$fromUIntToBitPatComparable.html" class="extype" name="chisel3.fromUIntToBitPatComparable">fromUIntToBitPatComparable</a>, <a href="util/ArbiterIO.html" class="extype" name="chisel3.util.ArbiterIO">ArbiterIO</a>, <a href="util/BitPat.html" class="extype" name="chisel3.util.BitPat">BitPat</a>, <a href="util/DecoupledIO.html" class="extype" name="chisel3.util.DecoupledIO">DecoupledIO</a>, <a href="util/IrrevocableIO.html" class="extype" name="chisel3.util.IrrevocableIO">IrrevocableIO</a>, <a href="util/MixedVec.html" class="extype" name="chisel3.util.MixedVec">MixedVec</a>, <a href="util/Pipe$PipeIO.html" class="extype" name="chisel3.util.Pipe.PipeIO">PipeIO</a>, <a href="util/QueueIO.html" class="extype" name="chisel3.util.QueueIO">QueueIO</a>, <a href="util/ReadyValidIO.html" class="extype" name="chisel3.util.ReadyValidIO">ReadyValidIO</a>, <a href="util/Valid.html" class="extype" name="chisel3.util.Valid">Valid</a></div>
-          </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
-                <span class="toggle diagram-link">
-                  Type Hierarchy
-                </span>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 1063.50 155.00" height="155pt" width="1064pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 151)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-151 1059.5,-151 1059.5,4 -4,4" stroke="transparent" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this trait" id="graph1_0"><g id="a_this trait|graph1_0"><a xlink:title="chisel3.SourceInfoDoc (this trait)" xlink:href="#inheritance-diagram"><path d="M526.67,-86C526.67,-86 438.33,-86 438.33,-86 434.17,-86 430,-81.83 430,-77.67 430,-77.67 430,-69.33 430,-69.33 430,-65.17 434.17,-61 438.33,-61 438.33,-61 526.67,-61 526.67,-61 530.83,-61 535,-65.17 535,-69.33 535,-69.33 535,-77.67 535,-77.67 535,-81.83 530.83,-86 526.67,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../lib/trait_diagram.png" y="-80.5" x="440.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="461.5" text-anchor="start">SourceInfoDoc</text></a></g></g><!-- node1 --><g class="node class" id="graph1_1"><g id="a_class|graph1_1"><a xlink:title="chisel3.util.BitPat" xlink:href="util/BitPat.html#inheritance-diagram"><path d="M60.67,-25C60.67,-25 8.33,-25 8.33,-25 4.17,-25 0,-20.83 0,-16.67 0,-16.67 0,-8.33 0,-8.33 0,-4.17 4.17,0 8.33,0 8.33,0 60.67,0 60.67,0 64.83,0 69,-4.17 69,-8.33 69,-8.33 69,-16.67 69,-16.67 69,-20.83 64.83,-25 60.67,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../lib/class_diagram.png" y="-19.5" x="10.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="31.5" text-anchor="start">BitPat</text></a></g></g><!-- node0&#45;&gt;node1 --><g class="edge inheritance" id="graph1_0_1"><g id="a_inheritance|graph1_0_1"><a xlink:title="BitPat is a subtype of SourceInfoDoc"><path d="M422.69,-68.21C343.31,-61.89 198.99,-48.24 77.5,-25 74.77,-24.48 71.95,-23.87 69.13,-23.22" stroke="#d4d4d4" fill="none"></path><polygon points="422.53,-70.65 429.7,-68.76 422.92,-65.77 422.53,-70.65" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node class" id="graph1_2"><g id="a_class|graph1_2"><a xlink:title="chisel3.core.Data" xlink:href="core/Data.html#inheritance-diagram"><path d="M163.67,-25C163.67,-25 95.33,-25 95.33,-25 91.17,-25 87,-20.83 87,-16.67 87,-16.67 87,-8.33 87,-8.33 87,-4.17 91.17,0 95.33,0 95.33,0 163.67,0 163.67,0 167.83,0 172,-4.17 172,-8.33 172,-8.33 172,-16.67 172,-16.67 172,-20.83 167.83,-25 163.67,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../lib/class_diagram.png" y="-19.5" x="97.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="118.5" text-anchor="start">core.Data</text></a></g></g><!-- node0&#45;&gt;node2 --><g class="edge inheritance" id="graph1_0_2"><g id="a_inheritance|graph1_0_2"><a xlink:title="core.Data is a subtype of SourceInfoDoc"><path d="M422.68,-64.28C361.6,-55.6 264.16,-40.99 180.5,-25 177.74,-24.47 174.89,-23.9 172.03,-23.31" stroke="#d4d4d4" fill="none"></path><polygon points="422.67,-66.75 429.94,-65.3 423.36,-61.9 422.67,-66.75" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3 --><g class="node class" id="graph1_3"><g id="a_class|graph1_3"><a xlink:title="chisel3.core.MemBase" xlink:href="core/MemBase.html#inheritance-diagram"><path d="M300.67,-25C300.67,-25 198.33,-25 198.33,-25 194.17,-25 190,-20.83 190,-16.67 190,-16.67 190,-8.33 190,-8.33 190,-4.17 194.17,0 198.33,0 198.33,0 300.67,0 300.67,0 304.83,0 309,-4.17 309,-8.33 309,-8.33 309,-16.67 309,-16.67 309,-20.83 304.83,-25 300.67,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../lib/class_diagram.png" y="-19.5" x="200.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="221.5" text-anchor="start">core.MemBase[T]</text></a></g></g><!-- node0&#45;&gt;node3 --><g class="edge inheritance" id="graph1_0_3"><g id="a_inheritance|graph1_0_3"><a xlink:title="core.MemBase[T] is a subtype of SourceInfoDoc"><path d="M430.14,-59.24C389.61,-48.98 334.03,-34.9 295.26,-25.09" stroke="#d4d4d4" fill="none"></path><polygon points="429.63,-61.64 437.02,-60.98 430.84,-56.89 429.63,-61.64" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node4 --><g class="node object" id="graph1_4"><g id="a_object|graph1_4"><a xlink:title="chisel3.core.Module" xlink:href="core/Module$.html#inheritance-diagram"><path d="M415.17,-25C415.17,-25 335.83,-25 335.83,-25 331.67,-25 327.5,-20.83 327.5,-16.67 327.5,-16.67 327.5,-8.33 327.5,-8.33 327.5,-4.17 331.67,0 335.83,0 335.83,0 415.17,0 415.17,0 419.33,0 423.5,-4.17 423.5,-8.33 423.5,-8.33 423.5,-16.67 423.5,-16.67 423.5,-20.83 419.33,-25 415.17,-25" stroke="#103a51" fill="#103a51"></path><image xlink:href="../lib/object_diagram.png" y="-19.5" x="337.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="358.5" text-anchor="start">core.Module</text></a></g></g><!-- node0&#45;&gt;node4 --><g class="edge inheritance" id="graph1_0_4"><g id="a_inheritance|graph1_0_4"><a xlink:title="core.Module is a subtype of SourceInfoDoc"><path d="M455.18,-57.44C437,-47.41 413.47,-34.43 396.7,-25.19" stroke="#d4d4d4" fill="none"></path><polygon points="454.3,-59.75 461.62,-60.98 456.67,-55.46 454.3,-59.75" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node5 --><g class="node object" id="graph1_5"><g id="a_object|graph1_5"><a xlink:title="chisel3.core.Mux" xlink:href="core/Mux$.html#inheritance-diagram"><path d="M515.17,-25C515.17,-25 449.83,-25 449.83,-25 445.67,-25 441.5,-20.83 441.5,-16.67 441.5,-16.67 441.5,-8.33 441.5,-8.33 441.5,-4.17 445.67,0 449.83,0 449.83,0 515.17,0 515.17,0 519.33,0 523.5,-4.17 523.5,-8.33 523.5,-8.33 523.5,-16.67 523.5,-16.67 523.5,-20.83 519.33,-25 515.17,-25" stroke="#103a51" fill="#103a51"></path><image xlink:href="../lib/object_diagram.png" y="-19.5" x="451.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="472.5" text-anchor="start">core.Mux</text></a></g></g><!-- node0&#45;&gt;node5 --><g class="edge inheritance" id="graph1_0_5"><g id="a_inheritance|graph1_0_5"><a xlink:title="core.Mux is a subtype of SourceInfoDoc"><path d="M482.5,-53.76C482.5,-44.37 482.5,-33.29 482.5,-25.13" stroke="#d4d4d4" fill="none"></path><polygon points="480.05,-53.84 482.5,-60.84 484.95,-53.84 480.05,-53.84" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node6 --><g class="node trait" id="graph1_6"><g id="a_trait|graph1_6"><a xlink:title="chisel3.core.VecFactory" xlink:href="core/VecFactory.html#inheritance-diagram"><path d="M623.17,-25C623.17,-25 549.83,-25 549.83,-25 545.67,-25 541.5,-20.83 541.5,-16.67 541.5,-16.67 541.5,-8.33 541.5,-8.33 541.5,-4.17 545.67,0 549.83,0 549.83,0 623.17,0 623.17,0 627.33,0 631.5,-4.17 631.5,-8.33 631.5,-8.33 631.5,-16.67 631.5,-16.67 631.5,-20.83 627.33,-25 623.17,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../lib/trait_diagram.png" y="-19.5" x="551.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="572.5" text-anchor="start">VecFactory</text></a></g></g><!-- node0&#45;&gt;node6 --><g class="edge inheritance" id="graph1_0_6"><g id="a_inheritance|graph1_0_6"><a xlink:title="VecFactory is a subtype of SourceInfoDoc"><path d="M509.3,-57.29C526.98,-47.27 549.77,-34.34 566,-25.13" stroke="#d4d4d4" fill="none"></path><polygon points="507.93,-55.26 503.05,-60.84 510.34,-59.52 507.93,-55.26" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node7 --><g class="node object" id="graph1_7"><g id="a_object|graph1_7"><a xlink:title="chisel3.core.VecInit" xlink:href="core/VecInit$.html#inheritance-diagram"><path d="M734.67,-25C734.67,-25 658.33,-25 658.33,-25 654.17,-25 650,-20.83 650,-16.67 650,-16.67 650,-8.33 650,-8.33 650,-4.17 654.17,0 658.33,0 658.33,0 734.67,0 734.67,0 738.83,0 743,-4.17 743,-8.33 743,-8.33 743,-16.67 743,-16.67 743,-20.83 738.83,-25 734.67,-25" stroke="#103a51" fill="#103a51"></path><image xlink:href="../lib/object_diagram.png" y="-19.5" x="660.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="681.5" text-anchor="start">core.VecInit</text></a></g></g><!-- node0&#45;&gt;node7 --><g class="edge inheritance" id="graph1_0_7"><g id="a_inheritance|graph1_0_7"><a xlink:title="core.VecInit is a subtype of SourceInfoDoc"><path d="M531.05,-59.12C568.24,-48.86 619.01,-34.86 654.47,-25.09" stroke="#d4d4d4" fill="none"></path><polygon points="530.37,-56.76 524.27,-60.98 531.67,-61.49 530.37,-56.76" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node8 --><g class="node trait" id="graph1_8"><g id="a_trait|graph1_8"><a xlink:title="chisel3.core.VecLike" xlink:href="core/VecLike.html#inheritance-diagram"><path d="M861.17,-25C861.17,-25 769.83,-25 769.83,-25 765.67,-25 761.5,-20.83 761.5,-16.67 761.5,-16.67 761.5,-8.33 761.5,-8.33 761.5,-4.17 765.67,0 769.83,0 769.83,0 861.17,0 861.17,0 865.33,0 869.5,-4.17 869.5,-8.33 869.5,-8.33 869.5,-16.67 869.5,-16.67 869.5,-20.83 865.33,-25 861.17,-25" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../lib/trait_diagram.png" y="-19.5" x="771.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="792.5" text-anchor="start">core.VecLike[T]</text></a></g></g><!-- node0&#45;&gt;node8 --><g class="edge inheritance" id="graph1_0_8"><g id="a_inheritance|graph1_0_8"><a xlink:title="core.VecLike[T] is a subtype of SourceInfoDoc"><path d="M542.23,-62.1C596.95,-52.55 680.2,-37.96 752.5,-25 755.35,-24.49 758.26,-23.97 761.21,-23.43" stroke="#d4d4d4" fill="none"></path><polygon points="541.51,-59.74 535.04,-63.36 542.35,-64.57 541.51,-59.74" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node9 --><g class="node class" id="graph1_9"><g id="a_class|graph1_9"><a xlink:title="chisel3.fromUIntToBitPatComparable" xlink:href="package$$fromUIntToBitPatComparable.html#inheritance-diagram"><path d="M1047.17,-25C1047.17,-25 895.83,-25 895.83,-25 891.67,-25 887.5,-20.83 887.5,-16.67 887.5,-16.67 887.5,-8.33 887.5,-8.33 887.5,-4.17 891.67,0 895.83,0 895.83,0 1047.17,0 1047.17,0 1051.33,0 1055.5,-4.17 1055.5,-8.33 1055.5,-8.33 1055.5,-16.67 1055.5,-16.67 1055.5,-20.83 1051.33,-25 1047.17,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../lib/class_diagram.png" y="-19.5" x="897.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="918.5" text-anchor="start">fromUIntToBitPatComparable</text></a></g></g><!-- node0&#45;&gt;node9 --><g class="edge inheritance" id="graph1_0_9"><g id="a_inheritance|graph1_0_9"><a xlink:title="fromUIntToBitPatComparable is a subtype of SourceInfoDoc"><path d="M542.34,-65.39C619.89,-56.16 759.31,-39.52 878.5,-25 881.41,-24.65 884.36,-24.28 887.35,-23.92" stroke="#d4d4d4" fill="none"></path><polygon points="541.69,-63 535.03,-66.26 542.27,-67.87 541.69,-63" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node10 --><g class="node class" id="graph1_10"><g id="a_class|graph1_10"><a xlink:title="scala.AnyRef"><path d="M510.17,-147C510.17,-147 454.83,-147 454.83,-147 450.67,-147 446.5,-142.83 446.5,-138.67 446.5,-138.67 446.5,-130.33 446.5,-130.33 446.5,-126.17 450.67,-122 454.83,-122 454.83,-122 510.17,-122 510.17,-122 514.33,-122 518.5,-126.17 518.5,-130.33 518.5,-130.33 518.5,-138.67 518.5,-138.67 518.5,-142.83 514.33,-147 510.17,-147" stroke="#418565" fill="#418565"></path><image xlink:href="../lib/class_diagram.png" y="-141.5" x="456.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="477.5" text-anchor="start">AnyRef</text></a></g></g><!-- node10&#45;&gt;node0 --><g class="edge inheritance" id="graph1_10_0"><g id="a_inheritance|graph1_10_0"><a xlink:title="SourceInfoDoc is a subtype of AnyRef"><path d="M482.5,-114.76C482.5,-105.37 482.5,-94.29 482.5,-86.13" stroke="#d4d4d4" fill="none"></path><polygon points="480.05,-114.84 482.5,-121.84 484.95,-114.84 480.05,-114.84" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
-                <div id="diagram-controls" class="hiddenContent">
-                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
-                </div>
-              </div></div>
+            <div class="subClasses hiddenContent"><a href="../Chisel/package$$Vec$.html" class="extype" name="Chisel.Vec">Vec</a>, <a href="Aggregate.html" class="extype" name="chisel3.Aggregate">Aggregate</a>, <a href="AsyncReset.html" class="extype" name="chisel3.AsyncReset">AsyncReset</a>, <a href="Bits.html" class="extype" name="chisel3.Bits">Bits</a>, <a href="Bool.html" class="extype" name="chisel3.Bool">Bool</a>, <a href="Bundle.html" class="extype" name="chisel3.Bundle">Bundle</a>, <a href="Clock.html" class="extype" name="chisel3.Clock">Clock</a>, <a href="Data.html" class="extype" name="chisel3.Data">Data</a>, <a href="Element.html" class="extype" name="chisel3.Element">Element</a>, <a href="Mem.html" class="extype" name="chisel3.Mem">Mem</a>, <a href="MemBase.html" class="extype" name="chisel3.MemBase">MemBase</a>, <a href="Module$.html" class="extype" name="chisel3.Module">Module</a>, <a href="Mux$.html" class="extype" name="chisel3.Mux">Mux</a>, <a href="Record.html" class="extype" name="chisel3.Record">Record</a>, <a href="Reset.html" class="extype" name="chisel3.Reset">Reset</a>, <a href="ResetType.html" class="extype" name="chisel3.ResetType">ResetType</a>, <a href="SInt.html" class="extype" name="chisel3.SInt">SInt</a>, <a href="SyncReadMem.html" class="extype" name="chisel3.SyncReadMem">SyncReadMem</a>, <a href="UInt.html" class="extype" name="chisel3.UInt">UInt</a>, <a href="Vec.html" class="extype" name="chisel3.Vec">Vec</a>, <a href="package$$Vec$.html" class="extype" name="chisel3.Vec">Vec</a>, <a href="VecFactory.html" class="extype" name="chisel3.VecFactory">VecFactory</a>, <a href="VecInit$.html" class="extype" name="chisel3.VecInit">VecInit</a>, <a href="VecLike.html" class="extype" name="chisel3.VecLike">VecLike</a>, <a href="experimental/Analog.html" class="extype" name="chisel3.experimental.Analog">Analog</a>, <a href="experimental/EnumFactory$Type.html" class="extype" name="chisel3.experimental.EnumFactory.Type">Type</a>, <a href="experimental/EnumType.html" class="extype" name="chisel3.experimental.EnumType">EnumType</a>, <a href="experimental/FixedPoint.html" class="extype" name="chisel3.experimental.FixedPoint">FixedPoint</a>, <a href="util/ArbiterIO.html" class="extype" name="chisel3.util.ArbiterIO">ArbiterIO</a>, <a href="util/BitPat.html" class="extype" name="chisel3.util.BitPat">BitPat</a>, <a href="util/BitPat$$fromUIntToBitPatComparable.html" class="extype" name="chisel3.util.BitPat.fromUIntToBitPatComparable">fromUIntToBitPatComparable</a>, <a href="util/DecoupledIO.html" class="extype" name="chisel3.util.DecoupledIO">DecoupledIO</a>, <a href="util/IrrevocableIO.html" class="extype" name="chisel3.util.IrrevocableIO">IrrevocableIO</a>, <a href="util/MixedVec.html" class="extype" name="chisel3.util.MixedVec">MixedVec</a>, <a href="util/Pipe$PipeIO.html" class="extype" name="chisel3.util.Pipe.PipeIO">PipeIO</a>, <a href="util/QueueIO.html" class="extype" name="chisel3.util.QueueIO">QueueIO</a>, <a href="util/ReadyValidIO.html" class="extype" name="chisel3.util.ReadyValidIO">ReadyValidIO</a>, <a href="util/Valid.html" class="extype" name="chisel3.util.Valid">Valid</a>, <a href="util/random/PRNGIO.html" class="extype" name="chisel3.util.random.PRNGIO">PRNGIO</a></div>
+          </div></div>
         
 
       <div id="mbrsel">

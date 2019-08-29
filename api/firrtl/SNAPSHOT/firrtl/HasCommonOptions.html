@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.2-050719-SNAPSHOT - firrtl.HasCommonOptions</title>
-          <meta name="description" content="firrtl 1.2 - 050719 - SNAPSHOT - firrtl.HasCommonOptions" />
-          <meta name="keywords" content="firrtl 1.2 050719 SNAPSHOT firrtl.HasCommonOptions" />
+          <title>firrtl 1.2-081319-SNAPSHOT - firrtl.HasCommonOptions</title>
+          <meta name="description" content="firrtl 1.2 - 081319 - SNAPSHOT - firrtl.HasCommonOptions" />
+          <meta name="keywords" content="firrtl 1.2 081319 SNAPSHOT firrtl.HasCommonOptions" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.2-050719-SNAPSHOT</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.2-081319-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -133,6 +133,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
+    </li><li name="firrtl.checks" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="checks"></a><a id="checks:checks"></a>
+      <span class="permalink">
+      <a href="../firrtl/index.html#checks" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="checks/index.html"><span class="name">checks</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
     </li><li name="firrtl.graph" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="graph"></a><a id="graph:graph"></a>
       <span class="permalink">
@@ -225,10 +241,15 @@
         <span class="kind">package</span>
       </span>
       <span class="symbol">
-        <a title="" href="stage/index.html"><span class="name">stage</span></a>
+        <a title="The stage package provides an implementation of the FIRRTL compiler using the firrtl.options package." href="stage/index.html"><span class="name">stage</span></a>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
+      <p class="shortcomment cmt">The <a href="stage/index.html" class="extype" name="firrtl.stage">stage</a> package provides an implementation of the FIRRTL compiler using the <a href="options/index.html" class="extype" name="firrtl.options">firrtl.options</a> package.</p><div class="fullcomment"><div class="comment cmt"><p>The <a href="stage/index.html" class="extype" name="firrtl.stage">stage</a> package provides an implementation of the FIRRTL compiler using the <a href="options/index.html" class="extype" name="firrtl.options">firrtl.options</a> package. This
+primarily consists of:</p><ul><li><a href="stage/FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a>, the internal and external (command line) interface to the FIRRTL compiler</li><li>A number of <a href="options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a>s that support and compartmentalize the individual operations of
+    <a href="stage/FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a></li><li><a href="stage/FirrtlOptions.html" class="extype" name="firrtl.stage.FirrtlOptions">FirrtlOptions</a>, a class representing options that are necessary to drive the <a href="stage/FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a> and its
+    <a href="options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a>s</li><li><a href="stage/package$$FirrtlOptionsView$.html" class="extype" name="firrtl.stage.FirrtlOptionsView">FirrtlOptionsView</a>, a utility that constructs an <a href="options/OptionsView.html" class="extype" name="firrtl.options.OptionsView">OptionsView</a> of <a href="stage/FirrtlOptions.html" class="extype" name="firrtl.stage.FirrtlOptions">FirrtlOptions</a>
+    from an <a href="AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a></li><li><a href="stage/FirrtlCli.html" class="extype" name="firrtl.stage.FirrtlCli">FirrtlCli</a>, the command line options that the <a href="stage/FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a> supports</li><li><a href="stage/FirrtlStageUtils$.html" class="extype" name="firrtl.stage.FirrtlStageUtils">FirrtlStageUtils</a> containing miscellaneous utilities for <a href="stage/index.html" class="extype" name="firrtl.stage">stage</a>
+</li></ul></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
     </li><li name="firrtl.transforms" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="transforms"></a><a id="transforms:transforms"></a>
       <span class="permalink">
@@ -362,7 +383,7 @@
                         <a class="object" href="Dshlw$.html" title=""></a>
                         <a href="Dshlw$.html" title="">Dshlw</a>
                       </li><li class="current-entities indented1">
-                        <span class="separator"></span>
+                        <a class="object" href="EmitAllModulesAnnotation$.html" title=""></a>
                         <a class="class" href="EmitAllModulesAnnotation.html" title=""></a>
                         <a href="EmitAllModulesAnnotation.html" title="">EmitAllModulesAnnotation</a>
                       </li><li class="current-entities indented1">
@@ -370,7 +391,7 @@
                         <a class="trait" href="EmitAnnotation.html" title=""></a>
                         <a href="EmitAnnotation.html" title="">EmitAnnotation</a>
                       </li><li class="current-entities indented1">
-                        <span class="separator"></span>
+                        <a class="object" href="EmitCircuitAnnotation$.html" title=""></a>
                         <a class="class" href="EmitCircuitAnnotation.html" title=""></a>
                         <a href="EmitCircuitAnnotation.html" title="">EmitCircuitAnnotation</a>
                       </li><li class="current-entities indented1">
@@ -735,6 +756,10 @@
                         <a href="SystemVerilogCompiler.html" title="Currently just an alias for the VerilogCompiler">SystemVerilogCompiler</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
+                        <a class="class" href="SystemVerilogEmitter.html" title=""></a>
+                        <a href="SystemVerilogEmitter.html" title="">SystemVerilogEmitter</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
                         <a class="class" href="Transform.html" title="The basic unit of operating on a Firrtl AST"></a>
                         <a href="Transform.html" title="The basic unit of operating on a Firrtl AST">Transform</a>
                       </li><li class="current-entities indented1">
@@ -745,6 +770,10 @@
                         <span class="separator"></span>
                         <a class="object" href="UnknownForm$.html" title="Unknown Form"></a>
                         <a href="UnknownForm$.html" title="Unknown Form">UnknownForm</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="object" href="UnknownKind$.html" title=""></a>
+                        <a href="UnknownKind$.html" title="">UnknownKind</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="object" href="Utils$.html" title=""></a>
@@ -876,12 +905,15 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">HasCommonOptions</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <span class="name deprecated" title="Deprecated: (Since version 1.2) Specify command line arguments in an Annotation mixing in HasScoptOptions">HasCommonOptions</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Self Type</dt><dd><a href="ExecutionOptionsManager.html" class="extype" name="firrtl.ExecutionOptionsManager">ExecutionOptionsManager</a></dd><dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/master/src/main/scala/firrtl/ExecutionOptionsManager.scala" target="_blank">ExecutionOptionsManager.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Self Type</dt><dd><a href="ExecutionOptionsManager.html" class="extype" name="firrtl.ExecutionOptionsManager">ExecutionOptionsManager</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.2)</i> Specify command line arguments in an Annotation mixing in HasScoptOptions</p></dd><dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/master/src/main/scala/firrtl/ExecutionOptionsManager.scala" target="_blank">ExecutionOptionsManager.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -891,17 +923,7 @@
               Known Subclasses
             </span>
             <div class="subClasses hiddenContent"><a href="ExecutionOptionsManager.html" class="extype" name="firrtl.ExecutionOptionsManager">ExecutionOptionsManager</a></div>
-          </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
-                <span class="toggle diagram-link">
-                  Type Hierarchy
-                </span>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 188.00 155.00" height="155pt" width="188pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 151)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-151 184,-151 184,4 -4,4" stroke="transparent" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this trait" id="graph1_0"><g id="a_this trait|graph1_0"><a xlink:title="firrtl.HasCommonOptions (this trait)" xlink:href="#inheritance-diagram"><path d="M147.67,-86C147.67,-86 32.33,-86 32.33,-86 28.17,-86 24,-81.83 24,-77.67 24,-77.67 24,-69.33 24,-69.33 24,-65.17 28.17,-61 32.33,-61 32.33,-61 147.67,-61 147.67,-61 151.83,-61 156,-65.17 156,-69.33 156,-69.33 156,-77.67 156,-77.67 156,-81.83 151.83,-86 147.67,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../lib/trait_diagram.png" y="-80.5" x="34" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="55" text-anchor="start">HasCommonOptions</text></a></g></g><!-- node1 --><g class="node class" id="graph1_1"><g id="a_class|graph1_1"><a xlink:title="firrtl.ExecutionOptionsManager" xlink:href="ExecutionOptionsManager.html#inheritance-diagram"><path d="M158.67,-25C158.67,-25 21.33,-25 21.33,-25 17.17,-25 13,-20.83 13,-16.67 13,-16.67 13,-8.33 13,-8.33 13,-4.17 17.17,0 21.33,0 21.33,0 158.67,0 158.67,0 162.83,0 167,-4.17 167,-8.33 167,-8.33 167,-16.67 167,-16.67 167,-20.83 162.83,-25 158.67,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../lib/class_diagram.png" y="-19.5" x="23" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="44" text-anchor="start">ExecutionOptionsManager</text></a></g></g><!-- node0&#45;&gt;node1 --><g class="edge inheritance" id="graph1_0_1"><g id="a_inheritance|graph1_0_1"><a xlink:title="ExecutionOptionsManager is a subtype of HasCommonOptions"><path d="M90,-53.76C90,-44.37 90,-33.29 90,-25.13" stroke="#d4d4d4" fill="none"></path><polygon points="87.55,-53.84 90,-60.84 92.45,-53.84 87.55,-53.84" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node class" id="graph1_2"><g id="a_class|graph1_2"><a xlink:title="scala.AnyRef"><path d="M117.67,-147C117.67,-147 62.33,-147 62.33,-147 58.17,-147 54,-142.83 54,-138.67 54,-138.67 54,-130.33 54,-130.33 54,-126.17 58.17,-122 62.33,-122 62.33,-122 117.67,-122 117.67,-122 121.83,-122 126,-126.17 126,-130.33 126,-130.33 126,-138.67 126,-138.67 126,-142.83 121.83,-147 117.67,-147" stroke="#418565" fill="#418565"></path><image xlink:href="../lib/class_diagram.png" y="-141.5" x="64" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="85" text-anchor="start">AnyRef</text></a></g></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph1_2_0"><g id="a_inheritance|graph1_2_0"><a xlink:title="HasCommonOptions is a subtype of AnyRef"><path d="M90,-114.76C90,-105.37 90,-94.29 90,-86.13" stroke="#d4d4d4" fill="none"></path><polygon points="87.55,-114.84 90,-121.84 92.45,-114.84 87.55,-114.84" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
-                <div id="diagram-controls" class="hiddenContent">
-                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
-                </div>
-              </div></div>
+          </div></div>
         
 
       <div id="mbrsel">

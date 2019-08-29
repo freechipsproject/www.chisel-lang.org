@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.2-050719-SNAPSHOT - chisel3.testers</title>
-          <meta name="description" content="chisel3 3.2 - 050719 - SNAPSHOT - chisel3.testers" />
-          <meta name="keywords" content="chisel3 3.2 050719 SNAPSHOT chisel3.testers" />
+          <title>chisel3 3.2-081319-SNAPSHOT - chisel3.testers</title>
+          <meta name="description" content="chisel3 3.2 - 081319 - SNAPSHOT - chisel3.testers" />
+          <meta name="keywords" content="chisel3 3.2 081319 SNAPSHOT chisel3.testers" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.2-050719-SNAPSHOT</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.2-081319-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -69,9 +69,9 @@
       </span>
       
       <p class="shortcomment cmt">This is the documentation for Chisel.</p><div class="fullcomment"><div class="comment cmt"><p>This is the documentation for Chisel.</p><h4> Package structure </h4><p>The <a href="../index.html" class="extype" name="chisel3">chisel3</a> package presents the public API of Chisel.
-It contains the concrete core types <a href="../core/UInt.html" class="extype" name="chisel3.core.UInt"><code>UInt</code></a>, <a href="../core/SInt.html" class="extype" name="chisel3.core.SInt"><code>SInt</code></a>, <a href="../core/Bool.html" class="extype" name="chisel3.core.Bool"><code>Bool</code></a>, <a href="../core/FixedPoint.html" class="extype" name="chisel3.core.FixedPoint"><code>FixedPoint</code></a>, <a href="../core/Clock.html" class="extype" name="chisel3.core.Clock"><code>Clock</code></a>, and <a href="../core/Reg$.html" class="extype" name="chisel3.core.Reg"><code>Reg</code></a>,
-the abstract types <a href="../core/Bits.html" class="extype" name="chisel3.core.Bits"><code>Bits</code></a>, <a href="../core/Aggregate.html" class="extype" name="chisel3.core.Aggregate"><code>Aggregate</code></a>, and <a href="../core/Data.html" class="extype" name="chisel3.core.Data"><code>Data</code></a>,
-and the aggregate types <a href="../core/Bundle.html" class="extype" name="chisel3.core.Bundle"><code>Bundle</code></a> and <a href="../core/Vec.html" class="extype" name="chisel3.core.Vec"><code>Vec</code></a>.</p><p>The <a href="../../Chisel/index.html" class="extype" name="Chisel">Chisel</a> package is a compatibility layer that attempts to provide chisel2 compatibility in chisel3.</p><p>Utility objects and methods are found in the <a href="../util/index.html" class="extype" name="chisel3.util"><code>util</code></a> package.</p><p>The <a href="" class="extype" name="chisel3.testers"><code>testers</code></a> package defines the basic interface for chisel testers.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+It contains the concrete core types <a href="../UInt.html" class="extype" name="chisel3.UInt"><code>UInt</code></a>, <a href="../SInt.html" class="extype" name="chisel3.SInt"><code>SInt</code></a>, <a href="../Bool.html" class="extype" name="chisel3.Bool"><code>Bool</code></a>, <a href="../experimental/FixedPoint.html" class="extype" name="chisel3.experimental.FixedPoint"><code>FixedPoint</code></a>, <a href="../Clock.html" class="extype" name="chisel3.Clock"><code>Clock</code></a>, and <a href="../Reg$.html" class="extype" name="chisel3.Reg"><code>Reg</code></a>,
+the abstract types <a href="../Bits.html" class="extype" name="chisel3.Bits"><code>Bits</code></a>, <a href="../Aggregate.html" class="extype" name="chisel3.Aggregate"><code>Aggregate</code></a>, and <a href="../Data.html" class="extype" name="chisel3.Data"><code>Data</code></a>,
+and the aggregate types <a href="../Bundle.html" class="extype" name="chisel3.Bundle"><code>Bundle</code></a> and <a href="../Vec.html" class="extype" name="chisel3.Vec"><code>Vec</code></a>.</p><p>The <a href="../../Chisel/index.html" class="extype" name="Chisel">Chisel</a> package is a compatibility layer that attempts to provide chisel2 compatibility in chisel3.</p><p>Utility objects and methods are found in the <a href="../util/index.html" class="extype" name="chisel3.util"><code>util</code></a> package.</p><p>The <a href="" class="extype" name="chisel3.testers"><code>testers</code></a> package defines the basic interface for chisel testers.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
     </li><li name="_root_.chisel3" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="chisel3"></a><a id="chisel3:chisel3"></a>
       <span class="permalink">
@@ -84,12 +84,27 @@ and the aggregate types <a href="../core/Bundle.html" class="extype" name="chise
         <span class="kind">package</span>
       </span>
       <span class="symbol">
-        <a title="The chisel3 package contains the chisel3 API." href="../index.html"><span class="name">chisel3</span></a>
+        <a title="This package contains the main chisel3 API." href="../index.html"><span class="name">chisel3</span></a>
       </span>
       
-      <p class="shortcomment cmt">The chisel3 package contains the chisel3 API.</p><div class="fullcomment"><div class="comment cmt"><p>The chisel3 package contains the chisel3 API.
-It maps core components into the public chisel3 namespace.
+      <p class="shortcomment cmt">This package contains the main chisel3 API.</p><div class="fullcomment"><div class="comment cmt"><p>This package contains the main chisel3 API.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="chisel3.aop" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="aop"></a><a id="aop:aop"></a>
+      <span class="permalink">
+      <a href="../chisel3/index.html#aop" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../aop/index.html"><span class="name">aop</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="chisel3">chisel3</a></dd></dl></div>
     </li><li name="chisel3.core" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="core"></a><a id="core:core"></a>
       <span class="permalink">
@@ -102,7 +117,43 @@ It maps core components into the public chisel3 namespace.
         <span class="kind">package</span>
       </span>
       <span class="symbol">
-        <a title="" href="../core/index.html"><span class="name">core</span></a>
+        <a title="These definitions exist to deal with those clients that relied on chisel3.core." href="../core/index.html"><span class="name">core</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">These definitions exist to deal with those clients that relied on chisel3.core.</p><div class="fullcomment"><div class="comment cmt"><p>These definitions exist to deal with those clients that relied on chisel3.core.
+They are deprecated and will be removed in the future.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="chisel3">chisel3</a></dd></dl></div>
+    </li><li name="chisel3.experimental" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="experimental"></a><a id="experimental:experimental"></a>
+      <span class="permalink">
+      <a href="../chisel3/index.html#experimental" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="Package for experimental features, which may have their API changed, be removed, etc." href="../experimental/index.html"><span class="name">experimental</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Package for experimental features, which may have their API changed, be removed, etc.</p><div class="fullcomment"><div class="comment cmt"><p>Package for experimental features, which may have their API changed, be removed, etc.</p><p>Because its contents won't necessarily have the same level of stability and support as
+non-experimental, you must explicitly import this package to use its contents.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="chisel3">chisel3</a></dd></dl></div>
+    </li><li name="chisel3.stage" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="stage"></a><a id="stage:stage"></a>
+      <span class="permalink">
+      <a href="../chisel3/index.html#stage" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../stage/index.html"><span class="name">stage</span></a>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="chisel3">chisel3</a></dd></dl></div>
@@ -178,7 +229,7 @@ functions
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The testers package provides the basic interface for chisel testers.</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The testers package provides the basic interface for chisel testers.</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/master//src/main/scala/chisel3/testers/package.scala" target="_blank">package.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -242,7 +293,7 @@ functions
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="BasicTester.html"><span class="name">BasicTester</span></a><span class="result"> extends <a href="../index.html#Module=chisel3.core.LegacyModule" class="extmbr" name="chisel3.Module">Module</a></span>
+        <a title="" href="BasicTester.html"><span class="name">BasicTester</span></a><span class="result"> extends <a href="../index.html#Module=chisel3.experimental.LegacyModule" class="extmbr" name="chisel3.Module">Module</a></span>
       </span>
       
       

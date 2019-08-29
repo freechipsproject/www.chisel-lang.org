@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.2-050719-SNAPSHOT - firrtl.MiddleFirrtlCompiler</title>
-          <meta name="description" content="firrtl 1.2 - 050719 - SNAPSHOT - firrtl.MiddleFirrtlCompiler" />
-          <meta name="keywords" content="firrtl 1.2 050719 SNAPSHOT firrtl.MiddleFirrtlCompiler" />
+          <title>firrtl 1.2-081319-SNAPSHOT - firrtl.MiddleFirrtlCompiler</title>
+          <meta name="description" content="firrtl 1.2 - 081319 - SNAPSHOT - firrtl.MiddleFirrtlCompiler" />
+          <meta name="keywords" content="firrtl 1.2 081319 SNAPSHOT firrtl.MiddleFirrtlCompiler" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.2-050719-SNAPSHOT</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.2-081319-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -133,6 +133,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
+    </li><li name="firrtl.checks" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="checks"></a><a id="checks:checks"></a>
+      <span class="permalink">
+      <a href="../firrtl/index.html#checks" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="checks/index.html"><span class="name">checks</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
     </li><li name="firrtl.graph" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="graph"></a><a id="graph:graph"></a>
       <span class="permalink">
@@ -225,10 +241,15 @@
         <span class="kind">package</span>
       </span>
       <span class="symbol">
-        <a title="" href="stage/index.html"><span class="name">stage</span></a>
+        <a title="The stage package provides an implementation of the FIRRTL compiler using the firrtl.options package." href="stage/index.html"><span class="name">stage</span></a>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
+      <p class="shortcomment cmt">The <a href="stage/index.html" class="extype" name="firrtl.stage">stage</a> package provides an implementation of the FIRRTL compiler using the <a href="options/index.html" class="extype" name="firrtl.options">firrtl.options</a> package.</p><div class="fullcomment"><div class="comment cmt"><p>The <a href="stage/index.html" class="extype" name="firrtl.stage">stage</a> package provides an implementation of the FIRRTL compiler using the <a href="options/index.html" class="extype" name="firrtl.options">firrtl.options</a> package. This
+primarily consists of:</p><ul><li><a href="stage/FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a>, the internal and external (command line) interface to the FIRRTL compiler</li><li>A number of <a href="options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a>s that support and compartmentalize the individual operations of
+    <a href="stage/FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a></li><li><a href="stage/FirrtlOptions.html" class="extype" name="firrtl.stage.FirrtlOptions">FirrtlOptions</a>, a class representing options that are necessary to drive the <a href="stage/FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a> and its
+    <a href="options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a>s</li><li><a href="stage/package$$FirrtlOptionsView$.html" class="extype" name="firrtl.stage.FirrtlOptionsView">FirrtlOptionsView</a>, a utility that constructs an <a href="options/OptionsView.html" class="extype" name="firrtl.options.OptionsView">OptionsView</a> of <a href="stage/FirrtlOptions.html" class="extype" name="firrtl.stage.FirrtlOptions">FirrtlOptions</a>
+    from an <a href="AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a></li><li><a href="stage/FirrtlCli.html" class="extype" name="firrtl.stage.FirrtlCli">FirrtlCli</a>, the command line options that the <a href="stage/FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a> supports</li><li><a href="stage/FirrtlStageUtils$.html" class="extype" name="firrtl.stage.FirrtlStageUtils">FirrtlStageUtils</a> containing miscellaneous utilities for <a href="stage/index.html" class="extype" name="firrtl.stage">stage</a>
+</li></ul></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
     </li><li name="firrtl.transforms" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="transforms"></a><a id="transforms:transforms"></a>
       <span class="permalink">
@@ -362,7 +383,7 @@
                         <a class="object" href="Dshlw$.html" title=""></a>
                         <a href="Dshlw$.html" title="">Dshlw</a>
                       </li><li class="current-entities indented1">
-                        <span class="separator"></span>
+                        <a class="object" href="EmitAllModulesAnnotation$.html" title=""></a>
                         <a class="class" href="EmitAllModulesAnnotation.html" title=""></a>
                         <a href="EmitAllModulesAnnotation.html" title="">EmitAllModulesAnnotation</a>
                       </li><li class="current-entities indented1">
@@ -370,7 +391,7 @@
                         <a class="trait" href="EmitAnnotation.html" title=""></a>
                         <a href="EmitAnnotation.html" title="">EmitAnnotation</a>
                       </li><li class="current-entities indented1">
-                        <span class="separator"></span>
+                        <a class="object" href="EmitCircuitAnnotation$.html" title=""></a>
                         <a class="class" href="EmitCircuitAnnotation.html" title=""></a>
                         <a href="EmitCircuitAnnotation.html" title="">EmitCircuitAnnotation</a>
                       </li><li class="current-entities indented1">
@@ -735,6 +756,10 @@
                         <a href="SystemVerilogCompiler.html" title="Currently just an alias for the VerilogCompiler">SystemVerilogCompiler</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
+                        <a class="class" href="SystemVerilogEmitter.html" title=""></a>
+                        <a href="SystemVerilogEmitter.html" title="">SystemVerilogEmitter</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
                         <a class="class" href="Transform.html" title="The basic unit of operating on a Firrtl AST"></a>
                         <a href="Transform.html" title="The basic unit of operating on a Firrtl AST">Transform</a>
                       </li><li class="current-entities indented1">
@@ -745,6 +770,10 @@
                         <span class="separator"></span>
                         <a class="object" href="UnknownForm$.html" title="Unknown Form"></a>
                         <a href="UnknownForm$.html" title="Unknown Form">UnknownForm</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="object" href="UnknownKind$.html" title=""></a>
+                        <a href="UnknownKind$.html" title="">UnknownKind</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="object" href="Utils$.html" title=""></a>
@@ -886,17 +915,7 @@
             Linear Supertypes
           </span>
           <div class="superTypes hiddenContent"><a href="Compiler.html" class="extype" name="firrtl.Compiler">Compiler</a>, <a href="../logger/LazyLogging.html" class="extype" name="logger.LazyLogging">LazyLogging</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
-        </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
-                <span class="toggle diagram-link">
-                  Type Hierarchy
-                </span>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 186.00 118.00" height="118pt" width="186pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 114)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-114 182,-114 182,4 -4,4" stroke="transparent" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this class" id="graph1_0"><g id="a_this class|graph1_0"><a xlink:title="firrtl.MiddleFirrtlCompiler (this class)" xlink:href="#inheritance-diagram"><path d="M145.17,-49C145.17,-49 32.83,-49 32.83,-49 28.67,-49 24.5,-44.83 24.5,-40.67 24.5,-40.67 24.5,-32.33 24.5,-32.33 24.5,-28.17 28.67,-24 32.83,-24 32.83,-24 145.17,-24 145.17,-24 149.33,-24 153.5,-28.17 153.5,-32.33 153.5,-32.33 153.5,-40.67 153.5,-40.67 153.5,-44.83 149.33,-49 145.17,-49" stroke="#418565" fill="#418565"></path><image xlink:href="../lib/class_diagram.png" y="-43.5" x="35" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-34.1" x="56" text-anchor="start">MiddleFirrtlCompiler</text></a></g></g><!-- node1 --><g class="node trait" id="graph1_1"><g id="a_trait|graph1_1"><a xlink:title="firrtl.Compiler" xlink:href="Compiler.html#inheritance-diagram"><path d="M121.67,-110C121.67,-110 56.33,-110 56.33,-110 52.17,-110 48,-105.83 48,-101.67 48,-101.67 48,-93.33 48,-93.33 48,-89.17 52.17,-85 56.33,-85 56.33,-85 121.67,-85 121.67,-85 125.83,-85 130,-89.17 130,-93.33 130,-93.33 130,-101.67 130,-101.67 130,-105.83 125.83,-110 121.67,-110" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../lib/trait_diagram.png" y="-104.5" x="58" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-95.1" x="79" text-anchor="start">Compiler</text></a></g></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph1_1_0"><g id="a_inheritance|graph1_1_0"><a xlink:title="MiddleFirrtlCompiler is a subtype of Compiler"><path d="M89,-77.76C89,-68.37 89,-57.29 89,-49.13" stroke="#d4d4d4" fill="none"></path><polygon points="86.55,-77.84 89,-84.84 91.45,-77.84 86.55,-77.84" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
-                <div id="diagram-controls" class="hiddenContent">
-                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
-                </div>
-              </div></div>
+        </div></div>
         
 
       <div id="mbrsel">
@@ -1103,7 +1122,7 @@ It creates a <a href="EmitCircuitAnnotation.html" class="extype" name="firrtl.Em
     </span>
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">def</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
         <span class="name">emitter</span><span class="result">: <a href="MiddleFirrtlEmitter.html" class="extype" name="firrtl.MiddleFirrtlEmitter">MiddleFirrtlEmitter</a></span>

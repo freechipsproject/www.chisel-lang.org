@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.2-050719-SNAPSHOT - chisel3.util.experimental.BoringUtils</title>
-          <meta name="description" content="chisel3 3.2 - 050719 - SNAPSHOT - chisel3.util.experimental.BoringUtils" />
-          <meta name="keywords" content="chisel3 3.2 050719 SNAPSHOT chisel3.util.experimental.BoringUtils" />
+          <title>chisel3 3.2-081319-SNAPSHOT - chisel3.util.experimental.BoringUtils</title>
+          <meta name="description" content="chisel3 3.2 - 081319 - SNAPSHOT - chisel3.util.experimental.BoringUtils" />
+          <meta name="keywords" content="chisel3 3.2 081319 SNAPSHOT chisel3.util.experimental.BoringUtils" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.2-050719-SNAPSHOT</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.2-081319-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -69,9 +69,9 @@
       </span>
       
       <p class="shortcomment cmt">This is the documentation for Chisel.</p><div class="fullcomment"><div class="comment cmt"><p>This is the documentation for Chisel.</p><h4> Package structure </h4><p>The <a href="../../index.html" class="extype" name="chisel3">chisel3</a> package presents the public API of Chisel.
-It contains the concrete core types <a href="../../core/UInt.html" class="extype" name="chisel3.core.UInt"><code>UInt</code></a>, <a href="../../core/SInt.html" class="extype" name="chisel3.core.SInt"><code>SInt</code></a>, <a href="../../core/Bool.html" class="extype" name="chisel3.core.Bool"><code>Bool</code></a>, <a href="../../core/FixedPoint.html" class="extype" name="chisel3.core.FixedPoint"><code>FixedPoint</code></a>, <a href="../../core/Clock.html" class="extype" name="chisel3.core.Clock"><code>Clock</code></a>, and <a href="../../core/Reg$.html" class="extype" name="chisel3.core.Reg"><code>Reg</code></a>,
-the abstract types <a href="../../core/Bits.html" class="extype" name="chisel3.core.Bits"><code>Bits</code></a>, <a href="../../core/Aggregate.html" class="extype" name="chisel3.core.Aggregate"><code>Aggregate</code></a>, and <a href="../../core/Data.html" class="extype" name="chisel3.core.Data"><code>Data</code></a>,
-and the aggregate types <a href="../../core/Bundle.html" class="extype" name="chisel3.core.Bundle"><code>Bundle</code></a> and <a href="../../core/Vec.html" class="extype" name="chisel3.core.Vec"><code>Vec</code></a>.</p><p>The <a href="../../../Chisel/index.html" class="extype" name="Chisel">Chisel</a> package is a compatibility layer that attempts to provide chisel2 compatibility in chisel3.</p><p>Utility objects and methods are found in the <a href="../index.html" class="extype" name="chisel3.util"><code>util</code></a> package.</p><p>The <a href="../../testers/index.html" class="extype" name="chisel3.testers"><code>testers</code></a> package defines the basic interface for chisel testers.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+It contains the concrete core types <a href="../../UInt.html" class="extype" name="chisel3.UInt"><code>UInt</code></a>, <a href="../../SInt.html" class="extype" name="chisel3.SInt"><code>SInt</code></a>, <a href="../../Bool.html" class="extype" name="chisel3.Bool"><code>Bool</code></a>, <a href="../../experimental/FixedPoint.html" class="extype" name="chisel3.experimental.FixedPoint"><code>FixedPoint</code></a>, <a href="../../Clock.html" class="extype" name="chisel3.Clock"><code>Clock</code></a>, and <a href="../../Reg$.html" class="extype" name="chisel3.Reg"><code>Reg</code></a>,
+the abstract types <a href="../../Bits.html" class="extype" name="chisel3.Bits"><code>Bits</code></a>, <a href="../../Aggregate.html" class="extype" name="chisel3.Aggregate"><code>Aggregate</code></a>, and <a href="../../Data.html" class="extype" name="chisel3.Data"><code>Data</code></a>,
+and the aggregate types <a href="../../Bundle.html" class="extype" name="chisel3.Bundle"><code>Bundle</code></a> and <a href="../../Vec.html" class="extype" name="chisel3.Vec"><code>Vec</code></a>.</p><p>The <a href="../../../Chisel/index.html" class="extype" name="Chisel">Chisel</a> package is a compatibility layer that attempts to provide chisel2 compatibility in chisel3.</p><p>Utility objects and methods are found in the <a href="../index.html" class="extype" name="chisel3.util"><code>util</code></a> package.</p><p>The <a href="../../testers/index.html" class="extype" name="chisel3.testers"><code>testers</code></a> package defines the basic interface for chisel testers.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
     </li><li name="_root_.chisel3" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="chisel3"></a><a id="chisel3:chisel3"></a>
       <span class="permalink">
@@ -84,11 +84,10 @@ and the aggregate types <a href="../../core/Bundle.html" class="extype" name="ch
         <span class="kind">package</span>
       </span>
       <span class="symbol">
-        <a title="The chisel3 package contains the chisel3 API." href="../../index.html"><span class="name">chisel3</span></a>
+        <a title="This package contains the main chisel3 API." href="../../index.html"><span class="name">chisel3</span></a>
       </span>
       
-      <p class="shortcomment cmt">The chisel3 package contains the chisel3 API.</p><div class="fullcomment"><div class="comment cmt"><p>The chisel3 package contains the chisel3 API.
-It maps core components into the public chisel3 namespace.
+      <p class="shortcomment cmt">This package contains the main chisel3 API.</p><div class="fullcomment"><div class="comment cmt"><p>This package contains the main chisel3 API.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
     </li><li name="chisel3.util" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="util"></a><a id="util:util"></a>
@@ -148,12 +147,12 @@ functions
                         <a href="InlineInstance.html" title="Inlines an instance of a module">InlineInstance</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="class" href="LoadMemoryTransform.html" title="This transform only is activated if verilog is being generated (determined by presence of the proper emit annotation) when activated it creates additional verilog files that contain modules bound to the modules that contain an initializable memory"></a>
-                        <a href="LoadMemoryTransform.html" title="This transform only is activated if verilog is being generated (determined by presence of the proper emit annotation) when activated it creates additional verilog files that contain modules bound to the modules that contain an initializable memory">LoadMemoryTransform</a>
+                        <a class="class" href="LoadMemoryTransform.html" title="This transform only is activated if Verilog is being generated (determined by presence of the proper emit annotation) when activated it creates additional Verilog files that contain modules bound to the modules that contain an initializable memory"></a>
+                        <a href="LoadMemoryTransform.html" title="This transform only is activated if Verilog is being generated (determined by presence of the proper emit annotation) when activated it creates additional Verilog files that contain modules bound to the modules that contain an initializable memory">LoadMemoryTransform</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="object" href="loadMemoryFromFile$.html" title=""></a>
-                        <a href="loadMemoryFromFile$.html" title="">loadMemoryFromFile</a>
+                        <a class="object" href="loadMemoryFromFile$.html" title="loadMemoryFromFile is an annotation generator that helps with loading a memory from a text file."></a>
+                        <a href="loadMemoryFromFile$.html" title="loadMemoryFromFile is an annotation generator that helps with loading a memory from a text file.">loadMemoryFromFile</a>
                       </li>
               </ul>
             </div>
@@ -183,7 +182,7 @@ functions
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Utilities for generating synthesizable cross module references that &quot;bore&quot; through the hierarchy. The underlying
-cross module connects are handled by FIRRTL's Wiring Transform (<span class="extype" name="firrtl.passes.wiring.WiringTransform">firrtl.passes.wiring.WiringTransform</span>).</p><p>Consider the following exmple where you want to connect a component in one module to a component in another. Module
+cross module connects are handled by FIRRTL's Wiring Transform.</p><p>Consider the following exmple where you want to connect a component in one module to a component in another. Module
 <code>Constant</code> has a wire tied to <code>42</code> and <code>Expect</code> will assert unless connected to <code>42</code>:</p><pre><span class="kw">class</span> Constant <span class="kw">extends</span> Module {
   <span class="kw">val</span> io = IO(<span class="kw">new</span> Bundle{})
   <span class="kw">val</span> x = Wire(UInt(<span class="num">6.</span>W))
@@ -228,7 +227,7 @@ matched by a <code>name</code> key that indicates they should be wired together.
 automatically. Non-hierarchical boring unsafely relies on user input to generate this name. Use of non-hierarchical
 naming may result in naming conflicts that the user must handle.</p><p>The automatic generation of hierarchical names relies on a global, mutable namespace. This is currently persistent
 across circuit elaborations.
-</p></div><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/master//src/main/scala/chisel3/util/experimental/BoringUtils.scala" target="_blank">BoringUtils.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -395,7 +394,7 @@ from specific identical sources differently)</p></dd><dt class="param">uniqueNam
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">bore</span><span class="params">(<span name="source">source: <a href="../../index.html#Data=chisel3.core.Data" class="extmbr" name="chisel3.Data">Data</a></span>, <span name="sinks">sinks: <span class="extype" name="scala.Seq">Seq</span>[<a href="../../index.html#Data=chisel3.core.Data" class="extmbr" name="chisel3.Data">Data</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+        <span class="name">bore</span><span class="params">(<span name="source">source: <a href="../../Data.html" class="extype" name="chisel3.Data">Data</a></span>, <span name="sinks">sinks: <span class="extype" name="scala.Seq">Seq</span>[<a href="../../Data.html" class="extype" name="chisel3.Data">Data</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       
       <p class="shortcomment cmt">Connect a source to one or more sinks</p><div class="fullcomment"><div class="comment cmt"><p>Connect a source to one or more sinks</p></div><dl class="paramcmts block"><dt class="param">source</dt><dd class="cmt"><p>a source component</p></dd><dt class="param">sinks</dt><dd class="cmt"><p>one or more sink components</p></dd><dt>returns</dt><dd class="cmt"><p>the name of the signal used to connect the source to the

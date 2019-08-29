@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.2-050719-SNAPSHOT - firrtl.stage.FirrtlOption</title>
-          <meta name="description" content="firrtl 1.2 - 050719 - SNAPSHOT - firrtl.stage.FirrtlOption" />
-          <meta name="keywords" content="firrtl 1.2 050719 SNAPSHOT firrtl.stage.FirrtlOption" />
+          <title>firrtl 1.2-081319-SNAPSHOT - firrtl.stage.FirrtlOption</title>
+          <meta name="description" content="firrtl 1.2 - 081319 - SNAPSHOT - firrtl.stage.FirrtlOption" />
+          <meta name="keywords" content="firrtl 1.2 081319 SNAPSHOT firrtl.stage.FirrtlOption" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.2-050719-SNAPSHOT</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.2-081319-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -97,82 +97,91 @@
         <span class="kind">package</span>
       </span>
       <span class="symbol">
-        <a title="" href="index.html"><span class="name">stage</span></a>
+        <a title="The stage package provides an implementation of the FIRRTL compiler using the firrtl.options package." href="index.html"><span class="name">stage</span></a>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
+      <p class="shortcomment cmt">The <a href="index.html" class="extype" name="firrtl.stage">stage</a> package provides an implementation of the FIRRTL compiler using the <a href="../options/index.html" class="extype" name="firrtl.options">firrtl.options</a> package.</p><div class="fullcomment"><div class="comment cmt"><p>The <a href="index.html" class="extype" name="firrtl.stage">stage</a> package provides an implementation of the FIRRTL compiler using the <a href="../options/index.html" class="extype" name="firrtl.options">firrtl.options</a> package. This
+primarily consists of:</p><ul><li><a href="FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a>, the internal and external (command line) interface to the FIRRTL compiler</li><li>A number of <a href="../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a>s that support and compartmentalize the individual operations of
+    <a href="FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a></li><li><a href="FirrtlOptions.html" class="extype" name="firrtl.stage.FirrtlOptions">FirrtlOptions</a>, a class representing options that are necessary to drive the <a href="FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a> and its
+    <a href="../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a>s</li><li><a href="package$$FirrtlOptionsView$.html" class="extype" name="firrtl.stage.FirrtlOptionsView">FirrtlOptionsView</a>, a utility that constructs an <a href="../options/OptionsView.html" class="extype" name="firrtl.options.OptionsView">OptionsView</a> of <a href="FirrtlOptions.html" class="extype" name="firrtl.stage.FirrtlOptions">FirrtlOptions</a>
+    from an <a href="../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a></li><li><a href="FirrtlCli.html" class="extype" name="firrtl.stage.FirrtlCli">FirrtlCli</a>, the command line options that the <a href="FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a> supports</li><li><a href="FirrtlStageUtils$.html" class="extype" name="firrtl.stage.FirrtlStageUtils">FirrtlStageUtils</a> containing miscellaneous utilities for <a href="index.html" class="extype" name="firrtl.stage">stage</a>
+</li></ul></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
+    </li><li name="firrtl.stage.phases" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="phases"></a><a id="phases:phases"></a>
+      <span class="permalink">
+      <a href="../../firrtl/stage/index.html#phases" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="phases/index.html"><span class="name">phases</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="firrtl.stage">stage</a></dd></dl></div>
     </li><li class="current-entities indented2">
-                        <a class="object" href="ClassLogLevelAnnotation$.html" title=""></a>
-                        <a class="class" href="ClassLogLevelAnnotation.html" title="Describes a mapping of a class to a specific log level"></a>
-                        <a href="ClassLogLevelAnnotation.html" title="Describes a mapping of a class to a specific log level">ClassLogLevelAnnotation</a>
-                      </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="class" href="CompilerNameAnnotation.html" title="Holds the name of the compiler to run"></a>
-                        <a href="CompilerNameAnnotation.html" title="Holds the name of the compiler to run">CompilerNameAnnotation</a>
+                        <a class="trait" href="CircuitOption.html" title="Indicates that this Annotation contains information that is directly convertable to a FIRRTL Circuit."></a>
+                        <a href="CircuitOption.html" title="Indicates that this Annotation contains information that is directly convertable to a FIRRTL Circuit.">CircuitOption</a>
                       </li><li class="current-entities indented2">
-                        <span class="separator"></span>
-                        <a class="object" href="EmitOneFilePerModuleAnnotation$.html" title="Indicates that an emitted circuit (FIRRTL, Verilog, etc.) will be one file per module"></a>
-                        <a href="EmitOneFilePerModuleAnnotation$.html" title="Indicates that an emitted circuit (FIRRTL, Verilog, etc.) will be one file per module">EmitOneFilePerModuleAnnotation</a>
+                        <a class="object" href="CompilerAnnotation$.html" title=""></a>
+                        <a class="class" href="CompilerAnnotation.html" title="helpValueName a Compiler that should be run"></a>
+                        <a href="CompilerAnnotation.html" title="helpValueName a Compiler that should be run">CompilerAnnotation</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="class" href="FirrtlCircuitAnnotation.html" title="Holds a FIRRTL Circuit"></a>
                         <a href="FirrtlCircuitAnnotation.html" title="Holds a FIRRTL Circuit">FirrtlCircuitAnnotation</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="trait" href="" title="Indicates that a subclass is an Annotation that includes a command line option"></a>
-                        <a href="" title="Indicates that a subclass is an Annotation that includes a command line option">FirrtlOption</a>
+                        <a class="trait" href="FirrtlCli.html" title="Shell mixin that provides command line options for FIRRTL."></a>
+                        <a href="FirrtlCli.html" title="Shell mixin that provides command line options for FIRRTL.">FirrtlCli</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="FirrtlFileAnnotation$.html" title=""></a>
+                        <a class="class" href="FirrtlFileAnnotation.html" title="An explicit input FIRRTL file to read"></a>
+                        <a href="FirrtlFileAnnotation.html" title="An explicit input FIRRTL file to read">FirrtlFileAnnotation</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="FirrtlMain$.html" title=""></a>
+                        <a href="FirrtlMain$.html" title="">FirrtlMain</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="" title="Indicates that this is an Annotation directly used in the construction of a FirrtlOptions view."></a>
+                        <a href="" title="Indicates that this is an Annotation directly used in the construction of a FirrtlOptions view.">FirrtlOption</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="FirrtlOptions.html" title="Internal options used to control the FIRRTL compiler stage."></a>
+                        <a href="FirrtlOptions.html" title="Internal options used to control the FIRRTL compiler stage.">FirrtlOptions</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="package$$FirrtlOptionsView$.html" title=""></a>
+                        <a href="package$$FirrtlOptionsView$.html" title="">FirrtlOptionsView</a>
                       </li><li class="current-entities indented2">
                         <a class="object" href="FirrtlSourceAnnotation$.html" title=""></a>
                         <a class="class" href="FirrtlSourceAnnotation.html" title="Holds a String containing FIRRTL source to read as input"></a>
                         <a href="FirrtlSourceAnnotation.html" title="Holds a String containing FIRRTL source to read as input">FirrtlSourceAnnotation</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
+                        <a class="class" href="FirrtlStage.html" title=""></a>
+                        <a href="FirrtlStage.html" title="">FirrtlStage</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="FirrtlStageUtils$.html" title="Utilities that help with processing FIRRTL options"></a>
+                        <a href="FirrtlStageUtils$.html" title="Utilities that help with processing FIRRTL options">FirrtlStageUtils</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="InfoModeAnnotation$.html" title=""></a>
                         <a class="class" href="InfoModeAnnotation.html" title="Sets the info mode style"></a>
                         <a href="InfoModeAnnotation.html" title="Sets the info mode style">InfoModeAnnotation</a>
-                      </li><li class="current-entities indented2">
-                        <a class="object" href="InputAnnotationFileAnnotation$.html" title=""></a>
-                        <a class="class" href="InputAnnotationFileAnnotation.html" title="Holds a filename containing one or more annotations.Annotation to be read"></a>
-                        <a href="InputAnnotationFileAnnotation.html" title="Holds a filename containing one or more annotations.Annotation to be read">InputAnnotationFileAnnotation</a>
-                      </li><li class="current-entities indented2">
-                        <a class="object" href="InputFileAnnotation$.html" title=""></a>
-                        <a class="class" href="InputFileAnnotation.html" title="An explicit input FIRRTL file to read"></a>
-                        <a href="InputFileAnnotation.html" title="An explicit input FIRRTL file to read">InputFileAnnotation</a>
-                      </li><li class="current-entities indented2">
-                        <span class="separator"></span>
-                        <a class="object" href="LogClassNamesAnnotation$.html" title="Enables class names in log output"></a>
-                        <a href="LogClassNamesAnnotation$.html" title="Enables class names in log output">LogClassNamesAnnotation</a>
-                      </li><li class="current-entities indented2">
-                        <span class="separator"></span>
-                        <a class="class" href="LogLevelAnnotation.html" title="Describes the verbosity of information to log"></a>
-                        <a href="LogLevelAnnotation.html" title="Describes the verbosity of information to log">LogLevelAnnotation</a>
-                      </li><li class="current-entities indented2">
-                        <span class="separator"></span>
-                        <a class="object" href="LogToFileAnnotation$.html" title="Enables logging to a file (as opposed to STDOUT)"></a>
-                        <a href="LogToFileAnnotation$.html" title="Enables logging to a file (as opposed to STDOUT)">LogToFileAnnotation</a>
-                      </li><li class="current-entities indented2">
-                        <a class="object" href="OutputAnnotationFileAnnotation$.html" title=""></a>
-                        <a class="class" href="OutputAnnotationFileAnnotation.html" title="An explicit output _annotation_ file to write to"></a>
-                        <a href="OutputAnnotationFileAnnotation.html" title="An explicit output _annotation_ file to write to">OutputAnnotationFileAnnotation</a>
                       </li><li class="current-entities indented2">
                         <a class="object" href="OutputFileAnnotation$.html" title=""></a>
                         <a class="class" href="OutputFileAnnotation.html" title="An explicit output file the emitter will write to"></a>
                         <a href="OutputFileAnnotation.html" title="An explicit output file the emitter will write to">OutputFileAnnotation</a>
                       </li><li class="current-entities indented2">
-                        <a class="object" href="ProgramArgsAnnotation$.html" title=""></a>
-                        <a class="class" href="ProgramArgsAnnotation.html" title="Additional arguments"></a>
-                        <a href="ProgramArgsAnnotation.html" title="Additional arguments">ProgramArgsAnnotation</a>
-                      </li><li class="current-entities indented2">
                         <a class="object" href="RunFirrtlTransformAnnotation$.html" title=""></a>
                         <a class="class" href="RunFirrtlTransformAnnotation.html" title="Holds the unambiguous class name of a Transform to run"></a>
                         <a href="RunFirrtlTransformAnnotation.html" title="Holds the unambiguous class name of a Transform to run">RunFirrtlTransformAnnotation</a>
-                      </li><li class="current-entities indented2">
-                        <span class="separator"></span>
-                        <a class="class" href="TargetDirAnnotation.html" title="Holds the name of the target directory"></a>
-                        <a href="TargetDirAnnotation.html" title="Holds the name of the target directory">TargetDirAnnotation</a>
-                      </li><li class="current-entities indented2">
-                        <a class="object" href="TopNameAnnotation$.html" title=""></a>
-                        <a class="class" href="TopNameAnnotation.html" title="Holds the name of the top module"></a>
-                        <a href="TopNameAnnotation.html" title="Holds the name of the top module">TopNameAnnotation</a>
                       </li>
               </ul>
             </div>
@@ -196,33 +205,24 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">FirrtlOption</span><span class="result"> extends <a href="../options/HasScoptOptions.html" class="extype" name="firrtl.options.HasScoptOptions">HasScoptOptions</a></span>
+        <span class="name">FirrtlOption</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Indicates that a subclass is an <a href="../annotations/index.html" class="extype" name="firrtl.annotations">Annotation</a> that includes a command line option</p><p>This must be mixed into a subclass of <a href="../annotations/Annotation.html" class="extype" name="firrtl.annotations.Annotation">annotations.Annotation</a>
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/master/src/main/scala/firrtl/stage/FirrtlAnnotations.scala" target="_blank">FirrtlAnnotations.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Indicates that this is an <a href="../annotations/Annotation.html" class="extype" name="firrtl.annotations.Annotation">Annotation</a> directly used in the construction of a
+<a href="FirrtlOptions.html" class="extype" name="firrtl.stage.FirrtlOptions">FirrtlOptions</a> view.
+</p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="firrtl.stage.FirrtlOption">FirrtlOption</a> with <a href="../annotations/Annotation.html" class="extype" name="firrtl.annotations.Annotation">Annotation</a></dd><dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/master/src/main/scala/firrtl/stage/FirrtlAnnotations.scala" target="_blank">FirrtlAnnotations.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="../options/HasScoptOptions.html" class="extype" name="firrtl.options.HasScoptOptions">HasScoptOptions</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div><div class="toggleContainer block">
             <span class="toggle">
               Known Subclasses
             </span>
-            <div class="subClasses hiddenContent"><a href="ClassLogLevelAnnotation.html" class="extype" name="firrtl.stage.ClassLogLevelAnnotation">ClassLogLevelAnnotation</a>, <a href="CompilerNameAnnotation.html" class="extype" name="firrtl.stage.CompilerNameAnnotation">CompilerNameAnnotation</a>, <a href="EmitOneFilePerModuleAnnotation$.html" class="extype" name="firrtl.stage.EmitOneFilePerModuleAnnotation">EmitOneFilePerModuleAnnotation</a>, <a href="FirrtlCircuitAnnotation.html" class="extype" name="firrtl.stage.FirrtlCircuitAnnotation">FirrtlCircuitAnnotation</a>, <a href="FirrtlSourceAnnotation.html" class="extype" name="firrtl.stage.FirrtlSourceAnnotation">FirrtlSourceAnnotation</a>, <a href="InfoModeAnnotation.html" class="extype" name="firrtl.stage.InfoModeAnnotation">InfoModeAnnotation</a>, <a href="InputAnnotationFileAnnotation.html" class="extype" name="firrtl.stage.InputAnnotationFileAnnotation">InputAnnotationFileAnnotation</a>, <a href="InputFileAnnotation.html" class="extype" name="firrtl.stage.InputFileAnnotation">InputFileAnnotation</a>, <a href="LogClassNamesAnnotation$.html" class="extype" name="firrtl.stage.LogClassNamesAnnotation">LogClassNamesAnnotation</a>, <a href="LogLevelAnnotation.html" class="extype" name="firrtl.stage.LogLevelAnnotation">LogLevelAnnotation</a>, <a href="LogToFileAnnotation$.html" class="extype" name="firrtl.stage.LogToFileAnnotation">LogToFileAnnotation</a>, <a href="OutputAnnotationFileAnnotation.html" class="extype" name="firrtl.stage.OutputAnnotationFileAnnotation">OutputAnnotationFileAnnotation</a>, <a href="OutputFileAnnotation.html" class="extype" name="firrtl.stage.OutputFileAnnotation">OutputFileAnnotation</a>, <a href="ProgramArgsAnnotation.html" class="extype" name="firrtl.stage.ProgramArgsAnnotation">ProgramArgsAnnotation</a>, <a href="RunFirrtlTransformAnnotation.html" class="extype" name="firrtl.stage.RunFirrtlTransformAnnotation">RunFirrtlTransformAnnotation</a>, <a href="TargetDirAnnotation.html" class="extype" name="firrtl.stage.TargetDirAnnotation">TargetDirAnnotation</a>, <a href="TopNameAnnotation.html" class="extype" name="firrtl.stage.TopNameAnnotation">TopNameAnnotation</a></div>
-          </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
-                <span class="toggle diagram-link">
-                  Type Hierarchy
-                </span>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 2770.50 155.00" height="155pt" width="2771pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 151)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-151 2766.5,-151 2766.5,4 -4,4" stroke="transparent" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this trait" id="graph1_0"><g id="a_this trait|graph1_0"><a xlink:title="firrtl.stage.FirrtlOption (this trait)" xlink:href="#inheritance-diagram"><path d="M1439.17,-86C1439.17,-86 1364.83,-86 1364.83,-86 1360.67,-86 1356.5,-81.83 1356.5,-77.67 1356.5,-77.67 1356.5,-69.33 1356.5,-69.33 1356.5,-65.17 1360.67,-61 1364.83,-61 1364.83,-61 1439.17,-61 1439.17,-61 1443.33,-61 1447.5,-65.17 1447.5,-69.33 1447.5,-69.33 1447.5,-77.67 1447.5,-77.67 1447.5,-81.83 1443.33,-86 1439.17,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-80.5" x="1367" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="1388" text-anchor="start">FirrtlOption</text></a></g></g><!-- node1 --><g class="node class" id="graph1_1"><g id="a_class|graph1_1"><a xlink:title="firrtl.stage.ClassLogLevelAnnotation" xlink:href="ClassLogLevelAnnotation.html#inheritance-diagram"><path d="M141.67,-25C141.67,-25 8.33,-25 8.33,-25 4.17,-25 0,-20.83 0,-16.67 0,-16.67 0,-8.33 0,-8.33 0,-4.17 4.17,0 8.33,0 8.33,0 141.67,0 141.67,0 145.83,0 150,-4.17 150,-8.33 150,-8.33 150,-16.67 150,-16.67 150,-20.83 145.83,-25 141.67,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-19.5" x="10" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="31" text-anchor="start">ClassLogLevelAnnotation</text></a></g></g><!-- node0&#45;&gt;node1 --><g class="edge inheritance" id="graph1_0_1"><g id="a_inheritance|graph1_0_1"><a xlink:title="ClassLogLevelAnnotation is a subtype of FirrtlOption"><path d="M1349.31,-72.33C1177.64,-71.38 618.97,-65.18 159,-25 156.07,-24.74 153.08,-24.46 150.06,-24.15" stroke="#d4d4d4" fill="none"></path><polygon points="1349.46,-74.78 1356.47,-72.37 1349.48,-69.88 1349.46,-74.78" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node class" id="graph1_2"><g id="a_class|graph1_2"><a xlink:title="firrtl.stage.CompilerNameAnnotation" xlink:href="CompilerNameAnnotation.html#inheritance-diagram"><path d="M311.67,-25C311.67,-25 176.33,-25 176.33,-25 172.17,-25 168,-20.83 168,-16.67 168,-16.67 168,-8.33 168,-8.33 168,-4.17 172.17,0 176.33,0 176.33,0 311.67,0 311.67,0 315.83,0 320,-4.17 320,-8.33 320,-8.33 320,-16.67 320,-16.67 320,-20.83 315.83,-25 311.67,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-19.5" x="178" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="199" text-anchor="start">CompilerNameAnnotation</text></a></g></g><!-- node0&#45;&gt;node2 --><g class="edge inheritance" id="graph1_0_2"><g id="a_inheritance|graph1_0_2"><a xlink:title="CompilerNameAnnotation is a subtype of FirrtlOption"><path d="M1349.21,-71.85C1193.04,-69.56 719.78,-60.01 329,-25 326.18,-24.75 323.31,-24.47 320.42,-24.17" stroke="#d4d4d4" fill="none"></path><polygon points="1349.37,-74.3 1356.41,-71.95 1349.44,-69.4 1349.37,-74.3" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3 --><g class="node object" id="graph1_3"><g id="a_object|graph1_3"><a xlink:title="firrtl.stage.EmitOneFilePerModuleAnnotation" xlink:href="EmitOneFilePerModuleAnnotation$.html#inheritance-diagram"><path d="M513.17,-25C513.17,-25 346.83,-25 346.83,-25 342.67,-25 338.5,-20.83 338.5,-16.67 338.5,-16.67 338.5,-8.33 338.5,-8.33 338.5,-4.17 342.67,0 346.83,0 346.83,0 513.17,0 513.17,0 517.33,0 521.5,-4.17 521.5,-8.33 521.5,-8.33 521.5,-16.67 521.5,-16.67 521.5,-20.83 517.33,-25 513.17,-25" stroke="#103a51" fill="#103a51"></path><image xlink:href="../../lib/object_diagram.png" y="-19.5" x="349" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="370" text-anchor="start">EmitOneFilePerModuleAnnotation</text></a></g></g><!-- node0&#45;&gt;node3 --><g class="edge inheritance" id="graph1_0_3"><g id="a_inheritance|graph1_0_3"><a xlink:title="EmitOneFilePerModuleAnnotation is a subtype of FirrtlOption"><path d="M1349,-70.72C1212.86,-65.92 839.82,-51.23 530,-25 527.21,-24.76 524.39,-24.51 521.53,-24.25" stroke="#d4d4d4" fill="none"></path><polygon points="1349,-73.17 1356.08,-70.97 1349.17,-68.28 1349,-73.17" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node4 --><g class="node class" id="graph1_4"><g id="a_class|graph1_4"><a xlink:title="firrtl.stage.FirrtlCircuitAnnotation" xlink:href="FirrtlCircuitAnnotation.html#inheritance-diagram"><path d="M666.17,-25C666.17,-25 547.83,-25 547.83,-25 543.67,-25 539.5,-20.83 539.5,-16.67 539.5,-16.67 539.5,-8.33 539.5,-8.33 539.5,-4.17 543.67,0 547.83,0 547.83,0 666.17,0 666.17,0 670.33,0 674.5,-4.17 674.5,-8.33 674.5,-8.33 674.5,-16.67 674.5,-16.67 674.5,-20.83 670.33,-25 666.17,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-19.5" x="550" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="571" text-anchor="start">FirrtlCircuitAnnotation</text></a></g></g><!-- node0&#45;&gt;node4 --><g class="edge inheritance" id="graph1_0_4"><g id="a_inheritance|graph1_0_4"><a xlink:title="FirrtlCircuitAnnotation is a subtype of FirrtlOption"><path d="M1348.86,-70.48C1229.64,-65.62 931.89,-51.66 684,-25 680.91,-24.67 677.75,-24.3 674.57,-23.91" stroke="#d4d4d4" fill="none"></path><polygon points="1349.01,-72.94 1356.11,-70.77 1349.21,-68.04 1349.01,-72.94" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node5 --><g class="node class" id="graph1_5"><g id="a_class|graph1_5"><a xlink:title="firrtl.stage.FirrtlSourceAnnotation" xlink:href="FirrtlSourceAnnotation.html#inheritance-diagram"><path d="M822.67,-25C822.67,-25 701.33,-25 701.33,-25 697.17,-25 693,-20.83 693,-16.67 693,-16.67 693,-8.33 693,-8.33 693,-4.17 697.17,0 701.33,0 701.33,0 822.67,0 822.67,0 826.83,0 831,-4.17 831,-8.33 831,-8.33 831,-16.67 831,-16.67 831,-20.83 826.83,-25 822.67,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-19.5" x="703" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="724" text-anchor="start">FirrtlSourceAnnotation</text></a></g></g><!-- node0&#45;&gt;node5 --><g class="edge inheritance" id="graph1_0_5"><g id="a_inheritance|graph1_0_5"><a xlink:title="FirrtlSourceAnnotation is a subtype of FirrtlOption"><path d="M1349.12,-69.13C1249.38,-62.53 1026.7,-46.63 840,-25 837.14,-24.67 834.23,-24.32 831.29,-23.94" stroke="#d4d4d4" fill="none"></path><polygon points="1349.23,-71.59 1356.37,-69.61 1349.55,-66.7 1349.23,-71.59" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node6 --><g class="node class" id="graph1_6"><g id="a_class|graph1_6"><a xlink:title="firrtl.stage.InfoModeAnnotation" xlink:href="InfoModeAnnotation.html#inheritance-diagram"><path d="M968.17,-25C968.17,-25 857.83,-25 857.83,-25 853.67,-25 849.5,-20.83 849.5,-16.67 849.5,-16.67 849.5,-8.33 849.5,-8.33 849.5,-4.17 853.67,0 857.83,0 857.83,0 968.17,0 968.17,0 972.33,0 976.5,-4.17 976.5,-8.33 976.5,-8.33 976.5,-16.67 976.5,-16.67 976.5,-20.83 972.33,-25 968.17,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-19.5" x="860" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="881" text-anchor="start">InfoModeAnnotation</text></a></g></g><!-- node0&#45;&gt;node6 --><g class="edge inheritance" id="graph1_0_6"><g id="a_inheritance|graph1_0_6"><a xlink:title="InfoModeAnnotation is a subtype of FirrtlOption"><path d="M1348.81,-67.22C1269.46,-59.16 1115.43,-42.84 985,-25 982.24,-24.62 979.42,-24.23 976.58,-23.81" stroke="#d4d4d4" fill="none"></path><polygon points="1349.04,-69.7 1356.25,-67.97 1349.54,-64.83 1349.04,-69.7" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node7 --><g class="node class" id="graph1_7"><g id="a_class|graph1_7"><a xlink:title="firrtl.stage.InputAnnotationFileAnnotation" xlink:href="InputAnnotationFileAnnotation.html#inheritance-diagram"><path d="M1155.17,-25C1155.17,-25 1002.83,-25 1002.83,-25 998.67,-25 994.5,-20.83 994.5,-16.67 994.5,-16.67 994.5,-8.33 994.5,-8.33 994.5,-4.17 998.67,0 1002.83,0 1002.83,0 1155.17,0 1155.17,0 1159.33,0 1163.5,-4.17 1163.5,-8.33 1163.5,-8.33 1163.5,-16.67 1163.5,-16.67 1163.5,-20.83 1159.33,-25 1155.17,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-19.5" x="1005" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="1026" text-anchor="start">InputAnnotationFileAnnotation</text></a></g></g><!-- node0&#45;&gt;node7 --><g class="edge inheritance" id="graph1_0_7"><g id="a_inheritance|graph1_0_7"><a xlink:title="InputAnnotationFileAnnotation is a subtype of FirrtlOption"><path d="M1349.32,-62.88C1292.65,-52.53 1202.54,-36.07 1142.12,-25.03" stroke="#d4d4d4" fill="none"></path><polygon points="1349.08,-65.32 1356.41,-64.17 1349.96,-60.5 1349.08,-65.32" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node8 --><g class="node class" id="graph1_8"><g id="a_class|graph1_8"><a xlink:title="firrtl.stage.InputFileAnnotation" xlink:href="InputFileAnnotation.html#inheritance-diagram"><path d="M1296.67,-25C1296.67,-25 1189.33,-25 1189.33,-25 1185.17,-25 1181,-20.83 1181,-16.67 1181,-16.67 1181,-8.33 1181,-8.33 1181,-4.17 1185.17,0 1189.33,0 1189.33,0 1296.67,0 1296.67,0 1300.83,0 1305,-4.17 1305,-8.33 1305,-8.33 1305,-16.67 1305,-16.67 1305,-20.83 1300.83,-25 1296.67,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-19.5" x="1191" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="1212" text-anchor="start">InputFileAnnotation</text></a></g></g><!-- node0&#45;&gt;node8 --><g class="edge inheritance" id="graph1_0_8"><g id="a_inheritance|graph1_0_8"><a xlink:title="InputFileAnnotation is a subtype of FirrtlOption"><path d="M1364.2,-58.47C1336.74,-48.28 1300.03,-34.66 1274.23,-25.09" stroke="#d4d4d4" fill="none"></path><polygon points="1363.55,-60.85 1370.97,-60.98 1365.26,-56.25 1363.55,-60.85" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node9 --><g class="node object" id="graph1_9"><g id="a_object|graph1_9"><a xlink:title="firrtl.stage.LogClassNamesAnnotation" xlink:href="LogClassNamesAnnotation$.html#inheritance-diagram"><path d="M1472.67,-25C1472.67,-25 1331.33,-25 1331.33,-25 1327.17,-25 1323,-20.83 1323,-16.67 1323,-16.67 1323,-8.33 1323,-8.33 1323,-4.17 1327.17,0 1331.33,0 1331.33,0 1472.67,0 1472.67,0 1476.83,0 1481,-4.17 1481,-8.33 1481,-8.33 1481,-16.67 1481,-16.67 1481,-20.83 1476.83,-25 1472.67,-25" stroke="#103a51" fill="#103a51"></path><image xlink:href="../../lib/object_diagram.png" y="-19.5" x="1333" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="1354" text-anchor="start">LogClassNamesAnnotation</text></a></g></g><!-- node0&#45;&gt;node9 --><g class="edge inheritance" id="graph1_0_9"><g id="a_inheritance|graph1_0_9"><a xlink:title="LogClassNamesAnnotation is a subtype of FirrtlOption"><path d="M1402,-53.76C1402,-44.37 1402,-33.29 1402,-25.13" stroke="#d4d4d4" fill="none"></path><polygon points="1399.55,-53.84 1402,-60.84 1404.45,-53.84 1399.55,-53.84" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node10 --><g class="node class" id="graph1_10"><g id="a_class|graph1_10"><a xlink:title="firrtl.stage.LogLevelAnnotation" xlink:href="LogLevelAnnotation.html#inheritance-diagram"><path d="M1616.67,-25C1616.67,-25 1507.33,-25 1507.33,-25 1503.17,-25 1499,-20.83 1499,-16.67 1499,-16.67 1499,-8.33 1499,-8.33 1499,-4.17 1503.17,0 1507.33,0 1507.33,0 1616.67,0 1616.67,0 1620.83,0 1625,-4.17 1625,-8.33 1625,-8.33 1625,-16.67 1625,-16.67 1625,-20.83 1620.83,-25 1616.67,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-19.5" x="1509" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="1530" text-anchor="start">LogLevelAnnotation</text></a></g></g><!-- node0&#45;&gt;node10 --><g class="edge inheritance" id="graph1_0_10"><g id="a_inheritance|graph1_0_10"><a xlink:title="LogLevelAnnotation is a subtype of FirrtlOption"><path d="M1440.04,-58.47C1467.67,-48.28 1504.62,-34.66 1530.58,-25.09" stroke="#d4d4d4" fill="none"></path><polygon points="1438.95,-56.26 1433.23,-60.98 1440.64,-60.86 1438.95,-56.26" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node11 --><g class="node object" id="graph1_11"><g id="a_object|graph1_11"><a xlink:title="firrtl.stage.LogToFileAnnotation" xlink:href="LogToFileAnnotation$.html#inheritance-diagram"><path d="M1764.17,-25C1764.17,-25 1651.83,-25 1651.83,-25 1647.67,-25 1643.5,-20.83 1643.5,-16.67 1643.5,-16.67 1643.5,-8.33 1643.5,-8.33 1643.5,-4.17 1647.67,0 1651.83,0 1651.83,0 1764.17,0 1764.17,0 1768.33,0 1772.5,-4.17 1772.5,-8.33 1772.5,-8.33 1772.5,-16.67 1772.5,-16.67 1772.5,-20.83 1768.33,-25 1764.17,-25" stroke="#103a51" fill="#103a51"></path><image xlink:href="../../lib/object_diagram.png" y="-19.5" x="1654" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="1675" text-anchor="start">LogToFileAnnotation</text></a></g></g><!-- node0&#45;&gt;node11 --><g class="edge inheritance" id="graph1_0_11"><g id="a_inheritance|graph1_0_11"><a xlink:title="LogToFileAnnotation is a subtype of FirrtlOption"><path d="M1454.88,-62.3C1508.7,-51.93 1591.98,-35.87 1648.18,-25.03" stroke="#d4d4d4" fill="none"></path><polygon points="1454.22,-59.94 1447.81,-63.67 1455.15,-64.75 1454.22,-59.94" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node12 --><g class="node class" id="graph1_12"><g id="a_class|graph1_12"><a xlink:title="firrtl.stage.OutputAnnotationFileAnnotation" xlink:href="OutputAnnotationFileAnnotation.html#inheritance-diagram"><path d="M1959.17,-25C1959.17,-25 1798.83,-25 1798.83,-25 1794.67,-25 1790.5,-20.83 1790.5,-16.67 1790.5,-16.67 1790.5,-8.33 1790.5,-8.33 1790.5,-4.17 1794.67,0 1798.83,0 1798.83,0 1959.17,0 1959.17,0 1963.33,0 1967.5,-4.17 1967.5,-8.33 1967.5,-8.33 1967.5,-16.67 1967.5,-16.67 1967.5,-20.83 1963.33,-25 1959.17,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-19.5" x="1801" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="1822" text-anchor="start">OutputAnnotationFileAnnotation</text></a></g></g><!-- node0&#45;&gt;node12 --><g class="edge inheritance" id="graph1_0_12"><g id="a_inheritance|graph1_0_12"><a xlink:title="OutputAnnotationFileAnnotation is a subtype of FirrtlOption"><path d="M1454.87,-65.96C1535.9,-55.94 1691.75,-36.66 1790.29,-24.47" stroke="#d4d4d4" fill="none"></path><polygon points="1454.38,-63.55 1447.74,-66.84 1454.98,-68.41 1454.38,-63.55" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node13 --><g class="node class" id="graph1_13"><g id="a_class|graph1_13"><a xlink:title="firrtl.stage.OutputFileAnnotation" xlink:href="OutputFileAnnotation.html#inheritance-diagram"><path d="M2109.67,-25C2109.67,-25 1994.33,-25 1994.33,-25 1990.17,-25 1986,-20.83 1986,-16.67 1986,-16.67 1986,-8.33 1986,-8.33 1986,-4.17 1990.17,0 1994.33,0 1994.33,0 2109.67,0 2109.67,0 2113.83,0 2118,-4.17 2118,-8.33 2118,-8.33 2118,-16.67 2118,-16.67 2118,-20.83 2113.83,-25 2109.67,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-19.5" x="1996" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="2017" text-anchor="start">OutputFileAnnotation</text></a></g></g><!-- node0&#45;&gt;node13 --><g class="edge inheritance" id="graph1_0_13"><g id="a_inheritance|graph1_0_13"><a xlink:title="OutputFileAnnotation is a subtype of FirrtlOption"><path d="M1454.65,-69.38C1555.99,-63.11 1785.14,-47.61 1977,-25 1979.88,-24.66 1982.82,-24.3 1985.78,-23.91" stroke="#d4d4d4" fill="none"></path><polygon points="1454.41,-66.94 1447.58,-69.82 1454.71,-71.83 1454.41,-66.94" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node14 --><g class="node class" id="graph1_14"><g id="a_class|graph1_14"><a xlink:title="firrtl.stage.ProgramArgsAnnotation" xlink:href="ProgramArgsAnnotation.html#inheritance-diagram"><path d="M2273.17,-25C2273.17,-25 2144.83,-25 2144.83,-25 2140.67,-25 2136.5,-20.83 2136.5,-16.67 2136.5,-16.67 2136.5,-8.33 2136.5,-8.33 2136.5,-4.17 2140.67,0 2144.83,0 2144.83,0 2273.17,0 2273.17,0 2277.33,0 2281.5,-4.17 2281.5,-8.33 2281.5,-8.33 2281.5,-16.67 2281.5,-16.67 2281.5,-20.83 2277.33,-25 2273.17,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-19.5" x="2147" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="2168" text-anchor="start">ProgramArgsAnnotation</text></a></g></g><!-- node0&#45;&gt;node14 --><g class="edge inheritance" id="graph1_0_14"><g id="a_inheritance|graph1_0_14"><a xlink:title="ProgramArgsAnnotation is a subtype of FirrtlOption"><path d="M1455.2,-70.36C1575.26,-65.25 1876.28,-50.76 2127,-25 2130,-24.69 2133.07,-24.36 2136.16,-24" stroke="#d4d4d4" fill="none"></path><polygon points="1454.79,-67.93 1447.9,-70.67 1455,-72.82 1454.79,-67.93" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node15 --><g class="node class" id="graph1_15"><g id="a_class|graph1_15"><a xlink:title="firrtl.stage.RunFirrtlTransformAnnotation" xlink:href="RunFirrtlTransformAnnotation.html#inheritance-diagram"><path d="M2460.17,-25C2460.17,-25 2307.83,-25 2307.83,-25 2303.67,-25 2299.5,-20.83 2299.5,-16.67 2299.5,-16.67 2299.5,-8.33 2299.5,-8.33 2299.5,-4.17 2303.67,0 2307.83,0 2307.83,0 2460.17,0 2460.17,0 2464.33,0 2468.5,-4.17 2468.5,-8.33 2468.5,-8.33 2468.5,-16.67 2468.5,-16.67 2468.5,-20.83 2464.33,-25 2460.17,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-19.5" x="2310" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="2331" text-anchor="start">RunFirrtlTransformAnnotation</text></a></g></g><!-- node0&#45;&gt;node15 --><g class="edge inheritance" id="graph1_0_15"><g id="a_inheritance|graph1_0_15"><a xlink:title="RunFirrtlTransformAnnotation is a subtype of FirrtlOption"><path d="M1455.05,-70.95C1593.05,-66.66 1974.5,-52.99 2291,-25 2293.75,-24.76 2296.55,-24.49 2299.38,-24.22" stroke="#d4d4d4" fill="none"></path><polygon points="1454.8,-68.51 1447.88,-71.18 1454.95,-73.41 1454.8,-68.51" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node16 --><g class="node class" id="graph1_16"><g id="a_class|graph1_16"><a xlink:title="firrtl.stage.TargetDirAnnotation" xlink:href="TargetDirAnnotation.html#inheritance-diagram"><path d="M2607.17,-25C2607.17,-25 2494.83,-25 2494.83,-25 2490.67,-25 2486.5,-20.83 2486.5,-16.67 2486.5,-16.67 2486.5,-8.33 2486.5,-8.33 2486.5,-4.17 2490.67,0 2494.83,0 2494.83,0 2607.17,0 2607.17,0 2611.33,0 2615.5,-4.17 2615.5,-8.33 2615.5,-8.33 2615.5,-16.67 2615.5,-16.67 2615.5,-20.83 2611.33,-25 2607.17,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-19.5" x="2497" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="2518" text-anchor="start">TargetDirAnnotation</text></a></g></g><!-- node0&#45;&gt;node16 --><g class="edge inheritance" id="graph1_0_16"><g id="a_inheritance|graph1_0_16"><a xlink:title="TargetDirAnnotation is a subtype of FirrtlOption"><path d="M1454.97,-72.26C1611.69,-71.1 2086.53,-64.35 2478,-25 2480.68,-24.73 2483.41,-24.43 2486.17,-24.1" stroke="#d4d4d4" fill="none"></path><polygon points="1454.74,-69.81 1447.75,-72.31 1454.77,-74.71 1454.74,-69.81" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node17 --><g class="node class" id="graph1_17"><g id="a_class|graph1_17"><a xlink:title="firrtl.stage.TopNameAnnotation" xlink:href="TopNameAnnotation.html#inheritance-diagram"><path d="M2754.17,-25C2754.17,-25 2641.83,-25 2641.83,-25 2637.67,-25 2633.5,-20.83 2633.5,-16.67 2633.5,-16.67 2633.5,-8.33 2633.5,-8.33 2633.5,-4.17 2637.67,0 2641.83,0 2641.83,0 2754.17,0 2754.17,0 2758.33,0 2762.5,-4.17 2762.5,-8.33 2762.5,-8.33 2762.5,-16.67 2762.5,-16.67 2762.5,-20.83 2758.33,-25 2754.17,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-19.5" x="2644" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="2665" text-anchor="start">TopNameAnnotation</text></a></g></g><!-- node0&#45;&gt;node17 --><g class="edge inheritance" id="graph1_0_17"><g id="a_inheritance|graph1_0_17"><a xlink:title="TopNameAnnotation is a subtype of FirrtlOption"><path d="M1454.76,-72.66C1624.79,-72.7 2173.64,-69.16 2625,-25 2627.68,-24.74 2630.41,-24.44 2633.17,-24.12" stroke="#d4d4d4" fill="none"></path><polygon points="1454.67,-70.21 1447.66,-72.66 1454.66,-75.11 1454.67,-70.21" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node18 --><g class="node trait" id="graph1_18"><g id="a_trait|graph1_18"><a xlink:title="firrtl.options.HasScoptOptions" xlink:href="../options/HasScoptOptions.html#inheritance-diagram"><path d="M1452.17,-147C1452.17,-147 1351.83,-147 1351.83,-147 1347.67,-147 1343.5,-142.83 1343.5,-138.67 1343.5,-138.67 1343.5,-130.33 1343.5,-130.33 1343.5,-126.17 1347.67,-122 1351.83,-122 1351.83,-122 1452.17,-122 1452.17,-122 1456.33,-122 1460.5,-126.17 1460.5,-130.33 1460.5,-130.33 1460.5,-138.67 1460.5,-138.67 1460.5,-142.83 1456.33,-147 1452.17,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-141.5" x="1354" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="1375" text-anchor="start">HasScoptOptions</text></a></g></g><!-- node18&#45;&gt;node0 --><g class="edge inheritance" id="graph1_18_0"><g id="a_inheritance|graph1_18_0"><a xlink:title="FirrtlOption is a subtype of HasScoptOptions"><path d="M1402,-114.76C1402,-105.37 1402,-94.29 1402,-86.13" stroke="#d4d4d4" fill="none"></path><polygon points="1399.55,-114.84 1402,-121.84 1404.45,-114.84 1399.55,-114.84" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
-                <div id="diagram-controls" class="hiddenContent">
-                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
-                </div>
-              </div></div>
+            <div class="subClasses hiddenContent"><a href="CompilerAnnotation.html" class="extype" name="firrtl.stage.CompilerAnnotation">CompilerAnnotation</a>, <a href="FirrtlCircuitAnnotation.html" class="extype" name="firrtl.stage.FirrtlCircuitAnnotation">FirrtlCircuitAnnotation</a>, <a href="InfoModeAnnotation.html" class="extype" name="firrtl.stage.InfoModeAnnotation">InfoModeAnnotation</a>, <a href="OutputFileAnnotation.html" class="extype" name="firrtl.stage.OutputFileAnnotation">OutputFileAnnotation</a></div>
+          </div></div>
         
 
       <div id="mbrsel">
@@ -247,7 +247,7 @@
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="firrtl.stage.FirrtlOption"><span>FirrtlOption</span></li><li class="in" name="firrtl.options.HasScoptOptions"><span>HasScoptOptions</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="firrtl.stage.FirrtlOption"><span>FirrtlOption</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -269,29 +269,10 @@
 
         
 
-        <div class="values members">
-              <h3>Abstract Value Members</h3>
-              <ol><li name="firrtl.options.HasScoptOptions#addOptions" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="addOptions(p:scopt.OptionParser[firrtl.AnnotationSeq]):Unit"></a><a id="addOptions(OptionParser[AnnotationSeq]):Unit"></a>
-      <span class="permalink">
-      <a href="../../firrtl/stage/FirrtlOption.html#addOptions(p:scopt.OptionParser[firrtl.AnnotationSeq]):Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">abstract </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">addOptions</span><span class="params">(<span name="p">p: <span class="extype" name="scopt.OptionParser">OptionParser</span>[<a href="../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">This method will be called to add options to an OptionParser</p><div class="fullcomment"><div class="comment cmt"><p>This method will be called to add options to an OptionParser</p></div><dl class="paramcmts block"><dt class="param">p</dt><dd class="cmt"><p>an option parser</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../options/HasScoptOptions.html" class="extype" name="firrtl.options.HasScoptOptions">HasScoptOptions</a></dd></dl></div>
-    </li></ol>
-            </div>
+        
 
         <div class="values members">
-              <h3>Concrete Value Members</h3>
+              <h3>Value Members</h3>
               <ol>
                 <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
@@ -653,9 +634,7 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="firrtl.options.HasScoptOptions">
-              <h3>Inherited from <a href="../options/HasScoptOptions.html" class="extype" name="firrtl.options.HasScoptOptions">HasScoptOptions</a></h3>
-            </div><div class="parent" name="scala.AnyRef">
+        <div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>

@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.2-050719-SNAPSHOT - firrtl.EmittedCircuitAnnotation</title>
-          <meta name="description" content="firrtl 1.2 - 050719 - SNAPSHOT - firrtl.EmittedCircuitAnnotation" />
-          <meta name="keywords" content="firrtl 1.2 050719 SNAPSHOT firrtl.EmittedCircuitAnnotation" />
+          <title>firrtl 1.2-081319-SNAPSHOT - firrtl.EmittedCircuitAnnotation</title>
+          <meta name="description" content="firrtl 1.2 - 081319 - SNAPSHOT - firrtl.EmittedCircuitAnnotation" />
+          <meta name="keywords" content="firrtl 1.2 081319 SNAPSHOT firrtl.EmittedCircuitAnnotation" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.2-050719-SNAPSHOT</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.2-081319-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -133,6 +133,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
+    </li><li name="firrtl.checks" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="checks"></a><a id="checks:checks"></a>
+      <span class="permalink">
+      <a href="../firrtl/index.html#checks" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="checks/index.html"><span class="name">checks</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
     </li><li name="firrtl.graph" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="graph"></a><a id="graph:graph"></a>
       <span class="permalink">
@@ -225,10 +241,15 @@
         <span class="kind">package</span>
       </span>
       <span class="symbol">
-        <a title="" href="stage/index.html"><span class="name">stage</span></a>
+        <a title="The stage package provides an implementation of the FIRRTL compiler using the firrtl.options package." href="stage/index.html"><span class="name">stage</span></a>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
+      <p class="shortcomment cmt">The <a href="stage/index.html" class="extype" name="firrtl.stage">stage</a> package provides an implementation of the FIRRTL compiler using the <a href="options/index.html" class="extype" name="firrtl.options">firrtl.options</a> package.</p><div class="fullcomment"><div class="comment cmt"><p>The <a href="stage/index.html" class="extype" name="firrtl.stage">stage</a> package provides an implementation of the FIRRTL compiler using the <a href="options/index.html" class="extype" name="firrtl.options">firrtl.options</a> package. This
+primarily consists of:</p><ul><li><a href="stage/FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a>, the internal and external (command line) interface to the FIRRTL compiler</li><li>A number of <a href="options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a>s that support and compartmentalize the individual operations of
+    <a href="stage/FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a></li><li><a href="stage/FirrtlOptions.html" class="extype" name="firrtl.stage.FirrtlOptions">FirrtlOptions</a>, a class representing options that are necessary to drive the <a href="stage/FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a> and its
+    <a href="options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a>s</li><li><a href="stage/package$$FirrtlOptionsView$.html" class="extype" name="firrtl.stage.FirrtlOptionsView">FirrtlOptionsView</a>, a utility that constructs an <a href="options/OptionsView.html" class="extype" name="firrtl.options.OptionsView">OptionsView</a> of <a href="stage/FirrtlOptions.html" class="extype" name="firrtl.stage.FirrtlOptions">FirrtlOptions</a>
+    from an <a href="AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a></li><li><a href="stage/FirrtlCli.html" class="extype" name="firrtl.stage.FirrtlCli">FirrtlCli</a>, the command line options that the <a href="stage/FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a> supports</li><li><a href="stage/FirrtlStageUtils$.html" class="extype" name="firrtl.stage.FirrtlStageUtils">FirrtlStageUtils</a> containing miscellaneous utilities for <a href="stage/index.html" class="extype" name="firrtl.stage">stage</a>
+</li></ul></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
     </li><li name="firrtl.transforms" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="transforms"></a><a id="transforms:transforms"></a>
       <span class="permalink">
@@ -362,7 +383,7 @@
                         <a class="object" href="Dshlw$.html" title=""></a>
                         <a href="Dshlw$.html" title="">Dshlw</a>
                       </li><li class="current-entities indented1">
-                        <span class="separator"></span>
+                        <a class="object" href="EmitAllModulesAnnotation$.html" title=""></a>
                         <a class="class" href="EmitAllModulesAnnotation.html" title=""></a>
                         <a href="EmitAllModulesAnnotation.html" title="">EmitAllModulesAnnotation</a>
                       </li><li class="current-entities indented1">
@@ -370,7 +391,7 @@
                         <a class="trait" href="EmitAnnotation.html" title=""></a>
                         <a href="EmitAnnotation.html" title="">EmitAnnotation</a>
                       </li><li class="current-entities indented1">
-                        <span class="separator"></span>
+                        <a class="object" href="EmitCircuitAnnotation$.html" title=""></a>
                         <a class="class" href="EmitCircuitAnnotation.html" title=""></a>
                         <a href="EmitCircuitAnnotation.html" title="">EmitCircuitAnnotation</a>
                       </li><li class="current-entities indented1">
@@ -735,6 +756,10 @@
                         <a href="SystemVerilogCompiler.html" title="Currently just an alias for the VerilogCompiler">SystemVerilogCompiler</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
+                        <a class="class" href="SystemVerilogEmitter.html" title=""></a>
+                        <a href="SystemVerilogEmitter.html" title="">SystemVerilogEmitter</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
                         <a class="class" href="Transform.html" title="The basic unit of operating on a Firrtl AST"></a>
                         <a href="Transform.html" title="The basic unit of operating on a Firrtl AST">Transform</a>
                       </li><li class="current-entities indented1">
@@ -745,6 +770,10 @@
                         <span class="separator"></span>
                         <a class="object" href="UnknownForm$.html" title="Unknown Form"></a>
                         <a href="UnknownForm$.html" title="Unknown Form">UnknownForm</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="object" href="UnknownKind$.html" title=""></a>
+                        <a href="UnknownKind$.html" title="">UnknownKind</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="object" href="Utils$.html" title=""></a>
@@ -891,17 +920,7 @@
               Known Subclasses
             </span>
             <div class="subClasses hiddenContent"><a href="EmittedFirrtlCircuitAnnotation.html" class="extype" name="firrtl.EmittedFirrtlCircuitAnnotation">EmittedFirrtlCircuitAnnotation</a>, <a href="EmittedVerilogCircuitAnnotation.html" class="extype" name="firrtl.EmittedVerilogCircuitAnnotation">EmittedVerilogCircuitAnnotation</a></div>
-          </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
-                <span class="toggle diagram-link">
-                  Type Hierarchy
-                </span>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 370.50 155.00" height="155pt" width="371pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 151)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-151 366.5,-151 366.5,4 -4,4" stroke="transparent" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this trait" id="graph1_0"><g id="a_this trait|graph1_0"><a xlink:title="firrtl.EmittedCircuitAnnotation (this trait)" xlink:href="#inheritance-diagram"><path d="M250.17,-86C250.17,-86 107.83,-86 107.83,-86 103.67,-86 99.5,-81.83 99.5,-77.67 99.5,-77.67 99.5,-69.33 99.5,-69.33 99.5,-65.17 103.67,-61 107.83,-61 107.83,-61 250.17,-61 250.17,-61 254.33,-61 258.5,-65.17 258.5,-69.33 258.5,-69.33 258.5,-77.67 258.5,-77.67 258.5,-81.83 254.33,-86 250.17,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../lib/trait_diagram.png" y="-80.5" x="110" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="131" text-anchor="start">EmittedCircuitAnnotation[T]</text></a></g></g><!-- node1 --><g class="node class" id="graph1_1"><g id="a_class|graph1_1"><a xlink:title="firrtl.EmittedFirrtlCircuitAnnotation" xlink:href="EmittedFirrtlCircuitAnnotation.html#inheritance-diagram"><path d="M159.67,-25C159.67,-25 8.33,-25 8.33,-25 4.17,-25 0,-20.83 0,-16.67 0,-16.67 0,-8.33 0,-8.33 0,-4.17 4.17,0 8.33,0 8.33,0 159.67,0 159.67,0 163.83,0 168,-4.17 168,-8.33 168,-8.33 168,-16.67 168,-16.67 168,-20.83 163.83,-25 159.67,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../lib/class_diagram.png" y="-19.5" x="10" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="31" text-anchor="start">EmittedFirrtlCircuitAnnotation</text></a></g></g><!-- node0&#45;&gt;node1 --><g class="edge inheritance" id="graph1_0_1"><g id="a_inheritance|graph1_0_1"><a xlink:title="EmittedFirrtlCircuitAnnotation is a subtype of EmittedCircuitAnnotation[T]"><path d="M154.09,-57.03C138.01,-47.04 117.42,-34.26 102.73,-25.13" stroke="#d4d4d4" fill="none"></path><polygon points="152.99,-59.23 160.23,-60.84 155.58,-55.07 152.99,-59.23" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node class" id="graph1_2"><g id="a_class|graph1_2"><a xlink:title="firrtl.EmittedVerilogCircuitAnnotation" xlink:href="EmittedVerilogCircuitAnnotation.html#inheritance-diagram"><path d="M354.17,-25C354.17,-25 193.83,-25 193.83,-25 189.67,-25 185.5,-20.83 185.5,-16.67 185.5,-16.67 185.5,-8.33 185.5,-8.33 185.5,-4.17 189.67,0 193.83,0 193.83,0 354.17,0 354.17,0 358.33,0 362.5,-4.17 362.5,-8.33 362.5,-8.33 362.5,-16.67 362.5,-16.67 362.5,-20.83 358.33,-25 354.17,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../lib/class_diagram.png" y="-19.5" x="196" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="217" text-anchor="start">EmittedVerilogCircuitAnnotation</text></a></g></g><!-- node0&#45;&gt;node2 --><g class="edge inheritance" id="graph1_0_2"><g id="a_inheritance|graph1_0_2"><a xlink:title="EmittedVerilogCircuitAnnotation is a subtype of EmittedCircuitAnnotation[T]"><path d="M203.91,-57.03C219.99,-47.04 240.58,-34.26 255.27,-25.13" stroke="#d4d4d4" fill="none"></path><polygon points="202.42,-55.07 197.77,-60.84 205.01,-59.23 202.42,-55.07" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3 --><g class="node trait" id="graph1_3"><g id="a_trait|graph1_3"><a xlink:title="firrtl.EmittedAnnotation" xlink:href="EmittedAnnotation.html#inheritance-diagram"><path d="M236.67,-147C236.67,-147 121.33,-147 121.33,-147 117.17,-147 113,-142.83 113,-138.67 113,-138.67 113,-130.33 113,-130.33 113,-126.17 117.17,-122 121.33,-122 121.33,-122 236.67,-122 236.67,-122 240.83,-122 245,-126.17 245,-130.33 245,-130.33 245,-138.67 245,-138.67 245,-142.83 240.83,-147 236.67,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../lib/trait_diagram.png" y="-141.5" x="123" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="144" text-anchor="start">EmittedAnnotation[T]</text></a></g></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph1_3_0"><g id="a_inheritance|graph1_3_0"><a xlink:title="EmittedCircuitAnnotation[T] is a subtype of EmittedAnnotation[T]"><path d="M179,-114.76C179,-105.37 179,-94.29 179,-86.13" stroke="#d4d4d4" fill="none"></path><polygon points="176.55,-114.84 179,-121.84 181.45,-114.84 176.55,-114.84" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
-                <div id="diagram-controls" class="hiddenContent">
-                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
-                </div>
-              </div></div>
+          </div></div>
         
 
       <div id="mbrsel">

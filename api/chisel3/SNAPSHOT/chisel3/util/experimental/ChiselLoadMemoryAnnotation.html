@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.2-050719-SNAPSHOT - chisel3.util.experimental.ChiselLoadMemoryAnnotation</title>
-          <meta name="description" content="chisel3 3.2 - 050719 - SNAPSHOT - chisel3.util.experimental.ChiselLoadMemoryAnnotation" />
-          <meta name="keywords" content="chisel3 3.2 050719 SNAPSHOT chisel3.util.experimental.ChiselLoadMemoryAnnotation" />
+          <title>chisel3 3.2-081319-SNAPSHOT - chisel3.util.experimental.ChiselLoadMemoryAnnotation</title>
+          <meta name="description" content="chisel3 3.2 - 081319 - SNAPSHOT - chisel3.util.experimental.ChiselLoadMemoryAnnotation" />
+          <meta name="keywords" content="chisel3 3.2 081319 SNAPSHOT chisel3.util.experimental.ChiselLoadMemoryAnnotation" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.2-050719-SNAPSHOT</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.2-081319-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -69,9 +69,9 @@
       </span>
       
       <p class="shortcomment cmt">This is the documentation for Chisel.</p><div class="fullcomment"><div class="comment cmt"><p>This is the documentation for Chisel.</p><h4> Package structure </h4><p>The <a href="../../index.html" class="extype" name="chisel3">chisel3</a> package presents the public API of Chisel.
-It contains the concrete core types <a href="../../core/UInt.html" class="extype" name="chisel3.core.UInt"><code>UInt</code></a>, <a href="../../core/SInt.html" class="extype" name="chisel3.core.SInt"><code>SInt</code></a>, <a href="../../core/Bool.html" class="extype" name="chisel3.core.Bool"><code>Bool</code></a>, <a href="../../core/FixedPoint.html" class="extype" name="chisel3.core.FixedPoint"><code>FixedPoint</code></a>, <a href="../../core/Clock.html" class="extype" name="chisel3.core.Clock"><code>Clock</code></a>, and <a href="../../core/Reg$.html" class="extype" name="chisel3.core.Reg"><code>Reg</code></a>,
-the abstract types <a href="../../core/Bits.html" class="extype" name="chisel3.core.Bits"><code>Bits</code></a>, <a href="../../core/Aggregate.html" class="extype" name="chisel3.core.Aggregate"><code>Aggregate</code></a>, and <a href="../../core/Data.html" class="extype" name="chisel3.core.Data"><code>Data</code></a>,
-and the aggregate types <a href="../../core/Bundle.html" class="extype" name="chisel3.core.Bundle"><code>Bundle</code></a> and <a href="../../core/Vec.html" class="extype" name="chisel3.core.Vec"><code>Vec</code></a>.</p><p>The <a href="../../../Chisel/index.html" class="extype" name="Chisel">Chisel</a> package is a compatibility layer that attempts to provide chisel2 compatibility in chisel3.</p><p>Utility objects and methods are found in the <a href="../index.html" class="extype" name="chisel3.util"><code>util</code></a> package.</p><p>The <a href="../../testers/index.html" class="extype" name="chisel3.testers"><code>testers</code></a> package defines the basic interface for chisel testers.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+It contains the concrete core types <a href="../../UInt.html" class="extype" name="chisel3.UInt"><code>UInt</code></a>, <a href="../../SInt.html" class="extype" name="chisel3.SInt"><code>SInt</code></a>, <a href="../../Bool.html" class="extype" name="chisel3.Bool"><code>Bool</code></a>, <a href="../../experimental/FixedPoint.html" class="extype" name="chisel3.experimental.FixedPoint"><code>FixedPoint</code></a>, <a href="../../Clock.html" class="extype" name="chisel3.Clock"><code>Clock</code></a>, and <a href="../../Reg$.html" class="extype" name="chisel3.Reg"><code>Reg</code></a>,
+the abstract types <a href="../../Bits.html" class="extype" name="chisel3.Bits"><code>Bits</code></a>, <a href="../../Aggregate.html" class="extype" name="chisel3.Aggregate"><code>Aggregate</code></a>, and <a href="../../Data.html" class="extype" name="chisel3.Data"><code>Data</code></a>,
+and the aggregate types <a href="../../Bundle.html" class="extype" name="chisel3.Bundle"><code>Bundle</code></a> and <a href="../../Vec.html" class="extype" name="chisel3.Vec"><code>Vec</code></a>.</p><p>The <a href="../../../Chisel/index.html" class="extype" name="Chisel">Chisel</a> package is a compatibility layer that attempts to provide chisel2 compatibility in chisel3.</p><p>Utility objects and methods are found in the <a href="../index.html" class="extype" name="chisel3.util"><code>util</code></a> package.</p><p>The <a href="../../testers/index.html" class="extype" name="chisel3.testers"><code>testers</code></a> package defines the basic interface for chisel testers.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
     </li><li name="_root_.chisel3" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="chisel3"></a><a id="chisel3:chisel3"></a>
       <span class="permalink">
@@ -84,11 +84,10 @@ and the aggregate types <a href="../../core/Bundle.html" class="extype" name="ch
         <span class="kind">package</span>
       </span>
       <span class="symbol">
-        <a title="The chisel3 package contains the chisel3 API." href="../../index.html"><span class="name">chisel3</span></a>
+        <a title="This package contains the main chisel3 API." href="../../index.html"><span class="name">chisel3</span></a>
       </span>
       
-      <p class="shortcomment cmt">The chisel3 package contains the chisel3 API.</p><div class="fullcomment"><div class="comment cmt"><p>The chisel3 package contains the chisel3 API.
-It maps core components into the public chisel3 namespace.
+      <p class="shortcomment cmt">This package contains the main chisel3 API.</p><div class="fullcomment"><div class="comment cmt"><p>This package contains the main chisel3 API.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
     </li><li name="chisel3.util" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="util"></a><a id="util:util"></a>
@@ -148,12 +147,12 @@ functions
                         <a href="InlineInstance.html" title="Inlines an instance of a module">InlineInstance</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="class" href="LoadMemoryTransform.html" title="This transform only is activated if verilog is being generated (determined by presence of the proper emit annotation) when activated it creates additional verilog files that contain modules bound to the modules that contain an initializable memory"></a>
-                        <a href="LoadMemoryTransform.html" title="This transform only is activated if verilog is being generated (determined by presence of the proper emit annotation) when activated it creates additional verilog files that contain modules bound to the modules that contain an initializable memory">LoadMemoryTransform</a>
+                        <a class="class" href="LoadMemoryTransform.html" title="This transform only is activated if Verilog is being generated (determined by presence of the proper emit annotation) when activated it creates additional Verilog files that contain modules bound to the modules that contain an initializable memory"></a>
+                        <a href="LoadMemoryTransform.html" title="This transform only is activated if Verilog is being generated (determined by presence of the proper emit annotation) when activated it creates additional Verilog files that contain modules bound to the modules that contain an initializable memory">LoadMemoryTransform</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="object" href="loadMemoryFromFile$.html" title=""></a>
-                        <a href="loadMemoryFromFile$.html" title="">loadMemoryFromFile</a>
+                        <a class="object" href="loadMemoryFromFile$.html" title="loadMemoryFromFile is an annotation generator that helps with loading a memory from a text file."></a>
+                        <a href="loadMemoryFromFile$.html" title="loadMemoryFromFile is an annotation generator that helps with loading a memory from a text file.">loadMemoryFromFile</a>
                       </li>
               </ul>
             </div>
@@ -177,28 +176,18 @@ functions
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">ChiselLoadMemoryAnnotation</span><span class="tparams">[<span name="T">T &lt;: <a href="../../index.html#Data=chisel3.core.Data" class="extmbr" name="chisel3.Data">Data</a></span>]</span><span class="params">(<span name="target">target: <a href="../../index.html#MemBase[T&lt;:chisel3.package.Data]=chisel3.core.MemBase[T]" class="extmbr" name="chisel3.MemBase">MemBase</a>[<span class="extype" name="chisel3.util.experimental.ChiselLoadMemoryAnnotation.T">T</span>]</span>, <span name="fileName">fileName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="hexOrBinary">hexOrBinary: <span class="extype" name="firrtl.annotations.MemoryLoadFileType.FileType">FileType</span> = <span class="symbol">MemoryLoadFileType.Hex</span></span>)</span><span class="result"> extends <a href="../../package$$experimental$.html#ChiselAnnotation=chisel3.core.ChiselAnnotation" class="extmbr" name="chisel3.experimental.ChiselAnnotation">ChiselAnnotation</a> with <a href="../../package$$experimental$.html#RunFirrtlTransform=chisel3.core.RunFirrtlTransform" class="extmbr" name="chisel3.experimental.RunFirrtlTransform">RunFirrtlTransform</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <span class="name">ChiselLoadMemoryAnnotation</span><span class="tparams">[<span name="T">T &lt;: <a href="../../Data.html" class="extype" name="chisel3.Data">Data</a></span>]</span><span class="params">(<span name="target">target: <a href="../../MemBase.html" class="extype" name="chisel3.MemBase">MemBase</a>[<span class="extype" name="chisel3.util.experimental.ChiselLoadMemoryAnnotation.T">T</span>]</span>, <span name="fileName">fileName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="hexOrBinary">hexOrBinary: <span class="extype" name="firrtl.annotations.MemoryLoadFileType.FileType">FileType</span> = <span class="symbol">MemoryLoadFileType.Hex</span></span>)</span><span class="result"> extends <a href="../../experimental/ChiselAnnotation.html" class="extype" name="chisel3.experimental.ChiselAnnotation">ChiselAnnotation</a> with <a href="../../experimental/RunFirrtlTransform.html" class="extype" name="chisel3.experimental.RunFirrtlTransform">RunFirrtlTransform</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       </h4>
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>This is the annotation created when using <a href="loadMemoryFromFile$.html" class="extype" name="chisel3.util.experimental.loadMemoryFromFile">loadMemoryFromFile</a>, it records the memory, the load file
-and the format of the file.</p></div><dl class="paramcmts block"><dt class="param">target</dt><dd class="cmt"><p>memory to load</p></dd><dt class="param">fileName</dt><dd class="cmt"><p>name of input file</p></dd><dt class="param">hexOrBinary</dt><dd class="cmt"><p>use $readmemh or $readmemb, i.e. hex or binary text input, default is hex</p></dd></dl><div class="toggleContainer block">
+and the format of the file.</p></div><dl class="paramcmts block"><dt class="param">target</dt><dd class="cmt"><p>memory to load</p></dd><dt class="param">fileName</dt><dd class="cmt"><p>name of input file</p></dd><dt class="param">hexOrBinary</dt><dd class="cmt"><p>use $readmemh or $readmemb, i.e. hex or binary text input, default is hex</p></dd></dl><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/master//src/main/scala/chisel3/util/experimental/LoadMemoryTransform.scala" target="_blank">LoadMemoryTransform.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.12.6/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="http://www.scala-lang.org/api/2.12.6/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/Equals.html#scala.Equals" class="extype" name="scala.Equals">Equals</a>, <a href="../../core/RunFirrtlTransform.html" class="extype" name="chisel3.core.RunFirrtlTransform">RunFirrtlTransform</a>, <a href="../../core/ChiselAnnotation.html" class="extype" name="chisel3.core.ChiselAnnotation">ChiselAnnotation</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
-        </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
-                <span class="toggle diagram-link">
-                  Type Hierarchy
-                </span>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 471.00 118.00" height="118pt" width="471pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 114)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-114 467,-114 467,4 -4,4" stroke="transparent" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this class" id="graph1_0"><g id="a_this class|graph1_0"><a xlink:title="chisel3.util.experimental.ChiselLoadMemoryAnnotation (this class)" xlink:href="#inheritance-diagram"><path d="M336.17,-49C336.17,-49 172.83,-49 172.83,-49 168.67,-49 164.5,-44.83 164.5,-40.67 164.5,-40.67 164.5,-32.33 164.5,-32.33 164.5,-28.17 168.67,-24 172.83,-24 172.83,-24 336.17,-24 336.17,-24 340.33,-24 344.5,-28.17 344.5,-32.33 344.5,-32.33 344.5,-40.67 344.5,-40.67 344.5,-44.83 340.33,-49 336.17,-49" stroke="#418565" fill="#418565"></path><image xlink:href="../../../lib/class_diagram.png" y="-43.5" x="174.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-34.1" x="195.5" text-anchor="start">ChiselLoadMemoryAnnotation[T]</text></a></g></g><!-- node1 --><g class="node trait" id="graph1_1"><g id="a_trait|graph1_1"><a xlink:title="chisel3.core.ChiselAnnotation" xlink:href="../../core/ChiselAnnotation.html#inheritance-diagram"><path d="M106.67,-110C106.67,-110 8.33,-110 8.33,-110 4.17,-110 0,-105.83 0,-101.67 0,-101.67 0,-93.33 0,-93.33 0,-89.17 4.17,-85 8.33,-85 8.33,-85 106.67,-85 106.67,-85 110.83,-85 115,-89.17 115,-93.33 115,-93.33 115,-101.67 115,-101.67 115,-105.83 110.83,-110 106.67,-110" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-104.5" x="10.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-95.1" x="31.5" text-anchor="start">ChiselAnnotation</text></a></g></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph1_1_0"><g id="a_inheritance|graph1_1_0"><a xlink:title="ChiselLoadMemoryAnnotation[T] is a subtype of ChiselAnnotation"><path d="M103.05,-82.86C137.2,-72.63 183.44,-58.78 215.81,-49.09" stroke="#d4d4d4" fill="none"></path><polygon points="101.95,-80.63 95.95,-84.98 103.36,-85.32 101.95,-80.63" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node trait" id="graph1_2"><g id="a_trait|graph1_2"><a xlink:title="chisel3.core.RunFirrtlTransform" xlink:href="../../core/RunFirrtlTransform.html#inheritance-diagram"><path d="M249.17,-110C249.17,-110 141.83,-110 141.83,-110 137.67,-110 133.5,-105.83 133.5,-101.67 133.5,-101.67 133.5,-93.33 133.5,-93.33 133.5,-89.17 137.67,-85 141.83,-85 141.83,-85 249.17,-85 249.17,-85 253.33,-85 257.5,-89.17 257.5,-93.33 257.5,-93.33 257.5,-101.67 257.5,-101.67 257.5,-105.83 253.33,-110 249.17,-110" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-104.5" x="143.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-95.1" x="164.5" text-anchor="start">RunFirrtlTransform</text></a></g></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph1_2_0"><g id="a_inheritance|graph1_2_0"><a xlink:title="ChiselLoadMemoryAnnotation[T] is a subtype of RunFirrtlTransform"><path d="M212.31,-79.69C222.08,-69.92 234.15,-57.85 242.87,-49.13" stroke="#d4d4d4" fill="none"></path><polygon points="210.37,-78.16 207.16,-84.84 213.84,-81.63 210.37,-78.16" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3 --><g class="node trait" id="graph1_3"><g id="a_trait|graph1_3"><a xlink:title="scala.Product"><path d="M343.17,-110C343.17,-110 283.83,-110 283.83,-110 279.67,-110 275.5,-105.83 275.5,-101.67 275.5,-101.67 275.5,-93.33 275.5,-93.33 275.5,-89.17 279.67,-85 283.83,-85 283.83,-85 343.17,-85 343.17,-85 347.33,-85 351.5,-89.17 351.5,-93.33 351.5,-93.33 351.5,-101.67 351.5,-101.67 351.5,-105.83 347.33,-110 343.17,-110" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-104.5" x="285.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-95.1" x="306.5" text-anchor="start">Product</text></a></g></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph1_3_0"><g id="a_inheritance|graph1_3_0"><a xlink:title="ChiselLoadMemoryAnnotation[T] is a subtype of Product"><path d="M296.69,-79.69C286.92,-69.92 274.85,-57.85 266.13,-49.13" stroke="#d4d4d4" fill="none"></path><polygon points="295.16,-81.63 301.84,-84.84 298.63,-78.16 295.16,-81.63" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node4 --><g class="node trait" id="graph1_4"><g id="a_trait|graph1_4"><a xlink:title="scala.Serializable"><path d="M454.67,-110C454.67,-110 378.33,-110 378.33,-110 374.17,-110 370,-105.83 370,-101.67 370,-101.67 370,-93.33 370,-93.33 370,-89.17 374.17,-85 378.33,-85 378.33,-85 454.67,-85 454.67,-85 458.83,-85 463,-89.17 463,-93.33 463,-93.33 463,-101.67 463,-101.67 463,-105.83 458.83,-110 454.67,-110" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-104.5" x="380.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-95.1" x="401.5" text-anchor="start">Serializable</text></a></g></g><!-- node4&#45;&gt;node0 --><g class="edge inheritance" id="graph1_4_0"><g id="a_inheritance|graph1_4_0"><a xlink:title="ChiselLoadMemoryAnnotation[T] is a subtype of Serializable"><path d="M377.98,-82.47C350.01,-72.28 312.6,-58.66 286.32,-49.09" stroke="#d4d4d4" fill="none"></path><polygon points="377.46,-84.89 384.88,-84.98 379.14,-80.29 377.46,-84.89" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
-                <div id="diagram-controls" class="hiddenContent">
-                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
-                </div>
-              </div></div>
+          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.12.6/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="http://www.scala-lang.org/api/2.12.6/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/Equals.html#scala.Equals" class="extype" name="scala.Equals">Equals</a>, <a href="../../experimental/RunFirrtlTransform.html" class="extype" name="chisel3.experimental.RunFirrtlTransform">RunFirrtlTransform</a>, <a href="../../experimental/ChiselAnnotation.html" class="extype" name="chisel3.experimental.ChiselAnnotation">ChiselAnnotation</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+        </div></div>
         
 
       <div id="mbrsel">
@@ -223,7 +212,7 @@ and the format of the file.</p></div><dl class="paramcmts block"><dt class="para
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="chisel3.util.experimental.ChiselLoadMemoryAnnotation"><span>ChiselLoadMemoryAnnotation</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="chisel3.core.RunFirrtlTransform"><span>RunFirrtlTransform</span></li><li class="in" name="chisel3.core.ChiselAnnotation"><span>ChiselAnnotation</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="chisel3.util.experimental.ChiselLoadMemoryAnnotation"><span>ChiselLoadMemoryAnnotation</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="chisel3.experimental.RunFirrtlTransform"><span>RunFirrtlTransform</span></li><li class="in" name="chisel3.experimental.ChiselAnnotation"><span>ChiselAnnotation</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -255,7 +244,7 @@ and the format of the file.</p></div><dl class="paramcmts block"><dt class="para
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">ChiselLoadMemoryAnnotation</span><span class="params">(<span name="target">target: <a href="../../index.html#MemBase[T&lt;:chisel3.package.Data]=chisel3.core.MemBase[T]" class="extmbr" name="chisel3.MemBase">MemBase</a>[<span class="extype" name="chisel3.util.experimental.ChiselLoadMemoryAnnotation.T">T</span>]</span>, <span name="fileName">fileName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="hexOrBinary">hexOrBinary: <span class="extype" name="firrtl.annotations.MemoryLoadFileType.FileType">FileType</span> = <span class="symbol">MemoryLoadFileType.Hex</span></span>)</span>
+        <span class="name">ChiselLoadMemoryAnnotation</span><span class="params">(<span name="target">target: <a href="../../MemBase.html" class="extype" name="chisel3.MemBase">MemBase</a>[<span class="extype" name="chisel3.util.experimental.ChiselLoadMemoryAnnotation.T">T</span>]</span>, <span name="fileName">fileName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="hexOrBinary">hexOrBinary: <span class="extype" name="firrtl.annotations.MemoryLoadFileType.FileType">FileType</span> = <span class="symbol">MemoryLoadFileType.Hex</span></span>)</span>
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">target</dt><dd class="cmt"><p>memory to load</p></dd><dt class="param">fileName</dt><dd class="cmt"><p>name of input file</p></dd><dt class="param">hexOrBinary</dt><dd class="cmt"><p>use $readmemh or $readmemb, i.e. hex or binary text input, default is hex</p></dd></dl></div>
@@ -544,7 +533,7 @@ and the format of the file.</p></div><dl class="paramcmts block"><dt class="para
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">target</span><span class="result">: <a href="../../index.html#MemBase[T&lt;:chisel3.package.Data]=chisel3.core.MemBase[T]" class="extmbr" name="chisel3.MemBase">MemBase</a>[<span class="extype" name="chisel3.util.experimental.ChiselLoadMemoryAnnotation.T">T</span>]</span>
+        <span class="name">target</span><span class="result">: <a href="../../MemBase.html" class="extype" name="chisel3.MemBase">MemBase</a>[<span class="extype" name="chisel3.util.experimental.ChiselLoadMemoryAnnotation.T">T</span>]</span>
       </span>
       
       
@@ -563,7 +552,7 @@ and the format of the file.</p></div><dl class="paramcmts block"><dt class="para
         <span class="name">toFirrtl</span><span class="result">: <span class="extype" name="firrtl.annotations.LoadMemoryAnnotation">LoadMemoryAnnotation</span></span>
       </span>
       
-      <p class="shortcomment cmt">Conversion to FIRRTL Annotation</p><div class="fullcomment"><div class="comment cmt"><p>Conversion to FIRRTL Annotation</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="chisel3.util.experimental.ChiselLoadMemoryAnnotation">ChiselLoadMemoryAnnotation</a> → <a href="../../core/ChiselAnnotation.html" class="extype" name="chisel3.core.ChiselAnnotation">ChiselAnnotation</a></dd></dl></div>
+      <p class="shortcomment cmt">Conversion to FIRRTL Annotation</p><div class="fullcomment"><div class="comment cmt"><p>Conversion to FIRRTL Annotation</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="chisel3.util.experimental.ChiselLoadMemoryAnnotation">ChiselLoadMemoryAnnotation</a> → <a href="../../experimental/ChiselAnnotation.html" class="extype" name="chisel3.experimental.ChiselAnnotation">ChiselAnnotation</a></dd></dl></div>
     </li><li name="chisel3.util.experimental.ChiselLoadMemoryAnnotation#transformClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="transformClass:Class[chisel3.util.experimental.LoadMemoryTransform]"></a><a id="transformClass:Class[LoadMemoryTransform]"></a>
       <span class="permalink">
@@ -579,7 +568,7 @@ and the format of the file.</p></div><dl class="paramcmts block"><dt class="para
         <span class="name">transformClass</span><span class="result">: <span class="extype" name="scala.Predef.Class">Class</span>[<a href="LoadMemoryTransform.html" class="extype" name="chisel3.util.experimental.LoadMemoryTransform">LoadMemoryTransform</a>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="chisel3.util.experimental.ChiselLoadMemoryAnnotation">ChiselLoadMemoryAnnotation</a> → <a href="../../core/RunFirrtlTransform.html" class="extype" name="chisel3.core.RunFirrtlTransform">RunFirrtlTransform</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="chisel3.util.experimental.ChiselLoadMemoryAnnotation">ChiselLoadMemoryAnnotation</a> → <a href="../../experimental/RunFirrtlTransform.html" class="extype" name="chisel3.experimental.RunFirrtlTransform">RunFirrtlTransform</a></dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">
@@ -666,10 +655,10 @@ and the format of the file.</p></div><dl class="paramcmts block"><dt class="para
               <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.6/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a></h3>
             </div><div class="parent" name="scala.Equals">
               <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.6/scala/Equals.html#scala.Equals" class="extype" name="scala.Equals">Equals</a></h3>
-            </div><div class="parent" name="chisel3.core.RunFirrtlTransform">
-              <h3>Inherited from <a href="../../core/RunFirrtlTransform.html" class="extype" name="chisel3.core.RunFirrtlTransform">RunFirrtlTransform</a></h3>
-            </div><div class="parent" name="chisel3.core.ChiselAnnotation">
-              <h3>Inherited from <a href="../../core/ChiselAnnotation.html" class="extype" name="chisel3.core.ChiselAnnotation">ChiselAnnotation</a></h3>
+            </div><div class="parent" name="chisel3.experimental.RunFirrtlTransform">
+              <h3>Inherited from <a href="../../experimental/RunFirrtlTransform.html" class="extype" name="chisel3.experimental.RunFirrtlTransform">RunFirrtlTransform</a></h3>
+            </div><div class="parent" name="chisel3.experimental.ChiselAnnotation">
+              <h3>Inherited from <a href="../../experimental/ChiselAnnotation.html" class="extype" name="chisel3.experimental.ChiselAnnotation">ChiselAnnotation</a></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">

@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.2-050719-SNAPSHOT - firrtl.FIRRTLException</title>
-          <meta name="description" content="firrtl 1.2 - 050719 - SNAPSHOT - firrtl.FIRRTLException" />
-          <meta name="keywords" content="firrtl 1.2 050719 SNAPSHOT firrtl.FIRRTLException" />
+          <title>firrtl 1.2-081319-SNAPSHOT - firrtl.FIRRTLException</title>
+          <meta name="description" content="firrtl 1.2 - 081319 - SNAPSHOT - firrtl.FIRRTLException" />
+          <meta name="keywords" content="firrtl 1.2 081319 SNAPSHOT firrtl.FIRRTLException" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.2-050719-SNAPSHOT</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.2-081319-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -133,6 +133,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
+    </li><li name="firrtl.checks" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="checks"></a><a id="checks:checks"></a>
+      <span class="permalink">
+      <a href="../firrtl/index.html#checks" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="checks/index.html"><span class="name">checks</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
     </li><li name="firrtl.graph" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="graph"></a><a id="graph:graph"></a>
       <span class="permalink">
@@ -225,10 +241,15 @@
         <span class="kind">package</span>
       </span>
       <span class="symbol">
-        <a title="" href="stage/index.html"><span class="name">stage</span></a>
+        <a title="The stage package provides an implementation of the FIRRTL compiler using the firrtl.options package." href="stage/index.html"><span class="name">stage</span></a>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
+      <p class="shortcomment cmt">The <a href="stage/index.html" class="extype" name="firrtl.stage">stage</a> package provides an implementation of the FIRRTL compiler using the <a href="options/index.html" class="extype" name="firrtl.options">firrtl.options</a> package.</p><div class="fullcomment"><div class="comment cmt"><p>The <a href="stage/index.html" class="extype" name="firrtl.stage">stage</a> package provides an implementation of the FIRRTL compiler using the <a href="options/index.html" class="extype" name="firrtl.options">firrtl.options</a> package. This
+primarily consists of:</p><ul><li><a href="stage/FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a>, the internal and external (command line) interface to the FIRRTL compiler</li><li>A number of <a href="options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a>s that support and compartmentalize the individual operations of
+    <a href="stage/FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a></li><li><a href="stage/FirrtlOptions.html" class="extype" name="firrtl.stage.FirrtlOptions">FirrtlOptions</a>, a class representing options that are necessary to drive the <a href="stage/FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a> and its
+    <a href="options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a>s</li><li><a href="stage/package$$FirrtlOptionsView$.html" class="extype" name="firrtl.stage.FirrtlOptionsView">FirrtlOptionsView</a>, a utility that constructs an <a href="options/OptionsView.html" class="extype" name="firrtl.options.OptionsView">OptionsView</a> of <a href="stage/FirrtlOptions.html" class="extype" name="firrtl.stage.FirrtlOptions">FirrtlOptions</a>
+    from an <a href="AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a></li><li><a href="stage/FirrtlCli.html" class="extype" name="firrtl.stage.FirrtlCli">FirrtlCli</a>, the command line options that the <a href="stage/FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a> supports</li><li><a href="stage/FirrtlStageUtils$.html" class="extype" name="firrtl.stage.FirrtlStageUtils">FirrtlStageUtils</a> containing miscellaneous utilities for <a href="stage/index.html" class="extype" name="firrtl.stage">stage</a>
+</li></ul></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
     </li><li name="firrtl.transforms" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="transforms"></a><a id="transforms:transforms"></a>
       <span class="permalink">
@@ -362,7 +383,7 @@
                         <a class="object" href="Dshlw$.html" title=""></a>
                         <a href="Dshlw$.html" title="">Dshlw</a>
                       </li><li class="current-entities indented1">
-                        <span class="separator"></span>
+                        <a class="object" href="EmitAllModulesAnnotation$.html" title=""></a>
                         <a class="class" href="EmitAllModulesAnnotation.html" title=""></a>
                         <a href="EmitAllModulesAnnotation.html" title="">EmitAllModulesAnnotation</a>
                       </li><li class="current-entities indented1">
@@ -370,7 +391,7 @@
                         <a class="trait" href="EmitAnnotation.html" title=""></a>
                         <a href="EmitAnnotation.html" title="">EmitAnnotation</a>
                       </li><li class="current-entities indented1">
-                        <span class="separator"></span>
+                        <a class="object" href="EmitCircuitAnnotation$.html" title=""></a>
                         <a class="class" href="EmitCircuitAnnotation.html" title=""></a>
                         <a href="EmitCircuitAnnotation.html" title="">EmitCircuitAnnotation</a>
                       </li><li class="current-entities indented1">
@@ -735,6 +756,10 @@
                         <a href="SystemVerilogCompiler.html" title="Currently just an alias for the VerilogCompiler">SystemVerilogCompiler</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
+                        <a class="class" href="SystemVerilogEmitter.html" title=""></a>
+                        <a href="SystemVerilogEmitter.html" title="">SystemVerilogEmitter</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
                         <a class="class" href="Transform.html" title="The basic unit of operating on a Firrtl AST"></a>
                         <a href="Transform.html" title="The basic unit of operating on a Firrtl AST">Transform</a>
                       </li><li class="current-entities indented1">
@@ -745,6 +770,10 @@
                         <span class="separator"></span>
                         <a class="object" href="UnknownForm$.html" title="Unknown Form"></a>
                         <a href="UnknownForm$.html" title="Unknown Form">UnknownForm</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="object" href="UnknownKind$.html" title=""></a>
+                        <a href="UnknownKind$.html" title="">UnknownKind</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="object" href="Utils$.html" title=""></a>
@@ -893,17 +922,7 @@
               Known Subclasses
             </span>
             <div class="subClasses hiddenContent"><a href="InvalidEscapeCharException.html" class="extype" name="firrtl.InvalidEscapeCharException">InvalidEscapeCharException</a>, <a href="InvalidStringLitException.html" class="extype" name="firrtl.InvalidStringLitException">InvalidStringLitException</a>, <a href="ParameterNotSpecifiedException.html" class="extype" name="firrtl.ParameterNotSpecifiedException">ParameterNotSpecifiedException</a>, <a href="ParameterRedefinedException.html" class="extype" name="firrtl.ParameterRedefinedException">ParameterRedefinedException</a>, <a href="ParserException.html" class="extype" name="firrtl.ParserException">ParserException</a>, <a href="SyntaxErrorsException.html" class="extype" name="firrtl.SyntaxErrorsException">SyntaxErrorsException</a>, <a href="Utils$$DeclarationNotFoundException.html" class="extype" name="firrtl.Utils.DeclarationNotFoundException">DeclarationNotFoundException</a>, <a href="annotations/AnnotationClassNotFoundException.html" class="extype" name="firrtl.annotations.AnnotationClassNotFoundException">AnnotationClassNotFoundException</a>, <a href="annotations/AnnotationFileNotFoundException.html" class="extype" name="firrtl.annotations.AnnotationFileNotFoundException">AnnotationFileNotFoundException</a>, <a href="annotations/InvalidAnnotationFileException.html" class="extype" name="firrtl.annotations.InvalidAnnotationFileException">InvalidAnnotationFileException</a>, <a href="annotations/InvalidAnnotationJSONException.html" class="extype" name="firrtl.annotations.InvalidAnnotationJSONException">InvalidAnnotationJSONException</a>, <a href="annotations/transforms/NoSuchTargetException.html" class="extype" name="firrtl.annotations.transforms.NoSuchTargetException">NoSuchTargetException</a>, <a href="transforms/BlackBoxNotFoundException.html" class="extype" name="firrtl.transforms.BlackBoxNotFoundException">BlackBoxNotFoundException</a></div>
-          </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
-                <span class="toggle diagram-link">
-                  Type Hierarchy
-                </span>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 1451.00 155.00" height="155pt" width="1451pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 151)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-151 1447,-151 1447,4 -4,4" stroke="transparent" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this class" id="graph1_0"><g id="a_this class|graph1_0"><a xlink:title="firrtl.FIRRTLException (this class)" xlink:href="#inheritance-diagram"><path d="M820.67,-86C820.67,-86 726.33,-86 726.33,-86 722.17,-86 718,-81.83 718,-77.67 718,-77.67 718,-69.33 718,-69.33 718,-65.17 722.17,-61 726.33,-61 726.33,-61 820.67,-61 820.67,-61 824.83,-61 829,-65.17 829,-69.33 829,-69.33 829,-77.67 829,-77.67 829,-81.83 824.83,-86 820.67,-86" stroke="#418565" fill="#418565"></path><image xlink:href="../lib/class_diagram.png" y="-80.5" x="728.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="749.5" text-anchor="start">FIRRTLException</text></a></g></g><!-- node1 --><g class="node class" id="graph1_1"><g id="a_class|graph1_1"><a xlink:title="firrtl.annotations.AnnotationClassNotFoundException" xlink:href="annotations/AnnotationClassNotFoundException.html#inheritance-diagram"><path d="M184.67,-25C184.67,-25 8.33,-25 8.33,-25 4.17,-25 0,-20.83 0,-16.67 0,-16.67 0,-8.33 0,-8.33 0,-4.17 4.17,0 8.33,0 8.33,0 184.67,0 184.67,0 188.83,0 193,-4.17 193,-8.33 193,-8.33 193,-16.67 193,-16.67 193,-20.83 188.83,-25 184.67,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../lib/class_diagram.png" y="-19.5" x="10.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="31.5" text-anchor="start">AnnotationClassNotFoundException</text></a></g></g><!-- node0&#45;&gt;node1 --><g class="edge inheritance" id="graph1_0_1"><g id="a_inheritance|graph1_0_1"><a xlink:title="AnnotationClassNotFoundException is a subtype of FIRRTLException"><path d="M710.76,-67.83C605.44,-59.87 386.45,-42.8 201.5,-25 198.76,-24.74 195.98,-24.46 193.18,-24.19" stroke="#d4d4d4" fill="none"></path><polygon points="710.67,-70.28 717.84,-68.37 711.04,-65.4 710.67,-70.28" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node class" id="graph1_2"><g id="a_class|graph1_2"><a xlink:title="firrtl.annotations.AnnotationFileNotFoundException" xlink:href="annotations/AnnotationFileNotFoundException.html#inheritance-diagram"><path d="M385.67,-25C385.67,-25 219.33,-25 219.33,-25 215.17,-25 211,-20.83 211,-16.67 211,-16.67 211,-8.33 211,-8.33 211,-4.17 215.17,0 219.33,0 219.33,0 385.67,0 385.67,0 389.83,0 394,-4.17 394,-8.33 394,-8.33 394,-16.67 394,-16.67 394,-20.83 389.83,-25 385.67,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../lib/class_diagram.png" y="-19.5" x="221.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="242.5" text-anchor="start">AnnotationFileNotFoundException</text></a></g></g><!-- node0&#45;&gt;node2 --><g class="edge inheritance" id="graph1_0_2"><g id="a_inheritance|graph1_0_2"><a xlink:title="AnnotationFileNotFoundException is a subtype of FIRRTLException"><path d="M710.44,-64.6C629.21,-54.43 487.45,-36.67 394.28,-25" stroke="#d4d4d4" fill="none"></path><polygon points="710.37,-67.06 717.62,-65.5 710.98,-62.2 710.37,-67.06" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3 --><g class="node class" id="graph1_3"><g id="a_class|graph1_3"><a xlink:title="firrtl.transforms.BlackBoxNotFoundException" xlink:href="transforms/BlackBoxNotFoundException.html#inheritance-diagram"><path d="M566.17,-25C566.17,-25 420.83,-25 420.83,-25 416.67,-25 412.5,-20.83 412.5,-16.67 412.5,-16.67 412.5,-8.33 412.5,-8.33 412.5,-4.17 416.67,0 420.83,0 420.83,0 566.17,0 566.17,0 570.33,0 574.5,-4.17 574.5,-8.33 574.5,-8.33 574.5,-16.67 574.5,-16.67 574.5,-20.83 570.33,-25 566.17,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../lib/class_diagram.png" y="-19.5" x="422.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="443.5" text-anchor="start">BlackBoxNotFoundException</text></a></g></g><!-- node0&#45;&gt;node3 --><g class="edge inheritance" id="graph1_0_3"><g id="a_inheritance|graph1_0_3"><a xlink:title="BlackBoxNotFoundException is a subtype of FIRRTLException"><path d="M711.79,-59.5C662.98,-49.21 595.46,-34.99 548.49,-25.09" stroke="#d4d4d4" fill="none"></path><polygon points="711.49,-61.94 718.85,-60.98 712.5,-57.14 711.49,-61.94" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node4 --><g class="node class" id="graph1_4"><g id="a_class|graph1_4"><a xlink:title="firrtl.Utils.DeclarationNotFoundException" xlink:href="Utils$$DeclarationNotFoundException.html#inheritance-diagram"><path d="M756.17,-25C756.17,-25 600.83,-25 600.83,-25 596.67,-25 592.5,-20.83 592.5,-16.67 592.5,-16.67 592.5,-8.33 592.5,-8.33 592.5,-4.17 596.67,0 600.83,0 600.83,0 756.17,0 756.17,0 760.33,0 764.5,-4.17 764.5,-8.33 764.5,-8.33 764.5,-16.67 764.5,-16.67 764.5,-20.83 760.33,-25 756.17,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../lib/class_diagram.png" y="-19.5" x="602.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="623.5" text-anchor="start">DeclarationNotFoundException</text></a></g></g><!-- node0&#45;&gt;node4 --><g class="edge inheritance" id="graph1_0_4"><g id="a_inheritance|graph1_0_4"><a xlink:title="DeclarationNotFoundException is a subtype of FIRRTLException"><path d="M748.59,-57.03C732.51,-47.04 711.92,-34.26 697.23,-25.13" stroke="#d4d4d4" fill="none"></path><polygon points="747.49,-59.23 754.73,-60.84 750.08,-55.07 747.49,-59.23" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node5 --><g class="node class" id="graph1_5"><g id="a_class|graph1_5"><a xlink:title="firrtl.annotations.InvalidAnnotationFileException" xlink:href="annotations/InvalidAnnotationFileException.html#inheritance-diagram"><path d="M945.67,-25C945.67,-25 791.33,-25 791.33,-25 787.17,-25 783,-20.83 783,-16.67 783,-16.67 783,-8.33 783,-8.33 783,-4.17 787.17,0 791.33,0 791.33,0 945.67,0 945.67,0 949.83,0 954,-4.17 954,-8.33 954,-8.33 954,-16.67 954,-16.67 954,-20.83 949.83,-25 945.67,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../lib/class_diagram.png" y="-19.5" x="793.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="814.5" text-anchor="start">InvalidAnnotationFileException</text></a></g></g><!-- node0&#45;&gt;node5 --><g class="edge inheritance" id="graph1_0_5"><g id="a_inheritance|graph1_0_5"><a xlink:title="InvalidAnnotationFileException is a subtype of FIRRTLException"><path d="M798.41,-57.03C814.49,-47.04 835.08,-34.26 849.77,-25.13" stroke="#d4d4d4" fill="none"></path><polygon points="796.92,-55.07 792.27,-60.84 799.51,-59.23 796.92,-55.07" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node6 --><g class="node class" id="graph1_6"><g id="a_class|graph1_6"><a xlink:title="firrtl.annotations.InvalidAnnotationJSONException" xlink:href="annotations/InvalidAnnotationJSONException.html#inheritance-diagram"><path d="M1140.67,-25C1140.67,-25 980.33,-25 980.33,-25 976.17,-25 972,-20.83 972,-16.67 972,-16.67 972,-8.33 972,-8.33 972,-4.17 976.17,0 980.33,0 980.33,0 1140.67,0 1140.67,0 1144.83,0 1149,-4.17 1149,-8.33 1149,-8.33 1149,-16.67 1149,-16.67 1149,-20.83 1144.83,-25 1140.67,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../lib/class_diagram.png" y="-19.5" x="982.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="1003.5" text-anchor="start">InvalidAnnotationJSONException</text></a></g></g><!-- node0&#45;&gt;node6 --><g class="edge inheritance" id="graph1_0_6"><g id="a_inheritance|graph1_0_6"><a xlink:title="InvalidAnnotationJSONException is a subtype of FIRRTLException"><path d="M836.13,-59.63C886.32,-49.31 956.13,-34.96 1004.49,-25.01" stroke="#d4d4d4" fill="none"></path><polygon points="835.54,-57.24 829.18,-61.05 836.53,-62.04 835.54,-57.24" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node7 --><g class="node class" id="graph1_7"><g id="a_class|graph1_7"><a xlink:title="firrtl.annotations.transforms.NoSuchTargetException" xlink:href="annotations/transforms/NoSuchTargetException.html#inheritance-diagram"><path d="M1303.17,-25C1303.17,-25 1175.83,-25 1175.83,-25 1171.67,-25 1167.5,-20.83 1167.5,-16.67 1167.5,-16.67 1167.5,-8.33 1167.5,-8.33 1167.5,-4.17 1171.67,0 1175.83,0 1175.83,0 1303.17,0 1303.17,0 1307.33,0 1311.5,-4.17 1311.5,-8.33 1311.5,-8.33 1311.5,-16.67 1311.5,-16.67 1311.5,-20.83 1307.33,-25 1303.17,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../lib/class_diagram.png" y="-19.5" x="1177.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="1198.5" text-anchor="start">NoSuchTargetException</text></a></g></g><!-- node0&#45;&gt;node7 --><g class="edge inheritance" id="graph1_0_7"><g id="a_inheritance|graph1_0_7"><a xlink:title="NoSuchTargetException is a subtype of FIRRTLException"><path d="M836.21,-65.12C912.44,-56.07 1044.99,-40.06 1158.5,-25 1161.32,-24.63 1164.19,-24.24 1167.09,-23.85" stroke="#d4d4d4" fill="none"></path><polygon points="835.67,-62.72 829.01,-65.97 836.25,-67.58 835.67,-62.72" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node8 --><g class="node class" id="graph1_8"><g id="a_class|graph1_8"><a xlink:title="firrtl.ParserException" xlink:href="ParserException.html#inheritance-diagram"><path d="M1434.67,-25C1434.67,-25 1338.33,-25 1338.33,-25 1334.17,-25 1330,-20.83 1330,-16.67 1330,-16.67 1330,-8.33 1330,-8.33 1330,-4.17 1334.17,0 1338.33,0 1338.33,0 1434.67,0 1434.67,0 1438.83,0 1443,-4.17 1443,-8.33 1443,-8.33 1443,-16.67 1443,-16.67 1443,-20.83 1438.83,-25 1434.67,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../lib/class_diagram.png" y="-19.5" x="1340.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="1361.5" text-anchor="start">ParserException</text></a></g></g><!-- node0&#45;&gt;node8 --><g class="edge inheritance" id="graph1_0_8"><g id="a_inheritance|graph1_0_8"><a xlink:title="ParserException is a subtype of FIRRTLException"><path d="M836.34,-68.8C938.26,-62.41 1145.81,-47.76 1320.5,-25 1323.5,-24.61 1326.57,-24.18 1329.67,-23.72" stroke="#d4d4d4" fill="none"></path><polygon points="836.02,-66.37 829.19,-69.25 836.33,-71.26 836.02,-66.37" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node9 --><g class="node class" id="graph1_9"><g id="a_class|graph1_9"><a xlink:title="java.lang.RuntimeException"><path d="M824.67,-147C824.67,-147 722.33,-147 722.33,-147 718.17,-147 714,-142.83 714,-138.67 714,-138.67 714,-130.33 714,-130.33 714,-126.17 718.17,-122 722.33,-122 722.33,-122 824.67,-122 824.67,-122 828.83,-122 833,-126.17 833,-130.33 833,-130.33 833,-138.67 833,-138.67 833,-142.83 828.83,-147 824.67,-147" stroke="#418565" fill="#418565"></path><image xlink:href="../lib/class_diagram.png" y="-141.5" x="724.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="745.5" text-anchor="start">RuntimeException</text></a></g></g><!-- node9&#45;&gt;node0 --><g class="edge inheritance" id="graph1_9_0"><g id="a_inheritance|graph1_9_0"><a xlink:title="FIRRTLException is a subtype of RuntimeException"><path d="M773.5,-114.76C773.5,-105.37 773.5,-94.29 773.5,-86.13" stroke="#d4d4d4" fill="none"></path><polygon points="771.05,-114.84 773.5,-121.84 775.95,-114.84 771.05,-114.84" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
-                <div id="diagram-controls" class="hiddenContent">
-                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
-                </div>
-              </div></div>
+          </div></div>
         
 
       <div id="mbrsel">

@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.2-050719-SNAPSHOT - firrtl.SystemVerilogCompiler</title>
-          <meta name="description" content="firrtl 1.2 - 050719 - SNAPSHOT - firrtl.SystemVerilogCompiler" />
-          <meta name="keywords" content="firrtl 1.2 050719 SNAPSHOT firrtl.SystemVerilogCompiler" />
+          <title>firrtl 1.2-081319-SNAPSHOT - firrtl.SystemVerilogCompiler</title>
+          <meta name="description" content="firrtl 1.2 - 081319 - SNAPSHOT - firrtl.SystemVerilogCompiler" />
+          <meta name="keywords" content="firrtl 1.2 081319 SNAPSHOT firrtl.SystemVerilogCompiler" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.2-050719-SNAPSHOT</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.2-081319-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -133,6 +133,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
+    </li><li name="firrtl.checks" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="checks"></a><a id="checks:checks"></a>
+      <span class="permalink">
+      <a href="../firrtl/index.html#checks" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="checks/index.html"><span class="name">checks</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
     </li><li name="firrtl.graph" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="graph"></a><a id="graph:graph"></a>
       <span class="permalink">
@@ -225,10 +241,15 @@
         <span class="kind">package</span>
       </span>
       <span class="symbol">
-        <a title="" href="stage/index.html"><span class="name">stage</span></a>
+        <a title="The stage package provides an implementation of the FIRRTL compiler using the firrtl.options package." href="stage/index.html"><span class="name">stage</span></a>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
+      <p class="shortcomment cmt">The <a href="stage/index.html" class="extype" name="firrtl.stage">stage</a> package provides an implementation of the FIRRTL compiler using the <a href="options/index.html" class="extype" name="firrtl.options">firrtl.options</a> package.</p><div class="fullcomment"><div class="comment cmt"><p>The <a href="stage/index.html" class="extype" name="firrtl.stage">stage</a> package provides an implementation of the FIRRTL compiler using the <a href="options/index.html" class="extype" name="firrtl.options">firrtl.options</a> package. This
+primarily consists of:</p><ul><li><a href="stage/FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a>, the internal and external (command line) interface to the FIRRTL compiler</li><li>A number of <a href="options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a>s that support and compartmentalize the individual operations of
+    <a href="stage/FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a></li><li><a href="stage/FirrtlOptions.html" class="extype" name="firrtl.stage.FirrtlOptions">FirrtlOptions</a>, a class representing options that are necessary to drive the <a href="stage/FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a> and its
+    <a href="options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a>s</li><li><a href="stage/package$$FirrtlOptionsView$.html" class="extype" name="firrtl.stage.FirrtlOptionsView">FirrtlOptionsView</a>, a utility that constructs an <a href="options/OptionsView.html" class="extype" name="firrtl.options.OptionsView">OptionsView</a> of <a href="stage/FirrtlOptions.html" class="extype" name="firrtl.stage.FirrtlOptions">FirrtlOptions</a>
+    from an <a href="AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a></li><li><a href="stage/FirrtlCli.html" class="extype" name="firrtl.stage.FirrtlCli">FirrtlCli</a>, the command line options that the <a href="stage/FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a> supports</li><li><a href="stage/FirrtlStageUtils$.html" class="extype" name="firrtl.stage.FirrtlStageUtils">FirrtlStageUtils</a> containing miscellaneous utilities for <a href="stage/index.html" class="extype" name="firrtl.stage">stage</a>
+</li></ul></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
     </li><li name="firrtl.transforms" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="transforms"></a><a id="transforms:transforms"></a>
       <span class="permalink">
@@ -362,7 +383,7 @@
                         <a class="object" href="Dshlw$.html" title=""></a>
                         <a href="Dshlw$.html" title="">Dshlw</a>
                       </li><li class="current-entities indented1">
-                        <span class="separator"></span>
+                        <a class="object" href="EmitAllModulesAnnotation$.html" title=""></a>
                         <a class="class" href="EmitAllModulesAnnotation.html" title=""></a>
                         <a href="EmitAllModulesAnnotation.html" title="">EmitAllModulesAnnotation</a>
                       </li><li class="current-entities indented1">
@@ -370,7 +391,7 @@
                         <a class="trait" href="EmitAnnotation.html" title=""></a>
                         <a href="EmitAnnotation.html" title="">EmitAnnotation</a>
                       </li><li class="current-entities indented1">
-                        <span class="separator"></span>
+                        <a class="object" href="EmitCircuitAnnotation$.html" title=""></a>
                         <a class="class" href="EmitCircuitAnnotation.html" title=""></a>
                         <a href="EmitCircuitAnnotation.html" title="">EmitCircuitAnnotation</a>
                       </li><li class="current-entities indented1">
@@ -735,6 +756,10 @@
                         <a href="" title="Currently just an alias for the VerilogCompiler">SystemVerilogCompiler</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
+                        <a class="class" href="SystemVerilogEmitter.html" title=""></a>
+                        <a href="SystemVerilogEmitter.html" title="">SystemVerilogEmitter</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
                         <a class="class" href="Transform.html" title="The basic unit of operating on a Firrtl AST"></a>
                         <a href="Transform.html" title="The basic unit of operating on a Firrtl AST">Transform</a>
                       </li><li class="current-entities indented1">
@@ -745,6 +770,10 @@
                         <span class="separator"></span>
                         <a class="object" href="UnknownForm$.html" title="Unknown Form"></a>
                         <a href="UnknownForm$.html" title="Unknown Form">UnknownForm</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="object" href="UnknownKind$.html" title=""></a>
+                        <a href="UnknownKind$.html" title="">UnknownKind</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="object" href="Utils$.html" title=""></a>
@@ -886,17 +915,7 @@
             Linear Supertypes
           </span>
           <div class="superTypes hiddenContent"><a href="VerilogCompiler.html" class="extype" name="firrtl.VerilogCompiler">VerilogCompiler</a>, <a href="Compiler.html" class="extype" name="firrtl.Compiler">Compiler</a>, <a href="../logger/LazyLogging.html" class="extype" name="logger.LazyLogging">LazyLogging</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
-        </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
-                <span class="toggle diagram-link">
-                  Type Hierarchy
-                </span>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 200.00 118.00" height="118pt" width="200pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 114)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-114 196,-114 196,4 -4,4" stroke="transparent" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this class" id="graph1_0"><g id="a_this class|graph1_0"><a xlink:title="firrtl.SystemVerilogCompiler (this class)" xlink:href="#inheritance-diagram"><path d="M159.67,-49C159.67,-49 32.33,-49 32.33,-49 28.17,-49 24,-44.83 24,-40.67 24,-40.67 24,-32.33 24,-32.33 24,-28.17 28.17,-24 32.33,-24 32.33,-24 159.67,-24 159.67,-24 163.83,-24 168,-28.17 168,-32.33 168,-32.33 168,-40.67 168,-40.67 168,-44.83 163.83,-49 159.67,-49" stroke="#418565" fill="#418565"></path><image xlink:href="../lib/class_diagram.png" y="-43.5" x="34" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-34.1" x="55" text-anchor="start">SystemVerilogCompiler</text></a></g></g><!-- node1 --><g class="node class" id="graph1_1"><g id="a_class|graph1_1"><a xlink:title="firrtl.VerilogCompiler" xlink:href="VerilogCompiler.html#inheritance-diagram"><path d="M143.17,-110C143.17,-110 48.83,-110 48.83,-110 44.67,-110 40.5,-105.83 40.5,-101.67 40.5,-101.67 40.5,-93.33 40.5,-93.33 40.5,-89.17 44.67,-85 48.83,-85 48.83,-85 143.17,-85 143.17,-85 147.33,-85 151.5,-89.17 151.5,-93.33 151.5,-93.33 151.5,-101.67 151.5,-101.67 151.5,-105.83 147.33,-110 143.17,-110" stroke="#418565" fill="#418565"></path><image xlink:href="../lib/class_diagram.png" y="-104.5" x="51" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-95.1" x="72" text-anchor="start">VerilogCompiler</text></a></g></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph1_1_0"><g id="a_inheritance|graph1_1_0"><a xlink:title="SystemVerilogCompiler is a subtype of VerilogCompiler"><path d="M96,-77.76C96,-68.37 96,-57.29 96,-49.13" stroke="#d4d4d4" fill="none"></path><polygon points="93.55,-77.84 96,-84.84 98.45,-77.84 93.55,-77.84" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
-                <div id="diagram-controls" class="hiddenContent">
-                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
-                </div>
-              </div></div>
+        </div></div>
         
 
       <div id="mbrsel">
@@ -1094,22 +1113,22 @@ It creates a <a href="EmitCircuitAnnotation.html" class="extype" name="firrtl.Em
 <a href="CircuitState.html#emittedCircuitOption:Option[firrtl.EmittedCircuit]" class="extmbr" name="firrtl.CircuitState#emittedCircuitOption">CircuitState.emittedCircuitOption</a>
 </p></div><dl class="paramcmts block"><dt class="param">state</dt><dd class="cmt"><p>The Firrtl AST to compile</p></dd><dt class="param">customTransforms</dt><dd class="cmt"><p>Any custom <a href="Transform.html" class="extype" name="firrtl.Transform">Transform</a>s that will be inserted
   into the compilation process by <a href="CompilerUtils$.html#mergeTransforms(lowering:Seq[firrtl.Transform],custom:Seq[firrtl.Transform]):Seq[firrtl.Transform]" class="extmbr" name="firrtl.CompilerUtils#mergeTransforms">CompilerUtils.mergeTransforms</a></p></dd><dt>returns</dt><dd class="cmt"><p>result of compilation with emitted circuit annotated</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Compiler.html" class="extype" name="firrtl.Compiler">Compiler</a></dd></dl></div>
-    </li><li name="firrtl.VerilogCompiler#emitter" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="emitter:firrtl.VerilogEmitter"></a><a id="emitter:VerilogEmitter"></a>
+    </li><li name="firrtl.SystemVerilogCompiler#emitter" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="emitter:firrtl.SystemVerilogEmitter"></a><a id="emitter:SystemVerilogEmitter"></a>
       <span class="permalink">
-      <a href="../firrtl/SystemVerilogCompiler.html#emitter:firrtl.VerilogEmitter" title="Permalink">
+      <a href="../firrtl/SystemVerilogCompiler.html#emitter:firrtl.SystemVerilogEmitter" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">def</span>
+        <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">emitter</span><span class="result">: <a href="VerilogEmitter.html" class="extype" name="firrtl.VerilogEmitter">VerilogEmitter</a></span>
+        <span class="name">emitter</span><span class="result">: <a href="SystemVerilogEmitter.html" class="extype" name="firrtl.SystemVerilogEmitter">SystemVerilogEmitter</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="VerilogCompiler.html" class="extype" name="firrtl.VerilogCompiler">VerilogCompiler</a> → <a href="Compiler.html" class="extype" name="firrtl.Compiler">Compiler</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.SystemVerilogCompiler">SystemVerilogCompiler</a> → <a href="VerilogCompiler.html" class="extype" name="firrtl.VerilogCompiler">VerilogCompiler</a> → <a href="Compiler.html" class="extype" name="firrtl.Compiler">Compiler</a></dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">

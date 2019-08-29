@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.2-050719-SNAPSHOT - firrtl.transforms.BlackBoxTargetDirAnno</title>
-          <meta name="description" content="firrtl 1.2 - 050719 - SNAPSHOT - firrtl.transforms.BlackBoxTargetDirAnno" />
-          <meta name="keywords" content="firrtl 1.2 050719 SNAPSHOT firrtl.transforms.BlackBoxTargetDirAnno" />
+          <title>firrtl 1.2-081319-SNAPSHOT - firrtl.transforms.BlackBoxTargetDirAnno</title>
+          <meta name="description" content="firrtl 1.2 - 081319 - SNAPSHOT - firrtl.transforms.BlackBoxTargetDirAnno" />
+          <meta name="keywords" content="firrtl 1.2 081319 SNAPSHOT firrtl.transforms.BlackBoxTargetDirAnno" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.2-050719-SNAPSHOT</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.2-081319-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -138,6 +138,10 @@
                         <a class="class" href="BlackBoxResourceAnno.html" title=""></a>
                         <a href="BlackBoxResourceAnno.html" title="">BlackBoxResourceAnno</a>
                       </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="BlackBoxResourceFileNameAnno.html" title=""></a>
+                        <a href="BlackBoxResourceFileNameAnno.html" title="">BlackBoxResourceFileNameAnno</a>
+                      </li><li class="current-entities indented2">
                         <a class="object" href="BlackBoxSourceHelper$.html" title=""></a>
                         <a class="class" href="BlackBoxSourceHelper.html" title="Handle source for Verilog ExtModules (BlackBoxes)"></a>
                         <a href="BlackBoxSourceHelper.html" title="Handle source for Verilog ExtModules (BlackBoxes)">BlackBoxSourceHelper</a>
@@ -210,13 +214,17 @@
                         <a class="class" href="IdentityTransform.html" title="Transform that applies an identity function."></a>
                         <a href="IdentityTransform.html" title="Transform that applies an identity function.">IdentityTransform</a>
                       </li><li class="current-entities indented2">
+                        <a class="object" href="InferResets$.html" title=""></a>
+                        <a class="class" href="InferResets.html" title="Infers the concrete type of Resets by their connections This is a global inference because ports can be of type Reset"></a>
+                        <a href="InferResets.html" title="Infers the concrete type of Resets by their connections This is a global inference because ports can be of type Reset">InferResets</a>
+                      </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="class" href="MaxCatLenAnnotation.html" title=""></a>
                         <a href="MaxCatLenAnnotation.html" title="">MaxCatLenAnnotation</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="object" href="NoCircuitDedupAnnotation$.html" title=""></a>
-                        <a href="NoCircuitDedupAnnotation$.html" title="">NoCircuitDedupAnnotation</a>
+                        <a class="object" href="NoCircuitDedupAnnotation$.html" title="If this Annotation exists in an AnnotationSeq, then the firrtl.transforms.DedupModules transform will *NOT* be run on the circuit."></a>
+                        <a href="NoCircuitDedupAnnotation$.html" title="If this Annotation exists in an AnnotationSeq, then the firrtl.transforms.DedupModules transform will *NOT* be run on the circuit.">NoCircuitDedupAnnotation</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="object" href="NoDCEAnnotation$.html" title="Indicate that DCE should not be run"></a>
@@ -249,6 +257,10 @@
                         <a class="object" href="ReplaceTruncatingArithmetic$.html" title=""></a>
                         <a class="class" href="ReplaceTruncatingArithmetic.html" title="Replaces non-expanding arithmetic"></a>
                         <a href="ReplaceTruncatingArithmetic.html" title="Replaces non-expanding arithmetic">ReplaceTruncatingArithmetic</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="SimplifyMems.html" title="Lowers memories without splitting them, but without the complexity of ReplaceMemMacros"></a>
+                        <a href="SimplifyMems.html" title="Lowers memories without splitting them, but without the complexity of ReplaceMemMacros">SimplifyMems</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="class" href="VerilogRename.html" title="Transform that removes collisions with Verilog keywords"></a>
@@ -286,17 +298,7 @@
             Linear Supertypes
           </span>
           <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.12.6/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a>, <span class="extype" name="java.io.Serializable">Serializable</span>, <a href="../annotations/NoTargetAnnotation.html" class="extype" name="firrtl.annotations.NoTargetAnnotation">NoTargetAnnotation</a>, <a href="BlackBoxHelperAnno.html" class="extype" name="firrtl.transforms.BlackBoxHelperAnno">BlackBoxHelperAnno</a>, <a href="../annotations/Annotation.html" class="extype" name="firrtl.annotations.Annotation">Annotation</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/Equals.html#scala.Equals" class="extype" name="scala.Equals">Equals</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
-        </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
-                <span class="toggle diagram-link">
-                  Type Hierarchy
-                </span>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 491.00 118.00" height="118pt" width="491pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 114)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-114 487,-114 487,4 -4,4" stroke="transparent" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this class" id="graph1_0"><g id="a_this class|graph1_0"><a xlink:title="firrtl.transforms.BlackBoxTargetDirAnno (this class)" xlink:href="#inheritance-diagram"><path d="M336.67,-49C336.67,-49 210.33,-49 210.33,-49 206.17,-49 202,-44.83 202,-40.67 202,-40.67 202,-32.33 202,-32.33 202,-28.17 206.17,-24 210.33,-24 210.33,-24 336.67,-24 336.67,-24 340.83,-24 345,-28.17 345,-32.33 345,-32.33 345,-40.67 345,-40.67 345,-44.83 340.83,-49 336.67,-49" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-43.5" x="212.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-34.1" x="233.5" text-anchor="start">BlackBoxTargetDirAnno</text></a></g></g><!-- node1 --><g class="node trait" id="graph1_1"><g id="a_trait|graph1_1"><a xlink:title="firrtl.transforms.BlackBoxHelperAnno" xlink:href="BlackBoxHelperAnno.html#inheritance-diagram"><path d="M122.67,-110C122.67,-110 8.33,-110 8.33,-110 4.17,-110 0,-105.83 0,-101.67 0,-101.67 0,-93.33 0,-93.33 0,-89.17 4.17,-85 8.33,-85 8.33,-85 122.67,-85 122.67,-85 126.83,-85 131,-89.17 131,-93.33 131,-93.33 131,-101.67 131,-101.67 131,-105.83 126.83,-110 122.67,-110" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-104.5" x="10.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-95.1" x="31.5" text-anchor="start">BlackBoxHelperAnno</text></a></g></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph1_1_0"><g id="a_inheritance|graph1_1_0"><a xlink:title="BlackBoxTargetDirAnno is a subtype of BlackBoxHelperAnno"><path d="M113.14,-82.99C149.24,-72.75 198.33,-58.82 232.65,-49.09" stroke="#d4d4d4" fill="none"></path><polygon points="112.16,-80.72 106.1,-84.98 113.5,-85.43 112.16,-80.72" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node trait" id="graph1_2"><g id="a_trait|graph1_2"><a xlink:title="firrtl.annotations.NoTargetAnnotation" xlink:href="../annotations/NoTargetAnnotation.html#inheritance-diagram"><path d="M269.17,-110C269.17,-110 157.83,-110 157.83,-110 153.67,-110 149.5,-105.83 149.5,-101.67 149.5,-101.67 149.5,-93.33 149.5,-93.33 149.5,-89.17 153.67,-85 157.83,-85 157.83,-85 269.17,-85 269.17,-85 273.33,-85 277.5,-89.17 277.5,-93.33 277.5,-93.33 277.5,-101.67 277.5,-101.67 277.5,-105.83 273.33,-110 269.17,-110" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-104.5" x="159.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-95.1" x="180.5" text-anchor="start">NoTargetAnnotation</text></a></g></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph1_2_0"><g id="a_inheritance|graph1_2_0"><a xlink:title="BlackBoxTargetDirAnno is a subtype of NoTargetAnnotation"><path d="M230.6,-79.69C240.53,-69.92 252.8,-57.85 261.67,-49.13" stroke="#d4d4d4" fill="none"></path><polygon points="228.63,-78.19 225.35,-84.84 232.06,-81.68 228.63,-78.19" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3 --><g class="node trait" id="graph1_3"><g id="a_trait|graph1_3"><a xlink:title="scala.Product"><path d="M363.17,-110C363.17,-110 303.83,-110 303.83,-110 299.67,-110 295.5,-105.83 295.5,-101.67 295.5,-101.67 295.5,-93.33 295.5,-93.33 295.5,-89.17 299.67,-85 303.83,-85 303.83,-85 363.17,-85 363.17,-85 367.33,-85 371.5,-89.17 371.5,-93.33 371.5,-93.33 371.5,-101.67 371.5,-101.67 371.5,-105.83 367.33,-110 363.17,-110" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-104.5" x="305.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-95.1" x="326.5" text-anchor="start">Product</text></a></g></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph1_3_0"><g id="a_inheritance|graph1_3_0"><a xlink:title="BlackBoxTargetDirAnno is a subtype of Product"><path d="M316.4,-79.69C306.47,-69.92 294.2,-57.85 285.33,-49.13" stroke="#d4d4d4" fill="none"></path><polygon points="314.94,-81.68 321.65,-84.84 318.37,-78.19 314.94,-81.68" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node4 --><g class="node trait" id="graph1_4"><g id="a_trait|graph1_4"><a xlink:title="scala.Serializable"><path d="M474.67,-110C474.67,-110 398.33,-110 398.33,-110 394.17,-110 390,-105.83 390,-101.67 390,-101.67 390,-93.33 390,-93.33 390,-89.17 394.17,-85 398.33,-85 398.33,-85 474.67,-85 474.67,-85 478.83,-85 483,-89.17 483,-93.33 483,-93.33 483,-101.67 483,-101.67 483,-105.83 478.83,-110 474.67,-110" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-104.5" x="400.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-95.1" x="421.5" text-anchor="start">Serializable</text></a></g></g><!-- node4&#45;&gt;node0 --><g class="edge inheritance" id="graph1_4_0"><g id="a_inheritance|graph1_4_0"><a xlink:title="BlackBoxTargetDirAnno is a subtype of Serializable"><path d="M397.75,-82.47C369.6,-72.28 331.96,-58.66 305.51,-49.09" stroke="#d4d4d4" fill="none"></path><polygon points="397.27,-84.91 404.69,-84.98 398.94,-80.3 397.27,-84.91" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
-                <div id="diagram-controls" class="hiddenContent">
-                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
-                </div>
-              </div></div>
+        </div></div>
         
 
       <div id="mbrsel">

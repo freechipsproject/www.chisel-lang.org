@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.2-050719-SNAPSHOT - Chisel.BoolFactory</title>
-          <meta name="description" content="chisel3 3.2 - 050719 - SNAPSHOT - Chisel.BoolFactory" />
-          <meta name="keywords" content="chisel3 3.2 050719 SNAPSHOT Chisel.BoolFactory" />
+          <title>chisel3 3.2-081319-SNAPSHOT - Chisel.BoolFactory</title>
+          <meta name="description" content="chisel3 3.2 - 081319 - SNAPSHOT - Chisel.BoolFactory" />
+          <meta name="keywords" content="chisel3 3.2 081319 SNAPSHOT Chisel.BoolFactory" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.2-050719-SNAPSHOT</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.2-081319-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -69,9 +69,9 @@
       </span>
       
       <p class="shortcomment cmt">This is the documentation for Chisel.</p><div class="fullcomment"><div class="comment cmt"><p>This is the documentation for Chisel.</p><h4> Package structure </h4><p>The <a href="../chisel3/index.html" class="extype" name="chisel3">chisel3</a> package presents the public API of Chisel.
-It contains the concrete core types <a href="../chisel3/core/UInt.html" class="extype" name="chisel3.core.UInt"><code>UInt</code></a>, <a href="../chisel3/core/SInt.html" class="extype" name="chisel3.core.SInt"><code>SInt</code></a>, <a href="../chisel3/core/Bool.html" class="extype" name="chisel3.core.Bool"><code>Bool</code></a>, <a href="../chisel3/core/FixedPoint.html" class="extype" name="chisel3.core.FixedPoint"><code>FixedPoint</code></a>, <a href="../chisel3/core/Clock.html" class="extype" name="chisel3.core.Clock"><code>Clock</code></a>, and <a href="../chisel3/core/Reg$.html" class="extype" name="chisel3.core.Reg"><code>Reg</code></a>,
-the abstract types <a href="../chisel3/core/Bits.html" class="extype" name="chisel3.core.Bits"><code>Bits</code></a>, <a href="../chisel3/core/Aggregate.html" class="extype" name="chisel3.core.Aggregate"><code>Aggregate</code></a>, and <a href="../chisel3/core/Data.html" class="extype" name="chisel3.core.Data"><code>Data</code></a>,
-and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" name="chisel3.core.Bundle"><code>Bundle</code></a> and <a href="../chisel3/core/Vec.html" class="extype" name="chisel3.core.Vec"><code>Vec</code></a>.</p><p>The <a href="index.html" class="extype" name="Chisel">Chisel</a> package is a compatibility layer that attempts to provide chisel2 compatibility in chisel3.</p><p>Utility objects and methods are found in the <a href="../chisel3/util/index.html" class="extype" name="chisel3.util"><code>util</code></a> package.</p><p>The <a href="../chisel3/testers/index.html" class="extype" name="chisel3.testers"><code>testers</code></a> package defines the basic interface for chisel testers.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+It contains the concrete core types <a href="../chisel3/UInt.html" class="extype" name="chisel3.UInt"><code>UInt</code></a>, <a href="../chisel3/SInt.html" class="extype" name="chisel3.SInt"><code>SInt</code></a>, <a href="../chisel3/Bool.html" class="extype" name="chisel3.Bool"><code>Bool</code></a>, <a href="../chisel3/experimental/FixedPoint.html" class="extype" name="chisel3.experimental.FixedPoint"><code>FixedPoint</code></a>, <a href="../chisel3/Clock.html" class="extype" name="chisel3.Clock"><code>Clock</code></a>, and <a href="../chisel3/Reg$.html" class="extype" name="chisel3.Reg"><code>Reg</code></a>,
+the abstract types <a href="../chisel3/Bits.html" class="extype" name="chisel3.Bits"><code>Bits</code></a>, <a href="../chisel3/Aggregate.html" class="extype" name="chisel3.Aggregate"><code>Aggregate</code></a>, and <a href="../chisel3/Data.html" class="extype" name="chisel3.Data"><code>Data</code></a>,
+and the aggregate types <a href="../chisel3/Bundle.html" class="extype" name="chisel3.Bundle"><code>Bundle</code></a> and <a href="../chisel3/Vec.html" class="extype" name="chisel3.Vec"><code>Vec</code></a>.</p><p>The <a href="index.html" class="extype" name="Chisel">Chisel</a> package is a compatibility layer that attempts to provide chisel2 compatibility in chisel3.</p><p>Utility objects and methods are found in the <a href="../chisel3/util/index.html" class="extype" name="chisel3.util"><code>util</code></a> package.</p><p>The <a href="../chisel3/testers/index.html" class="extype" name="chisel3.testers"><code>testers</code></a> package defines the basic interface for chisel testers.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="_root_">root</a></dd></dl></div>
     </li><li name="_root_.Chisel" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="Chisel"></a><a id="Chisel:Chisel"></a>
       <span class="permalink">
@@ -84,13 +84,10 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">package</span>
       </span>
       <span class="symbol">
-        <a title="The Chisel compatibility package allows legacy users to continue using the Chisel (capital C) package name while moving to the more standard package naming convention chisel3 (lowercase c)." href="index.html"><span class="name">Chisel</span></a>
+        <a title="" href="index.html"><span class="name">Chisel</span></a>
       </span>
       
-      <p class="shortcomment cmt">The Chisel compatibility package allows legacy users to continue using the <code>Chisel</code> (capital C) package name
- while moving to the more standard package naming convention <code>chisel3</code> (lowercase c).</p><div class="fullcomment"><div class="comment cmt"><p>The Chisel compatibility package allows legacy users to continue using the <code>Chisel</code> (capital C) package name
- while moving to the more standard package naming convention <code>chisel3</code> (lowercase c).
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="_root_">root</a></dd></dl></div>
     </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="class" href="package$$AddDirMethodToData.html" title=""></a>
@@ -103,6 +100,14 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
                         <span class="separator"></span>
                         <a class="object" href="package$$Bits$.html" title=""></a>
                         <a href="package$$Bits$.html" title="">Bits</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$BitsCompatibility.html" title=""></a>
+                        <a href="package$$BitsCompatibility.html" title="">BitsCompatibility</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$BitsObjectCompatibility.html" title=""></a>
+                        <a href="package$$BitsObjectCompatibility.html" title="">BitsObjectCompatibility</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="class" href="package$$BlackBox.html" title=""></a>
@@ -125,6 +130,10 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
                         <a href="package$$CompatibilityModule.html" title="">CompatibilityModule</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
+                        <a class="class" href="package$$DataCompatibility.html" title=""></a>
+                        <a href="package$$DataCompatibility.html" title="">DataCompatibility</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
                         <a class="class" href="package$$Direction.html" title=""></a>
                         <a href="package$$Direction.html" title="">Direction</a>
                       </li><li class="current-entities indented1">
@@ -141,12 +150,20 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
                         <a href="package$$INPUT$.html" title="">INPUT</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
+                        <a class="class" href="package$$MemCompatibility.html" title=""></a>
+                        <a href="package$$MemCompatibility.html" title="">MemCompatibility</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
                         <a class="object" href="package$$NODIR$.html" title=""></a>
                         <a href="package$$NODIR$.html" title="">NODIR</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="object" href="package$$OUTPUT$.html" title=""></a>
                         <a href="package$$OUTPUT$.html" title="">OUTPUT</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$QueueCompatibility.html" title=""></a>
+                        <a href="package$$QueueCompatibility.html" title="">QueueCompatibility</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="object" href="package$$Reg$.html" title=""></a>
@@ -161,6 +178,10 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
                         <a href="package$$SIntFactory.html" title="This contains literal constructor factory methods that are deprecated as of Chisel3.">SIntFactory</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
+                        <a class="class" href="package$$SeqMemCompatibility.html" title=""></a>
+                        <a href="package$$SeqMemCompatibility.html" title="">SeqMemCompatibility</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
                         <a class="object" href="package$$UInt$.html" title=""></a>
                         <a href="package$$UInt$.html" title="">UInt</a>
                       </li><li class="current-entities indented1">
@@ -171,6 +192,10 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
                         <span class="separator"></span>
                         <a class="object" href="package$$Vec$.html" title=""></a>
                         <a href="package$$Vec$.html" title="">Vec</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$VecLikeCompatibility.html" title=""></a>
+                        <a href="package$$VecLikeCompatibility.html" title="">VecLikeCompatibility</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="object" href="package$$Wire$.html" title=""></a>
@@ -258,33 +283,23 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">BoolFactory</span><span class="result"> extends <a href="../chisel3/core/BoolFactory.html" class="extype" name="chisel3.core.BoolFactory">chisel3.core.BoolFactory</a></span>
+        <span class="name">BoolFactory</span><span class="result"> extends <a href="../chisel3/BoolFactory.html" class="extype" name="chisel3.BoolFactory">chisel3.BoolFactory</a></span>
       </span>
       </h4>
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>This contains literal constructor factory methods that are deprecated as of Chisel3.
-</p></div><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/master//src/main/scala/chisel3/compatibility.scala" target="_blank">compatibility.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="../chisel3/core/BoolFactory.html" class="extype" name="chisel3.core.BoolFactory">chisel3.core.BoolFactory</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="../chisel3/BoolFactory.html" class="extype" name="chisel3.BoolFactory">chisel3.BoolFactory</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div><div class="toggleContainer block">
             <span class="toggle">
               Known Subclasses
             </span>
             <div class="subClasses hiddenContent"><a href="package$$Bool$.html" class="extype" name="Chisel.Bool">Bool</a></div>
-          </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
-                <span class="toggle diagram-link">
-                  Type Hierarchy
-                </span>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 156.00 155.00" height="155pt" width="156pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 151)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-151 152,-151 152,4 -4,4" stroke="transparent" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this trait" id="graph1_0"><g id="a_this trait|graph1_0"><a xlink:title="Chisel.BoolFactory (this trait)" xlink:href="#inheritance-diagram"><path d="M112.17,-86C112.17,-86 35.83,-86 35.83,-86 31.67,-86 27.5,-81.83 27.5,-77.67 27.5,-77.67 27.5,-69.33 27.5,-69.33 27.5,-65.17 31.67,-61 35.83,-61 35.83,-61 112.17,-61 112.17,-61 116.33,-61 120.5,-65.17 120.5,-69.33 120.5,-69.33 120.5,-77.67 120.5,-77.67 120.5,-81.83 116.33,-86 112.17,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../lib/trait_diagram.png" y="-80.5" x="38" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="59" text-anchor="start">BoolFactory</text></a></g></g><!-- node1 --><g class="node object" id="graph1_1"><g id="a_object|graph1_1"><a xlink:title="Chisel.Bool" xlink:href="package$$Bool$.html#inheritance-diagram"><path d="M97.17,-25C97.17,-25 50.83,-25 50.83,-25 46.67,-25 42.5,-20.83 42.5,-16.67 42.5,-16.67 42.5,-8.33 42.5,-8.33 42.5,-4.17 46.67,0 50.83,0 50.83,0 97.17,0 97.17,0 101.33,0 105.5,-4.17 105.5,-8.33 105.5,-8.33 105.5,-16.67 105.5,-16.67 105.5,-20.83 101.33,-25 97.17,-25" stroke="#103a51" fill="#103a51"></path><image xlink:href="../lib/object_diagram.png" y="-19.5" x="53" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="74" text-anchor="start">Bool</text></a></g></g><!-- node0&#45;&gt;node1 --><g class="edge inheritance" id="graph1_0_1"><g id="a_inheritance|graph1_0_1"><a xlink:title="Bool is a subtype of BoolFactory"><path d="M74,-53.76C74,-44.37 74,-33.29 74,-25.13" stroke="#d4d4d4" fill="none"></path><polygon points="71.55,-53.84 74,-60.84 76.45,-53.84 71.55,-53.84" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node trait" id="graph1_2"><g id="a_trait|graph1_2"><a xlink:title="chisel3.core.BoolFactory" xlink:href="../chisel3/core/BoolFactory.html#inheritance-diagram"><path d="M139.67,-147C139.67,-147 8.33,-147 8.33,-147 4.17,-147 0,-142.83 0,-138.67 0,-138.67 0,-130.33 0,-130.33 0,-126.17 4.17,-122 8.33,-122 8.33,-122 139.67,-122 139.67,-122 143.83,-122 148,-126.17 148,-130.33 148,-130.33 148,-138.67 148,-138.67 148,-142.83 143.83,-147 139.67,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../lib/trait_diagram.png" y="-141.5" x="10" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="31" text-anchor="start">chisel3.core.BoolFactory</text></a></g></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph1_2_0"><g id="a_inheritance|graph1_2_0"><a xlink:title="BoolFactory is a subtype of chisel3.core.BoolFactory"><path d="M74,-114.76C74,-105.37 74,-94.29 74,-86.13" stroke="#d4d4d4" fill="none"></path><polygon points="71.55,-114.84 74,-121.84 76.45,-114.84 71.55,-114.84" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
-                <div id="diagram-controls" class="hiddenContent">
-                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
-                </div>
-              </div></div>
+          </div></div>
         
 
       <div id="mbrsel">
@@ -309,7 +324,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="Chisel.BoolFactory"><span>BoolFactory</span></li><li class="in" name="chisel3.core.BoolFactory"><span>BoolFactory</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="Chisel.BoolFactory"><span>BoolFactory</span></li><li class="in" name="chisel3.BoolFactory"><span>BoolFactory</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -384,10 +399,10 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="chisel3.core.BoolFactory#Lit" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="Lit(x:Boolean):chisel3.core.Bool"></a><a id="Lit(Boolean):chisel3.core.Bool"></a>
+    </li><li name="chisel3.BoolFactory#Lit" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="Lit(x:Boolean):chisel3.Bool"></a><a id="Lit(Boolean):chisel3.Bool"></a>
       <span class="permalink">
-      <a href="../Chisel/package$$BoolFactory.html#Lit(x:Boolean):chisel3.core.Bool" title="Permalink">
+      <a href="../Chisel/package$$BoolFactory.html#Lit(x:Boolean):chisel3.Bool" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -396,11 +411,11 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">Lit</span><span class="params">(<span name="x">x: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>)</span><span class="result">: <a href="../chisel3/core/Bool.html" class="extype" name="chisel3.core.Bool">chisel3.core.Bool</a></span>
+        <span class="name">Lit</span><span class="params">(<span name="x">x: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>)</span><span class="result">: <a href="../chisel3/Bool.html" class="extype" name="chisel3.Bool">chisel3.Bool</a></span>
       </span>
       
       <p class="shortcomment cmt">Creates Bool literal.</p><div class="fullcomment"><div class="comment cmt"><p>Creates Bool literal.
-</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../chisel3/index.html" class="extype" name="chisel3">chisel3</a>] </dd><dt>Definition Classes</dt><dd><a href="../chisel3/core/BoolFactory.html" class="extype" name="chisel3.core.BoolFactory">BoolFactory</a></dd></dl></div>
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../chisel3/index.html" class="extype" name="chisel3">chisel3</a>] </dd><dt>Definition Classes</dt><dd><a href="../chisel3/BoolFactory.html" class="extype" name="chisel3.BoolFactory">BoolFactory</a></dd></dl></div>
     </li><li name="Chisel.BoolFactory#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="apply(dir:Chisel.package.Direction):Chisel.package.Bool"></a><a id="apply(Direction):Bool"></a>
       <span class="permalink">
@@ -413,7 +428,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="dir">dir: <a href="package$$Direction.html" class="extype" name="Chisel.Direction">Direction</a></span>)</span><span class="result">: <a href="index.html#Bool=chisel3.core.Bool" class="extmbr" name="Chisel.Bool">Bool</a></span>
+        <span class="name">apply</span><span class="params">(<span name="dir">dir: <a href="package$$Direction.html" class="extype" name="Chisel.Direction">Direction</a></span>)</span><span class="result">: <a href="index.html#Bool=chisel3.Bool" class="extmbr" name="Chisel.Bool">Bool</a></span>
       </span>
       
       <p class="shortcomment cmt">Create a UInt with a specified direction and width - compatibility with Chisel2.</p>
@@ -429,14 +444,14 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="x">x: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>)</span><span class="result">: <a href="index.html#Bool=chisel3.core.Bool" class="extmbr" name="Chisel.Bool">Bool</a></span>
+        <span class="name">apply</span><span class="params">(<span name="x">x: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>)</span><span class="result">: <a href="index.html#Bool=chisel3.Bool" class="extmbr" name="Chisel.Bool">Bool</a></span>
       </span>
       
       <p class="shortcomment cmt">Creates Bool literal.</p>
-    </li><li name="chisel3.core.BoolFactory#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="apply():chisel3.core.Bool"></a>
+    </li><li name="chisel3.BoolFactory#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply():chisel3.Bool"></a>
       <span class="permalink">
-      <a href="../Chisel/package$$BoolFactory.html#apply():chisel3.core.Bool" title="Permalink">
+      <a href="../Chisel/package$$BoolFactory.html#apply():chisel3.Bool" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -445,11 +460,11 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">()</span><span class="result">: <a href="../chisel3/core/Bool.html" class="extype" name="chisel3.core.Bool">chisel3.core.Bool</a></span>
+        <span class="name">apply</span><span class="params">()</span><span class="result">: <a href="../chisel3/Bool.html" class="extype" name="chisel3.Bool">chisel3.Bool</a></span>
       </span>
       
       <p class="shortcomment cmt">Creates an empty Bool.</p><div class="fullcomment"><div class="comment cmt"><p>Creates an empty Bool.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../chisel3/core/BoolFactory.html" class="extype" name="chisel3.core.BoolFactory">BoolFactory</a></dd></dl></div>
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../chisel3/BoolFactory.html" class="extype" name="chisel3.BoolFactory">BoolFactory</a></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
@@ -762,8 +777,8 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="chisel3.core.BoolFactory">
-              <h3>Inherited from <a href="../chisel3/core/BoolFactory.html" class="extype" name="chisel3.core.BoolFactory">chisel3.core.BoolFactory</a></h3>
+        <div class="parent" name="chisel3.BoolFactory">
+              <h3>Inherited from <a href="../chisel3/BoolFactory.html" class="extype" name="chisel3.BoolFactory">chisel3.BoolFactory</a></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">

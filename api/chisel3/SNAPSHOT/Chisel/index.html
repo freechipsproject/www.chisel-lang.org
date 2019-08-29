@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.2-050719-SNAPSHOT - Chisel</title>
-          <meta name="description" content="chisel3 3.2 - 050719 - SNAPSHOT - Chisel" />
-          <meta name="keywords" content="chisel3 3.2 050719 SNAPSHOT Chisel" />
+          <title>chisel3 3.2-081319-SNAPSHOT - Chisel</title>
+          <meta name="description" content="chisel3 3.2 - 081319 - SNAPSHOT - Chisel" />
+          <meta name="keywords" content="chisel3 3.2 081319 SNAPSHOT Chisel" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.2-050719-SNAPSHOT</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.2-081319-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -69,9 +69,9 @@
       </span>
       
       <p class="shortcomment cmt">This is the documentation for Chisel.</p><div class="fullcomment"><div class="comment cmt"><p>This is the documentation for Chisel.</p><h4> Package structure </h4><p>The <a href="../chisel3/index.html" class="extype" name="chisel3">chisel3</a> package presents the public API of Chisel.
-It contains the concrete core types <a href="../chisel3/core/UInt.html" class="extype" name="chisel3.core.UInt"><code>UInt</code></a>, <a href="../chisel3/core/SInt.html" class="extype" name="chisel3.core.SInt"><code>SInt</code></a>, <a href="../chisel3/core/Bool.html" class="extype" name="chisel3.core.Bool"><code>Bool</code></a>, <a href="../chisel3/core/FixedPoint.html" class="extype" name="chisel3.core.FixedPoint"><code>FixedPoint</code></a>, <a href="../chisel3/core/Clock.html" class="extype" name="chisel3.core.Clock"><code>Clock</code></a>, and <a href="../chisel3/core/Reg$.html" class="extype" name="chisel3.core.Reg"><code>Reg</code></a>,
-the abstract types <a href="../chisel3/core/Bits.html" class="extype" name="chisel3.core.Bits"><code>Bits</code></a>, <a href="../chisel3/core/Aggregate.html" class="extype" name="chisel3.core.Aggregate"><code>Aggregate</code></a>, and <a href="../chisel3/core/Data.html" class="extype" name="chisel3.core.Data"><code>Data</code></a>,
-and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" name="chisel3.core.Bundle"><code>Bundle</code></a> and <a href="../chisel3/core/Vec.html" class="extype" name="chisel3.core.Vec"><code>Vec</code></a>.</p><p>The <a href="" class="extype" name="Chisel">Chisel</a> package is a compatibility layer that attempts to provide chisel2 compatibility in chisel3.</p><p>Utility objects and methods are found in the <a href="../chisel3/util/index.html" class="extype" name="chisel3.util"><code>util</code></a> package.</p><p>The <a href="../chisel3/testers/index.html" class="extype" name="chisel3.testers"><code>testers</code></a> package defines the basic interface for chisel testers.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+It contains the concrete core types <a href="../chisel3/UInt.html" class="extype" name="chisel3.UInt"><code>UInt</code></a>, <a href="../chisel3/SInt.html" class="extype" name="chisel3.SInt"><code>SInt</code></a>, <a href="../chisel3/Bool.html" class="extype" name="chisel3.Bool"><code>Bool</code></a>, <a href="../chisel3/experimental/FixedPoint.html" class="extype" name="chisel3.experimental.FixedPoint"><code>FixedPoint</code></a>, <a href="../chisel3/Clock.html" class="extype" name="chisel3.Clock"><code>Clock</code></a>, and <a href="../chisel3/Reg$.html" class="extype" name="chisel3.Reg"><code>Reg</code></a>,
+the abstract types <a href="../chisel3/Bits.html" class="extype" name="chisel3.Bits"><code>Bits</code></a>, <a href="../chisel3/Aggregate.html" class="extype" name="chisel3.Aggregate"><code>Aggregate</code></a>, and <a href="../chisel3/Data.html" class="extype" name="chisel3.Data"><code>Data</code></a>,
+and the aggregate types <a href="../chisel3/Bundle.html" class="extype" name="chisel3.Bundle"><code>Bundle</code></a> and <a href="../chisel3/Vec.html" class="extype" name="chisel3.Vec"><code>Vec</code></a>.</p><p>The <a href="" class="extype" name="Chisel">Chisel</a> package is a compatibility layer that attempts to provide chisel2 compatibility in chisel3.</p><p>Utility objects and methods are found in the <a href="../chisel3/util/index.html" class="extype" name="chisel3.util"><code>util</code></a> package.</p><p>The <a href="../chisel3/testers/index.html" class="extype" name="chisel3.testers"><code>testers</code></a> package defines the basic interface for chisel testers.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="_root_">root</a></dd></dl></div>
     </li><li name="_root_.Chisel" visbl="pub" class="indented1 current" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="Chisel"></a><a id="Chisel:Chisel"></a>
       <span class="permalink">
@@ -87,10 +87,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="name">Chisel</span>
       </span>
       
-      <p class="shortcomment cmt">The Chisel compatibility package allows legacy users to continue using the <code>Chisel</code> (capital C) package name
- while moving to the more standard package naming convention <code>chisel3</code> (lowercase c).</p><div class="fullcomment"><div class="comment cmt"><p>The Chisel compatibility package allows legacy users to continue using the <code>Chisel</code> (capital C) package name
- while moving to the more standard package naming convention <code>chisel3</code> (lowercase c).
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="_root_">root</a></dd></dl></div>
     </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="class" href="package$$AddDirMethodToData.html" title=""></a>
@@ -103,6 +100,14 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
                         <span class="separator"></span>
                         <a class="object" href="package$$Bits$.html" title=""></a>
                         <a href="package$$Bits$.html" title="">Bits</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$BitsCompatibility.html" title=""></a>
+                        <a href="package$$BitsCompatibility.html" title="">BitsCompatibility</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$BitsObjectCompatibility.html" title=""></a>
+                        <a href="package$$BitsObjectCompatibility.html" title="">BitsObjectCompatibility</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="class" href="package$$BlackBox.html" title=""></a>
@@ -125,6 +130,10 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
                         <a href="package$$CompatibilityModule.html" title="">CompatibilityModule</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
+                        <a class="class" href="package$$DataCompatibility.html" title=""></a>
+                        <a href="package$$DataCompatibility.html" title="">DataCompatibility</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
                         <a class="class" href="package$$Direction.html" title=""></a>
                         <a href="package$$Direction.html" title="">Direction</a>
                       </li><li class="current-entities indented1">
@@ -141,12 +150,20 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
                         <a href="package$$INPUT$.html" title="">INPUT</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
+                        <a class="class" href="package$$MemCompatibility.html" title=""></a>
+                        <a href="package$$MemCompatibility.html" title="">MemCompatibility</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
                         <a class="object" href="package$$NODIR$.html" title=""></a>
                         <a href="package$$NODIR$.html" title="">NODIR</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="object" href="package$$OUTPUT$.html" title=""></a>
                         <a href="package$$OUTPUT$.html" title="">OUTPUT</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$QueueCompatibility.html" title=""></a>
+                        <a href="package$$QueueCompatibility.html" title="">QueueCompatibility</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="object" href="package$$Reg$.html" title=""></a>
@@ -161,6 +178,10 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
                         <a href="package$$SIntFactory.html" title="This contains literal constructor factory methods that are deprecated as of Chisel3.">SIntFactory</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
+                        <a class="class" href="package$$SeqMemCompatibility.html" title=""></a>
+                        <a href="package$$SeqMemCompatibility.html" title="">SeqMemCompatibility</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
                         <a class="object" href="package$$UInt$.html" title=""></a>
                         <a href="package$$UInt$.html" title="">UInt</a>
                       </li><li class="current-entities indented1">
@@ -171,6 +192,10 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
                         <span class="separator"></span>
                         <a class="object" href="package$$Vec$.html" title=""></a>
                         <a href="package$$Vec$.html" title="">Vec</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$VecLikeCompatibility.html" title=""></a>
+                        <a href="package$$VecLikeCompatibility.html" title="">VecLikeCompatibility</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="object" href="package$$Wire$.html" title=""></a>
@@ -263,24 +288,12 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The Chisel compatibility package allows legacy users to continue using the <code>Chisel</code> (capital C) package name
- while moving to the more standard package naming convention <code>chisel3</code> (lowercase c).
-</p></div><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/master//src/main/scala/chisel3/compatibility.scala" target="_blank">compatibility.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
           <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
-        </div><div class="toggleContainer block diagram-container" id="content-diagram-container">
-                <span class="toggle diagram-link">
-                  Content Hierarchy
-                </span>
-                <div class="diagram" id="content-diagram"><svg class="package-diagram" id="graph1" viewBox="0.00 0.00 622.00 94.00" height="94pt" width="622pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 90)" class="graph" id="graph0"><polygon points="-4,4 -4,-90 618,-90 618,4 -4,4" stroke="transparent" fill="white"></polygon><!-- node0 --><g class="node object" id="graph1_0"><g id="a_object|graph1_0"><a xlink:title="Chisel.Bool" xlink:href="package$$Bool$.html#inheritance-diagram"><path d="M69.67,-25C69.67,-25 23.33,-25 23.33,-25 19.17,-25 15,-20.83 15,-16.67 15,-16.67 15,-8.33 15,-8.33 15,-4.17 19.17,0 23.33,0 23.33,0 69.67,0 69.67,0 73.83,0 78,-4.17 78,-8.33 78,-8.33 78,-16.67 78,-16.67 78,-20.83 73.83,-25 69.67,-25" stroke="#103a51" fill="#103a51"></path><image xlink:href="../lib/object_diagram.png" y="-19.5" x="25.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="46.5" text-anchor="start">Bool</text></a></g></g><!-- node1 --><g class="node object" id="graph1_1"><g id="a_object|graph1_1"><a xlink:title="Chisel.SInt" xlink:href="package$$SInt$.html#inheritance-diagram"><path d="M178.17,-25C178.17,-25 134.83,-25 134.83,-25 130.67,-25 126.5,-20.83 126.5,-16.67 126.5,-16.67 126.5,-8.33 126.5,-8.33 126.5,-4.17 130.67,0 134.83,0 134.83,0 178.17,0 178.17,0 182.33,0 186.5,-4.17 186.5,-8.33 186.5,-8.33 186.5,-16.67 186.5,-16.67 186.5,-20.83 182.33,-25 178.17,-25" stroke="#103a51" fill="#103a51"></path><image xlink:href="../lib/object_diagram.png" y="-19.5" x="136.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="157.5" text-anchor="start">SInt</text></a></g></g><!-- node2 --><g class="node object" id="graph1_2"><g id="a_object|graph1_2"><a xlink:title="Chisel.UInt" xlink:href="package$$UInt$.html#inheritance-diagram"><path d="M256.17,-25C256.17,-25 212.83,-25 212.83,-25 208.67,-25 204.5,-20.83 204.5,-16.67 204.5,-16.67 204.5,-8.33 204.5,-8.33 204.5,-4.17 208.67,0 212.83,0 212.83,0 256.17,0 256.17,0 260.33,0 264.5,-4.17 264.5,-8.33 264.5,-8.33 264.5,-16.67 264.5,-16.67 264.5,-20.83 260.33,-25 256.17,-25" stroke="#103a51" fill="#103a51"></path><image xlink:href="../lib/object_diagram.png" y="-19.5" x="214.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="235.5" text-anchor="start">UInt</text></a></g></g><!-- node3 --><g class="node object" id="graph1_3"><g id="a_object|graph1_3"><a xlink:title="Chisel.Bits" xlink:href="package$$Bits$.html#inheritance-diagram"><path d="M334.17,-25C334.17,-25 290.83,-25 290.83,-25 286.67,-25 282.5,-20.83 282.5,-16.67 282.5,-16.67 282.5,-8.33 282.5,-8.33 282.5,-4.17 286.67,0 290.83,0 290.83,0 334.17,0 334.17,0 338.33,0 342.5,-4.17 342.5,-8.33 342.5,-8.33 342.5,-16.67 342.5,-16.67 342.5,-20.83 338.33,-25 334.17,-25" stroke="#103a51" fill="#103a51"></path><image xlink:href="../lib/object_diagram.png" y="-19.5" x="292.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="313.5" text-anchor="start">Bits</text></a></g></g><!-- node4 --><g class="node trait" id="graph1_4"><g id="a_trait|graph1_4"><a xlink:title="Chisel.BoolFactory" xlink:href="package$$BoolFactory.html#inheritance-diagram"><path d="M84.67,-86C84.67,-86 8.33,-86 8.33,-86 4.17,-86 0,-81.83 0,-77.67 0,-77.67 0,-69.33 0,-69.33 0,-65.17 4.17,-61 8.33,-61 8.33,-61 84.67,-61 84.67,-61 88.83,-61 93,-65.17 93,-69.33 93,-69.33 93,-77.67 93,-77.67 93,-81.83 88.83,-86 84.67,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../lib/trait_diagram.png" y="-80.5" x="10.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="31.5" text-anchor="start">BoolFactory</text></a></g></g><!-- node4&#45;&gt;node0 --><g class="edge inheritance" id="graph1_4_0"><g id="a_inheritance|graph1_4_0"><a xlink:title="Bool is a subtype of BoolFactory"><path d="M46.5,-53.76C46.5,-44.37 46.5,-33.29 46.5,-25.13" stroke="#d4d4d4" fill="none"></path><polygon points="44.05,-53.84 46.5,-60.84 48.95,-53.84 44.05,-53.84" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node5 --><g class="node trait" id="graph1_5"><g id="a_trait|graph1_5"><a xlink:title="Chisel.SIntFactory" xlink:href="package$$SIntFactory.html#inheritance-diagram"><path d="M193.67,-86C193.67,-86 119.33,-86 119.33,-86 115.17,-86 111,-81.83 111,-77.67 111,-77.67 111,-69.33 111,-69.33 111,-65.17 115.17,-61 119.33,-61 119.33,-61 193.67,-61 193.67,-61 197.83,-61 202,-65.17 202,-69.33 202,-69.33 202,-77.67 202,-77.67 202,-81.83 197.83,-86 193.67,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../lib/trait_diagram.png" y="-80.5" x="121.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="142.5" text-anchor="start">SIntFactory</text></a></g></g><!-- node5&#45;&gt;node1 --><g class="edge inheritance" id="graph1_5_1"><g id="a_inheritance|graph1_5_1"><a xlink:title="SInt is a subtype of SIntFactory"><path d="M156.5,-53.76C156.5,-44.37 156.5,-33.29 156.5,-25.13" stroke="#d4d4d4" fill="none"></path><polygon points="154.05,-53.84 156.5,-60.84 158.95,-53.84 154.05,-53.84" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node6 --><g class="node trait" id="graph1_6"><g id="a_trait|graph1_6"><a xlink:title="Chisel.UIntFactory" xlink:href="package$$UIntFactory.html#inheritance-diagram"><path d="M326.67,-86C326.67,-86 252.33,-86 252.33,-86 248.17,-86 244,-81.83 244,-77.67 244,-77.67 244,-69.33 244,-69.33 244,-65.17 248.17,-61 252.33,-61 252.33,-61 326.67,-61 326.67,-61 330.83,-61 335,-65.17 335,-69.33 335,-69.33 335,-77.67 335,-77.67 335,-81.83 330.83,-86 326.67,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../lib/trait_diagram.png" y="-80.5" x="254.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="275.5" text-anchor="start">UIntFactory</text></a></g></g><!-- node6&#45;&gt;node2 --><g class="edge inheritance" id="graph1_6_2"><g id="a_inheritance|graph1_6_2"><a xlink:title="UInt is a subtype of UIntFactory"><path d="M273.83,-55.69C264.72,-45.92 253.47,-33.85 245.34,-25.13" stroke="#d4d4d4" fill="none"></path><polygon points="272.07,-57.39 278.63,-60.84 275.65,-54.05 272.07,-57.39" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node6&#45;&gt;node3 --><g class="edge inheritance" id="graph1_6_3"><g id="a_inheritance|graph1_6_3"><a xlink:title="Bits is a subtype of UIntFactory"><path d="M296.59,-54.32C300.3,-44.81 304.72,-33.45 307.97,-25.13" stroke="#d4d4d4" fill="none"></path><polygon points="294.3,-53.43 294.04,-60.84 298.87,-55.21 294.3,-53.43" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node7 --><g class="node object" id="graph1_7"><g id="a_object|graph1_7"><a xlink:title="Chisel.NODIR" xlink:href="package$$NODIR$.html#inheritance-diagram"><path d="M422.17,-25C422.17,-25 368.83,-25 368.83,-25 364.67,-25 360.5,-20.83 360.5,-16.67 360.5,-16.67 360.5,-8.33 360.5,-8.33 360.5,-4.17 364.67,0 368.83,0 368.83,0 422.17,0 422.17,0 426.33,0 430.5,-4.17 430.5,-8.33 430.5,-8.33 430.5,-16.67 430.5,-16.67 430.5,-20.83 426.33,-25 422.17,-25" stroke="#103a51" fill="#103a51"></path><image xlink:href="../lib/object_diagram.png" y="-19.5" x="370.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="391.5" text-anchor="start">NODIR</text></a></g></g><!-- node8 --><g class="node object" id="graph1_8"><g id="a_object|graph1_8"><a xlink:title="Chisel.OUTPUT" xlink:href="package$$OUTPUT$.html#inheritance-diagram"><path d="M518.17,-25C518.17,-25 456.83,-25 456.83,-25 452.67,-25 448.5,-20.83 448.5,-16.67 448.5,-16.67 448.5,-8.33 448.5,-8.33 448.5,-4.17 452.67,0 456.83,0 456.83,0 518.17,0 518.17,0 522.33,0 526.5,-4.17 526.5,-8.33 526.5,-8.33 526.5,-16.67 526.5,-16.67 526.5,-20.83 522.33,-25 518.17,-25" stroke="#103a51" fill="#103a51"></path><image xlink:href="../lib/object_diagram.png" y="-19.5" x="458.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="479.5" text-anchor="start">OUTPUT</text></a></g></g><!-- node9 --><g class="node object" id="graph1_9"><g id="a_object|graph1_9"><a xlink:title="Chisel.INPUT" xlink:href="package$$INPUT$.html#inheritance-diagram"><path d="M605.67,-25C605.67,-25 553.33,-25 553.33,-25 549.17,-25 545,-20.83 545,-16.67 545,-16.67 545,-8.33 545,-8.33 545,-4.17 549.17,0 553.33,0 553.33,0 605.67,0 605.67,0 609.83,0 614,-4.17 614,-8.33 614,-8.33 614,-16.67 614,-16.67 614,-20.83 609.83,-25 605.67,-25" stroke="#103a51" fill="#103a51"></path><image xlink:href="../lib/object_diagram.png" y="-19.5" x="555.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="576.5" text-anchor="start">INPUT</text></a></g></g><!-- node10 --><g class="node class" id="graph1_10"><g id="a_class|graph1_10"><a xlink:title="Chisel.Direction" xlink:href="package$$Direction.html#inheritance-diagram"><path d="M519.67,-86C519.67,-86 455.33,-86 455.33,-86 451.17,-86 447,-81.83 447,-77.67 447,-77.67 447,-69.33 447,-69.33 447,-65.17 451.17,-61 455.33,-61 455.33,-61 519.67,-61 519.67,-61 523.83,-61 528,-65.17 528,-69.33 528,-69.33 528,-77.67 528,-77.67 528,-81.83 523.83,-86 519.67,-86" stroke="#418565" fill="#418565"></path><image xlink:href="../lib/class_diagram.png" y="-80.5" x="457.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="478.5" text-anchor="start">Direction</text></a></g></g><!-- node10&#45;&gt;node7 --><g class="edge inheritance" id="graph1_10_7"><g id="a_inheritance|graph1_10_7"><a xlink:title="NODIR is a subtype of Direction"><path d="M463.38,-57.03C447.8,-47.04 427.87,-34.26 413.64,-25.13" stroke="#d4d4d4" fill="none"></path><polygon points="462.11,-59.13 469.32,-60.84 464.75,-55 462.11,-59.13" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node10&#45;&gt;node8 --><g class="edge inheritance" id="graph1_10_8"><g id="a_inheritance|graph1_10_8"><a xlink:title="OUTPUT is a subtype of Direction"><path d="M487.5,-53.76C487.5,-44.37 487.5,-33.29 487.5,-25.13" stroke="#d4d4d4" fill="none"></path><polygon points="485.05,-53.84 487.5,-60.84 489.95,-53.84 485.05,-53.84" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node10&#45;&gt;node9 --><g class="edge inheritance" id="graph1_10_9"><g id="a_inheritance|graph1_10_9"><a xlink:title="INPUT is a subtype of Direction"><path d="M511.62,-57.03C527.2,-47.04 547.13,-34.26 561.36,-25.13" stroke="#d4d4d4" fill="none"></path><polygon points="510.25,-55 505.68,-60.84 512.89,-59.13 510.25,-55" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
-                <div id="diagram-controls" class="hiddenContent">
-                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
-                </div>
-              </div></div>
+        </div></div>
         
 
       <div id="mbrsel">
@@ -339,7 +352,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="package$$AddDirMethodToData.html"><span class="name">AddDirMethodToData</span></a><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.core.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="package$$AddDirMethodToData.html"><span class="name">AddDirMethodToData</span></a><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -355,14 +368,14 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="package$$AddDirectionToData.html"><span class="name">AddDirectionToData</span></a><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.core.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="package$$AddDirectionToData.html"><span class="name">AddDirectionToData</span></a><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
     </li><li name="Chisel.Aggregate" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Aggregate=chisel3.core.Aggregate"></a><a id="Aggregate:Aggregate"></a>
+      <a id="Aggregate=chisel3.Aggregate"></a><a id="Aggregate:Aggregate"></a>
       <span class="permalink">
-      <a href="../Chisel/index.html#Aggregate=chisel3.core.Aggregate" title="Permalink">
+      <a href="../Chisel/index.html#Aggregate=chisel3.Aggregate" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -371,7 +384,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">Aggregate</span><span class="result alias"> = <a href="../chisel3/core/Aggregate.html" class="extype" name="chisel3.core.Aggregate">chisel3.core.Aggregate</a></span>
+        <span class="name">Aggregate</span><span class="result alias"> = <a href="../chisel3/Aggregate.html" class="extype" name="chisel3.Aggregate">chisel3.Aggregate</a></span>
       </span>
       
       
@@ -387,7 +400,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">Arbiter</span><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.core.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="../chisel3/util/Arbiter.html" class="extype" name="chisel3.util.Arbiter">chisel3.util.Arbiter</a>[<span class="extype" name="Chisel.Arbiter.T">T</span>]</span>
+        <span class="name">Arbiter</span><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="../chisel3/util/Arbiter.html" class="extype" name="chisel3.util.Arbiter">chisel3.util.Arbiter</a>[<span class="extype" name="Chisel.Arbiter.T">T</span>]</span>
       </span>
       
       
@@ -403,7 +416,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">ArbiterIO</span><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.core.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="../chisel3/util/ArbiterIO.html" class="extype" name="chisel3.util.ArbiterIO">chisel3.util.ArbiterIO</a>[<span class="extype" name="Chisel.ArbiterIO.T">T</span>]</span>
+        <span class="name">ArbiterIO</span><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="../chisel3/util/ArbiterIO.html" class="extype" name="chisel3.util.ArbiterIO">chisel3.util.ArbiterIO</a>[<span class="extype" name="Chisel.ArbiterIO.T">T</span>]</span>
       </span>
       
       
@@ -440,9 +453,9 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
       
       
     </li><li name="Chisel.Bits" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Bits=chisel3.core.Bits"></a><a id="Bits:Bits"></a>
+      <a id="Bits=chisel3.Bits"></a><a id="Bits:Bits"></a>
       <span class="permalink">
-      <a href="../Chisel/index.html#Bits=chisel3.core.Bits" title="Permalink">
+      <a href="../Chisel/index.html#Bits=chisel3.Bits" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -451,7 +464,39 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">Bits</span><span class="result alias"> = <a href="../chisel3/core/Bits.html" class="extype" name="chisel3.core.Bits">chisel3.core.Bits</a></span>
+        <span class="name">Bits</span><span class="result alias"> = <a href="../chisel3/Bits.html" class="extype" name="chisel3.Bits">chisel3.Bits</a></span>
+      </span>
+      
+      
+    </li><li name="Chisel.BitsCompatibility" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BitsCompatibilityextendsAnyRef"></a><a id="BitsCompatibility:BitsCompatibility"></a>
+      <span class="permalink">
+      <a href="../Chisel/index.html#BitsCompatibilityextendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="package$$BitsCompatibility.html"><span class="name">BitsCompatibility</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      
+    </li><li name="Chisel.BitsObjectCompatibility" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BitsObjectCompatibilityextendsAnyRef"></a><a id="BitsObjectCompatibility:BitsObjectCompatibility"></a>
+      <span class="permalink">
+      <a href="../Chisel/index.html#BitsObjectCompatibilityextendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="package$$BitsObjectCompatibility.html"><span class="name">BitsObjectCompatibility</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -467,14 +512,14 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="package$$BlackBox.html"><span class="name">BlackBox</span></a><span class="result"> extends <a href="../chisel3/core/BlackBox.html" class="extype" name="chisel3.core.BlackBox">chisel3.core.BlackBox</a></span>
+        <a title="" href="package$$BlackBox.html"><span class="name">BlackBox</span></a><span class="result"> extends <a href="../chisel3/BlackBox.html" class="extype" name="chisel3.BlackBox">chisel3.BlackBox</a></span>
       </span>
       
       
     </li><li name="Chisel.Bool" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Bool=chisel3.core.Bool"></a><a id="Bool:Bool"></a>
+      <a id="Bool=chisel3.Bool"></a><a id="Bool:Bool"></a>
       <span class="permalink">
-      <a href="../Chisel/index.html#Bool=chisel3.core.Bool" title="Permalink">
+      <a href="../Chisel/index.html#Bool=chisel3.Bool" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -483,7 +528,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">Bool</span><span class="result alias"> = <a href="../chisel3/core/Bool.html" class="extype" name="chisel3.core.Bool">chisel3.core.Bool</a></span>
+        <span class="name">Bool</span><span class="result alias"> = <a href="../chisel3/Bool.html" class="extype" name="chisel3.Bool">chisel3.Bool</a></span>
       </span>
       
       
@@ -499,14 +544,14 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="This contains literal constructor factory methods that are deprecated as of Chisel3." href="package$$BoolFactory.html"><span class="name">BoolFactory</span></a><span class="result"> extends <a href="../chisel3/core/BoolFactory.html" class="extype" name="chisel3.core.BoolFactory">chisel3.core.BoolFactory</a></span>
+        <a title="This contains literal constructor factory methods that are deprecated as of Chisel3." href="package$$BoolFactory.html"><span class="name">BoolFactory</span></a><span class="result"> extends <a href="../chisel3/BoolFactory.html" class="extype" name="chisel3.BoolFactory">chisel3.BoolFactory</a></span>
       </span>
       
       <p class="shortcomment cmt">This contains literal constructor factory methods that are deprecated as of Chisel3.</p>
     </li><li name="Chisel.Bundle" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Bundle=chisel3.core.Bundle"></a><a id="Bundle:Bundle"></a>
+      <a id="Bundle=chisel3.Bundle"></a><a id="Bundle:Bundle"></a>
       <span class="permalink">
-      <a href="../Chisel/index.html#Bundle=chisel3.core.Bundle" title="Permalink">
+      <a href="../Chisel/index.html#Bundle=chisel3.Bundle" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -515,7 +560,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">Bundle</span><span class="result alias"> = <a href="../chisel3/core/Bundle.html" class="extype" name="chisel3.core.Bundle">chisel3.core.Bundle</a></span>
+        <span class="name">Bundle</span><span class="result alias"> = <a href="../chisel3/Bundle.html" class="extype" name="chisel3.Bundle">chisel3.Bundle</a></span>
       </span>
       
       
@@ -536,9 +581,9 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
       
       
     </li><li name="Chisel.Clock" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Clock=chisel3.core.Clock"></a><a id="Clock:Clock"></a>
+      <a id="Clock=chisel3.Clock"></a><a id="Clock:Clock"></a>
       <span class="permalink">
-      <a href="../Chisel/index.html#Clock=chisel3.core.Clock" title="Permalink">
+      <a href="../Chisel/index.html#Clock=chisel3.Clock" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -547,7 +592,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">Clock</span><span class="result alias"> = <a href="../chisel3/core/Clock.html" class="extype" name="chisel3.core.Clock">chisel3.core.Clock</a></span>
+        <span class="name">Clock</span><span class="result alias"> = <a href="../chisel3/Clock.html" class="extype" name="chisel3.Clock">chisel3.Clock</a></span>
       </span>
       
       
@@ -563,7 +608,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="package$$CompatibilityModule.html"><span class="name">CompatibilityModule</span></a><span class="result"> extends <a href="../chisel3/core/LegacyModule.html" class="extype" name="chisel3.core.LegacyModule">LegacyModule</a></span>
+        <a title="" href="package$$CompatibilityModule.html"><span class="name">CompatibilityModule</span></a><span class="result"> extends <a href="../chisel3/experimental/LegacyModule.html" class="extype" name="chisel3.experimental.LegacyModule">LegacyModule</a></span>
       </span>
       
       
@@ -584,9 +629,9 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
       
       
     </li><li name="Chisel.Data" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Data=chisel3.core.Data"></a><a id="Data:Data"></a>
+      <a id="Data=chisel3.Data"></a><a id="Data:Data"></a>
       <span class="permalink">
-      <a href="../Chisel/index.html#Data=chisel3.core.Data" title="Permalink">
+      <a href="../Chisel/index.html#Data=chisel3.Data" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -595,7 +640,23 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">Data</span><span class="result alias"> = <a href="../chisel3/core/Data.html" class="extype" name="chisel3.core.Data">chisel3.core.Data</a></span>
+        <span class="name">Data</span><span class="result alias"> = <a href="../chisel3/Data.html" class="extype" name="chisel3.Data">chisel3.Data</a></span>
+      </span>
+      
+      
+    </li><li name="Chisel.DataCompatibility" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="DataCompatibilityextendsAnyRef"></a><a id="DataCompatibility:DataCompatibility"></a>
+      <span class="permalink">
+      <a href="../Chisel/index.html#DataCompatibilityextendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="package$$DataCompatibility.html"><span class="name">DataCompatibility</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -611,7 +672,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">DecoupledIO</span><span class="tparams">[<span name="T">+T &lt;: <a href="#Data=chisel3.core.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="../chisel3/util/DecoupledIO.html" class="extype" name="chisel3.util.DecoupledIO">chisel3.util.DecoupledIO</a>[<span class="extype" name="Chisel.DecoupledIO.T">T</span>]</span>
+        <span class="name">DecoupledIO</span><span class="tparams">[<span name="T">+T &lt;: <a href="#Data=chisel3.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="../chisel3/util/DecoupledIO.html" class="extype" name="chisel3.util.DecoupledIO">chisel3.util.DecoupledIO</a>[<span class="extype" name="Chisel.DecoupledIO.T">T</span>]</span>
       </span>
       
       
@@ -632,9 +693,9 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
       
       
     </li><li name="Chisel.Element" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Element=chisel3.core.Element"></a><a id="Element:Element"></a>
+      <a id="Element=chisel3.Element"></a><a id="Element:Element"></a>
       <span class="permalink">
-      <a href="../Chisel/index.html#Element=chisel3.core.Element" title="Permalink">
+      <a href="../Chisel/index.html#Element=chisel3.Element" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -643,7 +704,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">Element</span><span class="result alias"> = <a href="../chisel3/core/Element.html" class="extype" name="chisel3.core.Element">chisel3.core.Element</a></span>
+        <span class="name">Element</span><span class="result alias"> = <a href="../chisel3/Element.html" class="extype" name="chisel3.Element">chisel3.Element</a></span>
       </span>
       
       
@@ -659,7 +720,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">LockingArbiter</span><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.core.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="../chisel3/util/LockingArbiter.html" class="extype" name="chisel3.util.LockingArbiter">chisel3.util.LockingArbiter</a>[<span class="extype" name="Chisel.LockingArbiter.T">T</span>]</span>
+        <span class="name">LockingArbiter</span><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="../chisel3/util/LockingArbiter.html" class="extype" name="chisel3.util.LockingArbiter">chisel3.util.LockingArbiter</a>[<span class="extype" name="Chisel.LockingArbiter.T">T</span>]</span>
       </span>
       
       
@@ -675,7 +736,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">LockingArbiterLike</span><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.core.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="../chisel3/util/LockingArbiterLike.html" class="extype" name="chisel3.util.LockingArbiterLike">chisel3.util.LockingArbiterLike</a>[<span class="extype" name="Chisel.LockingArbiterLike.T">T</span>]</span>
+        <span class="name">LockingArbiterLike</span><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="../chisel3/util/LockingArbiterLike.html" class="extype" name="chisel3.util.LockingArbiterLike">chisel3.util.LockingArbiterLike</a>[<span class="extype" name="Chisel.LockingArbiterLike.T">T</span>]</span>
       </span>
       
       
@@ -691,14 +752,14 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">LockingRRArbiter</span><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.core.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="../chisel3/util/LockingRRArbiter.html" class="extype" name="chisel3.util.LockingRRArbiter">chisel3.util.LockingRRArbiter</a>[<span class="extype" name="Chisel.LockingRRArbiter.T">T</span>]</span>
+        <span class="name">LockingRRArbiter</span><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="../chisel3/util/LockingRRArbiter.html" class="extype" name="chisel3.util.LockingRRArbiter">chisel3.util.LockingRRArbiter</a>[<span class="extype" name="Chisel.LockingRRArbiter.T">T</span>]</span>
       </span>
       
       
     </li><li name="Chisel.Mem" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Mem[T&lt;:Chisel.package.Data]=chisel3.core.Mem[T]"></a><a id="Mem[T&lt;:Data]:Mem[T]"></a>
+      <a id="Mem[T&lt;:Chisel.package.Data]=chisel3.Mem[T]"></a><a id="Mem[T&lt;:Data]:Mem[T]"></a>
       <span class="permalink">
-      <a href="../Chisel/index.html#Mem[T&lt;:Chisel.package.Data]=chisel3.core.Mem[T]" title="Permalink">
+      <a href="../Chisel/index.html#Mem[T&lt;:Chisel.package.Data]=chisel3.Mem[T]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -707,14 +768,14 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">Mem</span><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.core.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="../chisel3/core/Mem.html" class="extype" name="chisel3.core.Mem">chisel3.core.Mem</a>[<span class="extype" name="Chisel.Mem.T">T</span>]</span>
+        <span class="name">Mem</span><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="../chisel3/Mem.html" class="extype" name="chisel3.Mem">chisel3.Mem</a>[<span class="extype" name="Chisel.Mem.T">T</span>]</span>
       </span>
       
       
     </li><li name="Chisel.MemBase" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MemBase[T&lt;:Chisel.package.Data]=chisel3.core.MemBase[T]"></a><a id="MemBase[T&lt;:Data]:MemBase[T]"></a>
+      <a id="MemBase[T&lt;:Chisel.package.Data]=chisel3.MemBase[T]"></a><a id="MemBase[T&lt;:Data]:MemBase[T]"></a>
       <span class="permalink">
-      <a href="../Chisel/index.html#MemBase[T&lt;:Chisel.package.Data]=chisel3.core.MemBase[T]" title="Permalink">
+      <a href="../Chisel/index.html#MemBase[T&lt;:Chisel.package.Data]=chisel3.MemBase[T]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -723,7 +784,23 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">MemBase</span><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.core.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="../chisel3/core/MemBase.html" class="extype" name="chisel3.core.MemBase">chisel3.core.MemBase</a>[<span class="extype" name="Chisel.MemBase.T">T</span>]</span>
+        <span class="name">MemBase</span><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="../chisel3/MemBase.html" class="extype" name="chisel3.MemBase">chisel3.MemBase</a>[<span class="extype" name="Chisel.MemBase.T">T</span>]</span>
+      </span>
+      
+      
+    </li><li name="Chisel.MemCompatibility" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MemCompatibilityextendsAnyRef"></a><a id="MemCompatibility:MemCompatibility"></a>
+      <span class="permalink">
+      <a href="../Chisel/index.html#MemCompatibilityextendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="package$$MemCompatibility.html"><span class="name">MemCompatibility</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -744,9 +821,9 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
       
       
     </li><li name="Chisel.Num" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Num[T&lt;:Chisel.package.Data]=chisel3.core.Num[T]"></a><a id="Num[T&lt;:Data]:Num[T]"></a>
+      <a id="Num[T&lt;:Chisel.package.Data]=chisel3.Num[T]"></a><a id="Num[T&lt;:Data]:Num[T]"></a>
       <span class="permalink">
-      <a href="../Chisel/index.html#Num[T&lt;:Chisel.package.Data]=chisel3.core.Num[T]" title="Permalink">
+      <a href="../Chisel/index.html#Num[T&lt;:Chisel.package.Data]=chisel3.Num[T]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -755,7 +832,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">Num</span><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.core.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="../chisel3/core/Num.html" class="extype" name="chisel3.core.Num">chisel3.core.Num</a>[<span class="extype" name="Chisel.Num.T">T</span>]</span>
+        <span class="name">Num</span><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="../chisel3/Num.html" class="extype" name="chisel3.Num">chisel3.Num</a>[<span class="extype" name="Chisel.Num.T">T</span>]</span>
       </span>
       
       
@@ -771,14 +848,14 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">Pipe</span><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.core.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="../chisel3/util/Pipe.html" class="extype" name="chisel3.util.Pipe">chisel3.util.Pipe</a>[<span class="extype" name="Chisel.Pipe.T">T</span>]</span>
+        <span class="name">Pipe</span><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="../chisel3/util/Pipe.html" class="extype" name="chisel3.util.Pipe">chisel3.util.Pipe</a>[<span class="extype" name="Chisel.Pipe.T">T</span>]</span>
       </span>
       
       
     </li><li name="Chisel.Queue" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Queue[T&lt;:Chisel.package.Data]=chisel3.util.Queue[T]"></a><a id="Queue[T&lt;:Data]:Queue[T]"></a>
+      <a id="Queue[T&lt;:Chisel.package.Data]=Chisel.package.QueueCompatibility[T]"></a><a id="Queue[T&lt;:Data]:Queue[T]"></a>
       <span class="permalink">
-      <a href="../Chisel/index.html#Queue[T&lt;:Chisel.package.Data]=chisel3.util.Queue[T]" title="Permalink">
+      <a href="../Chisel/index.html#Queue[T&lt;:Chisel.package.Data]=Chisel.package.QueueCompatibility[T]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -787,7 +864,23 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">Queue</span><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.core.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="../chisel3/util/Queue.html" class="extype" name="chisel3.util.Queue">chisel3.util.Queue</a>[<span class="extype" name="Chisel.Queue.T">T</span>]</span>
+        <span class="name">Queue</span><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="package$$QueueCompatibility.html" class="extype" name="Chisel.QueueCompatibility">QueueCompatibility</a>[<span class="extype" name="Chisel.Queue.T">T</span>]</span>
+      </span>
+      
+      
+    </li><li name="Chisel.QueueCompatibility" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="QueueCompatibility[T&lt;:Chisel.package.Data]extendsQueue[T]"></a><a id="QueueCompatibility[T&lt;:Data]:QueueCompatibility[T]"></a>
+      <span class="permalink">
+      <a href="../Chisel/index.html#QueueCompatibility[T&lt;:Chisel.package.Data]extendsQueue[T]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="package$$QueueCompatibility.html"><span class="name">QueueCompatibility</span></a><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result"> extends <a href="../chisel3/util/Queue.html" class="extype" name="chisel3.util.Queue">chisel3.util.Queue</a>[<span class="extype" name="Chisel.QueueCompatibility.T">T</span>]</span>
       </span>
       
       
@@ -803,7 +896,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">QueueIO</span><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.core.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="../chisel3/util/QueueIO.html" class="extype" name="chisel3.util.QueueIO">chisel3.util.QueueIO</a>[<span class="extype" name="Chisel.QueueIO.T">T</span>]</span>
+        <span class="name">QueueIO</span><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="../chisel3/util/QueueIO.html" class="extype" name="chisel3.util.QueueIO">chisel3.util.QueueIO</a>[<span class="extype" name="Chisel.QueueIO.T">T</span>]</span>
       </span>
       
       
@@ -819,14 +912,14 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">RRArbiter</span><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.core.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="../chisel3/util/RRArbiter.html" class="extype" name="chisel3.util.RRArbiter">chisel3.util.RRArbiter</a>[<span class="extype" name="Chisel.RRArbiter.T">T</span>]</span>
+        <span class="name">RRArbiter</span><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="../chisel3/util/RRArbiter.html" class="extype" name="chisel3.util.RRArbiter">chisel3.util.RRArbiter</a>[<span class="extype" name="Chisel.RRArbiter.T">T</span>]</span>
       </span>
       
       
     </li><li name="Chisel.Record" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Record=chisel3.core.Record"></a><a id="Record:Record"></a>
+      <a id="Record=chisel3.Record"></a><a id="Record:Record"></a>
       <span class="permalink">
-      <a href="../Chisel/index.html#Record=chisel3.core.Record" title="Permalink">
+      <a href="../Chisel/index.html#Record=chisel3.Record" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -835,14 +928,14 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">Record</span><span class="result alias"> = <a href="../chisel3/core/Record.html" class="extype" name="chisel3.core.Record">chisel3.core.Record</a></span>
+        <span class="name">Record</span><span class="result alias"> = <a href="../chisel3/Record.html" class="extype" name="chisel3.Record">chisel3.Record</a></span>
       </span>
       
       
     </li><li name="Chisel.Reset" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Reset=chisel3.core.Reset"></a><a id="Reset:Reset"></a>
+      <a id="Reset=chisel3.Reset"></a><a id="Reset:Reset"></a>
       <span class="permalink">
-      <a href="../Chisel/index.html#Reset=chisel3.core.Reset" title="Permalink">
+      <a href="../Chisel/index.html#Reset=chisel3.Reset" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -851,14 +944,14 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">Reset</span><span class="result alias"> = <a href="../chisel3/core/Reset.html" class="extype" name="chisel3.core.Reset">chisel3.core.Reset</a></span>
+        <span class="name">Reset</span><span class="result alias"> = <a href="../chisel3/Reset.html" class="extype" name="chisel3.Reset">chisel3.Reset</a></span>
       </span>
       
       
     </li><li name="Chisel.SInt" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="SInt=chisel3.core.SInt"></a><a id="SInt:SInt"></a>
+      <a id="SInt=chisel3.SInt"></a><a id="SInt:SInt"></a>
       <span class="permalink">
-      <a href="../Chisel/index.html#SInt=chisel3.core.SInt" title="Permalink">
+      <a href="../Chisel/index.html#SInt=chisel3.SInt" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -867,7 +960,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">SInt</span><span class="result alias"> = <a href="../chisel3/core/SInt.html" class="extype" name="chisel3.core.SInt">chisel3.core.SInt</a></span>
+        <span class="name">SInt</span><span class="result alias"> = <a href="../chisel3/SInt.html" class="extype" name="chisel3.SInt">chisel3.SInt</a></span>
       </span>
       
       
@@ -883,14 +976,14 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="This contains literal constructor factory methods that are deprecated as of Chisel3." href="package$$SIntFactory.html"><span class="name">SIntFactory</span></a><span class="result"> extends <a href="../chisel3/core/SIntFactory.html" class="extype" name="chisel3.core.SIntFactory">chisel3.core.SIntFactory</a></span>
+        <a title="This contains literal constructor factory methods that are deprecated as of Chisel3." href="package$$SIntFactory.html"><span class="name">SIntFactory</span></a><span class="result"> extends <a href="../chisel3/SIntFactory.html" class="extype" name="chisel3.SIntFactory">chisel3.SIntFactory</a></span>
       </span>
       
       <p class="shortcomment cmt">This contains literal constructor factory methods that are deprecated as of Chisel3.</p>
     </li><li name="Chisel.SeqMem" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="SeqMem[T&lt;:Chisel.package.Data]=chisel3.core.SyncReadMem[T]"></a><a id="SeqMem[T&lt;:Data]:SeqMem[T]"></a>
+      <a id="SeqMem[T&lt;:Chisel.package.Data]=chisel3.SyncReadMem[T]"></a><a id="SeqMem[T&lt;:Data]:SeqMem[T]"></a>
       <span class="permalink">
-      <a href="../Chisel/index.html#SeqMem[T&lt;:Chisel.package.Data]=chisel3.core.SyncReadMem[T]" title="Permalink">
+      <a href="../Chisel/index.html#SeqMem[T&lt;:Chisel.package.Data]=chisel3.SyncReadMem[T]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -899,7 +992,23 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">SeqMem</span><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.core.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="../chisel3/core/SyncReadMem.html" class="extype" name="chisel3.core.SyncReadMem">SyncReadMem</a>[<span class="extype" name="Chisel.SeqMem.T">T</span>]</span>
+        <span class="name">SeqMem</span><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="../chisel3/SyncReadMem.html" class="extype" name="chisel3.SyncReadMem">SyncReadMem</a>[<span class="extype" name="Chisel.SeqMem.T">T</span>]</span>
+      </span>
+      
+      
+    </li><li name="Chisel.SeqMemCompatibility" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SeqMemCompatibilityextendsAnyRef"></a><a id="SeqMemCompatibility:SeqMemCompatibility"></a>
+      <span class="permalink">
+      <a href="../Chisel/index.html#SeqMemCompatibilityextendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="package$$SeqMemCompatibility.html"><span class="name">SeqMemCompatibility</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -915,14 +1024,14 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">SwitchContext</span><span class="tparams">[<span name="T">T &lt;: <a href="#Bits=chisel3.core.Bits" class="extmbr" name="Chisel.Bits">Bits</a></span>]</span><span class="result alias"> = <a href="../chisel3/util/SwitchContext.html" class="extype" name="chisel3.util.SwitchContext">chisel3.util.SwitchContext</a>[<span class="extype" name="Chisel.SwitchContext.T">T</span>]</span>
+        <span class="name">SwitchContext</span><span class="tparams">[<span name="T">T &lt;: <a href="#Bits=chisel3.Bits" class="extmbr" name="Chisel.Bits">Bits</a></span>]</span><span class="result alias"> = <a href="../chisel3/util/SwitchContext.html" class="extype" name="chisel3.util.SwitchContext">chisel3.util.SwitchContext</a>[<span class="extype" name="Chisel.SwitchContext.T">T</span>]</span>
       </span>
       
       
     </li><li name="Chisel.UInt" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="UInt=chisel3.core.UInt"></a><a id="UInt:UInt"></a>
+      <a id="UInt=chisel3.UInt"></a><a id="UInt:UInt"></a>
       <span class="permalink">
-      <a href="../Chisel/index.html#UInt=chisel3.core.UInt" title="Permalink">
+      <a href="../Chisel/index.html#UInt=chisel3.UInt" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -931,7 +1040,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">UInt</span><span class="result alias"> = <a href="../chisel3/core/UInt.html" class="extype" name="chisel3.core.UInt">chisel3.core.UInt</a></span>
+        <span class="name">UInt</span><span class="result alias"> = <a href="../chisel3/UInt.html" class="extype" name="chisel3.UInt">chisel3.UInt</a></span>
       </span>
       
       
@@ -947,7 +1056,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="This contains literal constructor factory methods that are deprecated as of Chisel3." href="package$$UIntFactory.html"><span class="name">UIntFactory</span></a><span class="result"> extends <a href="../chisel3/core/UIntFactory.html" class="extype" name="chisel3.core.UIntFactory">chisel3.core.UIntFactory</a></span>
+        <a title="This contains literal constructor factory methods that are deprecated as of Chisel3." href="package$$UIntFactory.html"><span class="name">UIntFactory</span></a><span class="result"> extends <a href="../chisel3/UIntFactory.html" class="extype" name="chisel3.UIntFactory">chisel3.UIntFactory</a></span>
       </span>
       
       <p class="shortcomment cmt">This contains literal constructor factory methods that are deprecated as of Chisel3.</p>
@@ -963,14 +1072,14 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">ValidIO</span><span class="tparams">[<span name="T">+T &lt;: <a href="#Data=chisel3.core.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="../chisel3/util/Valid.html" class="extype" name="chisel3.util.Valid">Valid</a>[<span class="extype" name="Chisel.ValidIO.T">T</span>]</span>
+        <span class="name">ValidIO</span><span class="tparams">[<span name="T">+T &lt;: <a href="#Data=chisel3.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="../chisel3/util/Valid.html" class="extype" name="chisel3.util.Valid">Valid</a>[<span class="extype" name="Chisel.ValidIO.T">T</span>]</span>
       </span>
       
       
     </li><li name="Chisel.Vec" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Vec[T&lt;:Chisel.package.Data]=chisel3.core.Vec[T]"></a><a id="Vec[T&lt;:Data]:Vec[T]"></a>
+      <a id="Vec[T&lt;:Chisel.package.Data]=chisel3.Vec[T]"></a><a id="Vec[T&lt;:Data]:Vec[T]"></a>
       <span class="permalink">
-      <a href="../Chisel/index.html#Vec[T&lt;:Chisel.package.Data]=chisel3.core.Vec[T]" title="Permalink">
+      <a href="../Chisel/index.html#Vec[T&lt;:Chisel.package.Data]=chisel3.Vec[T]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -979,14 +1088,14 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">Vec</span><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.core.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="../chisel3/core/Vec.html" class="extype" name="chisel3.core.Vec">chisel3.core.Vec</a>[<span class="extype" name="Chisel.Vec.T">T</span>]</span>
+        <span class="name">Vec</span><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="../chisel3/Vec.html" class="extype" name="chisel3.Vec">chisel3.Vec</a>[<span class="extype" name="Chisel.Vec.T">T</span>]</span>
       </span>
       
       
     </li><li name="Chisel.VecLike" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="VecLike[T&lt;:Chisel.package.Data]=chisel3.core.VecLike[T]"></a><a id="VecLike[T&lt;:Data]:VecLike[T]"></a>
+      <a id="VecLike[T&lt;:Chisel.package.Data]=chisel3.VecLike[T]"></a><a id="VecLike[T&lt;:Data]:VecLike[T]"></a>
       <span class="permalink">
-      <a href="../Chisel/index.html#VecLike[T&lt;:Chisel.package.Data]=chisel3.core.VecLike[T]" title="Permalink">
+      <a href="../Chisel/index.html#VecLike[T&lt;:Chisel.package.Data]=chisel3.VecLike[T]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -995,14 +1104,30 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">VecLike</span><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.core.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="../chisel3/core/VecLike.html" class="extype" name="chisel3.core.VecLike">chisel3.core.VecLike</a>[<span class="extype" name="Chisel.VecLike.T">T</span>]</span>
+        <span class="name">VecLike</span><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result alias"> = <a href="../chisel3/VecLike.html" class="extype" name="chisel3.VecLike">chisel3.VecLike</a>[<span class="extype" name="Chisel.VecLike.T">T</span>]</span>
+      </span>
+      
+      
+    </li><li name="Chisel.VecLikeCompatibility" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VecLikeCompatibility[T&lt;:Chisel.package.Data]extendsAnyRef"></a><a id="VecLikeCompatibility[T&lt;:Data]:VecLikeCompatibility[T]"></a>
+      <span class="permalink">
+      <a href="../Chisel/index.html#VecLikeCompatibility[T&lt;:Chisel.package.Data]extendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="package$$VecLikeCompatibility.html"><span class="name">VecLikeCompatibility</span></a><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
     </li><li name="Chisel.WhenContext" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="WhenContext=chisel3.core.WhenContext"></a><a id="WhenContext:WhenContext"></a>
+      <a id="WhenContext=chisel3.WhenContext"></a><a id="WhenContext:WhenContext"></a>
       <span class="permalink">
-      <a href="../Chisel/index.html#WhenContext=chisel3.core.WhenContext" title="Permalink">
+      <a href="../Chisel/index.html#WhenContext=chisel3.WhenContext" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1011,7 +1136,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">WhenContext</span><span class="result alias"> = <a href="../chisel3/core/WhenContext.html" class="extype" name="chisel3.core.WhenContext">chisel3.core.WhenContext</a></span>
+        <span class="name">WhenContext</span><span class="result alias"> = <a href="../chisel3/WhenContext.html" class="extype" name="chisel3.WhenContext">chisel3.WhenContext</a></span>
       </span>
       
       
@@ -1027,7 +1152,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="package$$cloneTypeable.html"><span class="name">cloneTypeable</span></a><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.core.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="package$$cloneTypeable.html"><span class="name">cloneTypeable</span></a><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -1043,7 +1168,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="package$$fromBigIntToLiteral.html"><span class="name">fromBigIntToLiteral</span></a><span class="result"> extends <a href="../chisel3/core/package$$fromBigIntToLiteral.html" class="extype" name="chisel3.core.fromBigIntToLiteral">chisel3.core.fromBigIntToLiteral</a></span>
+        <a title="" href="package$$fromBigIntToLiteral.html"><span class="name">fromBigIntToLiteral</span></a><span class="result"> extends <a href="../chisel3/package$$fromBigIntToLiteral.html" class="extype" name="chisel3.fromBigIntToLiteral">chisel3.fromBigIntToLiteral</a></span>
       </span>
       
       
@@ -1059,7 +1184,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="package$$fromBitsable.html"><span class="name">fromBitsable</span></a><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.core.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="package$$fromBitsable.html"><span class="name">fromBitsable</span></a><span class="tparams">[<span name="T">T &lt;: <a href="#Data=chisel3.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -1075,7 +1200,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="package$$fromBooleanToLiteral.html"><span class="name">fromBooleanToLiteral</span></a><span class="result"> extends <a href="../chisel3/core/package$$fromBooleanToLiteral.html" class="extype" name="chisel3.core.fromBooleanToLiteral">chisel3.core.fromBooleanToLiteral</a></span>
+        <a title="" href="package$$fromBooleanToLiteral.html"><span class="name">fromBooleanToLiteral</span></a><span class="result"> extends <a href="../chisel3/package$$fromBooleanToLiteral.html" class="extype" name="chisel3.fromBooleanToLiteral">chisel3.fromBooleanToLiteral</a></span>
       </span>
       
       
@@ -1091,7 +1216,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="package$$fromIntToWidth.html"><span class="name">fromIntToWidth</span></a><span class="result"> extends <a href="../chisel3/core/package$$fromIntToWidth.html" class="extype" name="chisel3.core.fromIntToWidth">chisel3.core.fromIntToWidth</a></span>
+        <a title="" href="package$$fromIntToWidth.html"><span class="name">fromIntToWidth</span></a><span class="result"> extends <a href="../chisel3/package$$fromIntToWidth.html" class="extype" name="chisel3.fromIntToWidth">chisel3.fromIntToWidth</a></span>
       </span>
       
       
@@ -1107,7 +1232,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="package$$fromStringToLiteral.html"><span class="name">fromStringToLiteral</span></a><span class="result"> extends <a href="../chisel3/core/package$$fromStringToLiteral.html" class="extype" name="chisel3.core.fromStringToLiteral">chisel3.core.fromStringToLiteral</a></span>
+        <a title="" href="package$$fromStringToLiteral.html"><span class="name">fromStringToLiteral</span></a><span class="result"> extends <a href="../chisel3/package$$fromStringToLiteral.html" class="extype" name="chisel3.fromStringToLiteral">chisel3.fromStringToLiteral</a></span>
       </span>
       
       
@@ -1123,7 +1248,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="package$$fromtIntToLiteral.html"><span class="name">fromtIntToLiteral</span></a><span class="result"> extends <a href="../chisel3/core/package$$fromIntToLiteral.html" class="extype" name="chisel3.core.fromIntToLiteral">fromIntToLiteral</a></span>
+        <a title="" href="package$$fromtIntToLiteral.html"><span class="name">fromtIntToLiteral</span></a><span class="result"> extends <a href="../chisel3/package$$fromIntToLiteral.html" class="extype" name="chisel3.fromIntToLiteral">fromIntToLiteral</a></span>
       </span>
       
       
@@ -1139,7 +1264,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="package$$fromtLongToLiteral.html"><span class="name">fromtLongToLiteral</span></a><span class="result"> extends <a href="../chisel3/core/package$$fromLongToLiteral.html" class="extype" name="chisel3.core.fromLongToLiteral">fromLongToLiteral</a></span>
+        <a title="" href="package$$fromtLongToLiteral.html"><span class="name">fromtLongToLiteral</span></a><span class="result"> extends <a href="../chisel3/package$$fromLongToLiteral.html" class="extype" name="chisel3.fromLongToLiteral">fromLongToLiteral</a></span>
       </span>
       
       
@@ -1296,9 +1421,9 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
       
       
     </li><li name="Chisel#Input" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Input:chisel3.core.Input.type"></a>
+      <a id="Input:chisel3.Input.type"></a>
       <span class="permalink">
-      <a href="../Chisel/index.html#Input:chisel3.core.Input.type" title="Permalink">
+      <a href="../Chisel/index.html#Input:chisel3.Input.type" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1307,7 +1432,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">Input</span><span class="result">: <a href="../chisel3/core/Input$.html" class="extype" name="chisel3.core.Input">chisel3.core.Input</a>.type</span>
+        <span class="name">Input</span><span class="result">: <a href="../chisel3/Input$.html" class="extype" name="chisel3.Input">chisel3.Input</a>.type</span>
       </span>
       
       
@@ -1376,9 +1501,9 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
       
       
     </li><li name="Chisel#Mem" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Mem:chisel3.core.Mem.type"></a>
+      <a id="Mem:chisel3.Mem.type"></a>
       <span class="permalink">
-      <a href="../Chisel/index.html#Mem:chisel3.core.Mem.type" title="Permalink">
+      <a href="../Chisel/index.html#Mem:chisel3.Mem.type" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1387,14 +1512,14 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">Mem</span><span class="result">: <a href="../chisel3/core/Mem$.html" class="extype" name="chisel3.core.Mem">chisel3.core.Mem</a>.type</span>
+        <span class="name">Mem</span><span class="result">: <a href="../chisel3/Mem$.html" class="extype" name="chisel3.Mem">chisel3.Mem</a>.type</span>
       </span>
       
       
     </li><li name="Chisel#Module" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Module:chisel3.core.Module.type"></a>
+      <a id="Module:chisel3.Module.type"></a>
       <span class="permalink">
-      <a href="../Chisel/index.html#Module:chisel3.core.Module.type" title="Permalink">
+      <a href="../Chisel/index.html#Module:chisel3.Module.type" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1403,14 +1528,14 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">Module</span><span class="result">: <a href="../chisel3/core/Module$.html" class="extype" name="chisel3.core.Module">chisel3.core.Module</a>.type</span>
+        <span class="name">Module</span><span class="result">: <a href="../chisel3/Module$.html" class="extype" name="chisel3.Module">chisel3.Module</a>.type</span>
       </span>
       
       
     </li><li name="Chisel#Mux" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Mux:chisel3.core.Mux.type"></a>
+      <a id="Mux:chisel3.Mux.type"></a>
       <span class="permalink">
-      <a href="../Chisel/index.html#Mux:chisel3.core.Mux.type" title="Permalink">
+      <a href="../Chisel/index.html#Mux:chisel3.Mux.type" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1419,7 +1544,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">Mux</span><span class="result">: <a href="../chisel3/core/Mux$.html" class="extype" name="chisel3.core.Mux">chisel3.core.Mux</a>.type</span>
+        <span class="name">Mux</span><span class="result">: <a href="../chisel3/Mux$.html" class="extype" name="chisel3.Mux">chisel3.Mux</a>.type</span>
       </span>
       
       
@@ -1488,9 +1613,9 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
       
       
     </li><li name="Chisel#Output" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="Output:chisel3.core.Output.type"></a>
+      <a id="Output:chisel3.Output.type"></a>
       <span class="permalink">
-      <a href="../Chisel/index.html#Output:chisel3.core.Output.type" title="Permalink">
+      <a href="../Chisel/index.html#Output:chisel3.Output.type" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1499,7 +1624,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">Output</span><span class="result">: <a href="../chisel3/core/Output$.html" class="extype" name="chisel3.core.Output">chisel3.core.Output</a>.type</span>
+        <span class="name">Output</span><span class="result">: <a href="../chisel3/Output$.html" class="extype" name="chisel3.Output">chisel3.Output</a>.type</span>
       </span>
       
       
@@ -1616,9 +1741,9 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
       
       
     </li><li name="Chisel#RegInit" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="RegInit:chisel3.core.RegInit.type"></a>
+      <a id="RegInit:chisel3.RegInit.type"></a>
       <span class="permalink">
-      <a href="../Chisel/index.html#RegInit:chisel3.core.RegInit.type" title="Permalink">
+      <a href="../Chisel/index.html#RegInit:chisel3.RegInit.type" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1627,14 +1752,14 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">RegInit</span><span class="result">: <a href="../chisel3/core/RegInit$.html" class="extype" name="chisel3.core.RegInit">chisel3.core.RegInit</a>.type</span>
+        <span class="name">RegInit</span><span class="result">: <a href="../chisel3/RegInit$.html" class="extype" name="chisel3.RegInit">chisel3.RegInit</a>.type</span>
       </span>
       
       
     </li><li name="Chisel#RegNext" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="RegNext:chisel3.core.RegNext.type"></a>
+      <a id="RegNext:chisel3.RegNext.type"></a>
       <span class="permalink">
-      <a href="../Chisel/index.html#RegNext:chisel3.core.RegNext.type" title="Permalink">
+      <a href="../Chisel/index.html#RegNext:chisel3.RegNext.type" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1643,7 +1768,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">RegNext</span><span class="result">: <a href="../chisel3/core/RegNext$.html" class="extype" name="chisel3.core.RegNext">chisel3.core.RegNext</a>.type</span>
+        <span class="name">RegNext</span><span class="result">: <a href="../chisel3/RegNext$.html" class="extype" name="chisel3.RegNext">chisel3.RegNext</a>.type</span>
       </span>
       
       
@@ -1664,9 +1789,9 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
       
       
     </li><li name="Chisel#SeqMem" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="SeqMem:chisel3.core.SyncReadMem.type"></a><a id="SeqMem:SyncReadMem.type"></a>
+      <a id="SeqMem:chisel3.SyncReadMem.type"></a><a id="SeqMem:SyncReadMem.type"></a>
       <span class="permalink">
-      <a href="../Chisel/index.html#SeqMem:chisel3.core.SyncReadMem.type" title="Permalink">
+      <a href="../Chisel/index.html#SeqMem:chisel3.SyncReadMem.type" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1675,7 +1800,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">SeqMem</span><span class="result">: <a href="../chisel3/core/SyncReadMem$.html" class="extype" name="chisel3.core.SyncReadMem">SyncReadMem</a>.type</span>
+        <span class="name">SeqMem</span><span class="result">: <a href="../chisel3/SyncReadMem$.html" class="extype" name="chisel3.SyncReadMem">SyncReadMem</a>.type</span>
       </span>
       
       
@@ -1728,9 +1853,9 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
       
       
     </li><li name="Chisel#assert" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="assert:chisel3.core.assert.type"></a>
+      <a id="assert:chisel3.assert.type"></a>
       <span class="permalink">
-      <a href="../Chisel/index.html#assert:chisel3.core.assert.type" title="Permalink">
+      <a href="../Chisel/index.html#assert:chisel3.assert.type" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1739,14 +1864,14 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">assert</span><span class="result">: <a href="../chisel3/core/assert$.html" class="extype" name="chisel3.core.assert">chisel3.core.assert</a>.type</span>
+        <span class="name">assert</span><span class="result">: <a href="../chisel3/assert$.html" class="extype" name="chisel3.assert">chisel3.assert</a>.type</span>
       </span>
       
       
     </li><li name="Chisel#defaultCompileOptions" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="defaultCompileOptions:chisel3.core.ExplicitCompileOptions.CompileOptionsClass"></a><a id="defaultCompileOptions:CompileOptionsClass"></a>
+      <a id="defaultCompileOptions:chisel3.ExplicitCompileOptions.CompileOptionsClass"></a><a id="defaultCompileOptions:CompileOptionsClass"></a>
       <span class="permalink">
-      <a href="../Chisel/index.html#defaultCompileOptions:chisel3.core.ExplicitCompileOptions.CompileOptionsClass" title="Permalink">
+      <a href="../Chisel/index.html#defaultCompileOptions:chisel3.ExplicitCompileOptions.CompileOptionsClass" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1755,7 +1880,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">defaultCompileOptions</span><span class="result">: <a href="../chisel3/core/ExplicitCompileOptions$$CompileOptionsClass.html" class="extype" name="chisel3.core.ExplicitCompileOptions.CompileOptionsClass">CompileOptionsClass</a></span>
+        <span class="name">defaultCompileOptions</span><span class="result">: <a href="../chisel3/ExplicitCompileOptions$$CompileOptionsClass.html" class="extype" name="chisel3.ExplicitCompileOptions.CompileOptionsClass">CompileOptionsClass</a></span>
       </span>
       
       
@@ -1824,9 +1949,9 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
       
       
     </li><li name="Chisel#printf" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="printf:chisel3.core.printf.type"></a>
+      <a id="printf:chisel3.printf.type"></a>
       <span class="permalink">
-      <a href="../Chisel/index.html#printf:chisel3.core.printf.type" title="Permalink">
+      <a href="../Chisel/index.html#printf:chisel3.printf.type" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1835,7 +1960,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">printf</span><span class="result">: <a href="../chisel3/core/printf$.html" class="extype" name="chisel3.core.printf">chisel3.core.printf</a>.type</span>
+        <span class="name">printf</span><span class="result">: <a href="../chisel3/printf$.html" class="extype" name="chisel3.printf">chisel3.printf</a>.type</span>
       </span>
       
       
@@ -1851,14 +1976,14 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">resetToBool</span><span class="params">(<span name="reset">reset: <a href="#Reset=chisel3.core.Reset" class="extmbr" name="Chisel.Reset">Reset</a></span>)</span><span class="result">: <a href="#Bool=chisel3.core.Bool" class="extmbr" name="Chisel.Bool">Bool</a></span>
+        <span class="name">resetToBool</span><span class="params">(<span name="reset">reset: <a href="#Reset=chisel3.Reset" class="extmbr" name="Chisel.Reset">Reset</a></span>)</span><span class="result">: <a href="#Bool=chisel3.Bool" class="extmbr" name="Chisel.Bool">Bool</a></span>
       </span>
       
       
     </li><li name="Chisel#stop" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="stop:chisel3.core.stop.type"></a>
+      <a id="stop:chisel3.stop.type"></a>
       <span class="permalink">
-      <a href="../Chisel/index.html#stop:chisel3.core.stop.type" title="Permalink">
+      <a href="../Chisel/index.html#stop:chisel3.stop.type" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1867,7 +1992,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">stop</span><span class="result">: <a href="../chisel3/core/stop$.html" class="extype" name="chisel3.core.stop">chisel3.core.stop</a>.type</span>
+        <span class="name">stop</span><span class="result">: <a href="../chisel3/stop$.html" class="extype" name="chisel3.stop">chisel3.stop</a>.type</span>
       </span>
       
       
@@ -1904,9 +2029,9 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
       
       
     </li><li name="Chisel#when" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="when:chisel3.core.when.type"></a>
+      <a id="when:chisel3.when.type"></a>
       <span class="permalink">
-      <a href="../Chisel/index.html#when:chisel3.core.when.type" title="Permalink">
+      <a href="../Chisel/index.html#when:chisel3.when.type" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1915,7 +2040,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">when</span><span class="result">: <a href="../chisel3/core/when$.html" class="extype" name="chisel3.core.when">chisel3.core.when</a>.type</span>
+        <span class="name">when</span><span class="result">: <a href="../chisel3/when$.html" class="extype" name="chisel3.when">chisel3.when</a>.type</span>
       </span>
       
       
@@ -2107,7 +2232,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="package$$Vec$.html"><span class="name">Vec</span></a><span class="result"> extends <a href="../chisel3/core/VecFactory.html" class="extype" name="chisel3.core.VecFactory">VecFactory</a></span>
+        <a title="" href="package$$Vec$.html"><span class="name">Vec</span></a><span class="result"> extends <a href="../chisel3/VecFactory.html" class="extype" name="chisel3.VecFactory">VecFactory</a></span>
       </span>
       
       
@@ -2123,7 +2248,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="package$$Wire$.html"><span class="name">Wire</span></a><span class="result"> extends <a href="../chisel3/core/WireFactory.html" class="extype" name="chisel3.core.WireFactory">WireFactory</a></span>
+        <a title="" href="package$$Wire$.html"><span class="name">Wire</span></a><span class="result"> extends <a href="../chisel3/WireFactory.html" class="extype" name="chisel3.WireFactory">WireFactory</a></span>
       </span>
       
       

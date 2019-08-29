@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.2-050719-SNAPSHOT - Chisel.Vec</title>
-          <meta name="description" content="chisel3 3.2 - 050719 - SNAPSHOT - Chisel.Vec" />
-          <meta name="keywords" content="chisel3 3.2 050719 SNAPSHOT Chisel.Vec" />
+          <title>chisel3 3.2-081319-SNAPSHOT - Chisel.Vec</title>
+          <meta name="description" content="chisel3 3.2 - 081319 - SNAPSHOT - Chisel.Vec" />
+          <meta name="keywords" content="chisel3 3.2 081319 SNAPSHOT Chisel.Vec" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.2-050719-SNAPSHOT</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.2-081319-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -69,9 +69,9 @@
       </span>
       
       <p class="shortcomment cmt">This is the documentation for Chisel.</p><div class="fullcomment"><div class="comment cmt"><p>This is the documentation for Chisel.</p><h4> Package structure </h4><p>The <a href="../chisel3/index.html" class="extype" name="chisel3">chisel3</a> package presents the public API of Chisel.
-It contains the concrete core types <a href="../chisel3/core/UInt.html" class="extype" name="chisel3.core.UInt"><code>UInt</code></a>, <a href="../chisel3/core/SInt.html" class="extype" name="chisel3.core.SInt"><code>SInt</code></a>, <a href="../chisel3/core/Bool.html" class="extype" name="chisel3.core.Bool"><code>Bool</code></a>, <a href="../chisel3/core/FixedPoint.html" class="extype" name="chisel3.core.FixedPoint"><code>FixedPoint</code></a>, <a href="../chisel3/core/Clock.html" class="extype" name="chisel3.core.Clock"><code>Clock</code></a>, and <a href="../chisel3/core/Reg$.html" class="extype" name="chisel3.core.Reg"><code>Reg</code></a>,
-the abstract types <a href="../chisel3/core/Bits.html" class="extype" name="chisel3.core.Bits"><code>Bits</code></a>, <a href="../chisel3/core/Aggregate.html" class="extype" name="chisel3.core.Aggregate"><code>Aggregate</code></a>, and <a href="../chisel3/core/Data.html" class="extype" name="chisel3.core.Data"><code>Data</code></a>,
-and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" name="chisel3.core.Bundle"><code>Bundle</code></a> and <a href="../chisel3/core/Vec.html" class="extype" name="chisel3.core.Vec"><code>Vec</code></a>.</p><p>The <a href="index.html" class="extype" name="Chisel">Chisel</a> package is a compatibility layer that attempts to provide chisel2 compatibility in chisel3.</p><p>Utility objects and methods are found in the <a href="../chisel3/util/index.html" class="extype" name="chisel3.util"><code>util</code></a> package.</p><p>The <a href="../chisel3/testers/index.html" class="extype" name="chisel3.testers"><code>testers</code></a> package defines the basic interface for chisel testers.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+It contains the concrete core types <a href="../chisel3/UInt.html" class="extype" name="chisel3.UInt"><code>UInt</code></a>, <a href="../chisel3/SInt.html" class="extype" name="chisel3.SInt"><code>SInt</code></a>, <a href="../chisel3/Bool.html" class="extype" name="chisel3.Bool"><code>Bool</code></a>, <a href="../chisel3/experimental/FixedPoint.html" class="extype" name="chisel3.experimental.FixedPoint"><code>FixedPoint</code></a>, <a href="../chisel3/Clock.html" class="extype" name="chisel3.Clock"><code>Clock</code></a>, and <a href="../chisel3/Reg$.html" class="extype" name="chisel3.Reg"><code>Reg</code></a>,
+the abstract types <a href="../chisel3/Bits.html" class="extype" name="chisel3.Bits"><code>Bits</code></a>, <a href="../chisel3/Aggregate.html" class="extype" name="chisel3.Aggregate"><code>Aggregate</code></a>, and <a href="../chisel3/Data.html" class="extype" name="chisel3.Data"><code>Data</code></a>,
+and the aggregate types <a href="../chisel3/Bundle.html" class="extype" name="chisel3.Bundle"><code>Bundle</code></a> and <a href="../chisel3/Vec.html" class="extype" name="chisel3.Vec"><code>Vec</code></a>.</p><p>The <a href="index.html" class="extype" name="Chisel">Chisel</a> package is a compatibility layer that attempts to provide chisel2 compatibility in chisel3.</p><p>Utility objects and methods are found in the <a href="../chisel3/util/index.html" class="extype" name="chisel3.util"><code>util</code></a> package.</p><p>The <a href="../chisel3/testers/index.html" class="extype" name="chisel3.testers"><code>testers</code></a> package defines the basic interface for chisel testers.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="_root_">root</a></dd></dl></div>
     </li><li name="_root_.Chisel" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="Chisel"></a><a id="Chisel:Chisel"></a>
       <span class="permalink">
@@ -84,13 +84,10 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">package</span>
       </span>
       <span class="symbol">
-        <a title="The Chisel compatibility package allows legacy users to continue using the Chisel (capital C) package name while moving to the more standard package naming convention chisel3 (lowercase c)." href="index.html"><span class="name">Chisel</span></a>
+        <a title="" href="index.html"><span class="name">Chisel</span></a>
       </span>
       
-      <p class="shortcomment cmt">The Chisel compatibility package allows legacy users to continue using the <code>Chisel</code> (capital C) package name
- while moving to the more standard package naming convention <code>chisel3</code> (lowercase c).</p><div class="fullcomment"><div class="comment cmt"><p>The Chisel compatibility package allows legacy users to continue using the <code>Chisel</code> (capital C) package name
- while moving to the more standard package naming convention <code>chisel3</code> (lowercase c).
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="_root_">root</a></dd></dl></div>
     </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="class" href="package$$AddDirMethodToData.html" title=""></a>
@@ -103,6 +100,14 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
                         <span class="separator"></span>
                         <a class="object" href="package$$Bits$.html" title=""></a>
                         <a href="package$$Bits$.html" title="">Bits</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$BitsCompatibility.html" title=""></a>
+                        <a href="package$$BitsCompatibility.html" title="">BitsCompatibility</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$BitsObjectCompatibility.html" title=""></a>
+                        <a href="package$$BitsObjectCompatibility.html" title="">BitsObjectCompatibility</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="class" href="package$$BlackBox.html" title=""></a>
@@ -125,6 +130,10 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
                         <a href="package$$CompatibilityModule.html" title="">CompatibilityModule</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
+                        <a class="class" href="package$$DataCompatibility.html" title=""></a>
+                        <a href="package$$DataCompatibility.html" title="">DataCompatibility</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
                         <a class="class" href="package$$Direction.html" title=""></a>
                         <a href="package$$Direction.html" title="">Direction</a>
                       </li><li class="current-entities indented1">
@@ -141,12 +150,20 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
                         <a href="package$$INPUT$.html" title="">INPUT</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
+                        <a class="class" href="package$$MemCompatibility.html" title=""></a>
+                        <a href="package$$MemCompatibility.html" title="">MemCompatibility</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
                         <a class="object" href="package$$NODIR$.html" title=""></a>
                         <a href="package$$NODIR$.html" title="">NODIR</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="object" href="package$$OUTPUT$.html" title=""></a>
                         <a href="package$$OUTPUT$.html" title="">OUTPUT</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$QueueCompatibility.html" title=""></a>
+                        <a href="package$$QueueCompatibility.html" title="">QueueCompatibility</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="object" href="package$$Reg$.html" title=""></a>
@@ -161,6 +178,10 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
                         <a href="package$$SIntFactory.html" title="This contains literal constructor factory methods that are deprecated as of Chisel3.">SIntFactory</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
+                        <a class="class" href="package$$SeqMemCompatibility.html" title=""></a>
+                        <a href="package$$SeqMemCompatibility.html" title="">SeqMemCompatibility</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
                         <a class="object" href="package$$UInt$.html" title=""></a>
                         <a href="package$$UInt$.html" title="">UInt</a>
                       </li><li class="current-entities indented1">
@@ -171,6 +192,10 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
                         <span class="separator"></span>
                         <a class="object" href="" title=""></a>
                         <a href="" title="">Vec</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$VecLikeCompatibility.html" title=""></a>
+                        <a href="package$$VecLikeCompatibility.html" title="">VecLikeCompatibility</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="object" href="package$$Wire$.html" title=""></a>
@@ -258,16 +283,16 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">Vec</span><span class="result"> extends <a href="../chisel3/core/VecFactory.html" class="extype" name="chisel3.core.VecFactory">VecFactory</a></span>
+        <span class="name">Vec</span><span class="result"> extends <a href="../chisel3/VecFactory.html" class="extype" name="chisel3.VecFactory">VecFactory</a></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/master//src/main/scala/chisel3/compatibility.scala" target="_blank">compatibility.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="../chisel3/core/VecFactory.html" class="extype" name="chisel3.core.VecFactory">VecFactory</a>, <a href="../chisel3/SourceInfoDoc.html" class="extype" name="chisel3.SourceInfoDoc">SourceInfoDoc</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="../chisel3/VecFactory.html" class="extype" name="chisel3.VecFactory">VecFactory</a>, <a href="../chisel3/SourceInfoDoc.html" class="extype" name="chisel3.SourceInfoDoc">SourceInfoDoc</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div></div>
         
 
@@ -293,7 +318,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="Chisel.Vec"><span>Vec</span></li><li class="in" name="chisel3.core.VecFactory"><span>VecFactory</span></li><li class="in" name="chisel3.SourceInfoDoc"><span>SourceInfoDoc</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="Chisel.Vec"><span>Vec</span></li><li class="in" name="chisel3.VecFactory"><span>VecFactory</span></li><li class="in" name="chisel3.SourceInfoDoc"><span>SourceInfoDoc</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -380,7 +405,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="T">T &lt;: <a href="index.html#Data=chisel3.core.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="params">(<span name="elt0">elt0: <span class="extype" name="Chisel.Vec.apply.T">T</span></span>, <span name="elts">elts: <span class="extype" name="Chisel.Vec.apply.T">T</span>*</span>)</span><span class="result">: <a href="index.html#Vec[T&lt;:Chisel.package.Data]=chisel3.core.Vec[T]" class="extmbr" name="Chisel.Vec">Vec</a>[<span class="extype" name="Chisel.Vec.apply.T">T</span>]</span>
+        <span class="name">apply</span><span class="tparams">[<span name="T">T &lt;: <a href="index.html#Data=chisel3.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="params">(<span name="elt0">elt0: <span class="extype" name="Chisel.Vec.apply.T">T</span></span>, <span name="elts">elts: <span class="extype" name="Chisel.Vec.apply.T">T</span>*</span>)</span><span class="result">: <a href="index.html#Vec[T&lt;:Chisel.package.Data]=chisel3.Vec[T]" class="extmbr" name="Chisel.Vec">Vec</a>[<span class="extype" name="Chisel.Vec.apply.T">T</span>]</span>
       </span>
       
       
@@ -396,14 +421,14 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="T">T &lt;: <a href="index.html#Data=chisel3.core.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="params">(<span name="elts">elts: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="Chisel.Vec.apply.T">T</span>]</span>)</span><span class="result">: <a href="index.html#Vec[T&lt;:Chisel.package.Data]=chisel3.core.Vec[T]" class="extmbr" name="Chisel.Vec">Vec</a>[<span class="extype" name="Chisel.Vec.apply.T">T</span>]</span>
+        <span class="name">apply</span><span class="tparams">[<span name="T">T &lt;: <a href="index.html#Data=chisel3.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="params">(<span name="elts">elts: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="Chisel.Vec.apply.T">T</span>]</span>)</span><span class="result">: <a href="index.html#Vec[T&lt;:Chisel.package.Data]=chisel3.Vec[T]" class="extmbr" name="Chisel.Vec">Vec</a>[<span class="extype" name="Chisel.Vec.apply.T">T</span>]</span>
       </span>
       
       
-    </li><li name="chisel3.core.VecFactory#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="apply[T&lt;:chisel3.core.Data](n:Int,gen:T)(implicitsourceInfo:chisel3.internal.sourceinfo.SourceInfo,implicitcompileOptions:chisel3.core.CompileOptions):chisel3.core.Vec[T]"></a><a id="apply[T&lt;:chisel3.core.Data](Int,T)(SourceInfo,CompileOptions):chisel3.core.Vec[T]"></a>
+    </li><li name="chisel3.VecFactory#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="apply[T&lt;:chisel3.Data](n:Int,gen:T)(implicitsourceInfo:chisel3.internal.sourceinfo.SourceInfo,implicitcompileOptions:chisel3.CompileOptions):chisel3.Vec[T]"></a><a id="apply[T&lt;:chisel3.Data](Int,T)(SourceInfo,CompileOptions):chisel3.Vec[T]"></a>
       <span class="permalink">
-      <a href="../Chisel/package$$Vec$.html#apply[T&lt;:chisel3.core.Data](n:Int,gen:T)(implicitsourceInfo:chisel3.internal.sourceinfo.SourceInfo,implicitcompileOptions:chisel3.core.CompileOptions):chisel3.core.Vec[T]" title="Permalink">
+      <a href="../Chisel/package$$Vec$.html#apply[T&lt;:chisel3.Data](n:Int,gen:T)(implicitsourceInfo:chisel3.internal.sourceinfo.SourceInfo,implicitcompileOptions:chisel3.CompileOptions):chisel3.Vec[T]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -412,11 +437,11 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="T">T &lt;: <a href="../chisel3/core/Data.html" class="extype" name="chisel3.core.Data">chisel3.core.Data</a></span>]</span><span class="params">(<span name="n">n: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="gen">gen: <span class="extype" name="chisel3.core.VecFactory.apply.T">T</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="sourceInfo">sourceInfo: <span class="extype" name="chisel3.internal.sourceinfo.SourceInfo">SourceInfo</span></span>, <span name="compileOptions">compileOptions: <a href="../chisel3/core/CompileOptions.html" class="extype" name="chisel3.core.CompileOptions">CompileOptions</a></span>)</span><span class="result">: <a href="../chisel3/core/Vec.html" class="extype" name="chisel3.core.Vec">chisel3.core.Vec</a>[<span class="extype" name="chisel3.core.VecFactory.apply.T">T</span>]</span>
+        <span class="name">apply</span><span class="tparams">[<span name="T">T &lt;: <a href="../chisel3/Data.html" class="extype" name="chisel3.Data">chisel3.Data</a></span>]</span><span class="params">(<span name="n">n: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="gen">gen: <span class="extype" name="chisel3.VecFactory.apply.T">T</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="sourceInfo">sourceInfo: <span class="extype" name="chisel3.internal.sourceinfo.SourceInfo">SourceInfo</span></span>, <span name="compileOptions">compileOptions: <a href="../chisel3/CompileOptions.html" class="extype" name="chisel3.CompileOptions">CompileOptions</a></span>)</span><span class="result">: <a href="../chisel3/Vec.html" class="extype" name="chisel3.Vec">chisel3.Vec</a>[<span class="extype" name="chisel3.VecFactory.apply.T">T</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">Creates a new <a href="../chisel3/core/Vec.html" class="extype" name="chisel3.core.Vec">Vec</a> with <code>n</code> entries of the specified data type.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a new <a href="../chisel3/core/Vec.html" class="extype" name="chisel3.core.Vec">Vec</a> with <code>n</code> entries of the specified data type.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../chisel3/core/VecFactory.html" class="extype" name="chisel3.core.VecFactory">VecFactory</a></dd><dt>Note</dt><dd><span class="cmt"><p>elements are NOT assigned by default and have no value</p></span></dd></dl></div>
+      <p class="shortcomment cmt">Creates a new <a href="../chisel3/Vec.html" class="extype" name="chisel3.Vec">Vec</a> with <code>n</code> entries of the specified data type.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a new <a href="../chisel3/Vec.html" class="extype" name="chisel3.Vec">Vec</a> with <code>n</code> entries of the specified data type.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../chisel3/VecFactory.html" class="extype" name="chisel3.VecFactory">VecFactory</a></dd><dt>Note</dt><dd><span class="cmt"><p>elements are NOT assigned by default and have no value</p></span></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
@@ -458,9 +483,9 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
               
         </dd></dl></div>
     </li><li name="Chisel.Vec#do_apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="SourceInfoTransformMacro">
-      <a id="do_apply[T&lt;:Chisel.package.Data](elt0:T,elts:T*)(implicitsourceInfo:chisel3.internal.sourceinfo.SourceInfo,implicitcompileOptions:chisel3.core.CompileOptions):Chisel.package.Vec[T]"></a><a id="do_apply[T&lt;:Data](T,T*)(SourceInfo,CompileOptions):Vec[T]"></a>
+      <a id="do_apply[T&lt;:Chisel.package.Data](elt0:T,elts:T*)(implicitsourceInfo:chisel3.internal.sourceinfo.SourceInfo,implicitcompileOptions:chisel3.CompileOptions):Chisel.package.Vec[T]"></a><a id="do_apply[T&lt;:Data](T,T*)(SourceInfo,CompileOptions):Vec[T]"></a>
       <span class="permalink">
-      <a href="../Chisel/package$$Vec$.html#do_apply[T&lt;:Chisel.package.Data](elt0:T,elts:T*)(implicitsourceInfo:chisel3.internal.sourceinfo.SourceInfo,implicitcompileOptions:chisel3.core.CompileOptions):Chisel.package.Vec[T]" title="Permalink">
+      <a href="../Chisel/package$$Vec$.html#do_apply[T&lt;:Chisel.package.Data](elt0:T,elts:T*)(implicitsourceInfo:chisel3.internal.sourceinfo.SourceInfo,implicitcompileOptions:chisel3.CompileOptions):Chisel.package.Vec[T]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -469,14 +494,14 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">do_apply</span><span class="tparams">[<span name="T">T &lt;: <a href="index.html#Data=chisel3.core.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="params">(<span name="elt0">elt0: <span class="extype" name="Chisel.Vec.do_apply.T">T</span></span>, <span name="elts">elts: <span class="extype" name="Chisel.Vec.do_apply.T">T</span>*</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="sourceInfo">sourceInfo: <span class="extype" name="chisel3.internal.sourceinfo.SourceInfo">SourceInfo</span></span>, <span name="compileOptions">compileOptions: <a href="../chisel3/core/CompileOptions.html" class="extype" name="chisel3.core.CompileOptions">CompileOptions</a></span>)</span><span class="result">: <a href="index.html#Vec[T&lt;:Chisel.package.Data]=chisel3.core.Vec[T]" class="extmbr" name="Chisel.Vec">Vec</a>[<span class="extype" name="Chisel.Vec.do_apply.T">T</span>]</span>
+        <span class="name">do_apply</span><span class="tparams">[<span name="T">T &lt;: <a href="index.html#Data=chisel3.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="params">(<span name="elt0">elt0: <span class="extype" name="Chisel.Vec.do_apply.T">T</span></span>, <span name="elts">elts: <span class="extype" name="Chisel.Vec.do_apply.T">T</span>*</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="sourceInfo">sourceInfo: <span class="extype" name="chisel3.internal.sourceinfo.SourceInfo">SourceInfo</span></span>, <span name="compileOptions">compileOptions: <a href="../chisel3/CompileOptions.html" class="extype" name="chisel3.CompileOptions">CompileOptions</a></span>)</span><span class="result">: <a href="index.html#Vec[T&lt;:Chisel.package.Data]=chisel3.Vec[T]" class="extmbr" name="Chisel.Vec">Vec</a>[<span class="extype" name="Chisel.Vec.do_apply.T">T</span>]</span>
       </span>
       
       <p class="shortcomment cmt"></p>
     </li><li name="Chisel.Vec#do_apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="SourceInfoTransformMacro">
-      <a id="do_apply[T&lt;:Chisel.package.Data](elts:Seq[T])(implicitsourceInfo:chisel3.internal.sourceinfo.SourceInfo,implicitcompileOptions:chisel3.core.CompileOptions):Chisel.package.Vec[T]"></a><a id="do_apply[T&lt;:Data](Seq[T])(SourceInfo,CompileOptions):Vec[T]"></a>
+      <a id="do_apply[T&lt;:Chisel.package.Data](elts:Seq[T])(implicitsourceInfo:chisel3.internal.sourceinfo.SourceInfo,implicitcompileOptions:chisel3.CompileOptions):Chisel.package.Vec[T]"></a><a id="do_apply[T&lt;:Data](Seq[T])(SourceInfo,CompileOptions):Vec[T]"></a>
       <span class="permalink">
-      <a href="../Chisel/package$$Vec$.html#do_apply[T&lt;:Chisel.package.Data](elts:Seq[T])(implicitsourceInfo:chisel3.internal.sourceinfo.SourceInfo,implicitcompileOptions:chisel3.core.CompileOptions):Chisel.package.Vec[T]" title="Permalink">
+      <a href="../Chisel/package$$Vec$.html#do_apply[T&lt;:Chisel.package.Data](elts:Seq[T])(implicitsourceInfo:chisel3.internal.sourceinfo.SourceInfo,implicitcompileOptions:chisel3.CompileOptions):Chisel.package.Vec[T]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -485,14 +510,14 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">do_apply</span><span class="tparams">[<span name="T">T &lt;: <a href="index.html#Data=chisel3.core.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="params">(<span name="elts">elts: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="Chisel.Vec.do_apply.T">T</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="sourceInfo">sourceInfo: <span class="extype" name="chisel3.internal.sourceinfo.SourceInfo">SourceInfo</span></span>, <span name="compileOptions">compileOptions: <a href="../chisel3/core/CompileOptions.html" class="extype" name="chisel3.core.CompileOptions">CompileOptions</a></span>)</span><span class="result">: <a href="index.html#Vec[T&lt;:Chisel.package.Data]=chisel3.core.Vec[T]" class="extmbr" name="Chisel.Vec">Vec</a>[<span class="extype" name="Chisel.Vec.do_apply.T">T</span>]</span>
+        <span class="name">do_apply</span><span class="tparams">[<span name="T">T &lt;: <a href="index.html#Data=chisel3.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="params">(<span name="elts">elts: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="Chisel.Vec.do_apply.T">T</span>]</span>)</span><span class="params">(<span class="implicit">implicit </span><span name="sourceInfo">sourceInfo: <span class="extype" name="chisel3.internal.sourceinfo.SourceInfo">SourceInfo</span></span>, <span name="compileOptions">compileOptions: <a href="../chisel3/CompileOptions.html" class="extype" name="chisel3.CompileOptions">CompileOptions</a></span>)</span><span class="result">: <a href="index.html#Vec[T&lt;:Chisel.package.Data]=chisel3.Vec[T]" class="extmbr" name="Chisel.Vec">Vec</a>[<span class="extype" name="Chisel.Vec.do_apply.T">T</span>]</span>
       </span>
       
       <p class="shortcomment cmt"></p>
     </li><li name="Chisel.Vec#do_tabulate" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="SourceInfoTransformMacro">
-      <a id="do_tabulate[T&lt;:Chisel.package.Data](n:Int)(gen:Int=&gt;T)(implicitsourceInfo:chisel3.internal.sourceinfo.SourceInfo,implicitcompileOptions:chisel3.core.CompileOptions):Chisel.package.Vec[T]"></a><a id="do_tabulate[T&lt;:Data](Int)((Int)⇒T)(SourceInfo,CompileOptions):Vec[T]"></a>
+      <a id="do_tabulate[T&lt;:Chisel.package.Data](n:Int)(gen:Int=&gt;T)(implicitsourceInfo:chisel3.internal.sourceinfo.SourceInfo,implicitcompileOptions:chisel3.CompileOptions):Chisel.package.Vec[T]"></a><a id="do_tabulate[T&lt;:Data](Int)((Int)⇒T)(SourceInfo,CompileOptions):Vec[T]"></a>
       <span class="permalink">
-      <a href="../Chisel/package$$Vec$.html#do_tabulate[T&lt;:Chisel.package.Data](n:Int)(gen:Int=&gt;T)(implicitsourceInfo:chisel3.internal.sourceinfo.SourceInfo,implicitcompileOptions:chisel3.core.CompileOptions):Chisel.package.Vec[T]" title="Permalink">
+      <a href="../Chisel/package$$Vec$.html#do_tabulate[T&lt;:Chisel.package.Data](n:Int)(gen:Int=&gt;T)(implicitsourceInfo:chisel3.internal.sourceinfo.SourceInfo,implicitcompileOptions:chisel3.CompileOptions):Chisel.package.Vec[T]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -501,7 +526,7 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">do_tabulate</span><span class="tparams">[<span name="T">T &lt;: <a href="index.html#Data=chisel3.core.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="params">(<span name="n">n: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="params">(<span name="gen">gen: (<a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>) ⇒ <span class="extype" name="Chisel.Vec.do_tabulate.T">T</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="sourceInfo">sourceInfo: <span class="extype" name="chisel3.internal.sourceinfo.SourceInfo">SourceInfo</span></span>, <span name="compileOptions">compileOptions: <a href="../chisel3/core/CompileOptions.html" class="extype" name="chisel3.core.CompileOptions">CompileOptions</a></span>)</span><span class="result">: <a href="index.html#Vec[T&lt;:Chisel.package.Data]=chisel3.core.Vec[T]" class="extmbr" name="Chisel.Vec">Vec</a>[<span class="extype" name="Chisel.Vec.do_tabulate.T">T</span>]</span>
+        <span class="name">do_tabulate</span><span class="tparams">[<span name="T">T &lt;: <a href="index.html#Data=chisel3.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="params">(<span name="n">n: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="params">(<span name="gen">gen: (<a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>) ⇒ <span class="extype" name="Chisel.Vec.do_tabulate.T">T</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="sourceInfo">sourceInfo: <span class="extype" name="chisel3.internal.sourceinfo.SourceInfo">SourceInfo</span></span>, <span name="compileOptions">compileOptions: <a href="../chisel3/CompileOptions.html" class="extype" name="chisel3.CompileOptions">CompileOptions</a></span>)</span><span class="result">: <a href="index.html#Vec[T&lt;:Chisel.package.Data]=chisel3.Vec[T]" class="extmbr" name="Chisel.Vec">Vec</a>[<span class="extype" name="Chisel.Vec.do_tabulate.T">T</span>]</span>
       </span>
       
       <p class="shortcomment cmt"></p>
@@ -538,9 +563,9 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
     </li><li name="Chisel.Vec#fill" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="fill[T&lt;:Chisel.package.Data](n:Int)(gen:=&gt;T)(implicitcompileOptions:chisel3.core.CompileOptions):Chisel.package.Vec[T]"></a><a id="fill[T&lt;:Data](Int)(⇒T)(CompileOptions):Vec[T]"></a>
+      <a id="fill[T&lt;:Chisel.package.Data](n:Int)(gen:=&gt;T)(implicitcompileOptions:chisel3.CompileOptions):Chisel.package.Vec[T]"></a><a id="fill[T&lt;:Data](Int)(⇒T)(CompileOptions):Vec[T]"></a>
       <span class="permalink">
-      <a href="../Chisel/package$$Vec$.html#fill[T&lt;:Chisel.package.Data](n:Int)(gen:=&gt;T)(implicitcompileOptions:chisel3.core.CompileOptions):Chisel.package.Vec[T]" title="Permalink">
+      <a href="../Chisel/package$$Vec$.html#fill[T&lt;:Chisel.package.Data](n:Int)(gen:=&gt;T)(implicitcompileOptions:chisel3.CompileOptions):Chisel.package.Vec[T]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -549,15 +574,15 @@ and the aggregate types <a href="../chisel3/core/Bundle.html" class="extype" nam
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fill</span><span class="tparams">[<span name="T">T &lt;: <a href="index.html#Data=chisel3.core.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="params">(<span name="n">n: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="params">(<span name="gen">gen: ⇒ <span class="extype" name="Chisel.Vec.fill.T">T</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="compileOptions">compileOptions: <a href="../chisel3/core/CompileOptions.html" class="extype" name="chisel3.core.CompileOptions">CompileOptions</a></span>)</span><span class="result">: <a href="index.html#Vec[T&lt;:Chisel.package.Data]=chisel3.core.Vec[T]" class="extmbr" name="Chisel.Vec">Vec</a>[<span class="extype" name="Chisel.Vec.fill.T">T</span>]</span>
+        <span class="name">fill</span><span class="tparams">[<span name="T">T &lt;: <a href="index.html#Data=chisel3.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="params">(<span name="n">n: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="params">(<span name="gen">gen: ⇒ <span class="extype" name="Chisel.Vec.fill.T">T</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="compileOptions">compileOptions: <a href="../chisel3/CompileOptions.html" class="extype" name="chisel3.CompileOptions">CompileOptions</a></span>)</span><span class="result">: <a href="index.html#Vec[T&lt;:Chisel.package.Data]=chisel3.Vec[T]" class="extmbr" name="Chisel.Vec">Vec</a>[<span class="extype" name="Chisel.Vec.fill.T">T</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">Creates a new <a href="index.html#Vec[T&lt;:Chisel.package.Data]=chisel3.core.Vec[T]" class="extmbr" name="Chisel.Vec">Vec</a> of length <code>n</code> composed of the result of the given
-function repeatedly applied.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a new <a href="index.html#Vec[T&lt;:Chisel.package.Data]=chisel3.core.Vec[T]" class="extmbr" name="Chisel.Vec">Vec</a> of length <code>n</code> composed of the result of the given
+      <p class="shortcomment cmt">Creates a new <a href="index.html#Vec[T&lt;:Chisel.package.Data]=chisel3.Vec[T]" class="extmbr" name="Chisel.Vec">Vec</a> of length <code>n</code> composed of the result of the given
+function repeatedly applied.</p><div class="fullcomment"><div class="comment cmt"><p>Creates a new <a href="index.html#Vec[T&lt;:Chisel.package.Data]=chisel3.Vec[T]" class="extmbr" name="Chisel.Vec">Vec</a> of length <code>n</code> composed of the result of the given
 function repeatedly applied.
 </p></div><dl class="paramcmts block"><dt class="param">n</dt><dd class="cmt"><p>number of elements (and the number of times the function is
-called)</p></dd><dt class="param">gen</dt><dd class="cmt"><p>function that generates the <a href="index.html#Data=chisel3.core.Data" class="extmbr" name="Chisel.Data">Data</a> that becomes the output
-element</p></dd></dl></div>
+           called)</p></dd><dt class="param">gen</dt><dd class="cmt"><p>function that generates the <a href="index.html#Data=chisel3.Data" class="extmbr" name="Chisel.Data">Data</a> that becomes the output
+           element</p></dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <span class="permalink">
@@ -716,7 +741,7 @@ element</p></dd></dl></div>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">tabulate</span><span class="tparams">[<span name="T">T &lt;: <a href="index.html#Data=chisel3.core.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="params">(<span name="n">n: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="params">(<span name="gen">gen: (<a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>) ⇒ <span class="extype" name="Chisel.Vec.tabulate.T">T</span></span>)</span><span class="result">: <a href="index.html#Vec[T&lt;:Chisel.package.Data]=chisel3.core.Vec[T]" class="extmbr" name="Chisel.Vec">Vec</a>[<span class="extype" name="Chisel.Vec.tabulate.T">T</span>]</span>
+        <span class="name">tabulate</span><span class="tparams">[<span name="T">T &lt;: <a href="index.html#Data=chisel3.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="params">(<span name="n">n: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="params">(<span name="gen">gen: (<a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>) ⇒ <span class="extype" name="Chisel.Vec.tabulate.T">T</span></span>)</span><span class="result">: <a href="index.html#Vec[T&lt;:Chisel.package.Data]=chisel3.Vec[T]" class="extmbr" name="Chisel.Vec">Vec</a>[<span class="extype" name="Chisel.Vec.tabulate.T">T</span>]</span>
       </span>
       
       
@@ -813,9 +838,9 @@ element</p></dd></dl></div>
         <div class="values members">
               <h3>Deprecated Value Members</h3>
               <ol><li name="Chisel.Vec#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="apply[T&lt;:Chisel.package.Data](gen:T,n:Int)(implicitcompileOptions:chisel3.core.CompileOptions):Chisel.package.Vec[T]"></a><a id="apply[T&lt;:Data](T,Int)(CompileOptions):Vec[T]"></a>
+      <a id="apply[T&lt;:Chisel.package.Data](gen:T,n:Int)(implicitcompileOptions:chisel3.CompileOptions):Chisel.package.Vec[T]"></a><a id="apply[T&lt;:Data](T,Int)(CompileOptions):Vec[T]"></a>
       <span class="permalink">
-      <a href="../Chisel/package$$Vec$.html#apply[T&lt;:Chisel.package.Data](gen:T,n:Int)(implicitcompileOptions:chisel3.core.CompileOptions):Chisel.package.Vec[T]" title="Permalink">
+      <a href="../Chisel/package$$Vec$.html#apply[T&lt;:Chisel.package.Data](gen:T,n:Int)(implicitcompileOptions:chisel3.CompileOptions):Chisel.package.Vec[T]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -824,7 +849,7 @@ element</p></dd></dl></div>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name deprecated" title="Deprecated: (Since version chisel3) Vec argument order should be size, t; this will be removed by the official release">apply</span><span class="tparams">[<span name="T">T &lt;: <a href="index.html#Data=chisel3.core.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="params">(<span name="gen">gen: <span class="extype" name="Chisel.Vec.apply.T">T</span></span>, <span name="n">n: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="compileOptions">compileOptions: <a href="../chisel3/core/CompileOptions.html" class="extype" name="chisel3.core.CompileOptions">CompileOptions</a></span>)</span><span class="result">: <a href="index.html#Vec[T&lt;:Chisel.package.Data]=chisel3.core.Vec[T]" class="extmbr" name="Chisel.Vec">Vec</a>[<span class="extype" name="Chisel.Vec.apply.T">T</span>]</span>
+        <span class="name deprecated" title="Deprecated: (Since version chisel3) Vec argument order should be size, t; this will be removed by the official release">apply</span><span class="tparams">[<span name="T">T &lt;: <a href="index.html#Data=chisel3.Data" class="extmbr" name="Chisel.Data">Data</a></span>]</span><span class="params">(<span name="gen">gen: <span class="extype" name="Chisel.Vec.apply.T">T</span></span>, <span name="n">n: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="compileOptions">compileOptions: <a href="../chisel3/CompileOptions.html" class="extype" name="chisel3.CompileOptions">CompileOptions</a></span>)</span><span class="result">: <a href="index.html#Vec[T&lt;:Chisel.package.Data]=chisel3.Vec[T]" class="extmbr" name="Chisel.Vec">Vec</a>[<span class="extype" name="Chisel.Vec.apply.T">T</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
@@ -836,8 +861,8 @@ element</p></dd></dl></div>
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="chisel3.core.VecFactory">
-              <h3>Inherited from <a href="../chisel3/core/VecFactory.html" class="extype" name="chisel3.core.VecFactory">VecFactory</a></h3>
+        <div class="parent" name="chisel3.VecFactory">
+              <h3>Inherited from <a href="../chisel3/VecFactory.html" class="extype" name="chisel3.VecFactory">VecFactory</a></h3>
             </div><div class="parent" name="chisel3.SourceInfoDoc">
               <h3>Inherited from <a href="../chisel3/SourceInfoDoc.html" class="extype" name="chisel3.SourceInfoDoc">SourceInfoDoc</a></h3>
             </div><div class="parent" name="scala.AnyRef">
@@ -859,22 +884,19 @@ element</p></dd></dl></div>
   <br>
   <br>
   The equivalent public-facing methods do not have the <code>do_</code> prefix or have the same name. Use and look at the
-  documentation for those. If you want left shift, use <code>&lt;&lt;</code>, not <code>do_&lt;&lt;</code>. If you want comversion to a <span class="extype" name="Seq">Seq</span> of
-  <a href="../chisel3/index.html#Bool=chisel3.core.Bool" class="extmbr" name="chisel3.Bool">Bool</a>s look at the <code>asBools</code> above, not the one below. Users can safely ignore every method in this group!
-  <br>
-  <br>
+  documentation for those. If you want left shift, use <code>&lt;&lt;</code>, not <code>do_&lt;&lt;</code>. If you want conversion to a
+  <a href="http://www.scala-lang.org/api/2.12.6/scala/collection/Seq.html" class="extype" name="scala.collection.Seq">Seq</a> of <a href="../chisel3/Bool.html" class="extype" name="chisel3.Bool">Bool</a>s look at the <code>asBools</code> above, not the one below. Users can safely ignore
+  every method in this group! <br> <br>
   🐉🐉🐉 <b>Here be dragons...</b> 🐉🐉🐉
   <br>
   <br>
-  These <code>do_X</code> methods are used to enable both implicit passing of <span class="extype" name="SourceInfo">SourceInfo</span> and
-  <a href="../chisel3/core/CompileOptions.html" class="extype" name="chisel3.core.CompileOptions">chisel3.core.CompileOptions</a> while also supporting chained apply methods. In effect all &quot;normal&quot; methods that
-  you, as a user, will use in your designs, are converted to their &quot;hidden&quot;, <code>do_*</code>, via macro transformations.
-  Without using macros here, only one of the above wanted behaviors is allowed (implicit passing and chained
-  applies)---the compiler interprets a chained apply as an explicit 'implicit' argument and will throw type errors.
-  <br>
-  <br>
-  The &quot;normal&quot;, public-facing methods then take no <span class="extype" name="SourceInfo">SourceInfo</span>. However, a macro transforms this public-facing
-  method into a call to an internal, hidden <code>do_*</code> that takes an explicit <span class="extype" name="SourceInfo">SourceInfo</span> by inserting an
+  These <code>do_X</code> methods are used to enable both implicit passing of SourceInfo and <a href="../chisel3/CompileOptions.html" class="extype" name="chisel3.CompileOptions">chisel3.CompileOptions</a>
+  while also supporting chained apply methods. In effect all &quot;normal&quot; methods that you, as a user, will use in your
+  designs, are converted to their &quot;hidden&quot;, <code>do_*</code>, via macro transformations. Without using macros here, only one
+  of the above wanted behaviors is allowed (implicit passing and chained applies)---the compiler interprets a
+  chained apply as an explicit 'implicit' argument and will throw type errors. <br> <br>
+  The &quot;normal&quot;, public-facing methods then take no SourceInfo. However, a macro transforms this public-facing method
+  into a call to an internal, hidden <code>do_*</code> that takes an explicit SourceInfo by inserting an
   <code>implicitly[SourceInfo]</code> as the explicit argument.</p></div>
             </div>
         </div>

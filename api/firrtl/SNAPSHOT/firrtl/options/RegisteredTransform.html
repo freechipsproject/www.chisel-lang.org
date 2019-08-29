@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.2-050719-SNAPSHOT - firrtl.options.RegisteredTransform</title>
-          <meta name="description" content="firrtl 1.2 - 050719 - SNAPSHOT - firrtl.options.RegisteredTransform" />
-          <meta name="keywords" content="firrtl 1.2 050719 SNAPSHOT firrtl.options.RegisteredTransform" />
+          <title>firrtl 1.2-081319-SNAPSHOT - firrtl.options.RegisteredTransform</title>
+          <meta name="description" content="firrtl 1.2 - 081319 - SNAPSHOT - firrtl.options.RegisteredTransform" />
+          <meta name="keywords" content="firrtl 1.2 081319 SNAPSHOT firrtl.options.RegisteredTransform" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.2-050719-SNAPSHOT</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.2-081319-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -119,52 +119,100 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="firrtl.options">options</a></dd></dl></div>
     </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="trait" href="DoNotTerminateOnExit.html" title="Causes an OptionParser to not call exit (call sys.exit) if the --help option is passed"></a>
-                        <a href="DoNotTerminateOnExit.html" title="Causes an OptionParser to not call exit (call sys.exit) if the --help option is passed">DoNotTerminateOnExit</a>
+                        <a class="trait" href="DependencyAPI.html" title="Mixin that defines dependencies between TransformLikes (hereafter referred to as &quot;transforms&quot;)"></a>
+                        <a href="DependencyAPI.html" title="Mixin that defines dependencies between TransformLikes (hereafter referred to as &quot;transforms&quot;)">DependencyAPI</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="DependencyManager.html" title="A TransformLike that resolves a linear ordering of dependencies based on requirements."></a>
+                        <a href="DependencyManager.html" title="A TransformLike that resolves a linear ordering of dependencies based on requirements.">DependencyManager</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="DependencyManagerException.html" title="An exception arising from an in a DependencyManager"></a>
+                        <a href="DependencyManagerException.html" title="An exception arising from an in a DependencyManager">DependencyManagerException</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="DoNotTerminateOnExit.html" title="OptionParser mixin that causes the OptionParser to not call exit (call sys.exit) if the --help option is passed"></a>
+                        <a href="DoNotTerminateOnExit.html" title="OptionParser mixin that causes the OptionParser to not call exit (call sys.exit) if the --help option is passed">DoNotTerminateOnExit</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="trait" href="DuplicateHandling.html" title="A modified OptionParser with mutable termination and additional checks"></a>
                         <a href="DuplicateHandling.html" title="A modified OptionParser with mutable termination and additional checks">DuplicateHandling</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="trait" href="HasScoptOptions.html" title="Indicates that this class/object includes options (but does not add these as a registered class)"></a>
-                        <a href="HasScoptOptions.html" title="Indicates that this class/object includes options (but does not add these as a registered class)">HasScoptOptions</a>
+                        <a class="trait" href="ExceptOnError.html" title="OptionParser mixin that converts to OptionsException"></a>
+                        <a href="ExceptOnError.html" title="OptionParser mixin that converts to OptionsException">ExceptOnError</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="HasShellOptions.html" title="Indicates that this class/object includes options (but does not add these as a registered class)"></a>
+                        <a href="HasShellOptions.html" title="Indicates that this class/object includes options (but does not add these as a registered class)">HasShellOptions</a>
                       </li><li class="current-entities indented2">
                         <a class="object" href="InputAnnotationFileAnnotation$.html" title=""></a>
                         <a class="class" href="InputAnnotationFileAnnotation.html" title="Holds a filename containing one or more annotations.Annotation to be read"></a>
                         <a href="InputAnnotationFileAnnotation.html" title="Holds a filename containing one or more annotations.Annotation to be read">InputAnnotationFileAnnotation</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="class" href="OptionsException.html" title="Indicate an error in firrtl.options"></a>
-                        <a href="OptionsException.html" title="Indicate an error in firrtl.options">OptionsException</a>
+                        <a class="class" href="OptionsException.html" title="Indicate an error related to a bad Annotation or it's command line option equivalent."></a>
+                        <a href="OptionsException.html" title="Indicate an error related to a bad Annotation or it's command line option equivalent.">OptionsException</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="OptionsHelpException$.html" title=""></a>
+                        <a href="OptionsHelpException$.html" title="">OptionsHelpException</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="trait" href="OptionsView.html" title="Type class defining a &quot;view&quot; of an AnnotationSeq"></a>
                         <a href="OptionsView.html" title="Type class defining a &quot;view&quot; of an AnnotationSeq">OptionsView</a>
                       </li><li class="current-entities indented2">
+                        <a class="object" href="OutputAnnotationFileAnnotation$.html" title=""></a>
+                        <a class="class" href="OutputAnnotationFileAnnotation.html" title="An explicit output _annotation_ file to write to"></a>
+                        <a href="OutputAnnotationFileAnnotation.html" title="An explicit output _annotation_ file to write to">OutputAnnotationFileAnnotation</a>
+                      </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="class" href="Phase.html" title="A transformation of an AnnotationSeq"></a>
-                        <a href="Phase.html" title="A transformation of an AnnotationSeq">Phase</a>
+                        <a class="trait" href="Phase.html" title="A mathematical transformation of an AnnotationSeq."></a>
+                        <a href="Phase.html" title="A mathematical transformation of an AnnotationSeq.">Phase</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="PhaseException.html" title="Indicate a generic error in a Phase"></a>
+                        <a href="PhaseException.html" title="Indicate a generic error in a Phase">PhaseException</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="PhaseManager$.html" title=""></a>
+                        <a class="class" href="PhaseManager.html" title="A Phase that will ensure that some other Phases and their prerequisites are executed."></a>
+                        <a href="PhaseManager.html" title="A Phase that will ensure that some other Phases and their prerequisites are executed.">PhaseManager</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="PhasePrerequisiteException.html" title="Indicates that a Phase is missing some mandatory information."></a>
+                        <a href="PhasePrerequisiteException.html" title="Indicates that a Phase is missing some mandatory information.">PhasePrerequisiteException</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="PreservesAll.html" title="A trait indicating that no invalidations occur, i.e., all previous transforms are preserved"></a>
+                        <a href="PreservesAll.html" title="A trait indicating that no invalidations occur, i.e., all previous transforms are preserved">PreservesAll</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="ProgramArgsAnnotation$.html" title=""></a>
+                        <a class="class" href="ProgramArgsAnnotation.html" title="Additional arguments"></a>
+                        <a href="ProgramArgsAnnotation.html" title="Additional arguments">ProgramArgsAnnotation</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="trait" href="RegisteredLibrary.html" title="A class that includes options that should be exposed as a group at the top level."></a>
                         <a href="RegisteredLibrary.html" title="A class that includes options that should be exposed as a group at the top level.">RegisteredLibrary</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="trait" href="" title="A Transform that includes options that should be exposed at the top level."></a>
-                        <a href="" title="A Transform that includes options that should be exposed at the top level.">RegisteredTransform</a>
+                        <a class="trait" href="" title="A Transform that includes an option that should be exposed at the top level."></a>
+                        <a href="" title="A Transform that includes an option that should be exposed at the top level.">RegisteredTransform</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="class" href="Shell.html" title="A utility for working with command line options"></a>
                         <a href="Shell.html" title="A utility for working with command line options">Shell</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
+                        <a class="class" href="ShellOption.html" title="Contains information about a Shell command line option"></a>
+                        <a href="ShellOption.html" title="Contains information about a Shell command line option">ShellOption</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
                         <a class="class" href="Stage.html" title="A Stage represents one stage in the FIRRTL hardware compiler framework."></a>
                         <a href="Stage.html" title="A Stage represents one stage in the FIRRTL hardware compiler framework.">Stage</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="class" href="StageException.html" title=""></a>
-                        <a href="StageException.html" title="">StageException</a>
+                        <a class="class" href="StageMain.html" title="Provides a main method for a Stage"></a>
+                        <a href="StageMain.html" title="Provides a main method for a Stage">StageMain</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="trait" href="StageOption.html" title=""></a>
@@ -182,13 +230,29 @@
                         <a class="object" href="StageUtils$.html" title="Utilities related to working with a Stage"></a>
                         <a href="StageUtils$.html" title="Utilities related to working with a Stage">StageUtils</a>
                       </li><li class="current-entities indented2">
-                        <span class="separator"></span>
+                        <a class="object" href="TargetDirAnnotation$.html" title=""></a>
                         <a class="class" href="TargetDirAnnotation.html" title="Holds the name of the target directory"></a>
                         <a href="TargetDirAnnotation.html" title="Holds the name of the target directory">TargetDirAnnotation</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
+                        <a class="trait" href="TransformLike.html" title="A polymorphic mathematical transform"></a>
+                        <a href="TransformLike.html" title="A polymorphic mathematical transform">TransformLike</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="Translator.html" title="A TransformLike that internally translates the input type to some other type, transforms the internal type, and converts back to the original type."></a>
+                        <a href="Translator.html" title="A TransformLike that internally translates the input type to some other type, transforms the internal type, and converts back to the original type.">Translator</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="Unserializable.html" title="An annotation that should not be serialized automatically WriteOutputAnnotations."></a>
+                        <a href="Unserializable.html" title="An annotation that should not be serialized automatically WriteOutputAnnotations.">Unserializable</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
                         <a class="object" href="Viewer$.html" title="A shim to manage multiple &quot;views&quot; of an AnnotationSeq"></a>
                         <a href="Viewer$.html" title="A shim to manage multiple &quot;views&quot; of an AnnotationSeq">Viewer</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="WriteDeletedAnnotation$.html" title="If this Annotation exists in an AnnotationSeq, then a WriteOutputAnnotations will include DeletedAnnotations when it writes to a file."></a>
+                        <a href="WriteDeletedAnnotation$.html" title="If this Annotation exists in an AnnotationSeq, then a WriteOutputAnnotations will include DeletedAnnotations when it writes to a file.">WriteDeletedAnnotation</a>
                       </li>
               </ul>
             </div>
@@ -212,34 +276,24 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">RegisteredTransform</span><span class="result"> extends <a href="HasScoptOptions.html" class="extype" name="firrtl.options.HasScoptOptions">HasScoptOptions</a></span>
+        <span class="name">RegisteredTransform</span><span class="result"> extends <a href="HasShellOptions.html" class="extype" name="firrtl.options.HasShellOptions">HasShellOptions</a></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> that includes options that should be exposed at the top level.
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> that includes an option that should be exposed at the top level.
 </p></div><dl class="attributes block"> <dt>Self Type</dt><dd><a href="" class="extype" name="firrtl.options.RegisteredTransform">RegisteredTransform</a> with <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a></dd><dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/master/src/main/scala/firrtl/options/Registration.scala" target="_blank">Registration.scala</a></dd><dt>Note</dt><dd><span class="cmt"><p>To complete registration, include an entry in
 src/main/resources/META-INF/services/firrtl.options.RegisteredTransform</p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="HasScoptOptions.html" class="extype" name="firrtl.options.HasScoptOptions">HasScoptOptions</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="HasShellOptions.html" class="extype" name="firrtl.options.HasShellOptions">HasShellOptions</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div><div class="toggleContainer block">
             <span class="toggle">
               Known Subclasses
             </span>
             <div class="subClasses hiddenContent"><a href="../passes/InlineInstances.html" class="extype" name="firrtl.passes.InlineInstances">InlineInstances</a>, <a href="../passes/clocklist/ClockListTransform.html" class="extype" name="firrtl.passes.clocklist.ClockListTransform">ClockListTransform</a>, <a href="../transforms/CheckCombLoops.html" class="extype" name="firrtl.transforms.CheckCombLoops">CheckCombLoops</a>, <a href="../transforms/DeadCodeElimination.html" class="extype" name="firrtl.transforms.DeadCodeElimination">DeadCodeElimination</a></div>
-          </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
-                <span class="toggle diagram-link">
-                  Type Hierarchy
-                </span>
-                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 550.00 155.00" height="155pt" width="550pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 151)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-151 546,-151 546,4 -4,4" stroke="transparent" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this trait" id="graph1_0"><g id="a_this trait|graph1_0"><a xlink:title="firrtl.options.RegisteredTransform (this trait)" xlink:href="#inheritance-diagram"><path d="M334.17,-86C334.17,-86 215.83,-86 215.83,-86 211.67,-86 207.5,-81.83 207.5,-77.67 207.5,-77.67 207.5,-69.33 207.5,-69.33 207.5,-65.17 211.67,-61 215.83,-61 215.83,-61 334.17,-61 334.17,-61 338.33,-61 342.5,-65.17 342.5,-69.33 342.5,-69.33 342.5,-77.67 342.5,-77.67 342.5,-81.83 338.33,-86 334.17,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-80.5" x="218" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="239" text-anchor="start">RegisteredTransform</text></a></g></g><!-- node1 --><g class="node class" id="graph1_1"><g id="a_class|graph1_1"><a xlink:title="firrtl.transforms.CheckCombLoops" xlink:href="../transforms/CheckCombLoops.html#inheritance-diagram"><path d="M111.67,-25C111.67,-25 8.33,-25 8.33,-25 4.17,-25 0,-20.83 0,-16.67 0,-16.67 0,-8.33 0,-8.33 0,-4.17 4.17,0 8.33,0 8.33,0 111.67,0 111.67,0 115.83,0 120,-4.17 120,-8.33 120,-8.33 120,-16.67 120,-16.67 120,-20.83 115.83,-25 111.67,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-19.5" x="10" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="31" text-anchor="start">CheckCombLoops</text></a></g></g><!-- node0&#45;&gt;node1 --><g class="edge inheritance" id="graph1_0_1"><g id="a_inheritance|graph1_0_1"><a xlink:title="CheckCombLoops is a subtype of RegisteredTransform"><path d="M226.23,-59.12C188.86,-48.86 137.85,-34.86 102.23,-25.09" stroke="#d4d4d4" fill="none"></path><polygon points="225.64,-61.49 233.04,-60.98 226.93,-56.77 225.64,-61.49" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node class" id="graph1_2"><g id="a_class|graph1_2"><a xlink:title="firrtl.passes.clocklist.ClockListTransform" xlink:href="../passes/clocklist/ClockListTransform.html#inheritance-diagram"><path d="M255.67,-25C255.67,-25 146.33,-25 146.33,-25 142.17,-25 138,-20.83 138,-16.67 138,-16.67 138,-8.33 138,-8.33 138,-4.17 142.17,0 146.33,0 146.33,0 255.67,0 255.67,0 259.83,0 264,-4.17 264,-8.33 264,-8.33 264,-16.67 264,-16.67 264,-20.83 259.83,-25 255.67,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-19.5" x="148" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="169" text-anchor="start">ClockListTransform</text></a></g></g><!-- node0&#45;&gt;node2 --><g class="edge inheritance" id="graph1_0_2"><g id="a_inheritance|graph1_0_2"><a xlink:title="ClockListTransform is a subtype of RegisteredTransform"><path d="M254.59,-56.23C242.22,-46.37 226.73,-34.01 215.59,-25.13" stroke="#d4d4d4" fill="none"></path><polygon points="253.38,-58.4 260.38,-60.84 256.43,-54.56 253.38,-58.4" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3 --><g class="node class" id="graph1_3"><g id="a_class|graph1_3"><a xlink:title="firrtl.transforms.DeadCodeElimination" xlink:href="../transforms/DeadCodeElimination.html#inheritance-diagram"><path d="M407.67,-25C407.67,-25 290.33,-25 290.33,-25 286.17,-25 282,-20.83 282,-16.67 282,-16.67 282,-8.33 282,-8.33 282,-4.17 286.17,0 290.33,0 290.33,0 407.67,0 407.67,0 411.83,0 416,-4.17 416,-8.33 416,-8.33 416,-16.67 416,-16.67 416,-20.83 411.83,-25 407.67,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-19.5" x="292" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="313" text-anchor="start">DeadCodeElimination</text></a></g></g><!-- node0&#45;&gt;node3 --><g class="edge inheritance" id="graph1_0_3"><g id="a_inheritance|graph1_0_3"><a xlink:title="DeadCodeElimination is a subtype of RegisteredTransform"><path d="M295.41,-56.23C307.78,-46.37 323.27,-34.01 334.41,-25.13" stroke="#d4d4d4" fill="none"></path><polygon points="293.57,-54.56 289.62,-60.84 296.62,-58.4 293.57,-54.56" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node4 --><g class="node class" id="graph1_4"><g id="a_class|graph1_4"><a xlink:title="firrtl.passes.InlineInstances" xlink:href="../passes/InlineInstances.html#inheritance-diagram"><path d="M533.67,-25C533.67,-25 442.33,-25 442.33,-25 438.17,-25 434,-20.83 434,-16.67 434,-16.67 434,-8.33 434,-8.33 434,-4.17 438.17,0 442.33,0 442.33,0 533.67,0 533.67,0 537.83,0 542,-4.17 542,-8.33 542,-8.33 542,-16.67 542,-16.67 542,-20.83 537.83,-25 533.67,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-19.5" x="444" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="465" text-anchor="start">InlineInstances</text></a></g></g><!-- node0&#45;&gt;node4 --><g class="edge inheritance" id="graph1_0_4"><g id="a_inheritance|graph1_0_4"><a xlink:title="InlineInstances is a subtype of RegisteredTransform"><path d="M323.32,-59.12C360.33,-48.86 410.87,-34.86 446.17,-25.09" stroke="#d4d4d4" fill="none"></path><polygon points="322.67,-56.75 316.57,-60.98 323.97,-61.48 322.67,-56.75" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node5 --><g class="node trait" id="graph1_5"><g id="a_trait|graph1_5"><a xlink:title="firrtl.options.HasScoptOptions" xlink:href="HasScoptOptions.html#inheritance-diagram"><path d="M325.17,-147C325.17,-147 224.83,-147 224.83,-147 220.67,-147 216.5,-142.83 216.5,-138.67 216.5,-138.67 216.5,-130.33 216.5,-130.33 216.5,-126.17 220.67,-122 224.83,-122 224.83,-122 325.17,-122 325.17,-122 329.33,-122 333.5,-126.17 333.5,-130.33 333.5,-130.33 333.5,-138.67 333.5,-138.67 333.5,-142.83 329.33,-147 325.17,-147" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-141.5" x="227" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-132.1" x="248" text-anchor="start">HasScoptOptions</text></a></g></g><!-- node5&#45;&gt;node0 --><g class="edge inheritance" id="graph1_5_0"><g id="a_inheritance|graph1_5_0"><a xlink:title="RegisteredTransform is a subtype of HasScoptOptions"><path d="M275,-114.76C275,-105.37 275,-94.29 275,-86.13" stroke="#d4d4d4" fill="none"></path><polygon points="272.55,-114.84 275,-121.84 277.45,-114.84 272.55,-114.84" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
-                <div id="diagram-controls" class="hiddenContent">
-                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
-                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
-                </div>
-              </div></div>
+          </div></div>
         
 
       <div id="mbrsel">
@@ -264,7 +318,7 @@ src/main/resources/META-INF/services/firrtl.options.RegisteredTransform</p></spa
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="firrtl.options.RegisteredTransform"><span>RegisteredTransform</span></li><li class="in" name="firrtl.options.HasScoptOptions"><span>HasScoptOptions</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="firrtl.options.RegisteredTransform"><span>RegisteredTransform</span></li><li class="in" name="firrtl.options.HasShellOptions"><span>HasShellOptions</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -288,10 +342,10 @@ src/main/resources/META-INF/services/firrtl.options.RegisteredTransform</p></spa
 
         <div class="values members">
               <h3>Abstract Value Members</h3>
-              <ol><li name="firrtl.options.HasScoptOptions#addOptions" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="addOptions(p:scopt.OptionParser[firrtl.AnnotationSeq]):Unit"></a><a id="addOptions(OptionParser[AnnotationSeq]):Unit"></a>
+              <ol><li name="firrtl.options.HasShellOptions#options" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="options:Seq[firrtl.options.ShellOption[_]]"></a><a id="options:Seq[ShellOption[_]]"></a>
       <span class="permalink">
-      <a href="../../firrtl/options/RegisteredTransform.html#addOptions(p:scopt.OptionParser[firrtl.AnnotationSeq]):Unit" title="Permalink">
+      <a href="../../firrtl/options/RegisteredTransform.html#options:Seq[firrtl.options.ShellOption[_]]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -300,10 +354,12 @@ src/main/resources/META-INF/services/firrtl.options.RegisteredTransform</p></spa
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">addOptions</span><span class="params">(<span name="p">p: <span class="extype" name="scopt.OptionParser">OptionParser</span>[<a href="../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">options</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="ShellOption.html" class="extype" name="firrtl.options.ShellOption">ShellOption</a>[_]]</span>
       </span>
       
-      <p class="shortcomment cmt">This method will be called to add options to an OptionParser</p><div class="fullcomment"><div class="comment cmt"><p>This method will be called to add options to an OptionParser</p></div><dl class="paramcmts block"><dt class="param">p</dt><dd class="cmt"><p>an option parser</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="HasScoptOptions.html" class="extype" name="firrtl.options.HasScoptOptions">HasScoptOptions</a></dd></dl></div>
+      <p class="shortcomment cmt">A sequence of options provided
+</p><div class="fullcomment"><div class="comment cmt"><p>A sequence of options provided
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="HasShellOptions.html" class="extype" name="firrtl.options.HasShellOptions">HasShellOptions</a></dd></dl></div>
     </li></ol>
             </div>
 
@@ -358,6 +414,22 @@ src/main/resources/META-INF/services/firrtl.options.RegisteredTransform</p></spa
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="firrtl.options.HasShellOptions#addOptions" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="addOptions(p:scopt.OptionParser[firrtl.AnnotationSeq]):Unit"></a><a id="addOptions(OptionParser[AnnotationSeq]):Unit"></a>
+      <span class="permalink">
+      <a href="../../firrtl/options/RegisteredTransform.html#addOptions(p:scopt.OptionParser[firrtl.AnnotationSeq]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">addOptions</span><span class="params">(<span name="p">p: <span class="extype" name="scopt.OptionParser">OptionParser</span>[<a href="../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Add all shell (command line) options to an option parser</p><div class="fullcomment"><div class="comment cmt"><p>Add all shell (command line) options to an option parser</p></div><dl class="paramcmts block"><dt class="param">p</dt><dd class="cmt"><p>an option parser</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="HasShellOptions.html" class="extype" name="firrtl.options.HasShellOptions">HasShellOptions</a></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
@@ -670,8 +742,8 @@ src/main/resources/META-INF/services/firrtl.options.RegisteredTransform</p></spa
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="firrtl.options.HasScoptOptions">
-              <h3>Inherited from <a href="HasScoptOptions.html" class="extype" name="firrtl.options.HasScoptOptions">HasScoptOptions</a></h3>
+        <div class="parent" name="firrtl.options.HasShellOptions">
+              <h3>Inherited from <a href="HasShellOptions.html" class="extype" name="firrtl.options.HasShellOptions">HasShellOptions</a></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">

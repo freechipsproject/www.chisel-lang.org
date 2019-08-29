@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>1.1-050719-SNAPSHOT - treadle.utils.AugmentPrintf</title>
-          <meta name="description" content="1.1 - 050719 - SNAPSHOT - treadle.utils.AugmentPrintf" />
-          <meta name="keywords" content="1.1 050719 SNAPSHOT treadle.utils.AugmentPrintf" />
+          <title>1.1-081319-SNAPSHOT - treadle.utils.AugmentPrintf</title>
+          <meta name="description" content="1.1 - 081319 - SNAPSHOT - treadle.utils.AugmentPrintf" />
+          <meta name="keywords" content="1.1 081319 SNAPSHOT treadle.utils.AugmentPrintf" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title"><span id="doc-version">1.1-050719-SNAPSHOT</span></span>
+        <span id="doc-title"><span id="doc-version">1.1-081319-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -172,7 +172,7 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">AugmentPrintf</span>
+        <span class="name">AugmentPrintf</span><span class="result"> extends <span class="extype" name="firrtl.Transform">Transform</span></span>
       </span>
       </h4>
 
@@ -183,7 +183,7 @@ unless this pass adds a delay for each register
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="firrtl.Transform">Transform</span>, <span class="extype" name="firrtl.options.TransformLike">TransformLike</span>[<span class="extype" name="firrtl.CircuitState">CircuitState</span>], <span class="extype" name="logger.LazyLogging">LazyLogging</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -209,7 +209,7 @@ unless this pass adds a delay for each register
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="treadle.utils.AugmentPrintf"><span>AugmentPrintf</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="treadle.utils.AugmentPrintf"><span>AugmentPrintf</span></li><li class="in" name="firrtl.Transform"><span>Transform</span></li><li class="in" name="firrtl.options.TransformLike"><span>TransformLike</span></li><li class="in" name="logger.LazyLogging"><span>LazyLogging</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -372,6 +372,22 @@ unless this pass adds a delay for each register
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="treadle.utils.AugmentPrintf#execute" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="execute(state:firrtl.CircuitState):firrtl.CircuitState"></a><a id="execute(CircuitState):CircuitState"></a>
+      <span class="permalink">
+      <a href="../../treadle/utils/AugmentPrintf$.html#execute(state:firrtl.CircuitState):firrtl.CircuitState" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">execute</span><span class="params">(<span name="state">state: <span class="extype" name="firrtl.CircuitState">CircuitState</span></span>)</span><span class="result">: <span class="extype" name="firrtl.CircuitState">CircuitState</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="" class="extype" name="treadle.utils.AugmentPrintf">AugmentPrintf</a> → Transform</dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <span class="permalink">
@@ -432,6 +448,22 @@ unless this pass adds a delay for each register
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="treadle.utils.AugmentPrintf#inputForm" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="inputForm:firrtl.CircuitForm"></a><a id="inputForm:CircuitForm"></a>
+      <span class="permalink">
+      <a href="../../treadle/utils/AugmentPrintf$.html#inputForm:firrtl.CircuitForm" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">inputForm</span><span class="result">: <span class="extype" name="firrtl.CircuitForm">CircuitForm</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="treadle.utils.AugmentPrintf">AugmentPrintf</a> → Transform</dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
@@ -448,6 +480,38 @@ unless this pass adds a delay for each register
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="logger.LazyLogging#logger" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logger:logger.Logger"></a><a id="logger:Logger"></a>
+      <span class="permalink">
+      <a href="../../treadle/utils/AugmentPrintf$.html#logger:logger.Logger" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logger</span><span class="result">: <span class="extype" name="logger.Logger">Logger</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>LazyLogging</dd></dl></div>
+    </li><li name="firrtl.Transform#name" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="name:String"></a>
+      <span class="permalink">
+      <a href="../../treadle/utils/AugmentPrintf$.html#name:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">name</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Transform → TransformLike</dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -502,6 +566,38 @@ unless this pass adds a delay for each register
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="treadle.utils.AugmentPrintf#outputForm" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="outputForm:firrtl.CircuitForm"></a><a id="outputForm:CircuitForm"></a>
+      <span class="permalink">
+      <a href="../../treadle/utils/AugmentPrintf$.html#outputForm:firrtl.CircuitForm" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">outputForm</span><span class="result">: <span class="extype" name="firrtl.CircuitForm">CircuitForm</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="treadle.utils.AugmentPrintf">AugmentPrintf</a> → Transform</dd></dl></div>
+    </li><li name="firrtl.Transform#runTransform" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="runTransform(state:firrtl.CircuitState):firrtl.CircuitState"></a><a id="runTransform(CircuitState):CircuitState"></a>
+      <span class="permalink">
+      <a href="../../treadle/utils/AugmentPrintf$.html#runTransform(state:firrtl.CircuitState):firrtl.CircuitState" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">runTransform</span><span class="params">(<span name="state">state: <span class="extype" name="firrtl.CircuitState">CircuitState</span></span>)</span><span class="result">: <span class="extype" name="firrtl.CircuitState">CircuitState</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Transform</dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
@@ -534,6 +630,22 @@ unless this pass adds a delay for each register
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="firrtl.Transform#transform" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="transform(state:firrtl.CircuitState):firrtl.CircuitState"></a><a id="transform(CircuitState):CircuitState"></a>
+      <span class="permalink">
+      <a href="../../treadle/utils/AugmentPrintf$.html#transform(state:firrtl.CircuitState):firrtl.CircuitState" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">transform</span><span class="params">(<span name="state">state: <span class="extype" name="firrtl.CircuitState">CircuitState</span></span>)</span><span class="result">: <span class="extype" name="firrtl.CircuitState">CircuitState</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Transform → TransformLike</dd></dl></div>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">
@@ -608,11 +720,39 @@ unless this pass adds a delay for each register
 
         
 
-        
+        <div class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="firrtl.Transform#getMyAnnotations" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getMyAnnotations(state:firrtl.CircuitState):Seq[firrtl.annotations.Annotation]"></a><a id="getMyAnnotations(CircuitState):Seq[Annotation]"></a>
+      <span class="permalink">
+      <a href="../../treadle/utils/AugmentPrintf$.html#getMyAnnotations(state:firrtl.CircuitState):Seq[firrtl.annotations.Annotation]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 1.1) Just collect the actual Annotation types the transform wants">getMyAnnotations</span><span class="params">(<span name="state">state: <span class="extype" name="firrtl.CircuitState">CircuitState</span></span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="firrtl.annotations.Annotation">Annotation</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Transform</dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.1)</i> Just collect the actual Annotation types the transform wants</p></dd></dl></div>
+    </li></ol>
+            </div>
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="firrtl.Transform">
+              <h3>Inherited from <span class="extype" name="firrtl.Transform">Transform</span></h3>
+            </div><div class="parent" name="firrtl.options.TransformLike">
+              <h3>Inherited from <span class="extype" name="firrtl.options.TransformLike">TransformLike</span>[<span class="extype" name="firrtl.CircuitState">CircuitState</span>]</h3>
+            </div><div class="parent" name="logger.LazyLogging">
+              <h3>Inherited from <span class="extype" name="logger.LazyLogging">LazyLogging</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>

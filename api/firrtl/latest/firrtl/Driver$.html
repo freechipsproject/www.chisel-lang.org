@@ -812,16 +812,16 @@
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The driver provides methods to access the firrtl compiler.
 Invoke the compiler with either a FirrtlExecutionOption
 </p></div><dl class="attributes block"> <div class="block">Examples:
-               <ol><li class="cmt"><p></p><pre>firrtl.Driver.execute(<span class="std">Array</span>(<span class="lit">"--top-name Dummy --compiler verilog"</span>.split(<span class="lit">" +"</span>))</pre><p>each approach has its own endearing aspects</p></li>, <li class="cmt"><p></p><pre><span class="kw">val</span> optionsManager = <span class="kw">new</span> ExecutionOptionsManager(<span class="lit">"firrtl"</span>)
+               <ol><li class="cmt"><p></p><pre><span class="kw">val</span> optionsManager = <span class="kw">new</span> ExecutionOptionsManager(<span class="lit">"firrtl"</span>)
 optionsManager.register(
     FirrtlExecutionOptionsKey -&gt;
     <span class="kw">new</span> FirrtlExecutionOptions(topName = <span class="lit">"Dummy"</span>, compilerName = <span class="lit">"verilog"</span>))
-firrtl.Driver.execute(optionsManager)</pre><p> or a series of command line arguments</p></li></ol>
-            </div><dt>See also</dt><dd><span class="cmt"><p><a href="CompilerUtils$.html#mergeTransforms(lowering:Seq[firrtl.Transform],custom:Seq[firrtl.Transform]):Seq[firrtl.Transform]" class="extmbr" name="firrtl.CompilerUtils#mergeTransforms">CompilerUtils.mergeTransforms</a> to see how customTransformations are inserted</p></span><span class="cmt"><p>firrtlTests/DriverSpec.scala in the test directory for a lot more examples</p></span></dd></dl><div class="toggleContainer block">
+firrtl.Driver.execute(optionsManager)</pre><p> or a series of command line arguments</p></li>, <li class="cmt"><p></p><pre>firrtl.Driver.execute(<span class="std">Array</span>(<span class="lit">"--top-name Dummy --compiler verilog"</span>.split(<span class="lit">" +"</span>))</pre><p>each approach has its own endearing aspects</p></li></ol>
+            </div><dt>See also</dt><dd><span class="cmt"><p>firrtlTests/DriverSpec.scala in the test directory for a lot more examples</p></span><span class="cmt"><p><a href="CompilerUtils$.html#mergeTransforms(lowering:Seq[firrtl.Transform],custom:Seq[firrtl.Transform]):Seq[firrtl.Transform]" class="extmbr" name="firrtl.CompilerUtils#mergeTransforms">CompilerUtils.mergeTransforms</a> to see how customTransformations are inserted</p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.12.4/scala/collection/immutable/List.html#scala.AnyRef" class="extype" name="scala.collection.immutable.List">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.4/scala/collection/immutable/List.html#scala.Any" class="extype" name="scala.collection.immutable.List">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div></div>
         
 
@@ -881,7 +881,7 @@ firrtl.Driver.execute(optionsManager)</pre><p> or a series of command line argum
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="Driver$$OptionsException.html"><span class="name">OptionsException</span></a><span class="params">(<span name="msg">msg: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Exception">Exception</span> with <a href="http://www.scala-lang.org/api/2.12.4/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="http://www.scala-lang.org/api/2.12.4/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="Driver$$OptionsException.html"><span class="name">OptionsException</span></a><span class="params">(<span name="msg">msg: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Exception">Exception</span> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -905,7 +905,7 @@ firrtl.Driver.execute(optionsManager)</pre><p> or a series of command line argum
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.4/scala/collection/immutable/List.html#scala.Any" class="extype" name="scala.collection.immutable.List">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.4/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -921,7 +921,7 @@ firrtl.Driver.execute(optionsManager)</pre><p> or a series of command line argum
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.4/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -937,7 +937,7 @@ firrtl.Driver.execute(optionsManager)</pre><p> or a series of command line argum
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.4/scala/collection/immutable/List.html#scala.Any" class="extype" name="scala.collection.immutable.List">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.4/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -969,7 +969,7 @@ firrtl.Driver.execute(optionsManager)</pre><p> or a series of command line argum
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.4/scala/collection/immutable/List.html#scala.AnyRef" class="extype" name="scala.collection.immutable.List">AnyRef</a></span>
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -993,7 +993,7 @@ firrtl.Driver.execute(optionsManager)</pre><p> or a series of command line argum
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">dramaticError</span><span class="params">(<span name="message">message: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.4/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">dramaticError</span><span class="params">(<span name="message">message: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <p class="shortcomment cmt">print the message in red
@@ -1011,7 +1011,7 @@ firrtl.Driver.execute(optionsManager)</pre><p> or a series of command line argum
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">dramaticWarning</span><span class="params">(<span name="message">message: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.4/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">dramaticWarning</span><span class="params">(<span name="message">message: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <p class="shortcomment cmt">Print a warning message
@@ -1029,7 +1029,7 @@ firrtl.Driver.execute(optionsManager)</pre><p> or a series of command line argum
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.4/scala/collection/immutable/List.html#scala.AnyRef" class="extype" name="scala.collection.immutable.List">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.4/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -1045,7 +1045,7 @@ firrtl.Driver.execute(optionsManager)</pre><p> or a series of command line argum
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.4/scala/collection/immutable/List.html#scala.Any" class="extype" name="scala.collection.immutable.List">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.4/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -1061,7 +1061,7 @@ firrtl.Driver.execute(optionsManager)</pre><p> or a series of command line argum
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">execute</span><span class="params">(<span name="args">args: <a href="http://www.scala-lang.org/api/2.12.4/scala/Array.html#scala.Array" class="extype" name="scala.Array">Array</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <a href="FirrtlExecutionResult.html" class="extype" name="firrtl.FirrtlExecutionResult">FirrtlExecutionResult</a></span>
+        <span class="name">execute</span><span class="params">(<span name="args">args: <a href="http://www.scala-lang.org/api/2.12.6/scala/Array.html#scala.Array" class="extype" name="scala.Array">Array</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <a href="FirrtlExecutionResult.html" class="extype" name="firrtl.FirrtlExecutionResult">FirrtlExecutionResult</a></span>
       </span>
       
       <p class="shortcomment cmt">this is a wrapper for execute that builds the options from a standard command line args,
@@ -1100,7 +1100,7 @@ for example, like strings passed to main()
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.4/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1122,7 +1122,7 @@ for example, like strings passed to main()
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getAnnotations</span><span class="params">(<span name="optionsManager">optionsManager: <a href="ExecutionOptionsManager.html" class="extype" name="firrtl.ExecutionOptionsManager">ExecutionOptionsManager</a> with <a href="HasFirrtlOptions.html" class="extype" name="firrtl.HasFirrtlOptions">HasFirrtlOptions</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.4/scala/collection/Seq.html#scala.collection.Seq" class="extype" name="scala.collection.Seq">Seq</a>[<a href="annotations/Annotation.html" class="extype" name="firrtl.annotations.Annotation">Annotation</a>]</span>
+        <span class="name">getAnnotations</span><span class="params">(<span name="optionsManager">optionsManager: <a href="ExecutionOptionsManager.html" class="extype" name="firrtl.ExecutionOptionsManager">ExecutionOptionsManager</a> with <a href="HasFirrtlOptions.html" class="extype" name="firrtl.HasFirrtlOptions">HasFirrtlOptions</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/collection/Seq.html#scala.collection.Seq" class="extype" name="scala.collection.Seq">Seq</a>[<a href="annotations/Annotation.html" class="extype" name="firrtl.annotations.Annotation">Annotation</a>]</span>
       </span>
       
       <p class="shortcomment cmt">Get annotations from specified files and options
@@ -1140,7 +1140,7 @@ for example, like strings passed to main()
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getCircuit</span><span class="params">(<span name="optionsManager">optionsManager: <a href="ExecutionOptionsManager.html" class="extype" name="firrtl.ExecutionOptionsManager">ExecutionOptionsManager</a> with <a href="HasFirrtlOptions.html" class="extype" name="firrtl.HasFirrtlOptions">HasFirrtlOptions</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.4/scala/util/Try.html#scala.util.Try" class="extype" name="scala.util.Try">Try</a>[<a href="ir/Circuit.html" class="extype" name="firrtl.ir.Circuit">Circuit</a>]</span>
+        <span class="name">getCircuit</span><span class="params">(<span name="optionsManager">optionsManager: <a href="ExecutionOptionsManager.html" class="extype" name="firrtl.ExecutionOptionsManager">ExecutionOptionsManager</a> with <a href="HasFirrtlOptions.html" class="extype" name="firrtl.HasFirrtlOptions">HasFirrtlOptions</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/util/Try.html#scala.util.Try" class="extype" name="scala.util.Try">Try</a>[<a href="ir/Circuit.html" class="extype" name="firrtl.ir.Circuit">Circuit</a>]</span>
       </span>
       
       <p class="shortcomment cmt">Get the Circuit from the compile options</p><div class="fullcomment"><div class="comment cmt"><p>Get the Circuit from the compile options</p><p>Handles the myriad of ways it can be specified
@@ -1176,7 +1176,7 @@ for example, like strings passed to main()
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.4/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
@@ -1195,7 +1195,7 @@ for example, like strings passed to main()
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.4/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
@@ -1211,7 +1211,7 @@ for example, like strings passed to main()
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">main</span><span class="params">(<span name="args">args: <a href="http://www.scala-lang.org/api/2.12.4/scala/Array.html#scala.Array" class="extype" name="scala.Array">Array</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.4/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">main</span><span class="params">(<span name="args">args: <a href="http://www.scala-lang.org/api/2.12.6/scala/Array.html#scala.Array" class="extype" name="scala.Array">Array</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       
@@ -1227,7 +1227,7 @@ for example, like strings passed to main()
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.4/scala/collection/immutable/List.html#scala.AnyRef" class="extype" name="scala.collection.immutable.List">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.4/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -1243,7 +1243,7 @@ for example, like strings passed to main()
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.4/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1262,7 +1262,7 @@ for example, like strings passed to main()
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.4/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1313,7 +1313,7 @@ for example, like strings passed to main()
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.4/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1335,7 +1335,7 @@ for example, like strings passed to main()
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.4/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.12.4/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.4/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1357,7 +1357,7 @@ for example, like strings passed to main()
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.4/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.4/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1389,7 +1389,7 @@ for example, like strings passed to main()
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name deprecated" title="Deprecated: (Since version 1.1) Use side-effect free getAnnotation instead">loadAnnotations</span><span class="params">(<span name="optionsManager">optionsManager: <a href="ExecutionOptionsManager.html" class="extype" name="firrtl.ExecutionOptionsManager">ExecutionOptionsManager</a> with <a href="HasFirrtlOptions.html" class="extype" name="firrtl.HasFirrtlOptions">HasFirrtlOptions</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.4/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name deprecated" title="Deprecated: (Since version 1.1) Use side-effect free getAnnotation instead">loadAnnotations</span><span class="params">(<span name="optionsManager">optionsManager: <a href="ExecutionOptionsManager.html" class="extype" name="firrtl.ExecutionOptionsManager">ExecutionOptionsManager</a> with <a href="HasFirrtlOptions.html" class="extype" name="firrtl.HasFirrtlOptions">HasFirrtlOptions</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <p class="shortcomment cmt">Load annotation file based on options</p><div class="fullcomment"><div class="comment cmt"><p>Load annotation file based on options</p></div><dl class="paramcmts block"><dt class="param">optionsManager</dt><dd class="cmt"><p>use optionsManager config to load annotation file if it exists
@@ -1403,9 +1403,9 @@ for example, like strings passed to main()
 
         <div id="inheritedMembers">
         <div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.4/scala/collection/immutable/List.html#scala.AnyRef" class="extype" name="scala.collection.immutable.List">AnyRef</a></h3>
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.4/scala/collection/immutable/List.html#scala.Any" class="extype" name="scala.collection.immutable.List">Any</a></h3>
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
             </div>
         
         </div>
