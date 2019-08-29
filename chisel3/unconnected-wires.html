@@ -20,8 +20,8 @@ Unless a signal is driven by hardware or connected to a <code class="highlighter
 <h3 id="api">API</h3>
 
 <p>Output signals may be connected to DontCare, generating a <code class="highlighter-rouge">is invalid</code> when the corresponding firrtl is emitted.</p>
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">io</span><span class="o">.</span><span class="py">out</span><span class="o">.</span><span class="py">debug</span> <span class="o">:=</span> <span class="nv">true</span><span class="o">.</span><span class="py">B</span>
-<span class="nv">io</span><span class="o">.</span><span class="py">out</span><span class="o">.</span><span class="py">debugOption</span> <span class="o">:=</span> <span class="nc">DontCare</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">io</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">debug</span> <span class="o">:=</span> <span class="kc">true</span><span class="o">.</span><span class="n">B</span>
+<span class="n">io</span><span class="o">.</span><span class="n">out</span><span class="o">.</span><span class="n">debugOption</span> <span class="o">:=</span> <span class="nc">DontCare</span>
 </code></pre></div></div>
 <p>This indicates that the signal <code class="highlighter-rouge">io.out.debugOption</code> is intentionally not driven and firrtl should not issue a “not fully initialized”
 error for this signal.</p>
@@ -29,22 +29,22 @@ error for this signal.</p>
 <p>This can be applied to aggregates as well as individual signals:</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">{</span>
   <span class="o">...</span>
-  <span class="k">val</span> <span class="nv">nElements</span> <span class="k">=</span> <span class="mi">5</span>
-  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
-    <span class="k">val</span> <span class="nv">outs</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">Vec</span><span class="o">(</span><span class="n">nElements</span><span class="o">,</span> <span class="nc">Bool</span><span class="o">()))</span>
+  <span class="k">val</span> <span class="n">nElements</span> <span class="k">=</span> <span class="mi">5</span>
+  <span class="k">val</span> <span class="n">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="n">outs</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">Vec</span><span class="o">(</span><span class="n">nElements</span><span class="o">,</span> <span class="nc">Bool</span><span class="o">()))</span>
   <span class="o">})</span>
-  <span class="nv">io</span><span class="o">.</span><span class="py">outs</span> <span class="o">&lt;&gt;</span> <span class="nc">DontCare</span>
+  <span class="n">io</span><span class="o">.</span><span class="n">outs</span> <span class="o">&lt;&gt;</span> <span class="nc">DontCare</span>
   <span class="o">...</span>
 <span class="o">}</span>
 
 <span class="k">class</span> <span class="nc">TrivialInterface</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="nv">in</span>  <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
-  <span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+  <span class="k">val</span> <span class="n">in</span>  <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+  <span class="k">val</span> <span class="n">out</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
 <span class="o">}</span>
 
 <span class="o">{</span>
   <span class="o">...</span>
-  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">TrivialInterface</span><span class="o">)</span>
+  <span class="k">val</span> <span class="n">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">TrivialInterface</span><span class="o">)</span>
   <span class="n">io</span> <span class="o">&lt;&gt;</span> <span class="nc">DontCare</span>
   <span class="o">...</span>
 <span class="o">}</span>
@@ -55,21 +55,21 @@ and <code class="highlighter-rouge">true</code> in <code class="highlighter-roug
 
 <p>You can selectively enable this for Chisel2 compatibility mode by providing your own explicit <code class="highlighter-rouge">compileOptions</code>,
 either for a group of Modules (via inheritance):</p>
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">abstract</span> <span class="k">class</span> <span class="nc">ExplicitInvalidateModule</span> <span class="k">extends</span> <span class="nc">Module</span><span class="o">()(</span><span class="nv">chisel3</span><span class="o">.</span><span class="py">core</span><span class="o">.</span><span class="py">ExplicitCompileOptions</span><span class="o">.</span><span class="py">NotStrict</span><span class="o">.</span><span class="py">copy</span><span class="o">(</span><span class="n">explicitInvalidate</span> <span class="k">=</span> <span class="kc">true</span><span class="o">))</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">abstract</span> <span class="k">class</span> <span class="nc">ExplicitInvalidateModule</span> <span class="k">extends</span> <span class="nc">Module</span><span class="o">()(</span><span class="n">chisel3</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="nc">ExplicitCompileOptions</span><span class="o">.</span><span class="nc">NotStrict</span><span class="o">.</span><span class="n">copy</span><span class="o">(</span><span class="n">explicitInvalidate</span> <span class="k">=</span> <span class="kc">true</span><span class="o">))</span>
 </code></pre></div></div>
 <p>or on a per-Module basis:</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">MyModule</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
-  <span class="k">override</span> <span class="k">val</span> <span class="nv">compileOptions</span> <span class="k">=</span> <span class="nv">chisel3</span><span class="o">.</span><span class="py">core</span><span class="o">.</span><span class="py">ExplicitCompileOptions</span><span class="o">.</span><span class="py">NotStrict</span><span class="o">.</span><span class="py">copy</span><span class="o">(</span><span class="n">explicitInvalidate</span> <span class="k">=</span> <span class="kc">true</span><span class="o">)</span>
+  <span class="k">override</span> <span class="k">val</span> <span class="n">compileOptions</span> <span class="k">=</span> <span class="n">chisel3</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="nc">ExplicitCompileOptions</span><span class="o">.</span><span class="nc">NotStrict</span><span class="o">.</span><span class="n">copy</span><span class="o">(</span><span class="n">explicitInvalidate</span> <span class="k">=</span> <span class="kc">true</span><span class="o">)</span>
   <span class="o">...</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
 <p>Or conversely, disable this stricter checking (which is now the default in pure chisel3):</p>
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">abstract</span> <span class="k">class</span> <span class="nc">ImplicitInvalidateModule</span> <span class="k">extends</span> <span class="nc">Module</span><span class="o">()(</span><span class="nv">chisel3</span><span class="o">.</span><span class="py">core</span><span class="o">.</span><span class="py">ExplicitCompileOptions</span><span class="o">.</span><span class="py">Strict</span><span class="o">.</span><span class="py">copy</span><span class="o">(</span><span class="n">explicitInvalidate</span> <span class="k">=</span> <span class="kc">false</span><span class="o">))</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">abstract</span> <span class="k">class</span> <span class="nc">ImplicitInvalidateModule</span> <span class="k">extends</span> <span class="nc">Module</span><span class="o">()(</span><span class="n">chisel3</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="nc">ExplicitCompileOptions</span><span class="o">.</span><span class="nc">Strict</span><span class="o">.</span><span class="n">copy</span><span class="o">(</span><span class="n">explicitInvalidate</span> <span class="k">=</span> <span class="kc">false</span><span class="o">))</span>
 </code></pre></div></div>
 <p>or on a per-Module basis:</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">MyModule</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
-  <span class="k">override</span> <span class="k">val</span> <span class="nv">compileOptions</span> <span class="k">=</span> <span class="nv">chisel3</span><span class="o">.</span><span class="py">core</span><span class="o">.</span><span class="py">ExplicitCompileOptions</span><span class="o">.</span><span class="py">Strict</span><span class="o">.</span><span class="py">copy</span><span class="o">(</span><span class="n">explicitInvalidate</span> <span class="k">=</span> <span class="kc">false</span><span class="o">)</span>
+  <span class="k">override</span> <span class="k">val</span> <span class="n">compileOptions</span> <span class="k">=</span> <span class="n">chisel3</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="nc">ExplicitCompileOptions</span><span class="o">.</span><span class="nc">Strict</span><span class="o">.</span><span class="n">copy</span><span class="o">(</span><span class="n">explicitInvalidate</span> <span class="k">=</span> <span class="kc">false</span><span class="o">)</span>
   <span class="o">...</span>
 <span class="o">}</span>
 </code></pre></div></div>
@@ -98,13 +98,13 @@ The last line of the group, indented and beginning with a <code class="highlight
 This example (from the <a href="https://github.com/ucb-bar/chisel-tutorial/blob/release/src/main/scala/examples/Router.scala">Router tutorial</a>)
 was produced when the output queue bits were not initialized.
 The old code was:</p>
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nv">io</span><span class="o">.</span><span class="py">outs</span><span class="o">.</span><span class="py">foreach</span> <span class="o">{</span> <span class="n">out</span> <span class="k">=&gt;</span> <span class="nv">out</span><span class="o">.</span><span class="py">noenq</span><span class="o">()</span> <span class="o">}</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">io</span><span class="o">.</span><span class="n">outs</span><span class="o">.</span><span class="n">foreach</span> <span class="o">{</span> <span class="n">out</span> <span class="k">=&gt;</span> <span class="n">out</span><span class="o">.</span><span class="n">noenq</span><span class="o">()</span> <span class="o">}</span>
 </code></pre></div></div>
 <p>which initialized the queue’s <code class="highlighter-rouge">valid</code> bit, but did not initialize the actual output values.
 The fix was:</p>
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nv">io</span><span class="o">.</span><span class="py">outs</span><span class="o">.</span><span class="py">foreach</span> <span class="o">{</span> <span class="n">out</span> <span class="k">=&gt;</span>
-    <span class="nv">out</span><span class="o">.</span><span class="py">bits</span> <span class="o">:=</span> <span class="mf">0.</span><span class="nv">U</span><span class="o">.</span><span class="py">asTypeOf</span><span class="o">(</span><span class="nv">out</span><span class="o">.</span><span class="py">bits</span><span class="o">)</span>
-    <span class="nv">out</span><span class="o">.</span><span class="py">noenq</span><span class="o">()</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="n">io</span><span class="o">.</span><span class="n">outs</span><span class="o">.</span><span class="n">foreach</span> <span class="o">{</span> <span class="n">out</span> <span class="k">=&gt;</span>
+    <span class="n">out</span><span class="o">.</span><span class="n">bits</span> <span class="o">:=</span> <span class="mf">0.</span><span class="n">U</span><span class="o">.</span><span class="n">asTypeOf</span><span class="o">(</span><span class="n">out</span><span class="o">.</span><span class="n">bits</span><span class="o">)</span>
+    <span class="n">out</span><span class="o">.</span><span class="n">noenq</span><span class="o">()</span>
   <span class="o">}</span>
 </code></pre></div></div>
 </section></div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/highlight/highlight.pack.js"></script><script>hljs.configure({languages:['scala','java','bash']});

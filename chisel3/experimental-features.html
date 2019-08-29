@@ -34,8 +34,8 @@ new ways of defining Modules</p>
 <p>Chisel 3.2 introduces an experimental mechanism for Bundle literals in #820, but this feature is largely incomplete and not ready for user code yet. The following is provided as documentation for library writers who want to take a stab at using this mechanism for their library’s bundles.</p>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">MyBundle</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="nv">a</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">)</span>
-  <span class="k">val</span> <span class="nv">b</span> <span class="k">=</span> <span class="nc">Bool</span><span class="o">()</span>
+  <span class="k">val</span> <span class="n">a</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">)</span>
+  <span class="k">val</span> <span class="n">b</span> <span class="k">=</span> <span class="nc">Bool</span><span class="o">()</span>
 
   <span class="c1">// Bundle literal constructor code, which will be auto-generated using macro annotations in
 </span>  <span class="c1">// the future.
@@ -43,20 +43,20 @@ new ways of defining Modules</p>
   <span class="k">import</span> <span class="nn">chisel3.internal.firrtl.</span><span class="o">{</span><span class="nc">ULit</span><span class="o">,</span> <span class="nc">Width</span><span class="o">}</span>
 
   <span class="c1">// Full bundle literal constructor
-</span>  <span class="k">def</span> <span class="nf">Lit</span><span class="o">(</span><span class="n">aVal</span><span class="k">:</span> <span class="kt">UInt</span><span class="o">,</span> <span class="n">bVal</span><span class="k">:</span> <span class="kt">Bool</span><span class="o">)</span><span class="k">:</span> <span class="kt">MyBundle</span> <span class="o">=</span> <span class="o">{</span>
-    <span class="k">val</span> <span class="nv">clone</span> <span class="k">=</span> <span class="n">cloneType</span>
-    <span class="nv">clone</span><span class="o">.</span><span class="py">selfBind</span><span class="o">(</span><span class="nc">BundleLitBinding</span><span class="o">(</span><span class="nc">Map</span><span class="o">(</span>
-      <span class="nv">clone</span><span class="o">.</span><span class="py">a</span> <span class="o">-&gt;</span> <span class="nf">litArgOfBits</span><span class="o">(</span><span class="n">aVal</span><span class="o">),</span>
-      <span class="nv">clone</span><span class="o">.</span><span class="py">b</span> <span class="o">-&gt;</span> <span class="nf">litArgOfBits</span><span class="o">(</span><span class="n">bVal</span><span class="o">)</span>
+</span>  <span class="k">def</span> <span class="nc">Lit</span><span class="o">(</span><span class="n">aVal</span><span class="k">:</span> <span class="kt">UInt</span><span class="o">,</span> <span class="n">bVal</span><span class="k">:</span> <span class="kt">Bool</span><span class="o">)</span><span class="k">:</span> <span class="kt">MyBundle</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="n">clone</span> <span class="k">=</span> <span class="n">cloneType</span>
+    <span class="n">clone</span><span class="o">.</span><span class="n">selfBind</span><span class="o">(</span><span class="nc">BundleLitBinding</span><span class="o">(</span><span class="nc">Map</span><span class="o">(</span>
+      <span class="n">clone</span><span class="o">.</span><span class="n">a</span> <span class="o">-&gt;</span> <span class="n">litArgOfBits</span><span class="o">(</span><span class="n">aVal</span><span class="o">),</span>
+      <span class="n">clone</span><span class="o">.</span><span class="n">b</span> <span class="o">-&gt;</span> <span class="n">litArgOfBits</span><span class="o">(</span><span class="n">bVal</span><span class="o">)</span>
     <span class="o">)))</span>
     <span class="n">clone</span>
   <span class="o">}</span>
 
   <span class="c1">// Partial bundle literal constructor
-</span>  <span class="k">def</span> <span class="nf">Lit</span><span class="o">(</span><span class="n">aVal</span><span class="k">:</span> <span class="kt">UInt</span><span class="o">)</span><span class="k">:</span> <span class="kt">MyBundle</span> <span class="o">=</span> <span class="o">{</span>
-    <span class="k">val</span> <span class="nv">clone</span> <span class="k">=</span> <span class="n">cloneType</span>
-    <span class="nv">clone</span><span class="o">.</span><span class="py">selfBind</span><span class="o">(</span><span class="nc">BundleLitBinding</span><span class="o">(</span><span class="nc">Map</span><span class="o">(</span>
-      <span class="nv">clone</span><span class="o">.</span><span class="py">a</span> <span class="o">-&gt;</span> <span class="nf">litArgOfBits</span><span class="o">(</span><span class="n">aVal</span><span class="o">)</span>
+</span>  <span class="k">def</span> <span class="nc">Lit</span><span class="o">(</span><span class="n">aVal</span><span class="k">:</span> <span class="kt">UInt</span><span class="o">)</span><span class="k">:</span> <span class="kt">MyBundle</span> <span class="o">=</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="n">clone</span> <span class="k">=</span> <span class="n">cloneType</span>
+    <span class="n">clone</span><span class="o">.</span><span class="n">selfBind</span><span class="o">(</span><span class="nc">BundleLitBinding</span><span class="o">(</span><span class="nc">Map</span><span class="o">(</span>
+      <span class="n">clone</span><span class="o">.</span><span class="n">a</span> <span class="o">-&gt;</span> <span class="n">litArgOfBits</span><span class="o">(</span><span class="n">aVal</span><span class="o">)</span>
     <span class="o">)))</span>
     <span class="n">clone</span>
   <span class="o">}</span>
@@ -65,7 +65,7 @@ new ways of defining Modules</p>
 
 <p>Example usage:</p>
 
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">outsideBundleLit</span> <span class="k">=</span> <span class="o">(</span><span class="k">new</span> <span class="nc">MyBundle</span><span class="o">).</span><span class="py">Lit</span><span class="o">(</span><span class="mf">42.</span><span class="n">U</span><span class="o">,</span> <span class="nv">true</span><span class="o">.</span><span class="py">B</span><span class="o">)</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="n">outsideBundleLit</span> <span class="k">=</span> <span class="o">(</span><span class="k">new</span> <span class="nc">MyBundle</span><span class="o">).</span><span class="nc">Lit</span><span class="o">(</span><span class="mf">42.</span><span class="n">U</span><span class="o">,</span> <span class="kc">true</span><span class="o">.</span><span class="n">B</span><span class="o">)</span>
 </code></pre></div></div>
 
 <h3 id="interval-type">Interval Type</h3>
