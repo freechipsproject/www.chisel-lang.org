@@ -87,22 +87,14 @@ the ```Mux4``` interface.
 
 ### RawModule
 
-**This is an experimental feature and is subject to API change**
-
 *Module* are used to connect components inside a design. But once we
 want to synthesize for the real world (FPGA, ASIC, ...) some extra
 features are required like io specific naming, reset polarity, clock
 assignement, ...
 
-For this, a specific module named *RawModule* should be used. With raw
-module, there is no implicit signals. All signal like clock and reset should be
+For this, a specific module named *RawModule* should be used. With RawModule
+there is no implicit signals. All signals like clock and reset should be
 given in IO argument.
-
-As it is an experimental feature, specific module should be imported :
-
-```tut:silent
-import chisel3.experimental._
-```
 
 Then we can use it in place of *Module* usage :
 ```tut:silent
