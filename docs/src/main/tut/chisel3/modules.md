@@ -102,11 +102,6 @@ clock and reset like `Module`.
 
 ### `RawModule`
 
-`Module` are used to connect components inside a design. But once we
-want to synthesize for the real world (FPGA, ASIC, ...) some extra
-features are required like io specific naming, reset polarity, clock
-assignement, ...
-
 A `RawModule` is a module that allows you to define as much `IO` as needed
 (like `MultiIOModule`) but **does not provide an implicit clock and reset.**
 This can be useful when interfacing a Chisel module with a design that expects
