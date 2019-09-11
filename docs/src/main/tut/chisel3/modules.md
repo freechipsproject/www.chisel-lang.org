@@ -137,7 +137,7 @@ class FooWrapper extends RawModule {
 ```
 
 In the example above, the `RawModule` is used to change the reset polarity
-of module SlaveSpi. Indeed, the reset is active high by default in chisel
+of module `SlaveSpi`. Indeed, the reset is active high by default in Chisel
 modules, then using withClockAndReset(clock, !rstn) we can use an active low
 reset in entire design.
 
