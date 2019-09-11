@@ -85,67 +85,59 @@ the Scala ```new``` keyword to create a
 new object.  We then wire them up to one another and to the ports of
 the ```Mux4``` interface.
 
-### RawModule
+Note: Chisel `Module`s have an implicit clock (called `clock`) and
+an implicit reset (called `reset`). For different behavior, Chisel
+provides both `MultiIOModule` and `RawModule`.
 
-*Module* are used to connect components inside a design. But once we
+### `MultiIOModule`
+
+A `MultiIOModule` allows you to define as many different `IO` as needed
+and does not require you to implement an abstract member `io`.
+This can be useful when programmatically adding `IO` or adding `IO` via inheritance.
+An artifact of this is that Verilog generated from a `MultiIOModule` will
+*not* have the `io_` prefix. `MultiIOModule`s still have an implicit
+clock and reset like `Module`.
+
+<!-- TODO: Some example -->
+
+### `RawModule`
+
+`Module` are used to connect components inside a design. But once we
 want to synthesize for the real world (FPGA, ASIC, ...) some extra
 features are required like io specific naming, reset polarity, clock
 assignement, ...
 
-For this, a specific module named *RawModule* should be used. With RawModule
-there is no implicit signals. All signals like clock and reset should be
-given in IO argument.
+A `RawModule` is a module that allows you to define as much `IO` as needed
+(like `MultiIOModule`) but **does not provide an implicit clock and reset.**
+This can be useful when interfacing a Chisel module with a design that expects
+a specific naming convention for clock or reset.
 
 Then we can use it in place of *Module* usage :
-```tut:silent
-class SlaveSpi extends Module {
+```scala
+class Foo extends Module {
   val io = IO(new Bundle{
-    val mosi = Input(Bool())
-    val miso = Output(Bool())
-    val sclk = Input(Bool())
-    val csn = Input(Bool())
-  })
-[...]
-}
-
-class TopSlaveSpi extends RawModule {
-  val clock = IO(Input(Clock()))
-  val rstn  = IO(Input(Bool()))
-  val mosi = IO(Input(Bool()))
-  val miso = IO(Output(Bool()))
-  val sclk = IO(Input(Bool()))
-  val csn = IO(Input(Bool()))
-
-  withClockAndReset(clock, !rstn) {
-    val slavespi = Module(new SlaveSpi)
-    miso := slavespi.io.miso
-    slavespi.io.mosi := mosi
-    slavespi.io.sclk := sclk
-    slavespi.io.csn  := csn
+    val a = Input(Bool())
+    val b = Output(Bool())
   }
+  io.b := !io.a
+}
+class FooWrapper extends RawModule {
+  val a_i  = IO(Input(Bool()))
+  val b_o  = IO(Output(Bool()))
+  val clk  = Input(Clock())
+  val rstn = Input(Bool())
+
+  val foo = withClockAndReset(clk, !rstn){ Module(new Foo) }
+
+  foo.io.a := a_i
+  b_o := foo.io.b
 }
 ```
 
-In the example above, the RawModule is used to change the reset polarity
+In the example above, the `RawModule` is used to change the reset polarity
 of module SlaveSpi. Indeed, the reset is active high by default in chisel
 modules, then using withClockAndReset(clock, !rstn) we can use an active low
 reset in entire design.
 
-The clock is just wired as it, but if needed, RawModule can be used in
+The clock is just wired as it, but if needed, `RawModule` can be used in
 conjuction with BlackBox to connect a differential clock input for example.
-
-With multi-lines IO() declaration we also rename signal in emitted verilog.
-Instead of *io_* named signals we will have a same names has val written:
-
-```tut:silent
-[...]
-module TopSlaveSpi( // @[:@70.2]
-  input   clock, // @[:@71.4]
-  input   rstn, // @[:@72.4]
-  input   mosi, // @[:@73.4]
-  output  miso, // @[:@74.4]
-  input   sclk, // @[:@75.4]
-  input   csn // @[:@76.4]
-);
-[...]
-```
