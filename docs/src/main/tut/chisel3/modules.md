@@ -113,7 +113,7 @@ This can be useful when interfacing a Chisel module with a design that expects
 a specific naming convention for clock or reset.
 
 Then we can use it in place of *Module* usage :
-```scala
+```tut:silent
 class Foo extends Module {
   val io = IO(new Bundle{
     val a = Input(Bool())
