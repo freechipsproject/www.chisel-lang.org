@@ -123,6 +123,7 @@ class Foo extends Module {
   })
   io.b := !io.a
 }
+
 class FooWrapper extends RawModule {
   val a_i  = IO(Input(Bool()))
   val b_o  = IO(Output(Bool()))
