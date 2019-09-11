@@ -90,6 +90,60 @@ children modules, using the <code class="highlighter-rouge">Module</code> constr
 the Scala <code class="highlighter-rouge">new</code> keyword to create a
 new object.  We then wire them up to one another and to the ports of
 the <code class="highlighter-rouge">Mux4</code> interface.</p>
+
+<p>Note: Chisel <code class="highlighter-rouge">Module</code>s have an implicit clock (called <code class="highlighter-rouge">clock</code>) and
+an implicit reset (called <code class="highlighter-rouge">reset</code>). For different behavior, Chisel
+provides both <code class="highlighter-rouge">MultiIOModule</code> and <code class="highlighter-rouge">RawModule</code>.</p>
+
+<h3 id="multiiomodule"><code class="highlighter-rouge">MultiIOModule</code></h3>
+
+<p>A <code class="highlighter-rouge">MultiIOModule</code> allows you to define as many different <code class="highlighter-rouge">IO</code> as needed
+and does not require you to implement an abstract member <code class="highlighter-rouge">io</code>.
+This can be useful when programmatically adding <code class="highlighter-rouge">IO</code> or adding <code class="highlighter-rouge">IO</code> via inheritance.
+An artifact of this is that Verilog generated from a <code class="highlighter-rouge">MultiIOModule</code> will
+<em>not</em> have the <code class="highlighter-rouge">io_</code> prefix. <code class="highlighter-rouge">MultiIOModule</code>s still have an implicit
+clock and reset like <code class="highlighter-rouge">Module</code>.</p>
+
+<!-- TODO: Some example -->
+
+<h3 id="rawmodule"><code class="highlighter-rouge">RawModule</code></h3>
+
+<p>A <code class="highlighter-rouge">RawModule</code> is a module that allows you to define as much <code class="highlighter-rouge">IO</code> as needed
+(like <code class="highlighter-rouge">MultiIOModule</code>) but <strong>does not provide an implicit clock and reset.</strong>
+This can be useful when interfacing a Chisel module with a design that expects
+a specific naming convention for clock or reset.</p>
+
+<p>Then we can use it in place of <em>Module</em> usage :</p>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3.experimental.</span><span class="o">{</span><span class="nc">RawModule</span><span class="o">,</span> <span class="n">withClockAndReset</span><span class="o">}</span>
+
+<span class="k">class</span> <span class="nc">Foo</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span><span class="o">{</span>
+    <span class="k">val</span> <span class="nv">a</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+    <span class="k">val</span> <span class="nv">b</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+  <span class="o">})</span>
+  <span class="nv">io</span><span class="o">.</span><span class="py">b</span> <span class="o">:=</span> <span class="o">!</span><span class="nv">io</span><span class="o">.</span><span class="py">a</span>
+<span class="o">}</span>
+
+<span class="k">class</span> <span class="nc">FooWrapper</span> <span class="k">extends</span> <span class="nc">RawModule</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">a_i</span>  <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">()))</span>
+  <span class="k">val</span> <span class="nv">b_o</span>  <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="nc">Bool</span><span class="o">()))</span>
+  <span class="k">val</span> <span class="nv">clk</span>  <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Clock</span><span class="o">())</span>
+  <span class="k">val</span> <span class="nv">rstn</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+
+  <span class="k">val</span> <span class="nv">foo</span> <span class="k">=</span> <span class="nf">withClockAndReset</span><span class="o">(</span><span class="n">clk</span><span class="o">,</span> <span class="o">!</span><span class="n">rstn</span><span class="o">){</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">Foo</span><span class="o">)</span> <span class="o">}</span>
+
+  <span class="nv">foo</span><span class="o">.</span><span class="py">io</span><span class="o">.</span><span class="py">a</span> <span class="o">:=</span> <span class="n">a_i</span>
+  <span class="n">b_o</span> <span class="o">:=</span> <span class="nv">foo</span><span class="o">.</span><span class="py">io</span><span class="o">.</span><span class="py">b</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>In the example above, the <code class="highlighter-rouge">RawModule</code> is used to change the reset polarity
+of module <code class="highlighter-rouge">SlaveSpi</code>. Indeed, the reset is active high by default in Chisel
+modules, then using <code class="highlighter-rouge">withClockAndReset(clock, !rstn)</code> we can use an active low
+reset in entire design.</p>
+
+<p>The clock is just wired as it, but if needed, <code class="highlighter-rouge">RawModule</code> can be used in
+conjunction with <code class="highlighter-rouge">BlackBox</code> to connect a differential clock input for example.</p>
 </section></div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/highlight/highlight.pack.js"></script><script>hljs.configure({languages:['scala','java','bash']});
 hljs.initHighlighting();
               </script><script>((window.gitter = {}).chat = {}).options = {
