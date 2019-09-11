@@ -120,7 +120,7 @@ class Foo extends Module {
   val io = IO(new Bundle{
     val a = Input(Bool())
     val b = Output(Bool())
-  }
+  })
   io.b := !io.a
 }
 class FooWrapper extends RawModule {
