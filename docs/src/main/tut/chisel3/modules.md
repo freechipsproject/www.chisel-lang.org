@@ -114,6 +114,8 @@ a specific naming convention for clock or reset.
 
 Then we can use it in place of *Module* usage :
 ```tut:silent
+import chisel3.experimental.{RawModule, withClockAndReset}
+
 class Foo extends Module {
   val io = IO(new Bundle{
     val a = Input(Bool())
