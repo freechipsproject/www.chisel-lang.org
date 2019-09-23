@@ -83,6 +83,9 @@ Caution: bulk connections should only be used with **directioned elements** (lik
 ## The standard ready-valid interface (ReadyValidIO / Decoupled)
 
 Chisel provides a standard interface for [ready-valid interfaces](http://inst.eecs.berkeley.edu/~cs150/Documents/Interfaces.pdf).
+The ready-valid interface uses `ready` and `valid` to handshake
+data transfer. When both signals are asserted the data transfer takes
+place.
 
 Usually, we use the utility function [`Decoupled()`](https://chisel.eecs.berkeley.edu/api/latest/chisel3/util/Decoupled$.html) to turn any type into a ready-valid interface rather than directly using [ReadyValidIO](http://chisel.eecs.berkeley.edu/api/latest/chisel3/util/ReadyValidIO.html).
 
@@ -129,3 +132,14 @@ class ConsumingData extends Module {
   // do something with io.readyValid.bits
 }
 ```
+
+Decoupled is marker interface for a ready-valid interface to indicate
+that there are no requirements placed on the signaling of `ready` or `valid`.
+That means `ready` and `valid` can also be de-asserted without a data transfer.
+
+Irrevocable is marker interface for a ready-valid interface to indicate
+that the value of 'bits' after a cycle where 'valid' is high and 'ready' is low
+are not changed. E.g., `valid` stays asserted. Also the consumer shall
+keep `ready` asserted after a cycle where `read` was high and `valid` was low.
+Note that this constraint cannot be enforced by the interface.
+
