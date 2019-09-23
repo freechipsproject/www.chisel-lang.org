@@ -83,9 +83,14 @@ Caution: bulk connections should only be used with **directioned elements** (lik
 ## The standard ready-valid interface (ReadyValidIO / Decoupled)
 
 Chisel provides a standard interface for [ready-valid interfaces](http://inst.eecs.berkeley.edu/~cs150/Documents/Interfaces.pdf).
-The ready-valid interface uses `ready` and `valid` to handshake
-data transfer. When both signals are asserted the data transfer takes
-place.
+A ready-valid interface consists of a `ready` signal, a `valid` signal,
+and some data stored in `bits`.
+The `ready` bit indicates that a consumer is *ready* to consume data.
+The `valid` bit indicates that a produced has *valid* data on `bits`.
+When both `ready` and `valid` are asserted, a data transfer from the
+producer to the consumer takes place.
+A convenience method `fire` is provided that is asserted if both
+`ready` and `valid` are asserted.
 
 Usually, we use the utility function [`Decoupled()`](https://chisel.eecs.berkeley.edu/api/latest/chisel3/util/Decoupled$.html) to turn any type into a ready-valid interface rather than directly using [ReadyValidIO](http://chisel.eecs.berkeley.edu/api/latest/chisel3/util/ReadyValidIO.html).
 
@@ -133,13 +138,17 @@ class ConsumingData extends Module {
 }
 ```
 
-Decoupled is marker interface for a ready-valid interface to indicate
-that there are no requirements placed on the signaling of `ready` or `valid`.
+`DecoupledIO` is a ready-valid interface with the *convention*
+that there are no guarantees placed on de-asserting `ready` or `valid` or
+on the stability of `bits` after a clock cycle without data transfer.
 That means `ready` and `valid` can also be de-asserted without a data transfer.
+Specifically, `ready` and `valid` may be deasserted and `bits` may change
+after a clock cycle without a data transfer.
 
-Irrevocable is marker interface for a ready-valid interface to indicate
-that the value of 'bits' after a cycle where 'valid' is high and 'ready' is low
-are not changed. E.g., `valid` stays asserted. Also the consumer shall
-keep `ready` asserted after a cycle where `read` was high and `valid` was low.
-Note that this constraint cannot be enforced by the interface.
+`IrrevocableIO` is a ready-valid interface with the *convention*
+that the value of `bits` will not change while `valid` is asserted and `ready` is deasserted.
+Also the consumer shall keep `ready` asserted after a cycle where `read`
+was high and `valid` was low.
+Note that the *irrevocable* constraint *is only a convention* and cannot
+be enforced by the interface.
 
