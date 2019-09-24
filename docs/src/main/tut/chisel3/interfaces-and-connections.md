@@ -150,5 +150,6 @@ that the value of `bits` will not change while `valid` is asserted and `ready` i
 Also the consumer shall keep `ready` asserted after a cycle where `read`
 was high and `valid` was low.
 Note that the *irrevocable* constraint *is only a convention* and cannot
-be enforced by the interface.
+be enforced by the interface. 
+This convention is *not* enforced by the Chisel compiler.
 
