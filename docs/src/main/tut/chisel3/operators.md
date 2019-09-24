@@ -51,3 +51,14 @@ Chisel defines a set of hardware operators:
 We have to use triple equals```===``` for equality and ```=/=```
 for inequality to allow the
 native Scala equals operator to remain usable.
+
+The Chisel operator precedence is determined by the evaluation order of the circuit,
+which follows the [Scala operator precedence](https://docs.scala-lang.org/tour/operators.html).
+If in doubt, it is always a good praxis to use parentheses.
+
+> The operator precedence in
+Chisel is a side effect of the hardware elaboration when the tree of hardware nodes
+is created by executing the Scala operators. The Scala operator precedence is similar but
+not identical to Java/C. Verilog has the same operator precedence as C, but VHDL
+has a different one. Verilog has precedence ordering for logic operations, but in VHDL
+those operators have the same precedence and are evaluated from left to right.
