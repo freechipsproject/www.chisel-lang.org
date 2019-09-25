@@ -12,206 +12,154 @@ ga('send', 'pageview');
       </script></head><body><header id="site-header"><div class="navbar-wrapper"><div class="container"><div class="row"><div class="col-xs-6"><a href="/" class="brand"><div class="icon-wrapper"><span>Chisel/FIRRTL</span></div></a></div><div class="col-xs-6"><nav class="text-right"><ul class=""><li><a href="https://github.com/freechipsproject/chisel3"><i class="fa fa-github"></i><span class="hidden-xs">GitHub</span></a></li><li><a href="api/latest/"><i class="fa fa-file-text"></i><span class="hidden-xs">API Documentation</span></a></li></ul></nav></div></div></div></div><div class="jumbotron"><div class="container"><h1 class="text-center">Chisel/FIRRTL
 Hardware Compiler Framework</h1><h2></h2><p class="text-center"><a href="https://github.com/freechipsproject/chisel3" class="btn btn-outline-inverse">View on GitHub</a></p></div></div><div><ul class="horizontalNav">                                                                   <li><a class="" href="/chisel3/">Chisel3</a></li>  <li><a class="" href="/chisel-testers/">Testers</a></li>  <li><a class="" href="/firrtl/">FIRRTL</a></li>  <li><a class="" href="/treadle/">Treadle</a></li>  <li><a class="" href="/diagrammer/">Diagrammer</a></li>  <li><a class="" href="/community.html">Community</a></li> </ul></div></header><main id="site-main"><section class="use"><div class="container"><div id="content"><p><img src="https://raw.githubusercontent.com/freechipsproject/chisel3/master/doc/images/chisel_logo.svg?sanitize=true" alt="Chisel 3" /></p>
 
-<p>#</p>
+<hr />
 
-<p><a href="https://gitter.im/freechipsproject/chisel3?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/freechipsproject/chisel3.svg" alt="Join the chat at https://gitter.im/freechipsproject/chisel3" /></a></p>
+<p><a href="https://gitter.im/freechipsproject/chisel3?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/freechipsproject/chisel3.svg" alt="Join the chat at https://gitter.im/freechipsproject/chisel3" /></a>
+<a href="https://circleci.com/gh/freechipsproject/chisel3/tree/master"><img src="https://circleci.com/gh/freechipsproject/chisel3/tree/master.svg?style=shield" alt="CircleCI" /></a>
+<a href="https://github.com/freechipsproject/chisel3/releases/latest"><img src="https://img.shields.io/github/tag/freechipsproject/chisel3.svg?label=release" alt="GitHub tag (latest SemVer)" /></a></p>
 
-<p>Chisel is a new hardware construction language to support advanced hardware design and circuit generation.
-The latest iteration of <a href="https://chisel.eecs.berkeley.edu/">Chisel</a> is Chisel3,
-which uses Firrtl as an intermediate hardware representation language.</p>
+<p><a href="https://www.chisel-lang.org"><strong>Chisel</strong></a> is a hardware design language that facilitates <strong>advanced circuit generation and design reuse for both ASIC and FPGA digital logic designs</strong>.
+Chisel adds hardware construction primitives to the <a href="https://www.scala-lang.org">Scala</a> programming language, providing designers with the power of a modern programming language to write complex, parameterizable circuit generators that produce synthesizable Verilog.
+This generator methodology enables the creation of re-usable components and libraries, such as the FIFO queue and arbiters in the <a href="https://www.chisel-lang.org/api/latest/chisel3/util/index.html">Chisel Standard Library</a>, raising the level of abstraction in design while retaining fine-grained control.</p>
 
-<p>Chisel3 releases are available as jars on Sonatype/Nexus/Maven and as tagged branches on the <a href="https://github.com/freechipsproject/chisel3/releases">releases tab</a> of this repository.
-The latest release is 3.1.3.</p>
+<p>For more information on the benefits of Chisel see: <a href="https://stackoverflow.com/questions/53007782/what-benefits-does-chisel-offer-over-classic-hardware-description-languages">“What benefits does Chisel offer over classic Hardware Description Languages?”</a></p>
 
-<p>Please visit the <a href="https://github.com/ucb-bar/chisel3/wiki">Wiki</a> for documentation!</p>
+<p>Chisel is powered by <a href="https://github.com/freechipsproject/firrtl">FIRRTL (Flexible Intermediate Representation for RTL)</a>, a hardware compiler framework that performs optimizations of Chisel-generated circuits and supports custom user-defined circuit transformations.</p>
 
-<p>The ScalaDoc for Chisel3 is available at the <a href="https://chisel.eecs.berkeley.edu/api/latest/index.html">API tab on the Chisel web site.</a></p>
+<h2 id="what-does-chisel-code-look-like">What does Chisel code look like?</h2>
 
-<h2 id="overview">Overview</h2>
-<p>The standard Chisel3 compilation pipeline looks like:</p>
-<ul>
-  <li>Chisel3 (Scala) to Firrtl (this is your “Chisel RTL”).</li>
-  <li><a href="https://github.com/ucb-bar/firrtl">Firrtl</a> to Verilog (which can then be passed into FPGA or ASIC tools).</li>
-  <li>Verilog to C++ for simulation and testing using <a href="http://www.veripool.org/wiki/verilator">Verilator</a>.</li>
-</ul>
+<p>Consider an FIR filter that implements a convolution operation, as depicted in this block diagram:</p>
 
-<h2 id="installation">Installation</h2>
-<p>This will walk you through installing Chisel and its dependencies:</p>
-<ul>
-  <li><a href="http://www.scala-sbt.org/">sbt</a>, which is the preferred Scala build system and what Chisel uses.</li>
-  <li><a href="https://github.com/ucb-bar/firrtl">Firrtl</a>, which compiles Chisel’s IR down to Verilog.
-If you’re building from a release branch of Chisel3, separate installation of Firrtl is no longer required: the required jar will be automatically downloaded by sbt.
-If you’re building chisel3 from the master branch, you’ll need to follow the directions on the <a href="https://github.com/ucb-bar/firrtl">Firrtl repository</a> to publish a local copy of the required jar.</li>
-  <li><a href="http://www.veripool.org/wiki/verilator">Verilator</a>, which compiles Verilog down to C++ for simulation.
-The included unit testing infrastructure uses this.</li>
-</ul>
+<p><img src="https://raw.githubusercontent.com/freechipsproject/chisel3/master/doc/images/fir_filter.svg?sanitize=true" width="512" /></p>
 
-<h3 id="ubuntu-like-linux">(Ubuntu-like) Linux</h3>
+<p>While Chisel provides similar base primitives as synthesizable Verilog, and <em>could</em> be used as such:</p>
 
-<ol>
-  <li>Install Java
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo apt-get install default-jdk
-</code></pre></div>    </div>
-  </li>
-  <li><a href="http://www.scala-sbt.org/release/docs/Installing-sbt-on-Linux.html">Install sbt</a>,
- which isn’t available by default in the system package manager:
-    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> echo "deb https://dl.bintray.com/sbt/debian /" | sudo tee -a /etc/apt/sources.list.d/sbt.list
- sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 642AC823
- sudo apt-get update
- sudo apt-get install sbt
-</code></pre></div>    </div>
-  </li>
-  <li>
-    <p>Install Verilator.
- We currently recommend Verilator version 3.922.
- Follow these instructions to compile it from source.</p>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 3-point moving average implemented in the style of a FIR filter
+</span><span class="k">class</span> <span class="nc">MovingAverage3</span><span class="o">(</span><span class="n">bitWidth</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="nv">in</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="nv">bitWidth</span><span class="o">.</span><span class="py">W</span><span class="o">))</span>
+    <span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="nv">bitWidth</span><span class="o">.</span><span class="py">W</span><span class="o">))</span>
+  <span class="o">})</span>
 
-    <ol>
-      <li>Install prerequisites (if not installed already):
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> sudo apt-get install git make autoconf g++ flex bison
-</code></pre></div>        </div>
-      </li>
-      <li>Clone the Verilator repository:
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git clone http://git.veripool.org/git/verilator
-</code></pre></div>        </div>
-      </li>
-      <li>In the Verilator repository directory, check out a known good version:
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> git pull
- git checkout verilator_3_922
-</code></pre></div>        </div>
-      </li>
-      <li>In the Verilator repository directory, build and install:
-        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> unset VERILATOR_ROOT # For bash, unsetenv for csh
- autoconf # Create ./configure script
- ./configure
- make
- sudo make install
-</code></pre></div>        </div>
-      </li>
-    </ol>
-  </li>
-</ol>
+  <span class="k">val</span> <span class="nv">z1</span> <span class="k">=</span> <span class="nc">RegNext</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">in</span><span class="o">)</span>
+  <span class="k">val</span> <span class="nv">z2</span> <span class="k">=</span> <span class="nc">RegNext</span><span class="o">(</span><span class="n">z1</span><span class="o">)</span>
 
-<h3 id="arch-linux">Arch Linux</h3>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>yaourt -S firrtl-git verilator sbt
+  <span class="nv">io</span><span class="o">.</span><span class="py">out</span> <span class="o">:=</span> <span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">in</span> <span class="o">*</span> <span class="mf">1.</span><span class="n">U</span><span class="o">)</span> <span class="o">+</span> <span class="o">(</span><span class="n">z1</span> <span class="o">*</span> <span class="mf">1.</span><span class="n">U</span><span class="o">)</span> <span class="o">+</span> <span class="o">(</span><span class="n">z2</span> <span class="o">*</span> <span class="mf">1.</span><span class="n">U</span><span class="o">)</span>
+<span class="o">}</span>
 </code></pre></div></div>
 
-<h3 id="windows">Windows</h3>
+<p>the power of Chisel comes from the ability to create generators, such as n FIR filter that is defined by the list of coefficients:</p>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Generalized FIR filter parameterized by the convolution coefficients
+</span><span class="k">class</span> <span class="nc">FirFilter</span><span class="o">(</span><span class="n">bitWidth</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">coeffs</span><span class="k">:</span> <span class="kt">Seq</span><span class="o">[</span><span class="kt">UInt</span><span class="o">])</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="nv">in</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="nv">bitWidth</span><span class="o">.</span><span class="py">W</span><span class="o">))</span>
+    <span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="nv">bitWidth</span><span class="o">.</span><span class="py">W</span><span class="o">))</span>
+  <span class="o">})</span>
+  <span class="c1">// Create the serial-in, parallel-out shift register
+</span>  <span class="k">val</span> <span class="nv">zs</span> <span class="k">=</span> <span class="nc">Reg</span><span class="o">(</span><span class="nc">Vec</span><span class="o">(</span><span class="nv">coeffs</span><span class="o">.</span><span class="py">length</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">(</span><span class="nv">bitWidth</span><span class="o">.</span><span class="py">W</span><span class="o">)))</span>
+  <span class="nf">zs</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span> <span class="o">:=</span> <span class="nv">io</span><span class="o">.</span><span class="py">in</span>
+  <span class="nf">for</span> <span class="o">(</span><span class="n">i</span> <span class="k">&lt;-</span> <span class="mi">1</span> <span class="n">until</span> <span class="nv">coeffs</span><span class="o">.</span><span class="py">length</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nf">zs</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">:=</span> <span class="nf">zs</span><span class="o">(</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="o">)</span>
+  <span class="o">}</span>
 
-<p><em>TODO: write me. If you <strong>really</strong> want to see this happen, let us know by filing a bug report!</em></p>
+  <span class="c1">// Do the multiplies
+</span>  <span class="k">val</span> <span class="nv">products</span> <span class="k">=</span> <span class="nv">VecInit</span><span class="o">.</span><span class="py">tabulate</span><span class="o">(</span><span class="nv">coeffs</span><span class="o">.</span><span class="py">length</span><span class="o">)(</span><span class="n">i</span> <span class="k">=&gt;</span> <span class="nf">zs</span><span class="o">(</span><span class="n">i</span><span class="o">)</span> <span class="o">*</span> <span class="nf">coeffs</span><span class="o">(</span><span class="n">i</span><span class="o">))</span>
 
-<h3 id="mac-os-x">Mac OS X</h3>
-
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install sbt verilator
+  <span class="c1">// Sum up the products
+</span>  <span class="nv">io</span><span class="o">.</span><span class="py">out</span> <span class="o">:=</span> <span class="nv">products</span><span class="o">.</span><span class="py">reduce</span><span class="o">(</span><span class="k">_</span> <span class="o">+</span> <span class="k">_</span><span class="o">)</span>
+<span class="o">}</span>
 </code></pre></div></div>
+
+<p>and use and re-use them across designs:</p>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">movingAverage3Filter</span> <span class="k">=</span> <span class="nc">FirFilter</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">,</span> <span class="nc">Seq</span><span class="o">(</span><span class="mf">1.</span><span class="n">U</span><span class="o">,</span> <span class="mf">1.</span><span class="n">U</span><span class="o">,</span> <span class="mf">1.</span><span class="n">U</span><span class="o">))</span>  <span class="c1">// same 3-point moving average filter as before
+</span><span class="k">val</span> <span class="nv">delayFilter</span> <span class="k">=</span> <span class="nc">FirFilter</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">,</span> <span class="nc">Seq</span><span class="o">(</span><span class="mf">0.</span><span class="n">U</span><span class="o">,</span> <span class="mf">1.</span><span class="n">U</span><span class="o">))</span>  <span class="c1">// 1-cycle delay as a FIR filter
+</span><span class="k">val</span> <span class="nv">triangleFilter</span> <span class="k">=</span> <span class="nc">FirFilter</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">,</span> <span class="nc">Seq</span><span class="o">(</span><span class="mf">1.</span><span class="n">U</span><span class="o">,</span> <span class="mf">2.</span><span class="n">U</span><span class="o">,</span> <span class="mf">3.</span><span class="n">U</span><span class="o">,</span> <span class="mf">2.</span><span class="n">U</span><span class="o">,</span> <span class="mf">1.</span><span class="n">U</span><span class="o">))</span>  <span class="c1">// 5-point FIR filter with a triangle impulse response
+</span></code></pre></div></div>
 
 <h2 id="getting-started">Getting Started</h2>
-<p>If you are migrating to Chisel3 from Chisel2, please visit
-<a href="https://github.com/ucb-bar/chisel3/wiki/Chisel3-vs-Chisel2">Chisel3 vs Chisel2</a></p>
+
+<h3 id="bootcamp-interactive-tutorial">Bootcamp Interactive Tutorial</h3>
+<p>The <a href="https://mybinder.org/v2/gh/freechipsproject/chisel-bootcamp/master"><strong>online Chisel Bootcamp</strong></a> is the recommended way to get started with and learn Chisel.
+<strong>No setup is required</strong> (it runs in the browser), nor does it assume any prior knowledge of Scala.</p>
+
+<h3 id="build-your-own-chisel-projects">Build Your Own Chisel Projects</h3>
+
+<p>See <a href="SETUP.md">the setup instructions</a> for how to set up your environment to run Chisel locally.</p>
+
+<p>When you’re ready to build your own circuits in Chisel, <strong>we recommend starting from the <a href="https://github.com/freechipsproject/chisel-template">Chisel Template</a> repository</strong>, which provides a pre-configured project, example design, and testbench. Follow the <a href="https://github.com/freechipsproject/chisel-template">chisel-template readme</a> to get started.</p>
+
+<p>If you insist on setting up your own project, the magic SBT lines are:</p>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">resolvers</span> <span class="o">++=</span> <span class="nc">Seq</span><span class="o">(</span>
+  <span class="nv">Resolver</span><span class="o">.</span><span class="py">sonatypeRepo</span><span class="o">(</span><span class="s">"snapshots"</span><span class="o">),</span>
+  <span class="nv">Resolver</span><span class="o">.</span><span class="py">sonatypeRepo</span><span class="o">(</span><span class="s">"releases"</span><span class="o">)</span>
+<span class="o">)</span>
+<span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"edu.berkeley.cs"</span> <span class="o">%%</span> <span class="s">"chisel3"</span> <span class="o">%</span> <span class="s">"3.2-SNAPSHOT"</span>
+<span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"edu.berkeley.cs"</span> <span class="o">%%</span> <span class="s">"chisel-testers2"</span> <span class="o">%</span> <span class="s">"0.1-SNAPSHOT"</span>
+</code></pre></div></div>
+
+<h3 id="design-verification">Design Verification</h3>
+
+<p>These simulation-based verification tools are available for Chisel:</p>
+<ul>
+  <li><a href="https://github.com/freechipsproject/chisel-testers"><strong>iotesters</strong></a>, specifically <a href="https://github.com/freechipsproject/chisel-testers/wiki/Using%20the%20PeekPokeTester">PeekPokeTester</a>, provides constructs (<code class="highlighter-rouge">peek</code>, <code class="highlighter-rouge">poke</code>, <code class="highlighter-rouge">expect</code>) similar to a non-synthesizable Verilog testbench.</li>
+  <li><a href="https://github.com/ucb-bar/chisel-testers2"><strong>testers2</strong></a> is an in-development replacement for PeekPokeTester, providing the same base constructs but with a streamlined interface and concurrency support with <code class="highlighter-rouge">fork</code> and <code class="highlighter-rouge">join</code>.</li>
+</ul>
+
+<h2 id="documentation">Documentation</h2>
+
+<h3 id="useful-resources">Useful Resources</h3>
+
+<ul>
+  <li><a href="https://github.com/freechipsproject/chisel-cheatsheet/releases/latest/download/chisel_cheatsheet.pdf"><strong>Cheat Sheet</strong></a>, a 2-page reference of the base Chisel syntax and libraries</li>
+  <li><a href="https://github.com/freechipsproject/chisel3/wiki"><strong>Wiki</strong></a>, which contains various feature-specific tutorials and frequently-asked questions.</li>
+  <li><a href="https://www.chisel-lang.org/api/latest/chisel3/index.html"><strong>ScalaDoc</strong></a>, a listing, description, and examples of the functionality exposed by Chisel</li>
+  <li><a href="https://gitter.im/freechipsproject/chisel3"><strong>Gitter</strong></a>, where you can ask questions or discuss anything Chisel</li>
+  <li><a href="https://www.chisel-lang.org"><strong>Website</strong></a></li>
+</ul>
+
+<p>If you are migrating from Chisel2, see <a href="https://github.com/ucb-bar/chisel3/wiki/Chisel3-vs-Chisel2">the migration guide on the wiki</a>.</p>
 
 <h3 id="data-types-overview">Data Types Overview</h3>
-<p>These are the base data types for defining circuit wires (abstract types which
-may not be instantiated are greyed out):</p>
+<p>These are the base data types for defining circuit components:</p>
 
-<p><img src="doc/images/type_hierarchy.png?raw=true" alt="Image" /></p>
+<p><img src="https://raw.githubusercontent.com/freechipsproject/chisel3/master/doc/images/type_hierarchy.svg?sanitize=true" alt="Image" /></p>
 
-<h3 id="chisel-tutorial"><a href="https://github.com/ucb-bar/chisel-tutorial">Chisel Tutorial</a></h3>
-
-<h2 id="for-hardware-engineers">For Hardware Engineers</h2>
-<p>This section describes how to get started using Chisel to create a new RTL
-design from scratch.</p>
-
-<h3 id="project-setup"><a href="https://github.com/ucb-bar/chisel-template">Project Setup</a></h3>
-
-<h3 id="rtl">RTL</h3>
-<p><em>TODO: toy example</em></p>
-
-<h3 id="verification">Verification</h3>
-<p><em>The simulation unit testing infrastructure is still a work in progress.</em></p>
-
-<p>See <code class="highlighter-rouge">src/test/scala/chiselTests</code> for example unit tests. Assert.scala is a
-pretty bare-bones unittest which also somewhat verifies the testing system
-itself.</p>
-
-<p>Unit tests are written with the ScalaTest unit testing framework, optionally
-with ScalaCheck generators to sweep the parameter space where desired.</p>
-
-<p><code class="highlighter-rouge">BasicTester</code>-based tests run a single circuit in simulation until either the
-test finishes or times out after a set amount of cycles. After compilation,
-there is no communication between the testdriver and simulation (unlike
-Chisel2’s Tester, which allowed dynamic peeks and pokes), so all testvectors
-must be determined at compile time.</p>
-
-<p>The circuits run must subclass <code class="highlighter-rouge">BasicTester</code>, which is a Module with the
-addition of a <code class="highlighter-rouge">stop</code> function which finishes the testbench and reports success.
-Any <code class="highlighter-rouge">assert</code>s that trigger (in either the <code class="highlighter-rouge">BasicTester</code> or a submodule) will
-cause the test to fail. <code class="highlighter-rouge">printf</code>s will forward to the console.</p>
-
-<p>To write a test using the <code class="highlighter-rouge">BasicTester</code> that integrates with sbt test, create
-a class that extends either <code class="highlighter-rouge">ChiselFlatSpec</code> (BDD-style testing) or
-<code class="highlighter-rouge">ChiselPropSpec</code> (ScalaCheck generators). In the test content, use</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>assert(execute{ new MyTestModule })
-</code></pre></div></div>
-<p>where <code class="highlighter-rouge">MyTestModule</code> is your top-level test circuit that extends
-<code class="highlighter-rouge">BasicTester</code>.</p>
-
-<p><em>A more Chisel2-like tester may come in the future.</em></p>
-
-<h3 id="compiling-to-simulation">Compiling to Simulation</h3>
-<p><em>TODO: commands to compile project to simulation</em></p>
-
-<p><em>TODO: running testbenches</em></p>
-
-<h2 id="for-chisel-developers">For Chisel Developers</h2>
-<p>This section describes how to get started developing Chisel itself, including
-how to test your version locally against other projects that pull in Chisel
-using <a href="https://www.scala-sbt.org/1.x/docs/Library-Dependencies.html">sbt’s managed dependencies</a>.</p>
+<h2 id="developer-documentation">Developer Documentation</h2>
+<p>This section describes how to get started developing Chisel itself, including how to test your version locally against other projects that pull in Chisel using <a href="https://www.scala-sbt.org/1.x/docs/Library-Dependencies.html">sbt’s managed dependencies</a>.</p>
 
 <h3 id="compiling-and-testing-chisel">Compiling and Testing Chisel</h3>
-<p>In the Chisel repository directory, run:</p>
+
+<p>In the chisel3 repository directory compile the Chisel library:</p>
+
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sbt compile
 </code></pre></div></div>
-<p>to compile the Chisel library. If the compilation succeeded, you can then run
-the included unit tests by invoking:</p>
+
+<p>If the compilation succeeded, you can then run the included unit tests by invoking:</p>
+
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sbt test
 </code></pre></div></div>
 
 <h3 id="running-projects-against-local-chisel">Running Projects Against Local Chisel</h3>
+
 <p>To use the development version of Chisel (<code class="highlighter-rouge">master</code> branch), you will need to build from source and <code class="highlighter-rouge">publishLocal</code>.
-The repo version can be found in the build.sbt file.
+The repository version can be found in the build.sbt file.
 As of the time of writing it was:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>version := "3.2-SNAPSHOT",
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>version := "3.2-SNAPSHOT"
 </code></pre></div></div>
 
-<p>To publish your version of Chisel to the local Ivy (sbt’s dependency manager)
-repository, run:</p>
+<p>To publish your version of Chisel to the local Ivy (sbt’s dependency manager) repository, run:</p>
+
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sbt publishLocal
 </code></pre></div></div>
 
-<p><em>PROTIP</em>: sbt can automatically run commands on a source change if you prefix
-the command with <code class="highlighter-rouge">~</code>. For example, the above command to publish Chisel locally
-becomes <code class="highlighter-rouge">sbt ~publishLocal</code>.</p>
+<p>The compiled version gets placed in <code class="highlighter-rouge">~/.ivy2/local/edu.berkeley.cs/</code>.
+If you need to un-publish your local copy of Chisel, remove the directory generated in <code class="highlighter-rouge">~/.ivy2/local/edu.berkeley.cs/</code>.</p>
 
-<p><a href="https://www.scala-sbt.org/1.x/docs/Publishing.html#Publishing+Locally">sbt’s manual</a>
-recommends that you use a <code class="highlighter-rouge">SNAPSHOT</code> version suffix to ensure that the local
-repository is checked for updates. Since the current default is a <code class="highlighter-rouge">SNAPSHOT</code>,
-and the version number is already incremented compared to the currently
-published snapshot, you dont need to change version.</p>
+<p>In order to have your projects use this version of Chisel, you should update the <code class="highlighter-rouge">libraryDependencies</code> setting in your project’s build.sbt file to:</p>
 
-<p>The compiled version gets placed in <code class="highlighter-rouge">~/.ivy2/local/</code>. You can nuke the relevant
-subfolder to un-publish your local copy of Chisel.</p>
-
-<p>In order to have your projects use this version of Chisel, you should update
-the libraryDependencies setting in your project’s build.sbt file to:</p>
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>libraryDependencies += "edu.berkeley.cs" %% "chisel3" % "3.2-SNAPSHOT"
 </code></pre></div></div>
-
-<p>The version specifier in libraryDependencies in the project’s build.sbt should
-match the version string in your local copy of Chisel’s build.sbt.</p>
-
-<h2 id="technical-documentation">Technical Documentation</h2>
 
 <h3 id="chisel3-architecture-overview">Chisel3 Architecture Overview</h3>
 
@@ -235,7 +183,7 @@ Firrtl file for further processing.</li>
   <li><strong>The standard library</strong> of circuit generators, <code class="highlighter-rouge">chisel3.util.*</code>. These
 contain commonly used interfaces and constructors (like <code class="highlighter-rouge">Decoupled</code>, which
 wraps a signal with a ready-valid pair) as well as fully parameterizable
-circuit generators (like arbiters and muxes).</li>
+circuit generators (like arbiters and multiplexors).</li>
   <li><strong>Driver utilities</strong>, <code class="highlighter-rouge">chisel3.Driver</code>, which contains compilation and test
 functions that are invoked in the standard Verilog generation and simulation
 testing infrastructure. These can also be used as part of custom flows.</li>
