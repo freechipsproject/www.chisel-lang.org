@@ -82,7 +82,12 @@ ga('send', 'pageview');
 
 <h2 id="the-standard-ready-valid-interface-readyvalidio--decoupled">The standard ready-valid interface (ReadyValidIO / Decoupled)</h2>
 
-<p>Chisel provides a standard interface for <a href="http://inst.eecs.berkeley.edu/~cs150/Documents/Interfaces.pdf">ready-valid interfaces</a>.</p>
+<p>Chisel provides a standard interface for <a href="http://inst.eecs.berkeley.edu/~cs150/Documents/Interfaces.pdf">ready-valid interfaces</a>.
+A ready-valid interface consists of a <code class="highlighter-rouge">ready</code> signal, a <code class="highlighter-rouge">valid</code> signal, and some data stored in <code class="highlighter-rouge">bits</code>.
+The <code class="highlighter-rouge">ready</code> bit indicates that a consumer is <em>ready</em> to consume data.
+The <code class="highlighter-rouge">valid</code> bit indicates that a producer has <em>valid</em> data on <code class="highlighter-rouge">bits</code>.
+When both <code class="highlighter-rouge">ready</code> and <code class="highlighter-rouge">valid</code> are asserted, a data transfer from the producer to the consumer takes place.
+A convenience method <code class="highlighter-rouge">fire</code> is provided that is asserted if both <code class="highlighter-rouge">ready</code> and <code class="highlighter-rouge">valid</code> are asserted.</p>
 
 <p>Usually, we use the utility function <a href="https://chisel.eecs.berkeley.edu/api/latest/chisel3/util/Decoupled$.html"><code class="highlighter-rouge">Decoupled()</code></a> to turn any type into a ready-valid interface rather than directly using <a href="http://chisel.eecs.berkeley.edu/api/latest/chisel3/util/ReadyValidIO.html">ReadyValidIO</a>.</p>
 
@@ -130,6 +135,14 @@ ga('send', 'pageview');
 </span>  <span class="c1">// do something with io.readyValid.bits
 </span><span class="o">}</span>
 </code></pre></div></div>
+
+<p><code class="highlighter-rouge">DecoupledIO</code> is a ready-valid interface with the <em>convention</em> that there are no guarantees placed on deasserting <code class="highlighter-rouge">ready</code> or <code class="highlighter-rouge">valid</code> or on the stability of <code class="highlighter-rouge">bits</code>.
+That means <code class="highlighter-rouge">ready</code> and <code class="highlighter-rouge">valid</code> can also be deasserted without a data transfer.</p>
+
+<p><code class="highlighter-rouge">IrrevocableIO</code> is a ready-valid interface with the <em>convention</em> that the value of <code class="highlighter-rouge">bits</code> will not change while <code class="highlighter-rouge">valid</code> is asserted and <code class="highlighter-rouge">ready</code> is deasserted.
+Also the consumer shall keep <code class="highlighter-rouge">ready</code> asserted after a cycle where <code class="highlighter-rouge">ready</code> was high and <code class="highlighter-rouge">valid</code> was low.
+Note that the <em>irrevocable</em> constraint <em>is only a convention</em> and cannot be enforced by the interface.
+Chisel does not automatically generate checkers or assertions to enforce the <em>irrevocable</em> convention.</p>
 </section></div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/highlight/highlight.pack.js"></script><script>hljs.configure({languages:['scala','java','bash']});
 hljs.initHighlighting();
               </script><script>((window.gitter = {}).chat = {}).options = {
