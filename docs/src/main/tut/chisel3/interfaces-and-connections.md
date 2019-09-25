@@ -141,4 +141,4 @@ That means `ready` and `valid` can also be deasserted without a data transfer.
 `IrrevocableIO` is a ready-valid interface with the *convention* that the value of `bits` will not change while `valid` is asserted and `ready` is deasserted.
 Also the consumer shall keep `ready` asserted after a cycle where `ready` was high and `valid` was low.
 Note that the *irrevocable* constraint *is only a convention* and cannot be enforced by the interface.
-This convention is *not* enforced by the Chisel compiler.
+Chisel does not automatically generate checkers or assertions to enforce the *irrevocable* convention.
