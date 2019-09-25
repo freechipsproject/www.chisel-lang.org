@@ -26,15 +26,15 @@ defined as a <em>class</em> which:</p>
 module:</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3._</span>
 <span class="k">class</span> <span class="nc">Mux2IO</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="n">sel</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">1.</span><span class="n">W</span><span class="o">))</span>
-  <span class="k">val</span> <span class="n">in0</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">1.</span><span class="n">W</span><span class="o">))</span>
-  <span class="k">val</span> <span class="n">in1</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">1.</span><span class="n">W</span><span class="o">))</span>
-  <span class="k">val</span> <span class="n">out</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">1.</span><span class="n">W</span><span class="o">))</span>
+  <span class="k">val</span> <span class="nv">sel</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">1.</span><span class="n">W</span><span class="o">))</span>
+  <span class="k">val</span> <span class="nv">in0</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">1.</span><span class="n">W</span><span class="o">))</span>
+  <span class="k">val</span> <span class="nv">in1</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">1.</span><span class="n">W</span><span class="o">))</span>
+  <span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">1.</span><span class="n">W</span><span class="o">))</span>
 <span class="o">}</span>
 
 <span class="k">class</span> <span class="nc">Mux2</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="n">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Mux2IO</span><span class="o">)</span>
-  <span class="n">io</span><span class="o">.</span><span class="n">out</span> <span class="o">:=</span> <span class="o">(</span><span class="n">io</span><span class="o">.</span><span class="n">sel</span> <span class="o">&amp;</span> <span class="n">io</span><span class="o">.</span><span class="n">in1</span><span class="o">)</span> <span class="o">|</span> <span class="o">(~</span><span class="n">io</span><span class="o">.</span><span class="n">sel</span> <span class="o">&amp;</span> <span class="n">io</span><span class="o">.</span><span class="n">in0</span><span class="o">)</span>
+  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Mux2IO</span><span class="o">)</span>
+  <span class="nv">io</span><span class="o">.</span><span class="py">out</span> <span class="o">:=</span> <span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">sel</span> <span class="o">&amp;</span> <span class="nv">io</span><span class="o">.</span><span class="py">in1</span><span class="o">)</span> <span class="o">|</span> <span class="o">(~</span><span class="nv">io</span><span class="o">.</span><span class="py">sel</span> <span class="o">&amp;</span> <span class="nv">io</span><span class="o">.</span><span class="py">in0</span><span class="o">)</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
@@ -55,32 +55,32 @@ multiplexer module in terms of the <code class="highlighter-rouge">Mux2</code> m
 together three 2-input multiplexers:</p>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Mux4IO</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="n">in0</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">1.</span><span class="n">W</span><span class="o">))</span>
-  <span class="k">val</span> <span class="n">in1</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">1.</span><span class="n">W</span><span class="o">))</span>
-  <span class="k">val</span> <span class="n">in2</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">1.</span><span class="n">W</span><span class="o">))</span>
-  <span class="k">val</span> <span class="n">in3</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">1.</span><span class="n">W</span><span class="o">))</span>
-  <span class="k">val</span> <span class="n">sel</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">2.</span><span class="n">W</span><span class="o">))</span>
-  <span class="k">val</span> <span class="n">out</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">1.</span><span class="n">W</span><span class="o">))</span>
+  <span class="k">val</span> <span class="nv">in0</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">1.</span><span class="n">W</span><span class="o">))</span>
+  <span class="k">val</span> <span class="nv">in1</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">1.</span><span class="n">W</span><span class="o">))</span>
+  <span class="k">val</span> <span class="nv">in2</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">1.</span><span class="n">W</span><span class="o">))</span>
+  <span class="k">val</span> <span class="nv">in3</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">1.</span><span class="n">W</span><span class="o">))</span>
+  <span class="k">val</span> <span class="nv">sel</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">2.</span><span class="n">W</span><span class="o">))</span>
+  <span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">1.</span><span class="n">W</span><span class="o">))</span>
 <span class="o">}</span>
 <span class="k">class</span> <span class="nc">Mux4</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="n">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Mux4IO</span><span class="o">)</span>
+  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Mux4IO</span><span class="o">)</span>
 
-  <span class="k">val</span> <span class="n">m0</span> <span class="k">=</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">Mux2</span><span class="o">)</span>
-  <span class="n">m0</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">sel</span> <span class="o">:=</span> <span class="n">io</span><span class="o">.</span><span class="n">sel</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span>
-  <span class="n">m0</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">in0</span> <span class="o">:=</span> <span class="n">io</span><span class="o">.</span><span class="n">in0</span>
-  <span class="n">m0</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">in1</span> <span class="o">:=</span> <span class="n">io</span><span class="o">.</span><span class="n">in1</span>
+  <span class="k">val</span> <span class="nv">m0</span> <span class="k">=</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">Mux2</span><span class="o">)</span>
+  <span class="nv">m0</span><span class="o">.</span><span class="py">io</span><span class="o">.</span><span class="py">sel</span> <span class="o">:=</span> <span class="nv">io</span><span class="o">.</span><span class="py">sel</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span>
+  <span class="nv">m0</span><span class="o">.</span><span class="py">io</span><span class="o">.</span><span class="py">in0</span> <span class="o">:=</span> <span class="nv">io</span><span class="o">.</span><span class="py">in0</span>
+  <span class="nv">m0</span><span class="o">.</span><span class="py">io</span><span class="o">.</span><span class="py">in1</span> <span class="o">:=</span> <span class="nv">io</span><span class="o">.</span><span class="py">in1</span>
 
-  <span class="k">val</span> <span class="n">m1</span> <span class="k">=</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">Mux2</span><span class="o">)</span>
-  <span class="n">m1</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">sel</span> <span class="o">:=</span> <span class="n">io</span><span class="o">.</span><span class="n">sel</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span>
-  <span class="n">m1</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">in0</span> <span class="o">:=</span> <span class="n">io</span><span class="o">.</span><span class="n">in2</span>
-  <span class="n">m1</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">in1</span> <span class="o">:=</span> <span class="n">io</span><span class="o">.</span><span class="n">in3</span>
+  <span class="k">val</span> <span class="nv">m1</span> <span class="k">=</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">Mux2</span><span class="o">)</span>
+  <span class="nv">m1</span><span class="o">.</span><span class="py">io</span><span class="o">.</span><span class="py">sel</span> <span class="o">:=</span> <span class="nv">io</span><span class="o">.</span><span class="py">sel</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span>
+  <span class="nv">m1</span><span class="o">.</span><span class="py">io</span><span class="o">.</span><span class="py">in0</span> <span class="o">:=</span> <span class="nv">io</span><span class="o">.</span><span class="py">in2</span>
+  <span class="nv">m1</span><span class="o">.</span><span class="py">io</span><span class="o">.</span><span class="py">in1</span> <span class="o">:=</span> <span class="nv">io</span><span class="o">.</span><span class="py">in3</span>
 
-  <span class="k">val</span> <span class="n">m3</span> <span class="k">=</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">Mux2</span><span class="o">)</span>
-  <span class="n">m3</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">sel</span> <span class="o">:=</span> <span class="n">io</span><span class="o">.</span><span class="n">sel</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span>
-  <span class="n">m3</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">in0</span> <span class="o">:=</span> <span class="n">m0</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">out</span>
-  <span class="n">m3</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">in1</span> <span class="o">:=</span> <span class="n">m1</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">out</span>
+  <span class="k">val</span> <span class="nv">m3</span> <span class="k">=</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">Mux2</span><span class="o">)</span>
+  <span class="nv">m3</span><span class="o">.</span><span class="py">io</span><span class="o">.</span><span class="py">sel</span> <span class="o">:=</span> <span class="nv">io</span><span class="o">.</span><span class="py">sel</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span>
+  <span class="nv">m3</span><span class="o">.</span><span class="py">io</span><span class="o">.</span><span class="py">in0</span> <span class="o">:=</span> <span class="nv">m0</span><span class="o">.</span><span class="py">io</span><span class="o">.</span><span class="py">out</span>
+  <span class="nv">m3</span><span class="o">.</span><span class="py">io</span><span class="o">.</span><span class="py">in1</span> <span class="o">:=</span> <span class="nv">m1</span><span class="o">.</span><span class="py">io</span><span class="o">.</span><span class="py">out</span>
 
-  <span class="n">io</span><span class="o">.</span><span class="n">out</span> <span class="o">:=</span> <span class="n">m3</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">out</span>
+  <span class="nv">io</span><span class="o">.</span><span class="py">out</span> <span class="o">:=</span> <span class="nv">m3</span><span class="o">.</span><span class="py">io</span><span class="o">.</span><span class="py">out</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
@@ -117,23 +117,23 @@ a specific naming convention for clock or reset.</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3.experimental.</span><span class="o">{</span><span class="nc">RawModule</span><span class="o">,</span> <span class="n">withClockAndReset</span><span class="o">}</span>
 
 <span class="k">class</span> <span class="nc">Foo</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="n">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span><span class="o">{</span>
-    <span class="k">val</span> <span class="n">a</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
-    <span class="k">val</span> <span class="n">b</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span><span class="o">{</span>
+    <span class="k">val</span> <span class="nv">a</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+    <span class="k">val</span> <span class="nv">b</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
   <span class="o">})</span>
-  <span class="n">io</span><span class="o">.</span><span class="n">b</span> <span class="o">:=</span> <span class="o">!</span><span class="n">io</span><span class="o">.</span><span class="n">a</span>
+  <span class="nv">io</span><span class="o">.</span><span class="py">b</span> <span class="o">:=</span> <span class="o">!</span><span class="nv">io</span><span class="o">.</span><span class="py">a</span>
 <span class="o">}</span>
 
 <span class="k">class</span> <span class="nc">FooWrapper</span> <span class="k">extends</span> <span class="nc">RawModule</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="n">a_i</span>  <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">()))</span>
-  <span class="k">val</span> <span class="n">b_o</span>  <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="nc">Bool</span><span class="o">()))</span>
-  <span class="k">val</span> <span class="n">clk</span>  <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Clock</span><span class="o">())</span>
-  <span class="k">val</span> <span class="n">rstn</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+  <span class="k">val</span> <span class="nv">a_i</span>  <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">()))</span>
+  <span class="k">val</span> <span class="nv">b_o</span>  <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="nc">Bool</span><span class="o">()))</span>
+  <span class="k">val</span> <span class="nv">clk</span>  <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Clock</span><span class="o">())</span>
+  <span class="k">val</span> <span class="nv">rstn</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
 
-  <span class="k">val</span> <span class="n">foo</span> <span class="k">=</span> <span class="n">withClockAndReset</span><span class="o">(</span><span class="n">clk</span><span class="o">,</span> <span class="o">!</span><span class="n">rstn</span><span class="o">){</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">Foo</span><span class="o">)</span> <span class="o">}</span>
+  <span class="k">val</span> <span class="nv">foo</span> <span class="k">=</span> <span class="nf">withClockAndReset</span><span class="o">(</span><span class="n">clk</span><span class="o">,</span> <span class="o">!</span><span class="n">rstn</span><span class="o">){</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">Foo</span><span class="o">)</span> <span class="o">}</span>
 
-  <span class="n">foo</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">a</span> <span class="o">:=</span> <span class="n">a_i</span>
-  <span class="n">b_o</span> <span class="o">:=</span> <span class="n">foo</span><span class="o">.</span><span class="n">io</span><span class="o">.</span><span class="n">b</span>
+  <span class="nv">foo</span><span class="o">.</span><span class="py">io</span><span class="o">.</span><span class="py">a</span> <span class="o">:=</span> <span class="n">a_i</span>
+  <span class="n">b_o</span> <span class="o">:=</span> <span class="nv">foo</span><span class="o">.</span><span class="py">io</span><span class="o">.</span><span class="py">b</span>
 <span class="o">}</span>
 </code></pre></div></div>
 

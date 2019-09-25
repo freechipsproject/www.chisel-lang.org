@@ -17,8 +17,8 @@ ga('send', 'pageview');
 but causes a <code class="highlighter-rouge">type mismatch</code> error in straight chisel3:</em></p>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">TestBlock</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
-	<span class="k">val</span> <span class="n">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
-		<span class="k">val</span> <span class="n">output</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="n">width</span><span class="k">=</span><span class="mi">3</span><span class="o">))</span>
+	<span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
+		<span class="k">val</span> <span class="nv">output</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="n">width</span><span class="k">=</span><span class="mi">3</span><span class="o">))</span>
 	<span class="o">})</span>
 <span class="o">}</span>
 </code></pre></div></div>
@@ -36,8 +36,8 @@ It was felt these were too prone to error and made it difficult to diagnose erro
 Although there are no automatic conversions from <code class="highlighter-rouge">Int</code> to <code class="highlighter-rouge">Width</code>, an <code class="highlighter-rouge">Int</code> may be converted to a <code class="highlighter-rouge">Width</code> by applying the <code class="highlighter-rouge">W</code> method to an <code class="highlighter-rouge">Int</code>.
 In chisel3, the above code becomes:</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">TestBlock</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
-	<span class="k">val</span> <span class="n">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
-		<span class="k">val</span> <span class="n">output</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">3.</span><span class="n">W</span><span class="o">))</span>
+	<span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
+		<span class="k">val</span> <span class="nv">output</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">3.</span><span class="n">W</span><span class="o">))</span>
 	<span class="o">})</span>
 <span class="o">}</span>
 </code></pre></div></div>
@@ -52,7 +52,7 @@ In chisel3, the above code becomes:</p>
 
 <p>A literal with a specific width is created by calling the <code class="highlighter-rouge">U</code> or <code class="highlighter-rouge">S</code> method with a <code class="highlighter-rouge">W</code> argument.
 Use:</p>
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mf">1.</span><span class="n">S</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">)</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mf">1.</span><span class="nf">S</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">)</span>
 </code></pre></div></div>
 <p>to create an 8-bit wide (signed) literal with value 1.</p>
 </section></div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/highlight/highlight.pack.js"></script><script>hljs.configure({languages:['scala','java','bash']});
