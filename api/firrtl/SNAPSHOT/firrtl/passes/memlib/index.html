@@ -3,22 +3,22 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.2-081319-SNAPSHOT - firrtl.passes.memlib</title>
-          <meta name="description" content="firrtl 1.2 - 081319 - SNAPSHOT - firrtl.passes.memlib" />
-          <meta name="keywords" content="firrtl 1.2 081319 SNAPSHOT firrtl.passes.memlib" />
+          <title>firrtl 1.2.0-RC2 - firrtl.passes.memlib</title>
+          <meta name="description" content="firrtl 1.2.0 - RC2 - firrtl.passes.memlib" />
+          <meta name="keywords" content="firrtl 1.2.0 RC2 firrtl.passes.memlib" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
+      
       <link href="../../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../../lib/jquery.min.js"></script>
       <script type="text/javascript" src="../../../lib/jquery.panzoom.min.js"></script>
       <script type="text/javascript" src="../../../lib/jquery.mousewheel.min.js"></script>
       <script type="text/javascript" src="../../../lib/index.js"></script>
       <script type="text/javascript" src="../../../index.js"></script>
       <script type="text/javascript" src="../../../lib/scheduler.js"></script>
       <script type="text/javascript" src="../../../lib/template.js"></script>
-      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
       <script type="text/javascript" src="../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../lib/diagrams.js" id="diagrams-js"></script>
       <script type="text/javascript">
         /* this variable can be used by the JS to determine the path to the root document */
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.2-081319-SNAPSHOT</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.2.0-RC2</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -56,7 +56,7 @@
                 <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="_root_"></a><a id="root:_root_"></a>
       <span class="permalink">
-      <a href="index.html#_root_" title="Permalink">
+      <a href="../../../index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -72,7 +72,7 @@
     </li><li name="_root_.firrtl" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="firrtl"></a><a id="firrtl:firrtl"></a>
       <span class="permalink">
-      <a href="index.html#firrtl" title="Permalink">
+      <a href="../../../firrtl/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -88,7 +88,7 @@
     </li><li name="firrtl.passes" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="passes"></a><a id="passes:passes"></a>
       <span class="permalink">
-      <a href="../firrtl/index.html#passes" title="Permalink">
+      <a href="../../../firrtl/passes/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -104,7 +104,7 @@
     </li><li name="firrtl.passes.clocklist" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clocklist"></a><a id="clocklist:clocklist"></a>
       <span class="permalink">
-      <a href="../../firrtl/passes/index.html#clocklist" title="Permalink">
+      <a href="../../../firrtl/passes/clocklist/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -120,7 +120,7 @@
     </li><li name="firrtl.passes.memlib" visbl="pub" class="indented3 current" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="memlib"></a><a id="memlib:memlib"></a>
       <span class="permalink">
-      <a href="../../firrtl/passes/index.html#memlib" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -300,7 +300,7 @@
                       </li><li name="firrtl.passes.wiring" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wiring"></a><a id="wiring:wiring"></a>
       <span class="permalink">
-      <a href="../../firrtl/passes/index.html#wiring" title="Permalink">
+      <a href="../../../firrtl/passes/wiring/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -341,7 +341,17 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"></div>
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block diagram-container" id="content-diagram-container">
+                <span class="toggle diagram-link">
+                  Content Hierarchy
+                </span>
+                <div class="diagram" id="content-diagram"><svg class="package-diagram" id="graph1" viewBox="0.00 0.00 1326.00 94.00" height="94pt" width="1326pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 90)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-90 1322,-90 1322,4 -4,4" stroke="transparent" fill="white"></polygon><!-- node0 --><g class="node class" id="graph1_0"><g id="a_class|graph1_0"><a xlink:title="firrtl.passes.memlib.SimpleMidTransform" xlink:href="SimpleMidTransform.html#inheritance-diagram"><path d="M123.67,-25C123.67,-25 8.33,-25 8.33,-25 4.17,-25 0,-20.83 0,-16.67 0,-16.67 0,-8.33 0,-8.33 0,-4.17 4.17,0 8.33,0 8.33,0 123.67,0 123.67,0 127.83,0 132,-4.17 132,-8.33 132,-8.33 132,-16.67 132,-16.67 132,-20.83 127.83,-25 123.67,-25" stroke="#418565" fill="#418565"></path><image xlink:href="../../../lib/class_diagram.png" y="-19.5" x="10" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="31" text-anchor="start">SimpleMidTransform</text></a></g></g><!-- node1 --><g class="node class" id="graph1_1"><g id="a_class|graph1_1"><a xlink:title="firrtl.passes.memlib.SimpleTransform" xlink:href="SimpleTransform.html#inheritance-diagram"><path d="M116.67,-86C116.67,-86 15.33,-86 15.33,-86 11.17,-86 7,-81.83 7,-77.67 7,-77.67 7,-69.33 7,-69.33 7,-65.17 11.17,-61 15.33,-61 15.33,-61 116.67,-61 116.67,-61 120.83,-61 125,-65.17 125,-69.33 125,-69.33 125,-77.67 125,-77.67 125,-81.83 120.83,-86 116.67,-86" stroke="#418565" fill="#418565"></path><image xlink:href="../../../lib/class_diagram.png" y="-80.5" x="17" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="38" text-anchor="start">SimpleTransform</text></a></g></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph1_1_0"><g id="a_inheritance|graph1_1_0"><a xlink:title="SimpleMidTransform is a subtype of SimpleTransform"><path d="M66,-53.76C66,-44.37 66,-33.29 66,-25.13" stroke="#d4d4d4" fill="none"></path><polygon points="63.55,-53.84 66,-60.84 68.45,-53.84 63.55,-53.84" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node object" id="graph1_2"><g id="a_object|graph1_2"><a xlink:title="firrtl.passes.memlib.PassModuleName" xlink:href="PassModuleName$.html#inheritance-diagram"><path d="M261.67,-25C261.67,-25 158.33,-25 158.33,-25 154.17,-25 150,-20.83 150,-16.67 150,-16.67 150,-8.33 150,-8.33 150,-4.17 154.17,0 158.33,0 158.33,0 261.67,0 261.67,0 265.83,0 270,-4.17 270,-8.33 270,-8.33 270,-16.67 270,-16.67 270,-20.83 265.83,-25 261.67,-25" stroke="#103a51" fill="#103a51"></path><image xlink:href="../../../lib/object_diagram.png" y="-19.5" x="160" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="181" text-anchor="start">PassModuleName</text></a></g></g><!-- node3 --><g class="node object" id="graph1_3"><g id="a_object|graph1_3"><a xlink:title="firrtl.passes.memlib.PassCircuitName" xlink:href="PassCircuitName$.html#inheritance-diagram"><path d="M397.17,-25C397.17,-25 296.83,-25 296.83,-25 292.67,-25 288.5,-20.83 288.5,-16.67 288.5,-16.67 288.5,-8.33 288.5,-8.33 288.5,-4.17 292.67,0 296.83,0 296.83,0 397.17,0 397.17,0 401.33,0 405.5,-4.17 405.5,-8.33 405.5,-8.33 405.5,-16.67 405.5,-16.67 405.5,-20.83 401.33,-25 397.17,-25" stroke="#103a51" fill="#103a51"></path><image xlink:href="../../../lib/object_diagram.png" y="-19.5" x="299" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="320" text-anchor="start">PassCircuitName</text></a></g></g><!-- node4 --><g class="node object" id="graph1_4"><g id="a_object|graph1_4"><a xlink:title="firrtl.passes.memlib.OutputConfigFileName" xlink:href="OutputConfigFileName$.html#inheritance-diagram"><path d="M553.67,-25C553.67,-25 432.33,-25 432.33,-25 428.17,-25 424,-20.83 424,-16.67 424,-16.67 424,-8.33 424,-8.33 424,-4.17 428.17,0 432.33,0 432.33,0 553.67,0 553.67,0 557.83,0 562,-4.17 562,-8.33 562,-8.33 562,-16.67 562,-16.67 562,-20.83 557.83,-25 553.67,-25" stroke="#103a51" fill="#103a51"></path><image xlink:href="../../../lib/object_diagram.png" y="-19.5" x="434" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="455" text-anchor="start">OutputConfigFileName</text></a></g></g><!-- node5 --><g class="node object" id="graph1_5"><g id="a_object|graph1_5"><a xlink:title="firrtl.passes.memlib.InputConfigFileName" xlink:href="InputConfigFileName$.html#inheritance-diagram"><path d="M703.17,-25C703.17,-25 588.83,-25 588.83,-25 584.67,-25 580.5,-20.83 580.5,-16.67 580.5,-16.67 580.5,-8.33 580.5,-8.33 580.5,-4.17 584.67,0 588.83,0 588.83,0 703.17,0 703.17,0 707.33,0 711.5,-4.17 711.5,-8.33 711.5,-8.33 711.5,-16.67 711.5,-16.67 711.5,-20.83 707.33,-25 703.17,-25" stroke="#103a51" fill="#103a51"></path><image xlink:href="../../../lib/object_diagram.png" y="-19.5" x="591" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="612" text-anchor="start">InputConfigFileName</text></a></g></g><!-- node6 --><g class="node trait" id="graph1_6"><g id="a_trait|graph1_6"><a xlink:title="firrtl.passes.memlib.PassOption" xlink:href="PassOption.html#inheritance-diagram"><path d="M458.17,-86C458.17,-86 381.83,-86 381.83,-86 377.67,-86 373.5,-81.83 373.5,-77.67 373.5,-77.67 373.5,-69.33 373.5,-69.33 373.5,-65.17 377.67,-61 381.83,-61 381.83,-61 458.17,-61 458.17,-61 462.33,-61 466.5,-65.17 466.5,-69.33 466.5,-69.33 466.5,-77.67 466.5,-77.67 466.5,-81.83 462.33,-86 458.17,-86" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../../lib/trait_diagram.png" y="-80.5" x="384" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="405" text-anchor="start">PassOption</text></a></g></g><!-- node6&#45;&gt;node2 --><g class="edge inheritance" id="graph1_6_2"><g id="a_inheritance|graph1_6_2"><a xlink:title="PassModuleName is a subtype of PassOption"><path d="M371.9,-58.99C335.45,-48.75 285.89,-34.82 251.24,-25.09" stroke="#d4d4d4" fill="none"></path><polygon points="371.61,-61.45 379.01,-60.98 372.93,-56.73 371.61,-61.45" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node6&#45;&gt;node3 --><g class="edge inheritance" id="graph1_6_3"><g id="a_inheritance|graph1_6_3"><a xlink:title="PassCircuitName is a subtype of PassOption"><path d="M399.87,-56.23C387.66,-46.37 372.38,-34.01 361.39,-25.13" stroke="#d4d4d4" fill="none"></path><polygon points="398.59,-58.35 405.58,-60.84 401.67,-54.54 398.59,-58.35" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node6&#45;&gt;node4 --><g class="edge inheritance" id="graph1_6_4"><g id="a_inheritance|graph1_6_4"><a xlink:title="OutputConfigFileName is a subtype of PassOption"><path d="M440.13,-56.23C452.34,-46.37 467.62,-34.01 478.61,-25.13" stroke="#d4d4d4" fill="none"></path><polygon points="438.33,-54.54 434.42,-60.84 441.41,-58.35 438.33,-54.54" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node6&#45;&gt;node5 --><g class="edge inheritance" id="graph1_6_5"><g id="a_inheritance|graph1_6_5"><a xlink:title="InputConfigFileName is a subtype of PassOption"><path d="M471.27,-59.12C510.54,-48.86 564.17,-34.86 601.61,-25.09" stroke="#d4d4d4" fill="none"></path><polygon points="470.27,-56.85 464.11,-60.98 471.5,-61.59 470.27,-56.85" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node7 --><g class="node object" id="graph1_7"><g id="a_object|graph1_7"><a xlink:title="firrtl.passes.memlib.MaskedReadWritePort" xlink:href="MaskedReadWritePort$.html#inheritance-diagram"><path d="M856.17,-25C856.17,-25 737.83,-25 737.83,-25 733.67,-25 729.5,-20.83 729.5,-16.67 729.5,-16.67 729.5,-8.33 729.5,-8.33 729.5,-4.17 733.67,0 737.83,0 737.83,0 856.17,0 856.17,0 860.33,0 864.5,-4.17 864.5,-8.33 864.5,-8.33 864.5,-16.67 864.5,-16.67 864.5,-20.83 860.33,-25 856.17,-25" stroke="#103a51" fill="#103a51"></path><image xlink:href="../../../lib/object_diagram.png" y="-19.5" x="740" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="761" text-anchor="start">MaskedReadWritePort</text></a></g></g><!-- node8 --><g class="node object" id="graph1_8"><g id="a_object|graph1_8"><a xlink:title="firrtl.passes.memlib.ReadWritePort" xlink:href="ReadWritePort$.html#inheritance-diagram"><path d="M977.17,-25C977.17,-25 890.83,-25 890.83,-25 886.67,-25 882.5,-20.83 882.5,-16.67 882.5,-16.67 882.5,-8.33 882.5,-8.33 882.5,-4.17 886.67,0 890.83,0 890.83,0 977.17,0 977.17,0 981.33,0 985.5,-4.17 985.5,-8.33 985.5,-8.33 985.5,-16.67 985.5,-16.67 985.5,-20.83 981.33,-25 977.17,-25" stroke="#103a51" fill="#103a51"></path><image xlink:href="../../../lib/object_diagram.png" y="-19.5" x="893" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="914" text-anchor="start">ReadWritePort</text></a></g></g><!-- node9 --><g class="node object" id="graph1_9"><g id="a_object|graph1_9"><a xlink:title="firrtl.passes.memlib.MaskedWritePort" xlink:href="MaskedWritePort$.html#inheritance-diagram"><path d="M1109.67,-25C1109.67,-25 1012.33,-25 1012.33,-25 1008.17,-25 1004,-20.83 1004,-16.67 1004,-16.67 1004,-8.33 1004,-8.33 1004,-4.17 1008.17,0 1012.33,0 1012.33,0 1109.67,0 1109.67,0 1113.83,0 1118,-4.17 1118,-8.33 1118,-8.33 1118,-16.67 1118,-16.67 1118,-20.83 1113.83,-25 1109.67,-25" stroke="#103a51" fill="#103a51"></path><image xlink:href="../../../lib/object_diagram.png" y="-19.5" x="1014" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="1035" text-anchor="start">MaskedWritePort</text></a></g></g><!-- node10 --><g class="node object" id="graph1_10"><g id="a_object|graph1_10"><a xlink:title="firrtl.passes.memlib.WritePort" xlink:href="WritePort$.html#inheritance-diagram"><path d="M1209.67,-25C1209.67,-25 1144.33,-25 1144.33,-25 1140.17,-25 1136,-20.83 1136,-16.67 1136,-16.67 1136,-8.33 1136,-8.33 1136,-4.17 1140.17,0 1144.33,0 1144.33,0 1209.67,0 1209.67,0 1213.83,0 1218,-4.17 1218,-8.33 1218,-8.33 1218,-16.67 1218,-16.67 1218,-20.83 1213.83,-25 1209.67,-25" stroke="#103a51" fill="#103a51"></path><image xlink:href="../../../lib/object_diagram.png" y="-19.5" x="1146" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="1167" text-anchor="start">WritePort</text></a></g></g><!-- node11 --><g class="node object" id="graph1_11"><g id="a_object|graph1_11"><a xlink:title="firrtl.passes.memlib.ReadPort" xlink:href="ReadPort$.html#inheritance-diagram"><path d="M1309.67,-25C1309.67,-25 1244.33,-25 1244.33,-25 1240.17,-25 1236,-20.83 1236,-16.67 1236,-16.67 1236,-8.33 1236,-8.33 1236,-4.17 1240.17,0 1244.33,0 1244.33,0 1309.67,0 1309.67,0 1313.83,0 1318,-4.17 1318,-8.33 1318,-8.33 1318,-16.67 1318,-16.67 1318,-20.83 1313.83,-25 1309.67,-25" stroke="#103a51" fill="#103a51"></path><image xlink:href="../../../lib/object_diagram.png" y="-19.5" x="1246" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-10.1" x="1267" text-anchor="start">ReadPort</text></a></g></g><!-- node12 --><g class="node class" id="graph1_12"><g id="a_class|graph1_12"><a xlink:title="firrtl.passes.memlib.MemPort" xlink:href="MemPort.html#inheritance-diagram"><path d="M1093.17,-86C1093.17,-86 1028.83,-86 1028.83,-86 1024.67,-86 1020.5,-81.83 1020.5,-77.67 1020.5,-77.67 1020.5,-69.33 1020.5,-69.33 1020.5,-65.17 1024.67,-61 1028.83,-61 1028.83,-61 1093.17,-61 1093.17,-61 1097.33,-61 1101.5,-65.17 1101.5,-69.33 1101.5,-69.33 1101.5,-77.67 1101.5,-77.67 1101.5,-81.83 1097.33,-86 1093.17,-86" stroke="#418565" fill="#418565"></path><image xlink:href="../../../lib/class_diagram.png" y="-80.5" x="1031" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-71.1" x="1052" text-anchor="start">MemPort</text></a></g></g><!-- node12&#45;&gt;node7 --><g class="edge inheritance" id="graph1_12_7"><g id="a_inheritance|graph1_12_7"><a xlink:title="MaskedReadWritePort is a subtype of MemPort"><path d="M1013.37,-61.85C966.89,-51.47 896.4,-35.71 848.61,-25.03" stroke="#d4d4d4" fill="none"></path><polygon points="1012.96,-64.27 1020.33,-63.41 1014.03,-59.49 1012.96,-64.27" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node12&#45;&gt;node8 --><g class="edge inheritance" id="graph1_12_8"><g id="a_inheritance|graph1_12_8"><a xlink:title="ReadWritePort is a subtype of MemPort"><path d="M1029.71,-57.96C1007.98,-47.87 979.41,-34.6 959.16,-25.19" stroke="#d4d4d4" fill="none"></path><polygon points="1028.83,-60.26 1036.21,-60.98 1030.9,-55.81 1028.83,-60.26" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node12&#45;&gt;node9 --><g class="edge inheritance" id="graph1_12_9"><g id="a_inheritance|graph1_12_9"><a xlink:title="MaskedWritePort is a subtype of MemPort"><path d="M1061,-53.76C1061,-44.37 1061,-33.29 1061,-25.13" stroke="#d4d4d4" fill="none"></path><polygon points="1058.55,-53.84 1061,-60.84 1063.45,-53.84 1058.55,-53.84" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node12&#45;&gt;node10 --><g class="edge inheritance" id="graph1_12_10"><g id="a_inheritance|graph1_12_10"><a xlink:title="WritePort is a subtype of MemPort"><path d="M1090.1,-57.7C1109.88,-47.64 1135.68,-34.52 1154.02,-25.19" stroke="#d4d4d4" fill="none"></path><polygon points="1088.77,-55.63 1083.64,-60.98 1090.99,-59.99 1088.77,-55.63" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node12&#45;&gt;node11 --><g class="edge inheritance" id="graph1_12_11"><g id="a_inheritance|graph1_12_11"><a xlink:title="ReadPort is a subtype of MemPort"><path d="M1108.56,-59.51C1146.65,-49.11 1199.53,-34.66 1235.82,-24.75" stroke="#d4d4d4" fill="none"></path><polygon points="1107.73,-57.19 1101.63,-61.4 1109.03,-61.92 1107.73,-57.19" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
+                <div id="diagram-controls" class="hiddenContent">
+                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
+                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
+                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
+                </div>
+              </div></div>
         
 
       <div id="mbrsel">
@@ -379,7 +389,7 @@
               <ol><li name="firrtl.passes.memlib.ConfWriter" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ConfWriterextendsAnyRef"></a><a id="ConfWriter:ConfWriter"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#ConfWriterextendsAnyRef" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/ConfWriter.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -388,14 +398,14 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="ConfWriter.html"><span class="name">ConfWriter</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="ConfWriter.html"><span class="name">ConfWriter</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
     </li><li name="firrtl.passes.memlib.Config" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ConfigextendsProductwithSerializable"></a><a id="Config:Config"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#ConfigextendsProductwithSerializable" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/Config.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -404,14 +414,14 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="Config.html"><span class="name">Config</span></a><span class="params">(<span name="pin">pin: <a href="Pin.html" class="extype" name="firrtl.passes.memlib.Pin">Pin</a></span>, <span name="source">source: <a href="Source.html" class="extype" name="firrtl.passes.memlib.Source">Source</a></span>, <span name="top">top: <a href="Top.html" class="extype" name="firrtl.passes.memlib.Top">Top</a></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="Config.html"><span class="name">Config</span></a><span class="params">(<span name="pin">pin: <a href="Pin.html" class="extype" name="firrtl.passes.memlib.Pin">Pin</a></span>, <span name="source">source: <a href="Source.html" class="extype" name="firrtl.passes.memlib.Source">Source</a></span>, <span name="top">top: <a href="Top.html" class="extype" name="firrtl.passes.memlib.Top">Top</a></span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
     </li><li name="firrtl.passes.memlib.CreateMemoryAnnotations" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="CreateMemoryAnnotationsextendsTransform"></a><a id="CreateMemoryAnnotations:CreateMemoryAnnotations"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#CreateMemoryAnnotationsextendsTransform" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/CreateMemoryAnnotations.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -427,7 +437,7 @@
     </li><li name="firrtl.passes.memlib.DefAnnotatedMemory" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="DefAnnotatedMemoryextendsStatementwithIsDeclarationwithProductwithSerializable"></a><a id="DefAnnotatedMemory:DefAnnotatedMemory"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#DefAnnotatedMemoryextendsStatementwithIsDeclarationwithProductwithSerializable" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/DefAnnotatedMemory.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -436,14 +446,14 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="DefAnnotatedMemory.html"><span class="name">DefAnnotatedMemory</span></a><span class="params">(<span name="info">info: <a href="../../ir/Info.html" class="extype" name="firrtl.ir.Info">Info</a></span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dataType">dataType: <a href="../../ir/Type.html" class="extype" name="firrtl.ir.Type">Type</a></span>, <span name="depth">depth: <span class="extype" name="scala.BigInt">BigInt</span></span>, <span name="writeLatency">writeLatency: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="readLatency">readLatency: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="readers">readers: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="writers">writers: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="readwriters">readwriters: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="readUnderWrite">readUnderWrite: <a href="http://www.scala-lang.org/api/2.12.6/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="maskGran">maskGran: <a href="http://www.scala-lang.org/api/2.12.6/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.BigInt">BigInt</span>]</span>, <span name="memRef">memRef: <a href="http://www.scala-lang.org/api/2.12.6/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>)]</span>)</span><span class="result"> extends <a href="../../ir/Statement.html" class="extype" name="firrtl.ir.Statement">Statement</a> with <a href="../../ir/IsDeclaration.html" class="extype" name="firrtl.ir.IsDeclaration">IsDeclaration</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="DefAnnotatedMemory.html"><span class="name">DefAnnotatedMemory</span></a><span class="params">(<span name="info">info: <a href="../../ir/Info.html" class="extype" name="firrtl.ir.Info">Info</a></span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dataType">dataType: <a href="../../ir/Type.html" class="extype" name="firrtl.ir.Type">Type</a></span>, <span name="depth">depth: <span class="extype" name="scala.BigInt">BigInt</span></span>, <span name="writeLatency">writeLatency: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="readLatency">readLatency: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="readers">readers: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="writers">writers: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="readwriters">readwriters: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="readUnderWrite">readUnderWrite: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="maskGran">maskGran: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.BigInt">BigInt</span>]</span>, <span name="memRef">memRef: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[(<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>)]</span>)</span><span class="result"> extends <a href="../../ir/Statement.html" class="extype" name="firrtl.ir.Statement">Statement</a> with <a href="../../ir/IsDeclaration.html" class="extype" name="firrtl.ir.IsDeclaration">IsDeclaration</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
     </li><li name="firrtl.passes.memlib.InferReadWrite" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="InferReadWriteextendsTransformwithSeqTransformBasedwithHasShellOptions"></a><a id="InferReadWrite:InferReadWrite"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#InferReadWriteextendsTransformwithSeqTransformBasedwithHasShellOptions" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/InferReadWrite.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -459,7 +469,7 @@
     </li><li name="firrtl.passes.memlib.MemConf" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="MemConfextendsProductwithSerializable"></a><a id="MemConf:MemConf"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#MemConfextendsProductwithSerializable" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/MemConf.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -468,14 +478,14 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="MemConf.html"><span class="name">MemConf</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="depth">depth: <span class="extype" name="scala.BigInt">BigInt</span></span>, <span name="width">width: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="ports">ports: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="MemPort.html" class="extype" name="firrtl.passes.memlib.MemPort">MemPort</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>, <span name="maskGranularity">maskGranularity: <a href="http://www.scala-lang.org/api/2.12.6/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="MemConf.html"><span class="name">MemConf</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="depth">depth: <span class="extype" name="scala.BigInt">BigInt</span></span>, <span name="width">width: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="ports">ports: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="MemPort.html" class="extype" name="firrtl.passes.memlib.MemPort">MemPort</a>, <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>, <span name="maskGranularity">maskGranularity: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
     </li><li name="firrtl.passes.memlib.MemLibOptions" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="MemLibOptionsextendsRegisteredLibrary"></a><a id="MemLibOptions:MemLibOptions"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#MemLibOptionsextendsRegisteredLibrary" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/MemLibOptions.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -491,7 +501,7 @@
     </li><li name="firrtl.passes.memlib.MemPort" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="MemPortextendsAnyRef"></a><a id="MemPort:MemPort"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#MemPortextendsAnyRef" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/MemPort.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -500,14 +510,14 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="MemPort.html"><span class="name">MemPort</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="MemPort.html"><span class="name">MemPort</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
     </li><li name="firrtl.passes.memlib.NoDedupMemAnnotation" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="NoDedupMemAnnotationextendsSingleTargetAnnotation[firrtl.annotations.ComponentName]withProductwithSerializable"></a><a id="NoDedupMemAnnotation:NoDedupMemAnnotation"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#NoDedupMemAnnotationextendsSingleTargetAnnotation[firrtl.annotations.ComponentName]withProductwithSerializable" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/NoDedupMemAnnotation.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -516,14 +526,14 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="A component, e.g." href="NoDedupMemAnnotation.html"><span class="name">NoDedupMemAnnotation</span></a><span class="params">(<span name="target">target: <a href="../../annotations/ComponentName.html" class="extype" name="firrtl.annotations.ComponentName">ComponentName</a></span>)</span><span class="result"> extends <a href="../../annotations/SingleTargetAnnotation.html" class="extype" name="firrtl.annotations.SingleTargetAnnotation">SingleTargetAnnotation</a>[<a href="../../annotations/ComponentName.html" class="extype" name="firrtl.annotations.ComponentName">ComponentName</a>] with <a href="http://www.scala-lang.org/api/2.12.6/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="A component, e.g." href="NoDedupMemAnnotation.html"><span class="name">NoDedupMemAnnotation</span></a><span class="params">(<span name="target">target: <a href="../../annotations/ComponentName.html" class="extype" name="firrtl.annotations.ComponentName">ComponentName</a></span>)</span><span class="result"> extends <a href="../../annotations/SingleTargetAnnotation.html" class="extype" name="firrtl.annotations.SingleTargetAnnotation">SingleTargetAnnotation</a>[<a href="../../annotations/ComponentName.html" class="extype" name="firrtl.annotations.ComponentName">ComponentName</a>] with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       <p class="shortcomment cmt">A component, e.g.</p><div class="fullcomment"><div class="comment cmt"><p>A component, e.g. register etc. Must be declared only once under the TopAnnotation</p></div></div>
     </li><li name="firrtl.passes.memlib.PassOption" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="PassOptionextendsAnyRef"></a><a id="PassOption:PassOption"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#PassOptionextendsAnyRef" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/PassOption.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -532,14 +542,14 @@
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="" href="PassOption.html"><span class="name">PassOption</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="PassOption.html"><span class="name">PassOption</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
     </li><li name="firrtl.passes.memlib.Pin" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="PinextendsProductwithSerializable"></a><a id="Pin:Pin"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#PinextendsProductwithSerializable" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/Pin.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -548,14 +558,14 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="Pin.html"><span class="name">Pin</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="Pin.html"><span class="name">Pin</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
     </li><li name="firrtl.passes.memlib.PinAnnotation" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="PinAnnotationextendsNoTargetAnnotationwithProductwithSerializable"></a><a id="PinAnnotation:PinAnnotation"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#PinAnnotationextendsNoTargetAnnotationwithProductwithSerializable" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/PinAnnotation.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -564,14 +574,14 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="Annotates the name of the pins to add for WiringTransform" href="PinAnnotation.html"><span class="name">PinAnnotation</span></a><span class="params">(<span name="pins">pins: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="../../annotations/NoTargetAnnotation.html" class="extype" name="firrtl.annotations.NoTargetAnnotation">NoTargetAnnotation</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="Annotates the name of the pins to add for WiringTransform" href="PinAnnotation.html"><span class="name">PinAnnotation</span></a><span class="params">(<span name="pins">pins: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result"> extends <a href="../../annotations/NoTargetAnnotation.html" class="extype" name="firrtl.annotations.NoTargetAnnotation">NoTargetAnnotation</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       <p class="shortcomment cmt">Annotates the name of the pins to add for WiringTransform</p>
     </li><li name="firrtl.passes.memlib.ReplSeqMem" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ReplSeqMemextendsTransformwithHasShellOptions"></a><a id="ReplSeqMem:ReplSeqMem"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#ReplSeqMemextendsTransformwithHasShellOptions" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/ReplSeqMem.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -587,7 +597,7 @@
     </li><li name="firrtl.passes.memlib.ReplSeqMemAnnotation" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ReplSeqMemAnnotationextendsNoTargetAnnotationwithProductwithSerializable"></a><a id="ReplSeqMemAnnotation:ReplSeqMemAnnotation"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#ReplSeqMemAnnotationextendsNoTargetAnnotationwithProductwithSerializable" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/ReplSeqMemAnnotation.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -596,14 +606,14 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="ReplSeqMemAnnotation.html"><span class="name">ReplSeqMemAnnotation</span></a><span class="params">(<span name="inputFileName">inputFileName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="outputConfig">outputConfig: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="../../annotations/NoTargetAnnotation.html" class="extype" name="firrtl.annotations.NoTargetAnnotation">NoTargetAnnotation</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="ReplSeqMemAnnotation.html"><span class="name">ReplSeqMemAnnotation</span></a><span class="params">(<span name="inputFileName">inputFileName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="outputConfig">outputConfig: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="../../annotations/NoTargetAnnotation.html" class="extype" name="firrtl.annotations.NoTargetAnnotation">NoTargetAnnotation</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
     </li><li name="firrtl.passes.memlib.ReplaceMemMacros" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ReplaceMemMacrosextendsTransform"></a><a id="ReplaceMemMacros:ReplaceMemMacros"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#ReplaceMemMacrosextendsTransform" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/ReplaceMemMacros.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -622,7 +632,7 @@ Creates the minimum # of black boxes needed by the design.
     </li><li name="firrtl.passes.memlib.ResolveMemoryReference" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ResolveMemoryReferenceextendsTransform"></a><a id="ResolveMemoryReference:ResolveMemoryReference"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#ResolveMemoryReferenceextendsTransform" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/ResolveMemoryReference.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -639,7 +649,7 @@ Creates the minimum # of black boxes needed by the design.
     </li><li name="firrtl.passes.memlib.SimpleMidTransform" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="SimpleMidTransformextendsSimpleTransform"></a><a id="SimpleMidTransform:SimpleMidTransform"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#SimpleMidTransformextendsSimpleTransform" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/SimpleMidTransform.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -655,7 +665,7 @@ Creates the minimum # of black boxes needed by the design.
     </li><li name="firrtl.passes.memlib.SimpleTransform" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="SimpleTransformextendsTransform"></a><a id="SimpleTransform:SimpleTransform"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#SimpleTransformextendsTransform" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/SimpleTransform.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -671,7 +681,7 @@ Creates the minimum # of black boxes needed by the design.
     </li><li name="firrtl.passes.memlib.Source" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="SourceextendsProductwithSerializable"></a><a id="Source:Source"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#SourceextendsProductwithSerializable" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/Source.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -680,14 +690,14 @@ Creates the minimum # of black boxes needed by the design.
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="Source.html"><span class="name">Source</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="module">module: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="Source.html"><span class="name">Source</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="module">module: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
     </li><li name="firrtl.passes.memlib.Top" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="TopextendsProductwithSerializable"></a><a id="Top:Top"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#TopextendsProductwithSerializable" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/Top.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -696,14 +706,14 @@ Creates the minimum # of black boxes needed by the design.
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="Top.html"><span class="name">Top</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="Top.html"><span class="name">Top</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
     </li><li name="firrtl.passes.memlib.YamlFileReader" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="YamlFileReaderextendsAnyRef"></a><a id="YamlFileReader:YamlFileReader"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#YamlFileReaderextendsAnyRef" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/YamlFileReader.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -712,14 +722,14 @@ Creates the minimum # of black boxes needed by the design.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="YamlFileReader.html"><span class="name">YamlFileReader</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="YamlFileReader.html"><span class="name">YamlFileReader</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
     </li><li name="firrtl.passes.memlib.YamlFileWriter" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="YamlFileWriterextendsAnyRef"></a><a id="YamlFileWriter:YamlFileWriter"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#YamlFileWriterextendsAnyRef" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/YamlFileWriter.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -728,7 +738,7 @@ Creates the minimum # of black boxes needed by the design.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="YamlFileWriter.html"><span class="name">YamlFileWriter</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="YamlFileWriter.html"><span class="name">YamlFileWriter</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -743,7 +753,7 @@ Creates the minimum # of black boxes needed by the design.
                 <li name="firrtl.passes.memlib.AnalysisUtils" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="AnalysisUtils"></a><a id="AnalysisUtils:AnalysisUtils"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#AnalysisUtils" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/AnalysisUtils$.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -759,7 +769,7 @@ Creates the minimum # of black boxes needed by the design.
     </li><li name="firrtl.passes.memlib.CustomYAMLProtocol" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="CustomYAMLProtocol"></a><a id="CustomYAMLProtocol:CustomYAMLProtocol"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#CustomYAMLProtocol" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/CustomYAMLProtocol$.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -775,7 +785,7 @@ Creates the minimum # of black boxes needed by the design.
     </li><li name="firrtl.passes.memlib.DefAnnotatedMemory" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="DefAnnotatedMemory"></a><a id="DefAnnotatedMemory:DefAnnotatedMemory"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#DefAnnotatedMemory" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/DefAnnotatedMemory$.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -784,14 +794,14 @@ Creates the minimum # of black boxes needed by the design.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="DefAnnotatedMemory$.html"><span class="name">DefAnnotatedMemory</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="DefAnnotatedMemory$.html"><span class="name">DefAnnotatedMemory</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
     </li><li name="firrtl.passes.memlib.InferReadWriteAnnotation" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="InferReadWriteAnnotation"></a><a id="InferReadWriteAnnotation:InferReadWriteAnnotation"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#InferReadWriteAnnotation" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/InferReadWriteAnnotation$.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -800,14 +810,14 @@ Creates the minimum # of black boxes needed by the design.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="InferReadWriteAnnotation$.html"><span class="name">InferReadWriteAnnotation</span></a><span class="result"> extends <a href="../../annotations/NoTargetAnnotation.html" class="extype" name="firrtl.annotations.NoTargetAnnotation">NoTargetAnnotation</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="InferReadWriteAnnotation$.html"><span class="name">InferReadWriteAnnotation</span></a><span class="result"> extends <a href="../../annotations/NoTargetAnnotation.html" class="extype" name="firrtl.annotations.NoTargetAnnotation">NoTargetAnnotation</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
     </li><li name="firrtl.passes.memlib.InferReadWritePass" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="InferReadWritePass"></a><a id="InferReadWritePass:InferReadWritePass"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#InferReadWritePass" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/InferReadWritePass$.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -823,7 +833,7 @@ Creates the minimum # of black boxes needed by the design.
     </li><li name="firrtl.passes.memlib.InputConfigFileName" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="InputConfigFileName"></a><a id="InputConfigFileName:InputConfigFileName"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#InputConfigFileName" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/InputConfigFileName$.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -832,14 +842,14 @@ Creates the minimum # of black boxes needed by the design.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="InputConfigFileName$.html"><span class="name">InputConfigFileName</span></a><span class="result"> extends <a href="PassOption.html" class="extype" name="firrtl.passes.memlib.PassOption">PassOption</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="InputConfigFileName$.html"><span class="name">InputConfigFileName</span></a><span class="result"> extends <a href="PassOption.html" class="extype" name="firrtl.passes.memlib.PassOption">PassOption</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
     </li><li name="firrtl.passes.memlib.MaskedReadWritePort" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="MaskedReadWritePort"></a><a id="MaskedReadWritePort:MaskedReadWritePort"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#MaskedReadWritePort" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/MaskedReadWritePort$.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -848,14 +858,14 @@ Creates the minimum # of black boxes needed by the design.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="MaskedReadWritePort$.html"><span class="name">MaskedReadWritePort</span></a><span class="result"> extends <a href="MemPort.html" class="extype" name="firrtl.passes.memlib.MemPort">MemPort</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="MaskedReadWritePort$.html"><span class="name">MaskedReadWritePort</span></a><span class="result"> extends <a href="MemPort.html" class="extype" name="firrtl.passes.memlib.MemPort">MemPort</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
     </li><li name="firrtl.passes.memlib.MaskedWritePort" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="MaskedWritePort"></a><a id="MaskedWritePort:MaskedWritePort"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#MaskedWritePort" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/MaskedWritePort$.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -864,14 +874,14 @@ Creates the minimum # of black boxes needed by the design.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="MaskedWritePort$.html"><span class="name">MaskedWritePort</span></a><span class="result"> extends <a href="MemPort.html" class="extype" name="firrtl.passes.memlib.MemPort">MemPort</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="MaskedWritePort$.html"><span class="name">MaskedWritePort</span></a><span class="result"> extends <a href="MemPort.html" class="extype" name="firrtl.passes.memlib.MemPort">MemPort</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
     </li><li name="firrtl.passes.memlib.MemConf" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="MemConf"></a><a id="MemConf:MemConf"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#MemConf" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/MemConf$.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -880,14 +890,14 @@ Creates the minimum # of black boxes needed by the design.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="MemConf$.html"><span class="name">MemConf</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="MemConf$.html"><span class="name">MemConf</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
     </li><li name="firrtl.passes.memlib.MemPort" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="MemPort"></a><a id="MemPort:MemPort"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#MemPort" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/MemPort$.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -903,7 +913,7 @@ Creates the minimum # of black boxes needed by the design.
     </li><li name="firrtl.passes.memlib.MemTransformUtils" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="MemTransformUtils"></a><a id="MemTransformUtils:MemTransformUtils"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#MemTransformUtils" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/MemTransformUtils$.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -919,7 +929,7 @@ Creates the minimum # of black boxes needed by the design.
     </li><li name="firrtl.passes.memlib.OutputConfigFileName" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="OutputConfigFileName"></a><a id="OutputConfigFileName:OutputConfigFileName"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#OutputConfigFileName" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/OutputConfigFileName$.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -928,14 +938,14 @@ Creates the minimum # of black boxes needed by the design.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="OutputConfigFileName$.html"><span class="name">OutputConfigFileName</span></a><span class="result"> extends <a href="PassOption.html" class="extype" name="firrtl.passes.memlib.PassOption">PassOption</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="OutputConfigFileName$.html"><span class="name">OutputConfigFileName</span></a><span class="result"> extends <a href="PassOption.html" class="extype" name="firrtl.passes.memlib.PassOption">PassOption</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
     </li><li name="firrtl.passes.memlib.PassCircuitName" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="PassCircuitName"></a><a id="PassCircuitName:PassCircuitName"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#PassCircuitName" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/PassCircuitName$.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -944,14 +954,14 @@ Creates the minimum # of black boxes needed by the design.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="PassCircuitName$.html"><span class="name">PassCircuitName</span></a><span class="result"> extends <a href="PassOption.html" class="extype" name="firrtl.passes.memlib.PassOption">PassOption</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="PassCircuitName$.html"><span class="name">PassCircuitName</span></a><span class="result"> extends <a href="PassOption.html" class="extype" name="firrtl.passes.memlib.PassOption">PassOption</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
     </li><li name="firrtl.passes.memlib.PassConfigUtil" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="PassConfigUtil"></a><a id="PassConfigUtil:PassConfigUtil"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#PassConfigUtil" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/PassConfigUtil$.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -967,7 +977,7 @@ Creates the minimum # of black boxes needed by the design.
     </li><li name="firrtl.passes.memlib.PassModuleName" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="PassModuleName"></a><a id="PassModuleName:PassModuleName"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#PassModuleName" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/PassModuleName$.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -976,14 +986,14 @@ Creates the minimum # of black boxes needed by the design.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="PassModuleName$.html"><span class="name">PassModuleName</span></a><span class="result"> extends <a href="PassOption.html" class="extype" name="firrtl.passes.memlib.PassOption">PassOption</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="PassModuleName$.html"><span class="name">PassModuleName</span></a><span class="result"> extends <a href="PassOption.html" class="extype" name="firrtl.passes.memlib.PassOption">PassOption</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
     </li><li name="firrtl.passes.memlib.ReadPort" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ReadPort"></a><a id="ReadPort:ReadPort"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#ReadPort" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/ReadPort$.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -992,14 +1002,14 @@ Creates the minimum # of black boxes needed by the design.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="ReadPort$.html"><span class="name">ReadPort</span></a><span class="result"> extends <a href="MemPort.html" class="extype" name="firrtl.passes.memlib.MemPort">MemPort</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="ReadPort$.html"><span class="name">ReadPort</span></a><span class="result"> extends <a href="MemPort.html" class="extype" name="firrtl.passes.memlib.MemPort">MemPort</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
     </li><li name="firrtl.passes.memlib.ReadWritePort" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ReadWritePort"></a><a id="ReadWritePort:ReadWritePort"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#ReadWritePort" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/ReadWritePort$.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1008,14 +1018,14 @@ Creates the minimum # of black boxes needed by the design.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="ReadWritePort$.html"><span class="name">ReadWritePort</span></a><span class="result"> extends <a href="MemPort.html" class="extype" name="firrtl.passes.memlib.MemPort">MemPort</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="ReadWritePort$.html"><span class="name">ReadWritePort</span></a><span class="result"> extends <a href="MemPort.html" class="extype" name="firrtl.passes.memlib.MemPort">MemPort</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
     </li><li name="firrtl.passes.memlib.RenameAnnotatedMemoryPorts" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="RenameAnnotatedMemoryPorts"></a><a id="RenameAnnotatedMemoryPorts:RenameAnnotatedMemoryPorts"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#RenameAnnotatedMemoryPorts" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/RenameAnnotatedMemoryPorts$.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1032,7 +1042,7 @@ Creates the minimum # of black boxes needed by the design.
     </li><li name="firrtl.passes.memlib.ReplSeqMemAnnotation" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ReplSeqMemAnnotation"></a><a id="ReplSeqMemAnnotation:ReplSeqMemAnnotation"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#ReplSeqMemAnnotation" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/ReplSeqMemAnnotation$.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1041,14 +1051,14 @@ Creates the minimum # of black boxes needed by the design.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="ReplSeqMemAnnotation$.html"><span class="name">ReplSeqMemAnnotation</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="ReplSeqMemAnnotation$.html"><span class="name">ReplSeqMemAnnotation</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
     </li><li name="firrtl.passes.memlib.ResolveMaskGranularity" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ResolveMaskGranularity"></a><a id="ResolveMaskGranularity:ResolveMaskGranularity"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#ResolveMaskGranularity" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/ResolveMaskGranularity$.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1068,7 +1078,7 @@ TODO(shunshou): Add floorplan info?
     </li><li name="firrtl.passes.memlib.ToMemIR" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ToMemIR"></a><a id="ToMemIR:ToMemIR"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#ToMemIR" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/ToMemIR$.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1086,7 +1096,7 @@ Requirements for macro replacement:</p><ul><li>read latency and write latency of
     </li><li name="firrtl.passes.memlib.VerilogMemDelays" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="VerilogMemDelays"></a><a id="VerilogMemDelays:VerilogMemDelays"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#VerilogMemDelays" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/VerilogMemDelays$.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1102,7 +1112,7 @@ Requirements for macro replacement:</p><ul><li>read latency and write latency of
     </li><li name="firrtl.passes.memlib.WritePort" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="WritePort"></a><a id="WritePort:WritePort"></a>
       <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/index.html#WritePort" title="Permalink">
+      <a href="../../../firrtl/passes/memlib/WritePort$.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1111,7 +1121,7 @@ Requirements for macro replacement:</p><ul><li>read latency and write latency of
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="WritePort$.html"><span class="name">WritePort</span></a><span class="result"> extends <a href="MemPort.html" class="extype" name="firrtl.passes.memlib.MemPort">MemPort</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="http://www.scala-lang.org/api/2.12.6/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="WritePort$.html"><span class="name">WritePort</span></a><span class="result"> extends <a href="MemPort.html" class="extype" name="firrtl.passes.memlib.MemPort">MemPort</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       

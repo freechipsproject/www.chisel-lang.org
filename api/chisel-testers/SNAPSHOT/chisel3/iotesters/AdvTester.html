@@ -256,7 +256,7 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">AdvTester</span><span class="tparams">[<span name="T">+T &lt;: <a href="../index.html#Module=chisel3.experimental.LegacyModule" class="extmbr" name="chisel3.Module">Module</a></span>]</span><span class="result"> extends <a href="PeekPokeTester.html" class="extype" name="chisel3.iotesters.PeekPokeTester">PeekPokeTester</a>[<span class="extype" name="chisel3.iotesters.AdvTester.T">T</span>]</span>
+        <span class="name">AdvTester</span><span class="tparams">[<span name="T">+T &lt;: <a href="../index.html#Module=chisel3.internal.LegacyModule" class="extmbr" name="chisel3.Module">Module</a></span>]</span><span class="result"> extends <a href="PeekPokeTester.html" class="extype" name="chisel3.iotesters.PeekPokeTester">PeekPokeTester</a>[<span class="extype" name="chisel3.iotesters.AdvTester.T">T</span>]</span>
       </span>
       </h4>
 
@@ -266,7 +266,17 @@
             Linear Supertypes
           </span>
           <div class="superTypes hiddenContent"><a href="PeekPokeTester.html" class="extype" name="chisel3.iotesters.PeekPokeTester">PeekPokeTester</a>[<span class="extype" name="chisel3.iotesters.AdvTester.T">T</span>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
-        </div></div>
+        </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
+                <span class="toggle diagram-link">
+                  Type Hierarchy
+                </span>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 154.00 118.00" height="118pt" width="154pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 114)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-114 150,-114 150,4 -4,4" stroke="transparent" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this class" id="graph1_0"><g id="a_this class|graph1_0"><a xlink:title="chisel3.iotesters.AdvTester (this class)" xlink:href="#inheritance-diagram"><path d="M113.67,-49C113.67,-49 32.33,-49 32.33,-49 28.17,-49 24,-44.83 24,-40.67 24,-40.67 24,-32.33 24,-32.33 24,-28.17 28.17,-24 32.33,-24 32.33,-24 113.67,-24 113.67,-24 117.83,-24 122,-28.17 122,-32.33 122,-32.33 122,-40.67 122,-40.67 122,-44.83 117.83,-49 113.67,-49" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-43.5" x="34" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-34.1" x="55" text-anchor="start">AdvTester[T]</text></a></g></g><!-- node1 --><g class="node class" id="graph1_1"><g id="a_class|graph1_1"><a xlink:title="chisel3.iotesters.PeekPokeTester" xlink:href="PeekPokeTester.html#inheritance-diagram"><path d="M126.17,-110C126.17,-110 19.83,-110 19.83,-110 15.67,-110 11.5,-105.83 11.5,-101.67 11.5,-101.67 11.5,-93.33 11.5,-93.33 11.5,-89.17 15.67,-85 19.83,-85 19.83,-85 126.17,-85 126.17,-85 130.33,-85 134.5,-89.17 134.5,-93.33 134.5,-93.33 134.5,-101.67 134.5,-101.67 134.5,-105.83 130.33,-110 126.17,-110" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-104.5" x="22" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-95.1" x="43" text-anchor="start">PeekPokeTester[T]</text></a></g></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph1_1_0"><g id="a_inheritance|graph1_1_0"><a xlink:title="AdvTester[T] is a subtype of PeekPokeTester[T]"><path d="M73,-77.76C73,-68.37 73,-57.29 73,-49.13" stroke="#d4d4d4" fill="none"></path><polygon points="70.55,-77.84 73,-84.84 75.45,-77.84 70.55,-77.84" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
+                <div id="diagram-controls" class="hiddenContent">
+                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
+                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
+                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
+                </div>
+              </div></div>
         
 
       <div id="mbrsel">
@@ -719,9 +729,9 @@
 TODO: deal with Vecs
 </p></div><dl class="paramcmts block"><dt class="param">signal</dt><dd class="cmt"><p>the Bundle to &quot;expect&quot;</p></dd><dt class="param">expected</dt><dd class="cmt"><p>a map of signal names (&quot;dotted&quot; Bundle notation) to BigInt values</p></dd><dt>returns</dt><dd class="cmt"><p>true if the specified values match, false otherwise.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PeekPokeTester.html" class="extype" name="chisel3.iotesters.PeekPokeTester">PeekPokeTester</a></dd></dl></div>
     </li><li name="chisel3.iotesters.PeekPokeTester#expect" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="expect(signal:chisel3.core.Aggregate,expected:IndexedSeq[BigInt]):Boolean"></a><a id="expect(core.Aggregate,IndexedSeq[BigInt]):Boolean"></a>
+      <a id="expect(signal:chisel3.Aggregate,expected:IndexedSeq[BigInt]):Boolean"></a><a id="expect(Aggregate,IndexedSeq[BigInt]):Boolean"></a>
       <span class="permalink">
-      <a href="../../chisel3/iotesters/AdvTester.html#expect(signal:chisel3.core.Aggregate,expected:IndexedSeq[BigInt]):Boolean" title="Permalink">
+      <a href="../../chisel3/iotesters/AdvTester.html#expect(signal:chisel3.Aggregate,expected:IndexedSeq[BigInt]):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -730,14 +740,14 @@ TODO: deal with Vecs
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">expect</span><span class="params">(<span name="signal">signal: <span class="extype" name="chisel3.core.Aggregate">core.Aggregate</span></span>, <span name="expected">expected: <span class="extype" name="scala.IndexedSeq">IndexedSeq</span>[<span class="extype" name="scala.BigInt">BigInt</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">expect</span><span class="params">(<span name="signal">signal: <span class="extype" name="chisel3.Aggregate">Aggregate</span></span>, <span name="expected">expected: <span class="extype" name="scala.IndexedSeq">IndexedSeq</span>[<span class="extype" name="scala.BigInt">BigInt</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PeekPokeTester.html" class="extype" name="chisel3.iotesters.PeekPokeTester">PeekPokeTester</a></dd></dl></div>
     </li><li name="chisel3.iotesters.PeekPokeTester#expect" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="expect[T&lt;:chisel3.core.Element](signal:T,expected:Int,msg:=&gt;String)(implicitevidence$15:chisel3.iotesters.Pokeable[T]):Boolean"></a><a id="expect[T&lt;:core.Element](T,Int,⇒String)(Pokeable[T]):Boolean"></a>
+      <a id="expect[T&lt;:chisel3.Element](signal:T,expected:Int,msg:=&gt;String)(implicitevidence$15:chisel3.iotesters.Pokeable[T]):Boolean"></a><a id="expect[T&lt;:Element](T,Int,⇒String)(Pokeable[T]):Boolean"></a>
       <span class="permalink">
-      <a href="../../chisel3/iotesters/AdvTester.html#expect[T&lt;:chisel3.core.Element](signal:T,expected:Int,msg:=&gt;String)(implicitevidence$15:chisel3.iotesters.Pokeable[T]):Boolean" title="Permalink">
+      <a href="../../chisel3/iotesters/AdvTester.html#expect[T&lt;:chisel3.Element](signal:T,expected:Int,msg:=&gt;String)(implicitevidence$15:chisel3.iotesters.Pokeable[T]):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -746,14 +756,14 @@ TODO: deal with Vecs
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">expect</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="chisel3.core.Element">core.Element</span></span>]</span><span class="params">(<span name="signal">signal: <span class="extype" name="chisel3.iotesters.PeekPokeTester.expect.T">T</span></span>, <span name="expected">expected: <span class="extype" name="scala.Int">Int</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="Pokeable.html" class="extype" name="chisel3.iotesters.Pokeable">Pokeable</a>[<span class="extype" name="chisel3.iotesters.PeekPokeTester.expect.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">expect</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="chisel3.Element">Element</span></span>]</span><span class="params">(<span name="signal">signal: <span class="extype" name="chisel3.iotesters.PeekPokeTester.expect.T">T</span></span>, <span name="expected">expected: <span class="extype" name="scala.Int">Int</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="Pokeable.html" class="extype" name="chisel3.iotesters.Pokeable">Pokeable</a>[<span class="extype" name="chisel3.iotesters.PeekPokeTester.expect.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PeekPokeTester.html" class="extype" name="chisel3.iotesters.PeekPokeTester">PeekPokeTester</a></dd></dl></div>
     </li><li name="chisel3.iotesters.PeekPokeTester#expect" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="expect[T&lt;:chisel3.core.Element](signal:T,expected:BigInt,msg:=&gt;String)(implicitevidence$14:chisel3.iotesters.Pokeable[T]):Boolean"></a><a id="expect[T&lt;:core.Element](T,BigInt,⇒String)(Pokeable[T]):Boolean"></a>
+      <a id="expect[T&lt;:chisel3.Element](signal:T,expected:BigInt,msg:=&gt;String)(implicitevidence$14:chisel3.iotesters.Pokeable[T]):Boolean"></a><a id="expect[T&lt;:Element](T,BigInt,⇒String)(Pokeable[T]):Boolean"></a>
       <span class="permalink">
-      <a href="../../chisel3/iotesters/AdvTester.html#expect[T&lt;:chisel3.core.Element](signal:T,expected:BigInt,msg:=&gt;String)(implicitevidence$14:chisel3.iotesters.Pokeable[T]):Boolean" title="Permalink">
+      <a href="../../chisel3/iotesters/AdvTester.html#expect[T&lt;:chisel3.Element](signal:T,expected:BigInt,msg:=&gt;String)(implicitevidence$14:chisel3.iotesters.Pokeable[T]):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -762,7 +772,7 @@ TODO: deal with Vecs
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">expect</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="chisel3.core.Element">core.Element</span></span>]</span><span class="params">(<span name="signal">signal: <span class="extype" name="chisel3.iotesters.PeekPokeTester.expect.T">T</span></span>, <span name="expected">expected: <span class="extype" name="scala.BigInt">BigInt</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="Pokeable.html" class="extype" name="chisel3.iotesters.Pokeable">Pokeable</a>[<span class="extype" name="chisel3.iotesters.PeekPokeTester.expect.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">expect</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="chisel3.Element">Element</span></span>]</span><span class="params">(<span name="signal">signal: <span class="extype" name="chisel3.iotesters.PeekPokeTester.expect.T">T</span></span>, <span name="expected">expected: <span class="extype" name="scala.BigInt">BigInt</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="Pokeable.html" class="extype" name="chisel3.iotesters.Pokeable">Pokeable</a>[<span class="extype" name="chisel3.iotesters.PeekPokeTester.expect.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PeekPokeTester.html" class="extype" name="chisel3.iotesters.PeekPokeTester">PeekPokeTester</a></dd></dl></div>
@@ -907,9 +917,9 @@ TODO: deal with Vecs
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="chisel3.iotesters.AdvTester">AdvTester</a> → <a href="PeekPokeTester.html" class="extype" name="chisel3.iotesters.PeekPokeTester">PeekPokeTester</a></dd></dl></div>
     </li><li name="chisel3.iotesters.PeekPokeTester#int" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="int[T&lt;:chisel3.core.Element](x:T)(implicitevidence$7:chisel3.iotesters.Pokeable[T]):BigInt"></a><a id="int[T&lt;:core.Element](T)(Pokeable[T]):BigInt"></a>
+      <a id="int[T&lt;:chisel3.Element](x:T)(implicitevidence$7:chisel3.iotesters.Pokeable[T]):BigInt"></a><a id="int[T&lt;:Element](T)(Pokeable[T]):BigInt"></a>
       <span class="permalink">
-      <a href="../../chisel3/iotesters/AdvTester.html#int[T&lt;:chisel3.core.Element](x:T)(implicitevidence$7:chisel3.iotesters.Pokeable[T]):BigInt" title="Permalink">
+      <a href="../../chisel3/iotesters/AdvTester.html#int[T&lt;:chisel3.Element](x:T)(implicitevidence$7:chisel3.iotesters.Pokeable[T]):BigInt" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -918,7 +928,7 @@ TODO: deal with Vecs
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">int</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="chisel3.core.Element">core.Element</span></span>]</span><span class="params">(<span name="x">x: <span class="extype" name="chisel3.iotesters.PeekPokeTester.int.T">T</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="Pokeable.html" class="extype" name="chisel3.iotesters.Pokeable">Pokeable</a>[<span class="extype" name="chisel3.iotesters.PeekPokeTester.int.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.BigInt">BigInt</span></span>
+        <span class="name">int</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="chisel3.Element">Element</span></span>]</span><span class="params">(<span name="x">x: <span class="extype" name="chisel3.iotesters.PeekPokeTester.int.T">T</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="Pokeable.html" class="extype" name="chisel3.iotesters.Pokeable">Pokeable</a>[<span class="extype" name="chisel3.iotesters.PeekPokeTester.int.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.BigInt">BigInt</span></span>
       </span>
       
       <p class="shortcomment cmt">Convert Pokeables to BigInt</p><div class="fullcomment"><div class="comment cmt"><p>Convert Pokeables to BigInt</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PeekPokeTester.html" class="extype" name="chisel3.iotesters.PeekPokeTester">PeekPokeTester</a></dd></dl></div>
@@ -1106,9 +1116,9 @@ TODO: deal with Vecs
       <p class="shortcomment cmt">Peek an aggregate (Bundle) signal.</p><div class="fullcomment"><div class="comment cmt"><p>Peek an aggregate (Bundle) signal.
 </p></div><dl class="paramcmts block"><dt class="param">signal</dt><dd class="cmt"><p>the signal to peek</p></dd><dt>returns</dt><dd class="cmt"><p>a map of signal names (&quot;dotted&quot; Bundle) to BigInt values.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PeekPokeTester.html" class="extype" name="chisel3.iotesters.PeekPokeTester">PeekPokeTester</a></dd></dl></div>
     </li><li name="chisel3.iotesters.PeekPokeTester#peek" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="peek(signal:chisel3.core.Aggregate):Seq[BigInt]"></a><a id="peek(core.Aggregate):Seq[BigInt]"></a>
+      <a id="peek(signal:chisel3.Aggregate):Seq[BigInt]"></a><a id="peek(Aggregate):Seq[BigInt]"></a>
       <span class="permalink">
-      <a href="../../chisel3/iotesters/AdvTester.html#peek(signal:chisel3.core.Aggregate):Seq[BigInt]" title="Permalink">
+      <a href="../../chisel3/iotesters/AdvTester.html#peek(signal:chisel3.Aggregate):Seq[BigInt]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1117,14 +1127,14 @@ TODO: deal with Vecs
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">peek</span><span class="params">(<span name="signal">signal: <span class="extype" name="chisel3.core.Aggregate">core.Aggregate</span></span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.BigInt">BigInt</span>]</span>
+        <span class="name">peek</span><span class="params">(<span name="signal">signal: <span class="extype" name="chisel3.Aggregate">Aggregate</span></span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.BigInt">BigInt</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PeekPokeTester.html" class="extype" name="chisel3.iotesters.PeekPokeTester">PeekPokeTester</a></dd></dl></div>
     </li><li name="chisel3.iotesters.PeekPokeTester#peek" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="peek[T&lt;:chisel3.core.Element](signal:T)(implicitevidence$12:chisel3.iotesters.Pokeable[T]):BigInt"></a><a id="peek[T&lt;:core.Element](T)(Pokeable[T]):BigInt"></a>
+      <a id="peek[T&lt;:chisel3.Element](signal:T)(implicitevidence$12:chisel3.iotesters.Pokeable[T]):BigInt"></a><a id="peek[T&lt;:Element](T)(Pokeable[T]):BigInt"></a>
       <span class="permalink">
-      <a href="../../chisel3/iotesters/AdvTester.html#peek[T&lt;:chisel3.core.Element](signal:T)(implicitevidence$12:chisel3.iotesters.Pokeable[T]):BigInt" title="Permalink">
+      <a href="../../chisel3/iotesters/AdvTester.html#peek[T&lt;:chisel3.Element](signal:T)(implicitevidence$12:chisel3.iotesters.Pokeable[T]):BigInt" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1133,7 +1143,7 @@ TODO: deal with Vecs
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">peek</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="chisel3.core.Element">core.Element</span></span>]</span><span class="params">(<span name="signal">signal: <span class="extype" name="chisel3.iotesters.PeekPokeTester.peek.T">T</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="Pokeable.html" class="extype" name="chisel3.iotesters.Pokeable">Pokeable</a>[<span class="extype" name="chisel3.iotesters.PeekPokeTester.peek.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.BigInt">BigInt</span></span>
+        <span class="name">peek</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="chisel3.Element">Element</span></span>]</span><span class="params">(<span name="signal">signal: <span class="extype" name="chisel3.iotesters.PeekPokeTester.peek.T">T</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="Pokeable.html" class="extype" name="chisel3.iotesters.Pokeable">Pokeable</a>[<span class="extype" name="chisel3.iotesters.PeekPokeTester.peek.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.BigInt">BigInt</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PeekPokeTester.html" class="extype" name="chisel3.iotesters.PeekPokeTester">PeekPokeTester</a></dd></dl></div>
@@ -1154,9 +1164,9 @@ TODO: deal with Vecs
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PeekPokeTester.html" class="extype" name="chisel3.iotesters.PeekPokeTester">PeekPokeTester</a></dd></dl></div>
     </li><li name="chisel3.iotesters.PeekPokeTester#peekAt" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="peekAt[TT&lt;:chisel3.core.Element](data:chisel3.Mem[TT],off:Int)(implicitevidence$13:chisel3.iotesters.Pokeable[TT]):BigInt"></a><a id="peekAt[TT&lt;:core.Element](Mem[TT],Int)(Pokeable[TT]):BigInt"></a>
+      <a id="peekAt[TT&lt;:chisel3.Element](data:chisel3.Mem[TT],off:Int)(implicitevidence$13:chisel3.iotesters.Pokeable[TT]):BigInt"></a><a id="peekAt[TT&lt;:Element](Mem[TT],Int)(Pokeable[TT]):BigInt"></a>
       <span class="permalink">
-      <a href="../../chisel3/iotesters/AdvTester.html#peekAt[TT&lt;:chisel3.core.Element](data:chisel3.Mem[TT],off:Int)(implicitevidence$13:chisel3.iotesters.Pokeable[TT]):BigInt" title="Permalink">
+      <a href="../../chisel3/iotesters/AdvTester.html#peekAt[TT&lt;:chisel3.Element](data:chisel3.Mem[TT],off:Int)(implicitevidence$13:chisel3.iotesters.Pokeable[TT]):BigInt" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1165,7 +1175,7 @@ TODO: deal with Vecs
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">peekAt</span><span class="tparams">[<span name="TT">TT &lt;: <span class="extype" name="chisel3.core.Element">core.Element</span></span>]</span><span class="params">(<span name="data">data: <span class="extype" name="chisel3.Mem">Mem</span>[<span class="extype" name="chisel3.iotesters.PeekPokeTester.peekAt.TT">TT</span>]</span>, <span name="off">off: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="Pokeable.html" class="extype" name="chisel3.iotesters.Pokeable">Pokeable</a>[<span class="extype" name="chisel3.iotesters.PeekPokeTester.peekAt.TT">TT</span>]</span>)</span><span class="result">: <span class="extype" name="scala.BigInt">BigInt</span></span>
+        <span class="name">peekAt</span><span class="tparams">[<span name="TT">TT &lt;: <span class="extype" name="chisel3.Element">Element</span></span>]</span><span class="params">(<span name="data">data: <span class="extype" name="chisel3.Mem">Mem</span>[<span class="extype" name="chisel3.iotesters.PeekPokeTester.peekAt.TT">TT</span>]</span>, <span name="off">off: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="Pokeable.html" class="extype" name="chisel3.iotesters.Pokeable">Pokeable</a>[<span class="extype" name="chisel3.iotesters.PeekPokeTester.peekAt.TT">TT</span>]</span>)</span><span class="result">: <span class="extype" name="scala.BigInt">BigInt</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PeekPokeTester.html" class="extype" name="chisel3.iotesters.PeekPokeTester">PeekPokeTester</a></dd></dl></div>
@@ -1202,9 +1212,9 @@ TODO: deal with Vecs
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="chisel3.iotesters.AdvTester">AdvTester</a> → <a href="PeekPokeTester.html" class="extype" name="chisel3.iotesters.PeekPokeTester">PeekPokeTester</a></dd></dl></div>
     </li><li name="chisel3.iotesters.PeekPokeTester#poke" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="poke(signal:chisel3.core.Aggregate,value:IndexedSeq[BigInt]):Unit"></a><a id="poke(core.Aggregate,IndexedSeq[BigInt]):Unit"></a>
+      <a id="poke(signal:chisel3.Aggregate,value:IndexedSeq[BigInt]):Unit"></a><a id="poke(Aggregate,IndexedSeq[BigInt]):Unit"></a>
       <span class="permalink">
-      <a href="../../chisel3/iotesters/AdvTester.html#poke(signal:chisel3.core.Aggregate,value:IndexedSeq[BigInt]):Unit" title="Permalink">
+      <a href="../../chisel3/iotesters/AdvTester.html#poke(signal:chisel3.Aggregate,value:IndexedSeq[BigInt]):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1213,7 +1223,7 @@ TODO: deal with Vecs
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">poke</span><span class="params">(<span name="signal">signal: <span class="extype" name="chisel3.core.Aggregate">core.Aggregate</span></span>, <span name="value">value: <span class="extype" name="scala.IndexedSeq">IndexedSeq</span>[<span class="extype" name="scala.BigInt">BigInt</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">poke</span><span class="params">(<span name="signal">signal: <span class="extype" name="chisel3.Aggregate">Aggregate</span></span>, <span name="value">value: <span class="extype" name="scala.IndexedSeq">IndexedSeq</span>[<span class="extype" name="scala.BigInt">BigInt</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PeekPokeTester.html" class="extype" name="chisel3.iotesters.PeekPokeTester">PeekPokeTester</a></dd></dl></div>
@@ -1235,9 +1245,9 @@ TODO: deal with Vecs
       <p class="shortcomment cmt">Poke a Bundle given a map of elements and values.</p><div class="fullcomment"><div class="comment cmt"><p>Poke a Bundle given a map of elements and values.
 </p></div><dl class="paramcmts block"><dt class="param">signal</dt><dd class="cmt"><p>the bundle to be poked</p></dd><dt class="param">map</dt><dd class="cmt"><p>a map from names (using '.' to delimit bundle elements), to BigInt values</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PeekPokeTester.html" class="extype" name="chisel3.iotesters.PeekPokeTester">PeekPokeTester</a></dd></dl></div>
     </li><li name="chisel3.iotesters.PeekPokeTester#poke" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="poke[T&lt;:chisel3.core.Element](signal:T,value:Long)(implicitevidence$10:chisel3.iotesters.Pokeable[T]):Unit"></a><a id="poke[T&lt;:core.Element](T,Long)(Pokeable[T]):Unit"></a>
+      <a id="poke[T&lt;:chisel3.Element](signal:T,value:Long)(implicitevidence$10:chisel3.iotesters.Pokeable[T]):Unit"></a><a id="poke[T&lt;:Element](T,Long)(Pokeable[T]):Unit"></a>
       <span class="permalink">
-      <a href="../../chisel3/iotesters/AdvTester.html#poke[T&lt;:chisel3.core.Element](signal:T,value:Long)(implicitevidence$10:chisel3.iotesters.Pokeable[T]):Unit" title="Permalink">
+      <a href="../../chisel3/iotesters/AdvTester.html#poke[T&lt;:chisel3.Element](signal:T,value:Long)(implicitevidence$10:chisel3.iotesters.Pokeable[T]):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1246,14 +1256,14 @@ TODO: deal with Vecs
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">poke</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="chisel3.core.Element">core.Element</span></span>]</span><span class="params">(<span name="signal">signal: <span class="extype" name="chisel3.iotesters.PeekPokeTester.poke.T">T</span></span>, <span name="value">value: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="Pokeable.html" class="extype" name="chisel3.iotesters.Pokeable">Pokeable</a>[<span class="extype" name="chisel3.iotesters.PeekPokeTester.poke.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">poke</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="chisel3.Element">Element</span></span>]</span><span class="params">(<span name="signal">signal: <span class="extype" name="chisel3.iotesters.PeekPokeTester.poke.T">T</span></span>, <span name="value">value: <span class="extype" name="scala.Long">Long</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="Pokeable.html" class="extype" name="chisel3.iotesters.Pokeable">Pokeable</a>[<span class="extype" name="chisel3.iotesters.PeekPokeTester.poke.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PeekPokeTester.html" class="extype" name="chisel3.iotesters.PeekPokeTester">PeekPokeTester</a></dd></dl></div>
     </li><li name="chisel3.iotesters.PeekPokeTester#poke" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="poke[T&lt;:chisel3.core.Element](signal:T,value:Int)(implicitevidence$9:chisel3.iotesters.Pokeable[T]):Unit"></a><a id="poke[T&lt;:core.Element](T,Int)(Pokeable[T]):Unit"></a>
+      <a id="poke[T&lt;:chisel3.Element](signal:T,value:Int)(implicitevidence$9:chisel3.iotesters.Pokeable[T]):Unit"></a><a id="poke[T&lt;:Element](T,Int)(Pokeable[T]):Unit"></a>
       <span class="permalink">
-      <a href="../../chisel3/iotesters/AdvTester.html#poke[T&lt;:chisel3.core.Element](signal:T,value:Int)(implicitevidence$9:chisel3.iotesters.Pokeable[T]):Unit" title="Permalink">
+      <a href="../../chisel3/iotesters/AdvTester.html#poke[T&lt;:chisel3.Element](signal:T,value:Int)(implicitevidence$9:chisel3.iotesters.Pokeable[T]):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1262,7 +1272,7 @@ TODO: deal with Vecs
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">poke</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="chisel3.core.Element">core.Element</span></span>]</span><span class="params">(<span name="signal">signal: <span class="extype" name="chisel3.iotesters.PeekPokeTester.poke.T">T</span></span>, <span name="value">value: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="Pokeable.html" class="extype" name="chisel3.iotesters.Pokeable">Pokeable</a>[<span class="extype" name="chisel3.iotesters.PeekPokeTester.poke.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">poke</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="chisel3.Element">Element</span></span>]</span><span class="params">(<span name="signal">signal: <span class="extype" name="chisel3.iotesters.PeekPokeTester.poke.T">T</span></span>, <span name="value">value: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="Pokeable.html" class="extype" name="chisel3.iotesters.Pokeable">Pokeable</a>[<span class="extype" name="chisel3.iotesters.PeekPokeTester.poke.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PeekPokeTester.html" class="extype" name="chisel3.iotesters.PeekPokeTester">PeekPokeTester</a></dd></dl></div>
@@ -1315,9 +1325,9 @@ TODO: deal with Vecs
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PeekPokeTester.html" class="extype" name="chisel3.iotesters.PeekPokeTester">PeekPokeTester</a></dd></dl></div>
     </li><li name="chisel3.iotesters.PeekPokeTester#pokeAt" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="pokeAt[TT&lt;:chisel3.core.Element](data:chisel3.Mem[TT],value:BigInt,off:Int)(implicitevidence$11:chisel3.iotesters.Pokeable[TT]):Unit"></a><a id="pokeAt[TT&lt;:core.Element](Mem[TT],BigInt,Int)(Pokeable[TT]):Unit"></a>
+      <a id="pokeAt[TT&lt;:chisel3.Element](data:chisel3.Mem[TT],value:BigInt,off:Int)(implicitevidence$11:chisel3.iotesters.Pokeable[TT]):Unit"></a><a id="pokeAt[TT&lt;:Element](Mem[TT],BigInt,Int)(Pokeable[TT]):Unit"></a>
       <span class="permalink">
-      <a href="../../chisel3/iotesters/AdvTester.html#pokeAt[TT&lt;:chisel3.core.Element](data:chisel3.Mem[TT],value:BigInt,off:Int)(implicitevidence$11:chisel3.iotesters.Pokeable[TT]):Unit" title="Permalink">
+      <a href="../../chisel3/iotesters/AdvTester.html#pokeAt[TT&lt;:chisel3.Element](data:chisel3.Mem[TT],value:BigInt,off:Int)(implicitevidence$11:chisel3.iotesters.Pokeable[TT]):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1326,7 +1336,7 @@ TODO: deal with Vecs
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">pokeAt</span><span class="tparams">[<span name="TT">TT &lt;: <span class="extype" name="chisel3.core.Element">core.Element</span></span>]</span><span class="params">(<span name="data">data: <span class="extype" name="chisel3.Mem">Mem</span>[<span class="extype" name="chisel3.iotesters.PeekPokeTester.pokeAt.TT">TT</span>]</span>, <span name="value">value: <span class="extype" name="scala.BigInt">BigInt</span></span>, <span name="off">off: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="Pokeable.html" class="extype" name="chisel3.iotesters.Pokeable">Pokeable</a>[<span class="extype" name="chisel3.iotesters.PeekPokeTester.pokeAt.TT">TT</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">pokeAt</span><span class="tparams">[<span name="TT">TT &lt;: <span class="extype" name="chisel3.Element">Element</span></span>]</span><span class="params">(<span name="data">data: <span class="extype" name="chisel3.Mem">Mem</span>[<span class="extype" name="chisel3.iotesters.PeekPokeTester.pokeAt.TT">TT</span>]</span>, <span name="value">value: <span class="extype" name="scala.BigInt">BigInt</span></span>, <span name="off">off: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="Pokeable.html" class="extype" name="chisel3.iotesters.Pokeable">Pokeable</a>[<span class="extype" name="chisel3.iotesters.PeekPokeTester.pokeAt.TT">TT</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PeekPokeTester.html" class="extype" name="chisel3.iotesters.PeekPokeTester">PeekPokeTester</a></dd></dl></div>

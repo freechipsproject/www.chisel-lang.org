@@ -1,137 +1,42 @@
 <!DOCTYPE html >
 <html>
         <head>
-          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.1.3 - firrtl.antlr.FIRRTLBaseVisitor</title>
-          <meta name="description" content="firrtl 1.1.3 - firrtl.antlr.FIRRTLBaseVisitor" />
-          <meta name="keywords" content="firrtl 1.1.3 firrtl.antlr.FIRRTLBaseVisitor" />
+          <title>FIRRTLBaseVisitor - firrtl 1.1.3 - firrtl.antlr.FIRRTLBaseVisitor</title>
+          <meta name="description" content="FIRRTLBaseVisitor - firrtl 1.1.3 - firrtl.antlr.FIRRTLBaseVisitor" />
+          <meta name="keywords" content="FIRRTLBaseVisitor firrtl 1.1.3 firrtl.antlr.FIRRTLBaseVisitor" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link href="../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../lib/jquery.js"></script>
-      <script type="text/javascript" src="../../lib/jquery.panzoom.min.js"></script>
-      <script type="text/javascript" src="../../lib/jquery.mousewheel.min.js"></script>
-      <script type="text/javascript" src="../../lib/index.js"></script>
-      <script type="text/javascript" src="../../index.js"></script>
-      <script type="text/javascript" src="../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../lib/jquery-ui.js"></script>
       <script type="text/javascript" src="../../lib/template.js"></script>
       <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
       <script type="text/javascript" src="../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../lib/diagrams.js" id="diagrams-js"></script>
       <script type="text/javascript">
-        /* this variable can be used by the JS to determine the path to the root document */
-        var toRoot = '../../';
-      </script>
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'firrtl.antlr.FIRRTLBaseVisitor';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
     
         </head>
-        <body>
-      <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.1.3</span></span>
-        <span class="close-results"><span class="left">&lt;</span> Back</span>
-        <div id="textfilter">
-          <span class="input">
-            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
-            <i class="clear material-icons"></i>
-            <i id="search-icon" class="material-icons"></i>
-          </span>
-        </div>
-    </div>
-      <div id="search-results">
-        <div id="search-progress">
-          <div id="progress-fill"></div>
-        </div>
-        <div id="results-content">
-          <div id="entity-results"></div>
-          <div id="member-results"></div>
-        </div>
-      </div>
-      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
-        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
-          <div id="subpackage-spacer">
-            <div id="packages">
-              <h1>Packages</h1>
-              <ul>
-                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="_root_"></a><a id="root:_root_"></a>
-      <span class="permalink">
-      <a href="index.html#_root_" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a title="This is the documentation for Firrtl." href="../../index.html"><span class="name">root</span></a>
-      </span>
-      
-      <p class="shortcomment cmt">This is the documentation for Firrtl.</p><div class="fullcomment"><div class="comment cmt"><p>This is the documentation for Firrtl.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
-    </li><li name="_root_.firrtl" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="firrtl"></a><a id="firrtl:firrtl"></a>
-      <span class="permalink">
-      <a href="index.html#firrtl" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="../index.html"><span class="name">firrtl</span></a>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
-    </li><li name="firrtl.antlr" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="antlr"></a><a id="antlr:antlr"></a>
-      <span class="permalink">
-      <a href="../firrtl/index.html#antlr" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="index.html"><span class="name">antlr</span></a>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
-    </li><li class="current-entities indented2">
-                        <span class="separator"></span>
-                        <a class="class" href="" title="This class provides an empty implementation of FIRRTLVisitor, which can be extended to create a visitor which only needs to handle a subset of the available methods."></a>
-                        <a href="" title="This class provides an empty implementation of FIRRTLVisitor, which can be extended to create a visitor which only needs to handle a subset of the available methods.">FIRRTLBaseVisitor</a>
-                      </li><li class="current-entities indented2">
-                        <span class="separator"></span>
-                        <a class="class" href="FIRRTLLexer.html" title=""></a>
-                        <a href="FIRRTLLexer.html" title="">FIRRTLLexer</a>
-                      </li><li class="current-entities indented2">
-                        <span class="separator"></span>
-                        <a class="class" href="FIRRTLParser.html" title=""></a>
-                        <a href="FIRRTLParser.html" title="">FIRRTLParser</a>
-                      </li><li class="current-entities indented2">
-                        <span class="separator"></span>
-                        <a class="trait" href="FIRRTLVisitor.html" title="This interface defines a complete generic visitor for a parse tree produced by FIRRTLParser."></a>
-                        <a href="FIRRTLVisitor.html" title="This interface defines a complete generic visitor for a parse tree produced by FIRRTLParser.">FIRRTLVisitor</a>
-                      </li>
-              </ul>
-            </div>
-          </div>
-          <div id="content">
-            <body class="class type">
+        <body class="type">
       <div id="definition">
-        <div class="big-circle class">c</div>
-        <p id="owner"><a href="../index.html" class="extype" name="firrtl">firrtl</a>.<a href="index.html" class="extype" name="firrtl.antlr">antlr</a></p>
-        <h1>FIRRTLBaseVisitor<span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html" title="Permalink">
-        <i class="material-icons"></i>
+        <img alt="Class" src="../../lib/class_big.png" />
+        <p id="owner"><a href="../package.html" class="extype" name="firrtl">firrtl</a>.<a href="package.html" class="extype" name="firrtl.antlr">antlr</a></p>
+        <h1>FIRRTLBaseVisitor</h1><h3><span class="morelinks"><div>Related Doc:
+            <a href="package.html" class="extype" name="firrtl.antlr">package antlr</a>
+          </div></span></h3><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
-    </span></h1>
-        <h3><span class="morelinks"></span></h3>
+    </span>
       </div>
 
       <h4 id="signature" class="signature">
@@ -143,73 +48,56 @@
         <span class="name">FIRRTLBaseVisitor</span><span class="tparams">[<span name="T">T</span>]</span><span class="result"> extends <span class="extype" name="org.antlr.v4.runtime.tree.AbstractParseTreeVisitor">AbstractParseTreeVisitor</span>[<span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span>] with <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a>[<span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span>]</span>
       </span>
       </h4>
-
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>This class provides an empty implementation of <code><a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></code>,
-which can be extended to create a visitor which only needs to handle a subset
-of the available methods.
-</p></div><div class="toggleContainer block">
-          <span class="toggle">
-            Linear Supertypes
-          </span>
-          <div class="superTypes hiddenContent"><a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a>[<span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span>], <span class="extype" name="org.antlr.v4.runtime.tree.AbstractParseTreeVisitor">AbstractParseTreeVisitor</span>[<span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span>], <span class="extype" name="org.antlr.v4.runtime.tree.ParseTreeVisitor">ParseTreeVisitor</span>[<span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span>], <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div id="comment" class="fullcommenttop"><div class="toggleContainer block">
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a>[<span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span>], <span class="extype" name="org.antlr.v4.runtime.tree.AbstractParseTreeVisitor">AbstractParseTreeVisitor</span>[<span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span>], <span class="extype" name="org.antlr.v4.runtime.tree.ParseTreeVisitor">ParseTreeVisitor</span>[<span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span>], <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Any" class="extype" target="_top">Any</a></div>
         </div><div class="toggleContainer block">
-            <span class="toggle">
-              Known Subclasses
-            </span>
+            <span class="toggle">Known Subclasses</span>
             <div class="subClasses hiddenContent"><a href="../Visitor.html" class="extype" name="firrtl.Visitor">Visitor</a></div>
-          </div></div>
+          </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
+                <span class="toggle diagram-link">Type Hierarchy</span>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 306.00 155.00" height="155pt" width="306pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 151)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-151 302,-151 302,4 -4,4" stroke="transparent" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this class" id="graph1_0"><g id="a_this class|graph1_0"><a xlink:title="firrtl.antlr.FIRRTLBaseVisitor (this class)" xlink:href="#inheritance-diagram"><polygon points="230.5,-86 92.5,-86 92.5,-61 230.5,-61 230.5,-86" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-80.5" x="102.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-70.5" x="123.5" text-anchor="start">FIRRTLBaseVisitor[T]</text></a></g></g><!-- node1 --><g class="node class" id="graph1_1"><g id="a_class|graph1_1"><a xlink:title="firrtl.Visitor" xlink:href="../Visitor.html#inheritance-diagram"><polygon points="197.5,-25 125.5,-25 125.5,0 197.5,0 197.5,-25" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-19.5" x="135.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-9.5" x="156.5" text-anchor="start">Visitor</text></a></g></g><!-- node0&#45;&gt;node1 --><g class="edge inheritance" id="graph1_0_1"><g id="a_inheritance|graph1_0_1"><a xlink:title="Visitor is a subtype of FIRRTLBaseVisitor[T]"><path d="M161.5,-55.69C161.5,-45.92 161.5,-33.85 161.5,-25.13" stroke="#d4d4d4" fill="none"></path><polygon points="159.75,-55.84 161.5,-60.84 163.25,-55.84 159.75,-55.84" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node class" id="graph1_2"><g id="a_class|graph1_2"><a xlink:title="org.antlr.v4.runtime.tree.AbstractParseTreeVisitor"><polygon points="165,-147 0,-147 0,-122 165,-122 165,-147" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-141.5" x="10.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-131.5" x="31.5" text-anchor="start">AbstractParseTreeVisitor[T]</text></a></g></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph1_2_0"><g id="a_inheritance|graph1_2_0"><a xlink:title="FIRRTLBaseVisitor[T] is a subtype of AbstractParseTreeVisitor[T]"><path d="M102.16,-118.82C115.68,-108.72 133.38,-95.5 145.92,-86.13" stroke="#d4d4d4" fill="none"></path><polygon points="101.07,-117.45 98.11,-121.84 103.16,-120.25 101.07,-117.45" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3 --><g class="node trait" id="graph1_3"><g id="a_trait|graph1_3"><a xlink:title="firrtl.antlr.FIRRTLVisitor" xlink:href="FIRRTLVisitor.html#inheritance-diagram"><polygon points="298,-147 183,-147 183,-122 298,-122 298,-147" stroke="#37657d" fill="#498aad"></polygon><image xlink:href="../../lib/trait_diagram.png" y="-141.5" x="193.5" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-131.5" x="214.5" text-anchor="start">FIRRTLVisitor[T]</text></a></g></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph1_3_0"><g id="a_inheritance|graph1_3_0"><a xlink:title="FIRRTLBaseVisitor[T] is a subtype of FIRRTLVisitor[T]"><path d="M220.84,-118.82C207.32,-108.72 189.62,-95.5 177.08,-86.13" stroke="#d4d4d4" fill="none"></path><polygon points="219.84,-120.25 224.89,-121.84 221.93,-117.45 219.84,-120.25" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
+              </div></div>
         
 
       <div id="mbrsel">
-        <div class="toggle"></div>
-        <div id="memberfilter">
-          <i class="material-icons arrow"></i>
-          <span class="input">
-            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
-          </span>
-          <i class="clear material-icons"></i>
-        </div>
-        <div id="filterby">
-          <div id="order">
-            <span class="filtertype">Ordering</span>
-            <ol>
-              
-              <li class="alpha in"><span>Alphabetic</span></li>
-              <li class="inherit out"><span>By Inheritance</span></li>
-            </ol>
-          </div>
-          <div class="ancestors">
-                  <span class="filtertype">Inherited<br />
-                  </span>
-                  <ol id="linearization">
-                    <li class="in" name="firrtl.antlr.FIRRTLBaseVisitor"><span>FIRRTLBaseVisitor</span></li><li class="in" name="firrtl.antlr.FIRRTLVisitor"><span>FIRRTLVisitor</span></li><li class="in" name="org.antlr.v4.runtime.tree.AbstractParseTreeVisitor"><span>AbstractParseTreeVisitor</span></li><li class="in" name="org.antlr.v4.runtime.tree.ParseTreeVisitor"><span>ParseTreeVisitor</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
-                  </ol>
-                </div><div class="ancestors">
-              <span class="filtertype"></span>
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
               <ol>
-                <li class="hideall out"><span>Hide All</span></li>
-                <li class="showall in"><span>Show All</span></li>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By Inheritance</span></li>
               </ol>
             </div>
-          <div id="visbl">
-              <span class="filtertype">Visibility</span>
-              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
-            </div>
-        </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="firrtl.antlr.FIRRTLBaseVisitor"><span>FIRRTLBaseVisitor</span></li><li class="in" name="firrtl.antlr.FIRRTLVisitor"><span>FIRRTLVisitor</span></li><li class="in" name="org.antlr.v4.runtime.tree.AbstractParseTreeVisitor"><span>AbstractParseTreeVisitor</span></li><li class="in" name="org.antlr.v4.runtime.tree.ParseTreeVisitor"><span>ParseTreeVisitor</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show All</span></li>
+            </ol>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
       </div>
 
       <div id="template">
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="firrtl.antlr.FIRRTLBaseVisitor#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;():firrtl.antlr.FIRRTLBaseVisitor[T]"></a><a id="&lt;init&gt;:FIRRTLBaseVisitor[T]"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#&lt;init&gt;():firrtl.antlr.FIRRTLBaseVisitor[T]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
+              <ol><li name="firrtl.antlr.FIRRTLBaseVisitor#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;():firrtl.antlr.FIRRTLBaseVisitor[T]"></a>
+      <a id="&lt;init&gt;:FIRRTLBaseVisitor[T]"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
@@ -217,8 +105,12 @@ of the available methods.
       <span class="symbol">
         <span class="name">FIRRTLBaseVisitor</span><span class="params">()</span>
       </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@&lt;init&gt;():firrtl.antlr.FIRRTLBaseVisitor[T]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       
-      <p class="shortcomment cmt"></p>
     </li></ol>
             </div>
 
@@ -226,64 +118,63 @@ of the available methods.
 
         
 
-        <div class="values members">
+        <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol>
-                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#!=(x$1:Any):Boolean" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html###():Int" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
+      <a id="##():Int"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Int" class="extype" target="_top">Int</a></span>
       </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#==(x$1:Any):Boolean" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@##():Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="org.antlr.v4.runtime.tree.AbstractParseTreeVisitor#aggregateResult" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="aggregateResult(x$1:T,x$2:T):T"></a><a id="aggregateResult(T,T):T"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#aggregateResult(x$1:T,x$2:T):T" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.antlr.v4.runtime.tree.AbstractParseTreeVisitor#aggregateResult" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="aggregateResult(x$1:T,x$2:T):T"></a>
+      <a id="aggregateResult(T,T):T"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -291,15 +182,16 @@ of the available methods.
       <span class="symbol">
         <span class="name">aggregateResult</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>, <span name="arg1">arg1: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>)</span><span class="result">: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>
       </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../org/antlr/v4/runtime/tree/index.html" class="extype" name="org.antlr.v4.runtime.tree">org.antlr.v4.runtime.tree</a>] </dd><dt>Definition Classes</dt><dd>AbstractParseTreeVisitor</dd></dl></div>
-    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="asInstanceOf[T0]:T0"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#asInstanceOf[T0]:T0" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@aggregateResult(x$1:T,x$2:T):T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../org$antlr$v4$runtime$tree.html" class="extype" name="org.antlr.v4.runtime.tree">org.antlr.v4.runtime.tree</a>] </dd><dt>Definition Classes</dt><dd>AbstractParseTreeVisitor</dd></dl></div>
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asInstanceOf[T0]:T0"></a>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
@@ -307,39 +199,39 @@ of the available methods.
       <span class="symbol">
         <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
       </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#clone():Object" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
       </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@clone():Object" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="org.antlr.v4.runtime.tree.AbstractParseTreeVisitor#defaultResult" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="org.antlr.v4.runtime.tree.AbstractParseTreeVisitor#defaultResult" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="defaultResult():T"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#defaultResult():T" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
+      <a id="defaultResult():T"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -347,69 +239,73 @@ of the available methods.
       <span class="symbol">
         <span class="name">defaultResult</span><span class="params">()</span><span class="result">: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>
       </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../org/antlr/v4/runtime/tree/index.html" class="extype" name="org.antlr.v4.runtime.tree">org.antlr.v4.runtime.tree</a>] </dd><dt>Definition Classes</dt><dd>AbstractParseTreeVisitor</dd></dl></div>
-    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#eq(x$1:AnyRef):Boolean" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@defaultResult():T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../org$antlr$v4$runtime$tree.html" class="extype" name="org.antlr.v4.runtime.tree">org.antlr.v4.runtime.tree</a>] </dd><dt>Definition Classes</dt><dd>AbstractParseTreeVisitor</dd></dl></div>
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#equals(x$1:Any):Boolean" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#finalize():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@finalize():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#getClass():Class[_]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
@@ -417,123 +313,118 @@ of the available methods.
       <span class="symbol">
         <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
       </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
-        </dd></dl></div>
-    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#hashCode():Int" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Int" class="extype" target="_top">Int</a></span>
       </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
-        </dd></dl></div>
-    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@hashCode():Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#isInstanceOf[T0]:Boolean" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#ne(x$1:AnyRef):Boolean" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#notify():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
-        </dd></dl></div>
-    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@notify():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#notifyAll():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
-        </dd></dl></div>
-    </li><li name="org.antlr.v4.runtime.tree.AbstractParseTreeVisitor#shouldVisitNextChild" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="shouldVisitNextChild(x$1:org.antlr.v4.runtime.tree.RuleNode,x$2:T):Boolean"></a><a id="shouldVisitNextChild(RuleNode,T):Boolean"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#shouldVisitNextChild(x$1:org.antlr.v4.runtime.tree.RuleNode,x$2:T):Boolean" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="org.antlr.v4.runtime.tree.AbstractParseTreeVisitor#shouldVisitNextChild" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="shouldVisitNextChild(x$1:org.antlr.v4.runtime.tree.RuleNode,x$2:T):Boolean"></a>
+      <a id="shouldVisitNextChild(RuleNode,T):Boolean"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">shouldVisitNextChild</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="org.antlr.v4.runtime.tree.RuleNode">RuleNode</span></span>, <span name="arg1">arg1: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">shouldVisitNextChild</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="org.antlr.v4.runtime.tree.RuleNode">RuleNode</span></span>, <span name="arg1">arg1: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../org/antlr/v4/runtime/tree/index.html" class="extype" name="org.antlr.v4.runtime.tree">org.antlr.v4.runtime.tree</a>] </dd><dt>Definition Classes</dt><dd>AbstractParseTreeVisitor</dd></dl></div>
-    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@shouldVisitNextChild(x$1:org.antlr.v4.runtime.tree.RuleNode,x$2:T):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../org$antlr$v4$runtime$tree.html" class="extype" name="org.antlr.v4.runtime.tree">org.antlr.v4.runtime.tree</a>] </dd><dt>Definition Classes</dt><dd>AbstractParseTreeVisitor</dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
@@ -541,15 +432,16 @@ of the available methods.
       <span class="symbol">
         <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
       </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toString():String"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#toString():String" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -557,15 +449,16 @@ of the available methods.
       <span class="symbol">
         <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="org.antlr.v4.runtime.tree.AbstractParseTreeVisitor#visit" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="visit(x$1:org.antlr.v4.runtime.tree.ParseTree):T"></a><a id="visit(ParseTree):T"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#visit(x$1:org.antlr.v4.runtime.tree.ParseTree):T" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@toString():String" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="org.antlr.v4.runtime.tree.AbstractParseTreeVisitor#visit" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="visit(x$1:org.antlr.v4.runtime.tree.ParseTree):T"></a>
+      <a id="visit(ParseTree):T"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -573,15 +466,16 @@ of the available methods.
       <span class="symbol">
         <span class="name">visit</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="org.antlr.v4.runtime.tree.ParseTree">ParseTree</span></span>)</span><span class="result">: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>
       </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractParseTreeVisitor → ParseTreeVisitor</dd></dl></div>
-    </li><li name="org.antlr.v4.runtime.tree.AbstractParseTreeVisitor#visitChildren" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="visitChildren(x$1:org.antlr.v4.runtime.tree.RuleNode):T"></a><a id="visitChildren(RuleNode):T"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#visitChildren(x$1:org.antlr.v4.runtime.tree.RuleNode):T" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@visit(x$1:org.antlr.v4.runtime.tree.ParseTree):T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractParseTreeVisitor → ParseTreeVisitor</dd></dl></div>
+    </li><li name="org.antlr.v4.runtime.tree.AbstractParseTreeVisitor#visitChildren" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="visitChildren(x$1:org.antlr.v4.runtime.tree.RuleNode):T"></a>
+      <a id="visitChildren(RuleNode):T"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -589,15 +483,16 @@ of the available methods.
       <span class="symbol">
         <span class="name">visitChildren</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="org.antlr.v4.runtime.tree.RuleNode">RuleNode</span></span>)</span><span class="result">: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>
       </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractParseTreeVisitor → ParseTreeVisitor</dd></dl></div>
-    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitCircuit" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="visitCircuit(ctx:firrtl.antlr.FIRRTLParser.CircuitContext):T"></a><a id="visitCircuit(CircuitContext):T"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#visitCircuit(ctx:firrtl.antlr.FIRRTLParser.CircuitContext):T" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@visitChildren(x$1:org.antlr.v4.runtime.tree.RuleNode):T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractParseTreeVisitor → ParseTreeVisitor</dd></dl></div>
+    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitCircuit" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="visitCircuit(ctx:firrtl.antlr.FIRRTLParser.CircuitContext):T"></a>
+      <a id="visitCircuit(CircuitContext):T"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -605,16 +500,16 @@ of the available methods.
       <span class="symbol">
         <span class="name">visitCircuit</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="firrtl.antlr.FIRRTLParser.CircuitContext">CircuitContext</span></span>)</span><span class="result">: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>
       </span>
-      
-      <p class="shortcomment cmt">Visit a parse tree produced by <code><a href="FIRRTLParser.html#circuit():firrtl.antlr.FIRRTLParser.CircuitContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#circuit">FIRRTLParser#circuit</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>Visit a parse tree produced by <code><a href="FIRRTLParser.html#circuit():firrtl.antlr.FIRRTLParser.CircuitContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#circuit">FIRRTLParser#circuit</a></code>.</p><p>The default implementation returns the result of calling
-<code><a href="#visitChildren(x$1:org.antlr.v4.runtime.tree.RuleNode):T" class="extmbr" name="firrtl.antlr.FIRRTLBaseVisitor#visitChildren">#visitChildren</a></code> on <code>ctx</code>.</p></div><dl class="paramcmts block"><dt class="param">ctx</dt><dd class="cmt"><p>the parse tree</p></dd><dt>returns</dt><dd class="cmt"><p>the visitor result</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
-    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitDefname" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="visitDefname(ctx:firrtl.antlr.FIRRTLParser.DefnameContext):T"></a><a id="visitDefname(DefnameContext):T"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#visitDefname(ctx:firrtl.antlr.FIRRTLParser.DefnameContext):T" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@visitCircuit(ctx:firrtl.antlr.FIRRTLParser.CircuitContext):T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
+    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitDefname" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="visitDefname(ctx:firrtl.antlr.FIRRTLParser.DefnameContext):T"></a>
+      <a id="visitDefname(DefnameContext):T"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -622,16 +517,16 @@ of the available methods.
       <span class="symbol">
         <span class="name">visitDefname</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="firrtl.antlr.FIRRTLParser.DefnameContext">DefnameContext</span></span>)</span><span class="result">: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>
       </span>
-      
-      <p class="shortcomment cmt">Visit a parse tree produced by <code><a href="FIRRTLParser.html#defname():firrtl.antlr.FIRRTLParser.DefnameContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#defname">FIRRTLParser#defname</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>Visit a parse tree produced by <code><a href="FIRRTLParser.html#defname():firrtl.antlr.FIRRTLParser.DefnameContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#defname">FIRRTLParser#defname</a></code>.</p><p>The default implementation returns the result of calling
-<code><a href="#visitChildren(x$1:org.antlr.v4.runtime.tree.RuleNode):T" class="extmbr" name="firrtl.antlr.FIRRTLBaseVisitor#visitChildren">#visitChildren</a></code> on <code>ctx</code>.</p></div><dl class="paramcmts block"><dt class="param">ctx</dt><dd class="cmt"><p>the parse tree</p></dd><dt>returns</dt><dd class="cmt"><p>the visitor result</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
-    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitDir" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="visitDir(ctx:firrtl.antlr.FIRRTLParser.DirContext):T"></a><a id="visitDir(DirContext):T"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#visitDir(ctx:firrtl.antlr.FIRRTLParser.DirContext):T" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@visitDefname(ctx:firrtl.antlr.FIRRTLParser.DefnameContext):T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
+    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitDir" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="visitDir(ctx:firrtl.antlr.FIRRTLParser.DirContext):T"></a>
+      <a id="visitDir(DirContext):T"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -639,16 +534,16 @@ of the available methods.
       <span class="symbol">
         <span class="name">visitDir</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="firrtl.antlr.FIRRTLParser.DirContext">DirContext</span></span>)</span><span class="result">: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>
       </span>
-      
-      <p class="shortcomment cmt">Visit a parse tree produced by <code><a href="FIRRTLParser.html#dir():firrtl.antlr.FIRRTLParser.DirContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#dir">FIRRTLParser#dir</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>Visit a parse tree produced by <code><a href="FIRRTLParser.html#dir():firrtl.antlr.FIRRTLParser.DirContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#dir">FIRRTLParser#dir</a></code>.</p><p>The default implementation returns the result of calling
-<code><a href="#visitChildren(x$1:org.antlr.v4.runtime.tree.RuleNode):T" class="extmbr" name="firrtl.antlr.FIRRTLBaseVisitor#visitChildren">#visitChildren</a></code> on <code>ctx</code>.</p></div><dl class="paramcmts block"><dt class="param">ctx</dt><dd class="cmt"><p>the parse tree</p></dd><dt>returns</dt><dd class="cmt"><p>the visitor result</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
-    </li><li name="org.antlr.v4.runtime.tree.AbstractParseTreeVisitor#visitErrorNode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="visitErrorNode(x$1:org.antlr.v4.runtime.tree.ErrorNode):T"></a><a id="visitErrorNode(ErrorNode):T"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#visitErrorNode(x$1:org.antlr.v4.runtime.tree.ErrorNode):T" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@visitDir(ctx:firrtl.antlr.FIRRTLParser.DirContext):T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
+    </li><li name="org.antlr.v4.runtime.tree.AbstractParseTreeVisitor#visitErrorNode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="visitErrorNode(x$1:org.antlr.v4.runtime.tree.ErrorNode):T"></a>
+      <a id="visitErrorNode(ErrorNode):T"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -656,15 +551,16 @@ of the available methods.
       <span class="symbol">
         <span class="name">visitErrorNode</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="org.antlr.v4.runtime.tree.ErrorNode">ErrorNode</span></span>)</span><span class="result">: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>
       </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractParseTreeVisitor → ParseTreeVisitor</dd></dl></div>
-    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitExp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="visitExp(ctx:firrtl.antlr.FIRRTLParser.ExpContext):T"></a><a id="visitExp(ExpContext):T"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#visitExp(ctx:firrtl.antlr.FIRRTLParser.ExpContext):T" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@visitErrorNode(x$1:org.antlr.v4.runtime.tree.ErrorNode):T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractParseTreeVisitor → ParseTreeVisitor</dd></dl></div>
+    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitExp" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="visitExp(ctx:firrtl.antlr.FIRRTLParser.ExpContext):T"></a>
+      <a id="visitExp(ExpContext):T"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -672,16 +568,16 @@ of the available methods.
       <span class="symbol">
         <span class="name">visitExp</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="firrtl.antlr.FIRRTLParser.ExpContext">ExpContext</span></span>)</span><span class="result">: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>
       </span>
-      
-      <p class="shortcomment cmt">Visit a parse tree produced by <code><a href="FIRRTLParser.html#exp():firrtl.antlr.FIRRTLParser.ExpContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#exp">FIRRTLParser#exp</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>Visit a parse tree produced by <code><a href="FIRRTLParser.html#exp():firrtl.antlr.FIRRTLParser.ExpContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#exp">FIRRTLParser#exp</a></code>.</p><p>The default implementation returns the result of calling
-<code><a href="#visitChildren(x$1:org.antlr.v4.runtime.tree.RuleNode):T" class="extmbr" name="firrtl.antlr.FIRRTLBaseVisitor#visitChildren">#visitChildren</a></code> on <code>ctx</code>.</p></div><dl class="paramcmts block"><dt class="param">ctx</dt><dd class="cmt"><p>the parse tree</p></dd><dt>returns</dt><dd class="cmt"><p>the visitor result</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
-    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitField" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="visitField(ctx:firrtl.antlr.FIRRTLParser.FieldContext):T"></a><a id="visitField(FieldContext):T"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#visitField(ctx:firrtl.antlr.FIRRTLParser.FieldContext):T" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@visitExp(ctx:firrtl.antlr.FIRRTLParser.ExpContext):T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
+    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitField" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="visitField(ctx:firrtl.antlr.FIRRTLParser.FieldContext):T"></a>
+      <a id="visitField(FieldContext):T"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -689,16 +585,16 @@ of the available methods.
       <span class="symbol">
         <span class="name">visitField</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="firrtl.antlr.FIRRTLParser.FieldContext">FieldContext</span></span>)</span><span class="result">: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>
       </span>
-      
-      <p class="shortcomment cmt">Visit a parse tree produced by <code><a href="FIRRTLParser.html#field():firrtl.antlr.FIRRTLParser.FieldContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#field">FIRRTLParser#field</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>Visit a parse tree produced by <code><a href="FIRRTLParser.html#field():firrtl.antlr.FIRRTLParser.FieldContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#field">FIRRTLParser#field</a></code>.</p><p>The default implementation returns the result of calling
-<code><a href="#visitChildren(x$1:org.antlr.v4.runtime.tree.RuleNode):T" class="extmbr" name="firrtl.antlr.FIRRTLBaseVisitor#visitChildren">#visitChildren</a></code> on <code>ctx</code>.</p></div><dl class="paramcmts block"><dt class="param">ctx</dt><dd class="cmt"><p>the parse tree</p></dd><dt>returns</dt><dd class="cmt"><p>the visitor result</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
-    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitFieldId" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="visitFieldId(ctx:firrtl.antlr.FIRRTLParser.FieldIdContext):T"></a><a id="visitFieldId(FieldIdContext):T"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#visitFieldId(ctx:firrtl.antlr.FIRRTLParser.FieldIdContext):T" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@visitField(ctx:firrtl.antlr.FIRRTLParser.FieldContext):T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
+    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitFieldId" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="visitFieldId(ctx:firrtl.antlr.FIRRTLParser.FieldIdContext):T"></a>
+      <a id="visitFieldId(FieldIdContext):T"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -706,16 +602,16 @@ of the available methods.
       <span class="symbol">
         <span class="name">visitFieldId</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="firrtl.antlr.FIRRTLParser.FieldIdContext">FieldIdContext</span></span>)</span><span class="result">: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>
       </span>
-      
-      <p class="shortcomment cmt">Visit a parse tree produced by <code><a href="FIRRTLParser.html#fieldId():firrtl.antlr.FIRRTLParser.FieldIdContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#fieldId">FIRRTLParser#fieldId</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>Visit a parse tree produced by <code><a href="FIRRTLParser.html#fieldId():firrtl.antlr.FIRRTLParser.FieldIdContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#fieldId">FIRRTLParser#fieldId</a></code>.</p><p>The default implementation returns the result of calling
-<code><a href="#visitChildren(x$1:org.antlr.v4.runtime.tree.RuleNode):T" class="extmbr" name="firrtl.antlr.FIRRTLBaseVisitor#visitChildren">#visitChildren</a></code> on <code>ctx</code>.</p></div><dl class="paramcmts block"><dt class="param">ctx</dt><dd class="cmt"><p>the parse tree</p></dd><dt>returns</dt><dd class="cmt"><p>the visitor result</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
-    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitId" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="visitId(ctx:firrtl.antlr.FIRRTLParser.IdContext):T"></a><a id="visitId(IdContext):T"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#visitId(ctx:firrtl.antlr.FIRRTLParser.IdContext):T" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@visitFieldId(ctx:firrtl.antlr.FIRRTLParser.FieldIdContext):T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
+    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitId" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="visitId(ctx:firrtl.antlr.FIRRTLParser.IdContext):T"></a>
+      <a id="visitId(IdContext):T"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -723,16 +619,16 @@ of the available methods.
       <span class="symbol">
         <span class="name">visitId</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="firrtl.antlr.FIRRTLParser.IdContext">IdContext</span></span>)</span><span class="result">: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>
       </span>
-      
-      <p class="shortcomment cmt">Visit a parse tree produced by <code><a href="FIRRTLParser.html#id():firrtl.antlr.FIRRTLParser.IdContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#id">FIRRTLParser#id</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>Visit a parse tree produced by <code><a href="FIRRTLParser.html#id():firrtl.antlr.FIRRTLParser.IdContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#id">FIRRTLParser#id</a></code>.</p><p>The default implementation returns the result of calling
-<code><a href="#visitChildren(x$1:org.antlr.v4.runtime.tree.RuleNode):T" class="extmbr" name="firrtl.antlr.FIRRTLBaseVisitor#visitChildren">#visitChildren</a></code> on <code>ctx</code>.</p></div><dl class="paramcmts block"><dt class="param">ctx</dt><dd class="cmt"><p>the parse tree</p></dd><dt>returns</dt><dd class="cmt"><p>the visitor result</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
-    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitInfo" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="visitInfo(ctx:firrtl.antlr.FIRRTLParser.InfoContext):T"></a><a id="visitInfo(InfoContext):T"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#visitInfo(ctx:firrtl.antlr.FIRRTLParser.InfoContext):T" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@visitId(ctx:firrtl.antlr.FIRRTLParser.IdContext):T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
+    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitInfo" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="visitInfo(ctx:firrtl.antlr.FIRRTLParser.InfoContext):T"></a>
+      <a id="visitInfo(InfoContext):T"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -740,16 +636,16 @@ of the available methods.
       <span class="symbol">
         <span class="name">visitInfo</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="firrtl.antlr.FIRRTLParser.InfoContext">InfoContext</span></span>)</span><span class="result">: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>
       </span>
-      
-      <p class="shortcomment cmt">Visit a parse tree produced by <code><a href="FIRRTLParser.html#info():firrtl.antlr.FIRRTLParser.InfoContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#info">FIRRTLParser#info</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>Visit a parse tree produced by <code><a href="FIRRTLParser.html#info():firrtl.antlr.FIRRTLParser.InfoContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#info">FIRRTLParser#info</a></code>.</p><p>The default implementation returns the result of calling
-<code><a href="#visitChildren(x$1:org.antlr.v4.runtime.tree.RuleNode):T" class="extmbr" name="firrtl.antlr.FIRRTLBaseVisitor#visitChildren">#visitChildren</a></code> on <code>ctx</code>.</p></div><dl class="paramcmts block"><dt class="param">ctx</dt><dd class="cmt"><p>the parse tree</p></dd><dt>returns</dt><dd class="cmt"><p>the visitor result</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
-    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitIntLit" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="visitIntLit(ctx:firrtl.antlr.FIRRTLParser.IntLitContext):T"></a><a id="visitIntLit(IntLitContext):T"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#visitIntLit(ctx:firrtl.antlr.FIRRTLParser.IntLitContext):T" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@visitInfo(ctx:firrtl.antlr.FIRRTLParser.InfoContext):T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
+    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitIntLit" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="visitIntLit(ctx:firrtl.antlr.FIRRTLParser.IntLitContext):T"></a>
+      <a id="visitIntLit(IntLitContext):T"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -757,16 +653,16 @@ of the available methods.
       <span class="symbol">
         <span class="name">visitIntLit</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="firrtl.antlr.FIRRTLParser.IntLitContext">IntLitContext</span></span>)</span><span class="result">: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>
       </span>
-      
-      <p class="shortcomment cmt">Visit a parse tree produced by <code><a href="FIRRTLParser.html#intLit():firrtl.antlr.FIRRTLParser.IntLitContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#intLit">FIRRTLParser#intLit</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>Visit a parse tree produced by <code><a href="FIRRTLParser.html#intLit():firrtl.antlr.FIRRTLParser.IntLitContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#intLit">FIRRTLParser#intLit</a></code>.</p><p>The default implementation returns the result of calling
-<code><a href="#visitChildren(x$1:org.antlr.v4.runtime.tree.RuleNode):T" class="extmbr" name="firrtl.antlr.FIRRTLBaseVisitor#visitChildren">#visitChildren</a></code> on <code>ctx</code>.</p></div><dl class="paramcmts block"><dt class="param">ctx</dt><dd class="cmt"><p>the parse tree</p></dd><dt>returns</dt><dd class="cmt"><p>the visitor result</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
-    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitKeywordAsId" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="visitKeywordAsId(ctx:firrtl.antlr.FIRRTLParser.KeywordAsIdContext):T"></a><a id="visitKeywordAsId(KeywordAsIdContext):T"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#visitKeywordAsId(ctx:firrtl.antlr.FIRRTLParser.KeywordAsIdContext):T" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@visitIntLit(ctx:firrtl.antlr.FIRRTLParser.IntLitContext):T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
+    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitKeywordAsId" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="visitKeywordAsId(ctx:firrtl.antlr.FIRRTLParser.KeywordAsIdContext):T"></a>
+      <a id="visitKeywordAsId(KeywordAsIdContext):T"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -774,16 +670,16 @@ of the available methods.
       <span class="symbol">
         <span class="name">visitKeywordAsId</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="firrtl.antlr.FIRRTLParser.KeywordAsIdContext">KeywordAsIdContext</span></span>)</span><span class="result">: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>
       </span>
-      
-      <p class="shortcomment cmt">Visit a parse tree produced by <code><a href="FIRRTLParser.html#keywordAsId():firrtl.antlr.FIRRTLParser.KeywordAsIdContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#keywordAsId">FIRRTLParser#keywordAsId</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>Visit a parse tree produced by <code><a href="FIRRTLParser.html#keywordAsId():firrtl.antlr.FIRRTLParser.KeywordAsIdContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#keywordAsId">FIRRTLParser#keywordAsId</a></code>.</p><p>The default implementation returns the result of calling
-<code><a href="#visitChildren(x$1:org.antlr.v4.runtime.tree.RuleNode):T" class="extmbr" name="firrtl.antlr.FIRRTLBaseVisitor#visitChildren">#visitChildren</a></code> on <code>ctx</code>.</p></div><dl class="paramcmts block"><dt class="param">ctx</dt><dd class="cmt"><p>the parse tree</p></dd><dt>returns</dt><dd class="cmt"><p>the visitor result</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
-    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitMdir" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="visitMdir(ctx:firrtl.antlr.FIRRTLParser.MdirContext):T"></a><a id="visitMdir(MdirContext):T"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#visitMdir(ctx:firrtl.antlr.FIRRTLParser.MdirContext):T" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@visitKeywordAsId(ctx:firrtl.antlr.FIRRTLParser.KeywordAsIdContext):T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
+    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitMdir" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="visitMdir(ctx:firrtl.antlr.FIRRTLParser.MdirContext):T"></a>
+      <a id="visitMdir(MdirContext):T"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -791,16 +687,16 @@ of the available methods.
       <span class="symbol">
         <span class="name">visitMdir</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="firrtl.antlr.FIRRTLParser.MdirContext">MdirContext</span></span>)</span><span class="result">: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>
       </span>
-      
-      <p class="shortcomment cmt">Visit a parse tree produced by <code><a href="FIRRTLParser.html#mdir():firrtl.antlr.FIRRTLParser.MdirContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#mdir">FIRRTLParser#mdir</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>Visit a parse tree produced by <code><a href="FIRRTLParser.html#mdir():firrtl.antlr.FIRRTLParser.MdirContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#mdir">FIRRTLParser#mdir</a></code>.</p><p>The default implementation returns the result of calling
-<code><a href="#visitChildren(x$1:org.antlr.v4.runtime.tree.RuleNode):T" class="extmbr" name="firrtl.antlr.FIRRTLBaseVisitor#visitChildren">#visitChildren</a></code> on <code>ctx</code>.</p></div><dl class="paramcmts block"><dt class="param">ctx</dt><dd class="cmt"><p>the parse tree</p></dd><dt>returns</dt><dd class="cmt"><p>the visitor result</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
-    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitMemField" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="visitMemField(ctx:firrtl.antlr.FIRRTLParser.MemFieldContext):T"></a><a id="visitMemField(MemFieldContext):T"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#visitMemField(ctx:firrtl.antlr.FIRRTLParser.MemFieldContext):T" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@visitMdir(ctx:firrtl.antlr.FIRRTLParser.MdirContext):T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
+    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitMemField" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="visitMemField(ctx:firrtl.antlr.FIRRTLParser.MemFieldContext):T"></a>
+      <a id="visitMemField(MemFieldContext):T"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -808,16 +704,16 @@ of the available methods.
       <span class="symbol">
         <span class="name">visitMemField</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="firrtl.antlr.FIRRTLParser.MemFieldContext">MemFieldContext</span></span>)</span><span class="result">: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>
       </span>
-      
-      <p class="shortcomment cmt">Visit a parse tree produced by <code><a href="FIRRTLParser.html#memField():firrtl.antlr.FIRRTLParser.MemFieldContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#memField">FIRRTLParser#memField</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>Visit a parse tree produced by <code><a href="FIRRTLParser.html#memField():firrtl.antlr.FIRRTLParser.MemFieldContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#memField">FIRRTLParser#memField</a></code>.</p><p>The default implementation returns the result of calling
-<code><a href="#visitChildren(x$1:org.antlr.v4.runtime.tree.RuleNode):T" class="extmbr" name="firrtl.antlr.FIRRTLBaseVisitor#visitChildren">#visitChildren</a></code> on <code>ctx</code>.</p></div><dl class="paramcmts block"><dt class="param">ctx</dt><dd class="cmt"><p>the parse tree</p></dd><dt>returns</dt><dd class="cmt"><p>the visitor result</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
-    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitModule" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="visitModule(ctx:firrtl.antlr.FIRRTLParser.ModuleContext):T"></a><a id="visitModule(ModuleContext):T"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#visitModule(ctx:firrtl.antlr.FIRRTLParser.ModuleContext):T" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@visitMemField(ctx:firrtl.antlr.FIRRTLParser.MemFieldContext):T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
+    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitModule" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="visitModule(ctx:firrtl.antlr.FIRRTLParser.ModuleContext):T"></a>
+      <a id="visitModule(ModuleContext):T"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -825,16 +721,16 @@ of the available methods.
       <span class="symbol">
         <span class="name">visitModule</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="firrtl.antlr.FIRRTLParser.ModuleContext">ModuleContext</span></span>)</span><span class="result">: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>
       </span>
-      
-      <p class="shortcomment cmt">Visit a parse tree produced by <code><a href="FIRRTLParser.html#module():firrtl.antlr.FIRRTLParser.ModuleContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#module">FIRRTLParser#module</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>Visit a parse tree produced by <code><a href="FIRRTLParser.html#module():firrtl.antlr.FIRRTLParser.ModuleContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#module">FIRRTLParser#module</a></code>.</p><p>The default implementation returns the result of calling
-<code><a href="#visitChildren(x$1:org.antlr.v4.runtime.tree.RuleNode):T" class="extmbr" name="firrtl.antlr.FIRRTLBaseVisitor#visitChildren">#visitChildren</a></code> on <code>ctx</code>.</p></div><dl class="paramcmts block"><dt class="param">ctx</dt><dd class="cmt"><p>the parse tree</p></dd><dt>returns</dt><dd class="cmt"><p>the visitor result</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
-    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitModuleBlock" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="visitModuleBlock(ctx:firrtl.antlr.FIRRTLParser.ModuleBlockContext):T"></a><a id="visitModuleBlock(ModuleBlockContext):T"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#visitModuleBlock(ctx:firrtl.antlr.FIRRTLParser.ModuleBlockContext):T" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@visitModule(ctx:firrtl.antlr.FIRRTLParser.ModuleContext):T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
+    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitModuleBlock" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="visitModuleBlock(ctx:firrtl.antlr.FIRRTLParser.ModuleBlockContext):T"></a>
+      <a id="visitModuleBlock(ModuleBlockContext):T"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -842,16 +738,16 @@ of the available methods.
       <span class="symbol">
         <span class="name">visitModuleBlock</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="firrtl.antlr.FIRRTLParser.ModuleBlockContext">ModuleBlockContext</span></span>)</span><span class="result">: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>
       </span>
-      
-      <p class="shortcomment cmt">Visit a parse tree produced by <code><a href="FIRRTLParser.html#moduleBlock():firrtl.antlr.FIRRTLParser.ModuleBlockContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#moduleBlock">FIRRTLParser#moduleBlock</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>Visit a parse tree produced by <code><a href="FIRRTLParser.html#moduleBlock():firrtl.antlr.FIRRTLParser.ModuleBlockContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#moduleBlock">FIRRTLParser#moduleBlock</a></code>.</p><p>The default implementation returns the result of calling
-<code><a href="#visitChildren(x$1:org.antlr.v4.runtime.tree.RuleNode):T" class="extmbr" name="firrtl.antlr.FIRRTLBaseVisitor#visitChildren">#visitChildren</a></code> on <code>ctx</code>.</p></div><dl class="paramcmts block"><dt class="param">ctx</dt><dd class="cmt"><p>the parse tree</p></dd><dt>returns</dt><dd class="cmt"><p>the visitor result</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
-    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitParameter" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="visitParameter(ctx:firrtl.antlr.FIRRTLParser.ParameterContext):T"></a><a id="visitParameter(ParameterContext):T"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#visitParameter(ctx:firrtl.antlr.FIRRTLParser.ParameterContext):T" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@visitModuleBlock(ctx:firrtl.antlr.FIRRTLParser.ModuleBlockContext):T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
+    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitParameter" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="visitParameter(ctx:firrtl.antlr.FIRRTLParser.ParameterContext):T"></a>
+      <a id="visitParameter(ParameterContext):T"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -859,16 +755,16 @@ of the available methods.
       <span class="symbol">
         <span class="name">visitParameter</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="firrtl.antlr.FIRRTLParser.ParameterContext">ParameterContext</span></span>)</span><span class="result">: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>
       </span>
-      
-      <p class="shortcomment cmt">Visit a parse tree produced by <code><a href="FIRRTLParser.html#parameter():firrtl.antlr.FIRRTLParser.ParameterContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#parameter">FIRRTLParser#parameter</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>Visit a parse tree produced by <code><a href="FIRRTLParser.html#parameter():firrtl.antlr.FIRRTLParser.ParameterContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#parameter">FIRRTLParser#parameter</a></code>.</p><p>The default implementation returns the result of calling
-<code><a href="#visitChildren(x$1:org.antlr.v4.runtime.tree.RuleNode):T" class="extmbr" name="firrtl.antlr.FIRRTLBaseVisitor#visitChildren">#visitChildren</a></code> on <code>ctx</code>.</p></div><dl class="paramcmts block"><dt class="param">ctx</dt><dd class="cmt"><p>the parse tree</p></dd><dt>returns</dt><dd class="cmt"><p>the visitor result</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
-    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitPort" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="visitPort(ctx:firrtl.antlr.FIRRTLParser.PortContext):T"></a><a id="visitPort(PortContext):T"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#visitPort(ctx:firrtl.antlr.FIRRTLParser.PortContext):T" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@visitParameter(ctx:firrtl.antlr.FIRRTLParser.ParameterContext):T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
+    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitPort" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="visitPort(ctx:firrtl.antlr.FIRRTLParser.PortContext):T"></a>
+      <a id="visitPort(PortContext):T"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -876,16 +772,16 @@ of the available methods.
       <span class="symbol">
         <span class="name">visitPort</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="firrtl.antlr.FIRRTLParser.PortContext">PortContext</span></span>)</span><span class="result">: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>
       </span>
-      
-      <p class="shortcomment cmt">Visit a parse tree produced by <code><a href="FIRRTLParser.html#port():firrtl.antlr.FIRRTLParser.PortContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#port">FIRRTLParser#port</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>Visit a parse tree produced by <code><a href="FIRRTLParser.html#port():firrtl.antlr.FIRRTLParser.PortContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#port">FIRRTLParser#port</a></code>.</p><p>The default implementation returns the result of calling
-<code><a href="#visitChildren(x$1:org.antlr.v4.runtime.tree.RuleNode):T" class="extmbr" name="firrtl.antlr.FIRRTLBaseVisitor#visitChildren">#visitChildren</a></code> on <code>ctx</code>.</p></div><dl class="paramcmts block"><dt class="param">ctx</dt><dd class="cmt"><p>the parse tree</p></dd><dt>returns</dt><dd class="cmt"><p>the visitor result</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
-    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitPrimop" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="visitPrimop(ctx:firrtl.antlr.FIRRTLParser.PrimopContext):T"></a><a id="visitPrimop(PrimopContext):T"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#visitPrimop(ctx:firrtl.antlr.FIRRTLParser.PrimopContext):T" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@visitPort(ctx:firrtl.antlr.FIRRTLParser.PortContext):T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
+    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitPrimop" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="visitPrimop(ctx:firrtl.antlr.FIRRTLParser.PrimopContext):T"></a>
+      <a id="visitPrimop(PrimopContext):T"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -893,16 +789,16 @@ of the available methods.
       <span class="symbol">
         <span class="name">visitPrimop</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="firrtl.antlr.FIRRTLParser.PrimopContext">PrimopContext</span></span>)</span><span class="result">: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>
       </span>
-      
-      <p class="shortcomment cmt">Visit a parse tree produced by <code><a href="FIRRTLParser.html#primop():firrtl.antlr.FIRRTLParser.PrimopContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#primop">FIRRTLParser#primop</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>Visit a parse tree produced by <code><a href="FIRRTLParser.html#primop():firrtl.antlr.FIRRTLParser.PrimopContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#primop">FIRRTLParser#primop</a></code>.</p><p>The default implementation returns the result of calling
-<code><a href="#visitChildren(x$1:org.antlr.v4.runtime.tree.RuleNode):T" class="extmbr" name="firrtl.antlr.FIRRTLBaseVisitor#visitChildren">#visitChildren</a></code> on <code>ctx</code>.</p></div><dl class="paramcmts block"><dt class="param">ctx</dt><dd class="cmt"><p>the parse tree</p></dd><dt>returns</dt><dd class="cmt"><p>the visitor result</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
-    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitReset_block" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="visitReset_block(ctx:firrtl.antlr.FIRRTLParser.Reset_blockContext):T"></a><a id="visitReset_block(Reset_blockContext):T"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#visitReset_block(ctx:firrtl.antlr.FIRRTLParser.Reset_blockContext):T" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@visitPrimop(ctx:firrtl.antlr.FIRRTLParser.PrimopContext):T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
+    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitReset_block" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="visitReset_block(ctx:firrtl.antlr.FIRRTLParser.Reset_blockContext):T"></a>
+      <a id="visitReset_block(Reset_blockContext):T"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -910,16 +806,16 @@ of the available methods.
       <span class="symbol">
         <span class="name">visitReset_block</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="firrtl.antlr.FIRRTLParser.Reset_blockContext">Reset_blockContext</span></span>)</span><span class="result">: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>
       </span>
-      
-      <p class="shortcomment cmt">Visit a parse tree produced by <code><a href="FIRRTLParser.html#reset_block():firrtl.antlr.FIRRTLParser.Reset_blockContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#reset_block">FIRRTLParser#reset_block</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>Visit a parse tree produced by <code><a href="FIRRTLParser.html#reset_block():firrtl.antlr.FIRRTLParser.Reset_blockContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#reset_block">FIRRTLParser#reset_block</a></code>.</p><p>The default implementation returns the result of calling
-<code><a href="#visitChildren(x$1:org.antlr.v4.runtime.tree.RuleNode):T" class="extmbr" name="firrtl.antlr.FIRRTLBaseVisitor#visitChildren">#visitChildren</a></code> on <code>ctx</code>.</p></div><dl class="paramcmts block"><dt class="param">ctx</dt><dd class="cmt"><p>the parse tree</p></dd><dt>returns</dt><dd class="cmt"><p>the visitor result</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
-    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitRuw" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="visitRuw(ctx:firrtl.antlr.FIRRTLParser.RuwContext):T"></a><a id="visitRuw(RuwContext):T"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#visitRuw(ctx:firrtl.antlr.FIRRTLParser.RuwContext):T" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@visitReset_block(ctx:firrtl.antlr.FIRRTLParser.Reset_blockContext):T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
+    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitRuw" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="visitRuw(ctx:firrtl.antlr.FIRRTLParser.RuwContext):T"></a>
+      <a id="visitRuw(RuwContext):T"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -927,16 +823,16 @@ of the available methods.
       <span class="symbol">
         <span class="name">visitRuw</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="firrtl.antlr.FIRRTLParser.RuwContext">RuwContext</span></span>)</span><span class="result">: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>
       </span>
-      
-      <p class="shortcomment cmt">Visit a parse tree produced by <code><a href="FIRRTLParser.html#ruw():firrtl.antlr.FIRRTLParser.RuwContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#ruw">FIRRTLParser#ruw</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>Visit a parse tree produced by <code><a href="FIRRTLParser.html#ruw():firrtl.antlr.FIRRTLParser.RuwContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#ruw">FIRRTLParser#ruw</a></code>.</p><p>The default implementation returns the result of calling
-<code><a href="#visitChildren(x$1:org.antlr.v4.runtime.tree.RuleNode):T" class="extmbr" name="firrtl.antlr.FIRRTLBaseVisitor#visitChildren">#visitChildren</a></code> on <code>ctx</code>.</p></div><dl class="paramcmts block"><dt class="param">ctx</dt><dd class="cmt"><p>the parse tree</p></dd><dt>returns</dt><dd class="cmt"><p>the visitor result</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
-    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitSimple_reset" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="visitSimple_reset(ctx:firrtl.antlr.FIRRTLParser.Simple_resetContext):T"></a><a id="visitSimple_reset(Simple_resetContext):T"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#visitSimple_reset(ctx:firrtl.antlr.FIRRTLParser.Simple_resetContext):T" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@visitRuw(ctx:firrtl.antlr.FIRRTLParser.RuwContext):T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
+    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitSimple_reset" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="visitSimple_reset(ctx:firrtl.antlr.FIRRTLParser.Simple_resetContext):T"></a>
+      <a id="visitSimple_reset(Simple_resetContext):T"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -944,16 +840,16 @@ of the available methods.
       <span class="symbol">
         <span class="name">visitSimple_reset</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="firrtl.antlr.FIRRTLParser.Simple_resetContext">Simple_resetContext</span></span>)</span><span class="result">: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>
       </span>
-      
-      <p class="shortcomment cmt">Visit a parse tree produced by <code><a href="FIRRTLParser.html#simple_reset():firrtl.antlr.FIRRTLParser.Simple_resetContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#simple_reset">FIRRTLParser#simple_reset</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>Visit a parse tree produced by <code><a href="FIRRTLParser.html#simple_reset():firrtl.antlr.FIRRTLParser.Simple_resetContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#simple_reset">FIRRTLParser#simple_reset</a></code>.</p><p>The default implementation returns the result of calling
-<code><a href="#visitChildren(x$1:org.antlr.v4.runtime.tree.RuleNode):T" class="extmbr" name="firrtl.antlr.FIRRTLBaseVisitor#visitChildren">#visitChildren</a></code> on <code>ctx</code>.</p></div><dl class="paramcmts block"><dt class="param">ctx</dt><dd class="cmt"><p>the parse tree</p></dd><dt>returns</dt><dd class="cmt"><p>the visitor result</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
-    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitSimple_reset0" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="visitSimple_reset0(ctx:firrtl.antlr.FIRRTLParser.Simple_reset0Context):T"></a><a id="visitSimple_reset0(Simple_reset0Context):T"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#visitSimple_reset0(ctx:firrtl.antlr.FIRRTLParser.Simple_reset0Context):T" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@visitSimple_reset(ctx:firrtl.antlr.FIRRTLParser.Simple_resetContext):T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
+    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitSimple_reset0" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="visitSimple_reset0(ctx:firrtl.antlr.FIRRTLParser.Simple_reset0Context):T"></a>
+      <a id="visitSimple_reset0(Simple_reset0Context):T"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -961,16 +857,16 @@ of the available methods.
       <span class="symbol">
         <span class="name">visitSimple_reset0</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="firrtl.antlr.FIRRTLParser.Simple_reset0Context">Simple_reset0Context</span></span>)</span><span class="result">: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>
       </span>
-      
-      <p class="shortcomment cmt">Visit a parse tree produced by <code><a href="FIRRTLParser.html#simple_reset0():firrtl.antlr.FIRRTLParser.Simple_reset0Context" class="extmbr" name="firrtl.antlr.FIRRTLParser#simple_reset0">FIRRTLParser#simple_reset0</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>Visit a parse tree produced by <code><a href="FIRRTLParser.html#simple_reset0():firrtl.antlr.FIRRTLParser.Simple_reset0Context" class="extmbr" name="firrtl.antlr.FIRRTLParser#simple_reset0">FIRRTLParser#simple_reset0</a></code>.</p><p>The default implementation returns the result of calling
-<code><a href="#visitChildren(x$1:org.antlr.v4.runtime.tree.RuleNode):T" class="extmbr" name="firrtl.antlr.FIRRTLBaseVisitor#visitChildren">#visitChildren</a></code> on <code>ctx</code>.</p></div><dl class="paramcmts block"><dt class="param">ctx</dt><dd class="cmt"><p>the parse tree</p></dd><dt>returns</dt><dd class="cmt"><p>the visitor result</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
-    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitSimple_stmt" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="visitSimple_stmt(ctx:firrtl.antlr.FIRRTLParser.Simple_stmtContext):T"></a><a id="visitSimple_stmt(Simple_stmtContext):T"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#visitSimple_stmt(ctx:firrtl.antlr.FIRRTLParser.Simple_stmtContext):T" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@visitSimple_reset0(ctx:firrtl.antlr.FIRRTLParser.Simple_reset0Context):T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
+    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitSimple_stmt" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="visitSimple_stmt(ctx:firrtl.antlr.FIRRTLParser.Simple_stmtContext):T"></a>
+      <a id="visitSimple_stmt(Simple_stmtContext):T"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -978,16 +874,16 @@ of the available methods.
       <span class="symbol">
         <span class="name">visitSimple_stmt</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="firrtl.antlr.FIRRTLParser.Simple_stmtContext">Simple_stmtContext</span></span>)</span><span class="result">: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>
       </span>
-      
-      <p class="shortcomment cmt">Visit a parse tree produced by <code><a href="FIRRTLParser.html#simple_stmt():firrtl.antlr.FIRRTLParser.Simple_stmtContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#simple_stmt">FIRRTLParser#simple_stmt</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>Visit a parse tree produced by <code><a href="FIRRTLParser.html#simple_stmt():firrtl.antlr.FIRRTLParser.Simple_stmtContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#simple_stmt">FIRRTLParser#simple_stmt</a></code>.</p><p>The default implementation returns the result of calling
-<code><a href="#visitChildren(x$1:org.antlr.v4.runtime.tree.RuleNode):T" class="extmbr" name="firrtl.antlr.FIRRTLBaseVisitor#visitChildren">#visitChildren</a></code> on <code>ctx</code>.</p></div><dl class="paramcmts block"><dt class="param">ctx</dt><dd class="cmt"><p>the parse tree</p></dd><dt>returns</dt><dd class="cmt"><p>the visitor result</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
-    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitStmt" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="visitStmt(ctx:firrtl.antlr.FIRRTLParser.StmtContext):T"></a><a id="visitStmt(StmtContext):T"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#visitStmt(ctx:firrtl.antlr.FIRRTLParser.StmtContext):T" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@visitSimple_stmt(ctx:firrtl.antlr.FIRRTLParser.Simple_stmtContext):T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
+    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitStmt" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="visitStmt(ctx:firrtl.antlr.FIRRTLParser.StmtContext):T"></a>
+      <a id="visitStmt(StmtContext):T"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -995,16 +891,16 @@ of the available methods.
       <span class="symbol">
         <span class="name">visitStmt</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="firrtl.antlr.FIRRTLParser.StmtContext">StmtContext</span></span>)</span><span class="result">: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>
       </span>
-      
-      <p class="shortcomment cmt">Visit a parse tree produced by <code><a href="FIRRTLParser.html#stmt():firrtl.antlr.FIRRTLParser.StmtContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#stmt">FIRRTLParser#stmt</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>Visit a parse tree produced by <code><a href="FIRRTLParser.html#stmt():firrtl.antlr.FIRRTLParser.StmtContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#stmt">FIRRTLParser#stmt</a></code>.</p><p>The default implementation returns the result of calling
-<code><a href="#visitChildren(x$1:org.antlr.v4.runtime.tree.RuleNode):T" class="extmbr" name="firrtl.antlr.FIRRTLBaseVisitor#visitChildren">#visitChildren</a></code> on <code>ctx</code>.</p></div><dl class="paramcmts block"><dt class="param">ctx</dt><dd class="cmt"><p>the parse tree</p></dd><dt>returns</dt><dd class="cmt"><p>the visitor result</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
-    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitSuite" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="visitSuite(ctx:firrtl.antlr.FIRRTLParser.SuiteContext):T"></a><a id="visitSuite(SuiteContext):T"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#visitSuite(ctx:firrtl.antlr.FIRRTLParser.SuiteContext):T" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@visitStmt(ctx:firrtl.antlr.FIRRTLParser.StmtContext):T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
+    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitSuite" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="visitSuite(ctx:firrtl.antlr.FIRRTLParser.SuiteContext):T"></a>
+      <a id="visitSuite(SuiteContext):T"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -1012,16 +908,16 @@ of the available methods.
       <span class="symbol">
         <span class="name">visitSuite</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="firrtl.antlr.FIRRTLParser.SuiteContext">SuiteContext</span></span>)</span><span class="result">: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>
       </span>
-      
-      <p class="shortcomment cmt">Visit a parse tree produced by <code><a href="FIRRTLParser.html#suite():firrtl.antlr.FIRRTLParser.SuiteContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#suite">FIRRTLParser#suite</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>Visit a parse tree produced by <code><a href="FIRRTLParser.html#suite():firrtl.antlr.FIRRTLParser.SuiteContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#suite">FIRRTLParser#suite</a></code>.</p><p>The default implementation returns the result of calling
-<code><a href="#visitChildren(x$1:org.antlr.v4.runtime.tree.RuleNode):T" class="extmbr" name="firrtl.antlr.FIRRTLBaseVisitor#visitChildren">#visitChildren</a></code> on <code>ctx</code>.</p></div><dl class="paramcmts block"><dt class="param">ctx</dt><dd class="cmt"><p>the parse tree</p></dd><dt>returns</dt><dd class="cmt"><p>the visitor result</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
-    </li><li name="org.antlr.v4.runtime.tree.AbstractParseTreeVisitor#visitTerminal" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="visitTerminal(x$1:org.antlr.v4.runtime.tree.TerminalNode):T"></a><a id="visitTerminal(TerminalNode):T"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#visitTerminal(x$1:org.antlr.v4.runtime.tree.TerminalNode):T" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@visitSuite(ctx:firrtl.antlr.FIRRTLParser.SuiteContext):T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
+    </li><li name="org.antlr.v4.runtime.tree.AbstractParseTreeVisitor#visitTerminal" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="visitTerminal(x$1:org.antlr.v4.runtime.tree.TerminalNode):T"></a>
+      <a id="visitTerminal(TerminalNode):T"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -1029,15 +925,16 @@ of the available methods.
       <span class="symbol">
         <span class="name">visitTerminal</span><span class="params">(<span name="arg0">arg0: <span class="extype" name="org.antlr.v4.runtime.tree.TerminalNode">TerminalNode</span></span>)</span><span class="result">: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>
       </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractParseTreeVisitor → ParseTreeVisitor</dd></dl></div>
-    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitType" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="visitType(ctx:firrtl.antlr.FIRRTLParser.TypeContext):T"></a><a id="visitType(TypeContext):T"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#visitType(ctx:firrtl.antlr.FIRRTLParser.TypeContext):T" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@visitTerminal(x$1:org.antlr.v4.runtime.tree.TerminalNode):T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AbstractParseTreeVisitor → ParseTreeVisitor</dd></dl></div>
+    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitType" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="visitType(ctx:firrtl.antlr.FIRRTLParser.TypeContext):T"></a>
+      <a id="visitType(TypeContext):T"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -1045,16 +942,16 @@ of the available methods.
       <span class="symbol">
         <span class="name">visitType</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="firrtl.antlr.FIRRTLParser.TypeContext">TypeContext</span></span>)</span><span class="result">: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>
       </span>
-      
-      <p class="shortcomment cmt">Visit a parse tree produced by <code><a href="FIRRTLParser.html#type():firrtl.antlr.FIRRTLParser.TypeContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#type">FIRRTLParser#type</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>Visit a parse tree produced by <code><a href="FIRRTLParser.html#type():firrtl.antlr.FIRRTLParser.TypeContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#type">FIRRTLParser#type</a></code>.</p><p>The default implementation returns the result of calling
-<code><a href="#visitChildren(x$1:org.antlr.v4.runtime.tree.RuleNode):T" class="extmbr" name="firrtl.antlr.FIRRTLBaseVisitor#visitChildren">#visitChildren</a></code> on <code>ctx</code>.</p></div><dl class="paramcmts block"><dt class="param">ctx</dt><dd class="cmt"><p>the parse tree</p></dd><dt>returns</dt><dd class="cmt"><p>the visitor result</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
-    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitWhen" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="visitWhen(ctx:firrtl.antlr.FIRRTLParser.WhenContext):T"></a><a id="visitWhen(WhenContext):T"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#visitWhen(ctx:firrtl.antlr.FIRRTLParser.WhenContext):T" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@visitType(ctx:firrtl.antlr.FIRRTLParser.TypeContext):T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
+    </li><li name="firrtl.antlr.FIRRTLBaseVisitor#visitWhen" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="visitWhen(ctx:firrtl.antlr.FIRRTLParser.WhenContext):T"></a>
+      <a id="visitWhen(WhenContext):T"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -1062,24 +959,28 @@ of the available methods.
       <span class="symbol">
         <span class="name">visitWhen</span><span class="params">(<span name="ctx">ctx: <span class="extype" name="firrtl.antlr.FIRRTLParser.WhenContext">WhenContext</span></span>)</span><span class="result">: <span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span></span>
       </span>
-      
-      <p class="shortcomment cmt">Visit a parse tree produced by <code><a href="FIRRTLParser.html#when():firrtl.antlr.FIRRTLParser.WhenContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#when">FIRRTLParser#when</a></code>.</p><div class="fullcomment"><div class="comment cmt"><p>Visit a parse tree produced by <code><a href="FIRRTLParser.html#when():firrtl.antlr.FIRRTLParser.WhenContext" class="extmbr" name="firrtl.antlr.FIRRTLParser#when">FIRRTLParser#when</a></code>.</p><p>The default implementation returns the result of calling
-<code><a href="#visitChildren(x$1:org.antlr.v4.runtime.tree.RuleNode):T" class="extmbr" name="firrtl.antlr.FIRRTLBaseVisitor#visitChildren">#visitChildren</a></code> on <code>ctx</code>.</p></div><dl class="paramcmts block"><dt class="param">ctx</dt><dd class="cmt"><p>the parse tree</p></dd><dt>returns</dt><dd class="cmt"><p>the visitor result</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
-    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@visitWhen(ctx:firrtl.antlr.FIRRTLParser.WhenContext):T" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.antlr.FIRRTLBaseVisitor">FIRRTLBaseVisitor</a> → <a href="FIRRTLVisitor.html" class="extype" name="firrtl.antlr.FIRRTLVisitor">FIRRTLVisitor</a></dd></dl></div>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#wait():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@wait():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -1087,21 +988,22 @@ of the available methods.
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -1109,32 +1011,30 @@ of the available methods.
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
-      <span class="permalink">
-      <a href="../../firrtl/antlr/FIRRTLBaseVisitor.html#wait(x$1:Long):Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Long" class="extype" target="_top">Long</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      
+      </h4><span class="permalink">
+      <a href="../../index.html#firrtl.antlr.FIRRTLBaseVisitor@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
     </span>)</span>
               
         </dd></dl></div>
-    </li>
-              </ol>
+    </li></ol>
             </div>
 
         
@@ -1150,9 +1050,9 @@ of the available methods.
             </div><div class="parent" name="org.antlr.v4.runtime.tree.ParseTreeVisitor">
               <h3>Inherited from <span class="extype" name="org.antlr.v4.runtime.tree.ParseTreeVisitor">ParseTreeVisitor</span>[<span class="extype" name="firrtl.antlr.FIRRTLBaseVisitor.T">T</span>]</h3>
             </div><div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Any" class="extype" target="_top">Any</a></h3>
             </div>
         
         </div>
@@ -1169,9 +1069,7 @@ of the available methods.
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-    </body>
-          </div>
-        </div>
-      </div>
+
+
     </body>
       </html>

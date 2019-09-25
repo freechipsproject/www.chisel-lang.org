@@ -1,129 +1,42 @@
 <!DOCTYPE html >
 <html>
         <head>
-          <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-          <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.1.1 - tutorial.lesson1.AnalyzeCircuit</title>
-          <meta name="description" content="firrtl 1.1.1 - tutorial.lesson1.AnalyzeCircuit" />
-          <meta name="keywords" content="firrtl 1.1.1 tutorial.lesson1.AnalyzeCircuit" />
+          <title>AnalyzeCircuit - firrtl 1.1.1 - tutorial.lesson1.AnalyzeCircuit</title>
+          <meta name="description" content="AnalyzeCircuit - firrtl 1.1.1 - tutorial.lesson1.AnalyzeCircuit" />
+          <meta name="keywords" content="AnalyzeCircuit firrtl 1.1.1 tutorial.lesson1.AnalyzeCircuit" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
-      <link href="../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../lib/jquery.js"></script>
-      <script type="text/javascript" src="../../lib/jquery.panzoom.min.js"></script>
-      <script type="text/javascript" src="../../lib/jquery.mousewheel.min.js"></script>
-      <script type="text/javascript" src="../../lib/index.js"></script>
-      <script type="text/javascript" src="../../index.js"></script>
-      <script type="text/javascript" src="../../lib/scheduler.js"></script>
+      <script type="text/javascript" src="../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../lib/jquery-ui.js"></script>
       <script type="text/javascript" src="../../lib/template.js"></script>
       <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
       <script type="text/javascript" src="../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../lib/diagrams.js" id="diagrams-js"></script>
       <script type="text/javascript">
-        /* this variable can be used by the JS to determine the path to the root document */
-        var toRoot = '../../';
-      </script>
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'tutorial.lesson1.AnalyzeCircuit';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
     
         </head>
-        <body>
-      <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.1.1</span></span>
-        <span class="close-results"><span class="left">&lt;</span> Back</span>
-        <div id="textfilter">
-          <span class="input">
-            <input autocapitalize="none" placeholder="Search" id="index-input" type="text" accesskey="/" />
-            <i class="clear material-icons"></i>
-            <i id="search-icon" class="material-icons"></i>
-          </span>
-        </div>
-    </div>
-      <div id="search-results">
-        <div id="search-progress">
-          <div id="progress-fill"></div>
-        </div>
-        <div id="results-content">
-          <div id="entity-results"></div>
-          <div id="member-results"></div>
-        </div>
-      </div>
-      <div id="content-scroll-container" style="-webkit-overflow-scrolling: touch;">
-        <div id="content-container" style="-webkit-overflow-scrolling: touch;">
-          <div id="subpackage-spacer">
-            <div id="packages">
-              <h1>Packages</h1>
-              <ul>
-                <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="_root_"></a><a id="root:_root_"></a>
-      <span class="permalink">
-      <a href="index.html#_root_" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a title="This is the documentation for Firrtl." href="../../index.html"><span class="name">root</span></a>
-      </span>
-      
-      <p class="shortcomment cmt">This is the documentation for Firrtl.</p><div class="fullcomment"><div class="comment cmt"><p>This is the documentation for Firrtl.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
-    </li><li name="_root_.tutorial" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="tutorial"></a><a id="tutorial:tutorial"></a>
-      <span class="permalink">
-      <a href="index.html#tutorial" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="../index.html"><span class="name">tutorial</span></a>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
-    </li><li name="tutorial.lesson1" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="lesson1"></a><a id="lesson1:lesson1"></a>
-      <span class="permalink">
-      <a href="../tutorial/index.html#lesson1" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">package</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="index.html"><span class="name">lesson1</span></a>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="tutorial">tutorial</a></dd></dl></div>
-    </li><li class="current-entities indented2">
-                        <span class="separator"></span>
-                        <a class="class" href="" title="AnalyzeCircuit Transform"></a>
-                        <a href="" title="AnalyzeCircuit Transform">AnalyzeCircuit</a>
-                      </li><li class="current-entities indented2">
-                        <span class="separator"></span>
-                        <a class="class" href="Ledger.html" title="Ledger tracks firrtl.ir.Circuit statistics"></a>
-                        <a href="Ledger.html" title="Ledger tracks firrtl.ir.Circuit statistics">Ledger</a>
-                      </li>
-              </ul>
-            </div>
-          </div>
-          <div id="content">
-            <body class="class type">
+        <body class="type">
       <div id="definition">
-        <div class="big-circle class">c</div>
-        <p id="owner"><a href="../index.html" class="extype" name="tutorial">tutorial</a>.<a href="index.html" class="extype" name="tutorial.lesson1">lesson1</a></p>
-        <h1>AnalyzeCircuit<span class="permalink">
-      <a href="../../tutorial/lesson1/AnalyzeCircuit.html" title="Permalink">
-        <i class="material-icons"></i>
+        <img alt="Class" src="../../lib/class_big.png" />
+        <p id="owner"><a href="../package.html" class="extype" name="tutorial">tutorial</a>.<a href="package.html" class="extype" name="tutorial.lesson1">lesson1</a></p>
+        <h1>AnalyzeCircuit</h1><h3><span class="morelinks"><div>Related Doc:
+            <a href="package.html" class="extype" name="tutorial.lesson1">package lesson1</a>
+          </div></span></h3><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.AnalyzeCircuit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
-    </span></h1>
-        <h3><span class="morelinks"></span></h3>
+    </span>
       </div>
 
       <h4 id="signature" class="signature">
@@ -135,7 +48,6 @@
         <span class="name">AnalyzeCircuit</span><span class="result"> extends <a href="../../firrtl/Transform.html" class="extype" name="firrtl.Transform">Transform</a></span>
       </span>
       </h4>
-
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>AnalyzeCircuit Transform</p><p>Walks <a href="../../firrtl/ir/Circuit.html" class="extype" name="firrtl.ir.Circuit">firrtl.ir.Circuit</a>, and records the number of muxes it finds, per module.</p><p>While some compiler frameworks operate on graphs, we represent a Firrtl
 circuit using a tree representation:</p><ul><li>A Firrtl <span class="extype" name="Circuit">Circuit</span> contains a sequence of <span class="extype" name="DefModule">DefModule</span>s.</li><li>A <span class="extype" name="DefModule">DefModule</span> contains a sequence of <span class="extype" name="Port">Port</span>s, and maybe a <span class="extype" name="Statement">Statement</span>.</li><li>A <span class="extype" name="Statement">Statement</span> can contain other <span class="extype" name="Statement">Statement</span>s, or <span class="extype" name="Expression">Expression</span>s.</li><li>A <span class="extype" name="Expression">Expression</span> can contain other <span class="extype" name="Expression">Expression</span>s.</li></ul><p>To visit all Firrtl IR nodes in a circuit, we write functions that recursively
@@ -145,62 +57,51 @@ Firrtl's IR:</p><ul><li>https://github.com/ucb-bar/firrtl/wiki/Understanding-Fir
 Traversing a circuit:</li><li>https://github.com/ucb-bar/firrtl/wiki/traversing-a-circuit for more
 Common Pass Idioms:</li><li>https://github.com/ucb-bar/firrtl/wiki/Common-Pass-Idioms
 </li></ul></div><div class="toggleContainer block">
-          <span class="toggle">
-            Linear Supertypes
-          </span>
-          <div class="superTypes hiddenContent"><a href="../../firrtl/Transform.html" class="extype" name="firrtl.Transform">Transform</a>, <a href="../../logger/LazyLogging.html" class="extype" name="logger.LazyLogging">LazyLogging</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
-        </div></div>
+          <span class="toggle">Linear Supertypes</span>
+          <div class="superTypes hiddenContent"><a href="../../firrtl/Transform.html" class="extype" name="firrtl.Transform">Transform</a>, <a href="../../logger/LazyLogging.html" class="extype" name="logger.LazyLogging">LazyLogging</a>, <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Any" class="extype" target="_top">Any</a></div>
+        </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
+                <span class="toggle diagram-link">Type Hierarchy</span>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 164.00 118.00" height="118pt" width="164pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 114)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-114 160,-114 160,4 -4,4" stroke="transparent" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this class" id="graph1_0"><g id="a_this class|graph1_0"><a xlink:title="tutorial.lesson1.AnalyzeCircuit (this class)" xlink:href="#inheritance-diagram"><polygon points="132,-49 24,-49 24,-24 132,-24 132,-49" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-43.5" x="34" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-33.5" x="55" text-anchor="start">AnalyzeCircuit</text></a></g></g><!-- node1 --><g class="node class" id="graph1_1"><g id="a_class|graph1_1"><a xlink:title="firrtl.Transform" xlink:href="../../firrtl/Transform.html#inheritance-diagram"><polygon points="121.5,-110 34.5,-110 34.5,-85 121.5,-85 121.5,-110" stroke="#115f3b" fill="#0a955b"></polygon><image xlink:href="../../lib/class_diagram.png" y="-104.5" x="45" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="10.00" font-family="Arial" y="-94.5" x="66" text-anchor="start">Transform</text></a></g></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph1_1_0"><g id="a_inheritance|graph1_1_0"><a xlink:title="AnalyzeCircuit is a subtype of Transform"><path d="M78,-79.69C78,-69.92 78,-57.85 78,-49.13" stroke="#d4d4d4" fill="none"></path><polygon points="76.25,-79.84 78,-84.84 79.75,-79.84 76.25,-79.84" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
+              </div></div>
         
 
       <div id="mbrsel">
-        <div class="toggle"></div>
-        <div id="memberfilter">
-          <i class="material-icons arrow"></i>
-          <span class="input">
-            <input id="mbrsel-input" placeholder="Filter all members" type="text" accesskey="/" />
-          </span>
-          <i class="clear material-icons"></i>
-        </div>
-        <div id="filterby">
-          <div id="order">
-            <span class="filtertype">Ordering</span>
-            <ol>
-              
-              <li class="alpha in"><span>Alphabetic</span></li>
-              <li class="inherit out"><span>By Inheritance</span></li>
-            </ol>
-          </div>
-          <div class="ancestors">
-                  <span class="filtertype">Inherited<br />
-                  </span>
-                  <ol id="linearization">
-                    <li class="in" name="tutorial.lesson1.AnalyzeCircuit"><span>AnalyzeCircuit</span></li><li class="in" name="firrtl.Transform"><span>Transform</span></li><li class="in" name="logger.LazyLogging"><span>LazyLogging</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
-                  </ol>
-                </div><div class="ancestors">
-              <span class="filtertype"></span>
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        <div id="order">
+              <span class="filtertype">Ordering</span>
               <ol>
-                <li class="hideall out"><span>Hide All</span></li>
-                <li class="showall in"><span>Show All</span></li>
+                
+                <li class="alpha in"><span>Alphabetic</span></li>
+                <li class="inherit out"><span>By Inheritance</span></li>
               </ol>
             </div>
-          <div id="visbl">
-              <span class="filtertype">Visibility</span>
-              <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
-            </div>
-        </div>
+        <div id="ancestors">
+                <span class="filtertype">Inherited<br />
+                </span>
+                <ol id="linearization">
+                  <li class="in" name="tutorial.lesson1.AnalyzeCircuit"><span>AnalyzeCircuit</span></li><li class="in" name="firrtl.Transform"><span>Transform</span></li><li class="in" name="logger.LazyLogging"><span>LazyLogging</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                </ol>
+              </div><div id="ancestors">
+            <span class="filtertype"></span>
+            <ol>
+              <li class="hideall out"><span>Hide All</span></li>
+              <li class="showall in"><span>Show All</span></li>
+            </ol>
+          </div>
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
       </div>
 
       <div id="template">
         <div id="allMembers">
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
-              <ol><li name="tutorial.lesson1.AnalyzeCircuit#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;():tutorial.lesson1.AnalyzeCircuit"></a><a id="&lt;init&gt;:AnalyzeCircuit"></a>
-      <span class="permalink">
-      <a href="../../tutorial/lesson1/AnalyzeCircuit.html#&lt;init&gt;():tutorial.lesson1.AnalyzeCircuit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
+              <ol><li name="tutorial.lesson1.AnalyzeCircuit#&lt;init&gt;" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="&lt;init&gt;():tutorial.lesson1.AnalyzeCircuit"></a>
+      <a id="&lt;init&gt;:AnalyzeCircuit"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">new</span>
@@ -208,7 +109,11 @@ Common Pass Idioms:</li><li>https://github.com/ucb-bar/firrtl/wiki/Common-Pass-I
       <span class="symbol">
         <span class="name">AnalyzeCircuit</span><span class="params">()</span>
       </span>
-      
+      </h4><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.AnalyzeCircuit@&lt;init&gt;():tutorial.lesson1.AnalyzeCircuit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       
     </li></ol>
             </div>
@@ -217,64 +122,63 @@ Common Pass Idioms:</li><li>https://github.com/ucb-bar/firrtl/wiki/Common-Pass-I
 
         
 
-        <div class="values members">
+        <div id="values" class="values members">
               <h3>Value Members</h3>
-              <ol>
-                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
-      <span class="permalink">
-      <a href="../../tutorial/lesson1/AnalyzeCircuit.html#!=(x$1:Any):Boolean" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
+              <ol><li name="scala.AnyRef#!=" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="!=(x$1:Any):Boolean"></a>
+      <a id="!=(Any):Boolean"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      
+      </h4><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.AnalyzeCircuit@!=(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.AnyRef###" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
-      <span class="permalink">
-      <a href="../../tutorial/lesson1/AnalyzeCircuit.html###():Int" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
+      <a id="##():Int"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Int" class="extype" target="_top">Int</a></span>
       </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
-      <span class="permalink">
-      <a href="../../tutorial/lesson1/AnalyzeCircuit.html#==(x$1:Any):Boolean" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.AnalyzeCircuit@##():Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#==" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="==(x$1:Any):Boolean"></a>
+      <a id="==(Any):Boolean"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      
+      </h4><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.AnalyzeCircuit@==(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.Any#asInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
-      <span class="permalink">
-      <a href="../../tutorial/lesson1/AnalyzeCircuit.html#asInstanceOf[T0]:T0" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
+      <a id="asInstanceOf[T0]:T0"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
@@ -282,71 +186,73 @@ Common Pass Idioms:</li><li>https://github.com/ucb-bar/firrtl/wiki/Common-Pass-I
       <span class="symbol">
         <span class="name">asInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <span class="extype" name="scala.Any.asInstanceOf.T0">T0</span></span>
       </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="clone():Object"></a><a id="clone():AnyRef"></a>
-      <span class="permalink">
-      <a href="../../tutorial/lesson1/AnalyzeCircuit.html#clone():Object" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.AnalyzeCircuit@asInstanceOf[T0]:T0" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="scala.AnyRef#clone" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="clone():Object"></a>
+      <a id="clone():AnyRef"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
       </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
+      </h4><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.AnalyzeCircuit@clone():Object" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
-      <span class="permalink">
-      <a href="../../tutorial/lesson1/AnalyzeCircuit.html#eq(x$1:AnyRef):Boolean" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
+    </li><li name="scala.AnyRef#eq" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="eq(x$1:AnyRef):Boolean"></a>
+      <a id="eq(AnyRef):Boolean"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
-      <span class="permalink">
-      <a href="../../tutorial/lesson1/AnalyzeCircuit.html#equals(x$1:Any):Boolean" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.AnalyzeCircuit@eq(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#equals" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(x$1:Any):Boolean"></a>
+      <a id="equals(Any):Boolean"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Any" class="extype" target="_top">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="tutorial.lesson1.AnalyzeCircuit#execute" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="execute(state:firrtl.CircuitState):firrtl.CircuitState"></a><a id="execute(CircuitState):CircuitState"></a>
-      <span class="permalink">
-      <a href="../../tutorial/lesson1/AnalyzeCircuit.html#execute(state:firrtl.CircuitState):firrtl.CircuitState" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.AnalyzeCircuit@equals(x$1:Any):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="tutorial.lesson1.AnalyzeCircuit#execute" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="execute(state:firrtl.CircuitState):firrtl.CircuitState"></a>
+      <a id="execute(CircuitState):CircuitState"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -354,42 +260,44 @@ Common Pass Idioms:</li><li>https://github.com/ucb-bar/firrtl/wiki/Common-Pass-I
       <span class="symbol">
         <span class="name">execute</span><span class="params">(<span name="state">state: <a href="../../firrtl/CircuitState.html" class="extype" name="firrtl.CircuitState">CircuitState</a></span>)</span><span class="result">: <a href="../../firrtl/CircuitState.html" class="extype" name="firrtl.CircuitState">CircuitState</a></span>
       </span>
-      
+      </h4><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.AnalyzeCircuit@execute(state:firrtl.CircuitState):firrtl.CircuitState" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <p class="shortcomment cmt">Perform the transform, encode renaming with RenameMap, and can
   delete annotations
 Called by <a href="#runTransform(state:firrtl.CircuitState):firrtl.CircuitState" class="extmbr" name="tutorial.lesson1.AnalyzeCircuit#runTransform">runTransform</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Perform the transform, encode renaming with RenameMap, and can
   delete annotations
 Called by <a href="#runTransform(state:firrtl.CircuitState):firrtl.CircuitState" class="extmbr" name="tutorial.lesson1.AnalyzeCircuit#runTransform">runTransform</a>.
 </p></div><dl class="paramcmts block"><dt class="param">state</dt><dd class="cmt"><p>Input Firrtl AST</p></dd><dt>returns</dt><dd class="cmt"><p>A transformed Firrtl AST</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="tutorial.lesson1.AnalyzeCircuit">AnalyzeCircuit</a> → <a href="../../firrtl/Transform.html" class="extype" name="firrtl.Transform">Transform</a></dd></dl></div>
-    </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.AnyRef#finalize" visbl="prt" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
-      <span class="permalink">
-      <a href="../../tutorial/lesson1/AnalyzeCircuit.html#finalize():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
+      <a id="finalize():Unit"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      </h4><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.AnalyzeCircuit@finalize():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java$lang.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.AnyRef#getClass" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
-      <span class="permalink">
-      <a href="../../tutorial/lesson1/AnalyzeCircuit.html#getClass():Class[_]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
+      <a id="getClass():Class[_]"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
@@ -397,37 +305,33 @@ Called by <a href="#runTransform(state:firrtl.CircuitState):firrtl.CircuitState"
       <span class="symbol">
         <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
       </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
-        </dd></dl></div>
-    </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="hashCode():Int"></a>
-      <span class="permalink">
-      <a href="../../tutorial/lesson1/AnalyzeCircuit.html#hashCode():Int" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.AnalyzeCircuit@getClass():Class[_]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.AnyRef#hashCode" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hashCode():Int"></a>
+      <a id="hashCode():Int"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Int" class="extype" target="_top">Int</a></span>
       </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
-        </dd></dl></div>
-    </li><li name="tutorial.lesson1.AnalyzeCircuit#inputForm" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="inputForm:firrtl.LowForm.type"></a><a id="inputForm:LowForm.type"></a>
-      <span class="permalink">
-      <a href="../../tutorial/lesson1/AnalyzeCircuit.html#inputForm:firrtl.LowForm.type" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.AnalyzeCircuit@hashCode():Int" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="tutorial.lesson1.AnalyzeCircuit#inputForm" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="inputForm:firrtl.LowForm.type"></a>
+      <a id="inputForm:LowForm.type"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -435,31 +339,33 @@ Called by <a href="#runTransform(state:firrtl.CircuitState):firrtl.CircuitState"
       <span class="symbol">
         <span class="name">inputForm</span><span class="result">: <a href="../../firrtl/LowForm$.html" class="extype" name="firrtl.LowForm">LowForm</a>.type</span>
       </span>
-      
-      <p class="shortcomment cmt">The <a href="../../firrtl/CircuitForm.html" class="extype" name="firrtl.CircuitForm">firrtl.CircuitForm</a> that this transform requires to operate on</p><div class="fullcomment"><div class="comment cmt"><p>The <a href="../../firrtl/CircuitForm.html" class="extype" name="firrtl.CircuitForm">firrtl.CircuitForm</a> that this transform requires to operate on</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="tutorial.lesson1.AnalyzeCircuit">AnalyzeCircuit</a> → <a href="../../firrtl/Transform.html" class="extype" name="firrtl.Transform">Transform</a></dd></dl></div>
-    </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="isInstanceOf[T0]:Boolean"></a>
-      <span class="permalink">
-      <a href="../../tutorial/lesson1/AnalyzeCircuit.html#isInstanceOf[T0]:Boolean" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.AnalyzeCircuit@inputForm:firrtl.LowForm.type" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <p class="shortcomment cmt">The <a href="../../firrtl/CircuitForm.html" class="extype" name="firrtl.CircuitForm">firrtl.CircuitForm</a> that this transform requires to operate on</p><div class="fullcomment"><div class="comment cmt"><p>The <a href="../../firrtl/CircuitForm.html" class="extype" name="firrtl.CircuitForm">firrtl.CircuitForm</a> that this transform requires to operate on</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="tutorial.lesson1.AnalyzeCircuit">AnalyzeCircuit</a> → <a href="../../firrtl/Transform.html" class="extype" name="firrtl.Transform">Transform</a></dd></dl></div>
+    </li><li name="scala.Any#isInstanceOf" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <a id="isInstanceOf[T0]:Boolean"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="logger.LazyLogging#logger" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="logger:logger.Logger"></a><a id="logger:Logger"></a>
-      <span class="permalink">
-      <a href="../../tutorial/lesson1/AnalyzeCircuit.html#logger:logger.Logger" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.AnalyzeCircuit@isInstanceOf[T0]:Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="logger.LazyLogging#logger" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logger:logger.Logger"></a>
+      <a id="logger:Logger"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">val</span>
@@ -467,15 +373,16 @@ Called by <a href="#runTransform(state:firrtl.CircuitState):firrtl.CircuitState"
       <span class="symbol">
         <span class="name">logger</span><span class="result">: <a href="../../logger/Logger.html" class="extype" name="logger.Logger">Logger</a></span>
       </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../logger/LazyLogging.html" class="extype" name="logger.LazyLogging">LazyLogging</a></dd></dl></div>
-    </li><li name="firrtl.Transform#name" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="name:String"></a>
-      <span class="permalink">
-      <a href="../../tutorial/lesson1/AnalyzeCircuit.html#name:String" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.AnalyzeCircuit@logger:logger.Logger" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../logger/LazyLogging.html" class="extype" name="logger.LazyLogging">LazyLogging</a></dd></dl></div>
+    </li><li name="firrtl.Transform#name" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="name:String"></a>
+      <a id="name:String"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -483,69 +390,67 @@ Called by <a href="#runTransform(state:firrtl.CircuitState):firrtl.CircuitState"
       <span class="symbol">
         <span class="name">name</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
-      
+      </h4><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.AnalyzeCircuit@name:String" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <p class="shortcomment cmt">A convenience function useful for debugging and error messages</p><div class="fullcomment"><div class="comment cmt"><p>A convenience function useful for debugging and error messages</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../firrtl/Transform.html" class="extype" name="firrtl.Transform">Transform</a></dd></dl></div>
-    </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
-      <span class="permalink">
-      <a href="../../tutorial/lesson1/AnalyzeCircuit.html#ne(x$1:AnyRef):Boolean" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
+    </li><li name="scala.AnyRef#ne" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ne(x$1:AnyRef):Boolean"></a>
+      <a id="ne(AnyRef):Boolean"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Boolean" class="extype" target="_top">Boolean</a></span>
       </span>
-      
+      </h4><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.AnalyzeCircuit@ne(x$1:AnyRef):Boolean" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#notify" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.AnyRef#notify" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notify():Unit"></a>
-      <span class="permalink">
-      <a href="../../tutorial/lesson1/AnalyzeCircuit.html#notify():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
+      <a id="notify():Unit"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
-        </dd></dl></div>
-    </li><li name="scala.AnyRef#notifyAll" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      </h4><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.AnalyzeCircuit@notify():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#notifyAll" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="notifyAll():Unit"></a>
-      <span class="permalink">
-      <a href="../../tutorial/lesson1/AnalyzeCircuit.html#notifyAll():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
+      <a id="notifyAll():Unit"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
-        </dd></dl></div>
-    </li><li name="tutorial.lesson1.AnalyzeCircuit#outputForm" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="outputForm:firrtl.LowForm.type"></a><a id="outputForm:LowForm.type"></a>
-      <span class="permalink">
-      <a href="../../tutorial/lesson1/AnalyzeCircuit.html#outputForm:firrtl.LowForm.type" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.AnalyzeCircuit@notifyAll():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="tutorial.lesson1.AnalyzeCircuit#outputForm" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="outputForm:firrtl.LowForm.type"></a>
+      <a id="outputForm:LowForm.type"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -553,15 +458,16 @@ Called by <a href="#runTransform(state:firrtl.CircuitState):firrtl.CircuitState"
       <span class="symbol">
         <span class="name">outputForm</span><span class="result">: <a href="../../firrtl/LowForm$.html" class="extype" name="firrtl.LowForm">LowForm</a>.type</span>
       </span>
-      
-      <p class="shortcomment cmt">The <a href="../../firrtl/CircuitForm.html" class="extype" name="firrtl.CircuitForm">firrtl.CircuitForm</a> that this transform outputs</p><div class="fullcomment"><div class="comment cmt"><p>The <a href="../../firrtl/CircuitForm.html" class="extype" name="firrtl.CircuitForm">firrtl.CircuitForm</a> that this transform outputs</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="tutorial.lesson1.AnalyzeCircuit">AnalyzeCircuit</a> → <a href="../../firrtl/Transform.html" class="extype" name="firrtl.Transform">Transform</a></dd></dl></div>
-    </li><li name="firrtl.Transform#runTransform" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="runTransform(state:firrtl.CircuitState):firrtl.CircuitState"></a><a id="runTransform(CircuitState):CircuitState"></a>
-      <span class="permalink">
-      <a href="../../tutorial/lesson1/AnalyzeCircuit.html#runTransform(state:firrtl.CircuitState):firrtl.CircuitState" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.AnalyzeCircuit@outputForm:firrtl.LowForm.type" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <p class="shortcomment cmt">The <a href="../../firrtl/CircuitForm.html" class="extype" name="firrtl.CircuitForm">firrtl.CircuitForm</a> that this transform outputs</p><div class="fullcomment"><div class="comment cmt"><p>The <a href="../../firrtl/CircuitForm.html" class="extype" name="firrtl.CircuitForm">firrtl.CircuitForm</a> that this transform outputs</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="tutorial.lesson1.AnalyzeCircuit">AnalyzeCircuit</a> → <a href="../../firrtl/Transform.html" class="extype" name="firrtl.Transform">Transform</a></dd></dl></div>
+    </li><li name="firrtl.Transform#runTransform" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="runTransform(state:firrtl.CircuitState):firrtl.CircuitState"></a>
+      <a id="runTransform(CircuitState):CircuitState"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
@@ -569,16 +475,17 @@ Called by <a href="#runTransform(state:firrtl.CircuitState):firrtl.CircuitState"
       <span class="symbol">
         <span class="name">runTransform</span><span class="params">(<span name="state">state: <a href="../../firrtl/CircuitState.html" class="extype" name="firrtl.CircuitState">CircuitState</a></span>)</span><span class="result">: <a href="../../firrtl/CircuitState.html" class="extype" name="firrtl.CircuitState">CircuitState</a></span>
       </span>
-      
-      <p class="shortcomment cmt">Perform the transform and update annotations.</p><div class="fullcomment"><div class="comment cmt"><p>Perform the transform and update annotations.
-</p></div><dl class="paramcmts block"><dt class="param">state</dt><dd class="cmt"><p>Input Firrtl AST</p></dd><dt>returns</dt><dd class="cmt"><p>A transformed Firrtl AST</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../firrtl/Transform.html" class="extype" name="firrtl.Transform">Transform</a></dd></dl></div>
-    </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
-      <span class="permalink">
-      <a href="../../tutorial/lesson1/AnalyzeCircuit.html#synchronized[T0](x$1:=&gt;T0):T0" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.AnalyzeCircuit@runTransform(state:firrtl.CircuitState):firrtl.CircuitState" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <p class="shortcomment cmt">Perform the transform and update annotations.</p><div class="fullcomment"><div class="comment cmt"><p>Perform the transform and update annotations.
+</p></div><dl class="paramcmts block"><dt class="param">state</dt><dd class="cmt"><p>Input Firrtl AST</p></dd><dt>returns</dt><dd class="cmt"><p>A transformed Firrtl AST</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../firrtl/Transform.html" class="extype" name="firrtl.Transform">Transform</a></dd></dl></div>
+    </li><li name="scala.AnyRef#synchronized" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="synchronized[T0](x$1:=&gt;T0):T0"></a>
+      <a id="synchronized[T0](⇒T0):T0"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
@@ -586,15 +493,16 @@ Called by <a href="#runTransform(state:firrtl.CircuitState):firrtl.CircuitState"
       <span class="symbol">
         <span class="name">synchronized</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="params">(<span name="arg0">arg0: ⇒ <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>)</span><span class="result">: <span class="extype" name="java.lang.AnyRef.synchronized.T0">T0</span></span>
       </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toString():String"></a>
-      <span class="permalink">
-      <a href="../../tutorial/lesson1/AnalyzeCircuit.html#toString():String" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.AnalyzeCircuit@synchronized[T0](x$1:=&gt;T0):T0" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
+    </li><li name="scala.AnyRef#toString" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <a id="toString():String"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -602,23 +510,28 @@ Called by <a href="#runTransform(state:firrtl.CircuitState):firrtl.CircuitState"
       <span class="symbol">
         <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
       </span>
-      
+      </h4><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.AnalyzeCircuit@toString():String" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
-      <span class="permalink">
-      <a href="../../tutorial/lesson1/AnalyzeCircuit.html#wait():Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
+      <a id="wait():Unit"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      
+      </h4><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.AnalyzeCircuit@wait():Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -626,21 +539,22 @@ Called by <a href="#runTransform(state:firrtl.CircuitState):firrtl.CircuitState"
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="wait(x$1:Long,x$2:Int):Unit"></a><a id="wait(Long,Int):Unit"></a>
-      <span class="permalink">
-      <a href="../../tutorial/lesson1/AnalyzeCircuit.html#wait(x$1:Long,x$2:Int):Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long,x$2:Int):Unit"></a>
+      <a id="wait(Long,Int):Unit"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Long" class="extype" target="_top">Long</a></span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Int" class="extype" target="_top">Int</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      
+      </h4><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.AnalyzeCircuit@wait(x$1:Long,x$2:Int):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
@@ -648,37 +562,33 @@ Called by <a href="#runTransform(state:firrtl.CircuitState):firrtl.CircuitState"
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="wait(x$1:Long):Unit"></a><a id="wait(Long):Unit"></a>
-      <span class="permalink">
-      <a href="../../tutorial/lesson1/AnalyzeCircuit.html#wait(x$1:Long):Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
+    </li><li name="scala.AnyRef#wait" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="wait(x$1:Long):Unit"></a>
+      <a id="wait(Long):Unit"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Long" class="extype" target="_top">Long</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Unit" class="extype" target="_top">Unit</a></span>
       </span>
-      
+      </h4><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.AnalyzeCircuit@wait(x$1:Long):Unit" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="tutorial.lesson1.AnalyzeCircuit#walkExpression" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="walkExpression(ledger:tutorial.lesson1.Ledger)(e:firrtl.ir.Expression):firrtl.ir.Expression"></a><a id="walkExpression(Ledger)(Expression):Expression"></a>
-      <span class="permalink">
-      <a href="../../tutorial/lesson1/AnalyzeCircuit.html#walkExpression(ledger:tutorial.lesson1.Ledger)(e:firrtl.ir.Expression):firrtl.ir.Expression" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
+    </li><li name="tutorial.lesson1.AnalyzeCircuit#walkExpression" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="walkExpression(ledger:tutorial.lesson1.Ledger)(e:firrtl.ir.Expression):firrtl.ir.Expression"></a>
+      <a id="walkExpression(Ledger)(Expression):Expression"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -686,15 +596,16 @@ Called by <a href="#runTransform(state:firrtl.CircuitState):firrtl.CircuitState"
       <span class="symbol">
         <span class="name">walkExpression</span><span class="params">(<span name="ledger">ledger: <a href="Ledger.html" class="extype" name="tutorial.lesson1.Ledger">Ledger</a></span>)</span><span class="params">(<span name="e">e: <a href="../../firrtl/ir/Expression.html" class="extype" name="firrtl.ir.Expression">Expression</a></span>)</span><span class="result">: <a href="../../firrtl/ir/Expression.html" class="extype" name="firrtl.ir.Expression">Expression</a></span>
       </span>
-      
-      
-    </li><li name="tutorial.lesson1.AnalyzeCircuit#walkModule" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="walkModule(ledger:tutorial.lesson1.Ledger)(m:firrtl.ir.DefModule):firrtl.ir.DefModule"></a><a id="walkModule(Ledger)(DefModule):DefModule"></a>
-      <span class="permalink">
-      <a href="../../tutorial/lesson1/AnalyzeCircuit.html#walkModule(ledger:tutorial.lesson1.Ledger)(m:firrtl.ir.DefModule):firrtl.ir.DefModule" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.AnalyzeCircuit@walkExpression(ledger:tutorial.lesson1.Ledger)(e:firrtl.ir.Expression):firrtl.ir.Expression" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      
+    </li><li name="tutorial.lesson1.AnalyzeCircuit#walkModule" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="walkModule(ledger:tutorial.lesson1.Ledger)(m:firrtl.ir.DefModule):firrtl.ir.DefModule"></a>
+      <a id="walkModule(Ledger)(DefModule):DefModule"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -702,15 +613,16 @@ Called by <a href="#runTransform(state:firrtl.CircuitState):firrtl.CircuitState"
       <span class="symbol">
         <span class="name">walkModule</span><span class="params">(<span name="ledger">ledger: <a href="Ledger.html" class="extype" name="tutorial.lesson1.Ledger">Ledger</a></span>)</span><span class="params">(<span name="m">m: <a href="../../firrtl/ir/DefModule.html" class="extype" name="firrtl.ir.DefModule">DefModule</a></span>)</span><span class="result">: <a href="../../firrtl/ir/DefModule.html" class="extype" name="firrtl.ir.DefModule">DefModule</a></span>
       </span>
-      
-      
-    </li><li name="tutorial.lesson1.AnalyzeCircuit#walkStatement" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="walkStatement(ledger:tutorial.lesson1.Ledger)(s:firrtl.ir.Statement):firrtl.ir.Statement"></a><a id="walkStatement(Ledger)(Statement):Statement"></a>
-      <span class="permalink">
-      <a href="../../tutorial/lesson1/AnalyzeCircuit.html#walkStatement(ledger:tutorial.lesson1.Ledger)(s:firrtl.ir.Statement):firrtl.ir.Statement" title="Permalink">
-        <i class="material-icons"></i>
+      </h4><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.AnalyzeCircuit@walkModule(ledger:tutorial.lesson1.Ledger)(m:firrtl.ir.DefModule):firrtl.ir.DefModule" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
       </a>
     </span>
+      
+    </li><li name="tutorial.lesson1.AnalyzeCircuit#walkStatement" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="walkStatement(ledger:tutorial.lesson1.Ledger)(s:firrtl.ir.Statement):firrtl.ir.Statement"></a>
+      <a id="walkStatement(Ledger)(Statement):Statement"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier"></span>
         <span class="kind">def</span>
@@ -718,23 +630,23 @@ Called by <a href="#runTransform(state:firrtl.CircuitState):firrtl.CircuitState"
       <span class="symbol">
         <span class="name">walkStatement</span><span class="params">(<span name="ledger">ledger: <a href="Ledger.html" class="extype" name="tutorial.lesson1.Ledger">Ledger</a></span>)</span><span class="params">(<span name="s">s: <a href="../../firrtl/ir/Statement.html" class="extype" name="firrtl.ir.Statement">Statement</a></span>)</span><span class="result">: <a href="../../firrtl/ir/Statement.html" class="extype" name="firrtl.ir.Statement">Statement</a></span>
       </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.AnalyzeCircuit@walkStatement(ledger:tutorial.lesson1.Ledger)(s:firrtl.ir.Statement):firrtl.ir.Statement" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       
-      
-    </li>
-              </ol>
+    </li></ol>
             </div>
 
         
 
-        <div class="values members">
+        <div id="values" class="values members">
               <h3>Deprecated Value Members</h3>
-              <ol><li name="firrtl.Transform#getMyAnnotations" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getMyAnnotations(state:firrtl.CircuitState):Seq[firrtl.annotations.Annotation]"></a><a id="getMyAnnotations(CircuitState):Seq[Annotation]"></a>
-      <span class="permalink">
-      <a href="../../tutorial/lesson1/AnalyzeCircuit.html#getMyAnnotations(state:firrtl.CircuitState):Seq[firrtl.annotations.Annotation]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
+              <ol><li name="firrtl.Transform#getMyAnnotations" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getMyAnnotations(state:firrtl.CircuitState):Seq[firrtl.annotations.Annotation]"></a>
+      <a id="getMyAnnotations(CircuitState):Seq[Annotation]"></a>
+      <h4 class="signature">
       <span class="modifier_kind">
         <span class="modifier">final </span>
         <span class="kind">def</span>
@@ -742,7 +654,11 @@ Called by <a href="#runTransform(state:firrtl.CircuitState):firrtl.CircuitState"
       <span class="symbol">
         <span class="name deprecated" title="Deprecated: (Since version 1.1) Just collect the actual Annotation types the transform wants">getMyAnnotations</span><span class="params">(<span name="state">state: <a href="../../firrtl/CircuitState.html" class="extype" name="firrtl.CircuitState">CircuitState</a></span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="../../firrtl/annotations/Annotation.html" class="extype" name="firrtl.annotations.Annotation">Annotation</a>]</span>
       </span>
-      
+      </h4><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.AnalyzeCircuit@getMyAnnotations(state:firrtl.CircuitState):Seq[firrtl.annotations.Annotation]" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
       <p class="shortcomment cmt">Convenience method to get annotations relevant to this Transform
 </p><div class="fullcomment"><div class="comment cmt"><p>Convenience method to get annotations relevant to this Transform
 </p></div><dl class="paramcmts block"><dt class="param">state</dt><dd class="cmt"><p>The <a href="../../firrtl/CircuitState.html" class="extype" name="firrtl.CircuitState">CircuitState</a> form which to extract annotations</p></dd><dt>returns</dt><dd class="cmt"><p>A collection of annotations</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../firrtl/Transform.html" class="extype" name="firrtl.Transform">Transform</a></dd><dt>Annotations</dt><dd>
@@ -759,9 +675,9 @@ Called by <a href="#runTransform(state:firrtl.CircuitState):firrtl.CircuitState"
             </div><div class="parent" name="logger.LazyLogging">
               <h3>Inherited from <a href="../../logger/LazyLogging.html" class="extype" name="logger.LazyLogging">LazyLogging</a></h3>
             </div><div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
+              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Any" class="extype" target="_top">Any</a></h3>
             </div>
         
         </div>
@@ -778,9 +694,7 @@ Called by <a href="#runTransform(state:firrtl.CircuitState):firrtl.CircuitState"
       <div id="tooltip"></div>
 
       <div id="footer">  </div>
-    </body>
-          </div>
-        </div>
-      </div>
+
+
     </body>
       </html>

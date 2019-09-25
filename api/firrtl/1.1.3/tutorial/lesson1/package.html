@@ -1,0 +1,145 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>lesson1 - firrtl 1.1.3 - tutorial.lesson1</title>
+          <meta name="description" content="lesson1 - firrtl 1.1.3 - tutorial.lesson1" />
+          <meta name="keywords" content="lesson1 firrtl 1.1.3 tutorial.lesson1" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../lib/template.js"></script>
+      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../index.html';
+            var hash = 'tutorial.lesson1.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../../lib/package_big.png" />
+        <p id="owner"><a href="../package.html" class="extype" name="tutorial">tutorial</a></p>
+        <h1>lesson1</h1><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.package" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">lesson1</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="tutorial.lesson1.AnalyzeCircuit" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AnalyzeCircuitextendsTransform"></a>
+      <a id="AnalyzeCircuit:AnalyzeCircuit"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="AnalyzeCircuit.html"><span class="name">AnalyzeCircuit</span></a><span class="result"> extends <a href="../../firrtl/Transform.html" class="extype" name="firrtl.Transform">Transform</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.package@AnalyzeCircuitextendsTransform" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">AnalyzeCircuit Transform</p><div class="fullcomment"><div class="comment cmt"><p>AnalyzeCircuit Transform</p><p>Walks <a href="../../firrtl/ir/Circuit.html" class="extype" name="firrtl.ir.Circuit">firrtl.ir.Circuit</a>, and records the number of muxes it finds, per module.</p><p>While some compiler frameworks operate on graphs, we represent a Firrtl
+circuit using a tree representation:</p><ul><li>A Firrtl <span class="extype" name="Circuit">Circuit</span> contains a sequence of <span class="extype" name="DefModule">DefModule</span>s.</li><li>A <span class="extype" name="DefModule">DefModule</span> contains a sequence of <span class="extype" name="Port">Port</span>s, and maybe a <span class="extype" name="Statement">Statement</span>.</li><li>A <span class="extype" name="Statement">Statement</span> can contain other <span class="extype" name="Statement">Statement</span>s, or <span class="extype" name="Expression">Expression</span>s.</li><li>A <span class="extype" name="Expression">Expression</span> can contain other <span class="extype" name="Expression">Expression</span>s.</li></ul><p>To visit all Firrtl IR nodes in a circuit, we write functions that recursively
+ walk down this tree. To record statistics, we will pass along the <a href="Ledger.html" class="extype" name="tutorial.lesson1.Ledger">Ledger</a>
+ class and use it when we come across a <span class="extype" name="Mux">Mux</span>.</p><p>See the following links for more detailed explanations:
+Firrtl's IR:</p><ul><li>https://github.com/ucb-bar/firrtl/wiki/Understanding-Firrtl-Intermediate-Representation
+Traversing a circuit:</li><li>https://github.com/ucb-bar/firrtl/wiki/traversing-a-circuit for more
+Common Pass Idioms:</li><li>https://github.com/ucb-bar/firrtl/wiki/Common-Pass-Idioms
+</li></ul></div></div>
+    </li><li name="tutorial.lesson1.Ledger" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="LedgerextendsAnyRef"></a>
+      <a id="Ledger:Ledger"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="Ledger.html"><span class="name">Ledger</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.AnyRef" class="extype" target="_top">AnyRef</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../index.html#tutorial.lesson1.package@LedgerextendsAnyRef" title="Permalink" target="_top">
+        <img src="../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Ledger tracks <a href="../../firrtl/ir/Circuit.html" class="extype" name="firrtl.ir.Circuit">firrtl.ir.Circuit</a> statistics</p><div class="fullcomment"><div class="comment cmt"><p>Ledger tracks <a href="../../firrtl/ir/Circuit.html" class="extype" name="firrtl.ir.Circuit">firrtl.ir.Circuit</a> statistics</p><p>In this lesson, we want to count the number of muxes in each
+ module in our design.</p><p>This <a href="Ledger.html" class="extype" name="tutorial.lesson1.Ledger">Ledger</a> class will be passed along as we walk our
+ circuit, and help us count each <span class="extype" name="Mux">Mux</span> we find.</p><p>See <a href="AnalyzeCircuit.html" class="extype" name="tutorial.lesson1.AnalyzeCircuit">lesson1.AnalyzeCircuit</a>
+</p></div></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

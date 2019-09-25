@@ -56,6 +56,7 @@
 - [`@sequencer`](https://github.com/sequencer)
 - [`@shunshou`](https://github.com/shunshou)
 - [`@stevobailey`](https://github.com/stevobailey)
+- [`@tampler`](https://github.com/tampler)
 - [`@terpstra`](https://github.com/terpstra)
 - [`@ucbjrl`](https://github.com/ucbjrl)
 - [`@yqszxx`](https://github.com/yqszxx)

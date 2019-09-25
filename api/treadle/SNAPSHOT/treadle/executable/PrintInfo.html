@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>1.1-081319-SNAPSHOT - treadle.executable.PrintInfo</title>
-          <meta name="description" content="1.1 - 081319 - SNAPSHOT - treadle.executable.PrintInfo" />
-          <meta name="keywords" content="1.1 081319 SNAPSHOT treadle.executable.PrintInfo" />
+          <title>1.1.0-RC2 - treadle.executable.PrintInfo</title>
+          <meta name="description" content="1.1.0 - RC2 - treadle.executable.PrintInfo" />
+          <meta name="keywords" content="1.1.0 RC2 treadle.executable.PrintInfo" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title"><span id="doc-version">1.1-081319-SNAPSHOT</span></span>
+        <span id="doc-title"><span id="doc-version">1.1.0-RC2</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -599,8 +599,8 @@
                         <a href="RollBackBufferRing.html" title="Maintains a ring buffer of dataStore images The only real complexity here is that the number of populated buffers is zero.">RollBackBufferRing</a>
                       </li><li class="current-entities indented2">
                         <a class="object" href="Scheduler$.html" title=""></a>
-                        <a class="class" href="Scheduler.html" title="The scheduler holds the assignment statements of the entire circuit."></a>
-                        <a href="Scheduler.html" title="The scheduler holds the assignment statements of the entire circuit.">Scheduler</a>
+                        <a class="class" href="Scheduler.html" title="The scheduler holds the ordered assignment statements of the entire circuit."></a>
+                        <a href="Scheduler.html" title="The scheduler holds the ordered assignment statements of the entire circuit.">Scheduler</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="class" href="SensitivityGraphBuilder.html" title="builds driving and driven by relationships between symbols"></a>
@@ -780,17 +780,27 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">PrintInfo</span><span class="params">(<span name="printSymbol">printSymbol: <a href="Symbol.html" class="extype" name="treadle.executable.Symbol">Symbol</a></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">PrintInfo</span><span class="params">(<span name="printSymbol">printSymbol: <a href="Symbol.html" class="extype" name="treadle.executable.Symbol">Symbol</a></span>, <span name="cardinal">cardinal: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Ordered">Ordered</span>[<a href="" class="extype" name="treadle.executable.PrintInfo">PrintInfo</a>] with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel-testers/tree/master//src/main/scala/treadle/executable/PrintfOp.scala" target="_blank">PrintfOp.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/treadle/tree/master//src/main/scala/treadle/executable/PrintfOp.scala" target="_blank">PrintfOp.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
-        </div></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.math.Ordered">Ordered</span>[<a href="" class="extype" name="treadle.executable.PrintInfo">PrintInfo</a>], <span class="extype" name="java.lang.Comparable">Comparable</span>[<a href="" class="extype" name="treadle.executable.PrintInfo">PrintInfo</a>], <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+        </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
+                <span class="toggle diagram-link">
+                  Type Hierarchy
+                </span>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 333.50 118.00" height="118pt" width="334pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 114)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-114 329.5,-114 329.5,4 -4,4" stroke="transparent" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this class" id="graph1_0"><g id="a_this class|graph1_0"><a xlink:title="treadle.executable.PrintInfo (this class)" xlink:href="#inheritance-diagram"><path d="M207.17,-49C207.17,-49 144.83,-49 144.83,-49 140.67,-49 136.5,-44.83 136.5,-40.67 136.5,-40.67 136.5,-32.33 136.5,-32.33 136.5,-28.17 140.67,-24 144.83,-24 144.83,-24 207.17,-24 207.17,-24 211.33,-24 215.5,-28.17 215.5,-32.33 215.5,-32.33 215.5,-40.67 215.5,-40.67 215.5,-44.83 211.33,-49 207.17,-49" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-43.5" x="147" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-34.1" x="168" text-anchor="start">PrintInfo</text></a></g></g><!-- node1 --><g class="node trait" id="graph1_1"><g id="a_trait|graph1_1"><a xlink:title="scala.math.Ordered"><path d="M111.67,-110C111.67,-110 8.33,-110 8.33,-110 4.17,-110 0,-105.83 0,-101.67 0,-101.67 0,-93.33 0,-93.33 0,-89.17 4.17,-85 8.33,-85 8.33,-85 111.67,-85 111.67,-85 115.83,-85 120,-89.17 120,-93.33 120,-93.33 120,-101.67 120,-101.67 120,-105.83 115.83,-110 111.67,-110" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-104.5" x="10" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-95.1" x="31" text-anchor="start">Ordered[PrintInfo]</text></a></g></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph1_1_0"><g id="a_inheritance|graph1_1_0"><a xlink:title="PrintInfo is a subtype of Ordered[PrintInfo]"><path d="M89.1,-81.7C108.88,-71.64 134.68,-58.52 153.02,-49.19" stroke="#d4d4d4" fill="none"></path><polygon points="87.77,-79.63 82.64,-84.98 89.99,-83.99 87.77,-79.63" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node trait" id="graph1_2"><g id="a_trait|graph1_2"><a xlink:title="scala.Product"><path d="M205.67,-110C205.67,-110 146.33,-110 146.33,-110 142.17,-110 138,-105.83 138,-101.67 138,-101.67 138,-93.33 138,-93.33 138,-89.17 142.17,-85 146.33,-85 146.33,-85 205.67,-85 205.67,-85 209.83,-85 214,-89.17 214,-93.33 214,-93.33 214,-101.67 214,-101.67 214,-105.83 209.83,-110 205.67,-110" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-104.5" x="148" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-95.1" x="169" text-anchor="start">Product</text></a></g></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph1_2_0"><g id="a_inheritance|graph1_2_0"><a xlink:title="PrintInfo is a subtype of Product"><path d="M176,-77.76C176,-68.37 176,-57.29 176,-49.13" stroke="#d4d4d4" fill="none"></path><polygon points="173.55,-77.84 176,-84.84 178.45,-77.84 173.55,-77.84" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node3 --><g class="node trait" id="graph1_3"><g id="a_trait|graph1_3"><a xlink:title="scala.Serializable"><path d="M317.17,-110C317.17,-110 240.83,-110 240.83,-110 236.67,-110 232.5,-105.83 232.5,-101.67 232.5,-101.67 232.5,-93.33 232.5,-93.33 232.5,-89.17 236.67,-85 240.83,-85 240.83,-85 317.17,-85 317.17,-85 321.33,-85 325.5,-89.17 325.5,-93.33 325.5,-93.33 325.5,-101.67 325.5,-101.67 325.5,-105.83 321.33,-110 317.17,-110" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-104.5" x="243" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-95.1" x="264" text-anchor="start">Serializable</text></a></g></g><!-- node3&#45;&gt;node0 --><g class="edge inheritance" id="graph1_3_0"><g id="a_inheritance|graph1_3_0"><a xlink:title="PrintInfo is a subtype of Serializable"><path d="M252.45,-81.29C234.95,-71.27 212.38,-58.34 196.31,-49.13" stroke="#d4d4d4" fill="none"></path><polygon points="251.36,-83.49 258.65,-84.84 253.79,-79.24 251.36,-83.49" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
+                <div id="diagram-controls" class="hiddenContent">
+                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
+                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
+                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
+                </div>
+              </div></div>
         
 
       <div id="mbrsel">
@@ -815,7 +825,7 @@
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="treadle.executable.PrintInfo"><span>PrintInfo</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="treadle.executable.PrintInfo"><span>PrintInfo</span></li><li class="in" name="scala.Serializable"><span>Serializable</span></li><li class="in" name="java.io.Serializable"><span>Serializable</span></li><li class="in" name="scala.Product"><span>Product</span></li><li class="in" name="scala.Equals"><span>Equals</span></li><li class="in" name="scala.math.Ordered"><span>Ordered</span></li><li class="in" name="java.lang.Comparable"><span>Comparable</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -836,9 +846,9 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="treadle.executable.PrintInfo#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(printSymbol:treadle.executable.Symbol):treadle.executable.PrintInfo"></a><a id="&lt;init&gt;:PrintInfo"></a>
+      <a id="&lt;init&gt;(printSymbol:treadle.executable.Symbol,cardinal:Int):treadle.executable.PrintInfo"></a><a id="&lt;init&gt;:PrintInfo"></a>
       <span class="permalink">
-      <a href="../../treadle/executable/PrintInfo.html#&lt;init&gt;(printSymbol:treadle.executable.Symbol):treadle.executable.PrintInfo" title="Permalink">
+      <a href="../../treadle/executable/PrintInfo.html#&lt;init&gt;(printSymbol:treadle.executable.Symbol,cardinal:Int):treadle.executable.PrintInfo" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -847,7 +857,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">PrintInfo</span><span class="params">(<span name="printSymbol">printSymbol: <a href="Symbol.html" class="extype" name="treadle.executable.Symbol">Symbol</a></span>)</span>
+        <span class="name">PrintInfo</span><span class="params">(<span name="printSymbol">printSymbol: <a href="Symbol.html" class="extype" name="treadle.executable.Symbol">Symbol</a></span>, <span name="cardinal">cardinal: <span class="extype" name="scala.Int">Int</span></span>)</span>
       </span>
       
       
@@ -893,6 +903,38 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.math.Ordered#&lt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&lt;(that:A):Boolean"></a><a id="&lt;(PrintInfo):Boolean"></a>
+      <span class="permalink">
+      <a href="../../treadle/executable/PrintInfo.html#&lt;(that:A):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $less" class="name">&lt;</span><span class="params">(<span name="that">that: <a href="" class="extype" name="treadle.executable.PrintInfo">PrintInfo</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Ordered</dd></dl></div>
+    </li><li name="scala.math.Ordered#&lt;=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&lt;=(that:A):Boolean"></a><a id="&lt;=(PrintInfo):Boolean"></a>
+      <span class="permalink">
+      <a href="../../treadle/executable/PrintInfo.html#&lt;=(that:A):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $less$eq" class="name">&lt;=</span><span class="params">(<span name="that">that: <a href="" class="extype" name="treadle.executable.PrintInfo">PrintInfo</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Ordered</dd></dl></div>
     </li><li name="scala.AnyRef#==" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="==(x$1:Any):Boolean"></a><a id="==(Any):Boolean"></a>
       <span class="permalink">
@@ -909,6 +951,38 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="scala.math.Ordered#&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&gt;(that:A):Boolean"></a><a id="&gt;(PrintInfo):Boolean"></a>
+      <span class="permalink">
+      <a href="../../treadle/executable/PrintInfo.html#&gt;(that:A):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $greater" class="name">&gt;</span><span class="params">(<span name="that">that: <a href="" class="extype" name="treadle.executable.PrintInfo">PrintInfo</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Ordered</dd></dl></div>
+    </li><li name="scala.math.Ordered#&gt;=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="&gt;=(that:A):Boolean"></a><a id="&gt;=(PrintInfo):Boolean"></a>
+      <span class="permalink">
+      <a href="../../treadle/executable/PrintInfo.html#&gt;=(that:A):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $greater$eq" class="name">&gt;=</span><span class="params">(<span name="that">that: <a href="" class="extype" name="treadle.executable.PrintInfo">PrintInfo</a></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Ordered</dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
@@ -925,6 +999,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="treadle.executable.PrintInfo#cardinal" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="cardinal:Int"></a>
+      <span class="permalink">
+      <a href="../../treadle/executable/PrintInfo.html#cardinal:Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cardinal</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
@@ -949,6 +1039,38 @@
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="treadle.executable.PrintInfo#compare" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="compare(that:treadle.executable.PrintInfo):Int"></a><a id="compare(PrintInfo):Int"></a>
+      <span class="permalink">
+      <a href="../../treadle/executable/PrintInfo.html#compare(that:treadle.executable.PrintInfo):Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">compare</span><span class="params">(<span name="that">that: <a href="" class="extype" name="treadle.executable.PrintInfo">PrintInfo</a></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="treadle.executable.PrintInfo">PrintInfo</a> → Ordered</dd></dl></div>
+    </li><li name="scala.math.Ordered#compareTo" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="compareTo(that:A):Int"></a><a id="compareTo(PrintInfo):Int"></a>
+      <span class="permalink">
+      <a href="../../treadle/executable/PrintInfo.html#compareTo(that:A):Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">compareTo</span><span class="params">(<span name="that">that: <a href="" class="extype" name="treadle.executable.PrintInfo">PrintInfo</a></span>)</span><span class="result">: <span class="extype" name="scala.Int">Int</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Ordered → Comparable</dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -1194,6 +1316,10 @@
               <h3>Inherited from <span class="extype" name="scala.Product">Product</span></h3>
             </div><div class="parent" name="scala.Equals">
               <h3>Inherited from <span class="extype" name="scala.Equals">Equals</span></h3>
+            </div><div class="parent" name="scala.math.Ordered">
+              <h3>Inherited from <span class="extype" name="scala.math.Ordered">Ordered</span>[<a href="" class="extype" name="treadle.executable.PrintInfo">PrintInfo</a>]</h3>
+            </div><div class="parent" name="java.lang.Comparable">
+              <h3>Inherited from <span class="extype" name="java.lang.Comparable">Comparable</span>[<a href="" class="extype" name="treadle.executable.PrintInfo">PrintInfo</a>]</h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">

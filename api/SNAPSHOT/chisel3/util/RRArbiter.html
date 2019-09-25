@@ -3,22 +3,22 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.2-081319-SNAPSHOT - chisel3.util.RRArbiter</title>
-          <meta name="description" content="chisel3 3.2 - 081319 - SNAPSHOT - chisel3.util.RRArbiter" />
-          <meta name="keywords" content="chisel3 3.2 081319 SNAPSHOT chisel3.util.RRArbiter" />
+          <title>chisel3 3.2.0-RC2 - chisel3.util.RRArbiter</title>
+          <meta name="description" content="chisel3 3.2.0 - RC2 - chisel3.util.RRArbiter" />
+          <meta name="keywords" content="chisel3 3.2.0 RC2 chisel3.util.RRArbiter" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
+      
       <link href="../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../lib/jquery.min.js"></script>
       <script type="text/javascript" src="../../lib/jquery.panzoom.min.js"></script>
       <script type="text/javascript" src="../../lib/jquery.mousewheel.min.js"></script>
       <script type="text/javascript" src="../../lib/index.js"></script>
       <script type="text/javascript" src="../../index.js"></script>
       <script type="text/javascript" src="../../lib/scheduler.js"></script>
       <script type="text/javascript" src="../../lib/template.js"></script>
-      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
       <script type="text/javascript" src="../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../lib/diagrams.js" id="diagrams-js"></script>
       <script type="text/javascript">
         /* this variable can be used by the JS to determine the path to the root document */
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.2-081319-SNAPSHOT</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.2.0-RC2</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -56,7 +56,7 @@
                 <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="_root_"></a><a id="root:_root_"></a>
       <span class="permalink">
-      <a href="index.html#_root_" title="Permalink">
+      <a href="../../index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -75,7 +75,7 @@ and the aggregate types <a href="../Bundle.html" class="extype" name="chisel3.Bu
     </li><li name="_root_.chisel3" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="chisel3"></a><a id="chisel3:chisel3"></a>
       <span class="permalink">
-      <a href="index.html#chisel3" title="Permalink">
+      <a href="../../chisel3/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -92,7 +92,7 @@ and the aggregate types <a href="../Bundle.html" class="extype" name="chisel3.Bu
     </li><li name="chisel3.util" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="util"></a><a id="util:util"></a>
       <span class="permalink">
-      <a href="../chisel3/index.html#util" title="Permalink">
+      <a href="../../chisel3/util/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -112,7 +112,7 @@ functions
     </li><li name="chisel3.util.experimental" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="experimental"></a><a id="experimental:experimental"></a>
       <span class="permalink">
-      <a href="../../chisel3/util/index.html#experimental" title="Permalink">
+      <a href="../../chisel3/util/experimental/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -128,7 +128,7 @@ functions
     </li><li name="chisel3.util.random" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="random"></a><a id="random:random"></a>
       <span class="permalink">
-      <a href="../../chisel3/util/index.html#random" title="Permalink">
+      <a href="../../chisel3/util/random/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -402,7 +402,7 @@ Producers are chosen in round robin order.
 </p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
                 <span class="name">@chiselName</span><span class="args">()</span>
               
-        </dd><dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/master//src/main/scala/chisel3/util/Arbiter.scala" target="_blank">Arbiter.scala</a></dd><div class="block">Example:
+        </dd><dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.2.0-RC2//src/main/scala/chisel3/util/Arbiter.scala" target="_blank">Arbiter.scala</a></dd><div class="block">Example:
                <ol><li class="cmt"><p></p><pre><span class="kw">val</span> arb = Module(<span class="kw">new</span> RRArbiter(UInt(), <span class="num">2</span>))
 arb.io.in(<span class="num">0</span>) &lt;&gt; producer0.io.out
 arb.io.in(<span class="num">1</span>) &lt;&gt; producer1.io.out
@@ -411,8 +411,18 @@ consumer.io.in &lt;&gt; arb.io.out</pre></li></ol>
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="LockingRRArbiter.html" class="extype" name="chisel3.util.LockingRRArbiter">LockingRRArbiter</a>[<span class="extype" name="chisel3.util.RRArbiter.T">T</span>], <a href="LockingArbiterLike.html" class="extype" name="chisel3.util.LockingArbiterLike">LockingArbiterLike</a>[<span class="extype" name="chisel3.util.RRArbiter.T">T</span>], <a href="../experimental/LegacyModule.html" class="extype" name="chisel3.experimental.LegacyModule">LegacyModule</a>, <a href="../experimental/MultiIOModule.html" class="extype" name="chisel3.experimental.MultiIOModule">MultiIOModule</a>, <a href="../experimental/RawModule.html" class="extype" name="chisel3.experimental.RawModule">RawModule</a>, <a href="../experimental/BaseModule.html" class="extype" name="chisel3.experimental.BaseModule">BaseModule</a>, <span class="extype" name="chisel3.internal.HasId">HasId</span>, <span class="extype" name="chisel3.internal.InstanceId">internal.InstanceId</span>, <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
-        </div></div>
+          <div class="superTypes hiddenContent"><a href="LockingRRArbiter.html" class="extype" name="chisel3.util.LockingRRArbiter">LockingRRArbiter</a>[<span class="extype" name="chisel3.util.RRArbiter.T">T</span>], <a href="LockingArbiterLike.html" class="extype" name="chisel3.util.LockingArbiterLike">LockingArbiterLike</a>[<span class="extype" name="chisel3.util.RRArbiter.T">T</span>], <span class="extype" name="chisel3.internal.LegacyModule">LegacyModule</span>, <a href="../MultiIOModule.html" class="extype" name="chisel3.MultiIOModule">MultiIOModule</a>, <a href="../RawModule.html" class="extype" name="chisel3.RawModule">RawModule</a>, <a href="../experimental/BaseModule.html" class="extype" name="chisel3.experimental.BaseModule">BaseModule</a>, <span class="extype" name="chisel3.internal.HasId">HasId</span>, <span class="extype" name="chisel3.internal.InstanceId">internal.InstanceId</span>, <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+        </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
+                <span class="toggle diagram-link">
+                  Type Hierarchy
+                </span>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 150.00 118.00" height="118pt" width="150pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 114)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-114 146,-114 146,4 -4,4" stroke="transparent" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this class" id="graph1_0"><g id="a_this class|graph1_0"><a xlink:title="chisel3.util.RRArbiter (this class)" xlink:href="#inheritance-diagram"><path d="M109.67,-49C109.67,-49 32.33,-49 32.33,-49 28.17,-49 24,-44.83 24,-40.67 24,-40.67 24,-32.33 24,-32.33 24,-28.17 28.17,-24 32.33,-24 32.33,-24 109.67,-24 109.67,-24 113.83,-24 118,-28.17 118,-32.33 118,-32.33 118,-40.67 118,-40.67 118,-44.83 113.83,-49 109.67,-49" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-43.5" x="34" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-34.1" x="55" text-anchor="start">RRArbiter[T]</text></a></g></g><!-- node1 --><g class="node class" id="graph1_1"><g id="a_class|graph1_1"><a xlink:title="chisel3.util.LockingRRArbiter" xlink:href="LockingRRArbiter.html#inheritance-diagram"><path d="M125.67,-110C125.67,-110 16.33,-110 16.33,-110 12.17,-110 8,-105.83 8,-101.67 8,-101.67 8,-93.33 8,-93.33 8,-89.17 12.17,-85 16.33,-85 16.33,-85 125.67,-85 125.67,-85 129.83,-85 134,-89.17 134,-93.33 134,-93.33 134,-101.67 134,-101.67 134,-105.83 129.83,-110 125.67,-110" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-104.5" x="18" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-95.1" x="39" text-anchor="start">LockingRRArbiter[T]</text></a></g></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph1_1_0"><g id="a_inheritance|graph1_1_0"><a xlink:title="RRArbiter[T] is a subtype of LockingRRArbiter[T]"><path d="M71,-77.76C71,-68.37 71,-57.29 71,-49.13" stroke="#d4d4d4" fill="none"></path><polygon points="68.55,-77.84 71,-84.84 73.45,-77.84 68.55,-77.84" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
+                <div id="diagram-controls" class="hiddenContent">
+                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
+                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
+                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
+                </div>
+              </div></div>
         
 
       <div id="mbrsel">
@@ -437,7 +447,7 @@ consumer.io.in &lt;&gt; arb.io.out</pre></li></ol>
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="chisel3.util.RRArbiter"><span>RRArbiter</span></li><li class="in" name="chisel3.util.LockingRRArbiter"><span>LockingRRArbiter</span></li><li class="in" name="chisel3.util.LockingArbiterLike"><span>LockingArbiterLike</span></li><li class="in" name="chisel3.experimental.LegacyModule"><span>LegacyModule</span></li><li class="in" name="chisel3.experimental.MultiIOModule"><span>MultiIOModule</span></li><li class="in" name="chisel3.experimental.RawModule"><span>RawModule</span></li><li class="in" name="chisel3.experimental.BaseModule"><span>BaseModule</span></li><li class="in" name="chisel3.internal.HasId"><span>HasId</span></li><li class="in" name="chisel3.internal.InstanceId"><span>InstanceId</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="chisel3.util.RRArbiter"><span>RRArbiter</span></li><li class="in" name="chisel3.util.LockingRRArbiter"><span>LockingRRArbiter</span></li><li class="in" name="chisel3.util.LockingArbiterLike"><span>LockingArbiterLike</span></li><li class="in" name="chisel3.internal.LegacyModule"><span>LegacyModule</span></li><li class="in" name="chisel3.MultiIOModule"><span>MultiIOModule</span></li><li class="in" name="chisel3.RawModule"><span>RawModule</span></li><li class="in" name="chisel3.experimental.BaseModule"><span>BaseModule</span></li><li class="in" name="chisel3.internal.HasId"><span>HasId</span></li><li class="in" name="chisel3.internal.InstanceId"><span>InstanceId</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -469,7 +479,7 @@ consumer.io.in &lt;&gt; arb.io.out</pre></li></ol>
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">RRArbiter</span><span class="params">(<span name="gen">gen: <span class="extype" name="chisel3.util.RRArbiter.T">T</span></span>, <span name="n">n: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span>
+        <span class="name">RRArbiter</span><span class="params">(<span name="gen">gen: <span class="extype" name="chisel3.util.RRArbiter.T">T</span></span>, <span name="n">n: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span>
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">gen</dt><dd class="cmt"><p>data type</p></dd><dt class="param">n</dt><dd class="cmt"><p>number of inputs</p></dd></dl></div>
@@ -495,7 +505,7 @@ consumer.io.in &lt;&gt; arb.io.out</pre></li></ol>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -511,7 +521,7 @@ consumer.io.in &lt;&gt; arb.io.out</pre></li></ol>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -527,7 +537,7 @@ consumer.io.in &lt;&gt; arb.io.out</pre></li></ol>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -565,7 +575,7 @@ are problematic.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">_bindIoInPlace</span><span class="params">(<span name="iodef">iodef: <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">_bindIoInPlace</span><span class="params">(<span name="iodef">iodef: <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <p class="shortcomment cmt">Chisel2 code didn't require the IO(...) wrapper and would assign a Chisel type directly to
@@ -584,7 +594,7 @@ io, then do operations on it. This binds a Chisel type in-place (mutably) as an 
         <span class="kind">var</span>
       </span>
       <span class="symbol">
-        <span class="name">_closed</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">_closed</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../experimental/BaseModule.html" class="extype" name="chisel3.experimental.BaseModule">BaseModule</a></dd></dl></div>
@@ -600,13 +610,13 @@ io, then do operations on it. This binds a Chisel type in-place (mutably) as an 
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">_compatAutoWrapPorts</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">_compatAutoWrapPorts</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <p class="shortcomment cmt">Compatibility function.</p><div class="fullcomment"><div class="comment cmt"><p>Compatibility function. Allows Chisel2 code which had ports without the IO wrapper to
 compile under Bindings checks. Does nothing in non-compatibility mode.</p><p>Should NOT be used elsewhere. This API will NOT last.</p><p>TODO: remove this, perhaps by removing Bindings checks in compatibility mode.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../experimental/BaseModule.html" class="extype" name="chisel3.experimental.BaseModule">BaseModule</a></dd></dl></div>
-    </li><li name="chisel3.experimental.LegacyModule#_compatIoPortBound" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="chisel3.internal.LegacyModule#_compatIoPortBound" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="_compatIoPortBound():Boolean"></a>
       <span class="permalink">
       <a href="../../chisel3/util/RRArbiter.html#_compatIoPortBound():Boolean" title="Permalink">
@@ -618,10 +628,10 @@ compile under Bindings checks. Does nothing in non-compatibility mode.</p><p>Sho
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">_compatIoPortBound</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">_compatIoPortBound</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../experimental/LegacyModule.html" class="extype" name="chisel3.experimental.LegacyModule">LegacyModule</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>LegacyModule</dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
@@ -670,7 +680,7 @@ compile under Bindings checks. Does nothing in non-compatibility mode.</p><p>Sho
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>HasId</dd></dl></div>
-    </li><li name="chisel3.experimental.MultiIOModule#clock" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="chisel3.MultiIOModule#clock" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clock:chisel3.Clock"></a><a id="clock:Clock"></a>
       <span class="permalink">
       <a href="../../chisel3/util/RRArbiter.html#clock:chisel3.Clock" title="Permalink">
@@ -685,7 +695,7 @@ compile under Bindings checks. Does nothing in non-compatibility mode.</p><p>Sho
         <span class="name">clock</span><span class="result">: <a href="../Clock.html" class="extype" name="chisel3.Clock">Clock</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../experimental/MultiIOModule.html" class="extype" name="chisel3.experimental.MultiIOModule">MultiIOModule</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../MultiIOModule.html" class="extype" name="chisel3.MultiIOModule">MultiIOModule</a></dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
@@ -698,19 +708,19 @@ compile under Bindings checks. Does nothing in non-compatibility mode.</p><p>Sho
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
     </span>)</span>
               
+                <span class="name">@native</span><span class="args">()</span>
+              
         </dd></dl></div>
-    </li><li name="chisel3.experimental.RawModule#compileOptions" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="chisel3.RawModule#compileOptions" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="compileOptions:chisel3.CompileOptions"></a><a id="compileOptions:CompileOptions"></a>
       <span class="permalink">
       <a href="../../chisel3/util/RRArbiter.html#compileOptions:chisel3.CompileOptions" title="Permalink">
@@ -725,7 +735,7 @@ compile under Bindings checks. Does nothing in non-compatibility mode.</p><p>Sho
         <span class="name">compileOptions</span><span class="result">: <a href="../CompileOptions.html" class="extype" name="chisel3.CompileOptions">CompileOptions</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../experimental/RawModule.html" class="extype" name="chisel3.experimental.RawModule">RawModule</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../RawModule.html" class="extype" name="chisel3.RawModule">RawModule</a></dd></dl></div>
     </li><li name="chisel3.experimental.BaseModule#desiredName" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="desiredName:String"></a>
       <span class="permalink">
@@ -756,7 +766,7 @@ name.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -772,7 +782,7 @@ name.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="that">that: <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">equals</span><span class="params">(<span name="that">that: <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasId → AnyRef → Any</dd></dl></div>
@@ -788,10 +798,10 @@ name.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
@@ -817,7 +827,7 @@ name.
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="chisel3.experimental.RawModule#getCommands" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="chisel3.RawModule#getCommands" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getCommands:Seq[chisel3.internal.firrtl.Command]"></a><a id="getCommands:Seq[Command]"></a>
       <span class="permalink">
       <a href="../../chisel3/util/RRArbiter.html#getCommands:Seq[chisel3.internal.firrtl.Command]" title="Permalink">
@@ -829,10 +839,10 @@ name.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getCommands</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/collection/Seq.html#scala.collection.Seq" class="extype" name="scala.collection.Seq">Seq</a>[<span class="extype" name="chisel3.internal.firrtl.Command">Command</span>]</span>
+        <span class="name">getCommands</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/collection/Seq.html#scala.collection.Seq" class="extype" name="scala.collection.Seq">Seq</a>[<span class="extype" name="chisel3.internal.firrtl.Command">Command</span>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../experimental/RawModule.html" class="extype" name="chisel3.experimental.RawModule">RawModule</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../RawModule.html" class="extype" name="chisel3.RawModule">RawModule</a></dd></dl></div>
     </li><li name="chisel3.experimental.BaseModule#getIds" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getIds:Seq[chisel3.internal.HasId]"></a><a id="getIds:Seq[HasId]"></a>
       <span class="permalink">
@@ -845,7 +855,7 @@ name.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getIds</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/collection/Seq.html#scala.collection.Seq" class="extype" name="scala.collection.Seq">Seq</a>[<span class="extype" name="chisel3.internal.HasId">HasId</span>]</span>
+        <span class="name">getIds</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/collection/Seq.html#scala.collection.Seq" class="extype" name="scala.collection.Seq">Seq</a>[<span class="extype" name="chisel3.internal.HasId">HasId</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../experimental/BaseModule.html" class="extype" name="chisel3.experimental.BaseModule">BaseModule</a></dd></dl></div>
@@ -861,11 +871,11 @@ name.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getModulePorts</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/collection/Seq.html#scala.collection.Seq" class="extype" name="scala.collection.Seq">Seq</a>[<a href="../Data.html" class="extype" name="chisel3.Data">Data</a>]</span>
+        <span class="name">getModulePorts</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/collection/Seq.html#scala.collection.Seq" class="extype" name="scala.collection.Seq">Seq</a>[<a href="../Data.html" class="extype" name="chisel3.Data">Data</a>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../index.html" class="extype" name="chisel3">chisel3</a>] </dd><dt>Definition Classes</dt><dd><a href="../experimental/BaseModule.html" class="extype" name="chisel3.experimental.BaseModule">BaseModule</a></dd></dl></div>
-    </li><li name="chisel3.experimental.RawModule#getPorts" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="chisel3.RawModule#getPorts" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getPorts:Seq[chisel3.internal.firrtl.Port]"></a><a id="getPorts:Seq[Port]"></a>
       <span class="permalink">
       <a href="../../chisel3/util/RRArbiter.html#getPorts:Seq[chisel3.internal.firrtl.Port]" title="Permalink">
@@ -880,7 +890,7 @@ name.
         <span class="name">getPorts</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="chisel3.internal.firrtl.Port">Port</span>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../experimental/RawModule.html" class="extype" name="chisel3.experimental.RawModule">RawModule</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../RawModule.html" class="extype" name="chisel3.RawModule">RawModule</a></dd></dl></div>
     </li><li name="chisel3.util.LockingRRArbiter#grant" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="grant:Seq[chisel3.Bool]"></a><a id="grant:Seq[Bool]"></a>
       <span class="permalink">
@@ -909,7 +919,7 @@ name.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasId → AnyRef → Any</dd></dl></div>
@@ -944,7 +954,7 @@ name.
         <span class="name">io</span><span class="result">: <a href="ArbiterIO.html" class="extype" name="chisel3.util.ArbiterIO">ArbiterIO</a>[<span class="extype" name="chisel3.util.RRArbiter.T">T</span>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="LockingArbiterLike.html" class="extype" name="chisel3.util.LockingArbiterLike">LockingArbiterLike</a> → <a href="../experimental/LegacyModule.html" class="extype" name="chisel3.experimental.LegacyModule">LegacyModule</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="LockingArbiterLike.html" class="extype" name="chisel3.util.LockingArbiterLike">LockingArbiterLike</a> → LegacyModule</dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
@@ -957,7 +967,7 @@ name.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
@@ -977,7 +987,7 @@ name.
       </span>
       
       <p class="shortcomment cmt">Legalized name of this module.</p><div class="fullcomment"><div class="comment cmt"><p>Legalized name of this module.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../experimental/BaseModule.html" class="extype" name="chisel3.experimental.BaseModule">BaseModule</a></dd></dl></div>
-    </li><li name="chisel3.experimental.LegacyModule#nameIds" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="chisel3.internal.LegacyModule#nameIds" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="nameIds(rootClass:Class[_]):scala.collection.mutable.HashMap[chisel3.internal.HasId,String]"></a><a id="nameIds(Class[_]):HashMap[HasId,String]"></a>
       <span class="permalink">
       <a href="../../chisel3/util/RRArbiter.html#nameIds(rootClass:Class[_]):scala.collection.mutable.HashMap[chisel3.internal.HasId,String]" title="Permalink">
@@ -989,12 +999,12 @@ name.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">nameIds</span><span class="params">(<span name="rootClass">rootClass: <span class="extype" name="scala.Predef.Class">Class</span>[_]</span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/collection/mutable/HashMap.html#scala.collection.mutable.HashMap" class="extype" name="scala.collection.mutable.HashMap">HashMap</a>[<span class="extype" name="chisel3.internal.HasId">HasId</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">nameIds</span><span class="params">(<span name="rootClass">rootClass: <span class="extype" name="scala.Predef.Class">Class</span>[_]</span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/collection/mutable/HashMap.html#scala.collection.mutable.HashMap" class="extype" name="scala.collection.mutable.HashMap">HashMap</a>[<span class="extype" name="chisel3.internal.HasId">HasId</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Called at the Module.apply(...) level after this Module has finished elaborating.</p><div class="fullcomment"><div class="comment cmt"><p>Called at the Module.apply(...) level after this Module has finished elaborating.
 Returns a map of nodes -&gt; names, for named nodes.</p><p>Helper method.
-</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../experimental/LegacyModule.html" class="extype" name="chisel3.experimental.LegacyModule">LegacyModule</a> → <a href="../experimental/BaseModule.html" class="extype" name="chisel3.experimental.BaseModule">BaseModule</a></dd></dl></div>
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>LegacyModule → <a href="../experimental/BaseModule.html" class="extype" name="chisel3.experimental.BaseModule">BaseModule</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -1007,7 +1017,7 @@ Returns a map of nodes -&gt; names, for named nodes.</p><p>Helper method.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -1023,7 +1033,7 @@ Returns a map of nodes -&gt; names, for named nodes.</p><p>Helper method.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1042,14 +1052,14 @@ Returns a map of nodes -&gt; names, for named nodes.</p><p>Helper method.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="chisel3.experimental.LegacyModule#override_clock" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="chisel3.internal.LegacyModule#override_clock" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="override_clock:Option[chisel3.Clock]"></a><a id="override_clock:Option[Clock]"></a>
       <span class="permalink">
       <a href="../../chisel3/util/RRArbiter.html#override_clock:Option[chisel3.Clock]" title="Permalink">
@@ -1061,11 +1071,11 @@ Returns a map of nodes -&gt; names, for named nodes.</p><p>Helper method.
         <span class="kind">var</span>
       </span>
       <span class="symbol">
-        <span class="name">override_clock</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="../Clock.html" class="extype" name="chisel3.Clock">Clock</a>]</span>
+        <span class="name">override_clock</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="../Clock.html" class="extype" name="chisel3.Clock">Clock</a>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../experimental/LegacyModule.html" class="extype" name="chisel3.experimental.LegacyModule">LegacyModule</a></dd></dl></div>
-    </li><li name="chisel3.experimental.LegacyModule#override_reset" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>LegacyModule</dd></dl></div>
+    </li><li name="chisel3.internal.LegacyModule#override_reset" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="override_reset:Option[chisel3.Bool]"></a><a id="override_reset:Option[Bool]"></a>
       <span class="permalink">
       <a href="../../chisel3/util/RRArbiter.html#override_reset:Option[chisel3.Bool]" title="Permalink">
@@ -1077,10 +1087,10 @@ Returns a map of nodes -&gt; names, for named nodes.</p><p>Helper method.
         <span class="kind">var</span>
       </span>
       <span class="symbol">
-        <span class="name">override_reset</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="../Bool.html" class="extype" name="chisel3.Bool">Bool</a>]</span>
+        <span class="name">override_reset</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="../Bool.html" class="extype" name="chisel3.Bool">Bool</a>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../experimental/LegacyModule.html" class="extype" name="chisel3.experimental.LegacyModule">LegacyModule</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>LegacyModule</dd></dl></div>
     </li><li name="chisel3.internal.HasId#parentModName" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="parentModName:String"></a>
       <span class="permalink">
@@ -1141,7 +1151,7 @@ Returns a map of nodes -&gt; names, for named nodes.</p><p>Helper method.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">portsContains</span><span class="params">(<span name="elem">elem: <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">portsContains</span><span class="params">(<span name="elem">elem: <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../experimental/BaseModule.html" class="extype" name="chisel3.experimental.BaseModule">BaseModule</a></dd></dl></div>
@@ -1157,11 +1167,11 @@ Returns a map of nodes -&gt; names, for named nodes.</p><p>Helper method.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">portsSize</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span class="name">portsSize</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../experimental/BaseModule.html" class="extype" name="chisel3.experimental.BaseModule">BaseModule</a></dd></dl></div>
-    </li><li name="chisel3.experimental.MultiIOModule#reset" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="chisel3.MultiIOModule#reset" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="reset:chisel3.Reset"></a><a id="reset:Reset"></a>
       <span class="permalink">
       <a href="../../chisel3/util/RRArbiter.html#reset:chisel3.Reset" title="Permalink">
@@ -1176,7 +1186,7 @@ Returns a map of nodes -&gt; names, for named nodes.</p><p>Helper method.
         <span class="name">reset</span><span class="result">: <a href="../Reset.html" class="extype" name="chisel3.Reset">Reset</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../experimental/MultiIOModule.html" class="extype" name="chisel3.experimental.MultiIOModule">MultiIOModule</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../MultiIOModule.html" class="extype" name="chisel3.MultiIOModule">MultiIOModule</a></dd></dl></div>
     </li><li name="chisel3.internal.HasId#suggestName" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="suggestName(name:=&gt;String):HasId.this.type"></a><a id="suggestName(⇒String):RRArbiter.this.type"></a>
       <span class="permalink">
@@ -1273,7 +1283,7 @@ Returns a map of nodes -&gt; names, for named nodes.</p><p>Helper method.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1295,7 +1305,7 @@ Returns a map of nodes -&gt; names, for named nodes.</p><p>Helper method.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="http://www.scala-lang.org/api/2.12.6/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1317,16 +1327,16 @@ Returns a map of nodes -&gt; names, for named nodes.</p><p>Helper method.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="http://www.scala-lang.org/api/2.12.6/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="http://www.scala-lang.org/api/2.12.6/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
     </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
     </li>
@@ -1367,12 +1377,12 @@ Returns a map of nodes -&gt; names, for named nodes.</p><p>Helper method.
               <h3>Inherited from <a href="LockingRRArbiter.html" class="extype" name="chisel3.util.LockingRRArbiter">LockingRRArbiter</a>[<span class="extype" name="chisel3.util.RRArbiter.T">T</span>]</h3>
             </div><div class="parent" name="chisel3.util.LockingArbiterLike">
               <h3>Inherited from <a href="LockingArbiterLike.html" class="extype" name="chisel3.util.LockingArbiterLike">LockingArbiterLike</a>[<span class="extype" name="chisel3.util.RRArbiter.T">T</span>]</h3>
-            </div><div class="parent" name="chisel3.experimental.LegacyModule">
-              <h3>Inherited from <a href="../experimental/LegacyModule.html" class="extype" name="chisel3.experimental.LegacyModule">LegacyModule</a></h3>
-            </div><div class="parent" name="chisel3.experimental.MultiIOModule">
-              <h3>Inherited from <a href="../experimental/MultiIOModule.html" class="extype" name="chisel3.experimental.MultiIOModule">MultiIOModule</a></h3>
-            </div><div class="parent" name="chisel3.experimental.RawModule">
-              <h3>Inherited from <a href="../experimental/RawModule.html" class="extype" name="chisel3.experimental.RawModule">RawModule</a></h3>
+            </div><div class="parent" name="chisel3.internal.LegacyModule">
+              <h3>Inherited from <span class="extype" name="chisel3.internal.LegacyModule">LegacyModule</span></h3>
+            </div><div class="parent" name="chisel3.MultiIOModule">
+              <h3>Inherited from <a href="../MultiIOModule.html" class="extype" name="chisel3.MultiIOModule">MultiIOModule</a></h3>
+            </div><div class="parent" name="chisel3.RawModule">
+              <h3>Inherited from <a href="../RawModule.html" class="extype" name="chisel3.RawModule">RawModule</a></h3>
             </div><div class="parent" name="chisel3.experimental.BaseModule">
               <h3>Inherited from <a href="../experimental/BaseModule.html" class="extype" name="chisel3.experimental.BaseModule">BaseModule</a></h3>
             </div><div class="parent" name="chisel3.internal.HasId">
@@ -1380,9 +1390,9 @@ Returns a map of nodes -&gt; names, for named nodes.</p><p>Helper method.
             </div><div class="parent" name="chisel3.internal.InstanceId">
               <h3>Inherited from <span class="extype" name="chisel3.internal.InstanceId">internal.InstanceId</span></h3>
             </div><div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="http://www.scala-lang.org/api/2.12.6/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
             </div>
         
         </div>

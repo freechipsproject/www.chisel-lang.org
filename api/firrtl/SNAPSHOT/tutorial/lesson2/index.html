@@ -3,22 +3,22 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.2-081319-SNAPSHOT - tutorial.lesson2</title>
-          <meta name="description" content="firrtl 1.2 - 081319 - SNAPSHOT - tutorial.lesson2" />
-          <meta name="keywords" content="firrtl 1.2 081319 SNAPSHOT tutorial.lesson2" />
+          <title>firrtl 1.2.0-RC2 - tutorial.lesson2</title>
+          <meta name="description" content="firrtl 1.2.0 - RC2 - tutorial.lesson2" />
+          <meta name="keywords" content="firrtl 1.2.0 RC2 tutorial.lesson2" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
+      
       <link href="../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../lib/jquery.min.js"></script>
       <script type="text/javascript" src="../../lib/jquery.panzoom.min.js"></script>
       <script type="text/javascript" src="../../lib/jquery.mousewheel.min.js"></script>
       <script type="text/javascript" src="../../lib/index.js"></script>
       <script type="text/javascript" src="../../index.js"></script>
       <script type="text/javascript" src="../../lib/scheduler.js"></script>
       <script type="text/javascript" src="../../lib/template.js"></script>
-      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
       <script type="text/javascript" src="../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../lib/diagrams.js" id="diagrams-js"></script>
       <script type="text/javascript">
         /* this variable can be used by the JS to determine the path to the root document */
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.2-081319-SNAPSHOT</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.2.0-RC2</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -56,7 +56,7 @@
                 <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="_root_"></a><a id="root:_root_"></a>
       <span class="permalink">
-      <a href="index.html#_root_" title="Permalink">
+      <a href="../../index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -72,7 +72,7 @@
     </li><li name="_root_.tutorial" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="tutorial"></a><a id="tutorial:tutorial"></a>
       <span class="permalink">
-      <a href="index.html#tutorial" title="Permalink">
+      <a href="../../tutorial/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -88,7 +88,7 @@
     </li><li name="tutorial.lesson1" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="lesson1"></a><a id="lesson1:lesson1"></a>
       <span class="permalink">
-      <a href="../tutorial/index.html#lesson1" title="Permalink">
+      <a href="../../tutorial/lesson1/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -104,7 +104,7 @@
     </li><li name="tutorial.lesson2" visbl="pub" class="indented2 current" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="lesson2"></a><a id="lesson2:lesson2"></a>
       <span class="permalink">
-      <a href="../tutorial/index.html#lesson2" title="Permalink">
+      <a href="../../tutorial/lesson2/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -167,7 +167,7 @@
               <ol><li name="tutorial.lesson2.AnalyzeCircuit" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="AnalyzeCircuitextendsTransform"></a><a id="AnalyzeCircuit:AnalyzeCircuit"></a>
       <span class="permalink">
-      <a href="../../tutorial/lesson2/index.html#AnalyzeCircuitextendsTransform" title="Permalink">
+      <a href="../../tutorial/lesson2/AnalyzeCircuit.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -185,13 +185,13 @@ nodes (which contain additional fields):</p><ul><li>DefInstance -&gt; WDefInstan
 <a href="https://github.com/freechipsproject/firrtl/tree/master/src/main/scala/firrtl/passes" target="_blank">src/main/scala/firrtl/passes/Passes.scala</a> to see how Firrtl IR nodes are replaced with working IR nodes.</p><p>Future lessons will explain the WIR's additional fields. For now, it is enough to know that the transform
 <a href="../../firrtl/ResolveAndCheck.html" class="extype" name="firrtl.ResolveAndCheck">firrtl.ResolveAndCheck</a> populates these fields, and checks the legality of the circuit. If your transform is
 creating new WIR nodes, use the following &quot;unknown&quot; values in the WIR node, and then call <a href="../../firrtl/ResolveAndCheck.html" class="extype" name="firrtl.ResolveAndCheck">firrtl.ResolveAndCheck</a>
-at the end of your transform:</p><ul><li>Kind -&gt; ExpKind</li><li>Gender -&gt; UNKNOWNGENDER</li><li>Type -&gt; UnknownType</li></ul><p>The following <a href="../../firrtl/CircuitForm.html" class="extype" name="firrtl.CircuitForm">firrtl.CircuitForm</a>s require WIR instead of IR nodes:</p><ul><li>HighForm</li><li>MidForm</li><li>LowForm</li></ul><p>See the following links for more detailed explanations:
+at the end of your transform:</p><ul><li>Kind -&gt; ExpKind</li><li>Flow -&gt; UnknownFlow</li><li>Type -&gt; UnknownType</li></ul><p>The following <a href="../../firrtl/CircuitForm.html" class="extype" name="firrtl.CircuitForm">firrtl.CircuitForm</a>s require WIR instead of IR nodes:</p><ul><li>HighForm</li><li>MidForm</li><li>LowForm</li></ul><p>See the following links for more detailed explanations:
 IR vs Working IR</p><ul><li>TODO(izraelevitz)
 </li></ul></div></div>
     </li><li name="tutorial.lesson2.Ledger" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="LedgerextendsAnyRef"></a><a id="Ledger:Ledger"></a>
       <span class="permalink">
-      <a href="../../tutorial/lesson2/index.html#LedgerextendsAnyRef" title="Permalink">
+      <a href="../../tutorial/lesson2/Ledger.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -200,7 +200,7 @@ IR vs Working IR</p><ul><li>TODO(izraelevitz)
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Ledger tracks firrtl.ir.Circuit statistics" href="Ledger.html"><span class="name">Ledger</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.6/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="Ledger tracks firrtl.ir.Circuit statistics" href="Ledger.html"><span class="name">Ledger</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <p class="shortcomment cmt">Ledger tracks <a href="../../firrtl/ir/Circuit.html" class="extype" name="firrtl.ir.Circuit">firrtl.ir.Circuit</a> statistics</p><div class="fullcomment"><div class="comment cmt"><p>Ledger tracks <a href="../../firrtl/ir/Circuit.html" class="extype" name="firrtl.ir.Circuit">firrtl.ir.Circuit</a> statistics</p><p>In this lesson, we want to calculate the number of muxes, not just in a module, but also in any instances it has of

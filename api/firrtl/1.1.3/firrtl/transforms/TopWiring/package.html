@@ -1,0 +1,154 @@
+<!DOCTYPE html >
+<html>
+        <head>
+          <title>TopWiring - firrtl 1.1.3 - firrtl.transforms.TopWiring</title>
+          <meta name="description" content="TopWiring - firrtl 1.1.3 - firrtl.transforms.TopWiring" />
+          <meta name="keywords" content="TopWiring firrtl 1.1.3 firrtl.transforms.TopWiring" />
+          <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+          
+      <link href="../../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
+      <link href="../../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
+      <script type="text/javascript" src="../../../lib/jquery.js" id="jquery-js"></script>
+      <script type="text/javascript" src="../../../lib/jquery-ui.js"></script>
+      <script type="text/javascript" src="../../../lib/template.js"></script>
+      <script type="text/javascript" src="../../../lib/tools.tooltip.js"></script>
+      <script type="text/javascript" src="../../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../../lib/diagrams.js" id="diagrams-js"></script>
+      <script type="text/javascript">
+         if(top === self) {
+            var url = '../../../index.html';
+            var hash = 'firrtl.transforms.TopWiring.package';
+            var anchor = window.location.hash;
+            var anchor_opt = '';
+            if (anchor.length >= 1)
+              anchor_opt = '@' + anchor.substring(1);
+            window.location.href = url + '#' + hash + anchor_opt;
+         }
+   	  </script>
+    
+        </head>
+        <body class="value">
+      <div id="definition">
+        <img alt="Package" src="../../../lib/package_big.png" />
+        <p id="owner"><a href="../../package.html" class="extype" name="firrtl">firrtl</a>.<a href="../package.html" class="extype" name="firrtl.transforms">transforms</a></p>
+        <h1>TopWiring</h1><span class="permalink">
+      <a href="../../../index.html#firrtl.transforms.TopWiring.package" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      </div>
+
+      <h4 id="signature" class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <span class="name">TopWiring</span>
+      </span>
+      </h4>
+      
+          <div id="comment" class="fullcommenttop"></div>
+        
+
+      <div id="mbrsel">
+        <div id="textfilter"><span class="pre"></span><span class="input"><input id="mbrsel-input" type="text" accesskey="/" /></span><span class="post"></span></div>
+        
+        
+        <div id="visbl">
+            <span class="filtertype">Visibility</span>
+            <ol><li class="public in"><span>Public</span></li><li class="all out"><span>All</span></li></ol>
+          </div>
+      </div>
+
+      <div id="template">
+        <div id="allMembers">
+        
+
+        <div id="types" class="types members">
+              <h3>Type Members</h3>
+              <ol><li name="firrtl.transforms.TopWiring.TopWiringAnnotation" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TopWiringAnnotationextendsSingleTargetAnnotation[firrtl.annotations.ComponentName]withProductwithSerializable"></a>
+      <a id="TopWiringAnnotation:TopWiringAnnotation"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="TopWiringAnnotation.html"><span class="name">TopWiringAnnotation</span></a><span class="params">(<span name="target">target: <a href="../../annotations/ComponentName.html" class="extype" name="firrtl.annotations.ComponentName">ComponentName</a></span>, <span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="../../annotations/SingleTargetAnnotation.html" class="extype" name="firrtl.annotations.SingleTargetAnnotation">SingleTargetAnnotation</a>[<a href="../../annotations/ComponentName.html" class="extype" name="firrtl.annotations.ComponentName">ComponentName</a>] with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#firrtl.transforms.TopWiring.package@TopWiringAnnotationextendsSingleTargetAnnotation[firrtl.annotations.ComponentName]withProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Annotation for indicating component to be wired, and what prefix to add to the ports that are generated</p>
+    </li><li name="firrtl.transforms.TopWiring.TopWiringOutputFilesAnnotation" visbl="pub" data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TopWiringOutputFilesAnnotationextendsNoTargetAnnotationwithProductwithSerializable"></a>
+      <a id="TopWiringOutputFilesAnnotation:TopWiringOutputFilesAnnotation"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a href="TopWiringOutputFilesAnnotation.html"><span class="name">TopWiringOutputFilesAnnotation</span></a><span class="params">(<span name="dirName">dirName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="outputFunction">outputFunction: (<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Seq">Seq</span>[((<a href="../../annotations/ComponentName.html" class="extype" name="firrtl.annotations.ComponentName">ComponentName</a>, <a href="../../ir/Type.html" class="extype" name="firrtl.ir.Type">Type</a>, <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Boolean" class="extype" target="_top">Boolean</a>, <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>], <span class="extype" name="scala.Predef.String">String</span>), <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Int" class="extype" target="_top">Int</a>)], <a href="../../CircuitState.html" class="extype" name="firrtl.CircuitState">CircuitState</a>) ⇒ <a href="../../CircuitState.html" class="extype" name="firrtl.CircuitState">CircuitState</a></span>)</span><span class="result"> extends <a href="../../annotations/NoTargetAnnotation.html" class="extype" name="firrtl.annotations.NoTargetAnnotation">NoTargetAnnotation</a> with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Product" class="extype" target="_top">Product</a> with <a href="http://www.scala-lang.org/api/2.11.12/index.html#scala.Serializable" class="extype" target="_top">Serializable</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#firrtl.transforms.TopWiring.package@TopWiringOutputFilesAnnotationextendsNoTargetAnnotationwithProductwithSerializable" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Annotation for optional output files, and what directory to put those files in (absolute path) *</p>
+    </li><li name="firrtl.transforms.TopWiring.TopWiringTransform" visbl="pub" data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TopWiringTransformextendsTransform"></a>
+      <a id="TopWiringTransform:TopWiringTransform"></a>
+      <h4 class="signature">
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a href="TopWiringTransform.html"><span class="name">TopWiringTransform</span></a><span class="result"> extends <a href="../../Transform.html" class="extype" name="firrtl.Transform">Transform</a></span>
+      </span>
+      </h4><span class="permalink">
+      <a href="../../../index.html#firrtl.transforms.TopWiring.package@TopWiringTransformextendsTransform" title="Permalink" target="_top">
+        <img src="../../../lib/permalink.png" alt="Permalink" />
+      </a>
+    </span>
+      <p class="shortcomment cmt">Punch out annotated ports out to the toplevel of the circuit.</p><div class="fullcomment"><div class="comment cmt"><p>Punch out annotated ports out to the toplevel of the circuit.
+    This also has an option to pass a function as a parmeter to generate
+    custom output files as a result of the additional ports</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>This *does* work for deduped modules</p></span></dd></dl></div>
+    </li></ol>
+            </div>
+
+        
+
+        
+
+        
+
+        
+        </div>
+
+        <div id="inheritedMembers">
+        
+        
+        </div>
+
+        <div id="groupedMembers">
+        <div class="group" name="Ungrouped">
+              <h3>Ungrouped</h3>
+              
+            </div>
+        </div>
+
+      </div>
+
+      <div id="tooltip"></div>
+
+      <div id="footer">  </div>
+
+
+    </body>
+      </html>

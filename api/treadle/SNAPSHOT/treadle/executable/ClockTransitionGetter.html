@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>1.1-081319-SNAPSHOT - treadle.executable.ClockTransitionGetter</title>
-          <meta name="description" content="1.1 - 081319 - SNAPSHOT - treadle.executable.ClockTransitionGetter" />
-          <meta name="keywords" content="1.1 081319 SNAPSHOT treadle.executable.ClockTransitionGetter" />
+          <title>1.1.0-RC2 - treadle.executable.ClockTransitionGetter</title>
+          <meta name="description" content="1.1.0 - RC2 - treadle.executable.ClockTransitionGetter" />
+          <meta name="keywords" content="1.1.0 RC2 treadle.executable.ClockTransitionGetter" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title"><span id="doc-version">1.1-081319-SNAPSHOT</span></span>
+        <span id="doc-title"><span id="doc-version">1.1.0-RC2</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -599,8 +599,8 @@
                         <a href="RollBackBufferRing.html" title="Maintains a ring buffer of dataStore images The only real complexity here is that the number of populated buffers is zero.">RollBackBufferRing</a>
                       </li><li class="current-entities indented2">
                         <a class="object" href="Scheduler$.html" title=""></a>
-                        <a class="class" href="Scheduler.html" title="The scheduler holds the assignment statements of the entire circuit."></a>
-                        <a href="Scheduler.html" title="The scheduler holds the assignment statements of the entire circuit.">Scheduler</a>
+                        <a class="class" href="Scheduler.html" title="The scheduler holds the ordered assignment statements of the entire circuit."></a>
+                        <a href="Scheduler.html" title="The scheduler holds the ordered assignment statements of the entire circuit.">Scheduler</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="class" href="SensitivityGraphBuilder.html" title="builds driving and driven by relationships between symbols"></a>
@@ -785,12 +785,22 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Used internally by assigners that care about clock transitions</p></div><dl class="paramcmts block"><dt class="param">clockSymbol</dt><dd class="cmt"><p>the clock</p></dd><dt class="param">prevClockSymbol</dt><dd class="cmt"><p>the previous state of the clock</p></dd><dt class="param">dataStore</dt><dd class="cmt"><p>needed to get current and prev values</p></dd></dl><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel-testers/tree/master//src/main/scala/treadle/executable/Transition.scala" target="_blank">Transition.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Used internally by assigners that care about clock transitions</p></div><dl class="paramcmts block"><dt class="param">clockSymbol</dt><dd class="cmt"><p>the clock</p></dd><dt class="param">prevClockSymbol</dt><dd class="cmt"><p>the previous state of the clock</p></dd><dt class="param">dataStore</dt><dd class="cmt"><p>needed to get current and prev values</p></dd></dl><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/treadle/tree/master//src/main/scala/treadle/executable/Transition.scala" target="_blank">Transition.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
           <div class="superTypes hiddenContent"><span class="extype" name="scala.Serializable">Serializable</span>, <span class="extype" name="java.io.Serializable">Serializable</span>, <span class="extype" name="scala.Product">Product</span>, <span class="extype" name="scala.Equals">Equals</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
-        </div></div>
+        </div><div class="toggleContainer block diagram-container" id="inheritance-diagram-container">
+                <span class="toggle diagram-link">
+                  Type Hierarchy
+                </span>
+                <div class="diagram" id="inheritance-diagram"><svg class="class-diagram" id="graph1" viewBox="0.00 0.00 198.50 118.00" height="118pt" width="199pt" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g transform="scale(1 1) rotate(0) translate(4 114)" class="graph" id="page0,1_graph0"><polygon points="-4,4 -4,-114 194.5,-114 194.5,4 -4,4" stroke="transparent" fill="white"></polygon><g class="cluster" id="clust1"></g><g class="cluster" id="clust2"></g><!-- node0 --><g class="node this class" id="graph1_0"><g id="a_this class|graph1_0"><a xlink:title="treadle.executable.ClockTransitionGetter (this class)" xlink:href="#inheritance-diagram"><path d="M151.67,-49C151.67,-49 32.33,-49 32.33,-49 28.17,-49 24,-44.83 24,-40.67 24,-40.67 24,-32.33 24,-32.33 24,-28.17 28.17,-24 32.33,-24 32.33,-24 151.67,-24 151.67,-24 155.83,-24 160,-28.17 160,-32.33 160,-32.33 160,-40.67 160,-40.67 160,-44.83 155.83,-49 151.67,-49" stroke="#418565" fill="#418565"></path><image xlink:href="../../lib/class_diagram.png" y="-43.5" x="34" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-34.1" x="55" text-anchor="start">ClockTransitionGetter</text></a></g></g><!-- node1 --><g class="node trait" id="graph1_1"><g id="a_trait|graph1_1"><a xlink:title="scala.Product"><path d="M70.67,-110C70.67,-110 11.33,-110 11.33,-110 7.17,-110 3,-105.83 3,-101.67 3,-101.67 3,-93.33 3,-93.33 3,-89.17 7.17,-85 11.33,-85 11.33,-85 70.67,-85 70.67,-85 74.83,-85 79,-89.17 79,-93.33 79,-93.33 79,-101.67 79,-101.67 79,-105.83 74.83,-110 70.67,-110" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-104.5" x="13" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-95.1" x="34" text-anchor="start">Product</text></a></g></g><!-- node1&#45;&gt;node0 --><g class="edge inheritance" id="graph1_1_0"><g id="a_inheritance|graph1_1_0"><a xlink:title="ClockTransitionGetter is a subtype of Product"><path d="M55.77,-79.42C64.17,-69.69 74.48,-57.77 81.94,-49.13" stroke="#d4d4d4" fill="none"></path><polygon points="53.8,-77.95 51.08,-84.84 57.51,-81.15 53.8,-77.95" stroke="#d4d4d4" fill="none"></polygon></a></g></g><!-- node2 --><g class="node trait" id="graph1_2"><g id="a_trait|graph1_2"><a xlink:title="scala.Serializable"><path d="M182.17,-110C182.17,-110 105.83,-110 105.83,-110 101.67,-110 97.5,-105.83 97.5,-101.67 97.5,-101.67 97.5,-93.33 97.5,-93.33 97.5,-89.17 101.67,-85 105.83,-85 105.83,-85 182.17,-85 182.17,-85 186.33,-85 190.5,-89.17 190.5,-93.33 190.5,-93.33 190.5,-101.67 190.5,-101.67 190.5,-105.83 186.33,-110 182.17,-110" stroke="#2e6d82" fill="#2e6d82"></path><image xlink:href="../../lib/trait_diagram.png" y="-104.5" x="108" preserveAspectRatio="xMinYMin meet" height="15px" width="15px"></image><text fill="#ffffff" font-size="8.00" font-family="Source Code Pro" y="-95.1" x="129" text-anchor="start">Serializable</text></a></g></g><!-- node2&#45;&gt;node0 --><g class="edge inheritance" id="graph1_2_0"><g id="a_inheritance|graph1_2_0"><a xlink:title="ClockTransitionGetter is a subtype of Serializable"><path d="M128.94,-79.42C120.37,-69.69 109.87,-57.77 102.25,-49.13" stroke="#d4d4d4" fill="none"></path><polygon points="127.26,-81.21 133.73,-84.84 130.94,-77.97 127.26,-81.21" stroke="#d4d4d4" fill="none"></polygon></a></g></g></g></svg></div>
+                <div id="diagram-controls" class="hiddenContent">
+                  <button id="diagram-zoom-out" class="diagram-btn"><i class="material-icons"></i></button>
+                  <button id="diagram-zoom-in" class="diagram-btn"><i class="material-icons"></i></button>
+                  <button title="Toggle full-screen" id="diagram-fs" class="diagram-btn to-full"><i class="material-icons"></i></button>
+                </div>
+              </div></div>
         
 
       <div id="mbrsel">
