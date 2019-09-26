@@ -55,7 +55,7 @@ native Scala equals operator to remain usable.
 The Chisel operator precedence is not directly defined as part of the Chisel language.
 Practically, it is determined by the evaluation order of the circuit,
 which natuarally follows the [Scala operator precedence](https://docs.scala-lang.org/tour/operators.html).
-It is always a good praxis to use parentheses, if in doubt of operator precedence.
+If in doubt of operator precedence, use parentheses.
 
 > The Chisel/Scala operator precedence is similar but
 not identical to precedence in Java or C. Verilog has the same operator precedence as C, but VHDL
