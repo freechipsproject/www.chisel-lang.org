@@ -35,6 +35,7 @@ values.</p>
 
 <p>Constant or literal values are expressed using Scala integers or
 strings passed to constructors for the types:</p>
+
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="mf">1.</span><span class="n">U</span>       <span class="c1">// decimal 1-bit lit from Scala Int.
 </span><span class="s">"ha"</span><span class="o">.</span><span class="py">U</span>    <span class="c1">// hexadecimal 4-bit lit from string.
 </span><span class="s">"o12"</span><span class="o">.</span><span class="py">U</span>   <span class="c1">// octal 4-bit lit from string.
@@ -50,8 +51,10 @@ strings passed to constructors for the types:</p>
 <span class="nv">true</span><span class="o">.</span><span class="py">B</span> <span class="c1">// Bool lits from Scala lits.
 </span><span class="nv">false</span><span class="o">.</span><span class="py">B</span>
 </code></pre></div></div>
+
 <p>Underscores can be used as separators in long string literals to aid
 readability, but are ignored when creating the value, e.g.:</p>
+
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">"h_dead_beef"</span><span class="o">.</span><span class="py">U</span>   <span class="c1">// 32-bit lit of type UInt
 </span></code></pre></div></div>
 
@@ -60,6 +63,7 @@ number of bits required to hold the constant, including a sign bit for
 signed types. Bit widths can also be specified explicitly on
 literals, as shown below. Note that (<code class="highlighter-rouge">.W</code> is used to cast a Scala Int
 to a Chisel width)</p>
+
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s">"ha"</span><span class="o">.</span><span class="py">asUInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">)</span>     <span class="c1">// hexadecimal 8-bit lit of type UInt
 </span><span class="s">"o12"</span><span class="o">.</span><span class="py">asUInt</span><span class="o">(</span><span class="mf">6.</span><span class="n">W</span><span class="o">)</span>    <span class="c1">// octal 6-bit lit of type UInt
 </span><span class="s">"b1010"</span><span class="o">.</span><span class="py">asUInt</span><span class="o">(</span><span class="mf">12.</span><span class="n">W</span><span class="o">)</span> <span class="c1">// binary 12-bit lit of type UInt
@@ -139,6 +143,7 @@ No width parameter is accepted, as Chisel will automatically pad or truncate as 
 </span><span class="n">a</span> <span class="o">&lt;&gt;</span> <span class="n">b</span>
 <span class="n">a</span> <span class="o">&lt;&gt;</span> <span class="n">c</span>
 </code></pre></div></div>
+
 </section><div class="edit-button"><a href="https://github.com/freechipsproject/www.chisel-lang.org/edit/master/docs/src/main/tut/chisel3/data-types.md" class="btn-sm btn-info">Improve this Page</a></div></div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/highlight/highlight.pack.js"></script><script>hljs.configure({languages:['scala','java','bash']});
 hljs.initHighlighting();
               </script><script>((window.gitter = {}).chat = {}).options = {

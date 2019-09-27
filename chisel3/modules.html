@@ -24,6 +24,7 @@ defined as a <em>class</em> which:</p>
 
 <p>As an example, consider defining your own two-input multiplexer as a
 module:</p>
+
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3._</span>
 <span class="k">class</span> <span class="nc">Mux2IO</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">sel</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">1.</span><span class="n">W</span><span class="o">))</span>
@@ -114,6 +115,7 @@ This can be useful when interfacing a Chisel module with a design that expects
 a specific naming convention for clock or reset.</p>
 
 <p>Then we can use it in place of <em>Module</em> usage :</p>
+
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3.experimental.</span><span class="o">{</span><span class="nc">RawModule</span><span class="o">,</span> <span class="n">withClockAndReset</span><span class="o">}</span>
 
 <span class="k">class</span> <span class="nc">Foo</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>

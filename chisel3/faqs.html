@@ -142,6 +142,7 @@ domain-specific languages.</p>
 <p>Chisel does not directly support Verilog logic values <code class="highlighter-rouge">x</code> <em>unknown</em> and <code class="highlighter-rouge">z</code> <em>high-impedance</em>.  There are a number of reasons to want to avoid these values.  See:<a href="http://infocenter.arm.com/help/topic/com.arm.doc.arp0009a/Verilog_X_Bugs.pdf">The Dangers of Living With An X</a> and <a href="http://ieeexplore.ieee.org/document/7827620/">Malicious LUT: A stealthy FPGA Trojan injected and triggered by the design flow</a>.  Chisel has it’s own eco-system of unit and functional testers that limit the need for <code class="highlighter-rouge">x</code> and <code class="highlighter-rouge">z</code> and their omission simplify language implementation, design, and testing.  The circuits created by chisel do not preclude developers from using <code class="highlighter-rouge">x</code> and <code class="highlighter-rouge">z</code> in downstream toolchains as they see fit.</p>
 
 <h3 id="get-me-verilog">Get me Verilog</h3>
+
 <p>I wrote a module and I want to see the Verilog; what do I do?</p>
 
 <p>Here’s a simple hello world module in a file HelloWorld.scala.</p>
@@ -153,12 +154,16 @@ domain-specific languages.</p>
   <span class="nf">printf</span><span class="o">(</span><span class="s">"hello world\n"</span><span class="o">)</span>
 <span class="o">}</span>
 </code></pre></div></div>
+
 <p>Add the following</p>
+
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">object</span> <span class="nc">HelloWorld</span> <span class="k">extends</span> <span class="nc">App</span> <span class="o">{</span>
   <span class="nv">chisel3</span><span class="o">.</span><span class="py">Driver</span><span class="o">.</span><span class="py">execute</span><span class="o">(</span><span class="n">args</span><span class="o">,</span> <span class="o">()</span> <span class="k">=&gt;</span> <span class="k">new</span> <span class="nc">HelloWorld</span><span class="o">)</span>
 <span class="o">}</span>
 </code></pre></div></div>
+
 <p>Now you can get some Verilog. Start sbt:</p>
+
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash&gt; sbt
 &gt; run-main intro.HelloWorld
 [info] Running examples.HelloWorld
@@ -166,17 +171,23 @@ domain-specific languages.</p>
 [info] [0.100] Done elaborating.
 [success] Total time: 1 s, completed Jan 12, 2017 6:24:03 PM
 </code></pre></div></div>
+
 <p>or as a one-liner:</p>
+
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash&gt; sbt 'runMain intro.HelloWorld'
 </code></pre></div></div>
+
 <p>After either of the above there will be a HelloWorld.v file in the current directory.</p>
 
 <p>You can see additional options with</p>
+
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash&gt; sbt 'runMain intro.HelloWorld --help'
 </code></pre></div></div>
+
 <p>This will return a comprehensive usage line with available options.</p>
 
 <p>For example to place the output in a directory name buildstuff use</p>
+
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash&gt; sbt 'runMain intro.HelloWorld --target-dir buildstuff --top-name HelloWorld'
 </code></pre></div></div>
 

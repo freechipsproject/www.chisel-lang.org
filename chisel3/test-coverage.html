@@ -17,9 +17,11 @@ The tests themselves are found in <code class="highlighter-rouge">src/test/scala
 <h2 id="generating-a-test-coverage-report">Generating A Test Coverage Report</h2>
 
 <p>Use the following sequence of sbt commands to generate a test coverage report:</p>
+
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sbt clean coverage test
 sbt coverageReport
 </code></pre></div></div>
+
 <p>The coverage reports should be found in <code class="highlighter-rouge">target/scala-x.yy/scoverage-report/{scoverage.xml,index.html}</code> where <code class="highlighter-rouge">x.yy</code> corresponds to the version of Scala used to compile Firrtl and the tests.
 <code class="highlighter-rouge">scoverage.xml</code> is useful if you want to analyze the results programmatically.
 <code class="highlighter-rouge">index.html</code> is designed for navigation with a web browser, allowing one to drill down to invidual statements covered (or not) by the tests.</p>

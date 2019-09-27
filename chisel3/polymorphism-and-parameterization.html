@@ -34,28 +34,20 @@ For example,</p>
 
 <!---
 Jack: I cannot seem to get this to actually work
-      Scala does not like the * in FIR since it could be from UInt or SInt
-
+Scala does not like the * in FIR since it could be from UInt or SInt
 We now present a more advanced example of parameterized functions for defining an inner product FIR digital filter generically over Chisel `Num`s.
-
 The inner product FIR filter can be mathematically defined as:
 \begin{equation}
 y[t] = \sum_j w_j * x_j[t-j]
 \end{equation}
-
-
 where `x` is the input and `w` is a vector of weights.
 In Chisel this can be defined as:
-
-
 ```scala
 def delays[T <: Data](x: T, n: Int): List[T] =
-  if (n <= 1) List(x) else x :: delays(RegNext(x), n - 1)
-
+if (n <= 1) List(x) else x :: delays(RegNext(x), n - 1)
 def FIR[T <: Data with Num[T]](ws: Seq[T], x: T): T =
-  ws zip delays(x, ws.length) map { case (a, b) => a * b } reduce (_ + _)
+ws zip delays(x, ws.length) map { case (a, b) => a * b } reduce (_ + _)
 ```
-
 where
 `delays` creates a list of incrementally increasing delays of its input and
 `reduce` constructs a reduction circuit given a binary combiner function `f`.
@@ -202,6 +194,7 @@ set of signals:</p>
 <span class="nf">println</span><span class="o">(</span><span class="nv">chisel3</span><span class="o">.</span><span class="py">Driver</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nf">X</span><span class="o">(</span><span class="k">new</span> <span class="nc">Mod1</span><span class="o">)))</span>
 <span class="nf">println</span><span class="o">(</span><span class="nv">chisel3</span><span class="o">.</span><span class="py">Driver</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nf">X</span><span class="o">(</span><span class="k">new</span> <span class="nc">Mod2</span><span class="o">)))</span>
 </code></pre></div></div>
+
 </section><div class="edit-button"><a href="https://github.com/freechipsproject/www.chisel-lang.org/edit/master/docs/src/main/tut/chisel3/polymorphism-and-parameterization.md" class="btn-sm btn-info">Improve this Page</a></div></div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/highlight/highlight.pack.js"></script><script>hljs.configure({languages:['scala','java','bash']});
 hljs.initHighlighting();
               </script><script>((window.gitter = {}).chat = {}).options = {

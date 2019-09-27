@@ -17,6 +17,7 @@ any <code class="highlighter-rouge">Data</code> object that has directions assig
 constructors wrap the type of the port in <code class="highlighter-rouge">Input</code> or <code class="highlighter-rouge">Output</code>.</p>
 
 <p>An example port declaration is as follows:</p>
+
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Decoupled</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">ready</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
   <span class="k">val</span> <span class="nv">data</span>  <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">))</span>
@@ -70,6 +71,7 @@ provide powerful wiring constructs described later.</p>
 
 <span class="nv">chisel3</span><span class="o">.</span><span class="py">Driver</span><span class="o">.</span><span class="py">execute</span><span class="o">(</span><span class="nc">Array</span><span class="o">[</span><span class="kt">String</span><span class="o">](),</span> <span class="o">()</span> <span class="k">=&gt;</span> <span class="k">new</span> <span class="nc">Test</span><span class="o">)</span>
 </code></pre></div></div>
+
 </section><div class="edit-button"><a href="https://github.com/freechipsproject/www.chisel-lang.org/edit/master/docs/src/main/tut/chisel3/ports.md" class="btn-sm btn-info">Improve this Page</a></div></div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/highlight/highlight.pack.js"></script><script>hljs.configure({languages:['scala','java','bash']});
 hljs.initHighlighting();
               </script><script>((window.gitter = {}).chat = {}).options = {

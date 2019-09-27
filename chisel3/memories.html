@@ -15,27 +15,27 @@ ga('send', 'pageview');
 
 <p>Users can define read only memories with a <code class="highlighter-rouge">Vec</code>:</p>
 
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nc">VecInit</span><span class="o">(</span><span class="n">inits</span><span class="k">:</span> <span class="kt">Seq</span><span class="o">[</span><span class="kt">T</span><span class="o">])</span>
-    <span class="nc">VecInit</span><span class="o">(</span><span class="n">elt0</span><span class="k">:</span> <span class="kt">T</span><span class="o">,</span> <span class="n">elts</span><span class="k">:</span> <span class="kt">T*</span><span class="o">)</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nc">VecInit</span><span class="o">(</span><span class="n">inits</span><span class="k">:</span> <span class="kt">Seq</span><span class="o">[</span><span class="kt">T</span><span class="o">])</span>
+<span class="nc">VecInit</span><span class="o">(</span><span class="n">elt0</span><span class="k">:</span> <span class="kt">T</span><span class="o">,</span> <span class="n">elts</span><span class="k">:</span> <span class="kt">T*</span><span class="o">)</span>
 </code></pre></div></div>
 
 <p>where <code class="highlighter-rouge">inits</code> is a sequence of initial <code class="highlighter-rouge">Data</code> literals that initialize the ROM. For example,  users cancreate a small ROM initialized to 1, 2, 4, 8 and loop through all values using a counter as an address generator as follows:</p>
 
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">val</span> <span class="nv">m</span> <span class="k">=</span> <span class="nc">VecInit</span><span class="o">(</span><span class="nc">Array</span><span class="o">(</span><span class="mf">1.</span><span class="n">U</span><span class="o">,</span> <span class="mf">2.</span><span class="n">U</span><span class="o">,</span> <span class="mf">4.</span><span class="n">U</span><span class="o">,</span> <span class="mf">8.</span><span class="n">U</span><span class="o">))</span>
-    <span class="k">val</span> <span class="nv">r</span> <span class="k">=</span> <span class="nf">m</span><span class="o">(</span><span class="nf">counter</span><span class="o">(</span><span class="nv">m</span><span class="o">.</span><span class="py">length</span><span class="o">.</span><span class="py">U</span><span class="o">))</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">m</span> <span class="k">=</span> <span class="nc">VecInit</span><span class="o">(</span><span class="nc">Array</span><span class="o">(</span><span class="mf">1.</span><span class="n">U</span><span class="o">,</span> <span class="mf">2.</span><span class="n">U</span><span class="o">,</span> <span class="mf">4.</span><span class="n">U</span><span class="o">,</span> <span class="mf">8.</span><span class="n">U</span><span class="o">))</span>
+<span class="k">val</span> <span class="nv">r</span> <span class="k">=</span> <span class="nf">m</span><span class="o">(</span><span class="nf">counter</span><span class="o">(</span><span class="nv">m</span><span class="o">.</span><span class="py">length</span><span class="o">.</span><span class="py">U</span><span class="o">))</span>
 </code></pre></div></div>
 
 <p>We can create an <em>n</em> value sine lookup table using a ROM initialized as follows:</p>
 
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="k">def</span> <span class="nf">sinTable</span><span class="o">(</span><span class="n">amp</span><span class="k">:</span> <span class="kt">Double</span><span class="o">,</span> <span class="n">n</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=</span> <span class="o">{</span>
-      <span class="k">val</span> <span class="nv">times</span> <span class="k">=</span>
-        <span class="o">(</span><span class="mi">0</span> <span class="n">until</span> <span class="n">n</span><span class="o">).</span><span class="py">map</span><span class="o">(</span><span class="n">i</span> <span class="k">=&gt;</span> <span class="o">(</span><span class="n">i</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="nc">Pi</span><span class="o">)/(</span><span class="nv">n</span><span class="o">.</span><span class="py">toDouble</span><span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="o">-</span> <span class="nc">Pi</span><span class="o">)</span>
-      <span class="k">val</span> <span class="nv">inits</span> <span class="k">=</span>
-        <span class="nv">times</span><span class="o">.</span><span class="py">map</span><span class="o">(</span><span class="n">t</span> <span class="k">=&gt;</span> <span class="nf">round</span><span class="o">(</span><span class="n">amp</span> <span class="o">*</span> <span class="nf">sin</span><span class="o">(</span><span class="n">t</span><span class="o">)).</span><span class="py">asSInt</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">))</span>
-      <span class="nc">VecInit</span><span class="o">(</span><span class="n">inits</span><span class="o">)</span>
-    <span class="o">}</span>
-    <span class="k">def</span> <span class="nf">sinWave</span><span class="o">(</span><span class="n">amp</span><span class="k">:</span> <span class="kt">Double</span><span class="o">,</span> <span class="n">n</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=</span>
-      <span class="nf">sinTable</span><span class="o">(</span><span class="n">amp</span><span class="o">,</span> <span class="n">n</span><span class="o">)(</span><span class="nf">counter</span><span class="o">(</span><span class="nv">n</span><span class="o">.</span><span class="py">U</span><span class="o">))</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">sinTable</span><span class="o">(</span><span class="n">amp</span><span class="k">:</span> <span class="kt">Double</span><span class="o">,</span> <span class="n">n</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">times</span> <span class="k">=</span>
+    <span class="o">(</span><span class="mi">0</span> <span class="n">until</span> <span class="n">n</span><span class="o">).</span><span class="py">map</span><span class="o">(</span><span class="n">i</span> <span class="k">=&gt;</span> <span class="o">(</span><span class="n">i</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="nc">Pi</span><span class="o">)/(</span><span class="nv">n</span><span class="o">.</span><span class="py">toDouble</span><span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="o">-</span> <span class="nc">Pi</span><span class="o">)</span>
+  <span class="k">val</span> <span class="nv">inits</span> <span class="k">=</span>
+    <span class="nv">times</span><span class="o">.</span><span class="py">map</span><span class="o">(</span><span class="n">t</span> <span class="k">=&gt;</span> <span class="nf">round</span><span class="o">(</span><span class="n">amp</span> <span class="o">*</span> <span class="nf">sin</span><span class="o">(</span><span class="n">t</span><span class="o">)).</span><span class="py">asSInt</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">))</span>
+  <span class="nc">VecInit</span><span class="o">(</span><span class="n">inits</span><span class="o">)</span>
+<span class="o">}</span>
+<span class="k">def</span> <span class="nf">sinWave</span><span class="o">(</span><span class="n">amp</span><span class="k">:</span> <span class="kt">Double</span><span class="o">,</span> <span class="n">n</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=</span>
+  <span class="nf">sinTable</span><span class="o">(</span><span class="n">amp</span><span class="o">,</span> <span class="n">n</span><span class="o">)(</span><span class="nf">counter</span><span class="o">(</span><span class="nv">n</span><span class="o">.</span><span class="py">U</span><span class="o">))</span>
 </code></pre></div></div>
 
 <p>where <code class="highlighter-rouge">amp</code> is used to scale the fixpoint values stored in the ROM.</p>
@@ -64,6 +64,7 @@ ga('send', 'pageview');
 </span><span class="nv">mem</span><span class="o">.</span><span class="py">write</span><span class="o">(</span><span class="n">addr</span><span class="o">,</span> <span class="n">dataIn</span><span class="o">)</span>
 <span class="n">dataOut</span> <span class="o">:=</span> <span class="nv">mem</span><span class="o">.</span><span class="py">read</span><span class="o">(</span><span class="n">addr</span><span class="o">,</span> <span class="n">enable</span><span class="o">)</span>
 </code></pre></div></div>
+
 <p>Creating an asynchronous-read version of the above simply involves replacing <code class="highlighter-rouge">SyncReadMem</code> with just <code class="highlighter-rouge">Mem</code>.</p>
 
 <p>Chisel can also infer other features such as single ports and masks directly with Mem.</p>
@@ -101,6 +102,7 @@ undefined.</p>
 </span><span class="nv">mem</span><span class="o">.</span><span class="py">write</span><span class="o">(</span><span class="n">writeAddr</span><span class="o">,</span> <span class="n">dataIn</span><span class="o">,</span> <span class="n">mask</span><span class="o">)</span>
 <span class="n">dataOut</span> <span class="o">:=</span> <span class="nv">mem</span><span class="o">.</span><span class="py">read</span><span class="o">(</span><span class="n">readAddr</span><span class="o">,</span> <span class="n">enable</span><span class="o">)</span>
 </code></pre></div></div>
+
 </section><div class="edit-button"><a href="https://github.com/freechipsproject/www.chisel-lang.org/edit/master/docs/src/main/tut/chisel3/memories.md" class="btn-sm btn-info">Improve this Page</a></div></div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/highlight/highlight.pack.js"></script><script>hljs.configure({languages:['scala','java','bash']});
 hljs.initHighlighting();
               </script><script>((window.gitter = {}).chat = {}).options = {

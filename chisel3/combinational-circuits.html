@@ -37,6 +37,7 @@ a wire that holds a subexpression that we can then reference multiple
 times in subsequent expressions.  We name a wire in Chisel by
 declaring a variable.  For example, consider the select expression,
 which is used twice in the following multiplexer description:</p>
+
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">sel</span> <span class="k">=</span> <span class="n">a</span> <span class="o">|</span> <span class="n">b</span>
 <span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="o">(</span><span class="n">sel</span> <span class="o">&amp;</span> <span class="n">in1</span><span class="o">)</span> <span class="o">|</span> <span class="o">(~</span><span class="n">sel</span> <span class="o">&amp;</span> <span class="n">in0</span><span class="o">)</span>
 </code></pre></div></div>
@@ -79,6 +80,7 @@ expression.</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">myNode</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">))</span>
 <span class="n">myNode</span> <span class="o">:=</span> <span class="mf">0.</span><span class="n">U</span>
 </code></pre></div></div>
+
 </section><div class="edit-button"><a href="https://github.com/freechipsproject/www.chisel-lang.org/edit/master/docs/src/main/tut/chisel3/combinational-circuits.md" class="btn-sm btn-info">Improve this Page</a></div></div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/highlight/highlight.pack.js"></script><script>hljs.configure({languages:['scala','java','bash']});
 hljs.initHighlighting();
               </script><script>((window.gitter = {}).chat = {}).options = {

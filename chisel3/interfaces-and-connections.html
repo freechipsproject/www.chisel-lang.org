@@ -28,31 +28,38 @@ ga('send', 'pageview');
 </code></pre></div></div>
 
 <p>We can then extend SimpleLink by adding parity bits using bundle inheritance:</p>
+
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">PLink</span> <span class="k">extends</span> <span class="nc">SimpleLink</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">parity</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">5.</span><span class="n">W</span><span class="o">))</span>
 <span class="o">}</span>
 </code></pre></div></div>
+
 <p>In general, users can organize their interfaces into hierarchies using inheritance.</p>
 
 <p>From there we can define a filter interface by nesting two PLinks into a new FilterIO bundle:</p>
+
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">FilterIO</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">x</span> <span class="k">=</span> <span class="nc">Flipped</span><span class="o">(</span><span class="k">new</span> <span class="nc">PLink</span><span class="o">)</span>
   <span class="k">val</span> <span class="nv">y</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">PLink</span>
 <span class="o">}</span>
 </code></pre></div></div>
+
 <p>where flip recursively changes the direction of a bundle, changing input to output and output to input.</p>
 
 <p>We can now define a filter by defining a filter class extending module:</p>
+
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Filter</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">FilterIO</span><span class="o">)</span>
   <span class="o">...</span>
 <span class="o">}</span>
 </code></pre></div></div>
+
 <p>where the io field contains FilterIO.</p>
 
 <h2 id="bundle-vectors">Bundle Vectors</h2>
 
 <p>Beyond single elements, vectors of elements form richer hierarchical interfaces. For example, in order to create a crossbar with a vector of inputs, producing a vector of outputs, and selected by a UInt input, we utilize the Vec constructor:</p>
+
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3.util.log2Ceil</span>
 <span class="k">class</span> <span class="nc">CrossbarIo</span><span class="o">(</span><span class="n">n</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">in</span> <span class="k">=</span> <span class="nc">Vec</span><span class="o">(</span><span class="n">n</span><span class="o">,</span> <span class="nc">Flipped</span><span class="o">(</span><span class="k">new</span> <span class="nc">PLink</span><span class="o">))</span>
@@ -60,11 +67,13 @@ ga('send', 'pageview');
   <span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="nc">Vec</span><span class="o">(</span><span class="n">n</span><span class="o">,</span> <span class="k">new</span> <span class="nc">PLink</span><span class="o">)</span>
 <span class="o">}</span>
 </code></pre></div></div>
+
 <p>where Vec takes a size as the first argument and a block returning a port as the second argument.</p>
 
 <h2 id="bulk-connections">Bulk Connections</h2>
 
 <p>We can now compose two filters into a filter block as follows:</p>
+
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Block</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">FilterIO</span><span class="o">)</span>
   <span class="k">val</span> <span class="nv">f1</span> <span class="k">=</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">Filter</span><span class="o">)</span>
@@ -74,6 +83,7 @@ ga('send', 'pageview');
   <span class="nv">f2</span><span class="o">.</span><span class="py">io</span><span class="o">.</span><span class="py">y</span> <span class="o">&lt;&gt;</span> <span class="nv">io</span><span class="o">.</span><span class="py">y</span>
 <span class="o">}</span>
 </code></pre></div></div>
+
 <p>where &lt;&gt; bulk connects interfaces of opposite gender between sibling modules or interfaces of the same gender between parent/child modules.</p>
 
 <p>Bulk connections connect leaf ports of the same name to each other. If the names do not match or are missing, Chisel does not generate a connection.</p>

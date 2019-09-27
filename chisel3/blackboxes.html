@@ -55,7 +55,9 @@ in the IO Bundle will be generated with the requested name (ie. no preceding <co
 </code></pre></div></div>
 
 <h3 id="providing-implementations-for-blackboxes">Providing Implementations for Blackboxes</h3>
+
 <p>The Chisel Execution Harness (see <a href="Running-Stuff">Running Stuff</a>) provides the following ways of delivering the code underlying the blackbox.  Consider the following blackbox that adds two real numbers together.  The numbers are represented in chisel3 as 64-bit unsigned integers.</p>
+
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">BlackBoxRealAdd</span> <span class="k">extends</span> <span class="nc">BlackBox</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span><span class="o">()</span> <span class="o">{</span>
     <span class="k">val</span> <span class="nv">in1</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">64.</span><span class="n">W</span><span class="o">))</span>
@@ -66,6 +68,7 @@ in the IO Bundle will be generated with the requested name (ie. no preceding <co
 </code></pre></div></div>
 
 <p>The implementation is described by the following verilog</p>
+
 <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">BlackBoxRealAdd</span><span class="p">(</span>
     <span class="kt">input</span>  <span class="p">[</span><span class="mi">63</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in1</span><span class="p">,</span>
     <span class="kt">input</span>  <span class="p">[</span><span class="mi">63</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in2</span><span class="p">,</span>
@@ -78,7 +81,9 @@ in the IO Bundle will be generated with the requested name (ie. no preceding <co
 </code></pre></div></div>
 
 <h3 id="blackboxes-with-verilog-in-a-resource-file">Blackboxes with Verilog in a Resource File</h3>
+
 <p>In order to deliver the verilog snippet above to the backend simulator, chisel3 provides the following tools based on the chisel/firrtl <a href="Annotations-Extending-Chisel-and-Firrtl">annotation system</a>.  Add the trait <code class="highlighter-rouge">HasBlackBoxResource</code> to the declaration, and then call a function in the body to say where the system can find the verilog.  The Module now looks like</p>
+
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">BlackBoxRealAdd</span> <span class="k">extends</span> <span class="nc">BlackBox</span> <span class="k">with</span> <span class="nc">HasBlackBoxResource</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span><span class="o">()</span> <span class="o">{</span>
     <span class="k">val</span> <span class="nv">in1</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">64.</span><span class="n">W</span><span class="o">))</span>
@@ -88,12 +93,16 @@ in the IO Bundle will be generated with the requested name (ie. no preceding <co
   <span class="nf">setResource</span><span class="o">(</span><span class="s">"/real_math.v"</span><span class="o">)</span>
 <span class="o">}</span>
 </code></pre></div></div>
+
 <p>The verilog snippet above gets put into a resource file names <code class="highlighter-rouge">real_math.v</code>.  What is a resource file? It comes from a java convention of keeping files in a project that are automatically included in library distributions. In a typical chisel3 project, see <a href="https://github.com/ucb-bar/chisel-template">chisel-template</a>, this would be a directory in the source hierarchy</p>
+
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>src/main/resources/real_math.v
 </code></pre></div></div>
 
 <h3 id="blackboxes-with-in-line-verilog">Blackboxes with In-line Verilog</h3>
+
 <p>It is also possible to place this verilog directly in the scala source.  Instead of <code class="highlighter-rouge">HasBlackBoxResource</code> use <code class="highlighter-rouge">HasBlackBoxInline</code> and instead of <code class="highlighter-rouge">setResource</code> use <code class="highlighter-rouge">setInline</code>.  The code will look like this.</p>
+
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">BlackBoxRealAdd</span> <span class="k">extends</span> <span class="nc">BlackBox</span> <span class="k">with</span> <span class="nc">HasBlackBoxInline</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span><span class="o">()</span> <span class="o">{</span>
     <span class="k">val</span> <span class="nv">in1</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">64.</span><span class="n">W</span><span class="o">))</span>
@@ -114,17 +123,22 @@ in the IO Bundle will be generated with the requested name (ie. no preceding <co
     """</span><span class="o">.</span><span class="py">stripMargin</span><span class="o">)</span>
 <span class="o">}</span>
 </code></pre></div></div>
+
 <p>This technique will copy the inline verilog into the target directory under the name <code class="highlighter-rouge">BlackBoxRealAdd.v</code></p>
 
 <h3 id="under-the-hood">Under the Hood</h3>
+
 <p>This mechanism of delivering verilog content to the testing backends is implemented via chisel/firrtl annotations.  The two methods, inline and resource, are two kinds of annotations that are created via the <code class="highlighter-rouge">setInline</code> and <code class="highlighter-rouge">setResource</code> methods calls.  Those annotations are passed through to the chisel-testers which in turn passes them on to firrtl.  The default firrtl verilog compilers have a pass that detects the annotations and moves the files or inline test into the build directory.  For each unique file added, the transform adds a line to a file black_box_verilog_files.f, this file is added to the command line constructed for verilator or vcs to inform them where to look.
 The <a href="/ucb-bar/dsptools">dsptools project</a> is a good example of using this feature to build a real number simulation tester based on black boxes.</p>
 
 <h3 id="the-interpreter">The interpreter</h3>
+
 <p>The <a href="/ucb-bar/firrtl-interpreter">firrtl interpreter</a> uses a separate system that allows users to construct scala implementations of the black boxes.  The scala implementation code built into a BlackBoxFactory which is passed down to the interpreter by the execution harness.  The interpreter is a scala simulation tester.  Once again the dsptools project uses this mechanism and is a good place to look at it.</p>
+
 <blockquote>
   <p>It is planned that the BlackBoxFactory will be replaced by integration with the annotation based blackbox methods stuff soon.</p>
 </blockquote>
+
 </section><div class="edit-button"><a href="https://github.com/freechipsproject/www.chisel-lang.org/edit/master/docs/src/main/tut/chisel3/blackboxes.md" class="btn-sm btn-info">Improve this Page</a></div></div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/highlight/highlight.pack.js"></script><script>hljs.configure({languages:['scala','java','bash']});
 hljs.initHighlighting();
               </script><script>((window.gitter = {}).chat = {}).options = {
