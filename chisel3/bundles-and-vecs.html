@@ -118,7 +118,7 @@ that a user datatype also does not require <code class="highlighter-rouge">new</
 
 <p>(Chisel 3.2+)</p>
 
-<p>All elements of a <code class="highlighter-rouge">Vec</code> must be of the same time. If we want to create a Vec where the elements have different types, we can use a MixedVec:</p>
+<p>All elements of a <code class="highlighter-rouge">Vec</code> must be of the same type. If we want to create a Vec where the elements have different types, we can use a MixedVec:</p>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">MyModule</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
