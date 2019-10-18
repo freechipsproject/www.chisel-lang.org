@@ -3,22 +3,22 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.1.7 - tutorial.lesson1</title>
-          <meta name="description" content="firrtl 1.1.7 - tutorial.lesson1" />
-          <meta name="keywords" content="firrtl 1.1.7 tutorial.lesson1" />
+          <title>firrtl 1.2.0 - tutorial.lesson1</title>
+          <meta name="description" content="firrtl 1.2.0 - tutorial.lesson1" />
+          <meta name="keywords" content="firrtl 1.2.0 tutorial.lesson1" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
+      
       <link href="../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../lib/jquery.min.js"></script>
       <script type="text/javascript" src="../../lib/jquery.panzoom.min.js"></script>
       <script type="text/javascript" src="../../lib/jquery.mousewheel.min.js"></script>
       <script type="text/javascript" src="../../lib/index.js"></script>
       <script type="text/javascript" src="../../index.js"></script>
       <script type="text/javascript" src="../../lib/scheduler.js"></script>
       <script type="text/javascript" src="../../lib/template.js"></script>
-      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
       <script type="text/javascript" src="../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../lib/diagrams.js" id="diagrams-js"></script>
       <script type="text/javascript">
         /* this variable can be used by the JS to determine the path to the root document */
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.1.7</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.2.0</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -56,7 +56,7 @@
                 <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="_root_"></a><a id="root:_root_"></a>
       <span class="permalink">
-      <a href="index.html#_root_" title="Permalink">
+      <a href="../../index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -72,7 +72,7 @@
     </li><li name="_root_.tutorial" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="tutorial"></a><a id="tutorial:tutorial"></a>
       <span class="permalink">
-      <a href="index.html#tutorial" title="Permalink">
+      <a href="../../tutorial/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -88,7 +88,7 @@
     </li><li name="tutorial.lesson1" visbl="pub" class="indented2 current" data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="lesson1"></a><a id="lesson1:lesson1"></a>
       <span class="permalink">
-      <a href="../tutorial/index.html#lesson1" title="Permalink">
+      <a href="../../tutorial/lesson1/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -112,7 +112,7 @@
                       </li><li name="tutorial.lesson2" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="lesson2"></a><a id="lesson2:lesson2"></a>
       <span class="permalink">
-      <a href="../tutorial/index.html#lesson2" title="Permalink">
+      <a href="../../tutorial/lesson2/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -167,7 +167,7 @@
               <ol><li name="tutorial.lesson1.AnalyzeCircuit" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="AnalyzeCircuitextendsTransform"></a><a id="AnalyzeCircuit:AnalyzeCircuit"></a>
       <span class="permalink">
-      <a href="../../tutorial/lesson1/index.html#AnalyzeCircuitextendsTransform" title="Permalink">
+      <a href="../../tutorial/lesson1/AnalyzeCircuit.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -179,10 +179,10 @@
         <a title="AnalyzeCircuit Transform" href="AnalyzeCircuit.html"><span class="name">AnalyzeCircuit</span></a><span class="result"> extends <a href="../../firrtl/Transform.html" class="extype" name="firrtl.Transform">Transform</a></span>
       </span>
       
-      <p class="shortcomment cmt">AnalyzeCircuit Transform</p><div class="fullcomment"><div class="comment cmt"><p>AnalyzeCircuit Transform</p><p>Walks <a href="../../firrtl/ir/Circuit.html" class="extype" name="firrtl.ir.Circuit">firrtl.ir.Circuit</a>, and records the number of muxes it finds, per module.</p><p>While some compiler frameworks operate on graphs, we represent a Firrtl
-circuit using a tree representation:</p><ul><li>A Firrtl <span class="extype" name="Circuit">Circuit</span> contains a sequence of <span class="extype" name="DefModule">DefModule</span>s.</li><li>A <span class="extype" name="DefModule">DefModule</span> contains a sequence of <span class="extype" name="Port">Port</span>s, and maybe a <span class="extype" name="Statement">Statement</span>.</li><li>A <span class="extype" name="Statement">Statement</span> can contain other <span class="extype" name="Statement">Statement</span>s, or <span class="extype" name="Expression">Expression</span>s.</li><li>A <span class="extype" name="Expression">Expression</span> can contain other <span class="extype" name="Expression">Expression</span>s.</li></ul><p>To visit all Firrtl IR nodes in a circuit, we write functions that recursively
- walk down this tree. To record statistics, we will pass along the <a href="Ledger.html" class="extype" name="tutorial.lesson1.Ledger">Ledger</a>
- class and use it when we come across a <span class="extype" name="Mux">Mux</span>.</p><p>See the following links for more detailed explanations:
+      <p class="shortcomment cmt">AnalyzeCircuit Transform</p><div class="fullcomment"><div class="comment cmt"><p>AnalyzeCircuit Transform</p><p>Walks <a href="../../firrtl/ir/Circuit.html" class="extype" name="firrtl.ir.Circuit">Circuit</a>, and records the number of muxes it finds, per module.</p><p>While some compiler frameworks operate on graphs, we represent a Firrtl circuit using a tree representation:</p><ul><li>A Firrtl <a href="../../firrtl/ir/Circuit.html" class="extype" name="firrtl.ir.Circuit">Circuit</a> contains a sequence of <a href="../../firrtl/ir/DefModule.html" class="extype" name="firrtl.ir.DefModule">DefModule</a>s.</li><li>A <a href="../../firrtl/ir/DefModule.html" class="extype" name="firrtl.ir.DefModule">DefModule</a> contains a sequence of <a href="../../firrtl/ir/Port.html" class="extype" name="firrtl.ir.Port">Port</a>s, and maybe a
+    <a href="../../firrtl/ir/Statement.html" class="extype" name="firrtl.ir.Statement">Statement</a>.</li><li>A <a href="../../firrtl/ir/Statement.html" class="extype" name="firrtl.ir.Statement">Statement</a> can contain other <a href="../../firrtl/ir/Statement.html" class="extype" name="firrtl.ir.Statement">Statement</a>s, or
+    <a href="../../firrtl/ir/Expression.html" class="extype" name="firrtl.ir.Expression">Expression</a>s.</li><li>A <a href="../../firrtl/ir/Expression.html" class="extype" name="firrtl.ir.Expression">Expression</a> can contain other <a href="../../firrtl/ir/Expression.html" class="extype" name="firrtl.ir.Expression">Expression</a>s.</li></ul><p>To visit all Firrtl IR nodes in a circuit, we write functions that recursively walk down this tree. To record
+statistics, we will pass along the <a href="Ledger.html" class="extype" name="tutorial.lesson1.Ledger">Ledger</a> class and use it when we come across a <a href="../../firrtl/ir/Mux.html" class="extype" name="firrtl.ir.Mux">Mux</a>.</p><p>See the following links for more detailed explanations:
 Firrtl's IR:</p><ul><li>https://github.com/ucb-bar/firrtl/wiki/Understanding-Firrtl-Intermediate-Representation
 Traversing a circuit:</li><li>https://github.com/ucb-bar/firrtl/wiki/traversing-a-circuit for more
 Common Pass Idioms:</li><li>https://github.com/ucb-bar/firrtl/wiki/Common-Pass-Idioms
@@ -190,7 +190,7 @@ Common Pass Idioms:</li><li>https://github.com/ucb-bar/firrtl/wiki/Common-Pass-I
     </li><li name="tutorial.lesson1.Ledger" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="LedgerextendsAnyRef"></a><a id="Ledger:Ledger"></a>
       <span class="permalink">
-      <a href="../../tutorial/lesson1/index.html#LedgerextendsAnyRef" title="Permalink">
+      <a href="../../tutorial/lesson1/Ledger.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -199,12 +199,11 @@ Common Pass Idioms:</li><li>https://github.com/ucb-bar/firrtl/wiki/Common-Pass-I
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Ledger tracks firrtl.ir.Circuit statistics" href="Ledger.html"><span class="name">Ledger</span></a><span class="result"> extends <a href="http://www.scala-lang.org/api/2.12.4/scala/collection/immutable/List.html#scala.AnyRef" class="extype" name="scala.collection.immutable.List">AnyRef</a></span>
+        <a title="Ledger tracks firrtl.ir.Circuit statistics" href="Ledger.html"><span class="name">Ledger</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
-      <p class="shortcomment cmt">Ledger tracks <a href="../../firrtl/ir/Circuit.html" class="extype" name="firrtl.ir.Circuit">firrtl.ir.Circuit</a> statistics</p><div class="fullcomment"><div class="comment cmt"><p>Ledger tracks <a href="../../firrtl/ir/Circuit.html" class="extype" name="firrtl.ir.Circuit">firrtl.ir.Circuit</a> statistics</p><p>In this lesson, we want to count the number of muxes in each
- module in our design.</p><p>This <a href="Ledger.html" class="extype" name="tutorial.lesson1.Ledger">Ledger</a> class will be passed along as we walk our
- circuit, and help us count each <span class="extype" name="Mux">Mux</span> we find.</p><p>See <a href="AnalyzeCircuit.html" class="extype" name="tutorial.lesson1.AnalyzeCircuit">lesson1.AnalyzeCircuit</a>
+      <p class="shortcomment cmt">Ledger tracks <a href="../../firrtl/ir/Circuit.html" class="extype" name="firrtl.ir.Circuit">firrtl.ir.Circuit</a> statistics</p><div class="fullcomment"><div class="comment cmt"><p>Ledger tracks <a href="../../firrtl/ir/Circuit.html" class="extype" name="firrtl.ir.Circuit">firrtl.ir.Circuit</a> statistics</p><p>In this lesson, we want to count the number of muxes in each module in our design.</p><p>This <a href="Ledger.html" class="extype" name="tutorial.lesson1.Ledger">Ledger</a> class will be passed along as we walk our circuit, and help us count each <a href="../../firrtl/ir/Mux.html" class="extype" name="firrtl.ir.Mux">Mux</a> we
+find.</p><p>See <a href="AnalyzeCircuit.html" class="extype" name="tutorial.lesson1.AnalyzeCircuit">lesson1.AnalyzeCircuit</a>
 </p></div></div>
     </li></ol>
             </div>
