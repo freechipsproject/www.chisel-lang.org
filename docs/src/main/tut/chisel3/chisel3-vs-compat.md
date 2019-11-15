@@ -93,7 +93,7 @@ val y = SInt(-1, width = 8)
 #### Chisel 3
 ```scala
 val x = 2.U
-val y = 0.S(8.W)
+val y = -1.S(8.W)
 ```
 
 ### Direction
