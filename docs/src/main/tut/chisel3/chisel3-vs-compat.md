@@ -26,16 +26,39 @@ class MyModule extends Module {
     val in = Decoupled(UInt(width = 4)).flip
     val out = Decoupled(UInt(width = 4))
   }
-  io.in <> io.out // This works
-  io.in := io.out // This is equivalent
-  io.out <> io.in // This will error
+  io.out <> io.in // This works
+  io.out := io.in // This is equivalent
+  io.in <> io.out // This will error
 }
 ```
+For Bundles, elements with matching names will be connected and unmatching elements
+will be ignored. For example:
+```scala
+import Chisel._
+class BundleA extends Bundle {
+  val foo = UInt(width = 8)
+}
+class BundleB extends Bundle {
+  val foo = UInt(width = 8)
+  val bar = UInt(width = 8)
+}
+class MyModule extends Module {
+  val io = new Bundle {
+    val in = (new BundleA).asInput
+    val out = (new BundleB).asOutput
+  }
+  io.out <> io.in
+  // Equivalent to
+  io.out.foo := io.in.foo
+  // bar is ignored because it doesn't match
+} 
+```
+
 Furthermore, error detection and reporting is defered to FIRRTL compilation.
 
 #### Chisel 3
 
-In Chisel 3, `:=` is refered to as "monoconnect" and `<>` is called "bulkconnect".
+In Chisel 3, `:=` is refered to as "monoconnect" and `<>` is called "biconnect".
 
 * Monoconnect
 `:=` treats everything on the left-hand side as a sink, even if the type is
@@ -43,7 +66,7 @@ bidirectional. This means it cannot be used to drive bidirectional output ports,
 but can be used to drive wires from bidirectional inputs or outputs to "monitor"
 the the full aggregate, ignoring directions.
 
-* Bulkconnect
+* Biconnect
 `<>` performs bidirectional connections and is commutative. At least one of the
 arguments must be a port.
 It will determine the correct leaf-level connections based on the directions of
@@ -68,6 +91,26 @@ class MyModule extends Module {
   4.U <> io.x // This also works but is stylistically suspect
 }
 ```
+In contrast to compatibility mode, every field of two connected Bundles must match.
+For example:
+```scala
+import chisel3._
+class BundleA extends Bundle {
+  val foo = UInt(8.W)
+}
+class BundleB extends Bundle {
+  val foo = UInt(8.W)
+  val bar = UInt(8.W)
+}
+class MyModule extends Module {
+  val io = new Bundle {
+    val in = Input(new BundleA)
+    val out = Output(new BundleB)
+  }
+  io.out <> io.in // This is an error because io.in.bar doesn't match
+} 
+```
+Additionally, errors are caught during Chisel elaboration.
 
 ### Width Declaration
 
@@ -100,15 +143,27 @@ val y = -1.S(8.W)
 
 #### Compatibility mode
 ```scala
-val x = UInt(INPUT, 8)
-val y = Bool(OUTPUT)
-val z = (new MyBundle).flip
+class MyBundle {
+  val foo = UInt(8.W).asInput
+  val bar = UInt(8.W) // Default direction is Output
+}
+val a = UInt(INPUT, 8)
+val b = Bool(OUTPUT)
+val c = Bool() // Equivalent to above, default direction is OUTPUT
+val d = new MyBundle
+val e = (new Bundle).flip
 ```
 #### Chisel 3
 ```scala
-val x = Input(UInt(8.W))
-val y = Output(Bool())
-val z = Flipped(new MyBundle)
+// Directions are required
+class MyBundle {
+  val foo = Input(UInt(8.W))
+  val bar = Output(UInt(8.W))
+}
+val a = Input(UInt(8.W))
+val b = Output(Bool())
+val c = new MyBundle
+val d = Flipped(new MyBundle)
 ```
 
 ### Module IO
