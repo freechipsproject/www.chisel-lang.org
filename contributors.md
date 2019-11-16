@@ -16,6 +16,7 @@
 - [`@danluu`](https://github.com/danluu)
 - [`@davidbiancolin`](https://github.com/davidbiancolin)
 - [`@debs-sifive`](https://github.com/debs-sifive)
+- [`@diningyo`](https://github.com/diningyo)
 - [`@djmmoss`](https://github.com/djmmoss)
 - [`@donggyukim`](https://github.com/donggyukim)
 - [`@dt27182`](https://github.com/dt27182)

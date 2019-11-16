@@ -116,7 +116,7 @@ a specific naming convention for clock or reset.</p>
 
 <p>Then we can use it in place of <em>Module</em> usage :</p>
 
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3.experimental.</span><span class="o">{</span><span class="nc">RawModule</span><span class="o">,</span> <span class="n">withClockAndReset</span><span class="o">}</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3.</span><span class="o">{</span><span class="nc">RawModule</span><span class="o">,</span> <span class="n">withClockAndReset</span><span class="o">}</span>
 
 <span class="k">class</span> <span class="nc">Foo</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span><span class="o">{</span>
