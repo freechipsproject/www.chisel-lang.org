@@ -14,6 +14,16 @@ Hardware Compiler Framework</h1><h2></h2><p class="text-center"><a href="https:/
 
 <hr />
 
+<h2 id="upcoming-events">Upcoming Events</h2>
+
+<p><a href="https://events.linuxfoundation.org/chisel-community-conference/">The 3rd Chisel Community Conference (hosted by CHIPS Alliance) is happening on January 29–30, 2020!</a></p>
+
+<p>We’re <a href="https://events.linuxfoundation.org/chisel-community-conference/program/cfp/">accepting talk proposals</a> for submissions through November 26th.</p>
+
+<p>Make sure to <a href="https://events.linuxfoundation.org/chisel-community-conference/register/">register</a> and attend to meet some other Chisel-ers and FIRRTL-ers!</p>
+
+<hr />
+
 <p><a href="https://gitter.im/freechipsproject/chisel3?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/freechipsproject/chisel3.svg" alt="Join the chat at https://gitter.im/freechipsproject/chisel3" /></a>
 <a href="https://circleci.com/gh/freechipsproject/chisel3/tree/master"><img src="https://circleci.com/gh/freechipsproject/chisel3/tree/master.svg?style=shield" alt="CircleCI" /></a>
 <a href="https://github.com/freechipsproject/chisel3/releases/latest"><img src="https://img.shields.io/github/tag/freechipsproject/chisel3.svg?label=release" alt="GitHub tag (latest SemVer)" /></a></p>
@@ -188,6 +198,30 @@ circuit generators (like arbiters and multiplexors).</li>
 functions that are invoked in the standard Verilog generation and simulation
 testing infrastructure. These can also be used as part of custom flows.</li>
 </ul>
+
+<h3 id="which-version-should-i-use">Which version should I use?</h3>
+
+<p>The chisel eco-system (<code class="highlighter-rouge">chisel3</code>, <code class="highlighter-rouge">firttl</code>, <code class="highlighter-rouge">dsptools</code>, <code class="highlighter-rouge">firrtl-interpreter</code>, <code class="highlighter-rouge">treadle</code>, <code class="highlighter-rouge">diagrammer</code>) use a form of semantic versioning:
+ major versions are identified by two leading numbers, separated by a dot (i.e., <code class="highlighter-rouge">3.2</code>), minor versions by a single number following the major version, separated by a dot.
+ We maintain API compatibility within a major version (i.e., <code class="highlighter-rouge">3.2.12</code> should be API-compatible with <code class="highlighter-rouge">3.2.0</code>), but do not guarantee API compatibility between major versions
+ (i.e., APIs may change between <code class="highlighter-rouge">3.1.8</code> and <code class="highlighter-rouge">3.2.0</code>).
+ We may introduce new definitions or add additional parameters to existing definitions in a minor release, but we do our best to maintain compatibility with previous minor releases of a major release - code that worked in <code class="highlighter-rouge">3.2.0</code> should continue to work un-modified in <code class="highlighter-rouge">3.2.10</code>.</p>
+
+<p>We encourage chisel users (rather than chisel developers), to use release versions of chisel.
+ The chisel web site (and GitHub repository) should indicate the current release version.
+ If you encounter an issue with a released version of chisel, please file an issue on GitHub mentioning the chisel version and provide a simple test case (if possible).
+ Try to reproduce the issue with the associated latest minor release (to verify that the issue hasn’t been addressed).</p>
+
+<p>If you’re developing a chisel library (or <code class="highlighter-rouge">chisel</code> itself), you’ll probably want to work closer to the tip of the development trunk.
+ By default, the master branches of the chisel repositories are configured to build and publish their version of the code as <code class="highlighter-rouge">Z.Y-SNAPSHOT</code>.
+ We try to publish an updated SNAPSHOT every two weeks.
+ There is no guarantee of API compatibility between SNAPSHOT versions, but we publish date-stamped <code class="highlighter-rouge">Z.Y-yyyymmdd-SNAPSHOT</code> versions which will not change.
+ The code in <code class="highlighter-rouge">Z.Y-SNAPSHOT</code> should match the code in the most recent <code class="highlighter-rouge">Z.Y-yyyymmdd-SNAPSHOT</code> version, the differences being the chisel library dependencies:
+ <code class="highlighter-rouge">Z.Y-SNAPSHOT</code>s depend on <code class="highlighter-rouge">V.U-SNAPSHOT</code>s and <code class="highlighter-rouge">Z.Y-yyyymmdd-SNAPSHOT</code>s will depend on <code class="highlighter-rouge">V.U-yyyymmdd-SNAPSHOT</code>s.
+ <strong>NOTE</strong>: Prior to the <code class="highlighter-rouge">v3.2-20191030-SNAPSHOT</code> version, we used <code class="highlighter-rouge">Z.Y-mmddyy-SNAPSHOT</code> to tag and name published SNAPSHOTs.</p>
+
+<p>If you’re developing a library (or another chisel tool), you should probably work with date-stamped SNAPSHOTs until your library or tool is ready to be published (to ensure a consistent API).
+ Prior to publishing, you should verify your code against generic (no date-stamp) SNAPSHOTs, or locally published clones of the current master branches of chisel dependencies.</p>
 
 </div></div></section><section class="technologies"><div class="container"><div class="row">
             <div class="col-md-4"><div class="first-icon-wrapper"></div><h3>Scala</h3><p>Chisel is powered by Scala and brings all the power of object-oriented and functional programming to type-safe hardware design and generation.</p></div>
