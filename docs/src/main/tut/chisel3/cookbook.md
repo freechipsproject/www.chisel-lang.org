@@ -66,13 +66,13 @@ On an instance of the Bundle, call the method fromBits with the UInt as the argu
 
 ### How do I create a Vec of Bools from a UInt?
 
-Use the builtin function chisel3.core.Bits.toBools to create a Scala Seq of Bool,
+Use the builtin function chisel3.core.Bits.asBools to create a Scala Seq of Bool,
 then wrap the resulting Seq in Vec(...)
 
 ```scala
   // Example
   val uint = 0xc.U
-  val vec = Vec(uint.toBools)
+  val vec = Vec(uint.asBools)
   printf(p"$vec") // Vec(0, 0, 1, 1)
 
   // Test
@@ -231,7 +231,7 @@ class TestModule extends Module {
     val bit = Input(Bool())
     val out = Output(UInt(10.W))
   })
-  val bools = VecInit(io.in.toBools)
+  val bools = VecInit(io.in.asBools)
   bools(0) := io.bit
   io.out := bools.asUInt
 }
