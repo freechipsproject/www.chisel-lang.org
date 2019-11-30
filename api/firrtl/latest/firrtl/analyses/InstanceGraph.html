@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.2.0 - firrtl.analyses.InstanceGraph</title>
-          <meta name="description" content="firrtl 1.2.0 - firrtl.analyses.InstanceGraph" />
-          <meta name="keywords" content="firrtl 1.2.0 firrtl.analyses.InstanceGraph" />
+          <title>firrtl 1.2.1 - firrtl.analyses.InstanceGraph</title>
+          <meta name="description" content="firrtl 1.2.1 - firrtl.analyses.InstanceGraph" />
+          <meta name="keywords" content="firrtl 1.2.1 firrtl.analyses.InstanceGraph" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.2.0</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.2.1</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -148,7 +148,7 @@
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A class representing the instance hierarchy of a working IR Circuit
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.2.0/src/main/scala/firrtl/analyses/InstanceGraph.scala" target="_blank">InstanceGraph.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.2.1/src/main/scala/firrtl/analyses/InstanceGraph.scala" target="_blank">InstanceGraph.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -382,10 +382,12 @@
       </span>
       
       <p class="shortcomment cmt">Finds the absolute paths (each represented by a Seq of instances
-representing the chain of hierarchy) of all instances of a
-particular module.</p><div class="fullcomment"><div class="comment cmt"><p>Finds the absolute paths (each represented by a Seq of instances
-representing the chain of hierarchy) of all instances of a
-particular module.
+representing the chain of hierarchy) of all instances of a particular
+module.</p><div class="fullcomment"><div class="comment cmt"><p>Finds the absolute paths (each represented by a Seq of instances
+representing the chain of hierarchy) of all instances of a particular
+module. Note that this includes one implicit instance of the top (main)
+module of the circuit. If the module is not instantiated within the
+hierarchy of the top module of the circuit, it will return Nil.
 </p></div><dl class="paramcmts block"><dt class="param">module</dt><dd class="cmt"><p>the name of the selected module</p></dd><dt>returns</dt><dd class="cmt"><p>a Seq[ Seq[WDefInstance] ] of absolute instance paths</p></dd></dl></div>
     </li><li name="firrtl.analyses.InstanceGraph#fullHierarchy" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="fullHierarchy:scala.collection.mutable.LinkedHashMap[firrtl.WDefInstance,Seq[Seq[firrtl.WDefInstance]]]"></a><a id="fullHierarchy:LinkedHashMap[WDefInstance,Seq[Seq[WDefInstance]]]"></a>
@@ -652,13 +654,12 @@ a design
         <span class="name">staticInstanceCount</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../annotations/TargetToken$$OfModule.html" class="extype" name="firrtl.annotations.TargetToken.OfModule">OfModule</a>, <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>
       </span>
       
-      <p class="shortcomment cmt">A count of the *static* number of instances of each module.</p><div class="fullcomment"><div class="comment cmt"><p>A count of the *static* number of instances of each module. For
-any module other than the top module, this is equivalent to the
-number of inst statements in the circuit instantiating each
-module, irrespective of the number of times (if any) the
-enclosing module appears in the hierarchy. Note that top module
-of the circuit has an associated count of 1, even though it is
-never directly instantiated.
+      <p class="shortcomment cmt">A count of the *static* number of instances of each module.</p><div class="fullcomment"><div class="comment cmt"><p>A count of the *static* number of instances of each module. For any module
+other than the top (main) module, this is equivalent to the number of inst
+statements in the circuit instantiating each module, irrespective of the
+number of times (if any) the enclosing module appears in the hierarchy.
+Note that top module of the circuit has an associated count of 1, even
+though it is never directly instantiated.
 </p></div></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>

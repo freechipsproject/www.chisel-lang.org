@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.2.0 - firrtl.transforms</title>
-          <meta name="description" content="firrtl 1.2.0 - firrtl.transforms" />
-          <meta name="keywords" content="firrtl 1.2.0 firrtl.transforms" />
+          <title>firrtl 1.2.1 - firrtl.transforms</title>
+          <meta name="description" content="firrtl 1.2.1 - firrtl.transforms" />
+          <meta name="keywords" content="firrtl 1.2.1 firrtl.transforms" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.2.0</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.2.1</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -382,6 +382,10 @@ primarily consists of:</p><ul><li><a href="../stage/FirrtlStage.html" class="ext
                         <a class="object" href="InferResets$.html" title=""></a>
                         <a class="class" href="InferResets.html" title="Infers the concrete type of Resets by their connections This is a global inference because ports can be of type Reset"></a>
                         <a href="InferResets.html" title="Infers the concrete type of Resets by their connections This is a global inference because ports can be of type Reset">InferResets</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="LogicNode$.html" title=""></a>
+                        <a class="class" href="LogicNode.html" title=""></a>
+                        <a href="LogicNode.html" title="">LogicNode</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="class" href="MaxCatLenAnnotation.html" title=""></a>
@@ -817,10 +821,11 @@ remove such modules, use the <a href="NoDedupAnnotation.html" class="extype" nam
         <a title="Takes flatten annotations for module instances and modules and inline the entire hierarchy of modules down from the annotations." href="Flatten.html"><span class="name">Flatten</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a></span>
       </span>
       
-      <p class="shortcomment cmt">Takes flatten annotations for module instances and modules and inline the entire hierarchy of modules down from the annotations.</p><div class="fullcomment"><div class="comment cmt"><p>Takes flatten annotations for module instances and modules and inline the entire hierarchy of modules down from the annotations.
-This transformation instantiates and is based on the InlineInstances transformation.
-Note: Inlining a module means inlining all its children module instances
-</p></div></div>
+      <p class="shortcomment cmt">Takes flatten annotations for module instances and modules and inline the entire hierarchy of
+modules down from the annotations.</p><div class="fullcomment"><div class="comment cmt"><p>Takes flatten annotations for module instances and modules and inline the entire hierarchy of
+modules down from the annotations. This transformation instantiates and is based on the
+InlineInstances transformation.
+</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>Flattening a module means inlining all its fully-defined child instances</p></span>, <span class="cmt"><p>Instances of extmodules are not (and cannot be) inlined</p></span></dd></dl></div>
     </li><li name="firrtl.transforms.FlattenAnnotation" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="FlattenAnnotationextendsSingleTargetAnnotation[firrtl.annotations.Named]withProductwithSerializable"></a><a id="FlattenAnnotation:FlattenAnnotation"></a>
       <span class="permalink">
@@ -945,6 +950,22 @@ Components that are only connected to a group's components will also be included
 This is a global inference because ports can be of type <span class="extype" name="Reset">Reset</span></p><div class="fullcomment"><div class="comment cmt"><p>Infers the concrete type of <span class="extype" name="Reset">Reset</span>s by their connections
 This is a global inference because ports can be of type <span class="extype" name="Reset">Reset</span></p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>This transform should be run before <a href="DedupModules.html" class="extype" name="firrtl.transforms.DedupModules">DedupModules</a> so that similar Modules from
   generator languages like Chisel can infer differently</p></span></dd></dl></div>
+    </li><li name="firrtl.transforms.LogicNode" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LogicNodeextendsProductwithSerializable"></a><a id="LogicNode:LogicNode"></a>
+      <span class="permalink">
+      <a href="../../firrtl/transforms/LogicNode.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="LogicNode.html"><span class="name">LogicNode</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="inst">inst: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">None</span></span>, <span name="memport">memport: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">None</span></span>)</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      
+      
     </li><li name="firrtl.transforms.MaxCatLenAnnotation" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="MaxCatLenAnnotationextendsNoTargetAnnotationwithProductwithSerializable"></a><a id="MaxCatLenAnnotation:MaxCatLenAnnotation"></a>
       <span class="permalink">
@@ -1268,6 +1289,22 @@ useful for emission to languages that support non-expanding arithmetic (like Ver
       </span>
       <span class="symbol">
         <a title="" href="InferResets$.html"><span class="name">InferResets</span></a>
+      </span>
+      
+      
+    </li><li name="firrtl.transforms.LogicNode" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LogicNode"></a><a id="LogicNode:LogicNode"></a>
+      <span class="permalink">
+      <a href="../../firrtl/transforms/LogicNode$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="LogicNode$.html"><span class="name">LogicNode</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       

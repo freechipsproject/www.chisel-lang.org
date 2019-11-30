@@ -378,7 +378,7 @@
         <span class="name">expect</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="chisel3.Element">Element</span></span>]</span><span class="params">(<span name="signal">signal: <span class="extype" name="chisel3.iotesters.PeekPokeTests.expect.T">T</span></span>, <span name="expected">expected: <span class="extype" name="scala.BigInt">BigInt</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="Pokeable.html" class="extype" name="chisel3.iotesters.Pokeable">Pokeable</a>[<span class="extype" name="chisel3.iotesters.PeekPokeTests.expect.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PeekPokeTests.html" class="extype" name="chisel3.iotesters.PeekPokeTests">PeekPokeTests</a></dd></dl></div>
+      <p class="shortcomment cmt">Check the given signal value.</p><div class="fullcomment"><div class="comment cmt"><p>Check the given signal value. Returns false and displays the given message if the value is not equal to the expected value.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Boolean - true if signal is equal</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PeekPokeTests.html" class="extype" name="chisel3.iotesters.PeekPokeTests">PeekPokeTests</a></dd></dl></div>
     </li><li name="chisel3.iotesters.PeekPokeTests#expect" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="expect(good:Boolean,msg:=&gt;String):Boolean"></a><a id="expect(Boolean,⇒String):Boolean"></a>
       <span class="permalink">
@@ -394,7 +394,7 @@
         <span class="name">expect</span><span class="params">(<span name="good">good: <span class="extype" name="scala.Boolean">Boolean</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PeekPokeTests.html" class="extype" name="chisel3.iotesters.PeekPokeTests">PeekPokeTests</a></dd></dl></div>
+      <p class="shortcomment cmt">Check the given condition, and if false, display the given message.</p><div class="fullcomment"><div class="comment cmt"><p>Check the given condition, and if false, display the given message.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Boolean - true if condition is true</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PeekPokeTests.html" class="extype" name="chisel3.iotesters.PeekPokeTests">PeekPokeTests</a></dd></dl></div>
     </li><li name="chisel3.iotesters.PeekPokeTests#finish" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="finish:Boolean"></a>
       <span class="permalink">
@@ -506,7 +506,7 @@
         <span class="name">peek</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.BigInt">BigInt</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PeekPokeTests.html" class="extype" name="chisel3.iotesters.PeekPokeTests">PeekPokeTests</a></dd></dl></div>
+      <p class="shortcomment cmt">Get actual value of a signal.</p><div class="fullcomment"><div class="comment cmt"><p>Get actual value of a signal.</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>BigInt - actual value read</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PeekPokeTests.html" class="extype" name="chisel3.iotesters.PeekPokeTests">PeekPokeTests</a></dd></dl></div>
     </li><li name="chisel3.iotesters.PeekPokeTests#peekAt" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="peekAt[T&lt;:chisel3.Element](signal:chisel3.Mem[T],off:Int)(implicitevidence$5:chisel3.iotesters.Pokeable[T]):BigInt"></a><a id="peekAt[T&lt;:Element](Mem[T],Int)(Pokeable[T]):BigInt"></a>
       <span class="permalink">
@@ -554,7 +554,7 @@
         <span class="name">poke</span><span class="params">(<span name="path">path: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="x">x: <span class="extype" name="scala.BigInt">BigInt</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PeekPokeTests.html" class="extype" name="chisel3.iotesters.PeekPokeTests">PeekPokeTests</a></dd></dl></div>
+      <p class="shortcomment cmt">Set a signal value</p><div class="fullcomment"><div class="comment cmt"><p>Set a signal value</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PeekPokeTests.html" class="extype" name="chisel3.iotesters.PeekPokeTests">PeekPokeTests</a></dd></dl></div>
     </li><li name="chisel3.iotesters.PeekPokeTests#pokeAt" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="pokeAt[T&lt;:chisel3.Element](signal:chisel3.Mem[T],x:BigInt,off:Int)(implicitevidence$3:chisel3.iotesters.Pokeable[T]):Unit"></a><a id="pokeAt[T&lt;:Element](Mem[T],BigInt,Int)(Pokeable[T]):Unit"></a>
       <span class="permalink">
@@ -586,7 +586,7 @@
         <span class="name">println</span><span class="params">(<span name="msg">msg: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PeekPokeTests.html" class="extype" name="chisel3.iotesters.PeekPokeTests">PeekPokeTests</a></dd></dl></div>
+      <p class="shortcomment cmt">Display message</p><div class="fullcomment"><div class="comment cmt"><p>Display message</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PeekPokeTests.html" class="extype" name="chisel3.iotesters.PeekPokeTests">PeekPokeTests</a></dd></dl></div>
     </li><li name="chisel3.iotesters.AdvTests#reg_poke" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="reg_poke[T&lt;:chisel3.Element](port:T,target:BigInt)(implicitevidence$2:chisel3.iotesters.Pokeable[T]):Unit"></a><a id="reg_poke[T&lt;:Element](T,BigInt)(Pokeable[T]):Unit"></a>
       <span class="permalink">
@@ -618,7 +618,7 @@
         <span class="name">reset</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PeekPokeTests.html" class="extype" name="chisel3.iotesters.PeekPokeTests">PeekPokeTests</a></dd></dl></div>
+      <p class="shortcomment cmt">Set reset during n cycles</p><div class="fullcomment"><div class="comment cmt"><p>Set reset during n cycles</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PeekPokeTests.html" class="extype" name="chisel3.iotesters.PeekPokeTests">PeekPokeTests</a></dd></dl></div>
     </li><li name="chisel3.iotesters.PeekPokeTests#rnd" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="rnd:scala.util.Random"></a><a id="rnd:Random"></a>
       <span class="permalink">
@@ -650,7 +650,7 @@
         <span class="name">step</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PeekPokeTests.html" class="extype" name="chisel3.iotesters.PeekPokeTests">PeekPokeTests</a></dd></dl></div>
+      <p class="shortcomment cmt">Advance the simulation by n steps.</p><div class="fullcomment"><div class="comment cmt"><p>Advance the simulation by n steps.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PeekPokeTests.html" class="extype" name="chisel3.iotesters.PeekPokeTests">PeekPokeTests</a></dd></dl></div>
     </li><li name="chisel3.iotesters.PeekPokeTests#t" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="t:Long"></a>
       <span class="permalink">
@@ -666,7 +666,7 @@
         <span class="name">t</span><span class="result">: <span class="extype" name="scala.Long">Long</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PeekPokeTests.html" class="extype" name="chisel3.iotesters.PeekPokeTests">PeekPokeTests</a></dd></dl></div>
+      <p class="shortcomment cmt">Get the actual step value (simTime)</p><div class="fullcomment"><div class="comment cmt"><p>Get the actual step value (simTime)</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>simTime - number of steps since begining of simulation</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="PeekPokeTests.html" class="extype" name="chisel3.iotesters.PeekPokeTests">PeekPokeTests</a></dd></dl></div>
     </li><li name="chisel3.iotesters.AdvTests#takestep" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="takestep(work:=&gt;Unit):Unit"></a><a id="takestep(⇒Unit):Unit"></a>
       <span class="permalink">

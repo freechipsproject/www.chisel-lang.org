@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.2.0 - firrtl.passes.memlib.VerilogMemDelays</title>
-          <meta name="description" content="firrtl 1.2.0 - firrtl.passes.memlib.VerilogMemDelays" />
-          <meta name="keywords" content="firrtl 1.2.0 firrtl.passes.memlib.VerilogMemDelays" />
+          <title>firrtl 1.2.1 - firrtl.passes.memlib.VerilogMemDelays</title>
+          <meta name="description" content="firrtl 1.2.1 - firrtl.passes.memlib.VerilogMemDelays" />
+          <meta name="keywords" content="firrtl 1.2.1 firrtl.passes.memlib.VerilogMemDelays" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.2.0</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.2.1</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -174,6 +174,10 @@
                         <a class="class" href="MemConf.html" title=""></a>
                         <a href="MemConf.html" title="">MemConf</a>
                       </li><li class="current-entities indented3">
+                        <a class="object" href="MemDelayAndReadwriteTransformer$.html" title=""></a>
+                        <a class="class" href="MemDelayAndReadwriteTransformer.html" title="This class performs the primary work of the transform: splitting readwrite ports into separate read and write ports while simultaneously compiling memory latencies to combinational-read memories with delay pipelines."></a>
+                        <a href="MemDelayAndReadwriteTransformer.html" title="This class performs the primary work of the transform: splitting readwrite ports into separate read and write ports while simultaneously compiling memory latencies to combinational-read memories with delay pipelines.">MemDelayAndReadwriteTransformer</a>
+                      </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="class" href="MemLibOptions.html" title=""></a>
                         <a href="MemLibOptions.html" title="">MemLibOptions</a>
@@ -238,7 +242,7 @@
                         <a class="class" href="ReplSeqMemAnnotation.html" title=""></a>
                         <a href="ReplSeqMemAnnotation.html" title="">ReplSeqMemAnnotation</a>
                       </li><li class="current-entities indented3">
-                        <span class="separator"></span>
+                        <a class="object" href="ReplaceMemMacros$.html" title=""></a>
                         <a class="class" href="ReplaceMemMacros.html" title="Replace DefAnnotatedMemory with memory blackbox + wrapper + conf file."></a>
                         <a href="ReplaceMemMacros.html" title="Replace DefAnnotatedMemory with memory blackbox + wrapper + conf file.">ReplaceMemMacros</a>
                       </li><li class="current-entities indented3">
@@ -271,8 +275,8 @@
                         <a href="Top.html" title="">Top</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="object" href="" title="This pass generates delay reigsters for memories for verilog"></a>
-                        <a href="" title="This pass generates delay reigsters for memories for verilog">VerilogMemDelays</a>
+                        <a class="object" href="" title=""></a>
+                        <a href="" title="">VerilogMemDelays</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="object" href="WritePort$.html" title=""></a>
@@ -313,7 +317,7 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>This pass generates delay reigsters for memories for verilog</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.2.0/src/main/scala/firrtl/passes/memlib/VerilogMemDelays.scala" target="_blank">VerilogMemDelays.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.2.1/src/main/scala/firrtl/passes/memlib/VerilogMemDelays.scala" target="_blank">VerilogMemDelays.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -365,7 +369,7 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="firrtl.passes.memlib.VerilogMemDelays.Netlist" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="firrtl.passes.memlib.VerilogMemDelays.Netlist" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="Netlist=scala.collection.mutable.HashMap[String,firrtl.ir.Expression]"></a><a id="Netlist:Netlist"></a>
       <span class="permalink">
       <a href="../../../firrtl/passes/memlib/VerilogMemDelays$.html#Netlist=scala.collection.mutable.HashMap[String,firrtl.ir.Expression]" title="Permalink">
@@ -377,10 +381,13 @@
         <span class="kind">type</span>
       </span>
       <span class="symbol">
-        <span class="name">Netlist</span><span class="result alias"> = <span class="extype" name="scala.collection.mutable.HashMap">HashMap</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="../../ir/Expression.html" class="extype" name="firrtl.ir.Expression">Expression</a>]</span>
+        <span class="name deprecated" title="Deprecated: (Since version 1.2.1) Internal helper members from VerilogMemDelays will be removed in 1.3">Netlist</span><span class="result alias"> = <span class="extype" name="scala.collection.mutable.HashMap">HashMap</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="../../ir/Expression.html" class="extype" name="firrtl.ir.Expression">Expression</a>]</span>
       </span>
       
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.2.1)</i> Internal helper members from VerilogMemDelays will be removed in 1.3</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -437,22 +444,6 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="firrtl.passes.memlib.VerilogMemDelays#appendStmts" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="appendStmts(sx:Seq[firrtl.ir.Statement])(s:firrtl.ir.Statement):firrtl.ir.Statement"></a><a id="appendStmts(Seq[Statement])(Statement):Statement"></a>
-      <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/VerilogMemDelays$.html#appendStmts(sx:Seq[firrtl.ir.Statement])(s:firrtl.ir.Statement):firrtl.ir.Statement" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">appendStmts</span><span class="params">(<span name="sx">sx: <span class="extype" name="scala.Seq">Seq</span>[<a href="../../ir/Statement.html" class="extype" name="firrtl.ir.Statement">Statement</a>]</span>)</span><span class="params">(<span name="s">s: <a href="../../ir/Statement.html" class="extype" name="firrtl.ir.Statement">Statement</a></span>)</span><span class="result">: <a href="../../ir/Statement.html" class="extype" name="firrtl.ir.Statement">Statement</a></span>
-      </span>
-      
-      
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
@@ -469,22 +460,6 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="firrtl.passes.memlib.VerilogMemDelays#buildNetlist" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="buildNetlist(netlist:firrtl.passes.memlib.VerilogMemDelays.Netlist)(s:firrtl.ir.Statement):Unit"></a><a id="buildNetlist(Netlist)(Statement):Unit"></a>
-      <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/VerilogMemDelays$.html#buildNetlist(netlist:firrtl.passes.memlib.VerilogMemDelays.Netlist)(s:firrtl.ir.Statement):Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">buildNetlist</span><span class="params">(<span name="netlist">netlist: <a href="#Netlist=scala.collection.mutable.HashMap[String,firrtl.ir.Expression]" class="extmbr" name="firrtl.passes.memlib.VerilogMemDelays.Netlist">Netlist</a></span>)</span><span class="params">(<span name="s">s: <a href="../../ir/Statement.html" class="extype" name="firrtl.ir.Statement">Statement</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">
@@ -562,22 +537,6 @@ Called by <a href="../Pass.html#runTransform(state:firrtl.CircuitState):firrtl.C
   delete annotations
 Called by <a href="../Pass.html#runTransform(state:firrtl.CircuitState):firrtl.CircuitState" class="extmbr" name="firrtl.passes.Pass#runTransform">runTransform</a>.
 </p></div><dl class="paramcmts block"><dt class="param">state</dt><dd class="cmt"><p>Input Firrtl AST</p></dd><dt>returns</dt><dd class="cmt"><p>A transformed Firrtl AST</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a> → <a href="../../Transform.html" class="extype" name="firrtl.Transform">Transform</a></dd></dl></div>
-    </li><li name="firrtl.passes.memlib.VerilogMemDelays#expToString" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="expToString(e:firrtl.ir.Expression):String"></a><a id="expToString(Expression):String"></a>
-      <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/VerilogMemDelays$.html#expToString(e:firrtl.ir.Expression):String" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">implicit </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">expToString</span><span class="params">(<span name="e">e: <a href="../../ir/Expression.html" class="extype" name="firrtl.ir.Expression">Expression</a></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      
-      
     </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <span class="permalink">
@@ -686,38 +645,6 @@ Called by <a href="../Pass.html#runTransform(state:firrtl.CircuitState):firrtl.C
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../../logger/LazyLogging.html" class="extype" name="logger.LazyLogging">LazyLogging</a></dd></dl></div>
-    </li><li name="firrtl.passes.memlib.VerilogMemDelays#memDelayMod" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="memDelayMod(m:firrtl.ir.DefModule):firrtl.ir.DefModule"></a><a id="memDelayMod(DefModule):DefModule"></a>
-      <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/VerilogMemDelays$.html#memDelayMod(m:firrtl.ir.DefModule):firrtl.ir.DefModule" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">memDelayMod</span><span class="params">(<span name="m">m: <a href="../../ir/DefModule.html" class="extype" name="firrtl.ir.DefModule">DefModule</a></span>)</span><span class="result">: <a href="../../ir/DefModule.html" class="extype" name="firrtl.ir.DefModule">DefModule</a></span>
-      </span>
-      
-      
-    </li><li name="firrtl.passes.memlib.VerilogMemDelays#memDelayStmt" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="memDelayStmt(netlist:firrtl.passes.memlib.VerilogMemDelays.Netlist,namespace:firrtl.Namespace,repl:firrtl.passes.memlib.VerilogMemDelays.Netlist,stmts:scala.collection.mutable.ArrayBuffer[firrtl.ir.Statement])(s:firrtl.ir.Statement):firrtl.ir.Statement"></a><a id="memDelayStmt(Netlist,Namespace,Netlist,ArrayBuffer[Statement])(Statement):Statement"></a>
-      <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/VerilogMemDelays$.html#memDelayStmt(netlist:firrtl.passes.memlib.VerilogMemDelays.Netlist,namespace:firrtl.Namespace,repl:firrtl.passes.memlib.VerilogMemDelays.Netlist,stmts:scala.collection.mutable.ArrayBuffer[firrtl.ir.Statement])(s:firrtl.ir.Statement):firrtl.ir.Statement" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">memDelayStmt</span><span class="params">(<span name="netlist">netlist: <a href="#Netlist=scala.collection.mutable.HashMap[String,firrtl.ir.Expression]" class="extmbr" name="firrtl.passes.memlib.VerilogMemDelays.Netlist">Netlist</a></span>, <span name="namespace">namespace: <a href="../../Namespace.html" class="extype" name="firrtl.Namespace">Namespace</a></span>, <span name="repl">repl: <a href="#Netlist=scala.collection.mutable.HashMap[String,firrtl.ir.Expression]" class="extmbr" name="firrtl.passes.memlib.VerilogMemDelays.Netlist">Netlist</a></span>, <span name="stmts">stmts: <span class="extype" name="scala.collection.mutable.ArrayBuffer">ArrayBuffer</span>[<a href="../../ir/Statement.html" class="extype" name="firrtl.ir.Statement">Statement</a>]</span>)</span><span class="params">(<span name="s">s: <a href="../../ir/Statement.html" class="extype" name="firrtl.ir.Statement">Statement</a></span>)</span><span class="result">: <a href="../../ir/Statement.html" class="extype" name="firrtl.ir.Statement">Statement</a></span>
-      </span>
-      
-      
     </li><li name="firrtl.Transform#name" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="name:String"></a>
       <span class="permalink">
@@ -804,22 +731,6 @@ Called by <a href="../Pass.html#runTransform(state:firrtl.CircuitState):firrtl.C
       </span>
       
       <p class="shortcomment cmt">The <a href="../../CircuitForm.html" class="extype" name="firrtl.CircuitForm">firrtl.CircuitForm</a> that this transform outputs</p><div class="fullcomment"><div class="comment cmt"><p>The <a href="../../CircuitForm.html" class="extype" name="firrtl.CircuitForm">firrtl.CircuitForm</a> that this transform outputs</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a> → <a href="../../Transform.html" class="extype" name="firrtl.Transform">Transform</a></dd></dl></div>
-    </li><li name="firrtl.passes.memlib.VerilogMemDelays#replaceExp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="replaceExp(repl:firrtl.passes.memlib.VerilogMemDelays.Netlist)(e:firrtl.ir.Expression):firrtl.ir.Expression"></a><a id="replaceExp(Netlist)(Expression):Expression"></a>
-      <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/VerilogMemDelays$.html#replaceExp(repl:firrtl.passes.memlib.VerilogMemDelays.Netlist)(e:firrtl.ir.Expression):firrtl.ir.Expression" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">replaceExp</span><span class="params">(<span name="repl">repl: <a href="#Netlist=scala.collection.mutable.HashMap[String,firrtl.ir.Expression]" class="extmbr" name="firrtl.passes.memlib.VerilogMemDelays.Netlist">Netlist</a></span>)</span><span class="params">(<span name="e">e: <a href="../../ir/Expression.html" class="extype" name="firrtl.ir.Expression">Expression</a></span>)</span><span class="result">: <a href="../../ir/Expression.html" class="extype" name="firrtl.ir.Expression">Expression</a></span>
-      </span>
-      
-      
     </li><li name="firrtl.passes.memlib.VerilogMemDelays#run" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="run(c:firrtl.ir.Circuit):firrtl.ir.Circuit"></a><a id="run(Circuit):Circuit"></a>
       <span class="permalink">
@@ -885,6 +796,22 @@ Called by <a href="../Pass.html#runTransform(state:firrtl.CircuitState):firrtl.C
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="firrtl.passes.memlib.VerilogMemDelays#transform" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="transform(m:firrtl.ir.DefModule):firrtl.ir.DefModule"></a><a id="transform(DefModule):DefModule"></a>
+      <span class="permalink">
+      <a href="../../../firrtl/passes/memlib/VerilogMemDelays$.html#transform(m:firrtl.ir.DefModule):firrtl.ir.DefModule" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">transform</span><span class="params">(<span name="m">m: <a href="../../ir/DefModule.html" class="extype" name="firrtl.ir.DefModule">DefModule</a></span>)</span><span class="result">: <a href="../../ir/DefModule.html" class="extype" name="firrtl.ir.DefModule">DefModule</a></span>
+      </span>
+      
+      
     </li><li name="firrtl.Transform#transform" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="transform(state:firrtl.CircuitState):firrtl.CircuitState"></a><a id="transform(CircuitState):CircuitState"></a>
       <span class="permalink">
@@ -901,22 +828,6 @@ Called by <a href="../Pass.html#runTransform(state:firrtl.CircuitState):firrtl.C
       </span>
       
       <p class="shortcomment cmt">A mathematical transform on some type</p><div class="fullcomment"><div class="comment cmt"><p>A mathematical transform on some type</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>an output object of the same type</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../Transform.html" class="extype" name="firrtl.Transform">Transform</a> → <a href="../../options/TransformLike.html" class="extype" name="firrtl.options.TransformLike">TransformLike</a></dd></dl></div>
-    </li><li name="firrtl.passes.memlib.VerilogMemDelays#ug" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ug:firrtl.UnknownFlow.type"></a><a id="ug:UnknownFlow.type"></a>
-      <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/VerilogMemDelays$.html#ug:firrtl.UnknownFlow.type" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">ug</span><span class="result">: <a href="../../UnknownFlow$.html" class="extype" name="firrtl.UnknownFlow">UnknownFlow</a>.type</span>
-      </span>
-      
-      
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">
@@ -993,7 +904,64 @@ Called by <a href="../Pass.html#runTransform(state:firrtl.CircuitState):firrtl.C
 
         <div class="values members">
               <h3>Deprecated Value Members</h3>
-              <ol><li name="firrtl.Transform#getMyAnnotations" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+              <ol><li name="firrtl.passes.memlib.VerilogMemDelays#appendStmts" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="appendStmts(sx:Seq[firrtl.ir.Statement])(s:firrtl.ir.Statement):firrtl.ir.Statement"></a><a id="appendStmts(Seq[Statement])(Statement):Statement"></a>
+      <span class="permalink">
+      <a href="../../../firrtl/passes/memlib/VerilogMemDelays$.html#appendStmts(sx:Seq[firrtl.ir.Statement])(s:firrtl.ir.Statement):firrtl.ir.Statement" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 1.2.1) Internal helper members from VerilogMemDelays will be removed in 1.3">appendStmts</span><span class="params">(<span name="sx">sx: <span class="extype" name="scala.Seq">Seq</span>[<a href="../../ir/Statement.html" class="extype" name="firrtl.ir.Statement">Statement</a>]</span>)</span><span class="params">(<span name="s">s: <a href="../../ir/Statement.html" class="extype" name="firrtl.ir.Statement">Statement</a></span>)</span><span class="result">: <a href="../../ir/Statement.html" class="extype" name="firrtl.ir.Statement">Statement</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.2.1)</i> Internal helper members from VerilogMemDelays will be removed in 1.3</p></dd></dl></div>
+    </li><li name="firrtl.passes.memlib.VerilogMemDelays#buildNetlist" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="buildNetlist(netlist:firrtl.passes.memlib.VerilogMemDelays.Netlist)(s:firrtl.ir.Statement):Unit"></a><a id="buildNetlist(Netlist)(Statement):Unit"></a>
+      <span class="permalink">
+      <a href="../../../firrtl/passes/memlib/VerilogMemDelays$.html#buildNetlist(netlist:firrtl.passes.memlib.VerilogMemDelays.Netlist)(s:firrtl.ir.Statement):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 1.2.1) Internal helper members from VerilogMemDelays will be removed in 1.3">buildNetlist</span><span class="params">(<span name="netlist">netlist: <a href="#Netlist=scala.collection.mutable.HashMap[String,firrtl.ir.Expression]" class="extmbr" name="firrtl.passes.memlib.VerilogMemDelays.Netlist">Netlist</a></span>)</span><span class="params">(<span name="s">s: <a href="../../ir/Statement.html" class="extype" name="firrtl.ir.Statement">Statement</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.2.1)</i> Internal helper members from VerilogMemDelays will be removed in 1.3</p></dd></dl></div>
+    </li><li name="firrtl.passes.memlib.VerilogMemDelays#expToString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="expToString(e:firrtl.ir.Expression):String"></a><a id="expToString(Expression):String"></a>
+      <span class="permalink">
+      <a href="../../../firrtl/passes/memlib/VerilogMemDelays$.html#expToString(e:firrtl.ir.Expression):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 1.2.1) Internal helper members from VerilogMemDelays will be removed in 1.3">expToString</span><span class="params">(<span name="e">e: <a href="../../ir/Expression.html" class="extype" name="firrtl.ir.Expression">Expression</a></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.2.1)</i> Internal helper members from VerilogMemDelays will be removed in 1.3</p></dd></dl></div>
+    </li><li name="firrtl.Transform#getMyAnnotations" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getMyAnnotations(state:firrtl.CircuitState):Seq[firrtl.annotations.Annotation]"></a><a id="getMyAnnotations(CircuitState):Seq[Annotation]"></a>
       <span class="permalink">
       <a href="../../../firrtl/passes/memlib/VerilogMemDelays$.html#getMyAnnotations(state:firrtl.CircuitState):Seq[firrtl.annotations.Annotation]" title="Permalink">
@@ -1014,6 +982,82 @@ Called by <a href="../Pass.html#runTransform(state:firrtl.CircuitState):firrtl.C
                 <span class="name">@deprecated</span>
               
         </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.1)</i> Just collect the actual Annotation types the transform wants</p></dd></dl></div>
+    </li><li name="firrtl.passes.memlib.VerilogMemDelays#memDelayMod" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="memDelayMod(m:firrtl.ir.DefModule):firrtl.ir.DefModule"></a><a id="memDelayMod(DefModule):DefModule"></a>
+      <span class="permalink">
+      <a href="../../../firrtl/passes/memlib/VerilogMemDelays$.html#memDelayMod(m:firrtl.ir.DefModule):firrtl.ir.DefModule" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 1.2.1) Internal helper members from VerilogMemDelays will be removed in 1.3">memDelayMod</span><span class="params">(<span name="m">m: <a href="../../ir/DefModule.html" class="extype" name="firrtl.ir.DefModule">DefModule</a></span>)</span><span class="result">: <a href="../../ir/DefModule.html" class="extype" name="firrtl.ir.DefModule">DefModule</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.2.1)</i> Internal helper members from VerilogMemDelays will be removed in 1.3</p></dd></dl></div>
+    </li><li name="firrtl.passes.memlib.VerilogMemDelays#memDelayStmt" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="memDelayStmt(netlist:firrtl.passes.memlib.VerilogMemDelays.Netlist,namespace:firrtl.Namespace,repl:firrtl.passes.memlib.VerilogMemDelays.Netlist,stmts:scala.collection.mutable.ArrayBuffer[firrtl.ir.Statement])(s:firrtl.ir.Statement):firrtl.ir.Statement"></a><a id="memDelayStmt(Netlist,Namespace,Netlist,ArrayBuffer[Statement])(Statement):Statement"></a>
+      <span class="permalink">
+      <a href="../../../firrtl/passes/memlib/VerilogMemDelays$.html#memDelayStmt(netlist:firrtl.passes.memlib.VerilogMemDelays.Netlist,namespace:firrtl.Namespace,repl:firrtl.passes.memlib.VerilogMemDelays.Netlist,stmts:scala.collection.mutable.ArrayBuffer[firrtl.ir.Statement])(s:firrtl.ir.Statement):firrtl.ir.Statement" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 1.2.1) Internal helper members from VerilogMemDelays will be removed in 1.3">memDelayStmt</span><span class="params">(<span name="netlist">netlist: <a href="#Netlist=scala.collection.mutable.HashMap[String,firrtl.ir.Expression]" class="extmbr" name="firrtl.passes.memlib.VerilogMemDelays.Netlist">Netlist</a></span>, <span name="namespace">namespace: <a href="../../Namespace.html" class="extype" name="firrtl.Namespace">Namespace</a></span>, <span name="repl">repl: <a href="#Netlist=scala.collection.mutable.HashMap[String,firrtl.ir.Expression]" class="extmbr" name="firrtl.passes.memlib.VerilogMemDelays.Netlist">Netlist</a></span>, <span name="stmts">stmts: <span class="extype" name="scala.collection.mutable.ArrayBuffer">ArrayBuffer</span>[<a href="../../ir/Statement.html" class="extype" name="firrtl.ir.Statement">Statement</a>]</span>)</span><span class="params">(<span name="s">s: <a href="../../ir/Statement.html" class="extype" name="firrtl.ir.Statement">Statement</a></span>)</span><span class="result">: <a href="../../ir/Statement.html" class="extype" name="firrtl.ir.Statement">Statement</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.2.1)</i> Internal helper members from VerilogMemDelays will be removed in 1.3</p></dd></dl></div>
+    </li><li name="firrtl.passes.memlib.VerilogMemDelays#replaceExp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="replaceExp(repl:firrtl.passes.memlib.VerilogMemDelays.Netlist)(e:firrtl.ir.Expression):firrtl.ir.Expression"></a><a id="replaceExp(Netlist)(Expression):Expression"></a>
+      <span class="permalink">
+      <a href="../../../firrtl/passes/memlib/VerilogMemDelays$.html#replaceExp(repl:firrtl.passes.memlib.VerilogMemDelays.Netlist)(e:firrtl.ir.Expression):firrtl.ir.Expression" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 1.2.1) Internal helper members from VerilogMemDelays will be removed in 1.3">replaceExp</span><span class="params">(<span name="repl">repl: <a href="#Netlist=scala.collection.mutable.HashMap[String,firrtl.ir.Expression]" class="extmbr" name="firrtl.passes.memlib.VerilogMemDelays.Netlist">Netlist</a></span>)</span><span class="params">(<span name="e">e: <a href="../../ir/Expression.html" class="extype" name="firrtl.ir.Expression">Expression</a></span>)</span><span class="result">: <a href="../../ir/Expression.html" class="extype" name="firrtl.ir.Expression">Expression</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.2.1)</i> Internal helper members from VerilogMemDelays will be removed in 1.3</p></dd></dl></div>
+    </li><li name="firrtl.passes.memlib.VerilogMemDelays#ug" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ug:firrtl.UnknownFlow.type"></a><a id="ug:UnknownFlow.type"></a>
+      <span class="permalink">
+      <a href="../../../firrtl/passes/memlib/VerilogMemDelays$.html#ug:firrtl.UnknownFlow.type" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 1.2.1) Internal helper members from VerilogMemDelays will be removed in 1.3">ug</span><span class="result">: <a href="../../UnknownFlow$.html" class="extype" name="firrtl.UnknownFlow">UnknownFlow</a>.type</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.2.1)</i> Internal helper members from VerilogMemDelays will be removed in 1.3</p></dd></dl></div>
     </li></ol>
             </div>
         </div>

@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.2.0 - chisel3.util.Pipe</title>
-          <meta name="description" content="chisel3 3.2.0 - chisel3.util.Pipe" />
-          <meta name="keywords" content="chisel3 3.2.0 chisel3.util.Pipe" />
+          <title>chisel3 3.2.1 - chisel3.util.Pipe</title>
+          <meta name="description" content="chisel3 3.2.1 - chisel3.util.Pipe" />
+          <meta name="keywords" content="chisel3 3.2.1 chisel3.util.Pipe" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.2.0</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.2.1</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -408,7 +408,7 @@ pipe.io.enq := producer.io
 consumer.io := pipe.io.deq</pre><p>If you already have the <a href="Valid.html" class="extype" name="chisel3.util.Valid">Valid</a> input or the components of a <a href="Valid.html" class="extype" name="chisel3.util.Valid">Valid</a> interface, it may be simpler to use the
 <a href="Pipe$.html" class="extype" name="chisel3.util.Pipe">Pipe factory</a> companion object. This, which <a href="" class="extype" name="chisel3.util.Pipe">Pipe</a> internally utilizes, will automatically connect the
 input for you.
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.2.0//src/main/scala/chisel3/util/Valid.scala" target="_blank">Valid.scala</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="Pipe$.html" class="extype" name="chisel3.util.Pipe">Pipe factory</a> for an alternative API</p></span><span class="cmt"><p><a href="Valid.html" class="extype" name="chisel3.util.Valid">Valid</a> interface</p></span><span class="cmt"><p><a href="Queue.html" class="extype" name="chisel3.util.Queue">Queue</a> and the <a href="Queue$.html" class="extype" name="chisel3.util.Queue">Queue factory</a> for actual queues</p></span><span class="cmt"><p>The <a href="ShiftRegister$.html" class="extype" name="chisel3.util.ShiftRegister">ShiftRegister factory</a> to generate a pipe without a <a href="Valid.html" class="extype" name="chisel3.util.Valid">Valid</a> interface</p></span></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.2.1//src/main/scala/chisel3/util/Valid.scala" target="_blank">Valid.scala</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="Pipe$.html" class="extype" name="chisel3.util.Pipe">Pipe factory</a> for an alternative API</p></span><span class="cmt"><p><a href="Valid.html" class="extype" name="chisel3.util.Valid">Valid</a> interface</p></span><span class="cmt"><p><a href="Queue.html" class="extype" name="chisel3.util.Queue">Queue</a> and the <a href="Queue$.html" class="extype" name="chisel3.util.Queue">Queue factory</a> for actual queues</p></span><span class="cmt"><p>The <a href="ShiftRegister$.html" class="extype" name="chisel3.util.ShiftRegister">ShiftRegister factory</a> to generate a pipe without a <a href="Valid.html" class="extype" name="chisel3.util.Valid">Valid</a> interface</p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -746,9 +746,10 @@ compile under Bindings checks. Does nothing in non-compatibility mode.</p><p>Sho
         <span class="name">desiredName</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       
-      <p class="shortcomment cmt">Desired name of this module.</p><div class="fullcomment"><div class="comment cmt"><p>Desired name of this module. Override this to give this module a custom, perhaps parametric,
-name.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../experimental/BaseModule.html" class="extype" name="chisel3.experimental.BaseModule">BaseModule</a></dd></dl></div>
+      <p class="shortcomment cmt">The desired name of this module (which will be used in generated FIRRTL IR or Verilog).</p><div class="fullcomment"><div class="comment cmt"><p>The desired name of this module (which will be used in generated FIRRTL IR or Verilog).</p><p>The name of a module approximates the behavior of the Java Reflection <span class="extype" name="`getSimpleName`">method
+https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getSimpleName--</span> with some modifications:</p><p>- Anonymous modules will get an <code>&quot;_Anon&quot;</code> tag
+- Modules defined in functions will use their class name and not a numeric name
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../experimental/BaseModule.html" class="extype" name="chisel3.experimental.BaseModule">BaseModule</a></dd><dt>Note</dt><dd><span class="cmt"><p>If you want a custom or parametric name, override this method.</p></span></dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">

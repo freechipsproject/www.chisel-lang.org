@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.2.0 - firrtl.passes.memlib</title>
-          <meta name="description" content="firrtl 1.2.0 - firrtl.passes.memlib" />
-          <meta name="keywords" content="firrtl 1.2.0 firrtl.passes.memlib" />
+          <title>firrtl 1.2.1 - firrtl.passes.memlib</title>
+          <meta name="description" content="firrtl 1.2.1 - firrtl.passes.memlib" />
+          <meta name="keywords" content="firrtl 1.2.1 firrtl.passes.memlib" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.2.0</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.2.1</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -190,6 +190,10 @@
                         <a class="class" href="MemConf.html" title=""></a>
                         <a href="MemConf.html" title="">MemConf</a>
                       </li><li class="current-entities indented3">
+                        <a class="object" href="MemDelayAndReadwriteTransformer$.html" title=""></a>
+                        <a class="class" href="MemDelayAndReadwriteTransformer.html" title="This class performs the primary work of the transform: splitting readwrite ports into separate read and write ports while simultaneously compiling memory latencies to combinational-read memories with delay pipelines."></a>
+                        <a href="MemDelayAndReadwriteTransformer.html" title="This class performs the primary work of the transform: splitting readwrite ports into separate read and write ports while simultaneously compiling memory latencies to combinational-read memories with delay pipelines.">MemDelayAndReadwriteTransformer</a>
+                      </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="class" href="MemLibOptions.html" title=""></a>
                         <a href="MemLibOptions.html" title="">MemLibOptions</a>
@@ -254,7 +258,7 @@
                         <a class="class" href="ReplSeqMemAnnotation.html" title=""></a>
                         <a href="ReplSeqMemAnnotation.html" title="">ReplSeqMemAnnotation</a>
                       </li><li class="current-entities indented3">
-                        <span class="separator"></span>
+                        <a class="object" href="ReplaceMemMacros$.html" title=""></a>
                         <a class="class" href="ReplaceMemMacros.html" title="Replace DefAnnotatedMemory with memory blackbox + wrapper + conf file."></a>
                         <a href="ReplaceMemMacros.html" title="Replace DefAnnotatedMemory with memory blackbox + wrapper + conf file.">ReplaceMemMacros</a>
                       </li><li class="current-entities indented3">
@@ -287,8 +291,8 @@
                         <a href="Top.html" title="">Top</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="object" href="VerilogMemDelays$.html" title="This pass generates delay reigsters for memories for verilog"></a>
-                        <a href="VerilogMemDelays$.html" title="This pass generates delay reigsters for memories for verilog">VerilogMemDelays</a>
+                        <a class="object" href="VerilogMemDelays$.html" title=""></a>
+                        <a href="VerilogMemDelays$.html" title="">VerilogMemDelays</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="object" href="WritePort$.html" title=""></a>
@@ -476,6 +480,28 @@
       </span>
       
       
+    </li><li name="firrtl.passes.memlib.MemDelayAndReadwriteTransformer" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="MemDelayAndReadwriteTransformerextendsAnyRef"></a><a id="MemDelayAndReadwriteTransformer:MemDelayAndReadwriteTransformer"></a>
+      <span class="permalink">
+      <a href="../../../firrtl/passes/memlib/MemDelayAndReadwriteTransformer.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="This class performs the primary work of the transform: splitting readwrite ports into separate read and write ports while simultaneously compiling memory latencies to combinational-read memories with delay pipelines." href="MemDelayAndReadwriteTransformer.html"><span class="name">MemDelayAndReadwriteTransformer</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">This class performs the primary work of the transform: splitting readwrite ports into separate
+read and write ports while simultaneously compiling memory latencies to combinational-read
+memories with delay pipelines.</p><div class="fullcomment"><div class="comment cmt"><p>This class performs the primary work of the transform: splitting readwrite ports into separate
+read and write ports while simultaneously compiling memory latencies to combinational-read
+memories with delay pipelines. It is represented as a class that takes a module as a constructor
+argument, as it encapsulates the mutable state required to analyze and transform one module.
+</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>The final transformed module is found in the (sole public) field <a href="MemDelayAndReadwriteTransformer.html#transformed:firrtl.ir.DefModule" class="extmbr" name="firrtl.passes.memlib.MemDelayAndReadwriteTransformer#transformed">transformed</a></p></span></dd></dl></div>
     </li><li name="firrtl.passes.memlib.MemLibOptions" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="MemLibOptionsextendsRegisteredLibrary"></a><a id="MemLibOptions:MemLibOptions"></a>
       <span class="permalink">
@@ -792,22 +818,6 @@ Creates the minimum # of black boxes needed by the design.
       </span>
       
       
-    </li><li name="firrtl.passes.memlib.DelayPipe" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="DelayPipe"></a><a id="DelayPipe:DelayPipe"></a>
-      <span class="permalink">
-      <a href="../../../firrtl/passes/memlib/DelayPipe$.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="DelayPipe$.html"><span class="name">DelayPipe</span></a>
-      </span>
-      
-      
     </li><li name="firrtl.passes.memlib.InferReadWriteAnnotation" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="InferReadWriteAnnotation"></a><a id="InferReadWriteAnnotation:InferReadWriteAnnotation"></a>
       <span class="permalink">
@@ -901,6 +911,22 @@ Creates the minimum # of black boxes needed by the design.
       </span>
       <span class="symbol">
         <a title="" href="MemConf$.html"><span class="name">MemConf</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      
+      
+    </li><li name="firrtl.passes.memlib.MemDelayAndReadwriteTransformer" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="MemDelayAndReadwriteTransformer"></a><a id="MemDelayAndReadwriteTransformer:MemDelayAndReadwriteTransformer"></a>
+      <span class="permalink">
+      <a href="../../../firrtl/passes/memlib/MemDelayAndReadwriteTransformer$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="MemDelayAndReadwriteTransformer$.html"><span class="name">MemDelayAndReadwriteTransformer</span></a>
       </span>
       
       
@@ -1065,6 +1091,22 @@ Creates the minimum # of black boxes needed by the design.
       </span>
       
       
+    </li><li name="firrtl.passes.memlib.ReplaceMemMacros" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ReplaceMemMacros"></a><a id="ReplaceMemMacros:ReplaceMemMacros"></a>
+      <span class="permalink">
+      <a href="../../../firrtl/passes/memlib/ReplaceMemMacros$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ReplaceMemMacros$.html"><span class="name">ReplaceMemMacros</span></a>
+      </span>
+      
+      
     </li><li name="firrtl.passes.memlib.ResolveMaskGranularity" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ResolveMaskGranularity"></a><a id="ResolveMaskGranularity:ResolveMaskGranularity"></a>
       <span class="permalink">
@@ -1115,10 +1157,10 @@ Requirements for macro replacement:</p><ul><li>read latency and write latency of
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="This pass generates delay reigsters for memories for verilog" href="VerilogMemDelays$.html"><span class="name">VerilogMemDelays</span></a><span class="result"> extends <a href="../../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="../Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></span>
+        <a title="" href="VerilogMemDelays$.html"><span class="name">VerilogMemDelays</span></a><span class="result"> extends <a href="../../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="../Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></span>
       </span>
       
-      <p class="shortcomment cmt">This pass generates delay reigsters for memories for verilog</p>
+      
     </li><li name="firrtl.passes.memlib.WritePort" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="WritePort"></a><a id="WritePort:WritePort"></a>
       <span class="permalink">
@@ -1141,7 +1183,29 @@ Requirements for macro replacement:</p><ul><li>read latency and write latency of
 
         
 
-        
+        <div class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="firrtl.passes.memlib.DelayPipe" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="DelayPipe"></a><a id="DelayPipe:DelayPipe"></a>
+      <span class="permalink">
+      <a href="../../../firrtl/passes/memlib/DelayPipe$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="DelayPipe$.html"><span class="name deprecated" title="Deprecated: (Since version 1.2.1) Internal helper objects from VerilogMemDelays will be removed in 1.3">DelayPipe</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.2.1)</i> Internal helper objects from VerilogMemDelays will be removed in 1.3</p></dd></dl></div>
+    </li></ol>
+            </div>
         </div>
 
         <div id="inheritedMembers">

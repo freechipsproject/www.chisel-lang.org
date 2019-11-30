@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.2.0 - firrtl.graph</title>
-          <meta name="description" content="firrtl 1.2.0 - firrtl.graph" />
-          <meta name="keywords" content="firrtl 1.2.0 firrtl.graph" />
+          <title>firrtl 1.2.1 - firrtl.graph</title>
+          <meta name="description" content="firrtl 1.2.1 - firrtl.graph" />
+          <meta name="keywords" content="firrtl 1.2.1 firrtl.graph" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.2.0</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.2.1</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -174,6 +174,14 @@
                         <a class="class" href="DiGraph.html" title="Represents common behavior of all directed graphs"></a>
                         <a href="DiGraph.html" title="Represents common behavior of all directed graphs">DiGraph</a>
                       </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="EdgeData.html" title="Mixing this trait into a DiGraph indicates that each edge may be associated with an optional data value."></a>
+                        <a href="EdgeData.html" title="Mixing this trait into a DiGraph indicates that each edge may be associated with an optional data value.">EdgeData</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="EdgeNotFoundException.html" title="An exception that indicates that an edge cannot be found in a graph with edge data."></a>
+                        <a href="EdgeNotFoundException.html" title="An exception that indicates that an edge cannot be found in a graph with edge data.">EdgeNotFoundException</a>
+                      </li><li class="current-entities indented2">
                         <a class="object" href="EulerTour$.html" title="Euler Tour companion object"></a>
                         <a class="class" href="EulerTour.html" title="A class that represents an Euler Tour of a directed graph from a given root."></a>
                         <a href="EulerTour.html" title="A class that represents an Euler Tour of a directed graph from a given root.">EulerTour</a>
@@ -181,6 +189,10 @@
                         <span class="separator"></span>
                         <a class="class" href="MutableDiGraph.html" title=""></a>
                         <a href="MutableDiGraph.html" title="">MutableDiGraph</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="MutableEdgeData.html" title="Mixing this trait into a DiGraph indicates that each edge may be associated with an optional data value."></a>
+                        <a href="MutableEdgeData.html" title="Mixing this trait into a DiGraph indicates that each edge may be associated with an optional data value.">MutableEdgeData</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="class" href="PathNotFoundException.html" title="An exception that is raised when attempting to find an unreachable node"></a>
@@ -417,6 +429,42 @@ primarily consists of:</p><ul><li><a href="../stage/FirrtlStage.html" class="ext
       </span>
       
       <p class="shortcomment cmt">Represents common behavior of all directed graphs</p>
+    </li><li name="firrtl.graph.EdgeData" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="EdgeData[V,E]extendsAnyRef"></a><a id="EdgeData[V,E]:EdgeData[V,E]"></a>
+      <span class="permalink">
+      <a href="../../firrtl/graph/EdgeData.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Mixing this trait into a DiGraph indicates that each edge may be associated with an optional data value." href="EdgeData.html"><span class="name">EdgeData</span></a><span class="tparams">[<span name="V">V</span>, <span name="E">E</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Mixing this trait into a DiGraph indicates that each edge may be associated with an optional
+data value.</p><div class="fullcomment"><div class="comment cmt"><p>Mixing this trait into a DiGraph indicates that each edge may be associated with an optional
+data value. The EdgeData trait provides a minimal API for viewing edge data without mutation.
+</p></div><dl class="paramcmts block"><dt class="tparam">V</dt><dd class="cmt"><p>the vertex type (datatype) of the underlying DiGraph</p></dd><dt class="tparam">E</dt><dd class="cmt"><p>the type of each edge data value</p></dd></dl></div>
+    </li><li name="firrtl.graph.EdgeNotFoundException" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="EdgeNotFoundExceptionextendsIllegalArgumentException"></a><a id="EdgeNotFoundException:EdgeNotFoundException"></a>
+      <span class="permalink">
+      <a href="../../firrtl/graph/EdgeNotFoundException.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="An exception that indicates that an edge cannot be found in a graph with edge data." href="EdgeNotFoundException.html"><span class="name">EdgeNotFoundException</span></a><span class="result"> extends <span class="extype" name="scala.IllegalArgumentException">IllegalArgumentException</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">An exception that indicates that an edge cannot be found in a graph with edge data.</p><div class="fullcomment"><div class="comment cmt"><p>An exception that indicates that an edge cannot be found in a graph with edge data.
+</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>the vertex type is not captured as a type parameter, as it would be erased.</p></span></dd></dl></div>
     </li><li name="firrtl.graph.EulerTour" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="EulerTour[T]extendsAnyRef"></a><a id="EulerTour[T]:EulerTour[T]"></a>
       <span class="permalink">
@@ -453,6 +501,25 @@ the initial Euler Tour.
       </span>
       
       
+    </li><li name="firrtl.graph.MutableEdgeData" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="MutableEdgeData[V,E]extendsEdgeData[V,E]"></a><a id="MutableEdgeData[V,E]:MutableEdgeData[V,E]"></a>
+      <span class="permalink">
+      <a href="../../firrtl/graph/MutableEdgeData.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Mixing this trait into a DiGraph indicates that each edge may be associated with an optional data value." href="MutableEdgeData.html"><span class="name">MutableEdgeData</span></a><span class="tparams">[<span name="V">V</span>, <span name="E">E</span>]</span><span class="result"> extends <a href="EdgeData.html" class="extype" name="firrtl.graph.EdgeData">EdgeData</a>[<span class="extype" name="firrtl.graph.MutableEdgeData.V">V</span>, <span class="extype" name="firrtl.graph.MutableEdgeData.E">E</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Mixing this trait into a DiGraph indicates that each edge may be associated with an optional
+data value.</p><div class="fullcomment"><div class="comment cmt"><p>Mixing this trait into a DiGraph indicates that each edge may be associated with an optional
+data value. The MutableEdgeData trait provides an API for viewing and mutating edge data.
+</p></div><dl class="paramcmts block"><dt class="tparam">V</dt><dd class="cmt"><p>the vertex type (datatype) of the underlying DiGraph</p></dd><dt class="tparam">E</dt><dd class="cmt"><p>the type of each edge data value</p></dd></dl></div>
     </li><li name="firrtl.graph.PathNotFoundException" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="PathNotFoundExceptionextendsException"></a><a id="PathNotFoundException:PathNotFoundException"></a>
       <span class="permalink">

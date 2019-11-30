@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>1.1.0 - treadle</title>
-          <meta name="description" content="1.1.0 - treadle" />
-          <meta name="keywords" content="1.1.0 treadle" />
+          <title>1.1.1 - treadle</title>
+          <meta name="description" content="1.1.1 - treadle" />
+          <meta name="keywords" content="1.1.1 treadle" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       <link href="../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title"><span id="doc-version">1.1.0</span></span>
+        <span id="doc-title"><span id="doc-version">1.1.1</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -273,6 +273,10 @@
                         <span class="separator"></span>
                         <a class="object" href="TreadleFirrtlFile$.html" title="Factory for FirrtlFileAnnotation annotation, this is an alias for Firrtl Cli"></a>
                         <a href="TreadleFirrtlFile$.html" title="Factory for FirrtlFileAnnotation annotation, this is an alias for Firrtl Cli">TreadleFirrtlFile</a>
+                      </li><li class="current-entities indented1">
+                        <a class="object" href="TreadleFirrtlFormHint$.html" title=""></a>
+                        <a class="class" href="TreadleFirrtlFormHint.html" title="Provides an input form hint to treadle to know how to best handle the input it receives"></a>
+                        <a href="TreadleFirrtlFormHint.html" title="Provides an input form hint to treadle to know how to best handle the input it receives">TreadleFirrtlFormHint</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="object" href="TreadleFirrtlString$.html" title="Factory for FirrtlSourceAnnotation, this is an alias for FirrtlCli"></a>
@@ -686,6 +690,24 @@ a BlackBoxImplementation. This factory provides it.</p></div><dl class="attribut
       </span>
       
       <p class="shortcomment cmt">used to pass parsed firrtl to the TreadleTester</p><div class="fullcomment"><div class="comment cmt"><p>used to pass parsed firrtl to the TreadleTester</p></div><dl class="paramcmts block"><dt class="param">state</dt><dd class="cmt"><p>the state to be passed along</p></dd></dl></div>
+    </li><li name="treadle.TreadleFirrtlFormHint" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="TreadleFirrtlFormHintextendsNoTargetAnnotationwithProductwithSerializable"></a><a id="TreadleFirrtlFormHint:TreadleFirrtlFormHint"></a>
+      <span class="permalink">
+      <a href="../treadle/index.html#TreadleFirrtlFormHintextendsNoTargetAnnotationwithProductwithSerializable" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Provides an input form hint to treadle to know how to best handle the input it receives" href="TreadleFirrtlFormHint.html"><span class="name">TreadleFirrtlFormHint</span></a><span class="params">(<span name="form">form: <span class="extype" name="firrtl.CircuitForm">CircuitForm</span></span>)</span><span class="result"> extends <span class="extype" name="firrtl.annotations.NoTargetAnnotation">NoTargetAnnotation</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Provides an input form hint to treadle to know how to best handle the input it receives
+</p><div class="fullcomment"><div class="comment cmt"><p>Provides an input form hint to treadle to know how to best handle the input it receives
+</p></div><dl class="paramcmts block"><dt class="param">form</dt><dd class="cmt"><p>the input form</p></dd></dl></div>
     </li><li name="treadle.TreadleLibrary" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="TreadleLibraryextendsRegisteredLibrary"></a><a id="TreadleLibrary:TreadleLibrary"></a>
       <span class="permalink">
@@ -804,7 +826,9 @@ so that io.a.b must be referenced as io_a_b
         <a title="Used to pass a tester on to a test harness" href="TreadleTesterAnnotation.html"><span class="name">TreadleTesterAnnotation</span></a><span class="params">(<span name="tester">tester: <a href="TreadleTester.html" class="extype" name="treadle.TreadleTester">TreadleTester</a></span>)</span><span class="result"> extends <span class="extype" name="firrtl.annotations.NoTargetAnnotation">NoTargetAnnotation</span> with <a href="TreadleOption.html" class="extype" name="treadle.TreadleOption">TreadleOption</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       
-      <p class="shortcomment cmt">Used to pass a tester on to a test harness</p><div class="fullcomment"><div class="comment cmt"><p>Used to pass a tester on to a test harness</p></div><dl class="paramcmts block"><dt class="param">tester</dt><dd class="cmt"><p>The <a href="TreadleTester.html" class="extype" name="treadle.TreadleTester">TreadleTester</a> to be passed on</p></dd></dl></div>
+      <p class="shortcomment cmt">Used to pass a tester on to a test harness
+</p><div class="fullcomment"><div class="comment cmt"><p>Used to pass a tester on to a test harness
+</p></div><dl class="paramcmts block"><dt class="param">tester</dt><dd class="cmt"><p>The <a href="TreadleTester.html" class="extype" name="treadle.TreadleTester">TreadleTester</a> to be passed on</p></dd></dl></div>
     </li><li name="treadle.VcdReplayEventsToRun" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="VcdReplayEventsToRunextendsNoTargetAnnotationwithVcdReplayTesterOptionswithProductwithSerializable"></a><a id="VcdReplayEventsToRun:VcdReplayEventsToRun"></a>
       <span class="permalink">
@@ -1479,6 +1503,22 @@ as buffers were copied.</p>
       
       <p class="shortcomment cmt">Factory for <span class="extype" name="FirrtlFileAnnotation">FirrtlFileAnnotation</span> annotation, this is an alias for Firrtl Cli
 </p>
+    </li><li name="treadle.TreadleFirrtlFormHint" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TreadleFirrtlFormHint"></a><a id="TreadleFirrtlFormHint:TreadleFirrtlFormHint"></a>
+      <span class="permalink">
+      <a href="../treadle/index.html#TreadleFirrtlFormHint" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="TreadleFirrtlFormHint$.html"><span class="name">TreadleFirrtlFormHint</span></a><span class="result"> extends <span class="extype" name="firrtl.options.HasShellOptions">HasShellOptions</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
     </li><li name="treadle.TreadleFirrtlString" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="TreadleFirrtlString"></a><a id="TreadleFirrtlString:TreadleFirrtlString"></a>
       <span class="permalink">
