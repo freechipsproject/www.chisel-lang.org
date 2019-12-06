@@ -176,7 +176,19 @@ val x = Reg(a)
 ```scala
 val a = UInt(width = 8)
 val x = Reg(chiselTypeOf(a))
+
 ```
+
+#### Compatibility mode
+```scala
+val a       = Reg (init = Vec.fill(2) { false.B })
+```
+#### Chisel 3
+```scala
+val a       = RegInit(VecInit(Seq.fill(2)(false.B)))
+
+```
+
 ### Wires
 
 New in Chisel3 is the need to connect all of your signals to a value, even if
