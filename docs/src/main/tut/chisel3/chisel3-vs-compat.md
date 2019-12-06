@@ -166,6 +166,19 @@ val c = new MyBundle
 val d = Flipped(new MyBundle)
 ```
 
+### Registers
+#### Compatibility mode
+```scala
+val a = UInt(width = 8)
+val x = Reg(a)
+```
+#### Chisel 3
+```scala
+val a = UInt(width = 8)
+val x = Reg(chiselTypeOf(a))
+```
+
+
 ### Module IO
 #### Compatibility mode
 ```scala
