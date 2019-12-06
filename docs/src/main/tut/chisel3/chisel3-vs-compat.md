@@ -177,6 +177,21 @@ val x = Reg(a)
 val a = UInt(width = 8)
 val x = Reg(chiselTypeOf(a))
 ```
+### Wires
+
+New in Chisel3 is the need to connect all of your signals to a value, even if
+that value is DontCare. Hence you might have to initialize this up front to DontCare
+
+#### Compatibility mode
+```scala
+val a   = Wire(UInt(32.W))
+a(1,0) := 2.U
+```
+#### Chisel 3
+```scala
+val a   = WireInit(UInt(32.W), DontCare)
+a(1,0) := 2.U
+```
 
 
 ### Module IO
