@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.2.1 - firrtl.stage</title>
-          <meta name="description" content="firrtl 1.2.1 - firrtl.stage" />
-          <meta name="keywords" content="firrtl 1.2.1 firrtl.stage" />
+          <title>firrtl 1.2.2 - firrtl.stage</title>
+          <meta name="description" content="firrtl 1.2.2 - firrtl.stage" />
+          <meta name="keywords" content="firrtl 1.2.2 firrtl.stage" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.2.1</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.2.2</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -407,7 +407,7 @@ primarily consists of:</p><ul><li><a href="FirrtlStage.html" class="extype" name
     <a href="FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a></li><li><a href="FirrtlOptions.html" class="extype" name="firrtl.stage.FirrtlOptions">FirrtlOptions</a>, a class representing options that are necessary to drive the <a href="FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a> and its
     <a href="../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a>s</li><li><a href="package$$FirrtlOptionsView$.html" class="extype" name="firrtl.stage.FirrtlOptionsView">FirrtlOptionsView</a>, a utility that constructs an <a href="../options/OptionsView.html" class="extype" name="firrtl.options.OptionsView">OptionsView</a> of <a href="FirrtlOptions.html" class="extype" name="firrtl.stage.FirrtlOptions">FirrtlOptions</a>
     from an <a href="../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a></li><li><a href="FirrtlCli.html" class="extype" name="firrtl.stage.FirrtlCli">FirrtlCli</a>, the command line options that the <a href="FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a> supports</li><li><a href="FirrtlStageUtils$.html" class="extype" name="firrtl.stage.FirrtlStageUtils">FirrtlStageUtils</a> containing miscellaneous utilities for <a href="" class="extype" name="firrtl.stage">stage</a>
-</li></ul></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.2.1/src/main/scala/firrtl/stage/package.scala" target="_blank">package.scala</a></dd></dl><div class="toggleContainer block">
+</li></ul></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.2.2/src/main/scala/firrtl/stage/package.scala" target="_blank">package.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -460,7 +460,7 @@ primarily consists of:</p><ul><li><a href="FirrtlStage.html" class="extype" name
         <div id="types" class="types members">
               <h3>Type Members</h3>
               <ol><li name="firrtl.stage.CircuitOption" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="CircuitOptionextendsAnyRef"></a><a id="CircuitOption:CircuitOption"></a>
+      <a id="CircuitOptionextendsUnserializable"></a><a id="CircuitOption:CircuitOption"></a>
       <span class="permalink">
       <a href="../../firrtl/stage/CircuitOption.html" title="Permalink">
         <i class="material-icons"></i>
@@ -471,7 +471,7 @@ primarily consists of:</p><ul><li><a href="FirrtlStage.html" class="extype" name
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="Indicates that this Annotation contains information that is directly convertable to a FIRRTL Circuit." href="CircuitOption.html"><span class="name">CircuitOption</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="Indicates that this Annotation contains information that is directly convertable to a FIRRTL Circuit." href="CircuitOption.html"><span class="name">CircuitOption</span></a><span class="result"> extends <a href="../options/Unserializable.html" class="extype" name="firrtl.options.Unserializable">Unserializable</a></span>
       </span>
       
       <p class="shortcomment cmt">Indicates that this <a href="../annotations/Annotation.html" class="extype" name="firrtl.annotations.Annotation">Annotation</a> contains information that is directly convertable
@@ -544,7 +544,7 @@ as those are automatically loaded by the <a href="../options/Stage.html" class="
       
       <p class="shortcomment cmt">An explicit input FIRRTL file to read</p><div class="fullcomment"><div class="comment cmt"><p>An explicit input FIRRTL file to read</p><ul><li>set with <code>-i/--input-file</code></li><li>If unset, an <a href="FirrtlFileAnnotation.html" class="extype" name="firrtl.stage.FirrtlFileAnnotation">FirrtlFileAnnotation</a> with the default input file <u>will not be generated</u></li></ul></div><dl class="paramcmts block"><dt class="param">file</dt><dd class="cmt"><p>input filename</p></dd></dl></div>
     </li><li name="firrtl.stage.FirrtlOption" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="FirrtlOptionextendsAnyRef"></a><a id="FirrtlOption:FirrtlOption"></a>
+      <a id="FirrtlOptionextendsUnserializable"></a><a id="FirrtlOption:FirrtlOption"></a>
       <span class="permalink">
       <a href="../../firrtl/stage/FirrtlOption.html" title="Permalink">
         <i class="material-icons"></i>
@@ -555,7 +555,7 @@ as those are automatically loaded by the <a href="../options/Stage.html" class="
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="Indicates that this is an Annotation directly used in the construction of a FirrtlOptions view." href="FirrtlOption.html"><span class="name">FirrtlOption</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="Indicates that this is an Annotation directly used in the construction of a FirrtlOptions view." href="FirrtlOption.html"><span class="name">FirrtlOption</span></a><span class="result"> extends <a href="../options/Unserializable.html" class="extype" name="firrtl.options.Unserializable">Unserializable</a></span>
       </span>
       
       <p class="shortcomment cmt">Indicates that this is an <a href="../annotations/Annotation.html" class="extype" name="firrtl.annotations.Annotation">Annotation</a> directly used in the construction of a

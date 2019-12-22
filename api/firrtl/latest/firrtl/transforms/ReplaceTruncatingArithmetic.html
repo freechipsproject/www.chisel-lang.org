@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.2.1 - firrtl.transforms.ReplaceTruncatingArithmetic</title>
-          <meta name="description" content="firrtl 1.2.1 - firrtl.transforms.ReplaceTruncatingArithmetic" />
-          <meta name="keywords" content="firrtl 1.2.1 firrtl.transforms.ReplaceTruncatingArithmetic" />
+          <title>firrtl 1.2.2 - firrtl.transforms.ReplaceTruncatingArithmetic</title>
+          <meta name="description" content="firrtl 1.2.2 - firrtl.transforms.ReplaceTruncatingArithmetic" />
+          <meta name="keywords" content="firrtl 1.2.2 firrtl.transforms.ReplaceTruncatingArithmetic" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.2.1</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.2.2</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -302,7 +302,7 @@
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Replaces non-expanding arithmetic</p><p>In the case where the result of <code>add</code> or <code>sub</code> immediately throws away the expanded msb, this
 transform will replace the operation with a non-expanding operator <code>addw</code> or <code>subw</code>
 respectively.
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.2.1/src/main/scala/firrtl/transforms/ReplaceTruncatingArithmetic.scala" target="_blank">ReplaceTruncatingArithmetic.scala</a></dd><dt>Note</dt><dd><span class="cmt"><p>This replaces some FIRRTL primops with ops that are not actually legal FIRRTL. They are
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.2.2/src/main/scala/firrtl/transforms/ReplaceTruncatingArithmetic.scala" target="_blank">ReplaceTruncatingArithmetic.scala</a></dd><dt>Note</dt><dd><span class="cmt"><p>This replaces some FIRRTL primops with ops that are not actually legal FIRRTL. They are
 useful for emission to languages that support non-expanding arithmetic (like Verilog)</p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
