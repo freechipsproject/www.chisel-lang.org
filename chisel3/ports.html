@@ -51,13 +51,13 @@ provide powerful wiring constructs described later.</p>
 
 <span class="k">class</span> <span class="nc">Test</span> <span class="k">extends</span> <span class="nc">MultiIOModule</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">adder</span> <span class="k">=</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">Adder</span><span class="o">)</span>
-  <span class="c1">// for debug only
-</span>  <span class="nv">adder</span><span class="o">.</span><span class="py">a</span> <span class="o">:=</span> <span class="nc">DontCare</span>
+  <span class="c1">// for debug only</span>
+  <span class="nv">adder</span><span class="o">.</span><span class="py">a</span> <span class="o">:=</span> <span class="nc">DontCare</span>
   <span class="nv">adder</span><span class="o">.</span><span class="py">b</span> <span class="o">:=</span> <span class="nc">DontCare</span>
 
-  <span class="c1">// Inspect ports of adder
-</span>  <span class="c1">// Prints something like this
-</span>  <span class="cm">/**
+  <span class="c1">// Inspect ports of adder</span>
+  <span class="c1">// Prints something like this</span>
+  <span class="cm">/**
     * Found port clock: Clock(IO clock in Adder)
     * Found port reset: Bool(IO reset in Adder)
     * Found port a: UInt&lt;8&gt;(IO a in Adder)

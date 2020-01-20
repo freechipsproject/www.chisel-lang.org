@@ -123,8 +123,8 @@ A convenience method <code class="highlighter-rouge">fire</code> is provided tha
   <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
     <span class="k">val</span> <span class="nv">readyValid</span> <span class="k">=</span> <span class="nc">Decoupled</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">))</span>
   <span class="o">})</span>
-  <span class="c1">// do something with io.readyValid.ready
-</span>  <span class="nv">io</span><span class="o">.</span><span class="py">readyValid</span><span class="o">.</span><span class="py">valid</span> <span class="o">:=</span> <span class="nv">true</span><span class="o">.</span><span class="py">B</span>
+  <span class="c1">// do something with io.readyValid.ready</span>
+  <span class="nv">io</span><span class="o">.</span><span class="py">readyValid</span><span class="o">.</span><span class="py">valid</span> <span class="o">:=</span> <span class="nv">true</span><span class="o">.</span><span class="py">B</span>
   <span class="nv">io</span><span class="o">.</span><span class="py">readyValid</span><span class="o">.</span><span class="py">bits</span> <span class="o">:=</span> <span class="mf">5.</span><span class="n">U</span>
 <span class="o">}</span>
 
@@ -141,9 +141,9 @@ A convenience method <code class="highlighter-rouge">fire</code> is provided tha
     <span class="k">val</span> <span class="nv">readyValid</span> <span class="k">=</span> <span class="nc">Flipped</span><span class="o">(</span><span class="nc">Decoupled</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">)))</span>
   <span class="o">})</span>
   <span class="nv">io</span><span class="o">.</span><span class="py">readyValid</span><span class="o">.</span><span class="py">ready</span> <span class="o">:=</span> <span class="nv">false</span><span class="o">.</span><span class="py">B</span>
-  <span class="c1">// do something with io.readyValid.valid
-</span>  <span class="c1">// do something with io.readyValid.bits
-</span><span class="o">}</span>
+  <span class="c1">// do something with io.readyValid.valid</span>
+  <span class="c1">// do something with io.readyValid.bits</span>
+<span class="o">}</span>
 </code></pre></div></div>
 
 <p><code class="highlighter-rouge">DecoupledIO</code> is a ready-valid interface with the <em>convention</em> that there are no guarantees placed on deasserting <code class="highlighter-rouge">ready</code> or <code class="highlighter-rouge">valid</code> or on the stability of <code class="highlighter-rouge">bits</code>.

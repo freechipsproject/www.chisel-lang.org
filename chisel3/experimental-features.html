@@ -39,13 +39,13 @@ new ways of defining Modules</p>
   <span class="k">val</span> <span class="nv">a</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">)</span>
   <span class="k">val</span> <span class="nv">b</span> <span class="k">=</span> <span class="nc">Bool</span><span class="o">()</span>
 
-  <span class="c1">// Bundle literal constructor code, which will be auto-generated using macro annotations in
-</span>  <span class="c1">// the future.
-</span>  <span class="k">import</span> <span class="nn">chisel3.core.BundleLitBinding</span>
+  <span class="c1">// Bundle literal constructor code, which will be auto-generated using macro annotations in</span>
+  <span class="c1">// the future.</span>
+  <span class="k">import</span> <span class="nn">chisel3.core.BundleLitBinding</span>
   <span class="k">import</span> <span class="nn">chisel3.internal.firrtl.</span><span class="o">{</span><span class="nc">ULit</span><span class="o">,</span> <span class="nc">Width</span><span class="o">}</span>
 
-  <span class="c1">// Full bundle literal constructor
-</span>  <span class="k">def</span> <span class="nf">Lit</span><span class="o">(</span><span class="n">aVal</span><span class="k">:</span> <span class="kt">UInt</span><span class="o">,</span> <span class="n">bVal</span><span class="k">:</span> <span class="kt">Bool</span><span class="o">)</span><span class="k">:</span> <span class="kt">MyBundle</span> <span class="o">=</span> <span class="o">{</span>
+  <span class="c1">// Full bundle literal constructor</span>
+  <span class="k">def</span> <span class="nf">Lit</span><span class="o">(</span><span class="n">aVal</span><span class="k">:</span> <span class="kt">UInt</span><span class="o">,</span> <span class="n">bVal</span><span class="k">:</span> <span class="kt">Bool</span><span class="o">)</span><span class="k">:</span> <span class="kt">MyBundle</span> <span class="o">=</span> <span class="o">{</span>
     <span class="k">val</span> <span class="nv">clone</span> <span class="k">=</span> <span class="n">cloneType</span>
     <span class="nv">clone</span><span class="o">.</span><span class="py">selfBind</span><span class="o">(</span><span class="nc">BundleLitBinding</span><span class="o">(</span><span class="nc">Map</span><span class="o">(</span>
       <span class="nv">clone</span><span class="o">.</span><span class="py">a</span> <span class="o">-&gt;</span> <span class="nf">litArgOfBits</span><span class="o">(</span><span class="n">aVal</span><span class="o">),</span>
@@ -54,8 +54,8 @@ new ways of defining Modules</p>
     <span class="n">clone</span>
   <span class="o">}</span>
 
-  <span class="c1">// Partial bundle literal constructor
-</span>  <span class="k">def</span> <span class="nf">Lit</span><span class="o">(</span><span class="n">aVal</span><span class="k">:</span> <span class="kt">UInt</span><span class="o">)</span><span class="k">:</span> <span class="kt">MyBundle</span> <span class="o">=</span> <span class="o">{</span>
+  <span class="c1">// Partial bundle literal constructor</span>
+  <span class="k">def</span> <span class="nf">Lit</span><span class="o">(</span><span class="n">aVal</span><span class="k">:</span> <span class="kt">UInt</span><span class="o">)</span><span class="k">:</span> <span class="kt">MyBundle</span> <span class="o">=</span> <span class="o">{</span>
     <span class="k">val</span> <span class="nv">clone</span> <span class="k">=</span> <span class="n">cloneType</span>
     <span class="nv">clone</span><span class="o">.</span><span class="py">selfBind</span><span class="o">(</span><span class="nc">BundleLitBinding</span><span class="o">(</span><span class="nc">Map</span><span class="o">(</span>
       <span class="nv">clone</span><span class="o">.</span><span class="py">a</span> <span class="o">-&gt;</span> <span class="nf">litArgOfBits</span><span class="o">(</span><span class="n">aVal</span><span class="o">)</span>

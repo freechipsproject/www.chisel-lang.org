@@ -56,8 +56,8 @@ We may introduce versioned snapshots and releases in the future, tied to a parti
   <li>Create a test class:
     <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">BasicTest</span> <span class="k">extends</span> <span class="nc">FlatSpec</span> <span class="k">with</span> <span class="nc">ChiselScalatestTester</span> <span class="k">with</span> <span class="nc">Matchers</span> <span class="o">{</span>
   <span class="n">behavior</span> <span class="n">of</span> <span class="s">"MyModule"</span>
-  <span class="c1">// test class body here
-</span><span class="o">}</span>
+  <span class="c1">// test class body here</span>
+<span class="o">}</span>
 </code></pre></div>    </div>
     <ul>
       <li><code class="highlighter-rouge">FlatSpec</code> is the <a href="http://www.scalatest.org/user_guide/selecting_a_style">default and recommended ScalaTest style for unit testing</a>.</li>
@@ -67,15 +67,15 @@ We may introduce versioned snapshots and releases in the future, tied to a parti
   </li>
   <li>In the test class, define a test case:
     <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">it</span> <span class="n">should</span> <span class="s">"do something"</span> <span class="n">in</span> <span class="o">{</span>
-  <span class="c1">// test case body here
-</span><span class="o">}</span>
+  <span class="c1">// test case body here</span>
+<span class="o">}</span>
 </code></pre></div>    </div>
     <p>There can be multiple test cases per test class, and we recommend one test class per Module being tested, and one test case per individual test.</p>
   </li>
   <li>In the test case, define the module being tested:
     <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">test</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyModule</span><span class="o">)</span> <span class="o">{</span> <span class="n">c</span> <span class="k">=&gt;</span>
-  <span class="c1">// test body here
-</span><span class="o">}</span>
+  <span class="c1">// test body here</span>
+<span class="o">}</span>
 </code></pre></div>    </div>
     <p><code class="highlighter-rouge">test</code> automatically runs the default simulator (which is <a href="https://github.com/freechipsproject/treadle">treadle</a>), and runs the test stimulus in the block.
 The argument to the test stimulus block (<code class="highlighter-rouge">c</code> in this case) is a handle to the module under test.</p>
@@ -114,8 +114,8 @@ Also, check out the <a href="src/main/scala/chisel3/tester/DecoupledDriver.scala
 <span class="k">import</span> <span class="nn">chisel3.tester.internal.VerilatorBackendAnnotation</span>
 </code></pre></div>        </div>
         <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">test</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyModule</span><span class="o">).</span><span class="py">withAnnotations</span><span class="o">(</span><span class="nc">Seq</span><span class="o">(</span><span class="nc">VerilatorBackendAnnotation</span><span class="o">))</span> <span class="o">{</span> <span class="n">c</span> <span class="k">=&gt;</span>
-  <span class="c1">// test body here
-</span><span class="o">}</span>
+  <span class="c1">// test body here</span>
+<span class="o">}</span>
 </code></pre></div>        </div>
       </li>
     </ul>

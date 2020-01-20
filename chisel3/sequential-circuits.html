@@ -35,20 +35,20 @@ ga('send', 'pageview');
 <p>The counter register is created in the counter function with a reset value of 0 (with width large enough to hold max), to which the register will be initialized when the global reset for the circuit is asserted. The := assignment to x in counter wires an update combinational circuit which increments the counter value unless it hits the max at which point it wraps back to zero. Note that when x appears on the right-hand side of an assignment, its output is referenced, whereas when on the left-hand side, its input is referenced.
 Counters can be used to build a number of useful sequential circuits. For example, we can build a pulse generator by outputting true when a counter reaches zero:</p>
 
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Produce pulse every n cycles.
-</span><span class="k">def</span> <span class="nf">pulse</span><span class="o">(</span><span class="n">n</span><span class="k">:</span> <span class="kt">UInt</span><span class="o">)</span> <span class="k">=</span> <span class="nf">counter</span><span class="o">(</span><span class="n">n</span> <span class="o">-</span> <span class="mf">1.</span><span class="n">U</span><span class="o">)</span> <span class="o">===</span> <span class="mf">0.</span><span class="n">U</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Produce pulse every n cycles.</span>
+<span class="k">def</span> <span class="nf">pulse</span><span class="o">(</span><span class="n">n</span><span class="k">:</span> <span class="kt">UInt</span><span class="o">)</span> <span class="k">=</span> <span class="nf">counter</span><span class="o">(</span><span class="n">n</span> <span class="o">-</span> <span class="mf">1.</span><span class="n">U</span><span class="o">)</span> <span class="o">===</span> <span class="mf">0.</span><span class="n">U</span>
 </code></pre></div></div>
 
 <p>A square-wave generator can then be toggled by the pulse train, toggling between true and false on each pulse:</p>
 
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Flip internal state when input true.
-</span><span class="k">def</span> <span class="nf">toggle</span><span class="o">(</span><span class="n">p</span><span class="k">:</span> <span class="kt">Bool</span><span class="o">)</span> <span class="k">=</span> <span class="o">{</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Flip internal state when input true.</span>
+<span class="k">def</span> <span class="nf">toggle</span><span class="o">(</span><span class="n">p</span><span class="k">:</span> <span class="kt">Bool</span><span class="o">)</span> <span class="k">=</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">x</span> <span class="k">=</span> <span class="nc">RegInit</span><span class="o">(</span><span class="nv">false</span><span class="o">.</span><span class="py">B</span><span class="o">)</span>
   <span class="n">x</span> <span class="o">:=</span> <span class="nc">Mux</span><span class="o">(</span><span class="n">p</span><span class="o">,</span> <span class="o">!</span><span class="n">x</span><span class="o">,</span> <span class="n">x</span><span class="o">)</span>
   <span class="n">x</span>
 <span class="o">}</span>
-<span class="c1">// Square wave of a given period.
-</span><span class="k">def</span> <span class="nf">squareWave</span><span class="o">(</span><span class="n">period</span><span class="k">:</span> <span class="kt">UInt</span><span class="o">)</span> <span class="k">=</span> <span class="nf">toggle</span><span class="o">(</span><span class="nf">pulse</span><span class="o">(</span><span class="n">period</span><span class="o">/</span><span class="mi">2</span><span class="o">))</span>
+<span class="c1">// Square wave of a given period.</span>
+<span class="k">def</span> <span class="nf">squareWave</span><span class="o">(</span><span class="n">period</span><span class="k">:</span> <span class="kt">UInt</span><span class="o">)</span> <span class="k">=</span> <span class="nf">toggle</span><span class="o">(</span><span class="nf">pulse</span><span class="o">(</span><span class="n">period</span><span class="o">/</span><span class="mi">2</span><span class="o">))</span>
 </code></pre></div></div>
 
 </section></div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/highlight/highlight.pack.js"></script><script>hljs.configure({languages:['scala','java','bash']});

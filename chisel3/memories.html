@@ -56,12 +56,12 @@ ga('send', 'pageview');
 <span class="k">val</span> <span class="nv">dataOut</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="nv">width</span><span class="o">.</span><span class="py">W</span><span class="o">))</span>
 <span class="k">val</span> <span class="nv">enable</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
 
-<span class="c1">// assign data...
-</span>
-<span class="c1">// Create a synchronous-read, synchronous-write memory (like in FPGAs).
-</span><span class="k">val</span> <span class="nv">mem</span> <span class="k">=</span> <span class="nc">SyncReadMem</span><span class="o">(</span><span class="mi">1024</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">(</span><span class="nv">width</span><span class="o">.</span><span class="py">W</span><span class="o">))</span>
-<span class="c1">// Create one write port and one read port.
-</span><span class="nv">mem</span><span class="o">.</span><span class="py">write</span><span class="o">(</span><span class="n">addr</span><span class="o">,</span> <span class="n">dataIn</span><span class="o">)</span>
+<span class="c1">// assign data...</span>
+
+<span class="c1">// Create a synchronous-read, synchronous-write memory (like in FPGAs).</span>
+<span class="k">val</span> <span class="nv">mem</span> <span class="k">=</span> <span class="nc">SyncReadMem</span><span class="o">(</span><span class="mi">1024</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">(</span><span class="nv">width</span><span class="o">.</span><span class="py">W</span><span class="o">))</span>
+<span class="c1">// Create one write port and one read port.</span>
+<span class="nv">mem</span><span class="o">.</span><span class="py">write</span><span class="o">(</span><span class="n">addr</span><span class="o">,</span> <span class="n">dataIn</span><span class="o">)</span>
 <span class="n">dataOut</span> <span class="o">:=</span> <span class="nv">mem</span><span class="o">.</span><span class="py">read</span><span class="o">(</span><span class="n">addr</span><span class="o">,</span> <span class="n">enable</span><span class="o">)</span>
 </code></pre></div></div>
 
@@ -94,12 +94,12 @@ undefined.</p>
 <span class="k">val</span> <span class="nv">readAddr</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">10.</span><span class="n">W</span><span class="o">))</span>
 <span class="k">val</span> <span class="nv">writeAddr</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">10.</span><span class="n">W</span><span class="o">))</span>
 
-<span class="c1">// ... assign values ...
-</span>
-<span class="c1">// Create a 32-bit wide memory that is byte-masked.
-</span><span class="k">val</span> <span class="nv">mem</span> <span class="k">=</span> <span class="nc">SyncReadMem</span><span class="o">(</span><span class="mi">1024</span><span class="o">,</span> <span class="nc">Vec</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">)))</span>
-<span class="c1">// Create one masked write port and one read port.
-</span><span class="nv">mem</span><span class="o">.</span><span class="py">write</span><span class="o">(</span><span class="n">writeAddr</span><span class="o">,</span> <span class="n">dataIn</span><span class="o">,</span> <span class="n">mask</span><span class="o">)</span>
+<span class="c1">// ... assign values ...</span>
+
+<span class="c1">// Create a 32-bit wide memory that is byte-masked.</span>
+<span class="k">val</span> <span class="nv">mem</span> <span class="k">=</span> <span class="nc">SyncReadMem</span><span class="o">(</span><span class="mi">1024</span><span class="o">,</span> <span class="nc">Vec</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">)))</span>
+<span class="c1">// Create one masked write port and one read port.</span>
+<span class="nv">mem</span><span class="o">.</span><span class="py">write</span><span class="o">(</span><span class="n">writeAddr</span><span class="o">,</span> <span class="n">dataIn</span><span class="o">,</span> <span class="n">mask</span><span class="o">)</span>
 <span class="n">dataOut</span> <span class="o">:=</span> <span class="nv">mem</span><span class="o">.</span><span class="py">read</span><span class="o">(</span><span class="n">readAddr</span><span class="o">,</span> <span class="n">enable</span><span class="o">)</span>
 </code></pre></div></div>
 

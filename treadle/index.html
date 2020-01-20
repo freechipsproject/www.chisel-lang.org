@@ -116,9 +116,9 @@ ClassicTester, it’s api consists of poke, peek and expect statements. Here is 
         <span class="n">cycles</span> <span class="o">+=</span> <span class="mi">1</span>
       <span class="o">}</span>
       <span class="nv">tester</span><span class="o">.</span><span class="py">expect</span><span class="o">(</span><span class="s">"io_z"</span><span class="o">,</span> <span class="nc">BigInt</span><span class="o">(</span><span class="nv">GCDCalculator</span><span class="o">.</span><span class="py">computeGcd</span><span class="o">(</span><span class="n">i</span><span class="o">,</span> <span class="n">j</span><span class="o">).</span><span class="py">_1</span><span class="o">))</span>
-      <span class="c1">// uncomment the println to see a lot of output
-</span>      <span class="c1">// println(f"GCD(${i}%3d, ${j}%3d) =&gt; ${interpretiveTester.peek("io_z")}%3d in $cycles%3d cycles")
-</span>    <span class="o">}</span>
+      <span class="c1">// uncomment the println to see a lot of output</span>
+      <span class="c1">// println(f"GCD(${i}%3d, ${j}%3d) =&gt; ${interpretiveTester.peek("io_z")}%3d in $cycles%3d cycles")</span>
+    <span class="o">}</span>
     <span class="nv">tester</span><span class="o">.</span><span class="py">report</span><span class="o">()</span>
   <span class="o">}</span>
 <span class="o">}</span>

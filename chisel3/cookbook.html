@@ -113,17 +113,17 @@ ga('send', 'pageview');
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3._</span>
 
 <span class="k">class</span> <span class="nc">Foo</span> <span class="k">extends</span> <span class="nc">RawModule</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="nv">regOfVec</span> <span class="k">=</span> <span class="nc">Reg</span><span class="o">(</span><span class="nc">Vec</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">)))</span> <span class="c1">// Register of 32-bit UInts
-</span>  <span class="nf">regOfVec</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span> <span class="o">:=</span> <span class="mf">123.</span><span class="n">U</span>                   <span class="c1">// Assignments to elements of the Vec
-</span>  <span class="nf">regOfVec</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span> <span class="o">:=</span> <span class="mf">456.</span><span class="n">U</span>
+  <span class="k">val</span> <span class="nv">regOfVec</span> <span class="k">=</span> <span class="nc">Reg</span><span class="o">(</span><span class="nc">Vec</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">)))</span> <span class="c1">// Register of 32-bit UInts</span>
+  <span class="nf">regOfVec</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span> <span class="o">:=</span> <span class="mf">123.</span><span class="n">U</span>                   <span class="c1">// Assignments to elements of the Vec</span>
+  <span class="nf">regOfVec</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span> <span class="o">:=</span> <span class="mf">456.</span><span class="n">U</span>
   <span class="nf">regOfVec</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span> <span class="o">:=</span> <span class="mf">789.</span><span class="n">U</span>
   <span class="nf">regOfVec</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span> <span class="o">:=</span> <span class="nf">regOfVec</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span>
 
-  <span class="c1">// Reg of Vec of 32-bit UInts initialized to zero
-</span>  <span class="c1">//   Note that Seq.fill constructs 4 32-bit UInt literals with the value 0
-</span>  <span class="c1">//   VecInit(...) then constructs a Wire of these literals
-</span>  <span class="c1">//   The Reg is then initialized to the value of the Wire (which gives it the same type)
-</span>  <span class="k">val</span> <span class="nv">initRegOfVec</span> <span class="k">=</span> <span class="nc">RegInit</span><span class="o">(</span><span class="nc">VecInit</span><span class="o">(</span><span class="nv">Seq</span><span class="o">.</span><span class="py">fill</span><span class="o">(</span><span class="mi">4</span><span class="o">)(</span><span class="mf">0.</span><span class="nf">U</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">))))</span>
+  <span class="c1">// Reg of Vec of 32-bit UInts initialized to zero</span>
+  <span class="c1">//   Note that Seq.fill constructs 4 32-bit UInt literals with the value 0</span>
+  <span class="c1">//   VecInit(...) then constructs a Wire of these literals</span>
+  <span class="c1">//   The Reg is then initialized to the value of the Wire (which gives it the same type)</span>
+  <span class="k">val</span> <span class="nv">initRegOfVec</span> <span class="k">=</span> <span class="nc">RegInit</span><span class="o">(</span><span class="nc">VecInit</span><span class="o">(</span><span class="nv">Seq</span><span class="o">.</span><span class="py">fill</span><span class="o">(</span><span class="mi">4</span><span class="o">)(</span><span class="mf">0.</span><span class="nf">U</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">))))</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
@@ -209,8 +209,8 @@ Frequently, this structured type is used prolifically in the design, and has bee
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Foo</span> <span class="k">extends</span> <span class="nc">RawModule</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">z</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">9.</span><span class="n">W</span><span class="o">))</span>
-  <span class="n">z</span> <span class="o">:=</span> <span class="nc">DontCare</span> <span class="c1">// This is a dummy connection
-</span>  <span class="k">val</span> <span class="nv">unpacked</span> <span class="k">=</span> <span class="nv">z</span><span class="o">.</span><span class="py">asTypeOf</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyBundle</span><span class="o">)</span>
+  <span class="n">z</span> <span class="o">:=</span> <span class="nc">DontCare</span> <span class="c1">// This is a dummy connection</span>
+  <span class="k">val</span> <span class="nv">unpacked</span> <span class="k">=</span> <span class="nv">z</span><span class="o">.</span><span class="py">asTypeOf</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyBundle</span><span class="o">)</span>
   <span class="nv">unpacked</span><span class="o">.</span><span class="py">a</span>
   <span class="nv">unpacked</span><span class="o">.</span><span class="py">b</span>
   <span class="nv">unpacked</span><span class="o">.</span><span class="py">c</span>
@@ -239,28 +239,28 @@ Below, the left-hand side connection to <code class="highlighter-rouge">io.out(0
 <p>If you try to compile this, you will get an error.</p>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span><span class="k">new</span> <span class="nc">ChiselStage</span><span class="o">).</span><span class="py">execute</span><span class="o">(</span><span class="nc">Array</span><span class="o">(</span><span class="s">"-X"</span><span class="o">,</span> <span class="s">"verilog"</span><span class="o">),</span> <span class="nc">Seq</span><span class="o">(</span><span class="k">new</span> <span class="nc">ChiselGeneratorAnnotation</span><span class="o">(()</span> <span class="k">=&gt;</span> <span class="k">new</span> <span class="nc">Foo</span><span class="o">)))</span>
-<span class="c1">// firrtl.options.StageError: 
-// 	at chisel3.stage.ChiselStage.run(ChiselStage.scala:47)
-// 	at firrtl.options.Stage$$anon$1.transform(Stage.scala:43)
-// 	at firrtl.options.Stage$$anon$1.transform(Stage.scala:43)
-// 	at firrtl.options.phases.DeletedWrapper.internalTransform(DeletedWrapper.scala:32)
-// 	at firrtl.options.phases.DeletedWrapper.internalTransform(DeletedWrapper.scala:15)
-// 	at firrtl.options.Translator.transform(Phase.scala:140)
-// 	at firrtl.options.Translator.transform$(Phase.scala:140)
-// 	at firrtl.options.phases.DeletedWrapper.transform(DeletedWrapper.scala:15)
-// 	at firrtl.options.Stage.$anonfun$transform$5(Stage.scala:46)
-// 	at scala.collection.LinearSeqOptimized.foldLeft(LinearSeqOptimized.scala:122)
-// 	at scala.collection.LinearSeqOptimized.foldLeft$(LinearSeqOptimized.scala:118)
-// 	at scala.collection.immutable.List.foldLeft(List.scala:86)
-// 	at firrtl.options.Stage.$anonfun$transform$3(Stage.scala:46)
-// 	at logger.Logger$.$anonfun$makeScope$2(Logger.scala:168)
-// 	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
-// 	at logger.Logger$.makeScope(Logger.scala:166)
-// 	at firrtl.options.Stage.transform(Stage.scala:46)
-// 	at firrtl.options.Stage.execute(Stage.scala:57)
-// 	at repl.Session$App7$$anonfun$12.apply(cookbook.md:216)
-// 	at repl.Session$App7$$anonfun$12.apply(cookbook.md:216)
-</span></code></pre></div></div>
+<span class="c1">// firrtl.options.StageError: </span>
+<span class="c1">// 	at chisel3.stage.ChiselStage.run(ChiselStage.scala:47)</span>
+<span class="c1">// 	at firrtl.options.Stage$$anon$1.transform(Stage.scala:43)</span>
+<span class="c1">// 	at firrtl.options.Stage$$anon$1.transform(Stage.scala:43)</span>
+<span class="c1">// 	at firrtl.options.phases.DeletedWrapper.internalTransform(DeletedWrapper.scala:32)</span>
+<span class="c1">// 	at firrtl.options.phases.DeletedWrapper.internalTransform(DeletedWrapper.scala:15)</span>
+<span class="c1">// 	at firrtl.options.Translator.transform(Phase.scala:140)</span>
+<span class="c1">// 	at firrtl.options.Translator.transform$(Phase.scala:140)</span>
+<span class="c1">// 	at firrtl.options.phases.DeletedWrapper.transform(DeletedWrapper.scala:15)</span>
+<span class="c1">// 	at firrtl.options.Stage.$anonfun$transform$5(Stage.scala:46)</span>
+<span class="c1">// 	at scala.collection.LinearSeqOptimized.foldLeft(LinearSeqOptimized.scala:122)</span>
+<span class="c1">// 	at scala.collection.LinearSeqOptimized.foldLeft$(LinearSeqOptimized.scala:118)</span>
+<span class="c1">// 	at scala.collection.immutable.List.foldLeft(List.scala:86)</span>
+<span class="c1">// 	at firrtl.options.Stage.$anonfun$transform$3(Stage.scala:46)</span>
+<span class="c1">// 	at logger.Logger$.$anonfun$makeScope$2(Logger.scala:168)</span>
+<span class="c1">// 	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)</span>
+<span class="c1">// 	at logger.Logger$.makeScope(Logger.scala:166)</span>
+<span class="c1">// 	at firrtl.options.Stage.transform(Stage.scala:46)</span>
+<span class="c1">// 	at firrtl.options.Stage.execute(Stage.scala:57)</span>
+<span class="c1">// 	at repl.Session$App7$$anonfun$12.apply(cookbook.md:216)</span>
+<span class="c1">// 	at repl.Session$App7$$anonfun$12.apply(cookbook.md:216)</span>
+</code></pre></div></div>
 
 <p>Chisel3 <em>does not support subword assignment</em>.
 The reason for this is that subword assignment generally hints at a better abstraction with an aggregate/structured types, i.e., a <code class="highlighter-rouge">Bundle</code> or a <code class="highlighter-rouge">Vec</code>.</p>
@@ -305,16 +305,16 @@ The reason for this is that subword assignment generally hints at a better abstr
 <p>Elaborating the Chisel module <code class="highlighter-rouge">Salt</code> yields our “desire name” for <code class="highlighter-rouge">Salt</code> and <code class="highlighter-rouge">Coffee</code> in the output Verilog:</p>
 
 <p>[[35minfo[0m] [0.000] Elaborating design…
-[[35minfo[0m] [0.046] Done elaborating.</p>
+[[35minfo[0m] [0.053] Done elaborating.</p>
 
 <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">SodiumMonochloride</span><span class="p">(</span>
   <span class="kt">input</span>   <span class="n">clock</span><span class="p">,</span>
   <span class="kt">input</span>   <span class="n">reset</span>
 <span class="p">);</span>
-  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">drink_I</span><span class="p">;</span> <span class="c1">// @[cookbook.md 261:23]
-</span>  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">drink_O</span><span class="p">;</span> <span class="c1">// @[cookbook.md 261:23]
-</span>  <span class="n">Tea</span> <span class="n">drink</span> <span class="p">(</span> <span class="c1">// @[cookbook.md 261:23]
-</span>    <span class="p">.</span><span class="n">I</span><span class="p">(</span><span class="n">drink_I</span><span class="p">),</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">drink_I</span><span class="p">;</span> <span class="c1">// @[cookbook.md 261:23]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">drink_O</span><span class="p">;</span> <span class="c1">// @[cookbook.md 261:23]</span>
+  <span class="n">Tea</span> <span class="n">drink</span> <span class="p">(</span> <span class="c1">// @[cookbook.md 261:23]</span>
+    <span class="p">.</span><span class="n">I</span><span class="p">(</span><span class="n">drink_I</span><span class="p">),</span>
     <span class="p">.</span><span class="n">O</span><span class="p">(</span><span class="n">drink_O</span><span class="p">)</span>
   <span class="p">);</span>
   <span class="k">assign</span> <span class="n">drink_I</span> <span class="o">=</span> <span class="mh">32'h0</span><span class="p">;</span>
@@ -373,7 +373,7 @@ The reason for this is that subword assignment generally hints at a better abstr
 <p>If we compile this module <em>without</em> <code class="highlighter-rouge">@chiselName</code>, Chisel is not able to name <code class="highlighter-rouge">innerReg</code> correctly (notice the <code class="highlighter-rouge">_T</code>):</p>
 
 <p>[[35minfo[0m] [0.000] Elaborating design…
-[[35minfo[0m] [0.046] Done elaborating.</p>
+[[35minfo[0m] [0.040] Done elaborating.</p>
 
 <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">TestMod</span><span class="p">(</span>
   <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
@@ -381,12 +381,12 @@ The reason for this is that subword assignment generally hints at a better abstr
   <span class="kt">input</span>        <span class="n">io_a</span><span class="p">,</span>
   <span class="kt">output</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">io_b</span>
 <span class="p">);</span>
-  <span class="kt">reg</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">T</span><span class="p">;</span> <span class="c1">// @[cookbook.md 356:27]
-</span>  <span class="kt">reg</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">RAND_0</span><span class="p">;</span>
-  <span class="kt">wire</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">T_2</span><span class="p">;</span> <span class="c1">// @[cookbook.md 357:26]
-</span>  <span class="k">assign</span> <span class="mi">_</span><span class="n">T_2</span> <span class="o">=</span> <span class="mi">_</span><span class="n">T</span> <span class="o">+</span> <span class="mh">4'h1</span><span class="p">;</span> <span class="c1">// @[cookbook.md 357:26]
-</span>  <span class="k">assign</span> <span class="n">io_b</span> <span class="o">=</span> <span class="n">io_a</span> <span class="o">?</span> <span class="mi">_</span><span class="n">T</span> <span class="o">:</span> <span class="mh">4'ha</span><span class="p">;</span> <span class="c1">// @[cookbook.md 358:10 cookbook.md 360:10]
-</span><span class="cp">`ifdef</span> <span class="n">RANDOMIZE_GARBAGE_ASSIGN</span>
+  <span class="kt">reg</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">T</span><span class="p">;</span> <span class="c1">// @[cookbook.md 356:27]</span>
+  <span class="kt">reg</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">RAND_0</span><span class="p">;</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">T_2</span><span class="p">;</span> <span class="c1">// @[cookbook.md 357:26]</span>
+  <span class="k">assign</span> <span class="mi">_</span><span class="n">T_2</span> <span class="o">=</span> <span class="mi">_</span><span class="n">T</span> <span class="o">+</span> <span class="mh">4'h1</span><span class="p">;</span> <span class="c1">// @[cookbook.md 357:26]</span>
+  <span class="k">assign</span> <span class="n">io_b</span> <span class="o">=</span> <span class="n">io_a</span> <span class="o">?</span> <span class="mi">_</span><span class="n">T</span> <span class="o">:</span> <span class="mh">4'ha</span><span class="p">;</span> <span class="c1">// @[cookbook.md 358:10 cookbook.md 360:10]</span>
+<span class="cp">`ifdef</span> <span class="n">RANDOMIZE_GARBAGE_ASSIGN</span>
 <span class="cp">`define</span> RANDOMIZE<span class="cp">
 `endif</span>
 <span class="cp">`ifdef</span> <span class="n">RANDOMIZE_INVALID_ASSIGN</span>
@@ -420,11 +420,11 @@ The reason for this is that subword assignment generally hints at a better abstr
   <span class="cp">`ifdef</span> <span class="n">RANDOMIZE_REG_INIT</span>
   <span class="mi">_</span><span class="n">RAND_0</span> <span class="o">=</span> <span class="o">{</span><span class="mi">1</span><span class="o">{</span><span class="cp">`RANDOM</span><span class="o">}}</span><span class="p">;</span>
   <span class="mi">_</span><span class="n">T</span> <span class="o">=</span> <span class="mi">_</span><span class="n">RAND_0</span><span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">];</span>
-  <span class="cp">`endif</span> <span class="c1">// RANDOMIZE_REG_INIT
-</span>  <span class="cp">`endif</span> <span class="c1">// RANDOMIZE
-</span><span class="k">end</span> <span class="c1">// initial
-</span><span class="cp">`endif</span> <span class="c1">// SYNTHESIS
-</span>  <span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="kt">posedge</span> <span class="n">clock</span><span class="p">)</span> <span class="k">begin</span>
+  <span class="cp">`endif</span> <span class="c1">// RANDOMIZE_REG_INIT</span>
+  <span class="cp">`endif</span> <span class="c1">// RANDOMIZE</span>
+<span class="k">end</span> <span class="c1">// initial</span>
+<span class="cp">`endif</span> <span class="c1">// SYNTHESIS</span>
+  <span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="kt">posedge</span> <span class="n">clock</span><span class="p">)</span> <span class="k">begin</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">reset</span><span class="p">)</span> <span class="k">begin</span>
       <span class="mi">_</span><span class="n">T</span> <span class="o">&lt;=</span> <span class="mh">4'h5</span><span class="p">;</span>
     <span class="k">end</span> <span class="k">else</span> <span class="k">begin</span>
@@ -438,7 +438,7 @@ The reason for this is that subword assignment generally hints at a better abstr
 <p>However, if we use <code class="highlighter-rouge">@chiselName</code> then the register previously called <code class="highlighter-rouge">_T</code> is now <code class="highlighter-rouge">innerReg</code>:</p>
 
 <p>[[35minfo[0m] [0.000] Elaborating design…
-[[35minfo[0m] [0.022] Done elaborating.</p>
+[[35minfo[0m] [0.028] Done elaborating.</p>
 
 <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">TestMod</span><span class="p">(</span>
   <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
@@ -446,12 +446,12 @@ The reason for this is that subword assignment generally hints at a better abstr
   <span class="kt">input</span>        <span class="n">io_a</span><span class="p">,</span>
   <span class="kt">output</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">io_b</span>
 <span class="p">);</span>
-  <span class="kt">reg</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">innerReg</span><span class="p">;</span> <span class="c1">// @[cookbook.md 328:27]
-</span>  <span class="kt">reg</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">RAND_0</span><span class="p">;</span>
-  <span class="kt">wire</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">T_1</span><span class="p">;</span> <span class="c1">// @[cookbook.md 329:26]
-</span>  <span class="k">assign</span> <span class="mi">_</span><span class="n">T_1</span> <span class="o">=</span> <span class="n">innerReg</span> <span class="o">+</span> <span class="mh">4'h1</span><span class="p">;</span> <span class="c1">// @[cookbook.md 329:26]
-</span>  <span class="k">assign</span> <span class="n">io_b</span> <span class="o">=</span> <span class="n">io_a</span> <span class="o">?</span> <span class="n">innerReg</span> <span class="o">:</span> <span class="mh">4'ha</span><span class="p">;</span> <span class="c1">// @[cookbook.md 330:10 cookbook.md 332:10]
-</span><span class="cp">`ifdef</span> <span class="n">RANDOMIZE_GARBAGE_ASSIGN</span>
+  <span class="kt">reg</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">innerReg</span><span class="p">;</span> <span class="c1">// @[cookbook.md 328:27]</span>
+  <span class="kt">reg</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">RAND_0</span><span class="p">;</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">T_1</span><span class="p">;</span> <span class="c1">// @[cookbook.md 329:26]</span>
+  <span class="k">assign</span> <span class="mi">_</span><span class="n">T_1</span> <span class="o">=</span> <span class="n">innerReg</span> <span class="o">+</span> <span class="mh">4'h1</span><span class="p">;</span> <span class="c1">// @[cookbook.md 329:26]</span>
+  <span class="k">assign</span> <span class="n">io_b</span> <span class="o">=</span> <span class="n">io_a</span> <span class="o">?</span> <span class="n">innerReg</span> <span class="o">:</span> <span class="mh">4'ha</span><span class="p">;</span> <span class="c1">// @[cookbook.md 330:10 cookbook.md 332:10]</span>
+<span class="cp">`ifdef</span> <span class="n">RANDOMIZE_GARBAGE_ASSIGN</span>
 <span class="cp">`define</span> RANDOMIZE<span class="cp">
 `endif</span>
 <span class="cp">`ifdef</span> <span class="n">RANDOMIZE_INVALID_ASSIGN</span>
@@ -485,11 +485,11 @@ The reason for this is that subword assignment generally hints at a better abstr
   <span class="cp">`ifdef</span> <span class="n">RANDOMIZE_REG_INIT</span>
   <span class="mi">_</span><span class="n">RAND_0</span> <span class="o">=</span> <span class="o">{</span><span class="mi">1</span><span class="o">{</span><span class="cp">`RANDOM</span><span class="o">}}</span><span class="p">;</span>
   <span class="n">innerReg</span> <span class="o">=</span> <span class="mi">_</span><span class="n">RAND_0</span><span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">];</span>
-  <span class="cp">`endif</span> <span class="c1">// RANDOMIZE_REG_INIT
-</span>  <span class="cp">`endif</span> <span class="c1">// RANDOMIZE
-</span><span class="k">end</span> <span class="c1">// initial
-</span><span class="cp">`endif</span> <span class="c1">// SYNTHESIS
-</span>  <span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="kt">posedge</span> <span class="n">clock</span><span class="p">)</span> <span class="k">begin</span>
+  <span class="cp">`endif</span> <span class="c1">// RANDOMIZE_REG_INIT</span>
+  <span class="cp">`endif</span> <span class="c1">// RANDOMIZE</span>
+<span class="k">end</span> <span class="c1">// initial</span>
+<span class="cp">`endif</span> <span class="c1">// SYNTHESIS</span>
+  <span class="k">always</span> <span class="o">@</span><span class="p">(</span><span class="kt">posedge</span> <span class="n">clock</span><span class="p">)</span> <span class="k">begin</span>
     <span class="k">if</span> <span class="p">(</span><span class="n">reset</span><span class="p">)</span> <span class="k">begin</span>
       <span class="n">innerReg</span> <span class="o">&lt;=</span> <span class="mh">4'h5</span><span class="p">;</span>
     <span class="k">end</span> <span class="k">else</span> <span class="k">begin</span>

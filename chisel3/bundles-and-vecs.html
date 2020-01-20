@@ -34,8 +34,8 @@ ga('send', 'pageview');
   </table>
 </blockquote>
 
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Floating point constant.
-</span><span class="k">val</span> <span class="nv">floatConst</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyFloat</span><span class="o">)</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Floating point constant.</span>
+<span class="k">val</span> <span class="nv">floatConst</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyFloat</span><span class="o">)</span>
 <span class="nv">floatConst</span><span class="o">.</span><span class="py">sign</span> <span class="o">:=</span> <span class="nv">true</span><span class="o">.</span><span class="py">B</span>
 <span class="nv">floatConst</span><span class="o">.</span><span class="py">exponent</span> <span class="o">:=</span> <span class="mf">10.</span><span class="n">U</span>
 <span class="nv">floatConst</span><span class="o">.</span><span class="py">significand</span> <span class="o">:=</span> <span class="mf">128.</span><span class="n">U</span>
@@ -46,11 +46,11 @@ ga('send', 'pageview');
 <p>Vecs create an indexable vector of elements, and are constructed as
 follows:</p>
 
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Vector of 5 23-bit signed integers.
-</span><span class="k">val</span> <span class="nv">myVec</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="nc">Vec</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="nc">SInt</span><span class="o">(</span><span class="mf">23.</span><span class="n">W</span><span class="o">)))</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Vector of 5 23-bit signed integers.</span>
+<span class="k">val</span> <span class="nv">myVec</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="nc">Vec</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="nc">SInt</span><span class="o">(</span><span class="mf">23.</span><span class="n">W</span><span class="o">)))</span>
 
-<span class="c1">// Connect to one element of vector.
-</span><span class="k">val</span> <span class="nv">reg3</span> <span class="k">=</span> <span class="nf">myVec</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span>
+<span class="c1">// Connect to one element of vector.</span>
+<span class="k">val</span> <span class="nv">reg3</span> <span class="k">=</span> <span class="nf">myVec</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span>
 </code></pre></div></div>
 
 <p>(Note that we specify the number followed by the type of the <code class="highlighter-rouge">Vec</code> elements. We also specifiy the width of the <code class="highlighter-rouge">SInt</code>)</p>
@@ -65,11 +65,11 @@ superclass, <code class="highlighter-rouge">Data</code>.  Every object that ulti
 structures:</p>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">BigBundle</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
- <span class="c1">// Vector of 5 23-bit signed integers.
-</span> <span class="k">val</span> <span class="nv">myVec</span> <span class="k">=</span> <span class="nc">Vec</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="nc">SInt</span><span class="o">(</span><span class="mf">23.</span><span class="n">W</span><span class="o">))</span>
+ <span class="c1">// Vector of 5 23-bit signed integers.</span>
+ <span class="k">val</span> <span class="nv">myVec</span> <span class="k">=</span> <span class="nc">Vec</span><span class="o">(</span><span class="mi">5</span><span class="o">,</span> <span class="nc">SInt</span><span class="o">(</span><span class="mf">23.</span><span class="n">W</span><span class="o">))</span>
  <span class="k">val</span> <span class="nv">flag</span>  <span class="k">=</span> <span class="nc">Bool</span><span class="o">()</span>
- <span class="c1">// Previously defined bundle.
-</span> <span class="k">val</span> <span class="nv">f</span>     <span class="k">=</span> <span class="k">new</span> <span class="nc">MyFloat</span>
+ <span class="c1">// Previously defined bundle.</span>
+ <span class="k">val</span> <span class="nv">f</span>     <span class="k">=</span> <span class="k">new</span> <span class="nc">MyFloat</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
@@ -89,26 +89,26 @@ that a user datatype also does not require <code class="highlighter-rouge">new</
   <span class="k">val</span> <span class="nv">b</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
 <span class="o">}</span>
 <span class="k">class</span> <span class="nc">MyModule</span> <span class="k">extends</span> <span class="nc">RawModule</span> <span class="o">{</span>
-  <span class="c1">// Normal instantiation of the bundle
-</span>  <span class="c1">// 'a' is an Input and 'b' is an Output
-</span>  <span class="k">val</span> <span class="nv">normalBundle</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyBundle</span><span class="o">)</span>
+  <span class="c1">// Normal instantiation of the bundle</span>
+  <span class="c1">// 'a' is an Input and 'b' is an Output</span>
+  <span class="k">val</span> <span class="nv">normalBundle</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyBundle</span><span class="o">)</span>
   <span class="nv">normalBundle</span><span class="o">.</span><span class="py">b</span> <span class="o">:=</span> <span class="nv">normalBundle</span><span class="o">.</span><span class="py">a</span>
 
-  <span class="c1">// Flipped recursively flips the direction of all Bundle fields
-</span>  <span class="c1">// Now 'a' is an Output and 'b' is an Input
-</span>  <span class="k">val</span> <span class="nv">flippedBundle</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Flipped</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyBundle</span><span class="o">))</span>
+  <span class="c1">// Flipped recursively flips the direction of all Bundle fields</span>
+  <span class="c1">// Now 'a' is an Output and 'b' is an Input</span>
+  <span class="k">val</span> <span class="nv">flippedBundle</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Flipped</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyBundle</span><span class="o">))</span>
   <span class="nv">flippedBundle</span><span class="o">.</span><span class="py">a</span> <span class="o">:=</span> <span class="nv">flippedBundle</span><span class="o">.</span><span class="py">b</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
 <p>This generates the following Verilog:</p>
 
-<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">MyModule</span><span class="p">(</span> <span class="c1">// @[:@3.2]
-</span>  <span class="kt">input</span>   <span class="n">normalBundle_a</span><span class="p">,</span> <span class="c1">// @[:@4.4]
-</span>  <span class="kt">output</span>  <span class="n">normalBundle_b</span><span class="p">,</span> <span class="c1">// @[:@4.4]
-</span>  <span class="kt">output</span>  <span class="n">flippedBundle_a</span><span class="p">,</span> <span class="c1">// @[:@5.4]
-</span>  <span class="kt">input</span>   <span class="n">flippedBundle_b</span> <span class="c1">// @[:@5.4]
-</span><span class="p">);</span>
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">MyModule</span><span class="p">(</span> <span class="c1">// @[:@3.2]</span>
+  <span class="kt">input</span>   <span class="n">normalBundle_a</span><span class="p">,</span> <span class="c1">// @[:@4.4]</span>
+  <span class="kt">output</span>  <span class="n">normalBundle_b</span><span class="p">,</span> <span class="c1">// @[:@4.4]</span>
+  <span class="kt">output</span>  <span class="n">flippedBundle_a</span><span class="p">,</span> <span class="c1">// @[:@5.4]</span>
+  <span class="kt">input</span>   <span class="n">flippedBundle_b</span> <span class="c1">// @[:@5.4]</span>
+<span class="p">);</span>
   <span class="k">assign</span> <span class="n">normalBundle_b</span> <span class="o">=</span> <span class="n">normalBundle_a</span><span class="p">;</span>
   <span class="k">assign</span> <span class="n">flippedBundle_a</span> <span class="o">=</span> <span class="n">flippedBundle_b</span><span class="p">;</span>
 <span class="k">endmodule</span>
@@ -136,10 +136,10 @@ that a user datatype also does not require <code class="highlighter-rouge">new</
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">MyModule</span><span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">y</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
     <span class="k">val</span> <span class="nv">vec</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">MixedVec</span><span class="o">((</span><span class="n">x</span> <span class="n">to</span> <span class="n">y</span><span class="o">)</span> <span class="n">map</span> <span class="o">{</span> <span class="n">i</span> <span class="k">=&gt;</span> <span class="nc">UInt</span><span class="o">(</span><span class="nv">i</span><span class="o">.</span><span class="py">W</span><span class="o">)</span> <span class="o">}))</span>
-    <span class="c1">// ...
-</span>  <span class="o">})</span>
-  <span class="c1">// ...rest of the module goes here...
-</span><span class="o">}</span>
+    <span class="c1">// ...</span>
+  <span class="o">})</span>
+  <span class="c1">// ...rest of the module goes here...</span>
+<span class="o">}</span>
 </code></pre></div></div>
 
 <h3 id="a-note-on-clonetype">A note on <code class="highlighter-rouge">cloneType</code></h3>
@@ -182,8 +182,8 @@ that a user datatype also does not require <code class="highlighter-rouge">new</
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">MyBundle</span><span class="o">(</span><span class="k">val</span> <span class="nv">width</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
    <span class="k">val</span> <span class="nv">field</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="nv">width</span><span class="o">.</span><span class="py">W</span><span class="o">)</span>
-   <span class="c1">// ...
-</span><span class="o">}</span>
+   <span class="c1">// ...</span>
+<span class="o">}</span>
 </code></pre></div></div>
 
 <p>The only caveat is if you are passing something of type Data as a “generator” parameter, in which case you should make it a <code class="highlighter-rouge">private val</code>.</p>
@@ -192,8 +192,8 @@ that a user datatype also does not require <code class="highlighter-rouge">new</
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">RegisterWriteIO</span><span class="o">[</span><span class="kt">T</span> <span class="k">&lt;:</span> <span class="kt">Data</span><span class="o">](</span><span class="n">gen</span><span class="k">:</span> <span class="kt">T</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">request</span>  <span class="k">=</span> <span class="nc">Flipped</span><span class="o">(</span><span class="nc">Decoupled</span><span class="o">(</span><span class="n">gen</span><span class="o">))</span>
-  <span class="k">val</span> <span class="nv">response</span> <span class="k">=</span> <span class="nc">Irrevocable</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span> <span class="c1">// ignore .bits
-</span>
+  <span class="k">val</span> <span class="nv">response</span> <span class="k">=</span> <span class="nc">Irrevocable</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span> <span class="c1">// ignore .bits</span>
+
   <span class="k">override</span> <span class="k">def</span> <span class="nf">cloneType</span> <span class="k">=</span> <span class="k">new</span> <span class="nc">RegisterWriteIO</span><span class="o">(</span><span class="n">gen</span><span class="o">).</span><span class="py">asInstanceOf</span><span class="o">[</span><span class="kt">this.</span><span class="k">type</span><span class="o">]</span>
 <span class="o">}</span>
 </code></pre></div></div>
@@ -202,8 +202,8 @@ that a user datatype also does not require <code class="highlighter-rouge">new</
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">RegisterWriteIO</span><span class="o">[</span><span class="kt">T</span> <span class="k">&lt;:</span> <span class="kt">Data</span><span class="o">](</span><span class="k">private</span> <span class="k">val</span> <span class="nv">gen</span><span class="k">:</span> <span class="kt">T</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">request</span>  <span class="k">=</span> <span class="nc">Flipped</span><span class="o">(</span><span class="nc">Decoupled</span><span class="o">(</span><span class="n">gen</span><span class="o">))</span>
-  <span class="k">val</span> <span class="nv">response</span> <span class="k">=</span> <span class="nc">Irrevocable</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span> <span class="c1">// ignore .bits
-</span><span class="o">}</span>
+  <span class="k">val</span> <span class="nv">response</span> <span class="k">=</span> <span class="nc">Irrevocable</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span> <span class="c1">// ignore .bits</span>
+<span class="o">}</span>
 </code></pre></div></div>
 
 </section></div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/highlight/highlight.pack.js"></script><script>hljs.configure({languages:['scala','java','bash']});

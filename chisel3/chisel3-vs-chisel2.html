@@ -210,23 +210,23 @@ on a file by file basis, by adjusting specific import statements.</p>
 <p>Currently, the specific error checks (found in <a href="https://github.com/ucb-bar/chisel3/blob/master/chiselFrontend/src/main/scala/chisel3/core/CompileOptions.scala">CompileOptions.scala</a>) are:</p>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">trait</span> <span class="nc">CompileOptions</span> <span class="o">{</span>
-  <span class="c1">// Should Bundle connections require a strict match of fields.
-</span>  <span class="c1">// If true and the same fields aren't present in both source and sink, a MissingFieldException,
-</span>  <span class="c1">// MissingLeftFieldException, or MissingRightFieldException will be thrown.
-</span>  <span class="k">val</span> <span class="nv">connectFieldsMustMatch</span><span class="k">:</span> <span class="kt">Boolean</span>
-  <span class="c1">// When creating an object that takes a type argument, the argument must be unbound (a pure type).
-</span>  <span class="k">val</span> <span class="nv">declaredTypeMustBeUnbound</span><span class="k">:</span> <span class="kt">Boolean</span>
-  <span class="c1">// Module IOs should be wrapped in an IO() to define their bindings before the reset of the module is defined.
-</span>  <span class="k">val</span> <span class="nv">requireIOWrap</span><span class="k">:</span> <span class="kt">Boolean</span>
-  <span class="c1">// If a connection operator fails, don't try the connection with the operands (source and sink) reversed.
-</span>  <span class="k">val</span> <span class="nv">dontTryConnectionsSwapped</span><span class="k">:</span> <span class="kt">Boolean</span>
-  <span class="c1">// If connection directionality is not explicit, do not use heuristics to attempt to determine it.
-</span>  <span class="k">val</span> <span class="nv">dontAssumeDirectionality</span><span class="k">:</span> <span class="kt">Boolean</span>
-  <span class="c1">// Issue a deprecation warning if Data.{flip, asInput,asOutput} is used
-</span>  <span class="c1">// instead of Flipped, Input, or Output.
-</span>  <span class="k">val</span> <span class="nv">deprecateOldDirectionMethods</span><span class="k">:</span> <span class="kt">Boolean</span>
-  <span class="c1">// Check that referenced Data have actually been declared.
-</span>  <span class="k">val</span> <span class="nv">checkSynthesizable</span><span class="k">:</span> <span class="kt">Boolean</span>
+  <span class="c1">// Should Bundle connections require a strict match of fields.</span>
+  <span class="c1">// If true and the same fields aren't present in both source and sink, a MissingFieldException,</span>
+  <span class="c1">// MissingLeftFieldException, or MissingRightFieldException will be thrown.</span>
+  <span class="k">val</span> <span class="nv">connectFieldsMustMatch</span><span class="k">:</span> <span class="kt">Boolean</span>
+  <span class="c1">// When creating an object that takes a type argument, the argument must be unbound (a pure type).</span>
+  <span class="k">val</span> <span class="nv">declaredTypeMustBeUnbound</span><span class="k">:</span> <span class="kt">Boolean</span>
+  <span class="c1">// Module IOs should be wrapped in an IO() to define their bindings before the reset of the module is defined.</span>
+  <span class="k">val</span> <span class="nv">requireIOWrap</span><span class="k">:</span> <span class="kt">Boolean</span>
+  <span class="c1">// If a connection operator fails, don't try the connection with the operands (source and sink) reversed.</span>
+  <span class="k">val</span> <span class="nv">dontTryConnectionsSwapped</span><span class="k">:</span> <span class="kt">Boolean</span>
+  <span class="c1">// If connection directionality is not explicit, do not use heuristics to attempt to determine it.</span>
+  <span class="k">val</span> <span class="nv">dontAssumeDirectionality</span><span class="k">:</span> <span class="kt">Boolean</span>
+  <span class="c1">// Issue a deprecation warning if Data.{flip, asInput,asOutput} is used</span>
+  <span class="c1">// instead of Flipped, Input, or Output.</span>
+  <span class="k">val</span> <span class="nv">deprecateOldDirectionMethods</span><span class="k">:</span> <span class="kt">Boolean</span>
+  <span class="c1">// Check that referenced Data have actually been declared.</span>
+  <span class="k">val</span> <span class="nv">checkSynthesizable</span><span class="k">:</span> <span class="kt">Boolean</span>
 <span class="o">}</span>
 </code></pre></div></div>
 

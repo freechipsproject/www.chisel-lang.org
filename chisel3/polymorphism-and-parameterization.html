@@ -157,9 +157,9 @@ set of signals:</p>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3.experimental.</span><span class="o">{</span><span class="nc">BaseModule</span><span class="o">,</span> <span class="nc">RawModule</span><span class="o">}</span>
 
-<span class="c1">// Provides a more specific interface since generic Module
-// provides no compile-time information on generic module's IOs.
-</span><span class="k">trait</span> <span class="nc">MyAdder</span> <span class="o">{</span>
+<span class="c1">// Provides a more specific interface since generic Module</span>
+<span class="c1">// provides no compile-time information on generic module's IOs.</span>
+<span class="k">trait</span> <span class="nc">MyAdder</span> <span class="o">{</span>
     <span class="k">def</span> <span class="nf">in1</span><span class="k">:</span> <span class="kt">UInt</span>
     <span class="k">def</span> <span class="nf">in2</span><span class="k">:</span> <span class="kt">UInt</span>
     <span class="k">def</span> <span class="nf">out</span><span class="k">:</span> <span class="kt">UInt</span>

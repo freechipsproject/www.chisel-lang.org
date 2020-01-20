@@ -20,19 +20,19 @@ ga('send', 'pageview');
     <span class="k">val</span> <span class="nv">stuff</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
   <span class="o">})</span>
 
-  <span class="c1">// This register is clocked against the module clock.
-</span>  <span class="k">val</span> <span class="nv">regClock</span> <span class="k">=</span> <span class="nc">RegNext</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">stuff</span><span class="o">)</span>
+  <span class="c1">// This register is clocked against the module clock.</span>
+  <span class="k">val</span> <span class="nv">regClock</span> <span class="k">=</span> <span class="nc">RegNext</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">stuff</span><span class="o">)</span>
 
   <span class="nf">withClockAndReset</span> <span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">clockB</span><span class="o">,</span> <span class="nv">io</span><span class="o">.</span><span class="py">resetB</span><span class="o">)</span> <span class="o">{</span>
-    <span class="c1">// In this withClock scope, all synchronous elements are clocked against io.clockB.
-</span>    <span class="c1">// Reset for flops in this domain is using the explicitly provided reset io.resetB.
-</span>
-    <span class="c1">// This register is clocked against io.clockB.
-</span>    <span class="k">val</span> <span class="nv">regClockB</span> <span class="k">=</span> <span class="nc">RegNext</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">stuff</span><span class="o">)</span>
+    <span class="c1">// In this withClock scope, all synchronous elements are clocked against io.clockB.</span>
+    <span class="c1">// Reset for flops in this domain is using the explicitly provided reset io.resetB.</span>
+
+    <span class="c1">// This register is clocked against io.clockB.</span>
+    <span class="k">val</span> <span class="nv">regClockB</span> <span class="k">=</span> <span class="nc">RegNext</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">stuff</span><span class="o">)</span>
   <span class="o">}</span>
 
-  <span class="c1">// This register is also clocked against the module clock.
-</span>  <span class="k">val</span> <span class="nv">regClock2</span> <span class="k">=</span> <span class="nc">RegNext</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">stuff</span><span class="o">)</span>
+  <span class="c1">// This register is also clocked against the module clock.</span>
+  <span class="k">val</span> <span class="nv">regClock2</span> <span class="k">=</span> <span class="nc">RegNext</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">stuff</span><span class="o">)</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
@@ -57,22 +57,22 @@ ga('send', 'pageview');
     <span class="k">val</span> <span class="nv">stuff</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
   <span class="o">})</span>
 
-  <span class="c1">// This register is clocked against the module clock.
-</span>  <span class="k">val</span> <span class="nv">regClock</span> <span class="k">=</span> <span class="nc">RegNext</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">stuff</span><span class="o">)</span>
+  <span class="c1">// This register is clocked against the module clock.</span>
+  <span class="k">val</span> <span class="nv">regClock</span> <span class="k">=</span> <span class="nc">RegNext</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">stuff</span><span class="o">)</span>
 
   <span class="nf">withClock</span> <span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">clockB</span><span class="o">)</span> <span class="o">{</span>
-    <span class="c1">// In this withClock scope, all synchronous elements are clocked against io.clockB.
-</span>
-    <span class="c1">// This register is clocked against io.clockB, but uses implict reset from the parent context.
-</span>    <span class="k">val</span> <span class="nv">regClockB</span> <span class="k">=</span> <span class="nc">RegNext</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">stuff</span><span class="o">)</span>
+    <span class="c1">// In this withClock scope, all synchronous elements are clocked against io.clockB.</span>
+
+    <span class="c1">// This register is clocked against io.clockB, but uses implict reset from the parent context.</span>
+    <span class="k">val</span> <span class="nv">regClockB</span> <span class="k">=</span> <span class="nc">RegNext</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">stuff</span><span class="o">)</span>
   <span class="o">}</span>
 
-  <span class="c1">// This register is also clocked against the module clock.
-</span>  <span class="k">val</span> <span class="nv">regClock2</span> <span class="k">=</span> <span class="nc">RegNext</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">stuff</span><span class="o">)</span>
+  <span class="c1">// This register is also clocked against the module clock.</span>
+  <span class="k">val</span> <span class="nv">regClock2</span> <span class="k">=</span> <span class="nc">RegNext</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">stuff</span><span class="o">)</span>
 <span class="o">}</span>
 
-<span class="c1">// Instantiate module in another clock domain with implicit reset.
-</span><span class="k">class</span> <span class="nc">MultiClockModule</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
+<span class="c1">// Instantiate module in another clock domain with implicit reset.</span>
+<span class="k">class</span> <span class="nc">MultiClockModule</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
     <span class="k">val</span> <span class="nv">clockB</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Clock</span><span class="o">())</span>
     <span class="k">val</span> <span class="nv">stuff</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
