@@ -247,7 +247,7 @@ res3: java.io.File = output.fir
 <h3 id="why-doesnt-chisel-tell-me-which-wires-arent-connected">Why doesn’t Chisel tell me which wires aren’t connected?</h3>
 
 <p>As of commit <a href="https://github.com/freechipsproject/chisel3/commit/c313e137d4e562ef20195312501840ceab8cbc6a">c313e13</a> it can!
-Please visit the wiki page <a href="Unconnected-Wires">Unconnected Wires</a> for details.</p>
+Please visit the wiki page <a href="unconnected-wires">Unconnected Wires</a> for details.</p>
 
 <h3 id="what-does-reference--is-not-fully-initialized-mean">What does <code class="highlighter-rouge">Reference ... is not fully initialized.</code> mean?</h3>
 
@@ -256,7 +256,7 @@ Please visit the wiki page <a href="Unconnected-Wires">Unconnected Wires</a> for
 <p>In Chisel2 compatibility mode (<code class="highlighter-rouge">NotStrict</code> compile options), chisel generates firrtl code that disables firrtl’s initialized wire checks.
 In pure chisel3 (<code class="highlighter-rouge">Strict</code> compile options), the generated firrtl code does not contain these disablers (<code class="highlighter-rouge">is invalid</code>).
 Output wires that are not driven (not connected) are reported by firrtl as <code class="highlighter-rouge">not fully initialized</code>.
-Please visit the wiki page <a href="Unconnected-Wires">Unconnected Wires</a> for details on solving the problem.</p>
+Please visit the wiki page <a href="unconnected-wires">Unconnected Wires</a> for details on solving the problem.</p>
 </section></div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/highlight/highlight.pack.js"></script><script>hljs.configure({languages:['scala','java','bash']});
 hljs.initHighlighting();
               </script><script>((window.gitter = {}).chat = {}).options = {

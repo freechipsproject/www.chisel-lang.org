@@ -77,7 +77,7 @@ mutually exclusive in the same <code class="highlighter-rouge">when</code> chain
 <span class="o">.</span><span class="py">otherwise</span> <span class="o">{</span> <span class="n">dataOut</span> <span class="o">:=</span> <span class="nv">mem</span><span class="o">.</span><span class="py">read</span><span class="o">(</span><span class="n">addr</span><span class="o">,</span> <span class="n">read</span><span class="o">)</span> <span class="o">}</span>
 </code></pre></div></div>
 
-<p>(The <code class="highlighter-rouge">DontCare</code> is there to make Chisel’s <a href="Unconnected-Wires">unconnected wire detection</a> aware that reading while writing is undefined.)</p>
+<p>(The <code class="highlighter-rouge">DontCare</code> is there to make Chisel’s <a href="unconnected-wires">unconnected wire detection</a> aware that reading while writing is undefined.)</p>
 
 <p>If the same <code class="highlighter-rouge">Mem</code> address is both written and sequentially read on the same clock
 edge, or if a sequential read enable is cleared, then the read data is
