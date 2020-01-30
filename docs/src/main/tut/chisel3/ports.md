@@ -11,7 +11,8 @@ Chisel provides port constructors to allow a direction to be added
 constructors wrap the type of the port in `Input` or `Output`.
 
 An example port declaration is as follows:
-```scala
+```scala mdoc:silent
+import chisel3._
 class Decoupled extends Bundle {
   val ready = Output(Bool())
   val data  = Input(UInt(32.W))
@@ -34,7 +35,7 @@ Chisel 3.2+ introduces an API `DataMirror.modulePorts` which can be used to insp
 
 Here is an example of how to use this API:
 
-```scala
+```scala mdoc:silent
 import chisel3.experimental.DataMirror
 
 class Adder extends MultiIOModule {
