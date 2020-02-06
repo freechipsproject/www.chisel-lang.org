@@ -21,6 +21,7 @@ Note that when concatenating `p"..."` strings, you need to start with a `p"..."`
 
 ```scala
 // Does not interpolate the second string
+val myUInt = 33.U
 printf("my normal string" + p"myUInt = $myUInt")
 ```
 
