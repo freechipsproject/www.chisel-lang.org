@@ -24,6 +24,13 @@ ga('send', 'pageview');
 <span class="nf">printf</span><span class="o">(</span><span class="n">p</span><span class="s">"myUInt = $myUInt"</span><span class="o">)</span> <span class="c1">// myUInt = 33</span>
 </code></pre></div></div>
 
+<p>Note that when concatenating <code class="highlighter-rouge">p"..."</code> strings, you need to start with a <code class="highlighter-rouge">p"..."</code> string:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Does not interpolate the second string</span>
+<span class="k">val</span> <span class="nv">myUInt</span> <span class="k">=</span> <span class="mf">33.</span><span class="n">U</span>
+<span class="nf">printf</span><span class="o">(</span><span class="s">"my normal string"</span> <span class="o">+</span> <span class="n">p</span><span class="s">"myUInt = $myUInt"</span><span class="o">)</span>
+</code></pre></div></div>
+
 <h4 id="simple-formatting">Simple formatting</h4>
 
 <p>Other formats are available as follows:</p>
