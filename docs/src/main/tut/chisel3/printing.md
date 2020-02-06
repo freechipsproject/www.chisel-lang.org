@@ -19,7 +19,7 @@ printf(p"myUInt = $myUInt") // myUInt = 33
 
 Note that when concatenating `p"..."` strings, you need to start with a `p"..."` string:
 
-```
+```scala
 // Does not interpolate the second string
 printf("my normal string" + p"myUInt = $myUInt")
 ```
