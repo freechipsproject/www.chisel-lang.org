@@ -17,6 +17,13 @@ val myUInt = 33.U
 printf(p"myUInt = $myUInt") // myUInt = 33
 ```
 
+Note that when concatenating `p"..."` strings, you need to start with a `p"..."` string:
+
+```
+// Does not interpolate the second string
+printf("my normal string" + p"myUInt = $myUInt")
+```
+
 #### Simple formatting
 
 Other formats are available as follows:
