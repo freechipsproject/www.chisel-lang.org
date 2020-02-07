@@ -70,6 +70,7 @@ Single-ported SRAMs can be inferred when the read and write conditions are
 mutually exclusive in the same `when` chain:
 
 ```scala mdoc:silent
+import chisel3._
 class ReadWriteSMEM extends Module {
   val width:Int = 32
   val io = IO(new Bundle {
