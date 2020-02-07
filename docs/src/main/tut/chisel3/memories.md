@@ -76,7 +76,7 @@ class ReadWriteSMEM extends Module {
   val io = IO(new Bundle {
     val enable = Input(Bool())
     val write = Input(Bool())
-    val addr  = Input(UInt(10.W))
+    val addr = Input(UInt(10.W))
     val dataIn = Input(UInt(width.W))
     val dataOut = Output(UInt(width.W))
   })
