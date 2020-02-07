@@ -88,7 +88,7 @@ class ReadWriteSMEM extends Module {
   when(io.enable) {
     val rdwrPort = mem(io.addr)
     when (io.write) { rdwrPort := io.dataIn }
-    .otherwise { io.dataOut := rdwrPort }
+      .otherwise    { io.dataOut := rdwrPort }
   }
 
 }
