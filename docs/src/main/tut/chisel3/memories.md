@@ -72,7 +72,7 @@ mutually exclusive in the same `when` chain:
 ```scala mdoc:silent
 import chisel3._
 class ReadWriteSMEM extends Module {
-  val width:Int = 32
+  val width: Int = 32
   val io = IO(new Bundle {
     val enable = Input(Bool())
     val write = Input(Bool())
