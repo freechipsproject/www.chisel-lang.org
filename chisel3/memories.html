@@ -122,6 +122,39 @@ undefined.</p>
 <span class="n">dataOut</span> <span class="o">:=</span> <span class="nv">mem</span><span class="o">.</span><span class="py">read</span><span class="o">(</span><span class="n">readAddr</span><span class="o">,</span> <span class="n">enable</span><span class="o">)</span>
 </code></pre></div></div>
 
+<p>Here is an example of masks with readwrite ports:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3._</span>
+<span class="c1">// Chisel Code: Declare a new module definition</span>
+<span class="k">class</span> <span class="nc">ReadWriteSMEMWithMask</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">width</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">32</span>
+  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="nv">enable</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+    <span class="k">val</span> <span class="nv">write</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+    <span class="k">val</span> <span class="nv">mask</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Vec</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="nc">Bool</span><span class="o">()))</span>
+    <span class="k">val</span> <span class="nv">addr</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">10.</span><span class="n">W</span><span class="o">))</span>
+    <span class="k">val</span> <span class="nv">dataIn</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Vec</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">(</span><span class="nv">width</span><span class="o">.</span><span class="py">W</span><span class="o">)))</span>
+    <span class="k">val</span> <span class="nv">dataOut</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">Vec</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">(</span><span class="nv">width</span><span class="o">.</span><span class="py">W</span><span class="o">)))</span>
+  <span class="o">})</span>
+
+
+  <span class="k">val</span> <span class="nv">mem</span> <span class="k">=</span> <span class="nc">SyncReadMem</span><span class="o">(</span><span class="mi">2048</span><span class="o">,</span> <span class="nc">Vec</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">)))</span>
+
+  <span class="nv">io</span><span class="o">.</span><span class="py">dataOut</span> <span class="o">:=</span> <span class="nc">DontCare</span>
+  <span class="nf">when</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">enable</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="nv">rdwrPort</span> <span class="k">=</span> <span class="nf">mem</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">addr</span><span class="o">)</span>
+    <span class="nf">when</span> <span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">write</span><span class="o">)</span> <span class="o">{</span>
+      <span class="nf">when</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">mask</span><span class="o">(</span><span class="mi">0</span><span class="o">))</span> <span class="o">{</span>
+        <span class="nf">rdwrPort</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span> <span class="o">:=</span> <span class="nv">io</span><span class="o">.</span><span class="py">dataIn</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span>
+      <span class="o">}</span>
+      <span class="nf">when</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">mask</span><span class="o">(</span><span class="mi">1</span><span class="o">))</span> <span class="o">{</span>
+        <span class="nf">rdwrPort</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span> <span class="o">:=</span> <span class="nv">io</span><span class="o">.</span><span class="py">dataIn</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span>
+      <span class="o">}</span>
+    <span class="o">}.</span><span class="py">otherwise</span> <span class="o">{</span> <span class="nv">io</span><span class="o">.</span><span class="py">dataOut</span> <span class="o">:=</span> <span class="n">rdwrPort</span> <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
 </section></div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/highlight/highlight.pack.js"></script><script>hljs.configure({languages:['scala','java','bash']});
 hljs.initHighlighting();
               </script><script>((window.gitter = {}).chat = {}).options = {
