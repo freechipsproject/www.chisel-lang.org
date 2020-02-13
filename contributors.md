@@ -50,6 +50,7 @@
 - [`@richardxia`](https://github.com/richardxia)
 - [`@rupertlssmith`](https://github.com/rupertlssmith)
 - [`@sbeamer`](https://github.com/sbeamer)
+- [`@scala-steward`](https://github.com/scala-steward)
 - [`@schoeberl`](https://github.com/schoeberl)
 - [`@sdtwigg`](https://github.com/sdtwigg)
 - [`@SebastianBoe`](https://github.com/SebastianBoe)
