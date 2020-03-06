@@ -15,6 +15,7 @@
 - [`@colinschmidt`](https://github.com/colinschmidt)
 - [`@da-steve101`](https://github.com/da-steve101)
 - [`@danluu`](https://github.com/danluu)
+- [`@David-Durst`](https://github.com/David-Durst)
 - [`@davidbiancolin`](https://github.com/davidbiancolin)
 - [`@diningyo`](https://github.com/diningyo)
 - [`@djmmoss`](https://github.com/djmmoss)

@@ -15,8 +15,9 @@ for hardware constructs that cannot be described in Chisel and for connecting to
 <p>Modules defined as a <code class="highlighter-rouge">BlackBox</code> will be instantiated in the generated Verilog, but no code
 will be generated to define the behavior of module.</p>
 
-<p>Unlike Module, BlackBox has no implicit clock and reset. Ports declared
-in the IO Bundle will be generated with the requested name (ie. no preceding <code class="highlighter-rouge">io_</code>).</p>
+<p>Unlike Module, <code class="highlighter-rouge">BlackBox</code> has no implicit clock and reset.
+<code class="highlighter-rouge">BlackBox</code>’s clock and reset ports must be explicitly declared and connected to input signals.
+Ports declared in the IO Bundle will be generated with the requested name (ie. no preceding <code class="highlighter-rouge">io_</code>).</p>
 
 <h3 id="parameterization">Parameterization</h3>
 
@@ -42,6 +43,8 @@ in the IO Bundle will be generated with the requested name (ie. no preceding <co
 <span class="k">class</span> <span class="nc">Top</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span><span class="o">{})</span>
   <span class="k">val</span> <span class="nv">ibufds</span> <span class="k">=</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">IBUFDS</span><span class="o">)</span>
+  <span class="c1">// connecting one of IBUFDS's input clock ports to Top's clock signal</span>
+  <span class="nv">ibufds</span><span class="o">.</span><span class="py">io</span><span class="o">.</span><span class="py">I</span> <span class="o">:=</span> <span class="n">clock</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
