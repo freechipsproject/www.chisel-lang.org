@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.2.2 - chisel3.RegNext</title>
-          <meta name="description" content="chisel3 3.2.2 - chisel3.RegNext" />
-          <meta name="keywords" content="chisel3 3.2.2 chisel3.RegNext" />
+          <title>chisel3 3.2.4 - chisel3.RegNext</title>
+          <meta name="description" content="chisel3 3.2.4 - chisel3.RegNext" />
+          <meta name="keywords" content="chisel3 3.2.4 chisel3.RegNext" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.2.2</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.2.4</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -431,8 +431,8 @@ functions
                         <a href="RegInit$.html" title="Utility for constructing hardware registers with an initialization value.">RegInit</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="object" href="" title=""></a>
-                        <a href="" title="">RegNext</a>
+                        <a class="object" href="" title="Utility for constructing one-cycle delayed versions of signals"></a>
+                        <a href="" title="Utility for constructing one-cycle delayed versions of signals">RegNext</a>
                       </li><li class="current-entities indented1">
                         <a class="object" href="Reset$.html" title=""></a>
                         <a class="trait" href="Reset.html" title=""></a>
@@ -609,7 +609,15 @@ functions
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.2.2//chiselFrontend/src/main/scala/chisel3/Reg.scala" target="_blank">Reg.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Utility for constructing one-cycle delayed versions of signals</p><p><i>The width of a <code>RegNext</code> is not set based on the <code>next</code> or <code>init</code> connections</i> for <a href="Element.html" class="extype" name="chisel3.Element">Element</a> types. In the
+following example, the width of <code>bar</code> will not be set and will be inferred by the FIRRTL compiler.</p><pre><span class="kw">val</span> foo = Reg(UInt(<span class="num">4.</span>W))         <span class="cmt">// width is 4</span>
+<span class="kw">val</span> bar = RegNext(foo)           <span class="cmt">// width is unset</span></pre><p>If you desire an explicit width, do not use <code>RegNext</code> and instead use a register with a specified width:</p><pre><span class="kw">val</span> foo = Reg(UInt(<span class="num">4.</span>W))         <span class="cmt">// width is 4</span>
+<span class="kw">val</span> bar = Reg(chiselTypeOf(foo)) <span class="cmt">// width is 4</span>
+bar := foo</pre><p>Also note that a <code>RegNext</code> of a <a href="Bundle.html" class="extype" name="chisel3.Bundle">Bundle</a> <i>will have it's width set</i> for <a href="Aggregate.html" class="extype" name="chisel3.Aggregate">Aggregate</a> types.</p><pre><span class="kw">class</span> MyBundle <span class="kw">extends</span> Bundle {
+  <span class="kw">val</span> x = UInt(<span class="num">4.</span>W)
+}
+<span class="kw">val</span> foo = Wire(<span class="kw">new</span> MyBundle)     <span class="cmt">// the width of foo.x is 4</span>
+<span class="kw">val</span> bar = RegNext(foo)           <span class="cmt">// the width of bar.x is 4</span></pre></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.2.4//chiselFrontend/src/main/scala/chisel3/Reg.scala" target="_blank">Reg.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -714,7 +722,7 @@ functions
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="chisel3.RegNext#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="chisel3.RegNext#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="apply[T&lt;:chisel3.Data](next:T,init:T)(implicitsourceInfo:chisel3.internal.sourceinfo.SourceInfo,implicitcompileOptions:chisel3.CompileOptions):T"></a><a id="apply[T&lt;:Data](T,T)(SourceInfo,CompileOptions):T"></a>
       <span class="permalink">
       <a href="../chisel3/RegNext$.html#apply[T&lt;:chisel3.Data](next:T,init:T)(implicitsourceInfo:chisel3.internal.sourceinfo.SourceInfo,implicitcompileOptions:chisel3.CompileOptions):T" title="Permalink">
@@ -729,9 +737,8 @@ functions
         <span class="name">apply</span><span class="tparams">[<span name="T">T &lt;: <a href="Data.html" class="extype" name="chisel3.Data">Data</a></span>]</span><span class="params">(<span name="next">next: <span class="extype" name="chisel3.RegNext.apply.T">T</span></span>, <span name="init">init: <span class="extype" name="chisel3.RegNext.apply.T">T</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="sourceInfo">sourceInfo: <span class="extype" name="chisel3.internal.sourceinfo.SourceInfo">SourceInfo</span></span>, <span name="compileOptions">compileOptions: <a href="CompileOptions.html" class="extype" name="chisel3.CompileOptions">CompileOptions</a></span>)</span><span class="result">: <span class="extype" name="chisel3.RegNext.apply.T">T</span></span>
       </span>
       
-      <p class="shortcomment cmt">Returns a register with the specified next and reset initialization.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a register with the specified next and reset initialization.</p><p>Essentially a 1-cycle delayed version of the input signal.
-</p></div></div>
-    </li><li name="chisel3.RegNext#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <p class="shortcomment cmt">Returns a register <i>with an unset width</i> connected to the signal <code>next</code> and with the reset value <code>init</code>.</p>
+    </li><li name="chisel3.RegNext#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="apply[T&lt;:chisel3.Data](next:T)(implicitsourceInfo:chisel3.internal.sourceinfo.SourceInfo,implicitcompileOptions:chisel3.CompileOptions):T"></a><a id="apply[T&lt;:Data](T)(SourceInfo,CompileOptions):T"></a>
       <span class="permalink">
       <a href="../chisel3/RegNext$.html#apply[T&lt;:chisel3.Data](next:T)(implicitsourceInfo:chisel3.internal.sourceinfo.SourceInfo,implicitcompileOptions:chisel3.CompileOptions):T" title="Permalink">
@@ -746,8 +753,7 @@ functions
         <span class="name">apply</span><span class="tparams">[<span name="T">T &lt;: <a href="Data.html" class="extype" name="chisel3.Data">Data</a></span>]</span><span class="params">(<span name="next">next: <span class="extype" name="chisel3.RegNext.apply.T">T</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="sourceInfo">sourceInfo: <span class="extype" name="chisel3.internal.sourceinfo.SourceInfo">SourceInfo</span></span>, <span name="compileOptions">compileOptions: <a href="CompileOptions.html" class="extype" name="chisel3.CompileOptions">CompileOptions</a></span>)</span><span class="result">: <span class="extype" name="chisel3.RegNext.apply.T">T</span></span>
       </span>
       
-      <p class="shortcomment cmt">Returns a register with the specified next and no reset initialization.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a register with the specified next and no reset initialization.</p><p>Essentially a 1-cycle delayed version of the input signal.
-</p></div></div>
+      <p class="shortcomment cmt">Returns a register <i>with an unset width</i> connected to the signal <code>next</code> and with no reset value.</p>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">

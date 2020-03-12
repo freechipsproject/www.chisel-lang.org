@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.2.2 - chisel3.RegInit</title>
-          <meta name="description" content="chisel3 3.2.2 - chisel3.RegInit" />
-          <meta name="keywords" content="chisel3 3.2.2 chisel3.RegInit" />
+          <title>chisel3 3.2.4 - chisel3.RegInit</title>
+          <meta name="description" content="chisel3 3.2.4 - chisel3.RegInit" />
+          <meta name="keywords" content="chisel3 3.2.4 chisel3.RegInit" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.2.2</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.2.4</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -431,8 +431,8 @@ functions
                         <a href="" title="Utility for constructing hardware registers with an initialization value.">RegInit</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="object" href="RegNext$.html" title=""></a>
-                        <a href="RegNext$.html" title="">RegNext</a>
+                        <a class="object" href="RegNext$.html" title="Utility for constructing one-cycle delayed versions of signals"></a>
+                        <a href="RegNext$.html" title="Utility for constructing one-cycle delayed versions of signals">RegNext</a>
                       </li><li class="current-entities indented1">
                         <a class="object" href="Reset$.html" title=""></a>
                         <a class="trait" href="Reset.html" title=""></a>
@@ -617,7 +617,7 @@ more details:</p><p>1. Literal <a href="Bits.html" class="extype" name="chisel3.
 <span class="kw">val</span> r2 = RegInit(<span class="num">1.</span>U(<span class="num">8.</span>W)) <span class="cmt">// width is set to 8</span></pre><p>2. Non-Literal <a href="Element.html" class="extype" name="chisel3.Element">Element</a> initializer - width will be inferred</p><pre><span class="kw">val</span> x = Wire(UInt())
 <span class="kw">val</span> y = Wire(UInt(<span class="num">8.</span>W))
 <span class="kw">val</span> r1 = RegInit(x) <span class="cmt">// width will be inferred</span>
-<span class="kw">val</span> r2 = RegInit(y) <span class="cmt">// width will be inferred</span></pre><p>3. <a href="Aggregate.html" class="extype" name="chisel3.Aggregate">Aggregate</a> initializer - width will be set to match the aggregate</p><pre><span class="kw">class</span> MyBundle {
+<span class="kw">val</span> r2 = RegInit(y) <span class="cmt">// width is set to 8</span></pre><p>3. <a href="Aggregate.html" class="extype" name="chisel3.Aggregate">Aggregate</a> initializer - width will be set to match the aggregate</p><pre><span class="kw">class</span> MyBundle <span class="kw">extends</span> Bundle {
   <span class="kw">val</span> unknown = UInt()
   <span class="kw">val</span> known   = UInt(<span class="num">8.</span>W)
 }
@@ -632,7 +632,7 @@ as:</p><pre><span class="kw">def</span> RegInit[T <span class="kw">&lt;:</span> 
   <span class="kw">val</span> x = Reg(t)
   x := init
   x
-}</pre></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.2.2//chiselFrontend/src/main/scala/chisel3/Reg.scala" target="_blank">Reg.scala</a></dd></dl><div class="toggleContainer block">
+}</pre></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.2.4//chiselFrontend/src/main/scala/chisel3/Reg.scala" target="_blank">Reg.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>

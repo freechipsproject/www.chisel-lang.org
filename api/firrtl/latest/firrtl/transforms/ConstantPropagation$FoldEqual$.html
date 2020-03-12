@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.2.2 - firrtl.transforms.ConstantPropagation.FoldEqual</title>
-          <meta name="description" content="firrtl 1.2.2 - firrtl.transforms.ConstantPropagation.FoldEqual" />
-          <meta name="keywords" content="firrtl 1.2.2 firrtl.transforms.ConstantPropagation.FoldEqual" />
+          <title>firrtl 1.2.4 - firrtl.transforms.ConstantPropagation.FoldEqual</title>
+          <meta name="description" content="firrtl 1.2.4 - firrtl.transforms.ConstantPropagation.FoldEqual" />
+          <meta name="keywords" content="firrtl 1.2.4 firrtl.transforms.ConstantPropagation.FoldEqual" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.2.2</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.2.4</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -145,6 +145,22 @@
                         <span class="separator"></span>
                         <a class="object" href="ConstantPropagation$FoldXOR$.html" title=""></a>
                         <a href="ConstantPropagation$FoldXOR$.html" title="">FoldXOR</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="trait" href="ConstantPropagation$SimplifyBinaryOp.html" title=""></a>
+                        <a href="ConstantPropagation$SimplifyBinaryOp.html" title="">SimplifyBinaryOp</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="ConstantPropagation$SimplifyDIV$.html" title=""></a>
+                        <a href="ConstantPropagation$SimplifyDIV$.html" title="">SimplifyDIV</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="ConstantPropagation$SimplifyREM$.html" title=""></a>
+                        <a href="ConstantPropagation$SimplifyREM$.html" title="">SimplifyREM</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="ConstantPropagation$SimplifySUB$.html" title=""></a>
+                        <a href="ConstantPropagation$SimplifySUB$.html" title="">SimplifySUB</a>
                       </li>
               </ul>
             </div>
@@ -168,16 +184,16 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">FoldEqual</span><span class="result"> extends <a href="ConstantPropagation$FoldCommutativeOp.html" class="extype" name="firrtl.transforms.ConstantPropagation.FoldCommutativeOp">FoldCommutativeOp</a></span>
+        <span class="name">FoldEqual</span><span class="result"> extends <span class="extype" name="firrtl.transforms.ConstantPropagation.FoldAndSimplifyMatching">FoldAndSimplifyMatching</span></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.2.2/src/main/scala/firrtl/transforms/ConstantPropagation.scala" target="_blank">ConstantPropagation.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.2.4/src/main/scala/firrtl/transforms/ConstantPropagation.scala" target="_blank">ConstantPropagation.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="ConstantPropagation$FoldCommutativeOp.html" class="extype" name="firrtl.transforms.ConstantPropagation.FoldCommutativeOp">FoldCommutativeOp</a>, <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="firrtl.transforms.ConstantPropagation.FoldAndSimplifyMatching">FoldAndSimplifyMatching</span>, <a href="ConstantPropagation$SimplifyBinaryOp.html" class="extype" name="firrtl.transforms.ConstantPropagation.SimplifyBinaryOp">SimplifyBinaryOp</a>, <a href="ConstantPropagation$FoldCommutativeOp.html" class="extype" name="firrtl.transforms.ConstantPropagation.FoldCommutativeOp">FoldCommutativeOp</a>, <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div></div>
         
 
@@ -203,7 +219,7 @@
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="firrtl.transforms.ConstantPropagation.FoldEqual"><span>FoldEqual</span></li><li class="in" name="firrtl.transforms.ConstantPropagation.FoldCommutativeOp"><span>FoldCommutativeOp</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="firrtl.transforms.ConstantPropagation.FoldEqual"><span>FoldEqual</span></li><li class="in" name="firrtl.transforms.ConstantPropagation.FoldAndSimplifyMatching"><span>FoldAndSimplifyMatching</span></li><li class="in" name="firrtl.transforms.ConstantPropagation.SimplifyBinaryOp"><span>SimplifyBinaryOp</span></li><li class="in" name="firrtl.transforms.ConstantPropagation.FoldCommutativeOp"><span>FoldCommutativeOp</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -278,7 +294,7 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="firrtl.transforms.ConstantPropagation.FoldCommutativeOp#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="firrtl.transforms.ConstantPropagation.FoldAndSimplifyMatching#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="apply(e:firrtl.ir.DoPrim):firrtl.ir.Expression"></a><a id="apply(DoPrim):Expression"></a>
       <span class="permalink">
       <a href="../../firrtl/transforms/ConstantPropagation$FoldEqual$.html#apply(e:firrtl.ir.DoPrim):firrtl.ir.Expression" title="Permalink">
@@ -293,7 +309,7 @@
         <span class="name">apply</span><span class="params">(<span name="e">e: <a href="../ir/DoPrim.html" class="extype" name="firrtl.ir.DoPrim">DoPrim</a></span>)</span><span class="result">: <a href="../ir/Expression.html" class="extype" name="firrtl.ir.Expression">Expression</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="ConstantPropagation$FoldCommutativeOp.html" class="extype" name="firrtl.transforms.ConstantPropagation.FoldCommutativeOp">FoldCommutativeOp</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>FoldAndSimplifyMatching → <a href="ConstantPropagation$SimplifyBinaryOp.html" class="extype" name="firrtl.transforms.ConstantPropagation.SimplifyBinaryOp">SimplifyBinaryOp</a> → <a href="ConstantPropagation$FoldCommutativeOp.html" class="extype" name="firrtl.transforms.ConstantPropagation.FoldCommutativeOp">FoldCommutativeOp</a></dd></dl></div>
     </li><li name="scala.Any#asInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="asInstanceOf[T0]:T0"></a>
       <span class="permalink">
@@ -458,6 +474,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="firrtl.transforms.ConstantPropagation.FoldEqual#matchingArgsValue" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="matchingArgsValue(e:firrtl.ir.DoPrim,arg:firrtl.ir.Expression):firrtl.ir.UIntLiteral"></a><a id="matchingArgsValue(DoPrim,Expression):UIntLiteral"></a>
+      <span class="permalink">
+      <a href="../../firrtl/transforms/ConstantPropagation$FoldEqual$.html#matchingArgsValue(e:firrtl.ir.DoPrim,arg:firrtl.ir.Expression):firrtl.ir.UIntLiteral" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">matchingArgsValue</span><span class="params">(<span name="e">e: <a href="../ir/DoPrim.html" class="extype" name="firrtl.ir.DoPrim">DoPrim</a></span>, <span name="arg">arg: <a href="../ir/Expression.html" class="extype" name="firrtl.ir.Expression">Expression</a></span>)</span><span class="result">: <a href="../ir/UIntLiteral.html" class="extype" name="firrtl.ir.UIntLiteral">UIntLiteral</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.transforms.ConstantPropagation.FoldEqual">FoldEqual</a> → <a href="ConstantPropagation$SimplifyBinaryOp.html" class="extype" name="firrtl.transforms.ConstantPropagation.SimplifyBinaryOp">SimplifyBinaryOp</a></dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -638,7 +670,11 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="firrtl.transforms.ConstantPropagation.FoldCommutativeOp">
+        <div class="parent" name="firrtl.transforms.ConstantPropagation.FoldAndSimplifyMatching">
+              <h3>Inherited from <span class="extype" name="firrtl.transforms.ConstantPropagation.FoldAndSimplifyMatching">FoldAndSimplifyMatching</span></h3>
+            </div><div class="parent" name="firrtl.transforms.ConstantPropagation.SimplifyBinaryOp">
+              <h3>Inherited from <a href="ConstantPropagation$SimplifyBinaryOp.html" class="extype" name="firrtl.transforms.ConstantPropagation.SimplifyBinaryOp">SimplifyBinaryOp</a></h3>
+            </div><div class="parent" name="firrtl.transforms.ConstantPropagation.FoldCommutativeOp">
               <h3>Inherited from <a href="ConstantPropagation$FoldCommutativeOp.html" class="extype" name="firrtl.transforms.ConstantPropagation.FoldCommutativeOp">FoldCommutativeOp</a></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>

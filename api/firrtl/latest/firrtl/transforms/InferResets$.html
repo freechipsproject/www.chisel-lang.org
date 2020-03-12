@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.2.2 - firrtl.transforms.InferResets</title>
-          <meta name="description" content="firrtl 1.2.2 - firrtl.transforms.InferResets" />
-          <meta name="keywords" content="firrtl 1.2.2 firrtl.transforms.InferResets" />
+          <title>firrtl 1.2.4 - firrtl.transforms.InferResets</title>
+          <meta name="description" content="firrtl 1.2.4 - firrtl.transforms.InferResets" />
+          <meta name="keywords" content="firrtl 1.2.4 firrtl.transforms.InferResets" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.2.2</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.2.4</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -186,6 +186,10 @@
                         <a class="class" href="ExtModulePathAnnotation.html" title=""></a>
                         <a href="ExtModulePathAnnotation.html" title="">ExtModulePathAnnotation</a>
                       </li><li class="current-entities indented2">
+                        <a class="object" href="FixAddingNegativeLiterals$.html" title=""></a>
+                        <a class="class" href="FixAddingNegativeLiterals.html" title="Replaces adding a negative literal with subtracting that literal"></a>
+                        <a href="FixAddingNegativeLiterals.html" title="Replaces adding a negative literal with subtracting that literal">FixAddingNegativeLiterals</a>
+                      </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="class" href="Flatten.html" title="Takes flatten annotations for module instances and modules and inline the entire hierarchy of modules down from the annotations."></a>
                         <a href="Flatten.html" title="Takes flatten annotations for module instances and modules and inline the entire hierarchy of modules down from the annotations.">Flatten</a>
@@ -215,8 +219,24 @@
                         <a href="IdentityTransform.html" title="Transform that applies an identity function.">IdentityTransform</a>
                       </li><li class="current-entities indented2">
                         <a class="object" href="" title=""></a>
-                        <a class="class" href="InferResets.html" title="Infers the concrete type of Resets by their connections This is a global inference because ports can be of type Reset"></a>
-                        <a href="InferResets.html" title="Infers the concrete type of Resets by their connections This is a global inference because ports can be of type Reset">InferResets</a>
+                        <a class="class" href="InferResets.html" title="Infers the concrete type of ResetTypes by their connections"></a>
+                        <a href="InferResets.html" title="Infers the concrete type of ResetTypes by their connections">InferResets</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="InlineBitExtractionsTransform$.html" title=""></a>
+                        <a class="class" href="InlineBitExtractionsTransform.html" title="Inline nodes that are simple bits"></a>
+                        <a href="InlineBitExtractionsTransform.html" title="Inline nodes that are simple bits">InlineBitExtractionsTransform</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="InlineCastsTransform$.html" title=""></a>
+                        <a class="class" href="InlineCastsTransform.html" title="Inline nodes that are simple casts"></a>
+                        <a href="InlineCastsTransform.html" title="Inline nodes that are simple casts">InlineCastsTransform</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="InlineNotsTransform$.html" title=""></a>
+                        <a class="class" href="InlineNotsTransform.html" title="Inline nodes that are simple nots"></a>
+                        <a href="InlineNotsTransform.html" title="Inline nodes that are simple nots">InlineNotsTransform</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="LegalizeClocksTransform$.html" title=""></a>
+                        <a class="class" href="LegalizeClocksTransform.html" title="Ensure Clocks to be emitted are legal Verilog"></a>
+                        <a href="LegalizeClocksTransform.html" title="Ensure Clocks to be emitted are legal Verilog">LegalizeClocksTransform</a>
                       </li><li class="current-entities indented2">
                         <a class="object" href="LogicNode$.html" title=""></a>
                         <a class="class" href="LogicNode.html" title=""></a>
@@ -299,7 +319,7 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.2.2/src/main/scala/firrtl/transforms/InferResets.scala" target="_blank">InferResets.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.2.4/src/main/scala/firrtl/transforms/InferResets.scala" target="_blank">InferResets.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -351,7 +371,23 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="firrtl.transforms.InferResets.DifferingDriverTypesException" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="firrtl.transforms.InferResets.InferResetsException" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InferResetsExceptionextendsPassException"></a><a id="InferResetsException:InferResetsException"></a>
+      <span class="permalink">
+      <a href="../../firrtl/transforms/InferResets$$InferResetsException.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="InferResets$$InferResetsException.html"><span class="name">InferResetsException</span></a><span class="result"> extends <a href="../passes/PassException.html" class="extype" name="firrtl.passes.PassException">PassException</a></span>
+      </span>
+      
+      
+    </li><li name="firrtl.transforms.InferResets.DifferingDriverTypesException" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="DifferingDriverTypesExceptionextendsPassException"></a><a id="DifferingDriverTypesException:DifferingDriverTypesException"></a>
       <span class="permalink">
       <a href="../../firrtl/transforms/InferResets$$DifferingDriverTypesException.html" title="Permalink">
@@ -363,10 +399,13 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="InferResets$$DifferingDriverTypesException.html"><span class="name">DifferingDriverTypesException</span></a><span class="result"> extends <a href="../passes/PassException.html" class="extype" name="firrtl.passes.PassException">PassException</a></span>
+        <a title="" href="InferResets$$DifferingDriverTypesException.html"><span class="name deprecated" title="Deprecated: (Since version 1.3) This is no longer in use and will be removed">DifferingDriverTypesException</span></a><span class="result"> extends <a href="../passes/PassException.html" class="extype" name="firrtl.passes.PassException">PassException</a></span>
       </span>
       
-      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.3)</i> This is no longer in use and will be removed</p></dd></dl></div>
     </li></ol>
             </div>
 
@@ -725,7 +764,31 @@
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="firrtl.transforms.InferResets.DifferingDriverTypesException" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="firrtl.transforms.InferResets.InferResetsException" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InferResetsException"></a><a id="InferResetsException:InferResetsException"></a>
+      <span class="permalink">
+      <a href="../../firrtl/transforms/InferResets$$InferResetsException$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="InferResets$$InferResetsException$.html"><span class="name">InferResetsException</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      
+      
+    </li>
+              </ol>
+            </div>
+
+        
+
+        <div class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="firrtl.transforms.InferResets.DifferingDriverTypesException" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="DifferingDriverTypesException"></a><a id="DifferingDriverTypesException:DifferingDriverTypesException"></a>
       <span class="permalink">
       <a href="../../firrtl/transforms/InferResets$$DifferingDriverTypesException$.html" title="Permalink">
@@ -737,17 +800,15 @@
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="InferResets$$DifferingDriverTypesException$.html"><span class="name">DifferingDriverTypesException</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="InferResets$$DifferingDriverTypesException$.html"><span class="name deprecated" title="Deprecated: (Since version 1.3) This is no longer in use and will be removed">DifferingDriverTypesException</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
-      
-    </li>
-              </ol>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.3)</i> This is no longer in use and will be removed</p></dd></dl></div>
+    </li></ol>
             </div>
-
-        
-
-        
         </div>
 
         <div id="inheritedMembers">

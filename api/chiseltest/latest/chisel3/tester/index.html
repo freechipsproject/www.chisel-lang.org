@@ -192,6 +192,10 @@ work as expected, or may have unforeseen side effects, or may be powerful yet da
                         <a href="ChiselScalatestTester.html" title="">ChiselScalatestTester</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
+                        <a class="trait" href="ChiselUtestTester.html" title="Using utest as test framework"></a>
+                        <a href="ChiselUtestTester.html" title="Using utest as test framework">ChiselUtestTester</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
                         <a class="object" href="package$$ClockResolutionUtils$.html" title="Provides clock-resolution-specific abstractions on top of getVar/setVar."></a>
                         <a href="package$$ClockResolutionUtils$.html" title="Provides clock-resolution-specific abstractions on top of getVar/setVar.">ClockResolutionUtils</a>
                       </li><li class="current-entities indented2">
@@ -230,6 +234,10 @@ work as expected, or may have unforeseen side effects, or may be powerful yet da
                         <span class="separator"></span>
                         <a class="class" href="TimeoutException.html" title=""></a>
                         <a href="TimeoutException.html" title="">TimeoutException</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="ValidDriver$.html" title=""></a>
+                        <a class="class" href="ValidDriver.html" title=""></a>
+                        <a href="ValidDriver.html" title="">ValidDriver</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="object" href="package$$fork$.html" title=""></a>
@@ -339,6 +347,41 @@ work as expected, or may have unforeseen side effects, or may be powerful yet da
       </span>
       
       
+    </li><li name="chisel3.tester.ChiselUtestTester" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="ChiselUtestTesterextendsTestSuitewithTestEnvInterface"></a><a id="ChiselUtestTester:ChiselUtestTester"></a>
+      <span class="permalink">
+      <a href="../../chisel3/tester/index.html#ChiselUtestTesterextendsTestSuitewithTestEnvInterface" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Using utest as test framework" href="ChiselUtestTester.html"><span class="name">ChiselUtestTester</span></a><span class="result"> extends <span class="extype" name="utest.TestSuite">TestSuite</span> with <a href="internal/TestEnvInterface.html" class="extype" name="chisel3.tester.internal.TestEnvInterface">TestEnvInterface</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Using utest as test framework</p><div class="fullcomment"><div class="comment cmt"><p>Using utest as test framework</p><pre><span class="cmt">// define test spec in trait</span>
+<span class="kw">trait</span> HasTestChipSpec {
+  <span class="kw">import</span> chisel3.tester._
+  <span class="kw">def</span> testChipSpec(dut: TestChip): <span class="std">Unit</span> = { c <span class="kw">=&gt;</span>
+    <span class="cmt">// body of the unit test, c is a reference</span>
+    c.io.input.poke(<span class="num">1.</span>U)
+    c.io.output.expect(<span class="num">2.</span>U)
+  }
+}
+
+<span class="kw">object</span> SomeCircuitSpecTester <span class="kw">extends</span> ChiselUtestTester <span class="kw">with</span> HasSomeCircuitSpec {
+  <span class="cmt">// define test by Tests macro</span>
+  <span class="kw">val</span> tests: Tests = Tests {
+    <span class="cmt">// invoke test with test(""){}</span>
+    test(<span class="lit">"comments or name to a test"</span>){
+      <span class="cmt">// test function runs here</span>
+      testCircuit(<span class="kw">new</span> SomeCircuit, <span class="std">Seq</span>(WriteVcdAnnotation))(SomeCircuitSpec)
+    }
+  }
+}</pre></div></div>
     </li><li name="chisel3.tester.DecoupledDriver" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="DecoupledDriver[T&lt;:chisel3.Data]extendsAnyRef"></a><a id="DecoupledDriver[T&lt;:Data]:DecoupledDriver[T]"></a>
       <span class="permalink">
@@ -422,6 +465,22 @@ TODO: have a more extensible ordering than ints.
       </span>
       
       
+    </li><li name="chisel3.tester.ValidDriver" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ValidDriver[T&lt;:chisel3.Data]extendsAnyRef"></a><a id="ValidDriver[T&lt;:Data]:ValidDriver[T]"></a>
+      <span class="permalink">
+      <a href="../../chisel3/tester/index.html#ValidDriver[T&lt;:chisel3.Data]extendsAnyRef" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ValidDriver.html"><span class="name">ValidDriver</span></a><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="chisel3.Data">Data</span></span>]</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      
     </li><li name="chisel3.tester.testableClock" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="testableClockextendsAnyRef"></a><a id="testableClock:testableClock"></a>
       <span class="permalink">
@@ -463,9 +522,9 @@ TODO: have a more extensible ordering than ints.
               <h3>Value Members</h3>
               <ol>
                 <li name="chisel3.tester#decoupledToDriver" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="decoupledToDriver[T&lt;:chisel3.Data](x:chisel3.util.DecoupledIO[T]):chisel3.tester.DecoupledDriver[T]"></a><a id="decoupledToDriver[T&lt;:Data](DecoupledIO[T]):DecoupledDriver[T]"></a>
+      <a id="decoupledToDriver[T&lt;:chisel3.Data](x:chisel3.util.ReadyValidIO[T]):chisel3.tester.DecoupledDriver[T]"></a><a id="decoupledToDriver[T&lt;:Data](ReadyValidIO[T]):DecoupledDriver[T]"></a>
       <span class="permalink">
-      <a href="../../chisel3/tester/index.html#decoupledToDriver[T&lt;:chisel3.Data](x:chisel3.util.DecoupledIO[T]):chisel3.tester.DecoupledDriver[T]" title="Permalink">
+      <a href="../../chisel3/tester/index.html#decoupledToDriver[T&lt;:chisel3.Data](x:chisel3.util.ReadyValidIO[T]):chisel3.tester.DecoupledDriver[T]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -474,7 +533,7 @@ TODO: have a more extensible ordering than ints.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">decoupledToDriver</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="chisel3.Data">Data</span></span>]</span><span class="params">(<span name="x">x: <span class="extype" name="chisel3.util.DecoupledIO">DecoupledIO</span>[<span class="extype" name="chisel3.tester.decoupledToDriver.T">T</span>]</span>)</span><span class="result">: <a href="DecoupledDriver.html" class="extype" name="chisel3.tester.DecoupledDriver">DecoupledDriver</a>[<span class="extype" name="chisel3.tester.decoupledToDriver.T">T</span>]</span>
+        <span class="name">decoupledToDriver</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="chisel3.Data">Data</span></span>]</span><span class="params">(<span name="x">x: <span class="extype" name="chisel3.util.ReadyValidIO">ReadyValidIO</span>[<span class="extype" name="chisel3.tester.decoupledToDriver.T">T</span>]</span>)</span><span class="result">: <a href="DecoupledDriver.html" class="extype" name="chisel3.tester.DecoupledDriver">DecoupledDriver</a>[<span class="extype" name="chisel3.tester.decoupledToDriver.T">T</span>]</span>
       </span>
       
       
@@ -507,6 +566,22 @@ TODO: have a more extensible ordering than ints.
       </span>
       <span class="symbol">
         <span class="name">timescope</span><span class="params">(<span name="contents">contents: ⇒ <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="chisel3.tester#validToDriver" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="validToDriver[T&lt;:chisel3.Data](x:chisel3.util.ValidIO[T]):chisel3.tester.ValidDriver[T]"></a><a id="validToDriver[T&lt;:Data](ValidIO[T]):ValidDriver[T]"></a>
+      <span class="permalink">
+      <a href="../../chisel3/tester/index.html#validToDriver[T&lt;:chisel3.Data](x:chisel3.util.ValidIO[T]):chisel3.tester.ValidDriver[T]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">implicit </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">validToDriver</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="chisel3.Data">Data</span></span>]</span><span class="params">(<span name="x">x: <span class="extype" name="chisel3.util.ValidIO">ValidIO</span>[<span class="extype" name="chisel3.tester.validToDriver.T">T</span>]</span>)</span><span class="result">: <a href="ValidDriver.html" class="extype" name="chisel3.tester.ValidDriver">ValidDriver</a>[<span class="extype" name="chisel3.tester.validToDriver.T">T</span>]</span>
       </span>
       
       
@@ -624,6 +699,22 @@ in order to run. This form is suitable for running in the Jupyter notebook.
       </span>
       <span class="symbol">
         <a title="" href="TestdriverMain$.html"><span class="name">TestdriverMain</span></a><span class="result"> extends <a href="Region.html" class="extype" name="chisel3.tester.Region">Region</a></span>
+      </span>
+      
+      
+    </li><li name="chisel3.tester.ValidDriver" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ValidDriver"></a><a id="ValidDriver:ValidDriver"></a>
+      <span class="permalink">
+      <a href="../../chisel3/tester/index.html#ValidDriver" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ValidDriver$.html"><span class="name">ValidDriver</span></a>
       </span>
       
       

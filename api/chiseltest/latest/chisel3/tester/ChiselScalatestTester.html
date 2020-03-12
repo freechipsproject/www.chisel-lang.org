@@ -192,6 +192,10 @@ work as expected, or may have unforeseen side effects, or may be powerful yet da
                         <a href="" title="">ChiselScalatestTester</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
+                        <a class="trait" href="ChiselUtestTester.html" title="Using utest as test framework"></a>
+                        <a href="ChiselUtestTester.html" title="Using utest as test framework">ChiselUtestTester</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
                         <a class="object" href="package$$ClockResolutionUtils$.html" title="Provides clock-resolution-specific abstractions on top of getVar/setVar."></a>
                         <a href="package$$ClockResolutionUtils$.html" title="Provides clock-resolution-specific abstractions on top of getVar/setVar.">ClockResolutionUtils</a>
                       </li><li class="current-entities indented2">
@@ -230,6 +234,10 @@ work as expected, or may have unforeseen side effects, or may be powerful yet da
                         <span class="separator"></span>
                         <a class="class" href="TimeoutException.html" title=""></a>
                         <a href="TimeoutException.html" title="">TimeoutException</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="ValidDriver$.html" title=""></a>
+                        <a class="class" href="ValidDriver.html" title=""></a>
+                        <a href="ValidDriver.html" title="">ValidDriver</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="object" href="package$$fork$.html" title=""></a>
@@ -1601,7 +1609,7 @@ General use looks like</p><pre>test(<span class="kw">new</span> PlusOne) { c <sp
   c.io.input.poke(<span class="num">1.</span>U)
   c.io.output.expect(<span class="num">2.</span>U)
 }</pre><p>If you need to add options to this unit test you can tack on a .withAnnotations modifier
-You must add <code>import chisel3.tester.experimental.TestOptionBuilder._</code> to use .withAnnotations</p><p>For example:</p><pre>test(<span class="kw">new</span> TestModule).withAnnotations(<span class="std">Seq</span>(WriteVcdAnnotation) { c <span class="kw">=&gt;</span>
+You must add <code>import chisel3.tester.experimental.TestOptionBuilder._</code> to use .withAnnotations</p><p>For example:</p><pre>test(<span class="kw">new</span> TestModule).withAnnotations(<span class="std">Seq</span>(WriteVcdAnnotation)) { c <span class="kw">=&gt;</span>
   <span class="cmt">// body of the unit test</span>
 }</pre></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>The DUT type, must be a subclass of MultiIOModule</p></dd><dt class="param">dutGen</dt><dd class="cmt"><p>A generator of a Chisel  Module</p></dd></dl><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>This API is experimental and forward compatibility is not yet guaranteed</p></span></dd><dt>See also</dt><dd><span class="cmt"><p>src/test/scala/chisel3/tests/OptionsBackwardCompatibilityTest for examples</p></span></dd></dl></div>
     </li><li name="chisel3.tester.internal.TestEnvInterface#testerExpect" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">

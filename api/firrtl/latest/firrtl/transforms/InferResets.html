@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.2.2 - firrtl.transforms.InferResets</title>
-          <meta name="description" content="firrtl 1.2.2 - firrtl.transforms.InferResets" />
-          <meta name="keywords" content="firrtl 1.2.2 firrtl.transforms.InferResets" />
+          <title>firrtl 1.2.4 - firrtl.transforms.InferResets</title>
+          <meta name="description" content="firrtl 1.2.4 - firrtl.transforms.InferResets" />
+          <meta name="keywords" content="firrtl 1.2.4 firrtl.transforms.InferResets" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.2.2</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.2.4</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -186,6 +186,10 @@
                         <a class="class" href="ExtModulePathAnnotation.html" title=""></a>
                         <a href="ExtModulePathAnnotation.html" title="">ExtModulePathAnnotation</a>
                       </li><li class="current-entities indented2">
+                        <a class="object" href="FixAddingNegativeLiterals$.html" title=""></a>
+                        <a class="class" href="FixAddingNegativeLiterals.html" title="Replaces adding a negative literal with subtracting that literal"></a>
+                        <a href="FixAddingNegativeLiterals.html" title="Replaces adding a negative literal with subtracting that literal">FixAddingNegativeLiterals</a>
+                      </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="class" href="Flatten.html" title="Takes flatten annotations for module instances and modules and inline the entire hierarchy of modules down from the annotations."></a>
                         <a href="Flatten.html" title="Takes flatten annotations for module instances and modules and inline the entire hierarchy of modules down from the annotations.">Flatten</a>
@@ -215,8 +219,24 @@
                         <a href="IdentityTransform.html" title="Transform that applies an identity function.">IdentityTransform</a>
                       </li><li class="current-entities indented2">
                         <a class="object" href="InferResets$.html" title=""></a>
-                        <a class="class" href="" title="Infers the concrete type of Resets by their connections This is a global inference because ports can be of type Reset"></a>
-                        <a href="" title="Infers the concrete type of Resets by their connections This is a global inference because ports can be of type Reset">InferResets</a>
+                        <a class="class" href="" title="Infers the concrete type of ResetTypes by their connections"></a>
+                        <a href="" title="Infers the concrete type of ResetTypes by their connections">InferResets</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="InlineBitExtractionsTransform$.html" title=""></a>
+                        <a class="class" href="InlineBitExtractionsTransform.html" title="Inline nodes that are simple bits"></a>
+                        <a href="InlineBitExtractionsTransform.html" title="Inline nodes that are simple bits">InlineBitExtractionsTransform</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="InlineCastsTransform$.html" title=""></a>
+                        <a class="class" href="InlineCastsTransform.html" title="Inline nodes that are simple casts"></a>
+                        <a href="InlineCastsTransform.html" title="Inline nodes that are simple casts">InlineCastsTransform</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="InlineNotsTransform$.html" title=""></a>
+                        <a class="class" href="InlineNotsTransform.html" title="Inline nodes that are simple nots"></a>
+                        <a href="InlineNotsTransform.html" title="Inline nodes that are simple nots">InlineNotsTransform</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="LegalizeClocksTransform$.html" title=""></a>
+                        <a class="class" href="LegalizeClocksTransform.html" title="Ensure Clocks to be emitted are legal Verilog"></a>
+                        <a href="LegalizeClocksTransform.html" title="Ensure Clocks to be emitted are legal Verilog">LegalizeClocksTransform</a>
                       </li><li class="current-entities indented2">
                         <a class="object" href="LogicNode$.html" title=""></a>
                         <a class="class" href="LogicNode.html" title=""></a>
@@ -299,8 +319,13 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Infers the concrete type of <span class="extype" name="Reset">Reset</span>s by their connections
-This is a global inference because ports can be of type <span class="extype" name="Reset">Reset</span></p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.2.2/src/main/scala/firrtl/transforms/InferResets.scala" target="_blank">InferResets.scala</a></dd><dt>Note</dt><dd><span class="cmt"><p>This transform should be run before <a href="DedupModules.html" class="extype" name="firrtl.transforms.DedupModules">DedupModules</a> so that similar Modules from
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Infers the concrete type of <span class="extype" name="ResetType">ResetType</span>s by their connections</p><p>There are 3 cases
+1. An abstract reset driven by and/or driving only asynchronous resets will be inferred as
+   asynchronous reset
+1. An abstract reset driven by and/or driving both asynchronous and synchronous resets will
+   error
+1. Otherwise, the reset is inferred as synchronous (i.e. the abstract reset is only invalidated
+   or is driven by or drives only synchronous resets)</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.2.4/src/main/scala/firrtl/transforms/InferResets.scala" target="_blank">InferResets.scala</a></dd><dt>Note</dt><dd><span class="cmt"><p>This is a global inference because ports can be of type <span class="extype" name="ResetType">ResetType</span></p></span>, <span class="cmt"><p>This transform should be run before <a href="DedupModules.html" class="extype" name="firrtl.transforms.DedupModules">DedupModules</a> so that similar Modules from
   generator languages like Chisel can infer differently</p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes

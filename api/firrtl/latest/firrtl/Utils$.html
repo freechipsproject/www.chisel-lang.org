@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.2.2 - firrtl.Utils</title>
-          <meta name="description" content="firrtl 1.2.2 - firrtl.Utils" />
-          <meta name="keywords" content="firrtl 1.2.2 firrtl.Utils" />
+          <title>firrtl 1.2.4 - firrtl.Utils</title>
+          <meta name="description" content="firrtl 1.2.4 - firrtl.Utils" />
+          <meta name="keywords" content="firrtl 1.2.4 firrtl.Utils" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.2.2</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.2.4</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -934,7 +934,7 @@ primarily consists of:</p><ul><li><a href="stage/FirrtlStage.html" class="extype
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.2.2/src/main/scala/firrtl/Utils.scala" target="_blank">Utils.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.2.4/src/main/scala/firrtl/Utils.scala" target="_blank">Utils.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -1599,6 +1599,70 @@ to produce better names when generating prefix unique names.</u></p></div><dl cl
       <p class="shortcomment cmt">Returns an inlined expression (replacing node references with values),
 stopping on a stopping condition or until the reference is not a node
 </p>
+    </li><li name="firrtl.Utils#isBitExtract" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="isBitExtract(expr:firrtl.ir.Expression):Boolean"></a><a id="isBitExtract(Expression):Boolean"></a>
+      <span class="permalink">
+      <a href="../firrtl/Utils$.html#isBitExtract(expr:firrtl.ir.Expression):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isBitExtract</span><span class="params">(<span name="expr">expr: <a href="ir/Expression.html" class="extype" name="firrtl.ir.Expression">Expression</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns true if Expression is a Bits PrimOp, false otherwise</p>
+    </li><li name="firrtl.Utils#isBitExtract" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="isBitExtract(op:firrtl.ir.PrimOp):Boolean"></a><a id="isBitExtract(PrimOp):Boolean"></a>
+      <span class="permalink">
+      <a href="../firrtl/Utils$.html#isBitExtract(op:firrtl.ir.PrimOp):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isBitExtract</span><span class="params">(<span name="op">op: <a href="ir/PrimOp.html" class="extype" name="firrtl.ir.PrimOp">PrimOp</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns true if PrimOp is a BitExtraction, false otherwise</p>
+    </li><li name="firrtl.Utils#isCast" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="isCast(expr:firrtl.ir.Expression):Boolean"></a><a id="isCast(Expression):Boolean"></a>
+      <span class="permalink">
+      <a href="../firrtl/Utils$.html#isCast(expr:firrtl.ir.Expression):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isCast</span><span class="params">(<span name="expr">expr: <a href="ir/Expression.html" class="extype" name="firrtl.ir.Expression">Expression</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns true if Expression is a casting PrimOp, false otherwise</p>
+    </li><li name="firrtl.Utils#isCast" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="isCast(op:firrtl.ir.PrimOp):Boolean"></a><a id="isCast(PrimOp):Boolean"></a>
+      <span class="permalink">
+      <a href="../firrtl/Utils$.html#isCast(op:firrtl.ir.PrimOp):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isCast</span><span class="params">(<span name="op">op: <a href="ir/PrimOp.html" class="extype" name="firrtl.ir.PrimOp">PrimOp</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns true if PrimOp is a cast, false otherwise</p>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">

@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.2.2 - chisel3</title>
-          <meta name="description" content="chisel3 3.2.2 - chisel3" />
-          <meta name="keywords" content="chisel3 3.2.2 chisel3" />
+          <title>chisel3 3.2.4 - chisel3</title>
+          <meta name="description" content="chisel3 3.2.4 - chisel3" />
+          <meta name="keywords" content="chisel3 3.2.4 chisel3" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.2.2</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.2.4</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -429,8 +429,8 @@ functions
                         <a href="RegInit$.html" title="Utility for constructing hardware registers with an initialization value.">RegInit</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="object" href="RegNext$.html" title=""></a>
-                        <a href="RegNext$.html" title="">RegNext</a>
+                        <a class="object" href="RegNext$.html" title="Utility for constructing one-cycle delayed versions of signals"></a>
+                        <a href="RegNext$.html" title="Utility for constructing one-cycle delayed versions of signals">RegNext</a>
                       </li><li class="current-entities indented1">
                         <a class="object" href="Reset$.html" title=""></a>
                         <a class="trait" href="Reset.html" title=""></a>
@@ -608,7 +608,7 @@ functions
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>This package contains the main chisel3 API.
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.2.2//chiselFrontend/src/main/scala/chisel3/package.scala" target="_blank">package.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.2.4//chiselFrontend/src/main/scala/chisel3/package.scala" target="_blank">package.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -946,8 +946,8 @@ members variables of <a href="Data.html" class="extype" name="chisel3.Data">Data
      <span class="kw">val</span> outPacket = Output(<span class="kw">new</span> Packet)
    })
    <span class="kw">val</span> reg = Reg(<span class="kw">new</span> Packet)
-   reg &lt;&gt; inPacket
-   outPacket &lt;&gt; reg
+   reg &lt;&gt; io.inPacket
+   io.outPacket &lt;&gt; reg
 }</pre></div></div>
     </li><li name="chisel3.Character" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="CharacterextendsFirrtlFormatwithProductwithSerializable"></a><a id="Character:Character"></a>
@@ -1737,7 +1737,7 @@ needs to be used when there is a need to express the hardware collection in a <a
 <a href="Bundle.html" class="extype" name="chisel3.Bundle">Bundle</a> or when access to elements of the array is indexed via a hardware signal.</p><p>Example of indexing into a <a href="Vec.html" class="extype" name="chisel3.Vec">Vec</a> using a hardware address and where the <a href="Vec.html" class="extype" name="chisel3.Vec">Vec</a> is defined in
 an IO <a href="Bundle.html" class="extype" name="chisel3.Bundle">Bundle</a></p><pre><span class="kw">val</span> io = IO(<span class="kw">new</span> Bundle {
   <span class="kw">val</span> in = Input(Vec(<span class="num">20</span>, UInt(<span class="num">16.</span>W)))
-  <span class="kw">val</span> addr = UInt(<span class="num">5.</span>W)
+  <span class="kw">val</span> addr = Input(UInt(<span class="num">5.</span>W))
   <span class="kw">val</span> out = Output(UInt(<span class="num">16.</span>W))
 })
 io.out := io.in(io.addr)</pre></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>type of elements</p></dd></dl><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p></p><ul><li>when multiple conflicting assignments are performed on a Vec element, the last one takes effect (unlike Mem, where the result is undefined)</li><li>Vecs, unlike classes in Scala's collection library, are propagated intact to FIRRTL as a vector type, which may make debugging easier</li></ul></span></dd></dl></div>
@@ -2381,7 +2381,7 @@ more details:</p><p>1. Literal <a href="Bits.html" class="extype" name="chisel3.
 <span class="kw">val</span> r2 = RegInit(<span class="num">1.</span>U(<span class="num">8.</span>W)) <span class="cmt">// width is set to 8</span></pre><p>2. Non-Literal <a href="Element.html" class="extype" name="chisel3.Element">Element</a> initializer - width will be inferred</p><pre><span class="kw">val</span> x = Wire(UInt())
 <span class="kw">val</span> y = Wire(UInt(<span class="num">8.</span>W))
 <span class="kw">val</span> r1 = RegInit(x) <span class="cmt">// width will be inferred</span>
-<span class="kw">val</span> r2 = RegInit(y) <span class="cmt">// width will be inferred</span></pre><p>3. <a href="Aggregate.html" class="extype" name="chisel3.Aggregate">Aggregate</a> initializer - width will be set to match the aggregate</p><pre><span class="kw">class</span> MyBundle {
+<span class="kw">val</span> r2 = RegInit(y) <span class="cmt">// width is set to 8</span></pre><p>3. <a href="Aggregate.html" class="extype" name="chisel3.Aggregate">Aggregate</a> initializer - width will be set to match the aggregate</p><pre><span class="kw">class</span> MyBundle <span class="kw">extends</span> Bundle {
   <span class="kw">val</span> unknown = UInt()
   <span class="kw">val</span> known   = UInt(<span class="num">8.</span>W)
 }
@@ -2397,7 +2397,7 @@ as:</p><pre><span class="kw">def</span> RegInit[T <span class="kw">&lt;:</span> 
   x := init
   x
 }</pre></div></div>
-    </li><li name="chisel3.RegNext" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="chisel3.RegNext" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="RegNext"></a><a id="RegNext:RegNext"></a>
       <span class="permalink">
       <a href="../chisel3/RegNext$.html" title="Permalink">
@@ -2409,10 +2409,18 @@ as:</p><pre><span class="kw">def</span> RegInit[T <span class="kw">&lt;:</span> 
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="RegNext$.html"><span class="name">RegNext</span></a>
+        <a title="Utility for constructing one-cycle delayed versions of signals" href="RegNext$.html"><span class="name">RegNext</span></a>
       </span>
       
-      
+      <p class="shortcomment cmt">Utility for constructing one-cycle delayed versions of signals</p><div class="fullcomment"><div class="comment cmt"><p>Utility for constructing one-cycle delayed versions of signals</p><p><i>The width of a <code>RegNext</code> is not set based on the <code>next</code> or <code>init</code> connections</i> for <a href="Element.html" class="extype" name="chisel3.Element">Element</a> types. In the
+following example, the width of <code>bar</code> will not be set and will be inferred by the FIRRTL compiler.</p><pre><span class="kw">val</span> foo = Reg(UInt(<span class="num">4.</span>W))         <span class="cmt">// width is 4</span>
+<span class="kw">val</span> bar = RegNext(foo)           <span class="cmt">// width is unset</span></pre><p>If you desire an explicit width, do not use <code>RegNext</code> and instead use a register with a specified width:</p><pre><span class="kw">val</span> foo = Reg(UInt(<span class="num">4.</span>W))         <span class="cmt">// width is 4</span>
+<span class="kw">val</span> bar = Reg(chiselTypeOf(foo)) <span class="cmt">// width is 4</span>
+bar := foo</pre><p>Also note that a <code>RegNext</code> of a <a href="Bundle.html" class="extype" name="chisel3.Bundle">Bundle</a> <i>will have it's width set</i> for <a href="Aggregate.html" class="extype" name="chisel3.Aggregate">Aggregate</a> types.</p><pre><span class="kw">class</span> MyBundle <span class="kw">extends</span> Bundle {
+  <span class="kw">val</span> x = UInt(<span class="num">4.</span>W)
+}
+<span class="kw">val</span> foo = Wire(<span class="kw">new</span> MyBundle)     <span class="cmt">// the width of foo.x is 4</span>
+<span class="kw">val</span> bar = RegNext(foo)           <span class="cmt">// the width of bar.x is 4</span></pre></div></div>
     </li><li name="chisel3.Reset" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="Reset"></a><a id="Reset:Reset"></a>
       <span class="permalink">

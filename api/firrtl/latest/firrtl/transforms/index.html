@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.2.2 - firrtl.transforms</title>
-          <meta name="description" content="firrtl 1.2.2 - firrtl.transforms" />
-          <meta name="keywords" content="firrtl 1.2.2 firrtl.transforms" />
+          <title>firrtl 1.2.4 - firrtl.transforms</title>
+          <meta name="description" content="firrtl 1.2.4 - firrtl.transforms" />
+          <meta name="keywords" content="firrtl 1.2.4 firrtl.transforms" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.2.2</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.2.4</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -351,6 +351,10 @@ primarily consists of:</p><ul><li><a href="../stage/FirrtlStage.html" class="ext
                         <a class="class" href="ExtModulePathAnnotation.html" title=""></a>
                         <a href="ExtModulePathAnnotation.html" title="">ExtModulePathAnnotation</a>
                       </li><li class="current-entities indented2">
+                        <a class="object" href="FixAddingNegativeLiterals$.html" title=""></a>
+                        <a class="class" href="FixAddingNegativeLiterals.html" title="Replaces adding a negative literal with subtracting that literal"></a>
+                        <a href="FixAddingNegativeLiterals.html" title="Replaces adding a negative literal with subtracting that literal">FixAddingNegativeLiterals</a>
+                      </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="class" href="Flatten.html" title="Takes flatten annotations for module instances and modules and inline the entire hierarchy of modules down from the annotations."></a>
                         <a href="Flatten.html" title="Takes flatten annotations for module instances and modules and inline the entire hierarchy of modules down from the annotations.">Flatten</a>
@@ -380,8 +384,24 @@ primarily consists of:</p><ul><li><a href="../stage/FirrtlStage.html" class="ext
                         <a href="IdentityTransform.html" title="Transform that applies an identity function.">IdentityTransform</a>
                       </li><li class="current-entities indented2">
                         <a class="object" href="InferResets$.html" title=""></a>
-                        <a class="class" href="InferResets.html" title="Infers the concrete type of Resets by their connections This is a global inference because ports can be of type Reset"></a>
-                        <a href="InferResets.html" title="Infers the concrete type of Resets by their connections This is a global inference because ports can be of type Reset">InferResets</a>
+                        <a class="class" href="InferResets.html" title="Infers the concrete type of ResetTypes by their connections"></a>
+                        <a href="InferResets.html" title="Infers the concrete type of ResetTypes by their connections">InferResets</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="InlineBitExtractionsTransform$.html" title=""></a>
+                        <a class="class" href="InlineBitExtractionsTransform.html" title="Inline nodes that are simple bits"></a>
+                        <a href="InlineBitExtractionsTransform.html" title="Inline nodes that are simple bits">InlineBitExtractionsTransform</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="InlineCastsTransform$.html" title=""></a>
+                        <a class="class" href="InlineCastsTransform.html" title="Inline nodes that are simple casts"></a>
+                        <a href="InlineCastsTransform.html" title="Inline nodes that are simple casts">InlineCastsTransform</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="InlineNotsTransform$.html" title=""></a>
+                        <a class="class" href="InlineNotsTransform.html" title="Inline nodes that are simple nots"></a>
+                        <a href="InlineNotsTransform.html" title="Inline nodes that are simple nots">InlineNotsTransform</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="LegalizeClocksTransform$.html" title=""></a>
+                        <a class="class" href="LegalizeClocksTransform.html" title="Ensure Clocks to be emitted are legal Verilog"></a>
+                        <a href="LegalizeClocksTransform.html" title="Ensure Clocks to be emitted are legal Verilog">LegalizeClocksTransform</a>
                       </li><li class="current-entities indented2">
                         <a class="object" href="LogicNode$.html" title=""></a>
                         <a class="class" href="LogicNode.html" title=""></a>
@@ -806,6 +826,25 @@ remove such modules, use the <a href="NoDedupAnnotation.html" class="extype" nam
       </span>
       
       
+    </li><li name="firrtl.transforms.FixAddingNegativeLiterals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="FixAddingNegativeLiteralsextendsTransform"></a><a id="FixAddingNegativeLiterals:FixAddingNegativeLiterals"></a>
+      <span class="permalink">
+      <a href="../../firrtl/transforms/FixAddingNegativeLiterals.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Replaces adding a negative literal with subtracting that literal" href="FixAddingNegativeLiterals.html"><span class="name">FixAddingNegativeLiterals</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Replaces adding a negative literal with subtracting that literal</p><div class="fullcomment"><div class="comment cmt"><p>Replaces adding a negative literal with subtracting that literal</p><p>Verilator has a lint warning if a literal is negated in an expression, because it adds a bit to
+the literal and thus not all expressions in the add are the same. This is fixed here when we directly
+subtract the literal instead.
+</p></div></div>
     </li><li name="firrtl.transforms.Flatten" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="FlattenextendsTransform"></a><a id="Flatten:Flatten"></a>
       <span class="permalink">
@@ -943,13 +982,81 @@ Components that are only connected to a group's components will also be included
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Infers the concrete type of Resets by their connections This is a global inference because ports can be of type Reset" href="InferResets.html"><span class="name">InferResets</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a></span>
+        <a title="Infers the concrete type of ResetTypes by their connections" href="InferResets.html"><span class="name">InferResets</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a></span>
       </span>
       
-      <p class="shortcomment cmt">Infers the concrete type of <span class="extype" name="Reset">Reset</span>s by their connections
-This is a global inference because ports can be of type <span class="extype" name="Reset">Reset</span></p><div class="fullcomment"><div class="comment cmt"><p>Infers the concrete type of <span class="extype" name="Reset">Reset</span>s by their connections
-This is a global inference because ports can be of type <span class="extype" name="Reset">Reset</span></p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>This transform should be run before <a href="DedupModules.html" class="extype" name="firrtl.transforms.DedupModules">DedupModules</a> so that similar Modules from
+      <p class="shortcomment cmt">Infers the concrete type of <span class="extype" name="ResetType">ResetType</span>s by their connections</p><div class="fullcomment"><div class="comment cmt"><p>Infers the concrete type of <span class="extype" name="ResetType">ResetType</span>s by their connections</p><p>There are 3 cases
+1. An abstract reset driven by and/or driving only asynchronous resets will be inferred as
+   asynchronous reset
+1. An abstract reset driven by and/or driving both asynchronous and synchronous resets will
+   error
+1. Otherwise, the reset is inferred as synchronous (i.e. the abstract reset is only invalidated
+   or is driven by or drives only synchronous resets)</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>This is a global inference because ports can be of type <span class="extype" name="ResetType">ResetType</span></p></span>, <span class="cmt"><p>This transform should be run before <a href="DedupModules.html" class="extype" name="firrtl.transforms.DedupModules">DedupModules</a> so that similar Modules from
   generator languages like Chisel can infer differently</p></span></dd></dl></div>
+    </li><li name="firrtl.transforms.InlineBitExtractionsTransform" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InlineBitExtractionsTransformextendsTransform"></a><a id="InlineBitExtractionsTransform:InlineBitExtractionsTransform"></a>
+      <span class="permalink">
+      <a href="../../firrtl/transforms/InlineBitExtractionsTransform.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Inline nodes that are simple bits" href="InlineBitExtractionsTransform.html"><span class="name">InlineBitExtractionsTransform</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Inline nodes that are simple bits</p>
+    </li><li name="firrtl.transforms.InlineCastsTransform" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InlineCastsTransformextendsTransform"></a><a id="InlineCastsTransform:InlineCastsTransform"></a>
+      <span class="permalink">
+      <a href="../../firrtl/transforms/InlineCastsTransform.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Inline nodes that are simple casts" href="InlineCastsTransform.html"><span class="name">InlineCastsTransform</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Inline nodes that are simple casts</p>
+    </li><li name="firrtl.transforms.InlineNotsTransform" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InlineNotsTransformextendsTransform"></a><a id="InlineNotsTransform:InlineNotsTransform"></a>
+      <span class="permalink">
+      <a href="../../firrtl/transforms/InlineNotsTransform.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Inline nodes that are simple nots" href="InlineNotsTransform.html"><span class="name">InlineNotsTransform</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Inline nodes that are simple nots</p>
+    </li><li name="firrtl.transforms.LegalizeClocksTransform" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LegalizeClocksTransformextendsTransform"></a><a id="LegalizeClocksTransform:LegalizeClocksTransform"></a>
+      <span class="permalink">
+      <a href="../../firrtl/transforms/LegalizeClocksTransform.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Ensure Clocks to be emitted are legal Verilog" href="LegalizeClocksTransform.html"><span class="name">LegalizeClocksTransform</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Ensure Clocks to be emitted are legal Verilog</p>
     </li><li name="firrtl.transforms.LogicNode" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="LogicNodeextendsProductwithSerializable"></a><a id="LogicNode:LogicNode"></a>
       <span class="permalink">
@@ -1260,6 +1367,22 @@ useful for emission to languages that support non-expanding arithmetic (like Ver
       </span>
       
       
+    </li><li name="firrtl.transforms.FixAddingNegativeLiterals" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FixAddingNegativeLiterals"></a><a id="FixAddingNegativeLiterals:FixAddingNegativeLiterals"></a>
+      <span class="permalink">
+      <a href="../../firrtl/transforms/FixAddingNegativeLiterals$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="FixAddingNegativeLiterals$.html"><span class="name">FixAddingNegativeLiterals</span></a>
+      </span>
+      
+      
     </li><li name="firrtl.transforms.FlattenRegUpdate" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="FlattenRegUpdate"></a><a id="FlattenRegUpdate:FlattenRegUpdate"></a>
       <span class="permalink">
@@ -1289,6 +1412,70 @@ useful for emission to languages that support non-expanding arithmetic (like Ver
       </span>
       <span class="symbol">
         <a title="" href="InferResets$.html"><span class="name">InferResets</span></a>
+      </span>
+      
+      
+    </li><li name="firrtl.transforms.InlineBitExtractionsTransform" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InlineBitExtractionsTransform"></a><a id="InlineBitExtractionsTransform:InlineBitExtractionsTransform"></a>
+      <span class="permalink">
+      <a href="../../firrtl/transforms/InlineBitExtractionsTransform$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="InlineBitExtractionsTransform$.html"><span class="name">InlineBitExtractionsTransform</span></a>
+      </span>
+      
+      
+    </li><li name="firrtl.transforms.InlineCastsTransform" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InlineCastsTransform"></a><a id="InlineCastsTransform:InlineCastsTransform"></a>
+      <span class="permalink">
+      <a href="../../firrtl/transforms/InlineCastsTransform$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="InlineCastsTransform$.html"><span class="name">InlineCastsTransform</span></a>
+      </span>
+      
+      
+    </li><li name="firrtl.transforms.InlineNotsTransform" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InlineNotsTransform"></a><a id="InlineNotsTransform:InlineNotsTransform"></a>
+      <span class="permalink">
+      <a href="../../firrtl/transforms/InlineNotsTransform$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="InlineNotsTransform$.html"><span class="name">InlineNotsTransform</span></a>
+      </span>
+      
+      
+    </li><li name="firrtl.transforms.LegalizeClocksTransform" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="LegalizeClocksTransform"></a><a id="LegalizeClocksTransform:LegalizeClocksTransform"></a>
+      <span class="permalink">
+      <a href="../../firrtl/transforms/LegalizeClocksTransform$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="LegalizeClocksTransform$.html"><span class="name">LegalizeClocksTransform</span></a>
       </span>
       
       

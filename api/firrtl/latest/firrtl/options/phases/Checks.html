@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.2.2 - firrtl.options.phases.Checks</title>
-          <meta name="description" content="firrtl 1.2.2 - firrtl.options.phases.Checks" />
-          <meta name="keywords" content="firrtl 1.2.2 firrtl.options.phases.Checks" />
+          <title>firrtl 1.2.4 - firrtl.options.phases.Checks</title>
+          <meta name="description" content="firrtl 1.2.4 - firrtl.options.phases.Checks" />
+          <meta name="keywords" content="firrtl 1.2.4 firrtl.options.phases.Checks" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.2.2</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.2.4</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -171,7 +171,7 @@
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p><a href="../Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> that validates an <a href="../../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a>. If successful, views of this <a href="../../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a>
 as <a href="../StageOptions.html" class="extype" name="firrtl.options.StageOptions">StageOptions</a> are guaranteed to succeed.
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.2.2/src/main/scala/firrtl/options/phases/Checks.scala" target="_blank">Checks.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.2.4/src/main/scala/firrtl/options/phases/Checks.scala" target="_blank">Checks.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -487,9 +487,9 @@ ordered Set.</p></span></dd><dt>See also</dt><dd><span class="cmt"><p><a href=".
         <span class="name">invalidates</span><span class="params">(<span name="a">a: <a href="../Phase.html" class="extype" name="firrtl.options.Phase">Phase</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
-      <p class="shortcomment cmt">A function that, given a transform will return true if this transform invalidates/undos the effects of the input
-transform</p><div class="fullcomment"><div class="comment cmt"><p>A function that, given a transform will return true if this transform invalidates/undos the effects of the input
-transform</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../DependencyAPI.html" class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</a></dd><dt>Note</dt><dd><span class="cmt"><p>Can a <a href="../Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> ever invalidate itself?</p></span></dd></dl></div>
+      <p class="shortcomment cmt">A function that, given *another* transform (parameter <code>a</code>) will return true if this transform invalidates/undos the
+effects of the *other* transform (parameter <code>a</code>).</p><div class="fullcomment"><div class="comment cmt"><p>A function that, given *another* transform (parameter <code>a</code>) will return true if this transform invalidates/undos the
+effects of the *other* transform (parameter <code>a</code>).</p></div><dl class="paramcmts block"><dt class="param">a</dt><dd class="cmt"><p>transform</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../DependencyAPI.html" class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</a></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">

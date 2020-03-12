@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.2.2 - firrtl.graph.MutableDiGraph</title>
-          <meta name="description" content="firrtl 1.2.2 - firrtl.graph.MutableDiGraph" />
-          <meta name="keywords" content="firrtl 1.2.2 firrtl.graph.MutableDiGraph" />
+          <title>firrtl 1.2.4 - firrtl.graph.MutableDiGraph</title>
+          <meta name="description" content="firrtl 1.2.4 - firrtl.graph.MutableDiGraph" />
+          <meta name="keywords" content="firrtl 1.2.4 firrtl.graph.MutableDiGraph" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.2.2</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.2.4</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -165,7 +165,7 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.2.2/src/main/scala/firrtl/graph/DiGraph.scala" target="_blank">DiGraph.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.2.4/src/main/scala/firrtl/graph/DiGraph.scala" target="_blank">DiGraph.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -324,7 +324,7 @@
       
       <p class="shortcomment cmt">Performs breadth-first search on the directed graph, with a blacklist of nodes
 </p><div class="fullcomment"><div class="comment cmt"><p>Performs breadth-first search on the directed graph, with a blacklist of nodes
-</p></div><dl class="paramcmts block"><dt class="param">root</dt><dd class="cmt"><p>the start node</p></dd><dt class="param">blacklist</dt><dd class="cmt"><p>list of nodes to stop searching, if encountered</p></dd><dt>returns</dt><dd class="cmt"><p>a Map[T,T] from each visited node to its predecessor in the
+</p></div><dl class="paramcmts block"><dt class="param">root</dt><dd class="cmt"><p>the start node</p></dd><dt class="param">blacklist</dt><dd class="cmt"><p>list of nodes to avoid visiting, if encountered</p></dd><dt>returns</dt><dd class="cmt"><p>a Map[T,T] from each visited node to its predecessor in the
 traversal</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="DiGraph.html" class="extype" name="firrtl.graph.DiGraph">DiGraph</a></dd></dl></div>
     </li><li name="firrtl.graph.DiGraph#BFS" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="BFS(root:T):scala.collection.Map[T,T]"></a><a id="BFS(T):Map[T,T]"></a>
@@ -837,9 +837,11 @@ in a traversable order.
         <span class="name">reachableFrom</span><span class="params">(<span name="root">root: <span class="extype" name="firrtl.graph.MutableDiGraph.T">T</span></span>, <span name="blacklist">blacklist: <a href="https://www.scala-lang.org/api/2.12.10/scala/collection/Set.html#scala.collection.Set" class="extype" name="scala.collection.Set">Set</a>[<span class="extype" name="firrtl.graph.MutableDiGraph.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.collection.mutable.LinkedHashSet">LinkedHashSet</span>[<span class="extype" name="firrtl.graph.MutableDiGraph.T">T</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">Finds the set of nodes reachable from a particular node, with a blacklist
-</p><div class="fullcomment"><div class="comment cmt"><p>Finds the set of nodes reachable from a particular node, with a blacklist
-</p></div><dl class="paramcmts block"><dt class="param">root</dt><dd class="cmt"><p>the start node</p></dd><dt class="param">blacklist</dt><dd class="cmt"><p>list of nodes to stop searching, if encountered</p></dd><dt>returns</dt><dd class="cmt"><p>a Set[T] of nodes reachable from the root</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="DiGraph.html" class="extype" name="firrtl.graph.DiGraph">DiGraph</a></dd></dl></div>
+      <p class="shortcomment cmt">Finds the set of nodes reachable from a particular node, with a blacklist.</p><div class="fullcomment"><div class="comment cmt"><p>Finds the set of nodes reachable from a particular node, with a blacklist. The semantics of
+adding a node to the blacklist is that any of its inedges will be ignored in the traversal.
+The <code>root</code> node is *not* included in the returned set unless it is possible to reach <code>root</code> along
+a non-trivial path beginning at <code>root</code>; i.e., if the graph has a cycle that contains <code>root</code>.
+</p></div><dl class="paramcmts block"><dt class="param">root</dt><dd class="cmt"><p>the start node</p></dd><dt class="param">blacklist</dt><dd class="cmt"><p>list of nodes to stop searching, if encountered</p></dd><dt>returns</dt><dd class="cmt"><p>a Set[T] of nodes reachable from <code>root</code></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="DiGraph.html" class="extype" name="firrtl.graph.DiGraph">DiGraph</a></dd></dl></div>
     </li><li name="firrtl.graph.DiGraph#reachableFrom" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="reachableFrom(root:T):scala.collection.mutable.LinkedHashSet[T]"></a><a id="reachableFrom(T):LinkedHashSet[T]"></a>
       <span class="permalink">
@@ -855,9 +857,10 @@ in a traversable order.
         <span class="name">reachableFrom</span><span class="params">(<span name="root">root: <span class="extype" name="firrtl.graph.MutableDiGraph.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.collection.mutable.LinkedHashSet">LinkedHashSet</span>[<span class="extype" name="firrtl.graph.MutableDiGraph.T">T</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">Finds the set of nodes reachable from a particular node
-</p><div class="fullcomment"><div class="comment cmt"><p>Finds the set of nodes reachable from a particular node
-</p></div><dl class="paramcmts block"><dt class="param">root</dt><dd class="cmt"><p>the start node</p></dd><dt>returns</dt><dd class="cmt"><p>a Set[T] of nodes reachable from the root</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="DiGraph.html" class="extype" name="firrtl.graph.DiGraph">DiGraph</a></dd></dl></div>
+      <p class="shortcomment cmt">Finds the set of nodes reachable from a particular node.</p><div class="fullcomment"><div class="comment cmt"><p>Finds the set of nodes reachable from a particular node. The <code>root</code> node is *not* included in the
+returned set unless it is possible to reach <code>root</code> along a non-trivial path beginning at
+<code>root</code>; i.e., if the graph has a cycle that contains <code>root</code>.
+</p></div><dl class="paramcmts block"><dt class="param">root</dt><dd class="cmt"><p>the start node</p></dd><dt>returns</dt><dd class="cmt"><p>a Set[T] of nodes reachable from <code>root</code></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="DiGraph.html" class="extype" name="firrtl.graph.DiGraph">DiGraph</a></dd></dl></div>
     </li><li name="firrtl.graph.DiGraph#reverse" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="reverse:firrtl.graph.DiGraph[T]"></a><a id="reverse:DiGraph[T]"></a>
       <span class="permalink">
