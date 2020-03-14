@@ -23,7 +23,7 @@ We recommend the [Chisel Bootcamp](https://github.com/freechipsproject/chisel-bo
 
 ### How do I do ... (e.g. like that in Verilog) in Chisel?
 
-See the [cookbook](Cookbook).
+See the [cookbook](cookbook).
 
 ### How can I contribute to Chisel?
 
@@ -225,7 +225,7 @@ res3: java.io.File = output.fir
 ### Why doesn't Chisel tell me which wires aren't connected?
 
 As of commit [c313e13](https://github.com/freechipsproject/chisel3/commit/c313e137d4e562ef20195312501840ceab8cbc6a) it can!
-Please visit the wiki page [Unconnected Wires](Unconnected-Wires) for details.
+Please visit the wiki page [Unconnected Wires](unconnected-wires) for details.
 
 ### What does `Reference ... is not fully initialized.` mean?
 
@@ -234,4 +234,4 @@ It means that you have unconnected wires in your design which could be an indica
 In Chisel2 compatibility mode (`NotStrict` compile options), chisel generates firrtl code that disables firrtl's initialized wire checks.
 In pure chisel3 (`Strict` compile options), the generated firrtl code does not contain these disablers (`is invalid`).
 Output wires that are not driven (not connected) are reported by firrtl as `not fully initialized`.
-Please visit the wiki page [Unconnected Wires](Unconnected-Wires) for details on solving the problem.
+Please visit the wiki page [Unconnected Wires](unconnected-wires) for details on solving the problem.
