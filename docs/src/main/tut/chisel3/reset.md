@@ -3,6 +3,21 @@ layout: docs
 title:  "Reset"
 section: "chisel3"
 ---
+
+```scala mdoc:invisible
+import chisel3._
+import chisel3.stage.ChiselGeneratorAnnotation
+
+class Submodule extends MultiIOModule
+
+trait NewIn3p3 {
+  throw new Exception("This is a new feature coming in 3.3!")
+}
+
+trait RequireSyncReset extends NewIn3p3
+trait RequireAsyncReset extends NewIn3p3
+```
+
 As of Chisel 3.2.0, Chisel 3 supports both synchronous and asynchronous reset,
 meaning that it can natively emit both synchronous and asynchronously reset registers.
 
@@ -11,10 +26,10 @@ with the register.
 
 There are three types of reset that implement a common trait `Reset`:
 * `Bool` - constructed with `Bool()`. Also known as "synchronous reset".
-* `AsyncReset` - constructed with `AsyncReset()`
-* `Reset`* - constructed with `Reset()`. Also known as "abstract reset".
+* `AsyncReset` - constructed with `AsyncReset()`. Also known as "asynchronous reset".
+* `Reset` - constructed with `Reset()`. Also known as "abstract reset".
 
-\* For implementation reasons, the concrete Scala type is `ResetType`. Stylistically we avoid `ResetType`, instead using the common trait `Reset`.
+For implementation reasons, the concrete Scala type is `ResetType`. Stylistically we avoid `ResetType`, instead using the common trait `Reset`.
 
 Registers with reset signals of type `Bool` are emitted as synchronous reset flops.
 Registers with reset signals of type `AsyncReset` are emitted as asynchronouly reset flops.
@@ -48,12 +63,14 @@ rather than relying on _Reset Inference_, you can mixin one of the following tra
 
 For example:
 
-```scala
-class MyAlwaysSyncResetModule extends Module with RequireSyncReset {
+```scala mdoc:silent
+class MyAlwaysSyncResetModule extends MultiIOModule with RequireSyncReset {
   val mySyncResetReg = RegInit(false.B) // reset is of type Bool
 }
+```
 
-class MyAlwaysAsyncResetModule extends Module with RequireAsyncReset {
+```scala mdoc:silent
+class MyAlwaysAsyncResetModule extends MultiIOModule with RequireAsyncReset {
   val myAsyncResetReg = RegInit(false.B) // reset is of type AsyncReset
 }
 ```
@@ -67,10 +84,10 @@ the functionality of the block.
 
 Consider the two example modules below which are agnostic to the type of reset used within them:
 
-```scala
-class ResetAgnosticModule extends Module() {
+```scala mdoc:silent
+class ResetAgnosticModule extends Module {
   val io = IO(new Bundle {
-    val out = UInt(4.W) 
+    val out = UInt(4.W)
   })
   val resetAgnosticReg = RegInit(0.U(4.W))
   resetAgnosticReg := resetAgnosticReg + 1.U
@@ -83,7 +100,7 @@ class ResetAgnosticRawModule extends RawModule {
   val out = IO(Output(UInt(8.W)))
 
   val resetAgnosticReg = withClockAndReset(clk, rst)(RegInit(0.U(8.W)))
-  reg := reg + 1.U
+  resetAgnosticReg := resetAgnosticReg + 1.U
   out := resetAgnosticReg
 }
 ```
@@ -97,23 +114,27 @@ You can force the type of the reset at module instantiation by forcing the type
 of the implicit reset.
 The following will make both `resetAgnosticReg`s synchronously reset:
 
-```scala
-withReset(reset.asBool){
-  val myModule = Module(new ResetAgnosticModule)
-  val myRawModule = Module(new ResetAgnosticRawModule)
-  myRawModule.rst := reset
-  myRawModule.clk := clock
-}  
+```scala mdoc:silent
+class ForcedSyncReset extends MultiIOModule {
+  withReset(reset.asBool){
+    val myModule = Module(new ResetAgnosticModule)
+    val myRawModule = Module(new ResetAgnosticRawModule)
+    myRawModule.rst := reset
+    myRawModule.clk := clock
+  }
+}
 ```
 
 The following will make both `resetAgnosticReg`s asynchronously reset:
 
-```scala
-withReset(reset.asAsyncReset){
-  val myModule = Module(new ResetAgnosticModule)
-  val myRawModule = Module(new ResetAgnosticRawModule)
-  myRawModule.rst := reset
-  myRawModule.clk := clock
+```scala mdoc:silent
+class ForcedAysncReset extends MultiIOModule {
+  withReset(reset.asAsyncReset){
+    val myModule = Module(new ResetAgnosticModule)
+    val myRawModule = Module(new ResetAgnosticRawModule)
+    myRawModule.rst := reset
+    myRawModule.clk := clock
+  }
 }
 ```
 
@@ -126,15 +147,15 @@ that you know what you are doing and to force the type as cast.
 It is **not** legal to override the reset type using last-connect semantics
 unless you are overriding a `DontCare`:
 
-```scala
-class MyModule extends Module {
+```scala mdoc:silent
+class MyModule extends MultiIOModule {
   val resetBool = Wire(Reset())
-  resetBool := DontCare 
+  resetBool := DontCare
   resetBool := false.B // this is fine
   withReset(resetBool) {
     val mySubmodule = Module(new Submodule())
   }
-  resetBool = true.B // this is fine
-  resetBool = false.B.asAsyncReset // this is not fine
+  resetBool := true.B // this is fine
+  resetBool := false.B.asAsyncReset // this is not fine
 }
 ```
