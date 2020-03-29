@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.2.4 - firrtl.annotations.IsModule</title>
-          <meta name="description" content="firrtl 1.2.4 - firrtl.annotations.IsModule" />
-          <meta name="keywords" content="firrtl 1.2.4 firrtl.annotations.IsModule" />
+          <title>firrtl 1.3.0-RC1 - firrtl.annotations.IsModule</title>
+          <meta name="description" content="firrtl 1.3.0 - RC1 - firrtl.annotations.IsModule" />
+          <meta name="keywords" content="firrtl 1.3.0 RC1 firrtl.annotations.IsModule" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.2.4</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.3.0-RC1</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -183,6 +183,10 @@
                         <a href="GenericTarget.html" title="Represents incomplete or non-standard Targets">GenericTarget</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
+                        <a class="trait" href="HasSerializationHints.html" title=""></a>
+                        <a href="HasSerializationHints.html" title="">HasSerializationHints</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
                         <a class="class" href="InstanceTarget.html" title="Points to an instance declaration of a module (termed an ofModule)"></a>
                         <a href="InstanceTarget.html" title="Points to an instance declaration of a module (termed an ofModule)">InstanceTarget</a>
                       </li><li class="current-entities indented2">
@@ -243,6 +247,10 @@
                         <a href="NoTargetAnnotation.html" title="If an Annotation does not target any Named thing in the circuit, then all updates just return the Annotation itself">NoTargetAnnotation</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
+                        <a class="class" href="PresetAnnotation.html" title="Transform all registers connected to the targeted AsyncReset tree into bitstream preset registers Impacts all registers connected to any child (cross module) of the target AsyncReset"></a>
+                        <a href="PresetAnnotation.html" title="Transform all registers connected to the targeted AsyncReset tree into bitstream preset registers Impacts all registers connected to any child (cross module) of the target AsyncReset">PresetAnnotation</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
                         <a class="class" href="ReferenceTarget.html" title="Target pointing to a declared named component in a firrtl.ir.DefModule This includes: firrtl.ir.Port, firrtl.ir.DefWire, firrtl.ir.DefRegister, firrtl.ir.DefInstance, firrtl.ir.DefMemory, firrtl.ir.DefNode"></a>
                         <a href="ReferenceTarget.html" title="Target pointing to a declared named component in a firrtl.ir.DefModule This includes: firrtl.ir.Port, firrtl.ir.DefWire, firrtl.ir.DefRegister, firrtl.ir.DefInstance, firrtl.ir.DefMemory, firrtl.ir.DefNode">ReferenceTarget</a>
                       </li><li class="current-entities indented2">
@@ -290,11 +298,11 @@
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>References a module-like target (e.g. a <a href="ModuleTarget.html" class="extype" name="firrtl.annotations.ModuleTarget">ModuleTarget</a> or an <a href="InstanceTarget.html" class="extype" name="firrtl.annotations.InstanceTarget">InstanceTarget</a>)
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.2.4/src/main/scala/firrtl/annotations/Target.scala" target="_blank">Target.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.3.0-RC1/src/main/scala/firrtl/annotations/Target.scala" target="_blank">Target.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="IsMember.html" class="extype" name="firrtl.annotations.IsMember">IsMember</a>, <a href="CompleteTarget.html" class="extype" name="firrtl.annotations.CompleteTarget">CompleteTarget</a>, <a href="Target.html" class="extype" name="firrtl.annotations.Target">Target</a>, <a href="Named.html" class="extype" name="firrtl.annotations.Named">Named</a>, <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="IsMember.html" class="extype" name="firrtl.annotations.IsMember">IsMember</a>, <a href="CompleteTarget.html" class="extype" name="firrtl.annotations.CompleteTarget">CompleteTarget</a>, <a href="Target.html" class="extype" name="firrtl.annotations.Target">Target</a>, <a href="Named.html" class="extype" name="firrtl.annotations.Named">Named</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div><div class="toggleContainer block">
             <span class="toggle">
               Known Subclasses
@@ -411,7 +419,7 @@ Example: Given root=A and instance=b, transforms (Top, B)/c:C -&gt; (Top, A)/b:B
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">circuitOpt</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">circuitOpt</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Circuit name, if it exists</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Target.html" class="extype" name="firrtl.annotations.Target">Target</a></dd></dl></div>
@@ -443,7 +451,7 @@ Example: Given root=A and instance=b, transforms (Top, B)/c:C -&gt; (Top, A)/b:B
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isLocal</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">isLocal</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <p class="shortcomment cmt">Whether the target is directly instantiated in its root module</p><div class="fullcomment"><div class="comment cmt"><p>Whether the target is directly instantiated in its root module</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Target.html" class="extype" name="firrtl.annotations.Target">Target</a></dd></dl></div>
@@ -491,7 +499,7 @@ Example: Given root=A and instance=b, transforms (Top, B)/c:C -&gt; (Top, A)/b:B
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">moduleOpt</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">moduleOpt</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Module name, if it exists</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Target.html" class="extype" name="firrtl.annotations.Target">Target</a></dd></dl></div>
@@ -641,7 +649,7 @@ Example: Given root=A and instance=b, transforms (Top, B)/c:C -&gt; (Top, A)/b:B
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -657,7 +665,7 @@ Example: Given root=A and instance=b, transforms (Top, B)/c:C -&gt; (Top, A)/b:B
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -673,7 +681,7 @@ Example: Given root=A and instance=b, transforms (Top, B)/c:C -&gt; (Top, A)/b:B
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -721,7 +729,7 @@ Example: Given root=A and instance=b, transforms (Top, B)/c:C -&gt; (Top, A)/b:B
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -761,7 +769,7 @@ Example: Given root=A and instance=b, transforms (Top, B)/c:C -&gt; (Top, A)/b:B
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -777,7 +785,7 @@ Example: Given root=A and instance=b, transforms (Top, B)/c:C -&gt; (Top, A)/b:B
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -793,7 +801,7 @@ Example: Given root=A and instance=b, transforms (Top, B)/c:C -&gt; (Top, A)/b:B
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -815,7 +823,7 @@ Example: Given root=A and instance=b, transforms (Top, B)/c:C -&gt; (Top, A)/b:B
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#java.lang.Class" class="extype" name="java.lang.Class">Class</a>[_]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
@@ -834,7 +842,7 @@ Example: Given root=A and instance=b, transforms (Top, B)/c:C -&gt; (Top, A)/b:B
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getComplete</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="CompleteTarget.html" class="extype" name="firrtl.annotations.CompleteTarget">CompleteTarget</a>]</span>
+        <span class="name">getComplete</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="CompleteTarget.html" class="extype" name="firrtl.annotations.CompleteTarget">CompleteTarget</a>]</span>
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>If legal, convert this <a href="Target.html" class="extype" name="firrtl.annotations.Target">Target</a> into a <a href="CompleteTarget.html" class="extype" name="firrtl.annotations.CompleteTarget">CompleteTarget</a></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="CompleteTarget.html" class="extype" name="firrtl.annotations.CompleteTarget">CompleteTarget</a> → <a href="Target.html" class="extype" name="firrtl.annotations.Target">Target</a></dd></dl></div>
@@ -850,7 +858,7 @@ Example: Given root=A and instance=b, transforms (Top, B)/c:C -&gt; (Top, A)/b:B
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
@@ -869,7 +877,7 @@ Example: Given root=A and instance=b, transforms (Top, B)/c:C -&gt; (Top, A)/b:B
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
@@ -885,7 +893,7 @@ Example: Given root=A and instance=b, transforms (Top, B)/c:C -&gt; (Top, A)/b:B
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">modify</span><span class="params">(<span name="circuitOpt">circuitOpt: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">circuitOpt</span></span>, <span name="moduleOpt">moduleOpt: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">moduleOpt</span></span>, <span name="tokens">tokens: <span class="extype" name="scala.Seq">Seq</span>[<a href="TargetToken.html" class="extype" name="firrtl.annotations.TargetToken">TargetToken</a>] = <span class="symbol">tokens</span></span>)</span><span class="result">: <a href="GenericTarget.html" class="extype" name="firrtl.annotations.GenericTarget">GenericTarget</a></span>
+        <span class="name">modify</span><span class="params">(<span name="circuitOpt">circuitOpt: <a href="https://www.scala-lang.org/api/2.12.11/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">circuitOpt</span></span>, <span name="moduleOpt">moduleOpt: <a href="https://www.scala-lang.org/api/2.12.11/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">moduleOpt</span></span>, <span name="tokens">tokens: <span class="extype" name="scala.Seq">Seq</span>[<a href="TargetToken.html" class="extype" name="firrtl.annotations.TargetToken">TargetToken</a>] = <span class="symbol">tokens</span></span>)</span><span class="result">: <a href="GenericTarget.html" class="extype" name="firrtl.annotations.GenericTarget">GenericTarget</a></span>
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Returns a new <a href="GenericTarget.html" class="extype" name="firrtl.annotations.GenericTarget">GenericTarget</a> with new values</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Target.html" class="extype" name="firrtl.annotations.Target">Target</a></dd></dl></div>
@@ -917,7 +925,7 @@ Example: Given root=A and instance=b, transforms (Top, B)/c:C -&gt; (Top, A)/b:B
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -933,7 +941,7 @@ Example: Given root=A and instance=b, transforms (Top, B)/c:C -&gt; (Top, A)/b:B
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -952,7 +960,7 @@ Example: Given root=A and instance=b, transforms (Top, B)/c:C -&gt; (Top, A)/b:B
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1039,6 +1047,22 @@ Example: Given root=A and instance=b, transforms (Top, B)/c:C -&gt; (Top, A)/b:B
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Converts this <a href="Target.html" class="extype" name="firrtl.annotations.Target">Target</a> into a <a href="GenericTarget.html" class="extype" name="firrtl.annotations.GenericTarget">GenericTarget</a></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Target.html" class="extype" name="firrtl.annotations.Target">Target</a></dd></dl></div>
+    </li><li name="firrtl.annotations.Target#toNamed" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toNamed:firrtl.annotations.Named"></a><a id="toNamed:Named"></a>
+      <span class="permalink">
+      <a href="../../firrtl/annotations/IsModule.html#toNamed:firrtl.annotations.Named" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toNamed</span><span class="result">: <a href="Named.html" class="extype" name="firrtl.annotations.Named">Named</a></span>
+      </span>
+      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Converts this <a href="Target.html" class="extype" name="firrtl.annotations.Target">Target</a> into either a <a href="CircuitName.html" class="extype" name="firrtl.annotations.CircuitName">CircuitName</a>, <a href="ModuleName.html" class="extype" name="firrtl.annotations.ModuleName">ModuleName</a>, or <a href="ComponentName.html" class="extype" name="firrtl.annotations.ComponentName">ComponentName</a></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Target.html" class="extype" name="firrtl.annotations.Target">Target</a></dd></dl></div>
     </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <span class="permalink">
@@ -1051,7 +1075,7 @@ Example: Given root=A and instance=b, transforms (Top, B)/c:C -&gt; (Top, A)/b:B
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#java.lang.String" class="extype" name="java.lang.String">String</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -1099,7 +1123,7 @@ Example: Given root=A and instance=b, transforms (Top, B)/c:C -&gt; (Top, A)/b:B
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1121,7 +1145,7 @@ Example: Given root=A and instance=b, transforms (Top, B)/c:C -&gt; (Top, A)/b:B
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1143,7 +1167,7 @@ Example: Given root=A and instance=b, transforms (Top, B)/c:C -&gt; (Top, A)/b:B
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1161,29 +1185,7 @@ Example: Given root=A and instance=b, transforms (Top, B)/c:C -&gt; (Top, A)/b:B
 
         
 
-        <div class="values members">
-              <h3>Deprecated Value Members</h3>
-              <ol><li name="firrtl.annotations.Target#toNamed" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toNamed:firrtl.annotations.Named"></a><a id="toNamed:Named"></a>
-      <span class="permalink">
-      <a href="../../firrtl/annotations/IsModule.html#toNamed:firrtl.annotations.Named" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name deprecated" title="Deprecated: (Since version 1.2) Use Target instead, will be removed in 1.3">toNamed</span><span class="result">: <a href="Named.html" class="extype" name="firrtl.annotations.Named">Named</a></span>
-      </span>
-      
-      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Converts this <a href="Target.html" class="extype" name="firrtl.annotations.Target">Target</a> into either a <a href="CircuitName.html" class="extype" name="firrtl.annotations.CircuitName">CircuitName</a>, <a href="ModuleName.html" class="extype" name="firrtl.annotations.ModuleName">ModuleName</a>, or <a href="ComponentName.html" class="extype" name="firrtl.annotations.ComponentName">ComponentName</a></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Target.html" class="extype" name="firrtl.annotations.Target">Target</a></dd><dt>Annotations</dt><dd>
-                <span class="name">@deprecated</span>
-              
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.2)</i> Use Target instead, will be removed in 1.3</p></dd></dl></div>
-    </li></ol>
-            </div>
+        
         </div>
 
         <div id="inheritedMembers">
@@ -1196,9 +1198,9 @@ Example: Given root=A and instance=b, transforms (Top, B)/c:C -&gt; (Top, A)/b:B
             </div><div class="parent" name="firrtl.annotations.Named">
               <h3>Inherited from <a href="Named.html" class="extype" name="firrtl.annotations.Named">Named</a></h3>
             </div><div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
             </div>
         
         </div>

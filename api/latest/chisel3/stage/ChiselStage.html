@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.2.4 - chisel3.stage.ChiselStage</title>
-          <meta name="description" content="chisel3 3.2.4 - chisel3.stage.ChiselStage" />
-          <meta name="keywords" content="chisel3 3.2.4 chisel3.stage.ChiselStage" />
+          <title>chisel3 3.3.0-RC1 - chisel3.stage.ChiselStage</title>
+          <meta name="description" content="chisel3 3.3.0 - RC1 - chisel3.stage.ChiselStage" />
+          <meta name="keywords" content="chisel3 3.3.0 RC1 chisel3.stage.ChiselStage" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.2.4</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.3.0-RC1</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -154,7 +154,7 @@ and the aggregate types <a href="../Bundle.html" class="extype" name="chisel3.Bu
                         <a class="class" href="ChiselOutputFileAnnotation.html" title=""></a>
                         <a href="ChiselOutputFileAnnotation.html" title="">ChiselOutputFileAnnotation</a>
                       </li><li class="current-entities indented2">
-                        <span class="separator"></span>
+                        <a class="object" href="ChiselStage$.html" title="Helper methods for working with ChiselStage"></a>
                         <a class="class" href="" title=""></a>
                         <a href="" title="">ChiselStage</a>
                       </li><li class="current-entities indented2">
@@ -176,14 +176,16 @@ and the aggregate types <a href="../Bundle.html" class="extype" name="chisel3.Bu
           <div id="content">
             <body class="class type">
       <div id="definition">
-        <div class="big-circle class">c</div>
+        <a href="ChiselStage$.html" title="See companion object"><div class="big-circle class-companion-object">c</div></a>
         <p id="owner"><a href="../index.html" class="extype" name="chisel3">chisel3</a>.<a href="index.html" class="extype" name="chisel3.stage">stage</a></p>
-        <h1>ChiselStage<span class="permalink">
+        <h1><a href="ChiselStage$.html" title="See companion object">ChiselStage</a><span class="permalink">
       <a href="../../chisel3/stage/ChiselStage.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span></h1>
-        <h3><span class="morelinks"></span></h3>
+        <h3><span class="morelinks"><div>
+            Companion <a href="ChiselStage$.html" title="See companion object">object ChiselStage</a>
+          </div></span></h3>
       </div>
 
       <h4 id="signature" class="signature">
@@ -197,11 +199,11 @@ and the aggregate types <a href="../Bundle.html" class="extype" name="chisel3.Bu
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.2.4//src/main/scala/chisel3/stage/ChiselStage.scala" target="_blank">ChiselStage.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.3.0-RC1//src/main/scala/chisel3/stage/ChiselStage.scala" target="_blank">ChiselStage.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><span class="extype" name="firrtl.options.PreservesAll">PreservesAll</span>[<span class="extype" name="firrtl.options.Phase">Phase</span>], <span class="extype" name="firrtl.options.Stage">Stage</span>, <span class="extype" name="firrtl.options.Phase">Phase</span>, <span class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</span>[<span class="extype" name="firrtl.options.Phase">Phase</span>], <span class="extype" name="firrtl.options.TransformLike">TransformLike</span>[<span class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</span>], <span class="extype" name="logger.LazyLogging">LazyLogging</span>, <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="firrtl.options.PreservesAll">PreservesAll</span>[<span class="extype" name="firrtl.options.Phase">Phase</span>], <span class="extype" name="firrtl.options.Stage">Stage</span>, <span class="extype" name="firrtl.options.Phase">Phase</span>, <span class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</span>[<span class="extype" name="firrtl.options.Phase">Phase</span>], <span class="extype" name="firrtl.options.TransformLike">TransformLike</span>[<span class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</span>], <span class="extype" name="logger.LazyLogging">LazyLogging</span>, <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div></div>
         
 
@@ -266,26 +268,7 @@ and the aggregate types <a href="../Bundle.html" class="extype" name="chisel3.Bu
     </li></ol>
             </div>
 
-        <div id="types" class="types members">
-              <h3>Type Members</h3>
-              <ol><li name="firrtl.options.DependencyAPI.Dependency" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="Dependency=Class[_&lt;:A]"></a><a id="Dependency:Dependency"></a>
-      <span class="permalink">
-      <a href="../../chisel3/stage/ChiselStage.html#Dependency=Class[_&lt;:A]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">type</span>
-      </span>
-      <span class="symbol">
-        <span class="name">Dependency</span><span class="result alias"> = <span class="extype" name="scala.Predef.Class">Class</span>[_ &lt;: <span class="extype" name="firrtl.options.Phase">Phase</span>]</span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DependencyAPI</dd></dl></div>
-    </li></ol>
-            </div>
+        
 
         
 
@@ -304,7 +287,7 @@ and the aggregate types <a href="../Bundle.html" class="extype" name="chisel3.Bu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -320,7 +303,7 @@ and the aggregate types <a href="../Bundle.html" class="extype" name="chisel3.Bu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -336,7 +319,7 @@ and the aggregate types <a href="../Bundle.html" class="extype" name="chisel3.Bu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -368,7 +351,7 @@ and the aggregate types <a href="../Bundle.html" class="extype" name="chisel3.Bu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -381,9 +364,9 @@ and the aggregate types <a href="../Bundle.html" class="extype" name="chisel3.Bu
               
         </dd></dl></div>
     </li><li name="firrtl.options.DependencyAPI#dependents" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="dependents:Seq[DependencyAPI.this.Dependency]"></a><a id="dependents:Seq[Dependency]"></a>
+      <a id="dependents:Seq[firrtl.options.Dependency[A]]"></a><a id="dependents:Seq[Dependency[Phase]]"></a>
       <span class="permalink">
-      <a href="../../chisel3/stage/ChiselStage.html#dependents:Seq[DependencyAPI.this.Dependency]" title="Permalink">
+      <a href="../../chisel3/stage/ChiselStage.html#dependents:Seq[firrtl.options.Dependency[A]]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -392,10 +375,61 @@ and the aggregate types <a href="../Bundle.html" class="extype" name="chisel3.Bu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">dependents</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="#Dependency=Class[_&lt;:A]" class="extmbr" name="chisel3.stage.ChiselStage.Dependency">Dependency</a>]</span>
+        <span class="name">dependents</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="firrtl.options.Dependency">Dependency</span>[<span class="extype" name="firrtl.options.Phase">Phase</span>]]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DependencyAPI</dd></dl></div>
+    </li><li name="chisel3.stage.ChiselStage#emitChirrtl" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="emitChirrtl(gen:=&gt;chisel3.RawModule,args:Array[String],annotations:firrtl.AnnotationSeq):String"></a><a id="emitChirrtl(⇒RawModule,Array[String],AnnotationSeq):String"></a>
+      <span class="permalink">
+      <a href="../../chisel3/stage/ChiselStage.html#emitChirrtl(gen:=&gt;chisel3.RawModule,args:Array[String],annotations:firrtl.AnnotationSeq):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">emitChirrtl</span><span class="params">(<span name="gen">gen: ⇒ <a href="../RawModule.html" class="extype" name="chisel3.RawModule">RawModule</a></span>, <span name="args">args: <a href="https://www.scala-lang.org/api/2.12.11/scala/Array.html#scala.Array" class="extype" name="scala.Array">Array</a>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Array.empty</span></span>, <span name="annotations">annotations: <span class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</span> = <span class="symbol">Seq.empty</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Convert a Chisel module to a CHIRRTL string</p><div class="fullcomment"><div class="comment cmt"><p>Convert a Chisel module to a CHIRRTL string</p></div><dl class="paramcmts block"><dt class="param">gen</dt><dd class="cmt"><p>a call-by-name Chisel module</p></dd><dt class="param">args</dt><dd class="cmt"><p>additional command line arguments to pass to Chisel
+param annotations additional annotations to pass to Chisel</p></dd><dt>returns</dt><dd class="cmt"><p>a string containing the Verilog output</p></dd></dl></div>
+    </li><li name="chisel3.stage.ChiselStage#emitFirrtl" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="emitFirrtl(gen:=&gt;chisel3.RawModule,args:Array[String],annotations:firrtl.AnnotationSeq):String"></a><a id="emitFirrtl(⇒RawModule,Array[String],AnnotationSeq):String"></a>
+      <span class="permalink">
+      <a href="../../chisel3/stage/ChiselStage.html#emitFirrtl(gen:=&gt;chisel3.RawModule,args:Array[String],annotations:firrtl.AnnotationSeq):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">emitFirrtl</span><span class="params">(<span name="gen">gen: ⇒ <a href="../RawModule.html" class="extype" name="chisel3.RawModule">RawModule</a></span>, <span name="args">args: <a href="https://www.scala-lang.org/api/2.12.11/scala/Array.html#scala.Array" class="extype" name="scala.Array">Array</a>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Array.empty</span></span>, <span name="annotations">annotations: <span class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</span> = <span class="symbol">Seq.empty</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Convert a Chisel module to a FIRRTL string</p><div class="fullcomment"><div class="comment cmt"><p>Convert a Chisel module to a FIRRTL string</p></div><dl class="paramcmts block"><dt class="param">gen</dt><dd class="cmt"><p>a call-by-name Chisel module</p></dd><dt class="param">args</dt><dd class="cmt"><p>additional command line arguments to pass to Chisel
+param annotations additional annotations to pass to Chisel</p></dd><dt>returns</dt><dd class="cmt"><p>a string containing the Verilog output</p></dd></dl></div>
+    </li><li name="chisel3.stage.ChiselStage#emitVerilog" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="emitVerilog(gen:=&gt;chisel3.RawModule,args:Array[String],annotations:firrtl.AnnotationSeq):String"></a><a id="emitVerilog(⇒RawModule,Array[String],AnnotationSeq):String"></a>
+      <span class="permalink">
+      <a href="../../chisel3/stage/ChiselStage.html#emitVerilog(gen:=&gt;chisel3.RawModule,args:Array[String],annotations:firrtl.AnnotationSeq):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">emitVerilog</span><span class="params">(<span name="gen">gen: ⇒ <a href="../RawModule.html" class="extype" name="chisel3.RawModule">RawModule</a></span>, <span name="args">args: <a href="https://www.scala-lang.org/api/2.12.11/scala/Array.html#scala.Array" class="extype" name="scala.Array">Array</a>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Array.empty</span></span>, <span name="annotations">annotations: <span class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</span> = <span class="symbol">Seq.empty</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Convert a Chisel module to Verilog</p><div class="fullcomment"><div class="comment cmt"><p>Convert a Chisel module to Verilog</p></div><dl class="paramcmts block"><dt class="param">gen</dt><dd class="cmt"><p>a call-by-name Chisel module</p></dd><dt class="param">args</dt><dd class="cmt"><p>additional command line arguments to pass to Chisel
+param annotations additional annotations to pass to Chisel</p></dd><dt>returns</dt><dd class="cmt"><p>a string containing the Verilog output</p></dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -408,7 +442,7 @@ and the aggregate types <a href="../Bundle.html" class="extype" name="chisel3.Bu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -424,7 +458,7 @@ and the aggregate types <a href="../Bundle.html" class="extype" name="chisel3.Bu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -440,7 +474,7 @@ and the aggregate types <a href="../Bundle.html" class="extype" name="chisel3.Bu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">execute</span><span class="params">(<span name="args">args: <a href="https://www.scala-lang.org/api/2.12.10/scala/Array.html#scala.Array" class="extype" name="scala.Array">Array</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="annotations">annotations: <span class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</span></span>)</span><span class="result">: <span class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</span></span>
+        <span class="name">execute</span><span class="params">(<span name="args">args: <a href="https://www.scala-lang.org/api/2.12.11/scala/Array.html#scala.Array" class="extype" name="scala.Array">Array</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="annotations">annotations: <span class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</span></span>)</span><span class="result">: <span class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Stage</dd></dl></div>
@@ -456,7 +490,7 @@ and the aggregate types <a href="../Bundle.html" class="extype" name="chisel3.Bu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -497,7 +531,7 @@ and the aggregate types <a href="../Bundle.html" class="extype" name="chisel3.Bu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
@@ -512,11 +546,11 @@ and the aggregate types <a href="../Bundle.html" class="extype" name="chisel3.Bu
       </a>
     </span>
       <span class="modifier_kind">
-        <span class="modifier"></span>
+        <span class="modifier">final </span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">invalidates</span><span class="params">(<span name="a">a: <span class="extype" name="firrtl.options.Phase">Phase</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">invalidates</span><span class="params">(<span name="a">a: <span class="extype" name="firrtl.options.Phase">Phase</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>PreservesAll</dd></dl></div>
@@ -532,11 +566,11 @@ and the aggregate types <a href="../Bundle.html" class="extype" name="chisel3.Bu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="logger.LazyLogging#logger" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="logger.LazyLogging#logger" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="logger:logger.Logger"></a><a id="logger:Logger"></a>
       <span class="permalink">
       <a href="../../chisel3/stage/ChiselStage.html#logger:logger.Logger" title="Permalink">
@@ -551,7 +585,7 @@ and the aggregate types <a href="../Bundle.html" class="extype" name="chisel3.Bu
         <span class="name">logger</span><span class="result">: <span class="extype" name="logger.Logger">Logger</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>LazyLogging</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>LazyLogging</dd></dl></div>
     </li><li name="firrtl.options.Phase#name" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="name:String"></a>
       <span class="permalink">
@@ -580,7 +614,7 @@ and the aggregate types <a href="../Bundle.html" class="extype" name="chisel3.Bu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -596,7 +630,7 @@ and the aggregate types <a href="../Bundle.html" class="extype" name="chisel3.Bu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -615,17 +649,17 @@ and the aggregate types <a href="../Bundle.html" class="extype" name="chisel3.Bu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="firrtl.options.DependencyAPI#prerequisites" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="prerequisites:Seq[DependencyAPI.this.Dependency]"></a><a id="prerequisites:Seq[Dependency]"></a>
+    </li><li name="firrtl.options.DependencyAPI#optionalPrerequisites" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="optionalPrerequisites:Seq[firrtl.options.Dependency[A]]"></a><a id="optionalPrerequisites:Seq[Dependency[Phase]]"></a>
       <span class="permalink">
-      <a href="../../chisel3/stage/ChiselStage.html#prerequisites:Seq[DependencyAPI.this.Dependency]" title="Permalink">
+      <a href="../../chisel3/stage/ChiselStage.html#optionalPrerequisites:Seq[firrtl.options.Dependency[A]]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -634,7 +668,23 @@ and the aggregate types <a href="../Bundle.html" class="extype" name="chisel3.Bu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">prerequisites</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="#Dependency=Class[_&lt;:A]" class="extmbr" name="chisel3.stage.ChiselStage.Dependency">Dependency</a>]</span>
+        <span class="name">optionalPrerequisites</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="firrtl.options.Dependency">Dependency</span>[<span class="extype" name="firrtl.options.Phase">Phase</span>]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DependencyAPI</dd></dl></div>
+    </li><li name="firrtl.options.DependencyAPI#prerequisites" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="prerequisites:Seq[firrtl.options.Dependency[A]]"></a><a id="prerequisites:Seq[Dependency[Phase]]"></a>
+      <span class="permalink">
+      <a href="../../chisel3/stage/ChiselStage.html#prerequisites:Seq[firrtl.options.Dependency[A]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">prerequisites</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="firrtl.options.Dependency">Dependency</span>[<span class="extype" name="firrtl.options.Phase">Phase</span>]]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DependencyAPI</dd></dl></div>
@@ -687,9 +737,9 @@ and the aggregate types <a href="../Bundle.html" class="extype" name="chisel3.Bu
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="chisel3.stage.ChiselStage#targets" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="targets:Seq[firrtl.options.PhaseManager.PhaseDependency]"></a><a id="targets:Seq[PhaseDependency]"></a>
+      <a id="targets:Seq[firrtl.options.Dependency[firrtl.options.Phase]]"></a><a id="targets:Seq[Dependency[Phase]]"></a>
       <span class="permalink">
-      <a href="../../chisel3/stage/ChiselStage.html#targets:Seq[firrtl.options.PhaseManager.PhaseDependency]" title="Permalink">
+      <a href="../../chisel3/stage/ChiselStage.html#targets:Seq[firrtl.options.Dependency[firrtl.options.Phase]]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -698,7 +748,7 @@ and the aggregate types <a href="../Bundle.html" class="extype" name="chisel3.Bu
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">targets</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="firrtl.options.PhaseManager.PhaseDependency">PhaseDependency</span>]</span>
+        <span class="name">targets</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="firrtl.options.Dependency">Dependency</span>[<span class="extype" name="firrtl.options.Phase">Phase</span>]]</span>
       </span>
       
       
@@ -746,7 +796,7 @@ and the aggregate types <a href="../Bundle.html" class="extype" name="chisel3.Bu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -768,7 +818,7 @@ and the aggregate types <a href="../Bundle.html" class="extype" name="chisel3.Bu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -790,7 +840,7 @@ and the aggregate types <a href="../Bundle.html" class="extype" name="chisel3.Bu
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -825,9 +875,9 @@ and the aggregate types <a href="../Bundle.html" class="extype" name="chisel3.Bu
             </div><div class="parent" name="logger.LazyLogging">
               <h3>Inherited from <span class="extype" name="logger.LazyLogging">LazyLogging</span></h3>
             </div><div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
             </div>
         
         </div>

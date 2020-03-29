@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.2.4 - chisel3.experimental.ChiselRange</title>
-          <meta name="description" content="chisel3 3.2.4 - chisel3.experimental.ChiselRange" />
-          <meta name="keywords" content="chisel3 3.2.4 chisel3.experimental.ChiselRange" />
+          <title>chisel3 3.3.0-RC1 - chisel3.experimental.ChiselRange</title>
+          <meta name="description" content="chisel3 3.3.0 - RC1 - chisel3.experimental.ChiselRange" />
+          <meta name="keywords" content="chisel3 3.3.0 RC1 chisel3.experimental.ChiselRange" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.2.4</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.3.0-RC1</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -169,12 +169,24 @@ non-experimental, you must explicitly import this package to use its contents.
                         <a href="FixedPoint.html" title="A sealed class representing a fixed point number that has a bit width and a binary point The width and binary point may be inferred.">FixedPoint</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
+                        <a class="trait" href="HasBinaryPoint.html" title="Chisel types that have binary points support retrieving literal values as Double or BigDecimal"></a>
+                        <a href="HasBinaryPoint.html" title="Chisel types that have binary points support retrieving literal values as Double or BigDecimal">HasBinaryPoint</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
                         <a class="object" href="IO$.html" title=""></a>
                         <a href="IO$.html" title="">IO</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="class" href="IntParam.html" title=""></a>
                         <a href="IntParam.html" title="">IntParam</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="Interval$.html" title="Factory and convenience methods for the Interval class IMPORTANT: The API provided here is experimental and may change in the future."></a>
+                        <a class="class" href="Interval.html" title="A sealed class representing a fixed point number that has a range, an additional parameter that can determine a minimum and maximum supported value."></a>
+                        <a href="Interval.html" title="A sealed class representing a fixed point number that has a range, an additional parameter that can determine a minimum and maximum supported value.">Interval</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="package$$NoChiselNamePrefix.html" title="Do not name instances of this type in chiselName"></a>
+                        <a href="package$$NoChiselNamePrefix.html" title="Do not name instances of this type in chiselName">NoChiselNamePrefix</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="class" href="Param.html" title="Parameters for BlackBoxes"></a>
@@ -205,8 +217,8 @@ non-experimental, you must explicitly import this package to use its contents.
                         <a href="attach$.html" title="">attach</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="class" href="package$$chiselName.html" title=""></a>
-                        <a href="package$$chiselName.html" title="">chiselName</a>
+                        <a class="class" href="package$$chiselName.html" title="Experimental macro for naming Chisel hardware values"></a>
+                        <a href="package$$chiselName.html" title="Experimental macro for naming Chisel hardware values">chiselName</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="object" href="doNotDedup$.html" title="Marks that a module to be ignored in Dedup Transform in Firrtl pass"></a>
@@ -242,16 +254,16 @@ non-experimental, you must explicitly import this package to use its contents.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">ChiselRange</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyVal.html#scala.AnyVal" class="extype" name="scala.AnyVal">AnyVal</a></span>
+        <span class="name">ChiselRange</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyVal.html#scala.AnyVal" class="extype" name="scala.AnyVal">AnyVal</a></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.2.4//chiselFrontend/src/main/scala/chisel3/experimental/package.scala" target="_blank">package.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.3.0-RC1//core/src/main/scala/chisel3/experimental/package.scala" target="_blank">package.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="https://www.scala-lang.org/api/2.12.10/scala/AnyVal.html#scala.AnyVal" class="extype" name="scala.AnyVal">AnyVal</a>, <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="https://www.scala-lang.org/api/2.12.11/scala/AnyVal.html#scala.AnyVal" class="extype" name="scala.AnyVal">AnyVal</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div></div>
         
 
@@ -309,7 +321,7 @@ non-experimental, you must explicitly import this package to use its contents.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">ChiselRange</span><span class="params">(<span name="sc">sc: <a href="https://www.scala-lang.org/api/2.12.10/scala/StringContext.html#scala.StringContext" class="extype" name="scala.StringContext">StringContext</a></span>)</span>
+        <span class="name">ChiselRange</span><span class="params">(<span name="sc">sc: <a href="https://www.scala-lang.org/api/2.12.11/scala/StringContext.html#scala.StringContext" class="extype" name="scala.StringContext">StringContext</a></span>)</span>
       </span>
       
       
@@ -335,7 +347,7 @@ non-experimental, you must explicitly import this package to use its contents.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
@@ -351,7 +363,7 @@ non-experimental, you must explicitly import this package to use its contents.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
@@ -367,7 +379,7 @@ non-experimental, you must explicitly import this package to use its contents.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
@@ -399,7 +411,7 @@ non-experimental, you must explicitly import this package to use its contents.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Predef.Class">Class</span>[_ &lt;: <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyVal.html#scala.AnyVal" class="extype" name="scala.AnyVal">AnyVal</a>]</span>
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Predef.Class">Class</span>[_ &lt;: <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyVal.html#scala.AnyVal" class="extype" name="scala.AnyVal">AnyVal</a>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyVal → Any</dd></dl></div>
@@ -415,14 +427,14 @@ non-experimental, you must explicitly import this package to use its contents.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="chisel3.experimental.ChiselRange#range" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="range(args:Any*):(chisel3.internal.firrtl.NumericBound[Int],chisel3.internal.firrtl.NumericBound[Int])"></a><a id="range(Any*):(NumericBound[Int],NumericBound[Int])"></a>
+      <a id="range(args:Any*):chisel3.internal.firrtl.IntervalRange"></a><a id="range(Any*):IntervalRange"></a>
       <span class="permalink">
-      <a href="../../chisel3/experimental/package$$ChiselRange.html#range(args:Any*):(chisel3.internal.firrtl.NumericBound[Int],chisel3.internal.firrtl.NumericBound[Int])" title="Permalink">
+      <a href="../../chisel3/experimental/package$$ChiselRange.html#range(args:Any*):chisel3.internal.firrtl.IntervalRange" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -431,7 +443,7 @@ non-experimental, you must explicitly import this package to use its contents.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">range</span><span class="params">(<span name="args">args: <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a>*</span>)</span><span class="result">: (<span class="extype" name="chisel3.internal.firrtl.NumericBound">NumericBound</span>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>], <span class="extype" name="chisel3.internal.firrtl.NumericBound">NumericBound</span>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>])</span>
+        <span class="name">range</span><span class="params">(<span name="args">args: <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a>*</span>)</span><span class="result">: <span class="extype" name="chisel3.internal.firrtl.IntervalRange">IntervalRange</span></span>
       </span>
       
       <p class="shortcomment cmt">Specifies a range using mathematical range notation.</p><div class="fullcomment"><div class="comment cmt"><p>Specifies a range using mathematical range notation. Variables can be interpolated using
@@ -452,7 +464,7 @@ UInt(range<span class="lit">"[0, ${myInt + 2})"</span>)</pre></li></ol>
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">sc</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/StringContext.html#scala.StringContext" class="extype" name="scala.StringContext">StringContext</a></span>
+        <span class="name">sc</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/StringContext.html#scala.StringContext" class="extype" name="scala.StringContext">StringContext</a></span>
       </span>
       
       
@@ -483,9 +495,9 @@ UInt(range<span class="lit">"[0, ${myInt + 2})"</span>)</pre></li></ol>
 
         <div id="inheritedMembers">
         <div class="parent" name="scala.AnyVal">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyVal.html#scala.AnyVal" class="extype" name="scala.AnyVal">AnyVal</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyVal.html#scala.AnyVal" class="extype" name="scala.AnyVal">AnyVal</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
             </div>
         
         </div>

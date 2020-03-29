@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.2.4 - firrtl.annotations</title>
-          <meta name="description" content="firrtl 1.2.4 - firrtl.annotations" />
-          <meta name="keywords" content="firrtl 1.2.4 firrtl.annotations" />
+          <title>firrtl 1.3.0-RC1 - firrtl.annotations</title>
+          <meta name="description" content="firrtl 1.3.0 - RC1 - firrtl.annotations" />
+          <meta name="keywords" content="firrtl 1.3.0 RC1 firrtl.annotations" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.2.4</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.3.0-RC1</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -199,6 +199,10 @@
                         <a href="GenericTarget.html" title="Represents incomplete or non-standard Targets">GenericTarget</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
+                        <a class="trait" href="HasSerializationHints.html" title=""></a>
+                        <a href="HasSerializationHints.html" title="">HasSerializationHints</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
                         <a class="class" href="InstanceTarget.html" title="Points to an instance declaration of a module (termed an ofModule)"></a>
                         <a href="InstanceTarget.html" title="Points to an instance declaration of a module (termed an ofModule)">InstanceTarget</a>
                       </li><li class="current-entities indented2">
@@ -259,6 +263,10 @@
                         <a href="NoTargetAnnotation.html" title="If an Annotation does not target any Named thing in the circuit, then all updates just return the Annotation itself">NoTargetAnnotation</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
+                        <a class="class" href="PresetAnnotation.html" title="Transform all registers connected to the targeted AsyncReset tree into bitstream preset registers Impacts all registers connected to any child (cross module) of the target AsyncReset"></a>
+                        <a href="PresetAnnotation.html" title="Transform all registers connected to the targeted AsyncReset tree into bitstream preset registers Impacts all registers connected to any child (cross module) of the target AsyncReset">PresetAnnotation</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
                         <a class="class" href="ReferenceTarget.html" title="Target pointing to a declared named component in a firrtl.ir.DefModule This includes: firrtl.ir.Port, firrtl.ir.DefWire, firrtl.ir.DefRegister, firrtl.ir.DefInstance, firrtl.ir.DefMemory, firrtl.ir.DefNode"></a>
                         <a href="ReferenceTarget.html" title="Target pointing to a declared named component in a firrtl.ir.DefModule This includes: firrtl.ir.Port, firrtl.ir.DefWire, firrtl.ir.DefRegister, firrtl.ir.DefInstance, firrtl.ir.DefMemory, firrtl.ir.DefNode">ReferenceTarget</a>
                       </li><li class="current-entities indented2">
@@ -306,6 +314,22 @@
       </span>
       <span class="symbol">
         <a title="" href="../checks/index.html"><span class="name">checks</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
+    </li><li name="firrtl.constraint" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="constraint"></a><a id="constraint:constraint"></a>
+      <span class="permalink">
+      <a href="../../firrtl/constraint/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../constraint/index.html"><span class="name">constraint</span></a>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
@@ -533,7 +557,7 @@ primarily consists of:</p><ul><li><a href="../stage/FirrtlStage.html" class="ext
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="Base type of auxiliary information" href="Annotation.html"><span class="name">Annotation</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a></span>
+        <a title="Base type of auxiliary information" href="Annotation.html"><span class="name">Annotation</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a></span>
       </span>
       
       <p class="shortcomment cmt">Base type of auxiliary information</p>
@@ -549,7 +573,7 @@ primarily consists of:</p><ul><li><a href="../stage/FirrtlStage.html" class="ext
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="AnnotationClassNotFoundException.html"><span class="name">AnnotationClassNotFoundException</span></a><span class="params">(<span name="className">className: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="../FirrtlUserException.html" class="extype" name="firrtl.FirrtlUserException">FirrtlUserException</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="AnnotationClassNotFoundException.html"><span class="name">AnnotationClassNotFoundException</span></a><span class="params">(<span name="className">className: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="../FirrtlUserException.html" class="extype" name="firrtl.FirrtlUserException">FirrtlUserException</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -565,7 +589,7 @@ primarily consists of:</p><ul><li><a href="../stage/FirrtlStage.html" class="ext
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="AnnotationException.html"><span class="name">AnnotationException</span></a><span class="params">(<span name="message">message: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Exception">Exception</span> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="AnnotationException.html"><span class="name">AnnotationException</span></a><span class="params">(<span name="message">message: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Exception">Exception</span> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -581,7 +605,23 @@ primarily consists of:</p><ul><li><a href="../stage/FirrtlStage.html" class="ext
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="AnnotationFileNotFoundException.html"><span class="name">AnnotationFileNotFoundException</span></a><span class="params">(<span name="file">file: <span class="extype" name="java.io.File">File</span></span>)</span><span class="result"> extends <a href="../FirrtlUserException.html" class="extype" name="firrtl.FirrtlUserException">FirrtlUserException</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="AnnotationFileNotFoundException.html"><span class="name">AnnotationFileNotFoundException</span></a><span class="params">(<span name="file">file: <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html#java.io.File" class="extype" name="java.io.File">File</a></span>)</span><span class="result"> extends <a href="../FirrtlUserException.html" class="extype" name="firrtl.FirrtlUserException">FirrtlUserException</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      
+      
+    </li><li name="firrtl.annotations.CircuitName" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CircuitNameextendsNamedwithProductwithSerializable"></a><a id="CircuitName:CircuitName"></a>
+      <span class="permalink">
+      <a href="../../firrtl/annotations/CircuitName.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="CircuitName.html"><span class="name">CircuitName</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="Named.html" class="extype" name="firrtl.annotations.Named">Named</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -597,7 +637,7 @@ primarily consists of:</p><ul><li><a href="../stage/FirrtlStage.html" class="ext
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="Target pointing to a FIRRTL firrtl.ir.Circuit" href="CircuitTarget.html"><span class="name">CircuitTarget</span></a><span class="params">(<span name="circuit">circuit: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="CompleteTarget.html" class="extype" name="firrtl.annotations.CompleteTarget">CompleteTarget</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="Target pointing to a FIRRTL firrtl.ir.Circuit" href="CircuitTarget.html"><span class="name">CircuitTarget</span></a><span class="params">(<span name="circuit">circuit: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="CompleteTarget.html" class="extype" name="firrtl.annotations.CompleteTarget">CompleteTarget</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       <p class="shortcomment cmt">Target pointing to a FIRRTL <a href="../ir/Circuit.html" class="extype" name="firrtl.ir.Circuit">firrtl.ir.Circuit</a></p><div class="fullcomment"><div class="comment cmt"><p>Target pointing to a FIRRTL <a href="../ir/Circuit.html" class="extype" name="firrtl.ir.Circuit">firrtl.ir.Circuit</a></p></div><dl class="paramcmts block"><dt class="param">circuit</dt><dd class="cmt"><p>Name of a FIRRTL circuit</p></dd></dl></div>
@@ -619,6 +659,22 @@ primarily consists of:</p><ul><li><a href="../stage/FirrtlStage.html" class="ext
       <p class="shortcomment cmt">Concretely points to a FIRRTL target, no generic selectors
 IsLegal
 </p>
+    </li><li name="firrtl.annotations.ComponentName" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ComponentNameextendsNamedwithProductwithSerializable"></a><a id="ComponentName:ComponentName"></a>
+      <span class="permalink">
+      <a href="../../firrtl/annotations/ComponentName.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ComponentName.html"><span class="name">ComponentName</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="module">module: <a href="ModuleName.html" class="extype" name="firrtl.annotations.ModuleName">ModuleName</a></span>)</span><span class="result"> extends <a href="Named.html" class="extype" name="firrtl.annotations.Named">Named</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      
+      
     </li><li name="firrtl.annotations.DeletedAnnotation" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="DeletedAnnotationextendsNoTargetAnnotationwithProductwithSerializable"></a><a id="DeletedAnnotation:DeletedAnnotation"></a>
       <span class="permalink">
@@ -631,7 +687,7 @@ IsLegal
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="DeletedAnnotation.html"><span class="name">DeletedAnnotation</span></a><span class="params">(<span name="xFormName">xFormName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="anno">anno: <a href="Annotation.html" class="extype" name="firrtl.annotations.Annotation">Annotation</a></span>)</span><span class="result"> extends <a href="NoTargetAnnotation.html" class="extype" name="firrtl.annotations.NoTargetAnnotation">NoTargetAnnotation</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="DeletedAnnotation.html"><span class="name">DeletedAnnotation</span></a><span class="params">(<span name="xFormName">xFormName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="anno">anno: <a href="Annotation.html" class="extype" name="firrtl.annotations.Annotation">Annotation</a></span>)</span><span class="result"> extends <a href="NoTargetAnnotation.html" class="extype" name="firrtl.annotations.NoTargetAnnotation">NoTargetAnnotation</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -647,10 +703,26 @@ IsLegal
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="Represents incomplete or non-standard Targets" href="GenericTarget.html"><span class="name">GenericTarget</span></a><span class="params">(<span name="circuitOpt">circuitOpt: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="moduleOpt">moduleOpt: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="tokens">tokens: <span class="extype" name="scala.Vector">Vector</span>[<a href="TargetToken.html" class="extype" name="firrtl.annotations.TargetToken">TargetToken</a>]</span>)</span><span class="result"> extends <a href="Target.html" class="extype" name="firrtl.annotations.Target">Target</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="Represents incomplete or non-standard Targets" href="GenericTarget.html"><span class="name">GenericTarget</span></a><span class="params">(<span name="circuitOpt">circuitOpt: <a href="https://www.scala-lang.org/api/2.12.11/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="moduleOpt">moduleOpt: <a href="https://www.scala-lang.org/api/2.12.11/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="tokens">tokens: <span class="extype" name="scala.Vector">Vector</span>[<a href="TargetToken.html" class="extype" name="firrtl.annotations.TargetToken">TargetToken</a>]</span>)</span><span class="result"> extends <a href="Target.html" class="extype" name="firrtl.annotations.Target">Target</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       <p class="shortcomment cmt">Represents incomplete or non-standard <a href="Target.html" class="extype" name="firrtl.annotations.Target">Target</a>s</p><div class="fullcomment"><div class="comment cmt"><p>Represents incomplete or non-standard <a href="Target.html" class="extype" name="firrtl.annotations.Target">Target</a>s</p></div><dl class="paramcmts block"><dt class="param">circuitOpt</dt><dd class="cmt"><p>Optional circuit name</p></dd><dt class="param">moduleOpt</dt><dd class="cmt"><p>Optional module name</p></dd><dt class="param">tokens</dt><dd class="cmt"><p><a href="TargetToken.html" class="extype" name="firrtl.annotations.TargetToken">TargetToken</a>s to represent the target in a circuit and module</p></dd></dl></div>
+    </li><li name="firrtl.annotations.HasSerializationHints" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="HasSerializationHintsextendsAnyRef"></a><a id="HasSerializationHints:HasSerializationHints"></a>
+      <span class="permalink">
+      <a href="../../firrtl/annotations/HasSerializationHints.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="HasSerializationHints.html"><span class="name">HasSerializationHints</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      
     </li><li name="firrtl.annotations.InstanceTarget" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="InstanceTargetextendsIsModulewithIsComponentwithProductwithSerializable"></a><a id="InstanceTarget:InstanceTarget"></a>
       <span class="permalink">
@@ -663,7 +735,7 @@ IsLegal
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="Points to an instance declaration of a module (termed an ofModule)" href="InstanceTarget.html"><span class="name">InstanceTarget</span></a><span class="params">(<span name="circuit">circuit: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="module">module: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="path">path: <span class="extype" name="scala.Seq">Seq</span>[(<a href="TargetToken$$Instance.html" class="extype" name="firrtl.annotations.TargetToken.Instance">Instance</a>, <a href="TargetToken$$OfModule.html" class="extype" name="firrtl.annotations.TargetToken.OfModule">OfModule</a>)]</span>, <span name="instance">instance: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="ofModule">ofModule: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="IsModule.html" class="extype" name="firrtl.annotations.IsModule">IsModule</a> with <a href="IsComponent.html" class="extype" name="firrtl.annotations.IsComponent">IsComponent</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="Points to an instance declaration of a module (termed an ofModule)" href="InstanceTarget.html"><span class="name">InstanceTarget</span></a><span class="params">(<span name="circuit">circuit: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="module">module: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="path">path: <span class="extype" name="scala.Seq">Seq</span>[(<a href="TargetToken$$Instance.html" class="extype" name="firrtl.annotations.TargetToken.Instance">Instance</a>, <a href="TargetToken$$OfModule.html" class="extype" name="firrtl.annotations.TargetToken.OfModule">OfModule</a>)]</span>, <span name="instance">instance: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="ofModule">ofModule: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="IsModule.html" class="extype" name="firrtl.annotations.IsModule">IsModule</a> with <a href="IsComponent.html" class="extype" name="firrtl.annotations.IsComponent">IsComponent</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       <p class="shortcomment cmt">Points to an instance declaration of a module (termed an ofModule)</p><div class="fullcomment"><div class="comment cmt"><p>Points to an instance declaration of a module (termed an ofModule)</p></div><dl class="paramcmts block"><dt class="param">circuit</dt><dd class="cmt"><p>Encapsulating circuit</p></dd><dt class="param">module</dt><dd class="cmt"><p>Root module (e.g. the base module of this target)</p></dd><dt class="param">path</dt><dd class="cmt"><p>Path through instance/ofModules</p></dd><dt class="param">instance</dt><dd class="cmt"><p>Name of the instance</p></dd><dt class="param">ofModule</dt><dd class="cmt"><p>Name of the instance's module</p></dd></dl></div>
@@ -679,7 +751,7 @@ IsLegal
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="InvalidAnnotationFileException.html"><span class="name">InvalidAnnotationFileException</span></a><span class="params">(<span name="file">file: <span class="extype" name="java.io.File">File</span></span>, <span name="cause">cause: <a href="../FirrtlUserException.html" class="extype" name="firrtl.FirrtlUserException">FirrtlUserException</a> = <span class="symbol">null</span></span>)</span><span class="result"> extends <a href="../FirrtlUserException.html" class="extype" name="firrtl.FirrtlUserException">FirrtlUserException</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="InvalidAnnotationFileException.html"><span class="name">InvalidAnnotationFileException</span></a><span class="params">(<span name="file">file: <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html#java.io.File" class="extype" name="java.io.File">File</a></span>, <span name="cause">cause: <a href="../FirrtlUserException.html" class="extype" name="firrtl.FirrtlUserException">FirrtlUserException</a> = <span class="symbol">null</span></span>)</span><span class="result"> extends <a href="../FirrtlUserException.html" class="extype" name="firrtl.FirrtlUserException">FirrtlUserException</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -695,7 +767,7 @@ IsLegal
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="InvalidAnnotationJSONException.html"><span class="name">InvalidAnnotationJSONException</span></a><span class="params">(<span name="msg">msg: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="../FirrtlUserException.html" class="extype" name="firrtl.FirrtlUserException">FirrtlUserException</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="InvalidAnnotationJSONException.html"><span class="name">InvalidAnnotationJSONException</span></a><span class="params">(<span name="msg">msg: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="../FirrtlUserException.html" class="extype" name="firrtl.FirrtlUserException">FirrtlUserException</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -763,7 +835,7 @@ Concrete Subclasses are: <a href="ModuleTarget.html" class="extype" name="firrtl
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="LegacyAnnotation.html"><span class="name">LegacyAnnotation</span></a><span class="result"> extends <a href="SingleTargetAnnotation.html" class="extype" name="firrtl.annotations.SingleTargetAnnotation">SingleTargetAnnotation</a>[<a href="Named.html" class="extype" name="firrtl.annotations.Named">Named</a>] with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="LegacyAnnotation.html"><span class="name">LegacyAnnotation</span></a><span class="result"> extends <a href="SingleTargetAnnotation.html" class="extype" name="firrtl.annotations.SingleTargetAnnotation">SingleTargetAnnotation</a>[<a href="Named.html" class="extype" name="firrtl.annotations.Named">Named</a>] with <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -779,7 +851,7 @@ Concrete Subclasses are: <a href="ModuleTarget.html" class="extype" name="firrtl
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="Firrtl implementation for load memory" href="LoadMemoryAnnotation.html"><span class="name">LoadMemoryAnnotation</span></a><span class="params">(<span name="target">target: <a href="ComponentName.html" class="extype" name="firrtl.annotations.ComponentName">ComponentName</a></span>, <span name="fileName">fileName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="hexOrBinary">hexOrBinary: <a href="MemoryLoadFileType.html" class="extype" name="firrtl.annotations.MemoryLoadFileType">MemoryLoadFileType</a> = <span class="symbol"><span class="name"><a href="MemoryLoadFileType$.html">MemoryLoadFileType.Hex</a></span></span></span>, <span name="originalMemoryNameOpt">originalMemoryNameOpt: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">None</span></span>)</span><span class="result"> extends <a href="SingleTargetAnnotation.html" class="extype" name="firrtl.annotations.SingleTargetAnnotation">SingleTargetAnnotation</a>[<a href="Named.html" class="extype" name="firrtl.annotations.Named">Named</a>] with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="Firrtl implementation for load memory" href="LoadMemoryAnnotation.html"><span class="name">LoadMemoryAnnotation</span></a><span class="params">(<span name="target">target: <a href="ComponentName.html" class="extype" name="firrtl.annotations.ComponentName">ComponentName</a></span>, <span name="fileName">fileName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="hexOrBinary">hexOrBinary: <a href="MemoryLoadFileType.html" class="extype" name="firrtl.annotations.MemoryLoadFileType">MemoryLoadFileType</a> = <span class="symbol"><span class="name"><a href="MemoryLoadFileType$.html">MemoryLoadFileType.Hex</a></span></span></span>, <span name="originalMemoryNameOpt">originalMemoryNameOpt: <a href="https://www.scala-lang.org/api/2.12.11/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">None</span></span>)</span><span class="result"> extends <a href="SingleTargetAnnotation.html" class="extype" name="firrtl.annotations.SingleTargetAnnotation">SingleTargetAnnotation</a>[<a href="Named.html" class="extype" name="firrtl.annotations.Named">Named</a>] with <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       <p class="shortcomment cmt">Firrtl implementation for load memory</p><div class="fullcomment"><div class="comment cmt"><p>Firrtl implementation for load memory</p></div><dl class="paramcmts block"><dt class="param">target</dt><dd class="cmt"><p>memory to load</p></dd><dt class="param">fileName</dt><dd class="cmt"><p>name of input file</p></dd><dt class="param">hexOrBinary</dt><dd class="cmt"><p>use <code>$readmemh</code> or <code>$readmemb</code></p></dd></dl></div>
@@ -795,10 +867,26 @@ Concrete Subclasses are: <a href="ModuleTarget.html" class="extype" name="firrtl
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Representation of the two types of readmem statements available in Verilog." href="MemoryLoadFileType.html"><span class="name">MemoryLoadFileType</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="Representation of the two types of readmem statements available in Verilog." href="MemoryLoadFileType.html"><span class="name">MemoryLoadFileType</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <p class="shortcomment cmt">Representation of the two types of <code>readmem</code> statements available in Verilog.</p>
+    </li><li name="firrtl.annotations.ModuleName" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ModuleNameextendsNamedwithProductwithSerializable"></a><a id="ModuleName:ModuleName"></a>
+      <span class="permalink">
+      <a href="../../firrtl/annotations/ModuleName.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ModuleName.html"><span class="name">ModuleName</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="circuit">circuit: <a href="CircuitName.html" class="extype" name="firrtl.annotations.CircuitName">CircuitName</a></span>)</span><span class="result"> extends <a href="Named.html" class="extype" name="firrtl.annotations.Named">Named</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      
+      
     </li><li name="firrtl.annotations.ModuleTarget" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ModuleTargetextendsIsModulewithProductwithSerializable"></a><a id="ModuleTarget:ModuleTarget"></a>
       <span class="permalink">
@@ -811,7 +899,7 @@ Concrete Subclasses are: <a href="ModuleTarget.html" class="extype" name="firrtl
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="Target pointing to a FIRRTL firrtl.ir.DefModule" href="ModuleTarget.html"><span class="name">ModuleTarget</span></a><span class="params">(<span name="circuit">circuit: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="module">module: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="IsModule.html" class="extype" name="firrtl.annotations.IsModule">IsModule</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="Target pointing to a FIRRTL firrtl.ir.DefModule" href="ModuleTarget.html"><span class="name">ModuleTarget</span></a><span class="params">(<span name="circuit">circuit: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="module">module: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="IsModule.html" class="extype" name="firrtl.annotations.IsModule">IsModule</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       <p class="shortcomment cmt">Target pointing to a FIRRTL <a href="../ir/DefModule.html" class="extype" name="firrtl.ir.DefModule">firrtl.ir.DefModule</a></p><div class="fullcomment"><div class="comment cmt"><p>Target pointing to a FIRRTL <a href="../ir/DefModule.html" class="extype" name="firrtl.ir.DefModule">firrtl.ir.DefModule</a></p></div><dl class="paramcmts block"><dt class="param">circuit</dt><dd class="cmt"><p>Circuit containing the module</p></dd><dt class="param">module</dt><dd class="cmt"><p>Name of the module</p></dd></dl></div>
@@ -831,6 +919,22 @@ Concrete Subclasses are: <a href="ModuleTarget.html" class="extype" name="firrtl
       </span>
       
       <p class="shortcomment cmt"><a href="MultiTargetAnnotation.html" class="extype" name="firrtl.annotations.MultiTargetAnnotation">MultiTargetAnnotation</a> keeps the renamed targets grouped within a single annotation.</p>
+    </li><li name="firrtl.annotations.Named" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="NamedextendsAnyRef"></a><a id="Named:Named"></a>
+      <span class="permalink">
+      <a href="../../firrtl/annotations/Named.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Named classes associate an annotation with a component in a Firrtl circuit" href="Named.html"><span class="name">Named</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Named classes associate an annotation with a component in a Firrtl circuit</p>
     </li><li name="firrtl.annotations.NoTargetAnnotation" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="NoTargetAnnotationextendsAnnotation"></a><a id="NoTargetAnnotation:NoTargetAnnotation"></a>
       <span class="permalink">
@@ -849,6 +953,26 @@ Concrete Subclasses are: <a href="ModuleTarget.html" class="extype" name="firrtl
       <p class="shortcomment cmt">If an Annotation does not target any <a href="Named.html" class="extype" name="firrtl.annotations.Named">Named</a> thing in the circuit, then all updates just
 return the Annotation itself
 </p>
+    </li><li name="firrtl.annotations.PresetAnnotation" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="PresetAnnotationextendsSingleTargetAnnotation[firrtl.annotations.ReferenceTarget]withDontTouchAllTargetswithProductwithSerializable"></a><a id="PresetAnnotation:PresetAnnotation"></a>
+      <span class="permalink">
+      <a href="../../firrtl/annotations/PresetAnnotation.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Transform all registers connected to the targeted AsyncReset tree into bitstream preset registers Impacts all registers connected to any child (cross module) of the target AsyncReset" href="PresetAnnotation.html"><span class="name">PresetAnnotation</span></a><span class="params">(<span name="target">target: <a href="ReferenceTarget.html" class="extype" name="firrtl.annotations.ReferenceTarget">ReferenceTarget</a></span>)</span><span class="result"> extends <a href="SingleTargetAnnotation.html" class="extype" name="firrtl.annotations.SingleTargetAnnotation">SingleTargetAnnotation</a>[<a href="ReferenceTarget.html" class="extype" name="firrtl.annotations.ReferenceTarget">ReferenceTarget</a>] with <a href="../transforms/DontTouchAllTargets.html" class="extype" name="firrtl.transforms.DontTouchAllTargets">DontTouchAllTargets</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Transform all registers connected to the targeted AsyncReset tree into bitstream preset registers
+Impacts all registers connected to any child (cross module) of the target AsyncReset
+</p><div class="fullcomment"><div class="comment cmt"><p>Transform all registers connected to the targeted AsyncReset tree into bitstream preset registers
+Impacts all registers connected to any child (cross module) of the target AsyncReset
+</p></div><dl class="paramcmts block"><dt class="param">target</dt><dd class="cmt"><p>ReferenceTarget to an AsyncReset</p></dd></dl></div>
     </li><li name="firrtl.annotations.ReferenceTarget" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ReferenceTargetextendsIsComponentwithProductwithSerializable"></a><a id="ReferenceTarget:ReferenceTarget"></a>
       <span class="permalink">
@@ -861,7 +985,7 @@ return the Annotation itself
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="Target pointing to a declared named component in a firrtl.ir.DefModule This includes: firrtl.ir.Port, firrtl.ir.DefWire, firrtl.ir.DefRegister, firrtl.ir.DefInstance, firrtl.ir.DefMemory, firrtl.ir.DefNode" href="ReferenceTarget.html"><span class="name">ReferenceTarget</span></a><span class="params">(<span name="circuit">circuit: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="module">module: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="path">path: <span class="extype" name="scala.Seq">Seq</span>[(<a href="TargetToken$$Instance.html" class="extype" name="firrtl.annotations.TargetToken.Instance">Instance</a>, <a href="TargetToken$$OfModule.html" class="extype" name="firrtl.annotations.TargetToken.OfModule">OfModule</a>)]</span>, <span name="ref">ref: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="component">component: <span class="extype" name="scala.Seq">Seq</span>[<a href="TargetToken.html" class="extype" name="firrtl.annotations.TargetToken">TargetToken</a>]</span>)</span><span class="result"> extends <a href="IsComponent.html" class="extype" name="firrtl.annotations.IsComponent">IsComponent</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="Target pointing to a declared named component in a firrtl.ir.DefModule This includes: firrtl.ir.Port, firrtl.ir.DefWire, firrtl.ir.DefRegister, firrtl.ir.DefInstance, firrtl.ir.DefMemory, firrtl.ir.DefNode" href="ReferenceTarget.html"><span class="name">ReferenceTarget</span></a><span class="params">(<span name="circuit">circuit: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="module">module: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="path">path: <span class="extype" name="scala.Seq">Seq</span>[(<a href="TargetToken$$Instance.html" class="extype" name="firrtl.annotations.TargetToken.Instance">Instance</a>, <a href="TargetToken$$OfModule.html" class="extype" name="firrtl.annotations.TargetToken.OfModule">OfModule</a>)]</span>, <span name="ref">ref: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="component">component: <span class="extype" name="scala.Seq">Seq</span>[<a href="TargetToken.html" class="extype" name="firrtl.annotations.TargetToken">TargetToken</a>]</span>)</span><span class="result"> extends <a href="IsComponent.html" class="extype" name="firrtl.annotations.IsComponent">IsComponent</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       <p class="shortcomment cmt">Target pointing to a declared named component in a <a href="../ir/DefModule.html" class="extype" name="firrtl.ir.DefModule">firrtl.ir.DefModule</a>
@@ -914,86 +1038,10 @@ This includes: <a href="../ir/Port.html" class="extype" name="firrtl.ir.Port">fi
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="Building block to represent a Target of a FIRRTL component" href="TargetToken.html"><span class="name">TargetToken</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="Building block to represent a Target of a FIRRTL component" href="TargetToken.html"><span class="name">TargetToken</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <p class="shortcomment cmt">Building block to represent a <a href="Target.html" class="extype" name="firrtl.annotations.Target">Target</a> of a FIRRTL component</p>
-    </li><li name="firrtl.annotations.CircuitName" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="CircuitNameextendsNamedwithProductwithSerializable"></a><a id="CircuitName:CircuitName"></a>
-      <span class="permalink">
-      <a href="../../firrtl/annotations/CircuitName.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="CircuitName.html"><span class="name deprecated" title="Deprecated: (Since version 1.2) Use Target instead, will be removed in 1.3">CircuitName</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="Named.html" class="extype" name="firrtl.annotations.Named">Named</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
-                <span class="name">@deprecated</span>
-              
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.2)</i> Use Target instead, will be removed in 1.3</p></dd></dl></div>
-    </li><li name="firrtl.annotations.ComponentName" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="ComponentNameextendsNamedwithProductwithSerializable"></a><a id="ComponentName:ComponentName"></a>
-      <span class="permalink">
-      <a href="../../firrtl/annotations/ComponentName.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="ComponentName.html"><span class="name deprecated" title="Deprecated: (Since version 1.2) Use Target instead, will be removed in 1.3">ComponentName</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="module">module: <a href="ModuleName.html" class="extype" name="firrtl.annotations.ModuleName">ModuleName</a></span>)</span><span class="result"> extends <a href="Named.html" class="extype" name="firrtl.annotations.Named">Named</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
-                <span class="name">@deprecated</span>
-              
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.2)</i> Use Target instead, will be removed in 1.3</p></dd></dl></div>
-    </li><li name="firrtl.annotations.ModuleName" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="ModuleNameextendsNamedwithProductwithSerializable"></a><a id="ModuleName:ModuleName"></a>
-      <span class="permalink">
-      <a href="../../firrtl/annotations/ModuleName.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">case class</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="ModuleName.html"><span class="name deprecated" title="Deprecated: (Since version 1.2) Use Target instead, will be removed in 1.3">ModuleName</span></a><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="circuit">circuit: <a href="CircuitName.html" class="extype" name="firrtl.annotations.CircuitName">CircuitName</a></span>)</span><span class="result"> extends <a href="Named.html" class="extype" name="firrtl.annotations.Named">Named</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
-                <span class="name">@deprecated</span>
-              
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.2)</i> Use Target instead, will be removed in 1.3</p></dd></dl></div>
-    </li><li name="firrtl.annotations.Named" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
-      <a id="NamedextendsAnyRef"></a><a id="Named:Named"></a>
-      <span class="permalink">
-      <a href="../../firrtl/annotations/Named.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">sealed </span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a title="Named classes associate an annotation with a component in a Firrtl circuit" href="Named.html"><span class="name deprecated" title="Deprecated: (Since version 1.2) Use Target instead, will be removed in 1.3">Named</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Named classes associate an annotation with a component in a Firrtl circuit</p><div class="fullcomment"><div class="comment cmt"><p>Named classes associate an annotation with a component in a Firrtl circuit</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
-                <span class="name">@deprecated</span>
-              
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.2)</i> Use Target instead, will be removed in 1.3</p></dd></dl></div>
     </li><li name="firrtl.annotations.SingleStringAnnotation" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="SingleStringAnnotationextendsNoTargetAnnotation"></a><a id="SingleStringAnnotation:SingleStringAnnotation"></a>
       <span class="permalink">
@@ -1129,7 +1177,7 @@ This includes: <a href="../ir/Port.html" class="extype" name="firrtl.ir.Port">fi
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="Object containing all TargetToken subclasses" href="TargetToken$.html"><span class="name">TargetToken</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="Object containing all TargetToken subclasses" href="TargetToken$.html"><span class="name">TargetToken</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       <p class="shortcomment cmt">Object containing all <a href="TargetToken.html" class="extype" name="firrtl.annotations.TargetToken">TargetToken</a> subclasses</p>

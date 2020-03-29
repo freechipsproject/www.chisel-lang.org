@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.2.4 - chisel3.aop</title>
-          <meta name="description" content="chisel3 3.2.4 - chisel3.aop" />
-          <meta name="keywords" content="chisel3 3.2.4 chisel3.aop" />
+          <title>chisel3 3.3.0-RC1 - chisel3.aop</title>
+          <meta name="description" content="chisel3 3.3.0 - RC1 - chisel3.aop" />
+          <meta name="keywords" content="chisel3 3.3.0 RC1 chisel3.aop" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.2.4</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.3.0-RC1</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -121,10 +121,30 @@ and the aggregate types <a href="../Bundle.html" class="extype" name="chisel3.Bu
       </span>
       
       
+    </li><li name="chisel3.aop.inspecting" visbl="pub" class="indented3 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="inspecting"></a><a id="inspecting:inspecting"></a>
+      <span class="permalink">
+      <a href="../../chisel3/aop/inspecting/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="inspecting/index.html"><span class="name">inspecting</span></a>
+      </span>
+      
+      
     </li><li class="current-entities indented2">
                         <a class="object" href="Aspect$.html" title="Holds utility functions for Aspect stuff"></a>
                         <a class="class" href="Aspect.html" title="Represents an aspect of a Chisel module, by specifying what behavior should be done to instance, via the FIRRTL Annotation Mechanism"></a>
                         <a href="Aspect.html" title="Represents an aspect of a Chisel module, by specifying what behavior should be done to instance, via the FIRRTL Annotation Mechanism">Aspect</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="AspectLibrary.html" title="Enables adding aspects to a design from the commandline, e.g."></a>
+                        <a href="AspectLibrary.html" title="Enables adding aspects to a design from the commandline, e.g.">AspectLibrary</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="object" href="Select$.html" title="Use to select Chisel components in a module, after that module has been constructed Useful for adding additional Chisel annotations or for use within an Aspect"></a>
@@ -298,6 +318,24 @@ functions
       <p class="shortcomment cmt">Represents an aspect of a Chisel module, by specifying
 what behavior should be done to instance, via the FIRRTL Annotation Mechanism</p><div class="fullcomment"><div class="comment cmt"><p>Represents an aspect of a Chisel module, by specifying
 what behavior should be done to instance, via the FIRRTL Annotation Mechanism</p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>Type of top-level module</p></dd></dl></div>
+    </li><li name="chisel3.aop.AspectLibrary" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="AspectLibraryextendsRegisteredLibrary"></a><a id="AspectLibrary:AspectLibrary"></a>
+      <span class="permalink">
+      <a href="../../chisel3/aop/AspectLibrary.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Enables adding aspects to a design from the commandline, e.g." href="AspectLibrary.html"><span class="name">AspectLibrary</span></a><span class="result"> extends <span class="extype" name="firrtl.options.RegisteredLibrary">RegisteredLibrary</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Enables adding aspects to a design from the commandline, e.g.</p><div class="fullcomment"><div class="comment cmt"><p>Enables adding aspects to a design from the commandline, e.g.
+ sbt&gt; runMain chisel3.stage.ChiselMain --module &lt;module&gt; --with-aspect &lt;aspect&gt;
+</p></div></div>
     </li></ol>
             </div>
 

@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.2.4 - firrtl.stage.phases</title>
-          <meta name="description" content="firrtl 1.2.4 - firrtl.stage.phases" />
-          <meta name="keywords" content="firrtl 1.2.4 firrtl.stage.phases" />
+          <title>firrtl 1.3.0-RC1 - firrtl.stage.phases</title>
+          <meta name="description" content="firrtl 1.3.0 - RC1 - firrtl.stage.phases" />
+          <meta name="keywords" content="firrtl 1.3.0 RC1 firrtl.stage.phases" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.2.4</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.3.0-RC1</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -139,6 +139,10 @@ primarily consists of:</p><ul><li><a href="../FirrtlStage.html" class="extype" n
                         <a class="class" href="AddImplicitOutputFile.html" title="Phase that adds an OutputFileAnnotation if one does not already exist."></a>
                         <a href="AddImplicitOutputFile.html" title="Phase that adds an OutputFileAnnotation if one does not already exist.">AddImplicitOutputFile</a>
                       </li><li class="current-entities indented3">
+                        <a class="object" href="CatchExceptions$.html" title=""></a>
+                        <a class="class" href="CatchExceptions.html" title=""></a>
+                        <a href="CatchExceptions.html" title="">CatchExceptions</a>
+                      </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="class" href="Checks.html" title="Phase that strictly validates an AnnotationSeq."></a>
                         <a href="Checks.html" title="Phase that strictly validates an AnnotationSeq.">Checks</a>
@@ -154,7 +158,23 @@ primarily consists of:</p><ul><li><a href="../FirrtlStage.html" class="extype" n
                         <span class="separator"></span>
                         <a class="class" href="WriteEmitted.html" title="Phase that writes any EmittedAnnotations in an input AnnotationSeq to one or more files."></a>
                         <a href="WriteEmitted.html" title="Phase that writes any EmittedAnnotations in an input AnnotationSeq to one or more files.">WriteEmitted</a>
-                      </li>
+                      </li><li name="firrtl.stage.transforms" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="transforms"></a><a id="transforms:transforms"></a>
+      <span class="permalink">
+      <a href="../../../firrtl/stage/transforms/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../transforms/index.html"><span class="name">transforms</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="firrtl.stage">stage</a></dd></dl></div>
+    </li>
               </ul>
             </div>
           </div>
@@ -218,7 +238,7 @@ primarily consists of:</p><ul><li><a href="../FirrtlStage.html" class="extype" n
         <div id="types" class="types members">
               <h3>Type Members</h3>
               <ol><li name="firrtl.stage.phases.AddCircuit" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="AddCircuitextendsPhase"></a><a id="AddCircuit:AddCircuit"></a>
+      <a id="AddCircuitextendsPhasewithPreservesAll[firrtl.options.Phase]"></a><a id="AddCircuit:AddCircuit"></a>
       <span class="permalink">
       <a href="../../../firrtl/stage/phases/AddCircuit.html" title="Permalink">
         <i class="material-icons"></i>
@@ -229,7 +249,7 @@ primarily consists of:</p><ul><li><a href="../FirrtlStage.html" class="extype" n
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Phase that expands FirrtlFileAnnotation/FirrtlSourceAnnotation into FirrtlCircuitAnnotations and deletes the originals." href="AddCircuit.html"><span class="name">AddCircuit</span></a><span class="result"> extends <a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a></span>
+        <a title="Phase that expands FirrtlFileAnnotation/FirrtlSourceAnnotation into FirrtlCircuitAnnotations and deletes the originals." href="AddCircuit.html"><span class="name">AddCircuit</span></a><span class="result"> extends <a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> with <a href="../../options/PreservesAll.html" class="extype" name="firrtl.options.PreservesAll">PreservesAll</a>[<a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a>]</span>
       </span>
       
       <p class="shortcomment cmt"><a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> that expands <a href="../FirrtlFileAnnotation.html" class="extype" name="firrtl.stage.FirrtlFileAnnotation">FirrtlFileAnnotation</a>/<a href="../FirrtlSourceAnnotation.html" class="extype" name="firrtl.stage.FirrtlSourceAnnotation">FirrtlSourceAnnotation</a> into
@@ -242,7 +262,7 @@ and <code>[anonymous source]</code> is used for <a href="../FirrtlSourceAnnotati
 </p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p><b>This must be run after <a href="AddDefaults.html" class="extype" name="firrtl.stage.phases.AddDefaults">AddDefaults</a> as this <a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> depends on the existence of
 an <a href="../InfoModeAnnotation.html" class="extype" name="firrtl.stage.InfoModeAnnotation">InfoModeAnnotation</a>.</b>.</p></span></dd></dl></div>
     </li><li name="firrtl.stage.phases.AddDefaults" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="AddDefaultsextendsPhase"></a><a id="AddDefaults:AddDefaults"></a>
+      <a id="AddDefaultsextendsPhasewithPreservesAll[firrtl.options.Phase]"></a><a id="AddDefaults:AddDefaults"></a>
       <span class="permalink">
       <a href="../../../firrtl/stage/phases/AddDefaults.html" title="Permalink">
         <i class="material-icons"></i>
@@ -253,14 +273,14 @@ an <a href="../InfoModeAnnotation.html" class="extype" name="firrtl.stage.InfoMo
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Phase that adds default FirrtlOption Annotations." href="AddDefaults.html"><span class="name">AddDefaults</span></a><span class="result"> extends <a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a></span>
+        <a title="Phase that adds default FirrtlOption Annotations." href="AddDefaults.html"><span class="name">AddDefaults</span></a><span class="result"> extends <a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> with <a href="../../options/PreservesAll.html" class="extype" name="firrtl.options.PreservesAll">PreservesAll</a>[<a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a>]</span>
       </span>
       
       <p class="shortcomment cmt"><a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> that adds default <a href="../FirrtlOption.html" class="extype" name="firrtl.stage.FirrtlOption">FirrtlOption</a> <a href="../../annotations/Annotation.html" class="extype" name="firrtl.annotations.Annotation">Annotation</a>s.</p><div class="fullcomment"><div class="comment cmt"><p><a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> that adds default <a href="../FirrtlOption.html" class="extype" name="firrtl.stage.FirrtlOption">FirrtlOption</a> <a href="../../annotations/Annotation.html" class="extype" name="firrtl.annotations.Annotation">Annotation</a>s.
 This is a part of the preprocessing done by <a href="../FirrtlStage.html" class="extype" name="firrtl.stage.FirrtlStage">FirrtlStage</a>.
 </p></div></div>
     </li><li name="firrtl.stage.phases.AddImplicitEmitter" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="AddImplicitEmitterextendsPhase"></a><a id="AddImplicitEmitter:AddImplicitEmitter"></a>
+      <a id="AddImplicitEmitterextendsPhasewithPreservesAll[firrtl.options.Phase]"></a><a id="AddImplicitEmitter:AddImplicitEmitter"></a>
       <span class="permalink">
       <a href="../../../firrtl/stage/phases/AddImplicitEmitter.html" title="Permalink">
         <i class="material-icons"></i>
@@ -271,13 +291,13 @@ This is a part of the preprocessing done by <a href="../FirrtlStage.html" class=
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Phase that adds a EmitCircuitAnnotation derived from a CompilerAnnotation if one does not already exist." href="AddImplicitEmitter.html"><span class="name">AddImplicitEmitter</span></a><span class="result"> extends <a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a></span>
+        <a title="Phase that adds a EmitCircuitAnnotation derived from a CompilerAnnotation if one does not already exist." href="AddImplicitEmitter.html"><span class="name">AddImplicitEmitter</span></a><span class="result"> extends <a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> with <a href="../../options/PreservesAll.html" class="extype" name="firrtl.options.PreservesAll">PreservesAll</a>[<a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a>]</span>
       </span>
       
       <p class="shortcomment cmt"><a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> that adds a <a href="../../EmitCircuitAnnotation.html" class="extype" name="firrtl.EmitCircuitAnnotation">EmitCircuitAnnotation</a> derived from a
 <a href="../CompilerAnnotation.html" class="extype" name="firrtl.stage.CompilerAnnotation">CompilerAnnotation</a> if one does not already exist.</p>
     </li><li name="firrtl.stage.phases.AddImplicitOutputFile" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="AddImplicitOutputFileextendsPhase"></a><a id="AddImplicitOutputFile:AddImplicitOutputFile"></a>
+      <a id="AddImplicitOutputFileextendsPhasewithPreservesAll[firrtl.options.Phase]"></a><a id="AddImplicitOutputFile:AddImplicitOutputFile"></a>
       <span class="permalink">
       <a href="../../../firrtl/stage/phases/AddImplicitOutputFile.html" title="Permalink">
         <i class="material-icons"></i>
@@ -288,14 +308,32 @@ This is a part of the preprocessing done by <a href="../FirrtlStage.html" class=
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Phase that adds an OutputFileAnnotation if one does not already exist." href="AddImplicitOutputFile.html"><span class="name">AddImplicitOutputFile</span></a><span class="result"> extends <a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a></span>
+        <a title="Phase that adds an OutputFileAnnotation if one does not already exist." href="AddImplicitOutputFile.html"><span class="name">AddImplicitOutputFile</span></a><span class="result"> extends <a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> with <a href="../../options/PreservesAll.html" class="extype" name="firrtl.options.PreservesAll">PreservesAll</a>[<a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a>]</span>
       </span>
       
-      <p class="shortcomment cmt"><a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> that adds an <a href="../OutputFileAnnotation.html" class="extype" name="firrtl.stage.OutputFileAnnotation">OutputFileAnnotation</a> if one does not already exist.</p><div class="fullcomment"><div class="comment cmt"><p><a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> that adds an <a href="../OutputFileAnnotation.html" class="extype" name="firrtl.stage.OutputFileAnnotation">OutputFileAnnotation</a> if one does not already exist.</p><p>To determine the <a href="../OutputFileAnnotation.html" class="extype" name="firrtl.stage.OutputFileAnnotation">OutputFileAnnotation</a>, the following precedence is used. Whichever happens first succeeds:</p><ul><li>Do nothing if an <a href="../OutputFileAnnotation.html" class="extype" name="firrtl.stage.OutputFileAnnotation">OutputFileAnnotation</a> or <a href="../../EmitAllModulesAnnotation.html" class="extype" name="firrtl.EmitAllModulesAnnotation">EmitAllModulesAnnotation</a> exist</li><li>Use the main in the first discovered <a href="../FirrtlCircuitAnnotation.html" class="extype" name="firrtl.stage.FirrtlCircuitAnnotation">FirrtlCircuitAnnotation</a> (see note below)</li><li>Use &quot;a&quot;</li></ul><p>The file suffix may or may not be specified, but this may be arbitrarily changed by the <a href="../../Emitter.html" class="extype" name="firrtl.Emitter">Emitter</a>.
-</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>This <a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> has a dependency on <a href="AddCircuit.html" class="extype" name="firrtl.stage.phases.AddCircuit">AddCircuit</a>. Only a <a href="../FirrtlCircuitAnnotation.html" class="extype" name="firrtl.stage.FirrtlCircuitAnnotation">FirrtlCircuitAnnotation</a>
-will be used to implicitly set the <a href="../OutputFileAnnotation.html" class="extype" name="firrtl.stage.OutputFileAnnotation">OutputFileAnnotation</a> (not other <a href="../CircuitOption.html" class="extype" name="firrtl.stage.CircuitOption">CircuitOption</a> subclasses).</p></span></dd></dl></div>
+      <p class="shortcomment cmt"><a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> that adds an <a href="../OutputFileAnnotation.html" class="extype" name="firrtl.stage.OutputFileAnnotation">OutputFileAnnotation</a> if one does not already exist.</p><div class="fullcomment"><div class="comment cmt"><p><a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> that adds an <a href="../OutputFileAnnotation.html" class="extype" name="firrtl.stage.OutputFileAnnotation">OutputFileAnnotation</a> if one does not already exist.</p><p>To determine the <a href="../OutputFileAnnotation.html" class="extype" name="firrtl.stage.OutputFileAnnotation">OutputFileAnnotation</a>, the following precedence is used. Whichever happens first succeeds:</p><ul><li>Do nothing if an <a href="../OutputFileAnnotation.html" class="extype" name="firrtl.stage.OutputFileAnnotation">OutputFileAnnotation</a> or <a href="../../EmitAllModulesAnnotation.html" class="extype" name="firrtl.EmitAllModulesAnnotation">EmitAllModulesAnnotation</a> exist</li><li>Use the main in the first discovered <a href="../FirrtlCircuitAnnotation.html" class="extype" name="firrtl.stage.FirrtlCircuitAnnotation">FirrtlCircuitAnnotation</a> (see note
+   below)</li><li>Use &quot;a&quot;</li></ul><p>The file suffix may or may not be specified, but this may be arbitrarily changed by the <a href="../../Emitter.html" class="extype" name="firrtl.Emitter">Emitter</a>.
+</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>This <a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> has a dependency on <a href="AddCircuit.html" class="extype" name="firrtl.stage.phases.AddCircuit">AddCircuit</a>. Only a
+<a href="../FirrtlCircuitAnnotation.html" class="extype" name="firrtl.stage.FirrtlCircuitAnnotation">FirrtlCircuitAnnotation</a> will be used to implicitly set the
+<a href="../OutputFileAnnotation.html" class="extype" name="firrtl.stage.OutputFileAnnotation">OutputFileAnnotation</a> (not other <a href="../CircuitOption.html" class="extype" name="firrtl.stage.CircuitOption">CircuitOption</a> subclasses).</p></span></dd></dl></div>
+    </li><li name="firrtl.stage.phases.CatchExceptions" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CatchExceptionsextendsPhase"></a><a id="CatchExceptions:CatchExceptions"></a>
+      <span class="permalink">
+      <a href="../../../firrtl/stage/phases/CatchExceptions.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="CatchExceptions.html"><span class="name">CatchExceptions</span></a><span class="result"> extends <a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a></span>
+      </span>
+      
+      
     </li><li name="firrtl.stage.phases.Checks" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="ChecksextendsPhase"></a><a id="Checks:Checks"></a>
+      <a id="ChecksextendsPhasewithPreservesAll[firrtl.options.Phase]"></a><a id="Checks:Checks"></a>
       <span class="permalink">
       <a href="../../../firrtl/stage/phases/Checks.html" title="Permalink">
         <i class="material-icons"></i>
@@ -306,7 +344,7 @@ will be used to implicitly set the <a href="../OutputFileAnnotation.html" class=
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Phase that strictly validates an AnnotationSeq." href="Checks.html"><span class="name">Checks</span></a><span class="result"> extends <a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a></span>
+        <a title="Phase that strictly validates an AnnotationSeq." href="Checks.html"><span class="name">Checks</span></a><span class="result"> extends <a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> with <a href="../../options/PreservesAll.html" class="extype" name="firrtl.options.PreservesAll">PreservesAll</a>[<a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a>]</span>
       </span>
       
       <p class="shortcomment cmt"><a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> that strictly validates an <a href="../../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a>.</p><div class="fullcomment"><div class="comment cmt"><p><a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> that strictly validates an <a href="../../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a>. The checks applied are intended to be
@@ -316,7 +354,7 @@ certain that other <a href="../../options/Phase.html" class="extype" name="firrt
 <a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> that commonly run before this.
 </p></div></div>
     </li><li name="firrtl.stage.phases.Compiler" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="CompilerextendsPhasewithTranslator[firrtl.AnnotationSeq,Seq[firrtl.stage.phases.CompilerRun]]"></a><a id="Compiler:Compiler"></a>
+      <a id="CompilerextendsPhasewithTranslator[firrtl.AnnotationSeq,Seq[firrtl.stage.phases.CompilerRun]]withPreservesAll[firrtl.options.Phase]"></a><a id="Compiler:Compiler"></a>
       <span class="permalink">
       <a href="../../../firrtl/stage/phases/Compiler.html" title="Permalink">
         <i class="material-icons"></i>
@@ -327,20 +365,20 @@ certain that other <a href="../../options/Phase.html" class="extype" name="firrt
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Runs the FIRRTL compilers on an AnnotationSeq." href="Compiler.html"><span class="name">Compiler</span></a><span class="result"> extends <a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> with <a href="../../options/Translator.html" class="extype" name="firrtl.options.Translator">Translator</a>[<a href="../../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a>, <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="firrtl.stage.phases.CompilerRun">CompilerRun</span>]]</span>
+        <a title="Runs the FIRRTL compilers on an AnnotationSeq." href="Compiler.html"><span class="name">Compiler</span></a><span class="result"> extends <a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> with <a href="../../options/Translator.html" class="extype" name="firrtl.options.Translator">Translator</a>[<a href="../../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a>, <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="firrtl.stage.phases.CompilerRun">CompilerRun</span>]] with <a href="../../options/PreservesAll.html" class="extype" name="firrtl.options.PreservesAll">PreservesAll</a>[<a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a>]</span>
       </span>
       
       <p class="shortcomment cmt">Runs the FIRRTL compilers on an <a href="../../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Runs the FIRRTL compilers on an <a href="../../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a>. If the input <a href="../../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a> contains more than one circuit
-(i.e., more than one <a href="../FirrtlCircuitAnnotation.html" class="extype" name="firrtl.stage.FirrtlCircuitAnnotation">FirrtlCircuitAnnotation</a>), then annotations will be broken up and each run will be executed
-in parallel.</p><p>The <a href="../../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a> will be chunked up into compiler runs using the following algorithm. All annotations that
-occur before the first <a href="../FirrtlCircuitAnnotation.html" class="extype" name="firrtl.stage.FirrtlCircuitAnnotation">FirrtlCircuitAnnotation</a> are treated as global annotations that apply to all circuits.
-Annotations after a circuit are only associated with their closest preceeding circuit. E.g., for the following
-annotations (where A, B, and C are some annotations):</p><p>   A(a), FirrtlCircuitAnnotation(x), B, FirrtlCircuitAnnotation(y), A(b), C, FirrtlCircuitAnnotation(z)</p><p>Then this will result in three compiler runs:</p><ul><li>FirrtlCircuitAnnotation(x): A(a), B</li><li>FirrtlCircuitAnnotation(y): A(a), A(b), C</li><li>FirrtlCircuitAnnotation(z): A(a)</li></ul><p>A(a) is a default, global annotation. B binds to FirrtlCircuitAnnotation(x). A(a), A(b), and C bind to
+(i.e., more than one <a href="../FirrtlCircuitAnnotation.html" class="extype" name="firrtl.stage.FirrtlCircuitAnnotation">FirrtlCircuitAnnotation</a>), then annotations will be
+broken up and each run will be executed in parallel.</p><p>The <a href="../../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a> will be chunked up into compiler runs using the following algorithm. All annotations that
+occur before the first <a href="../FirrtlCircuitAnnotation.html" class="extype" name="firrtl.stage.FirrtlCircuitAnnotation">FirrtlCircuitAnnotation</a> are treated as global
+annotations that apply to all circuits. Annotations after a circuit are only associated with their closest
+preceeding circuit. E.g., for the following annotations (where A, B, and C are some annotations):</p><p>   A(a), FirrtlCircuitAnnotation(x), B, FirrtlCircuitAnnotation(y), A(b), C, FirrtlCircuitAnnotation(z)</p><p>Then this will result in three compiler runs:</p><ul><li>FirrtlCircuitAnnotation(x): A(a), B</li><li>FirrtlCircuitAnnotation(y): A(a), A(b), C</li><li>FirrtlCircuitAnnotation(z): A(a)</li></ul><p>A(a) is a default, global annotation. B binds to FirrtlCircuitAnnotation(x). A(a), A(b), and C bind to
 FirrtlCircuitAnnotation(y). Note: A(b) <i>may</i> overwrite A(a) if this is a CompilerAnnotation.
 FirrtlCircuitAnnotation(z) has no annotations, so it only gets the default A(a).
 </p></div></div>
     </li><li name="firrtl.stage.phases.WriteEmitted" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="WriteEmittedextendsPhase"></a><a id="WriteEmitted:WriteEmitted"></a>
+      <a id="WriteEmittedextendsPhasewithPreservesAll[firrtl.options.Phase]"></a><a id="WriteEmitted:WriteEmitted"></a>
       <span class="permalink">
       <a href="../../../firrtl/stage/phases/WriteEmitted.html" title="Permalink">
         <i class="material-icons"></i>
@@ -351,7 +389,7 @@ FirrtlCircuitAnnotation(z) has no annotations, so it only gets the default A(a).
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Phase that writes any EmittedAnnotations in an input AnnotationSeq to one or more files." href="WriteEmitted.html"><span class="name">WriteEmitted</span></a><span class="result"> extends <a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a></span>
+        <a title="Phase that writes any EmittedAnnotations in an input AnnotationSeq to one or more files." href="WriteEmitted.html"><span class="name">WriteEmitted</span></a><span class="result"> extends <a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> with <a href="../../options/PreservesAll.html" class="extype" name="firrtl.options.PreservesAll">PreservesAll</a>[<a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a>]</span>
       </span>
       
       <p class="shortcomment cmt"><a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> that writes any <a href="../../EmittedAnnotation.html" class="extype" name="firrtl.EmittedAnnotation">EmittedAnnotation</a>s in an input <a href="../../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a> to one or more
@@ -370,7 +408,23 @@ files. If you need additional checking, then you should stack an appropriate che
         <div class="values members">
               <h3>Value Members</h3>
               <ol>
-                <li name="firrtl.stage.phases.DriverCompatibility" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+                <li name="firrtl.stage.phases.CatchExceptions" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CatchExceptions"></a><a id="CatchExceptions:CatchExceptions"></a>
+      <span class="permalink">
+      <a href="../../../firrtl/stage/phases/CatchExceptions$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="CatchExceptions$.html"><span class="name">CatchExceptions</span></a>
+      </span>
+      
+      
+    </li><li name="firrtl.stage.phases.DriverCompatibility" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="DriverCompatibility"></a><a id="DriverCompatibility:DriverCompatibility"></a>
       <span class="permalink">
       <a href="../../../firrtl/stage/phases/DriverCompatibility$.html" title="Permalink">

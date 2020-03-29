@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.2.4 - chisel3.Driver</title>
-          <meta name="description" content="chisel3 3.2.4 - chisel3.Driver" />
-          <meta name="keywords" content="chisel3 3.2.4 chisel3.Driver" />
+          <title>chisel3 3.3.0-RC1 - chisel3.Driver</title>
+          <meta name="description" content="chisel3 3.3.0 - RC1 - chisel3.Driver" />
+          <meta name="keywords" content="chisel3 3.3.0 RC1 chisel3.Driver" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.2.4</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.3.0-RC1</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -382,9 +382,13 @@ functions
                         <a class="class" href="Name.html" title="Put innermost name (eg."></a>
                         <a href="Name.html" title="Put innermost name (eg.">Name</a>
                       </li><li class="current-entities indented1">
-                        <span class="separator"></span>
+                        <a class="object" href="Num$.html" title=""></a>
                         <a class="trait" href="Num.html" title="Abstract trait defining operations available on numeric-like hardware data types."></a>
                         <a href="Num.html" title="Abstract trait defining operations available on numeric-like hardware data types.">Num</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="trait" href="NumObject.html" title="NumbObject has a lot of convenience methods for converting between BigInts and Double and BigDecimal For backwards compatibility this is used with FixedPoint and Interval objects but is better used with the Num Object"></a>
+                        <a href="NumObject.html" title="NumbObject has a lot of convenience methods for converting between BigInts and Double and BigDecimal For backwards compatibility this is used with FixedPoint and Interval objects but is better used with the Num Object">NumObject</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="object" href="Output$.html" title=""></a>
@@ -433,6 +437,14 @@ functions
                         <span class="separator"></span>
                         <a class="object" href="RegNext$.html" title="Utility for constructing one-cycle delayed versions of signals"></a>
                         <a href="RegNext$.html" title="Utility for constructing one-cycle delayed versions of signals">RegNext</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="trait" href="RequireAsyncReset.html" title=""></a>
+                        <a href="RequireAsyncReset.html" title="">RequireAsyncReset</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="trait" href="RequireSyncReset.html" title=""></a>
+                        <a href="RequireSyncReset.html" title="">RequireSyncReset</a>
                       </li><li class="current-entities indented1">
                         <a class="object" href="Reset$.html" title=""></a>
                         <a class="trait" href="Reset.html" title=""></a>
@@ -527,8 +539,20 @@ functions
                         <a href="dontTouch$.html" title="Marks that a signal should not be removed by Chisel and Firrtl optimization passes">dontTouch</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
+                        <a class="class" href="package$$fromBigDecimalToLiteral.html" title=""></a>
+                        <a href="package$$fromBigDecimalToLiteral.html" title="">fromBigDecimalToLiteral</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$fromBigDecimalToLiteralInterval.html" title=""></a>
+                        <a href="package$$fromBigDecimalToLiteralInterval.html" title="">fromBigDecimalToLiteralInterval</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
                         <a class="class" href="package$$fromBigIntToLiteral.html" title="These implicit classes allow one to convert scala.Int|scala.BigInt to Chisel.UInt|Chisel.SInt by calling .asUInt|.asSInt on them, respectively."></a>
                         <a href="package$$fromBigIntToLiteral.html" title="These implicit classes allow one to convert scala.Int|scala.BigInt to Chisel.UInt|Chisel.SInt by calling .asUInt|.asSInt on them, respectively.">fromBigIntToLiteral</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$fromBigIntToLiteralInterval.html" title=""></a>
+                        <a href="package$$fromBigIntToLiteralInterval.html" title="">fromBigIntToLiteralInterval</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="class" href="package$$fromBooleanToLiteral.html" title=""></a>
@@ -539,6 +563,10 @@ functions
                         <a href="package$$fromDoubleToLiteral.html" title="">fromDoubleToLiteral</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
+                        <a class="class" href="package$$fromDoubleToLiteralInterval.html" title=""></a>
+                        <a href="package$$fromDoubleToLiteralInterval.html" title="">fromDoubleToLiteralInterval</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
                         <a class="class" href="package$$fromIntToBinaryPoint.html" title=""></a>
                         <a href="package$$fromIntToBinaryPoint.html" title="">fromIntToBinaryPoint</a>
                       </li><li class="current-entities indented1">
@@ -547,12 +575,20 @@ functions
                         <a href="package$$fromIntToLiteral.html" title="">fromIntToLiteral</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
+                        <a class="class" href="package$$fromIntToLiteralInterval.html" title=""></a>
+                        <a href="package$$fromIntToLiteralInterval.html" title="">fromIntToLiteralInterval</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
                         <a class="class" href="package$$fromIntToWidth.html" title=""></a>
                         <a href="package$$fromIntToWidth.html" title="">fromIntToWidth</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="class" href="package$$fromLongToLiteral.html" title=""></a>
                         <a href="package$$fromLongToLiteral.html" title="">fromLongToLiteral</a>
+                      </li><li class="current-entities indented1">
+                        <span class="separator"></span>
+                        <a class="class" href="package$$fromLongToLiteralInterval.html" title=""></a>
+                        <a href="package$$fromLongToLiteralInterval.html" title="">fromLongToLiteralInterval</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="class" href="package$$fromStringToLiteral.html" title=""></a>
@@ -604,16 +640,19 @@ functions
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <span class="name">Driver</span><span class="result"> extends <a href="BackendCompilationUtilities.html" class="extype" name="chisel3.BackendCompilationUtilities">BackendCompilationUtilities</a></span>
+        <span class="name deprecated" title="Deprecated: (Since version 3.2.4) Please switch to chisel3.stage.ChiselStage. Driver will be removed in 3.4.">Driver</span><span class="result"> extends <a href="BackendCompilationUtilities.html" class="extype" name="chisel3.BackendCompilationUtilities">BackendCompilationUtilities</a></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.2.4//src/main/scala/chisel3/Driver.scala" target="_blank">Driver.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 3.2.4)</i> Please switch to chisel3.stage.ChiselStage. Driver will be removed in 3.4.</p></dd><dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.3.0-RC1//src/main/scala/chisel3/Driver.scala" target="_blank">Driver.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="BackendCompilationUtilities.html" class="extype" name="chisel3.BackendCompilationUtilities">BackendCompilationUtilities</a>, <span class="extype" name="firrtl.util.BackendCompilationUtilities">firrtl.util.BackendCompilationUtilities</span>, <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="BackendCompilationUtilities.html" class="extype" name="chisel3.BackendCompilationUtilities">BackendCompilationUtilities</a>, <span class="extype" name="firrtl.util.BackendCompilationUtilities">firrtl.util.BackendCompilationUtilities</span>, <span class="extype" name="logger.LazyLogging">LazyLogging</span>, <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div></div>
         
 
@@ -639,7 +678,7 @@ functions
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="chisel3.Driver"><span>Driver</span></li><li class="in" name="chisel3.BackendCompilationUtilities"><span>BackendCompilationUtilities</span></li><li class="in" name="firrtl.util.BackendCompilationUtilities"><span>BackendCompilationUtilities</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="chisel3.Driver"><span>Driver</span></li><li class="in" name="chisel3.BackendCompilationUtilities"><span>BackendCompilationUtilities</span></li><li class="in" name="firrtl.util.BackendCompilationUtilities"><span>BackendCompilationUtilities</span></li><li class="in" name="logger.LazyLogging"><span>LazyLogging</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -678,7 +717,7 @@ functions
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -694,7 +733,7 @@ functions
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -710,7 +749,7 @@ functions
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -774,7 +813,7 @@ functions
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -798,7 +837,7 @@ functions
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">compileFirrtlToVerilog</span><span class="params">(<span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dir">dir: <span class="extype" name="java.io.File">File</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">compileFirrtlToVerilog</span><span class="params">(<span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dir">dir: <span class="extype" name="java.io.File">File</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <p class="shortcomment cmt">Compile Chirrtl to Verilog by invoking Firrtl inside the same JVM
@@ -816,7 +855,7 @@ functions
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">copyResourceToFile</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="file">file: <span class="extype" name="java.io.File">File</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">copyResourceToFile</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="file">file: <span class="extype" name="java.io.File">File</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BackendCompilationUtilities</dd></dl></div>
@@ -832,7 +871,7 @@ functions
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">cppToExe</span><span class="params">(<span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dir">dir: <span class="extype" name="java.io.File">File</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/sys/process/ProcessBuilder.html#scala.sys.process.ProcessBuilder" class="extype" name="scala.sys.process.ProcessBuilder">ProcessBuilder</a></span>
+        <span class="name">cppToExe</span><span class="params">(<span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dir">dir: <span class="extype" name="java.io.File">File</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/sys/process/ProcessBuilder.html#scala.sys.process.ProcessBuilder" class="extype" name="scala.sys.process.ProcessBuilder">ProcessBuilder</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BackendCompilationUtilities</dd></dl></div>
@@ -852,130 +891,6 @@ functions
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BackendCompilationUtilities</dd></dl></div>
-    </li><li name="chisel3.Driver#dumpAnnotations" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="dumpAnnotations(ir:chisel3.internal.firrtl.Circuit,optName:Option[java.io.File]):java.io.File"></a><a id="dumpAnnotations(Circuit,Option[File]):File"></a>
-      <span class="permalink">
-      <a href="../chisel3/Driver$.html#dumpAnnotations(ir:chisel3.internal.firrtl.Circuit,optName:Option[java.io.File]):java.io.File" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">dumpAnnotations</span><span class="params">(<span name="ir">ir: <span class="extype" name="chisel3.internal.firrtl.Circuit">Circuit</span></span>, <span name="optName">optName: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="java.io.File">File</span>]</span>)</span><span class="result">: <span class="extype" name="java.io.File">File</span></span>
-      </span>
-      
-      <p class="shortcomment cmt">Emit the annotations of a circuit
-</p><div class="fullcomment"><div class="comment cmt"><p>Emit the annotations of a circuit
-</p></div><dl class="paramcmts block"><dt class="param">ir</dt><dd class="cmt"><p>The circuit containing annotations to be emitted</p></dd><dt class="param">optName</dt><dd class="cmt"><p>An optional filename (will use s&quot;${ir.name}.json&quot; otherwise)</p></dd></dl></div>
-    </li><li name="chisel3.Driver#dumpFirrtl" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="dumpFirrtl(ir:chisel3.internal.firrtl.Circuit,optName:Option[java.io.File]):java.io.File"></a><a id="dumpFirrtl(Circuit,Option[File]):File"></a>
-      <span class="permalink">
-      <a href="../chisel3/Driver$.html#dumpFirrtl(ir:chisel3.internal.firrtl.Circuit,optName:Option[java.io.File]):java.io.File" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">dumpFirrtl</span><span class="params">(<span name="ir">ir: <span class="extype" name="chisel3.internal.firrtl.Circuit">Circuit</span></span>, <span name="optName">optName: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="java.io.File">File</span>]</span>)</span><span class="result">: <span class="extype" name="java.io.File">File</span></span>
-      </span>
-      
-      <p class="shortcomment cmt">Dump the elaborated Chisel IR Circuit as a FIRRTL String, without invoking FIRRTL.</p><div class="fullcomment"><div class="comment cmt"><p>Dump the elaborated Chisel IR Circuit as a FIRRTL String, without invoking FIRRTL.</p><p>If no File is given as input, it will dump to a default filename based on the name of the
-top Module.
-</p></div><dl class="paramcmts block"><dt class="param">optName</dt><dd class="cmt"><p>File to dump to. If unspecified, defaults to &quot;&lt;topmodule&gt;.fir&quot;.</p></dd><dt>returns</dt><dd class="cmt"><p>The File the circuit was dumped to.</p></dd></dl></div>
-    </li><li name="chisel3.Driver#dumpProto" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="dumpProto(c:chisel3.internal.firrtl.Circuit,optFile:Option[java.io.File]):java.io.File"></a><a id="dumpProto(Circuit,Option[File]):File"></a>
-      <span class="permalink">
-      <a href="../chisel3/Driver$.html#dumpProto(c:chisel3.internal.firrtl.Circuit,optFile:Option[java.io.File]):java.io.File" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">dumpProto</span><span class="params">(<span name="c">c: <span class="extype" name="chisel3.internal.firrtl.Circuit">Circuit</span></span>, <span name="optFile">optFile: <a href="https://www.scala-lang.org/api/2.12.10/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="java.io.File">File</span>]</span>)</span><span class="result">: <span class="extype" name="java.io.File">File</span></span>
-      </span>
-      
-      <p class="shortcomment cmt">Dump the elaborated Circuit to ProtoBuf.</p><div class="fullcomment"><div class="comment cmt"><p>Dump the elaborated Circuit to ProtoBuf.</p><p>If no File is given as input, it will dump to a default filename based on the name of the
-top Module.
-</p></div><dl class="paramcmts block"><dt class="param">c</dt><dd class="cmt"><p>Elaborated Chisel Circuit.</p></dd><dt class="param">optFile</dt><dd class="cmt"><p>Optional File to dump to. If unspecified, defaults to &quot;&lt;topmodule&gt;.pb&quot;.</p></dd><dt>returns</dt><dd class="cmt"><p>The File the circuit was dumped to.</p></dd></dl></div>
-    </li><li name="chisel3.Driver#elaborate" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="elaborate[T&lt;:chisel3.RawModule](gen:()=&gt;T):chisel3.internal.firrtl.Circuit"></a><a id="elaborate[T&lt;:RawModule](()⇒T):Circuit"></a>
-      <span class="permalink">
-      <a href="../chisel3/Driver$.html#elaborate[T&lt;:chisel3.RawModule](gen:()=&gt;T):chisel3.internal.firrtl.Circuit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">elaborate</span><span class="tparams">[<span name="T">T &lt;: <a href="RawModule.html" class="extype" name="chisel3.RawModule">RawModule</a></span>]</span><span class="params">(<span name="gen">gen: () ⇒ <span class="extype" name="chisel3.Driver.elaborate.T">T</span></span>)</span><span class="result">: <span class="extype" name="chisel3.internal.firrtl.Circuit">Circuit</span></span>
-      </span>
-      
-      <p class="shortcomment cmt">Elaborate the Module specified in the gen function into a Chisel IR Circuit.</p><div class="fullcomment"><div class="comment cmt"><p>Elaborate the Module specified in the gen function into a Chisel IR Circuit.
-</p></div><dl class="paramcmts block"><dt class="param">gen</dt><dd class="cmt"><p>A function that creates a Module hierarchy.</p></dd><dt>returns</dt><dd class="cmt"><p>The resulting Chisel IR in the form of a Circuit. (TODO: Should be FIRRTL IR)</p></dd></dl></div>
-    </li><li name="chisel3.Driver#emit" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="emit[T&lt;:chisel3.RawModule](ir:chisel3.internal.firrtl.Circuit):String"></a><a id="emit[T&lt;:RawModule](Circuit):String"></a>
-      <span class="permalink">
-      <a href="../chisel3/Driver$.html#emit[T&lt;:chisel3.RawModule](ir:chisel3.internal.firrtl.Circuit):String" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">emit</span><span class="tparams">[<span name="T">T &lt;: <a href="RawModule.html" class="extype" name="chisel3.RawModule">RawModule</a></span>]</span><span class="params">(<span name="ir">ir: <span class="extype" name="chisel3.internal.firrtl.Circuit">Circuit</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      
-      <p class="shortcomment cmt">Emit the given Chisel IR Circuit as a FIRRTL string, without invoking FIRRTL.</p><div class="fullcomment"><div class="comment cmt"><p>Emit the given Chisel IR Circuit as a FIRRTL string, without invoking FIRRTL.
-</p></div><dl class="paramcmts block"><dt class="param">ir</dt><dd class="cmt"><p>Chisel IR Circuit, generated e.g. by elaborate().</p></dd></dl></div>
-    </li><li name="chisel3.Driver#emit" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="emit[T&lt;:chisel3.RawModule](gen:()=&gt;T):String"></a><a id="emit[T&lt;:RawModule](()⇒T):String"></a>
-      <span class="permalink">
-      <a href="../chisel3/Driver$.html#emit[T&lt;:chisel3.RawModule](gen:()=&gt;T):String" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">emit</span><span class="tparams">[<span name="T">T &lt;: <a href="RawModule.html" class="extype" name="chisel3.RawModule">RawModule</a></span>]</span><span class="params">(<span name="gen">gen: () ⇒ <span class="extype" name="chisel3.Driver.emit.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      
-      <p class="shortcomment cmt">Emit the Module specified in the gen function directly as a FIRRTL string without
-invoking FIRRTL.</p><div class="fullcomment"><div class="comment cmt"><p>Emit the Module specified in the gen function directly as a FIRRTL string without
-invoking FIRRTL.
-</p></div><dl class="paramcmts block"><dt class="param">gen</dt><dd class="cmt"><p>A function that creates a Module hierarchy.</p></dd></dl></div>
-    </li><li name="chisel3.Driver#emitVerilog" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="emitVerilog[T&lt;:chisel3.RawModule](gen:=&gt;T):String"></a><a id="emitVerilog[T&lt;:RawModule](⇒T):String"></a>
-      <span class="permalink">
-      <a href="../chisel3/Driver$.html#emitVerilog[T&lt;:chisel3.RawModule](gen:=&gt;T):String" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">emitVerilog</span><span class="tparams">[<span name="T">T &lt;: <a href="RawModule.html" class="extype" name="chisel3.RawModule">RawModule</a></span>]</span><span class="params">(<span name="gen">gen: ⇒ <span class="extype" name="chisel3.Driver.emitVerilog.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      
-      <p class="shortcomment cmt">Elaborate the Module specified in the gen function into Verilog.</p><div class="fullcomment"><div class="comment cmt"><p>Elaborate the Module specified in the gen function into Verilog.
-</p></div><dl class="paramcmts block"><dt class="param">gen</dt><dd class="cmt"><p>A function that creates a Module hierarchy.</p></dd><dt>returns</dt><dd class="cmt"><p>A String containing the design in Verilog.</p></dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -988,7 +903,7 @@ invoking FIRRTL.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -1004,46 +919,10 @@ invoking FIRRTL.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="chisel3.Driver#execute" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="execute(args:Array[String],dut:()=&gt;chisel3.RawModule):chisel3.ChiselExecutionResult"></a><a id="execute(Array[String],()⇒RawModule):ChiselExecutionResult"></a>
-      <span class="permalink">
-      <a href="../chisel3/Driver$.html#execute(args:Array[String],dut:()=&gt;chisel3.RawModule):chisel3.ChiselExecutionResult" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">execute</span><span class="params">(<span name="args">args: <a href="https://www.scala-lang.org/api/2.12.10/scala/Array.html#scala.Array" class="extype" name="scala.Array">Array</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="dut">dut: () ⇒ <a href="RawModule.html" class="extype" name="chisel3.RawModule">RawModule</a></span>)</span><span class="result">: <a href="ChiselExecutionResult.html" class="extype" name="chisel3.ChiselExecutionResult">ChiselExecutionResult</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Run the chisel3 compiler and possibly the firrtl compiler with options specified via an array of Strings
-</p><div class="fullcomment"><div class="comment cmt"><p>Run the chisel3 compiler and possibly the firrtl compiler with options specified via an array of Strings
-</p></div><dl class="paramcmts block"><dt class="param">args</dt><dd class="cmt"><p>The options specified, command line style</p></dd><dt class="param">dut</dt><dd class="cmt"><p>The device under test</p></dd><dt>returns</dt><dd class="cmt"><p>An execution result with useful stuff, or failure with message</p></dd></dl></div>
-    </li><li name="chisel3.Driver#execute" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="execute(optionsManager:firrtl.ExecutionOptionsManagerwithchisel3.HasChiselExecutionOptionswithfirrtl.HasFirrtlOptions,dut:()=&gt;chisel3.RawModule):chisel3.ChiselExecutionResult"></a><a id="execute(ExecutionOptionsManagerwithHasChiselExecutionOptionswithHasFirrtlOptions,()⇒RawModule):ChiselExecutionResult"></a>
-      <span class="permalink">
-      <a href="../chisel3/Driver$.html#execute(optionsManager:firrtl.ExecutionOptionsManagerwithchisel3.HasChiselExecutionOptionswithfirrtl.HasFirrtlOptions,dut:()=&gt;chisel3.RawModule):chisel3.ChiselExecutionResult" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">execute</span><span class="params">(<span name="optionsManager">optionsManager: <span class="extype" name="firrtl.ExecutionOptionsManager">ExecutionOptionsManager</span> with <a href="HasChiselExecutionOptions.html" class="extype" name="chisel3.HasChiselExecutionOptions">HasChiselExecutionOptions</a> with <span class="extype" name="firrtl.HasFirrtlOptions">HasFirrtlOptions</span></span>, <span name="dut">dut: () ⇒ <a href="RawModule.html" class="extype" name="chisel3.RawModule">RawModule</a></span>)</span><span class="result">: <a href="ChiselExecutionResult.html" class="extype" name="chisel3.ChiselExecutionResult">ChiselExecutionResult</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Run the chisel3 compiler and possibly the firrtl compiler with options specified
-</p><div class="fullcomment"><div class="comment cmt"><p>Run the chisel3 compiler and possibly the firrtl compiler with options specified
-</p></div><dl class="paramcmts block"><dt class="param">optionsManager</dt><dd class="cmt"><p>The options specified</p></dd><dt class="param">dut</dt><dd class="cmt"><p>The device under test</p></dd><dt>returns</dt><dd class="cmt"><p>An execution result with useful stuff, or failure with message</p></dd></dl></div>
     </li><li name="firrtl.util.BackendCompilationUtilities#executeExpectingFailure" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="executeExpectingFailure(prefix:String,dir:java.io.File,assertionMsg:String):Boolean"></a><a id="executeExpectingFailure(String,File,String):Boolean"></a>
       <span class="permalink">
@@ -1056,7 +935,7 @@ invoking FIRRTL.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">executeExpectingFailure</span><span class="params">(<span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dir">dir: <span class="extype" name="java.io.File">File</span></span>, <span name="assertionMsg">assertionMsg: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">executeExpectingFailure</span><span class="params">(<span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dir">dir: <span class="extype" name="java.io.File">File</span></span>, <span name="assertionMsg">assertionMsg: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BackendCompilationUtilities</dd></dl></div>
@@ -1072,7 +951,7 @@ invoking FIRRTL.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">executeExpectingSuccess</span><span class="params">(<span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dir">dir: <span class="extype" name="java.io.File">File</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">executeExpectingSuccess</span><span class="params">(<span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dir">dir: <span class="extype" name="java.io.File">File</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BackendCompilationUtilities</dd></dl></div>
@@ -1088,7 +967,7 @@ invoking FIRRTL.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1110,7 +989,7 @@ invoking FIRRTL.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">firrtlToVerilog</span><span class="params">(<span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dir">dir: <span class="extype" name="java.io.File">File</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/sys/process/ProcessBuilder.html#scala.sys.process.ProcessBuilder" class="extype" name="scala.sys.process.ProcessBuilder">ProcessBuilder</a></span>
+        <span class="name">firrtlToVerilog</span><span class="params">(<span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dir">dir: <span class="extype" name="java.io.File">File</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/sys/process/ProcessBuilder.html#scala.sys.process.ProcessBuilder" class="extype" name="scala.sys.process.ProcessBuilder">ProcessBuilder</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BackendCompilationUtilities</dd></dl></div>
@@ -1145,7 +1024,7 @@ invoking FIRRTL.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
@@ -1164,14 +1043,30 @@ invoking FIRRTL.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="chisel3.Driver#main" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="main(args:Array[String]):Unit"></a><a id="main(Array[String]):Unit"></a>
+    </li><li name="logger.LazyLogging#logger" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logger:logger.Logger"></a><a id="logger:Logger"></a>
       <span class="permalink">
-      <a href="../chisel3/Driver$.html#main(args:Array[String]):Unit" title="Permalink">
+      <a href="../chisel3/Driver$.html#logger:logger.Logger" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logger</span><span class="result">: <span class="extype" name="logger.Logger">Logger</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>LazyLogging</dd></dl></div>
+    </li><li name="firrtl.util.BackendCompilationUtilities#loggingProcessLogger" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="loggingProcessLogger:scala.sys.process.ProcessLogger"></a><a id="loggingProcessLogger:ProcessLogger"></a>
+      <span class="permalink">
+      <a href="../chisel3/Driver$.html#loggingProcessLogger:scala.sys.process.ProcessLogger" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1180,16 +1075,10 @@ invoking FIRRTL.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">main</span><span class="params">(<span name="args">args: <a href="https://www.scala-lang.org/api/2.12.10/scala/Array.html#scala.Array" class="extype" name="scala.Array">Array</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">loggingProcessLogger</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/sys/process/ProcessLogger.html#scala.sys.process.ProcessLogger" class="extype" name="scala.sys.process.ProcessLogger">ProcessLogger</a></span>
       </span>
       
-      <p class="shortcomment cmt">This is just here as command line way to see what the options are
-It will not successfully run
-TODO: Look into dynamic class loading as way to make this main useful
-</p><div class="fullcomment"><div class="comment cmt"><p>This is just here as command line way to see what the options are
-It will not successfully run
-TODO: Look into dynamic class loading as way to make this main useful
-</p></div><dl class="paramcmts block"><dt class="param">args</dt><dd class="cmt"><p>unused args</p></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BackendCompilationUtilities</dd></dl></div>
     </li><li name="firrtl.util.BackendCompilationUtilities#makeHarness" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="makeHarness(template:String=&gt;String,post:String)(f:java.io.File):java.io.File"></a><a id="makeHarness((String)⇒String,String)(File):File"></a>
       <span class="permalink">
@@ -1218,7 +1107,7 @@ TODO: Look into dynamic class loading as way to make this main useful
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -1234,7 +1123,7 @@ TODO: Look into dynamic class loading as way to make this main useful
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1253,29 +1142,13 @@ TODO: Look into dynamic class loading as way to make this main useful
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="chisel3.Driver#parseArgs" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="parseArgs(args:Array[String]):Unit"></a><a id="parseArgs(Array[String]):Unit"></a>
-      <span class="permalink">
-      <a href="../chisel3/Driver$.html#parseArgs(args:Array[String]):Unit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">parseArgs</span><span class="params">(<span name="args">args: <a href="https://www.scala-lang.org/api/2.12.10/scala/Array.html#scala.Array" class="extype" name="scala.Array">Array</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
-      </span>
-      
-      
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
@@ -1292,22 +1165,6 @@ TODO: Look into dynamic class loading as way to make this main useful
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="chisel3.Driver#targetDir" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="targetDir():String"></a>
-      <span class="permalink">
-      <a href="../chisel3/Driver$.html#targetDir():String" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">targetDir</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      
-      
     </li><li name="firrtl.util.BackendCompilationUtilities#timeStamp" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="timeStamp:String"></a>
       <span class="permalink">
@@ -1324,23 +1181,6 @@ TODO: Look into dynamic class loading as way to make this main useful
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BackendCompilationUtilities</dd></dl></div>
-    </li><li name="chisel3.Driver#toFirrtl" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toFirrtl(ir:chisel3.internal.firrtl.Circuit):firrtl.ir.Circuit"></a><a id="toFirrtl(Circuit):Circuit"></a>
-      <span class="permalink">
-      <a href="../chisel3/Driver$.html#toFirrtl(ir:chisel3.internal.firrtl.Circuit):firrtl.ir.Circuit" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">toFirrtl</span><span class="params">(<span name="ir">ir: <span class="extype" name="chisel3.internal.firrtl.Circuit">Circuit</span></span>)</span><span class="result">: <span class="extype" name="firrtl.ir.Circuit">Circuit</span></span>
-      </span>
-      
-      <p class="shortcomment cmt">Convert the given Chisel IR Circuit to a FIRRTL Circuit.</p><div class="fullcomment"><div class="comment cmt"><p>Convert the given Chisel IR Circuit to a FIRRTL Circuit.
-</p></div><dl class="paramcmts block"><dt class="param">ir</dt><dd class="cmt"><p>Chisel IR Circuit, generated e.g. by elaborate().</p></dd></dl></div>
     </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <span class="permalink">
@@ -1369,7 +1209,7 @@ TODO: Look into dynamic class loading as way to make this main useful
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">verilogToCpp</span><span class="params">(<span name="dutFile">dutFile: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dir">dir: <span class="extype" name="java.io.File">File</span></span>, <span name="vSources">vSources: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="java.io.File">File</span>]</span>, <span name="cppHarness">cppHarness: <span class="extype" name="java.io.File">File</span></span>, <span name="suppressVcd">suppressVcd: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>, <span name="resourceFileName">resourceFileName: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/sys/process/ProcessBuilder.html#scala.sys.process.ProcessBuilder" class="extype" name="scala.sys.process.ProcessBuilder">ProcessBuilder</a></span>
+        <span class="name">verilogToCpp</span><span class="params">(<span name="dutFile">dutFile: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dir">dir: <span class="extype" name="java.io.File">File</span></span>, <span name="vSources">vSources: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="java.io.File">File</span>]</span>, <span name="cppHarness">cppHarness: <span class="extype" name="java.io.File">File</span></span>, <span name="suppressVcd">suppressVcd: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>, <span name="resourceFileName">resourceFileName: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/sys/process/ProcessBuilder.html#scala.sys.process.ProcessBuilder" class="extype" name="scala.sys.process.ProcessBuilder">ProcessBuilder</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BackendCompilationUtilities</dd></dl></div>
@@ -1401,7 +1241,7 @@ TODO: Look into dynamic class loading as way to make this main useful
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1423,7 +1263,7 @@ TODO: Look into dynamic class loading as way to make this main useful
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1445,7 +1285,7 @@ TODO: Look into dynamic class loading as way to make this main useful
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.10/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1469,7 +1309,7 @@ TODO: Look into dynamic class loading as way to make this main useful
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">yosysExpectFailure</span><span class="params">(<span name="customTop">customTop: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="referenceTop">referenceTop: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="testDir">testDir: <span class="extype" name="java.io.File">File</span></span>, <span name="resets">resets: <span class="extype" name="scala.Seq">Seq</span>[(<a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>, <span class="extype" name="scala.Predef.String">String</span>, <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>)]</span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">yosysExpectFailure</span><span class="params">(<span name="customTop">customTop: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="referenceTop">referenceTop: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="testDir">testDir: <span class="extype" name="java.io.File">File</span></span>, <span name="resets">resets: <span class="extype" name="scala.Seq">Seq</span>[(<a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>, <span class="extype" name="scala.Predef.String">String</span>, <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>)]</span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BackendCompilationUtilities</dd></dl></div>
@@ -1485,7 +1325,7 @@ TODO: Look into dynamic class loading as way to make this main useful
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">yosysExpectSuccess</span><span class="params">(<span name="customTop">customTop: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="referenceTop">referenceTop: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="testDir">testDir: <span class="extype" name="java.io.File">File</span></span>, <span name="resets">resets: <span class="extype" name="scala.Seq">Seq</span>[(<a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>, <span class="extype" name="scala.Predef.String">String</span>, <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>)]</span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">yosysExpectSuccess</span><span class="params">(<span name="customTop">customTop: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="referenceTop">referenceTop: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="testDir">testDir: <span class="extype" name="java.io.File">File</span></span>, <span name="resets">resets: <span class="extype" name="scala.Seq">Seq</span>[(<a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>, <span class="extype" name="scala.Predef.String">String</span>, <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>)]</span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BackendCompilationUtilities</dd></dl></div>
@@ -1495,7 +1335,280 @@ TODO: Look into dynamic class loading as way to make this main useful
 
         
 
-        
+        <div class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="chisel3.Driver#dumpAnnotations" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dumpAnnotations(ir:chisel3.internal.firrtl.Circuit,optName:Option[java.io.File]):java.io.File"></a><a id="dumpAnnotations(Circuit,Option[File]):File"></a>
+      <span class="permalink">
+      <a href="../chisel3/Driver$.html#dumpAnnotations(ir:chisel3.internal.firrtl.Circuit,optName:Option[java.io.File]):java.io.File" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 3.2.4) Migrate to chisel3.stage.ChiselStage. This will be removed in 3.4.">dumpAnnotations</span><span class="params">(<span name="ir">ir: <span class="extype" name="chisel3.internal.firrtl.Circuit">Circuit</span></span>, <span name="optName">optName: <a href="https://www.scala-lang.org/api/2.12.11/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="java.io.File">File</span>]</span>)</span><span class="result">: <span class="extype" name="java.io.File">File</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Emit the annotations of a circuit
+</p><div class="fullcomment"><div class="comment cmt"><p>Emit the annotations of a circuit
+</p></div><dl class="paramcmts block"><dt class="param">ir</dt><dd class="cmt"><p>The circuit containing annotations to be emitted</p></dd><dt class="param">optName</dt><dd class="cmt"><p>An optional filename (will use s&quot;${ir.name}.json&quot; otherwise)</p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 3.2.4)</i> Migrate to chisel3.stage.ChiselStage. This will be removed in 3.4.</p></dd></dl></div>
+    </li><li name="chisel3.Driver#dumpFirrtl" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dumpFirrtl(ir:chisel3.internal.firrtl.Circuit,optName:Option[java.io.File]):java.io.File"></a><a id="dumpFirrtl(Circuit,Option[File]):File"></a>
+      <span class="permalink">
+      <a href="../chisel3/Driver$.html#dumpFirrtl(ir:chisel3.internal.firrtl.Circuit,optName:Option[java.io.File]):java.io.File" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 3.2.4) Migrate to chisel3.stage.ChiselStage. This will be removed in 3.4.">dumpFirrtl</span><span class="params">(<span name="ir">ir: <span class="extype" name="chisel3.internal.firrtl.Circuit">Circuit</span></span>, <span name="optName">optName: <a href="https://www.scala-lang.org/api/2.12.11/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="java.io.File">File</span>]</span>)</span><span class="result">: <span class="extype" name="java.io.File">File</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Dump the elaborated Chisel IR Circuit as a FIRRTL String, without invoking FIRRTL.</p><div class="fullcomment"><div class="comment cmt"><p>Dump the elaborated Chisel IR Circuit as a FIRRTL String, without invoking FIRRTL.</p><p>If no File is given as input, it will dump to a default filename based on the name of the
+top Module.
+</p></div><dl class="paramcmts block"><dt class="param">optName</dt><dd class="cmt"><p>File to dump to. If unspecified, defaults to &quot;&lt;topmodule&gt;.fir&quot;.</p></dd><dt>returns</dt><dd class="cmt"><p>The File the circuit was dumped to.</p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 3.2.4)</i> Migrate to chisel3.stage.ChiselStage. This will be removed in 3.4.</p></dd></dl></div>
+    </li><li name="chisel3.Driver#dumpProto" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dumpProto(c:chisel3.internal.firrtl.Circuit,optFile:Option[java.io.File]):java.io.File"></a><a id="dumpProto(Circuit,Option[File]):File"></a>
+      <span class="permalink">
+      <a href="../chisel3/Driver$.html#dumpProto(c:chisel3.internal.firrtl.Circuit,optFile:Option[java.io.File]):java.io.File" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 3.2.4) Migrate to chisel3.stage.ChiselStage. This will be removed in 3.4.">dumpProto</span><span class="params">(<span name="c">c: <span class="extype" name="chisel3.internal.firrtl.Circuit">Circuit</span></span>, <span name="optFile">optFile: <a href="https://www.scala-lang.org/api/2.12.11/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="java.io.File">File</span>]</span>)</span><span class="result">: <span class="extype" name="java.io.File">File</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Dump the elaborated Circuit to ProtoBuf.</p><div class="fullcomment"><div class="comment cmt"><p>Dump the elaborated Circuit to ProtoBuf.</p><p>If no File is given as input, it will dump to a default filename based on the name of the
+top Module.
+</p></div><dl class="paramcmts block"><dt class="param">c</dt><dd class="cmt"><p>Elaborated Chisel Circuit.</p></dd><dt class="param">optFile</dt><dd class="cmt"><p>Optional File to dump to. If unspecified, defaults to &quot;&lt;topmodule&gt;.pb&quot;.</p></dd><dt>returns</dt><dd class="cmt"><p>The File the circuit was dumped to.</p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 3.2.4)</i> Migrate to chisel3.stage.ChiselStage. This will be removed in 3.4.</p></dd></dl></div>
+    </li><li name="chisel3.Driver#elaborate" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="elaborate[T&lt;:chisel3.RawModule](gen:()=&gt;T):chisel3.internal.firrtl.Circuit"></a><a id="elaborate[T&lt;:RawModule](()⇒T):Circuit"></a>
+      <span class="permalink">
+      <a href="../chisel3/Driver$.html#elaborate[T&lt;:chisel3.RawModule](gen:()=&gt;T):chisel3.internal.firrtl.Circuit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 3.2.4) Use ChiselStage.elaborate or use a ChiselStage class. This will be removed in 3.4.">elaborate</span><span class="tparams">[<span name="T">T &lt;: <a href="RawModule.html" class="extype" name="chisel3.RawModule">RawModule</a></span>]</span><span class="params">(<span name="gen">gen: () ⇒ <span class="extype" name="chisel3.Driver.elaborate.T">T</span></span>)</span><span class="result">: <span class="extype" name="chisel3.internal.firrtl.Circuit">Circuit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Elaborate the Module specified in the gen function into a Chisel IR Circuit.</p><div class="fullcomment"><div class="comment cmt"><p>Elaborate the Module specified in the gen function into a Chisel IR Circuit.
+</p></div><dl class="paramcmts block"><dt class="param">gen</dt><dd class="cmt"><p>A function that creates a Module hierarchy.</p></dd><dt>returns</dt><dd class="cmt"><p>The resulting Chisel IR in the form of a Circuit. (TODO: Should be FIRRTL IR)</p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 3.2.4)</i> Use ChiselStage.elaborate or use a ChiselStage class. This will be removed in 3.4.</p></dd></dl></div>
+    </li><li name="chisel3.Driver#emit" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="emit[T&lt;:chisel3.RawModule](ir:chisel3.internal.firrtl.Circuit):String"></a><a id="emit[T&lt;:RawModule](Circuit):String"></a>
+      <span class="permalink">
+      <a href="../chisel3/Driver$.html#emit[T&lt;:chisel3.RawModule](ir:chisel3.internal.firrtl.Circuit):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 3.2.2) Use (new chisel3.stage.ChiselStage).emitChirrtl">emit</span><span class="tparams">[<span name="T">T &lt;: <a href="RawModule.html" class="extype" name="chisel3.RawModule">RawModule</a></span>]</span><span class="params">(<span name="ir">ir: <span class="extype" name="chisel3.internal.firrtl.Circuit">Circuit</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Emit the given Chisel IR Circuit as a FIRRTL string, without invoking FIRRTL.</p><div class="fullcomment"><div class="comment cmt"><p>Emit the given Chisel IR Circuit as a FIRRTL string, without invoking FIRRTL.
+</p></div><dl class="paramcmts block"><dt class="param">ir</dt><dd class="cmt"><p>Chisel IR Circuit, generated e.g. by elaborate().</p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 3.2.2)</i> Use (new chisel3.stage.ChiselStage).emitChirrtl</p></dd></dl></div>
+    </li><li name="chisel3.Driver#emit" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="emit[T&lt;:chisel3.RawModule](gen:()=&gt;T):String"></a><a id="emit[T&lt;:RawModule](()⇒T):String"></a>
+      <span class="permalink">
+      <a href="../chisel3/Driver$.html#emit[T&lt;:chisel3.RawModule](gen:()=&gt;T):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 3.2.2) Use (new chisel3.stage.ChiselStage).emitChirrtl. This will be removed in 3.4.">emit</span><span class="tparams">[<span name="T">T &lt;: <a href="RawModule.html" class="extype" name="chisel3.RawModule">RawModule</a></span>]</span><span class="params">(<span name="gen">gen: () ⇒ <span class="extype" name="chisel3.Driver.emit.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Emit the Module specified in the gen function directly as a FIRRTL string without
+invoking FIRRTL.</p><div class="fullcomment"><div class="comment cmt"><p>Emit the Module specified in the gen function directly as a FIRRTL string without
+invoking FIRRTL.
+</p></div><dl class="paramcmts block"><dt class="param">gen</dt><dd class="cmt"><p>A function that creates a Module hierarchy.</p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 3.2.2)</i> Use (new chisel3.stage.ChiselStage).emitChirrtl. This will be removed in 3.4.</p></dd></dl></div>
+    </li><li name="chisel3.Driver#emitVerilog" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="emitVerilog[T&lt;:chisel3.RawModule](gen:=&gt;T):String"></a><a id="emitVerilog[T&lt;:RawModule](⇒T):String"></a>
+      <span class="permalink">
+      <a href="../chisel3/Driver$.html#emitVerilog[T&lt;:chisel3.RawModule](gen:=&gt;T):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 3.2.2) Use (new chisel3.stage.ChiselStage).emitVerilog. This will be removed in 3.4.">emitVerilog</span><span class="tparams">[<span name="T">T &lt;: <a href="RawModule.html" class="extype" name="chisel3.RawModule">RawModule</a></span>]</span><span class="params">(<span name="gen">gen: ⇒ <span class="extype" name="chisel3.Driver.emitVerilog.T">T</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Elaborate the Module specified in the gen function into Verilog.</p><div class="fullcomment"><div class="comment cmt"><p>Elaborate the Module specified in the gen function into Verilog.
+</p></div><dl class="paramcmts block"><dt class="param">gen</dt><dd class="cmt"><p>A function that creates a Module hierarchy.</p></dd><dt>returns</dt><dd class="cmt"><p>A String containing the design in Verilog.</p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 3.2.2)</i> Use (new chisel3.stage.ChiselStage).emitVerilog. This will be removed in 3.4.</p></dd></dl></div>
+    </li><li name="chisel3.Driver#execute" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="execute(args:Array[String],dut:()=&gt;chisel3.RawModule):chisel3.ChiselExecutionResult"></a><a id="execute(Array[String],()⇒RawModule):ChiselExecutionResult"></a>
+      <span class="permalink">
+      <a href="../chisel3/Driver$.html#execute(args:Array[String],dut:()=&gt;chisel3.RawModule):chisel3.ChiselExecutionResult" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 3.2.2) Use chisel3.stage.ChiselStage.execute. This will be removed in 3.4.">execute</span><span class="params">(<span name="args">args: <a href="https://www.scala-lang.org/api/2.12.11/scala/Array.html#scala.Array" class="extype" name="scala.Array">Array</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="dut">dut: () ⇒ <a href="RawModule.html" class="extype" name="chisel3.RawModule">RawModule</a></span>)</span><span class="result">: <a href="ChiselExecutionResult.html" class="extype" name="chisel3.ChiselExecutionResult">ChiselExecutionResult</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Run the chisel3 compiler and possibly the firrtl compiler with options specified via an array of Strings
+</p><div class="fullcomment"><div class="comment cmt"><p>Run the chisel3 compiler and possibly the firrtl compiler with options specified via an array of Strings
+</p></div><dl class="paramcmts block"><dt class="param">args</dt><dd class="cmt"><p>The options specified, command line style</p></dd><dt class="param">dut</dt><dd class="cmt"><p>The device under test</p></dd><dt>returns</dt><dd class="cmt"><p>An execution result with useful stuff, or failure with message</p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 3.2.2)</i> Use chisel3.stage.ChiselStage.execute. This will be removed in 3.4.</p></dd></dl></div>
+    </li><li name="chisel3.Driver#execute" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="execute(optionsManager:firrtl.ExecutionOptionsManagerwithchisel3.HasChiselExecutionOptionswithfirrtl.HasFirrtlOptions,dut:()=&gt;chisel3.RawModule):chisel3.ChiselExecutionResult"></a><a id="execute(ExecutionOptionsManagerwithHasChiselExecutionOptionswithHasFirrtlOptions,()⇒RawModule):ChiselExecutionResult"></a>
+      <span class="permalink">
+      <a href="../chisel3/Driver$.html#execute(optionsManager:firrtl.ExecutionOptionsManagerwithchisel3.HasChiselExecutionOptionswithfirrtl.HasFirrtlOptions,dut:()=&gt;chisel3.RawModule):chisel3.ChiselExecutionResult" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 3.2.2) Use chisel3.stage.ChiselStage.execute. This will be removed in 3.4.">execute</span><span class="params">(<span name="optionsManager">optionsManager: <span class="extype" name="firrtl.ExecutionOptionsManager">ExecutionOptionsManager</span> with <a href="HasChiselExecutionOptions.html" class="extype" name="chisel3.HasChiselExecutionOptions">HasChiselExecutionOptions</a> with <span class="extype" name="firrtl.HasFirrtlOptions">HasFirrtlOptions</span></span>, <span name="dut">dut: () ⇒ <a href="RawModule.html" class="extype" name="chisel3.RawModule">RawModule</a></span>)</span><span class="result">: <a href="ChiselExecutionResult.html" class="extype" name="chisel3.ChiselExecutionResult">ChiselExecutionResult</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Run the chisel3 compiler and possibly the firrtl compiler with options specified
+</p><div class="fullcomment"><div class="comment cmt"><p>Run the chisel3 compiler and possibly the firrtl compiler with options specified
+</p></div><dl class="paramcmts block"><dt class="param">optionsManager</dt><dd class="cmt"><p>The options specified</p></dd><dt class="param">dut</dt><dd class="cmt"><p>The device under test</p></dd><dt>returns</dt><dd class="cmt"><p>An execution result with useful stuff, or failure with message</p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 3.2.2)</i> Use chisel3.stage.ChiselStage.execute. This will be removed in 3.4.</p></dd></dl></div>
+    </li><li name="chisel3.Driver#main" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="main(args:Array[String]):Unit"></a><a id="main(Array[String]):Unit"></a>
+      <span class="permalink">
+      <a href="../chisel3/Driver$.html#main(args:Array[String]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 3.2.2) Use chisel3.stage.ChiselMain. This will be removed in 3.4.">main</span><span class="params">(<span name="args">args: <a href="https://www.scala-lang.org/api/2.12.11/scala/Array.html#scala.Array" class="extype" name="scala.Array">Array</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">This is just here as command line way to see what the options are
+It will not successfully run
+TODO: Look into dynamic class loading as way to make this main useful
+</p><div class="fullcomment"><div class="comment cmt"><p>This is just here as command line way to see what the options are
+It will not successfully run
+TODO: Look into dynamic class loading as way to make this main useful
+</p></div><dl class="paramcmts block"><dt class="param">args</dt><dd class="cmt"><p>unused args</p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 3.2.2)</i> Use chisel3.stage.ChiselMain. This will be removed in 3.4.</p></dd></dl></div>
+    </li><li name="chisel3.Driver#parseArgs" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="parseArgs(args:Array[String]):Unit"></a><a id="parseArgs(Array[String]):Unit"></a>
+      <span class="permalink">
+      <a href="../chisel3/Driver$.html#parseArgs(args:Array[String]):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 3.2.2) Use chisel3.stage.ChiselStage with '--target-directory'. This will be removed in 3.4.">parseArgs</span><span class="params">(<span name="args">args: <a href="https://www.scala-lang.org/api/2.12.11/scala/Array.html#scala.Array" class="extype" name="scala.Array">Array</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 3.2.2)</i> Use chisel3.stage.ChiselStage with '--target-directory'. This will be removed in 3.4.</p></dd></dl></div>
+    </li><li name="chisel3.Driver#targetDir" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="targetDir():String"></a>
+      <span class="permalink">
+      <a href="../chisel3/Driver$.html#targetDir():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 3.2.2) This has no effect on Chisel3 Driver! This will be removed in 3.4.">targetDir</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 3.2.2)</i> This has no effect on Chisel3 Driver! This will be removed in 3.4.</p></dd></dl></div>
+    </li><li name="chisel3.Driver#toFirrtl" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toFirrtl(ir:chisel3.internal.firrtl.Circuit):firrtl.ir.Circuit"></a><a id="toFirrtl(Circuit):Circuit"></a>
+      <span class="permalink">
+      <a href="../chisel3/Driver$.html#toFirrtl(ir:chisel3.internal.firrtl.Circuit):firrtl.ir.Circuit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 3.2.4) Use ChiselStage.convert or use a ChiselStage class. This will be removed in 3.4.">toFirrtl</span><span class="params">(<span name="ir">ir: <span class="extype" name="chisel3.internal.firrtl.Circuit">Circuit</span></span>)</span><span class="result">: <span class="extype" name="firrtl.ir.Circuit">Circuit</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Convert the given Chisel IR Circuit to a FIRRTL Circuit.</p><div class="fullcomment"><div class="comment cmt"><p>Convert the given Chisel IR Circuit to a FIRRTL Circuit.
+</p></div><dl class="paramcmts block"><dt class="param">ir</dt><dd class="cmt"><p>Chisel IR Circuit, generated e.g. by elaborate().</p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 3.2.4)</i> Use ChiselStage.convert or use a ChiselStage class. This will be removed in 3.4.</p></dd></dl></div>
+    </li></ol>
+            </div>
         </div>
 
         <div id="inheritedMembers">
@@ -1503,10 +1616,12 @@ TODO: Look into dynamic class loading as way to make this main useful
               <h3>Inherited from <a href="BackendCompilationUtilities.html" class="extype" name="chisel3.BackendCompilationUtilities">BackendCompilationUtilities</a></h3>
             </div><div class="parent" name="firrtl.util.BackendCompilationUtilities">
               <h3>Inherited from <span class="extype" name="firrtl.util.BackendCompilationUtilities">firrtl.util.BackendCompilationUtilities</span></h3>
+            </div><div class="parent" name="logger.LazyLogging">
+              <h3>Inherited from <span class="extype" name="logger.LazyLogging">LazyLogging</span></h3>
             </div><div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
             </div>
         
         </div>

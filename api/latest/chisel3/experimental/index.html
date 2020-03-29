@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.2.4 - chisel3.experimental</title>
-          <meta name="description" content="chisel3 3.2.4 - chisel3.experimental" />
-          <meta name="keywords" content="chisel3 3.2.4 chisel3.experimental" />
+          <title>chisel3 3.3.0-RC1 - chisel3.experimental</title>
+          <meta name="description" content="chisel3 3.3.0 - RC1 - chisel3.experimental" />
+          <meta name="keywords" content="chisel3 3.3.0 RC1 chisel3.experimental" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.2.4</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.3.0-RC1</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -203,12 +203,24 @@ non-experimental, you must explicitly import this package to use its contents.
                         <a href="FixedPoint.html" title="A sealed class representing a fixed point number that has a bit width and a binary point The width and binary point may be inferred.">FixedPoint</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
+                        <a class="trait" href="HasBinaryPoint.html" title="Chisel types that have binary points support retrieving literal values as Double or BigDecimal"></a>
+                        <a href="HasBinaryPoint.html" title="Chisel types that have binary points support retrieving literal values as Double or BigDecimal">HasBinaryPoint</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
                         <a class="object" href="IO$.html" title=""></a>
                         <a href="IO$.html" title="">IO</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="class" href="IntParam.html" title=""></a>
                         <a href="IntParam.html" title="">IntParam</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="Interval$.html" title="Factory and convenience methods for the Interval class IMPORTANT: The API provided here is experimental and may change in the future."></a>
+                        <a class="class" href="Interval.html" title="A sealed class representing a fixed point number that has a range, an additional parameter that can determine a minimum and maximum supported value."></a>
+                        <a href="Interval.html" title="A sealed class representing a fixed point number that has a range, an additional parameter that can determine a minimum and maximum supported value.">Interval</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="package$$NoChiselNamePrefix.html" title="Do not name instances of this type in chiselName"></a>
+                        <a href="package$$NoChiselNamePrefix.html" title="Do not name instances of this type in chiselName">NoChiselNamePrefix</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="class" href="Param.html" title="Parameters for BlackBoxes"></a>
@@ -239,8 +251,8 @@ non-experimental, you must explicitly import this package to use its contents.
                         <a href="attach$.html" title="">attach</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="class" href="package$$chiselName.html" title=""></a>
-                        <a href="package$$chiselName.html" title="">chiselName</a>
+                        <a class="class" href="package$$chiselName.html" title="Experimental macro for naming Chisel hardware values"></a>
+                        <a href="package$$chiselName.html" title="Experimental macro for naming Chisel hardware values">chiselName</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="object" href="doNotDedup$.html" title="Marks that a module to be ignored in Dedup Transform in Firrtl pass"></a>
@@ -335,11 +347,11 @@ functions
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Package for experimental features, which may have their API changed, be removed, etc.</p><p>Because its contents won't necessarily have the same level of stability and support as
 non-experimental, you must explicitly import this package to use its contents.
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.2.4//chiselFrontend/src/main/scala/chisel3/experimental/package.scala" target="_blank">package.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.3.0-RC1//core/src/main/scala/chisel3/experimental/package.scala" target="_blank">package.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div></div>
         
 
@@ -453,7 +465,7 @@ given module. This is to prevent any surprising consequences of last connect sem
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="Interface for Annotations in Chisel" href="ChiselAnnotation.html"><span class="name">ChiselAnnotation</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="Interface for Annotations in Chisel" href="ChiselAnnotation.html"><span class="name">ChiselAnnotation</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <p class="shortcomment cmt">Interface for Annotations in Chisel</p><div class="fullcomment"><div class="comment cmt"><p>Interface for Annotations in Chisel</p><p>Defines a conversion to a corresponding FIRRTL Annotation
@@ -486,7 +498,7 @@ given module. This is to prevent any surprising consequences of last connect sem
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="ChiselLegacyAnnotation.html"><span class="name">ChiselLegacyAnnotation</span></a><span class="result"> extends <a href="ChiselAnnotation.html" class="extype" name="chisel3.experimental.ChiselAnnotation">ChiselAnnotation</a> with <a href="RunFirrtlTransform.html" class="extype" name="chisel3.experimental.RunFirrtlTransform">RunFirrtlTransform</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="ChiselLegacyAnnotation.html"><span class="name">ChiselLegacyAnnotation</span></a><span class="result"> extends <a href="ChiselAnnotation.html" class="extype" name="chisel3.experimental.ChiselAnnotation">ChiselAnnotation</a> with <a href="RunFirrtlTransform.html" class="extype" name="chisel3.experimental.RunFirrtlTransform">RunFirrtlTransform</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -502,7 +514,7 @@ given module. This is to prevent any surprising consequences of last connect sem
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="package$$ChiselRange.html"><span class="name">ChiselRange</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyVal.html#scala.AnyVal" class="extype" name="scala.AnyVal">AnyVal</a></span>
+        <a title="" href="package$$ChiselRange.html"><span class="name">ChiselRange</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyVal.html#scala.AnyVal" class="extype" name="scala.AnyVal">AnyVal</a></span>
       </span>
       
       
@@ -551,7 +563,7 @@ The apply method is retrieves the element with the supplied name.</p>
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="DoubleParam.html"><span class="name">DoubleParam</span></a><span class="params">(<span name="value">value: <a href="https://www.scala-lang.org/api/2.12.10/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a></span>)</span><span class="result"> extends <a href="Param.html" class="extype" name="chisel3.experimental.Param">Param</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="DoubleParam.html"><span class="name">DoubleParam</span></a><span class="params">(<span name="value">value: <a href="https://www.scala-lang.org/api/2.12.11/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a></span>)</span><span class="result"> extends <a href="Param.html" class="extype" name="chisel3.experimental.Param">Param</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -567,7 +579,7 @@ The apply method is retrieves the element with the supplied name.</p>
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="EnumFactory.html"><span class="name">EnumFactory</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="" href="EnumFactory.html"><span class="name">EnumFactory</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       
@@ -629,7 +641,7 @@ integrated to use differential input:</p><pre>IBUFDS #(.DIFF_TERM(<span class="l
 }</pre></li></ol>
             </div><dt>Note</dt><dd><span class="cmt"><p>The parameters API is experimental and may change</p></span></dd></dl></div>
     </li><li name="chisel3.experimental.FixedPoint" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="FixedPointextendsBitswithNum[chisel3.experimental.FixedPoint]"></a><a id="FixedPoint:FixedPoint"></a>
+      <a id="FixedPointextendsBitswithNum[chisel3.experimental.FixedPoint]withHasBinaryPoint"></a><a id="FixedPoint:FixedPoint"></a>
       <span class="permalink">
       <a href="../../chisel3/experimental/FixedPoint.html" title="Permalink">
         <i class="material-icons"></i>
@@ -640,13 +652,31 @@ integrated to use differential input:</p><pre>IBUFDS #(.DIFF_TERM(<span class="l
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="A sealed class representing a fixed point number that has a bit width and a binary point The width and binary point may be inferred." href="FixedPoint.html"><span class="name">FixedPoint</span></a><span class="result"> extends <a href="../Bits.html" class="extype" name="chisel3.Bits">Bits</a> with <a href="../Num.html" class="extype" name="chisel3.Num">Num</a>[<a href="FixedPoint.html" class="extype" name="chisel3.experimental.FixedPoint">FixedPoint</a>]</span>
+        <a title="A sealed class representing a fixed point number that has a bit width and a binary point The width and binary point may be inferred." href="FixedPoint.html"><span class="name">FixedPoint</span></a><span class="result"> extends <a href="../Bits.html" class="extype" name="chisel3.Bits">Bits</a> with <a href="../Num.html" class="extype" name="chisel3.Num">Num</a>[<a href="FixedPoint.html" class="extype" name="chisel3.experimental.FixedPoint">FixedPoint</a>] with <a href="HasBinaryPoint.html" class="extype" name="chisel3.experimental.HasBinaryPoint">HasBinaryPoint</a></span>
       </span>
       
       <p class="shortcomment cmt">A sealed class representing a fixed point number that has a bit width and a binary point The width and binary point
 may be inferred.</p><div class="fullcomment"><div class="comment cmt"><p>A sealed class representing a fixed point number that has a bit width and a binary point The width and binary point
 may be inferred.</p><p>IMPORTANT: The API provided here is experimental and may change in the future.
 </p></div></div>
+    </li><li name="chisel3.experimental.HasBinaryPoint" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="HasBinaryPointextendsAnyRef"></a><a id="HasBinaryPoint:HasBinaryPoint"></a>
+      <span class="permalink">
+      <a href="../../chisel3/experimental/HasBinaryPoint.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Chisel types that have binary points support retrieving literal values as Double or BigDecimal" href="HasBinaryPoint.html"><span class="name">HasBinaryPoint</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Chisel types that have binary points support retrieving
+literal values as <code>Double</code> or <code>BigDecimal</code>
+</p>
     </li><li name="chisel3.experimental.IntParam" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="IntParamextendsParamwithProductwithSerializable"></a><a id="IntParam:IntParam"></a>
       <span class="permalink">
@@ -659,10 +689,75 @@ may be inferred.</p><p>IMPORTANT: The API provided here is experimental and may 
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="IntParam.html"><span class="name">IntParam</span></a><span class="params">(<span name="value">value: <span class="extype" name="scala.BigInt">BigInt</span></span>)</span><span class="result"> extends <a href="Param.html" class="extype" name="chisel3.experimental.Param">Param</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="IntParam.html"><span class="name">IntParam</span></a><span class="params">(<span name="value">value: <span class="extype" name="scala.BigInt">BigInt</span></span>)</span><span class="result"> extends <a href="Param.html" class="extype" name="chisel3.experimental.Param">Param</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
+    </li><li name="chisel3.experimental.Interval" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="IntervalextendsBitswithNum[chisel3.experimental.Interval]withHasBinaryPoint"></a><a id="Interval:Interval"></a>
+      <span class="permalink">
+      <a href="../../chisel3/experimental/Interval.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A sealed class representing a fixed point number that has a range, an additional parameter that can determine a minimum and maximum supported value." href="Interval.html"><span class="name">Interval</span></a><span class="result"> extends <a href="../Bits.html" class="extype" name="chisel3.Bits">Bits</a> with <a href="../Num.html" class="extype" name="chisel3.Num">Num</a>[<a href="Interval.html" class="extype" name="chisel3.experimental.Interval">Interval</a>] with <a href="HasBinaryPoint.html" class="extype" name="chisel3.experimental.HasBinaryPoint">HasBinaryPoint</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A sealed class representing a fixed point number that has a range, an additional
+parameter that can determine a minimum and maximum supported value.</p><div class="fullcomment"><div class="comment cmt"><p>A sealed class representing a fixed point number that has a range, an additional
+parameter that can determine a minimum and maximum supported value.
+The range can be used to reduce the required widths particularly in primitive
+operations with other Intervals, the canonical example being</p><pre><span class="kw">val</span> one = <span class="num">1.</span>I
+<span class="kw">val</span> six = <span class="std">Seq</span>.fill(<span class="num">6</span>)(one).reduce(_ + _)</pre><p>A UInt computed in this way would require a <span class="extype" name="Width">Width</span>
+binary point
+The width and binary point may be inferred.</p><p>IMPORTANT: The API provided here is experimental and may change in the future.
+</p></div></div>
+    </li><li name="chisel3.experimental.NoChiselNamePrefix" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="NoChiselNamePrefixextendsAnyRef"></a><a id="NoChiselNamePrefix:NoChiselNamePrefix"></a>
+      <span class="permalink">
+      <a href="../../chisel3/experimental/package$$NoChiselNamePrefix.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Do not name instances of this type in chiselName" href="package$$NoChiselNamePrefix.html"><span class="name">NoChiselNamePrefix</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Do not name instances of this type in <a href="package$$chiselName.html" class="extype" name="chisel3.experimental.chiselName">chiselName</a></p><div class="fullcomment"><div class="comment cmt"><p>Do not name instances of this type in <a href="package$$chiselName.html" class="extype" name="chisel3.experimental.chiselName">chiselName</a></p><p>By default, <code>chiselName</code> will include <code>val</code> names of instances of annotated classes as a
+prefix in final naming. Mixing in this trait to a <code>class</code>, <code>object</code>, or anonymous <code>class</code>
+instances will exclude the <code>val</code> name from <code>chiselName</code> naming.
+</p></div><dl class="attributes block"> <div class="block">Example:
+               <ol><li class="cmt"><p></p><pre><span class="kw">import</span> chisel3._
+<span class="kw">import</span> chisel3.experimental.{chiselName, NoChiselNamePrefix}
+
+<span class="cmt">// Note that this is not a Module</span>
+@chiselName
+<span class="kw">class</span> Counter(w: <span class="std">Int</span>) {
+  <span class="kw">val</span> myReg = RegInit(<span class="num">0.</span>U(w.W))
+  myReg := myReg + <span class="num">1.</span>U
+}
+
+@chiselName
+<span class="kw">class</span> MyModule <span class="kw">extends</span> Module {
+  <span class="kw">val</span> io = IO(<span class="kw">new</span> Bundle {
+    <span class="kw">val</span> out = Output(UInt(<span class="num">8.</span>W))
+  })
+  <span class="cmt">// Name of myReg will be "counter0_myReg"</span>
+  <span class="kw">val</span> counter0 = <span class="kw">new</span> Counter(<span class="num">8</span>)
+  <span class="cmt">// Name of myReg will be "myReg"</span>
+  <span class="kw">val</span> counter1 = <span class="kw">new</span> Counter(<span class="num">8</span>) <span class="kw">with</span> NoChiselNamePrefix
+  io.out := counter0.myReg + counter1.myReg
+}</pre></li></ol>
+            </div></dl></div>
     </li><li name="chisel3.experimental.Param" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="ParamextendsAnyRef"></a><a id="Param:Param"></a>
       <span class="permalink">
@@ -675,7 +770,7 @@ may be inferred.</p><p>IMPORTANT: The API provided here is experimental and may 
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Parameters for BlackBoxes" href="Param.html"><span class="name">Param</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="Parameters for BlackBoxes" href="Param.html"><span class="name">Param</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <p class="shortcomment cmt">Parameters for BlackBoxes</p>
@@ -691,7 +786,7 @@ may be inferred.</p><p>IMPORTANT: The API provided here is experimental and may 
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="Use PrivateObject to force users to specify width and binaryPoint by name" href="PrivateType.html"><span class="name">PrivateType</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="Use PrivateObject to force users to specify width and binaryPoint by name" href="PrivateType.html"><span class="name">PrivateType</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <p class="shortcomment cmt">Use PrivateObject to force users to specify width and binaryPoint by name
@@ -708,7 +803,7 @@ may be inferred.</p><p>IMPORTANT: The API provided here is experimental and may 
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="Unquoted String" href="RawParam.html"><span class="name">RawParam</span></a><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="Param.html" class="extype" name="chisel3.experimental.Param">Param</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="Unquoted String" href="RawParam.html"><span class="name">RawParam</span></a><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="Param.html" class="extype" name="chisel3.experimental.Param">Param</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       <p class="shortcomment cmt">Unquoted String</p>
@@ -747,7 +842,7 @@ FIRRTL.
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="StringParam.html"><span class="name">StringParam</span></a><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="Param.html" class="extype" name="chisel3.experimental.Param">Param</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.10/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="StringParam.html"><span class="name">StringParam</span></a><span class="params">(<span name="value">value: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="Param.html" class="extype" name="chisel3.experimental.Param">Param</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -763,16 +858,36 @@ FIRRTL.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="package$$chiselName.html"><span class="name">chiselName</span></a><span class="result"> extends <span class="extype" name="chisel3.internal.naming.chiselName">internal.naming.chiselName</span></span>
+        <a title="Experimental macro for naming Chisel hardware values" href="package$$chiselName.html"><span class="name">chiselName</span></a><span class="result"> extends <span class="extype" name="chisel3.internal.naming.chiselName">internal.naming.chiselName</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+      <p class="shortcomment cmt">Experimental macro for naming Chisel hardware values</p><div class="fullcomment"><div class="comment cmt"><p>Experimental macro for naming Chisel hardware values</p><p>By default, Chisel uses reflection for naming which only works for public fields of <code>Bundle</code>
+and <code>Module</code> classes. Applying this macro annotation to a <code>class</code> or <code>object</code> enables Chisel
+to name any hardware values within the annotated <code>class</code> or <code>object.
+</code></p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
                 <span class="name">@compileTimeOnly</span><span class="args">(<span>
       
       <span class="defval" name="&quot;macro annotation could not be expanded (the most common reason for that is that you need to enable the macro paradise plugin; another possibility is that you try to use macro annotation in the same compilation run that defines it)&quot;">...</span>
     </span>)</span>
               
-        </dd></dl></div>
+        </dd><div class="block">Example:
+               <ol><li class="cmt"><p></p><pre><span class="kw">import</span> chisel3._
+<span class="kw">import</span> chisel3.experimental.chiselName
+
+@chiselName
+<span class="kw">class</span> MyModule <span class="kw">extends</span> Module {
+  <span class="kw">val</span> io = IO(<span class="kw">new</span> Bundle {
+    <span class="kw">val</span> in = Input(UInt(<span class="num">8.</span>W))
+    <span class="kw">val</span> out = Output(UInt(<span class="num">8.</span>W))
+  })
+  <span class="kw">def</span> createReg(): <span class="std">Unit</span> = {
+    <span class="cmt">// @chiselName allows Chisel to name this Reg</span>
+    <span class="kw">val</span> myReg = RegInit(io.in)
+    io.out := myReg
+  }
+  createReg()
+}</pre></li></ol>
+            </div></dl></div>
     </li><li name="chisel3.experimental.dump" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="dumpextendsdump"></a><a id="dump:dump"></a>
       <span class="permalink">
@@ -869,7 +984,7 @@ FIRRTL.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fromDoubleToDoubleParam</span><span class="params">(<span name="x">x: <a href="https://www.scala-lang.org/api/2.12.10/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a></span>)</span><span class="result">: <a href="DoubleParam.html" class="extype" name="chisel3.experimental.DoubleParam">DoubleParam</a></span>
+        <span class="name">fromDoubleToDoubleParam</span><span class="params">(<span name="x">x: <a href="https://www.scala-lang.org/api/2.12.11/scala/Double.html#scala.Double" class="extype" name="scala.Double">Double</a></span>)</span><span class="result">: <a href="DoubleParam.html" class="extype" name="chisel3.experimental.DoubleParam">DoubleParam</a></span>
       </span>
       
       
@@ -885,7 +1000,7 @@ FIRRTL.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fromIntToIntParam</span><span class="params">(<span name="x">x: <a href="https://www.scala-lang.org/api/2.12.10/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="IntParam.html" class="extype" name="chisel3.experimental.IntParam">IntParam</a></span>
+        <span class="name">fromIntToIntParam</span><span class="params">(<span name="x">x: <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="IntParam.html" class="extype" name="chisel3.experimental.IntParam">IntParam</a></span>
       </span>
       
       
@@ -901,7 +1016,7 @@ FIRRTL.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">fromLongToIntParam</span><span class="params">(<span name="x">x: <a href="https://www.scala-lang.org/api/2.12.10/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="IntParam.html" class="extype" name="chisel3.experimental.IntParam">IntParam</a></span>
+        <span class="name">fromLongToIntParam</span><span class="params">(<span name="x">x: <a href="https://www.scala-lang.org/api/2.12.11/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="IntParam.html" class="extype" name="chisel3.experimental.IntParam">IntParam</a></span>
       </span>
       
       
@@ -1048,7 +1163,7 @@ FIRRTL.
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="Factory and convenience methods for the FixedPoint class IMPORTANT: The API provided here is experimental and may change in the future." href="FixedPoint$.html"><span class="name">FixedPoint</span></a>
+        <a title="Factory and convenience methods for the FixedPoint class IMPORTANT: The API provided here is experimental and may change in the future." href="FixedPoint$.html"><span class="name">FixedPoint</span></a><span class="result"> extends <a href="../NumObject.html" class="extype" name="chisel3.NumObject">NumObject</a></span>
       </span>
       
       <p class="shortcomment cmt">Factory and convenience methods for the FixedPoint class
@@ -1069,6 +1184,23 @@ IMPORTANT: The API provided here is experimental and may change in the future.</
       </span>
       
       
+    </li><li name="chisel3.experimental.Interval" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="Interval"></a><a id="Interval:Interval"></a>
+      <span class="permalink">
+      <a href="../../chisel3/experimental/Interval$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="Factory and convenience methods for the Interval class IMPORTANT: The API provided here is experimental and may change in the future." href="Interval$.html"><span class="name">Interval</span></a><span class="result"> extends <a href="../NumObject.html" class="extype" name="chisel3.NumObject">NumObject</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Factory and convenience methods for the Interval class
+IMPORTANT: The API provided here is experimental and may change in the future.</p>
     </li><li name="chisel3.experimental.annotate" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="annotate"></a><a id="annotate:annotate"></a>
       <span class="permalink">
@@ -1220,9 +1352,9 @@ in <a href="../Driver$.html" class="extype" name="chisel3.Driver">chisel3.Driver
 
         <div id="inheritedMembers">
         <div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
             </div>
         
         </div>

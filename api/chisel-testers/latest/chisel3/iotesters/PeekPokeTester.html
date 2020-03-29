@@ -8,17 +8,17 @@
           <meta name="keywords" content="" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
+      
       <link href="../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../lib/jquery.min.js"></script>
       <script type="text/javascript" src="../../lib/jquery.panzoom.min.js"></script>
       <script type="text/javascript" src="../../lib/jquery.mousewheel.min.js"></script>
       <script type="text/javascript" src="../../lib/index.js"></script>
       <script type="text/javascript" src="../../index.js"></script>
       <script type="text/javascript" src="../../lib/scheduler.js"></script>
       <script type="text/javascript" src="../../lib/template.js"></script>
-      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
       <script type="text/javascript" src="../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../lib/diagrams.js" id="diagrams-js"></script>
       <script type="text/javascript">
         /* this variable can be used by the JS to determine the path to the root document */
@@ -56,7 +56,7 @@
                 <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="_root_"></a><a id="root:_root_"></a>
       <span class="permalink">
-      <a href="index.html#_root_" title="Permalink">
+      <a href="../../index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -72,7 +72,7 @@
     </li><li name="_root_.chisel3" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="chisel3"></a><a id="chisel3:chisel3"></a>
       <span class="permalink">
-      <a href="index.html#chisel3" title="Permalink">
+      <a href="../../chisel3/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -88,7 +88,7 @@
     </li><li name="chisel3.iotesters" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="iotesters"></a><a id="iotesters:iotesters"></a>
       <span class="permalink">
-      <a href="../chisel3/index.html#iotesters" title="Permalink">
+      <a href="../../chisel3/iotesters/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -104,7 +104,7 @@
     </li><li name="chisel3.iotesters.experimental" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="experimental"></a><a id="experimental:experimental"></a>
       <span class="permalink">
-      <a href="../../chisel3/iotesters/index.html#experimental" title="Permalink">
+      <a href="../../chisel3/iotesters/experimental/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -227,12 +227,20 @@
                         <a href="copyVpiFiles$.html" title="Copies the necessary header files used for verilator compilation to the specified destination folder">copyVpiFiles</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
+                        <a class="object" href="copyVsimFiles$.html" title="Copies the necessary header files used for vlog compilation to the specified destination folder"></a>
+                        <a href="copyVsimFiles$.html" title="Copies the necessary header files used for vlog compilation to the specified destination folder">copyVsimFiles</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
                         <a class="object" href="genIVLVerilogHarness$.html" title="Generates the Module specific verilator harness cpp file for verilator compilation"></a>
                         <a href="genIVLVerilogHarness$.html" title="Generates the Module specific verilator harness cpp file for verilator compilation">genIVLVerilogHarness</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="object" href="genVCSVerilogHarness$.html" title="Generates the Module specific verilator harness cpp file for verilator compilation"></a>
                         <a href="genVCSVerilogHarness$.html" title="Generates the Module specific verilator harness cpp file for verilator compilation">genVCSVerilogHarness</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="genVSIMVerilogHarness$.html" title="Generates the Module specific vsim harness verilog file for VSIM backend"></a>
+                        <a href="genVSIMVerilogHarness$.html" title="Generates the Module specific vsim harness verilog file for VSIM backend">genVSIMVerilogHarness</a>
                       </li>
               </ul>
             </div>
@@ -471,13 +479,13 @@
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
     </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="chisel3.iotesters.PeekPokeTester#dut" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
@@ -610,7 +618,7 @@ TODO: deal with Vecs
       </span>
       
       
-    </li><li name="chisel3.iotesters.PeekPokeTester#expectFixedPoint" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="chisel3.iotesters.PeekPokeTester#expectFixedPoint" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="expectFixedPoint(signal:chisel3.experimental.FixedPoint,expected:Double,msg:=&gt;String,epsilon:Double):Boolean"></a><a id="expectFixedPoint(FixedPoint,Double,⇒String,Double):Boolean"></a>
       <span class="permalink">
       <a href="../../chisel3/iotesters/PeekPokeTester.html#expectFixedPoint(signal:chisel3.experimental.FixedPoint,expected:Double,msg:=&gt;String,epsilon:Double):Boolean" title="Permalink">
@@ -625,7 +633,61 @@ TODO: deal with Vecs
         <span class="name">expectFixedPoint</span><span class="params">(<span name="signal">signal: <span class="extype" name="chisel3.experimental.FixedPoint">FixedPoint</span></span>, <span name="expected">expected: <span class="extype" name="scala.Double">Double</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="epsilon">epsilon: <span class="extype" name="scala.Double">Double</span> = <span class="symbol">0.01</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       
+      <p class="shortcomment cmt">Uses a Double as the expected value</p><div class="fullcomment"><div class="comment cmt"><p>Uses a Double as the expected value</p><p>Consider using the more reliable <a href="#expectFixedPointBig(signal:chisel3.experimental.FixedPoint,expected:BigDecimal,msg:=&gt;String,epsilon:BigDecimal):Boolean" class="extmbr" name="chisel3.iotesters.PeekPokeTester#expectFixedPointBig">expectFixedPointBig</a>
+</p></div><dl class="paramcmts block"><dt class="param">signal</dt><dd class="cmt"><p>signal</p></dd><dt class="param">expected</dt><dd class="cmt"><p>value expected</p></dd><dt class="param">msg</dt><dd class="cmt"><p>message on failure</p></dd><dt class="param">epsilon</dt><dd class="cmt"><p>error bounds on expected value are +/- epsilon</p></dd></dl></div>
+    </li><li name="chisel3.iotesters.PeekPokeTester#expectFixedPointBig" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="expectFixedPointBig(signal:chisel3.experimental.FixedPoint,expected:BigDecimal,msg:=&gt;String,epsilon:BigDecimal):Boolean"></a><a id="expectFixedPointBig(FixedPoint,BigDecimal,⇒String,BigDecimal):Boolean"></a>
+      <span class="permalink">
+      <a href="../../chisel3/iotesters/PeekPokeTester.html#expectFixedPointBig(signal:chisel3.experimental.FixedPoint,expected:BigDecimal,msg:=&gt;String,epsilon:BigDecimal):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">expectFixedPointBig</span><span class="params">(<span name="signal">signal: <span class="extype" name="chisel3.experimental.FixedPoint">FixedPoint</span></span>, <span name="expected">expected: <span class="extype" name="scala.BigDecimal">BigDecimal</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="epsilon">epsilon: <span class="extype" name="scala.BigDecimal">BigDecimal</span> = <span class="symbol">0.01</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
       
+      <p class="shortcomment cmt">Uses a BigDecimal as the expected value
+</p><div class="fullcomment"><div class="comment cmt"><p>Uses a BigDecimal as the expected value
+</p></div><dl class="paramcmts block"><dt class="param">signal</dt><dd class="cmt"><p>signal</p></dd><dt class="param">expected</dt><dd class="cmt"><p>value expected</p></dd><dt class="param">msg</dt><dd class="cmt"><p>message on failure</p></dd><dt class="param">epsilon</dt><dd class="cmt"><p>error bounds on expected value are +/- epsilon</p></dd></dl></div>
+    </li><li name="chisel3.iotesters.PeekPokeTester#expectInterval" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="expectInterval(signal:chisel3.experimental.Interval,expected:Double,msg:=&gt;String,epsilon:Double):Boolean"></a><a id="expectInterval(Interval,Double,⇒String,Double):Boolean"></a>
+      <span class="permalink">
+      <a href="../../chisel3/iotesters/PeekPokeTester.html#expectInterval(signal:chisel3.experimental.Interval,expected:Double,msg:=&gt;String,epsilon:Double):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">expectInterval</span><span class="params">(<span name="signal">signal: <span class="extype" name="chisel3.experimental.Interval">Interval</span></span>, <span name="expected">expected: <span class="extype" name="scala.Double">Double</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="epsilon">epsilon: <span class="extype" name="scala.Double">Double</span> = <span class="symbol">0.01</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Uses a Double as the expected value</p><div class="fullcomment"><div class="comment cmt"><p>Uses a Double as the expected value</p><p>Consider using the more reliable <a href="#expectIntervalBig(signal:chisel3.experimental.Interval,expected:BigDecimal,msg:=&gt;String,epsilon:BigDecimal):Boolean" class="extmbr" name="chisel3.iotesters.PeekPokeTester#expectIntervalBig">expectIntervalBig</a>
+</p></div><dl class="paramcmts block"><dt class="param">signal</dt><dd class="cmt"><p>signal</p></dd><dt class="param">expected</dt><dd class="cmt"><p>value expected</p></dd><dt class="param">msg</dt><dd class="cmt"><p>message on failure</p></dd><dt class="param">epsilon</dt><dd class="cmt"><p>error bounds on expected value are +/- epsilon</p></dd></dl></div>
+    </li><li name="chisel3.iotesters.PeekPokeTester#expectIntervalBig" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="expectIntervalBig(signal:chisel3.experimental.Interval,expected:BigDecimal,msg:=&gt;String,epsilon:BigDecimal):Boolean"></a><a id="expectIntervalBig(Interval,BigDecimal,⇒String,BigDecimal):Boolean"></a>
+      <span class="permalink">
+      <a href="../../chisel3/iotesters/PeekPokeTester.html#expectIntervalBig(signal:chisel3.experimental.Interval,expected:BigDecimal,msg:=&gt;String,epsilon:BigDecimal):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">expectIntervalBig</span><span class="params">(<span name="signal">signal: <span class="extype" name="chisel3.experimental.Interval">Interval</span></span>, <span name="expected">expected: <span class="extype" name="scala.BigDecimal">BigDecimal</span></span>, <span name="msg">msg: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="epsilon">epsilon: <span class="extype" name="scala.BigDecimal">BigDecimal</span> = <span class="symbol">0.01</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Uses a BigDecimal as the expected value
+</p><div class="fullcomment"><div class="comment cmt"><p>Uses a BigDecimal as the expected value
+</p></div><dl class="paramcmts block"><dt class="param">signal</dt><dd class="cmt"><p>signal</p></dd><dt class="param">expected</dt><dd class="cmt"><p>value expected</p></dd><dt class="param">msg</dt><dd class="cmt"><p>message on failure</p></dd><dt class="param">epsilon</dt><dd class="cmt"><p>error bounds on expected value are +/- epsilon</p></dd></dl></div>
     </li><li name="chisel3.iotesters.PeekPokeTester#fail" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="fail:Unit"></a>
       <span class="permalink">
@@ -657,7 +719,7 @@ TODO: deal with Vecs
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
@@ -733,7 +795,7 @@ TODO: deal with Vecs
         <span class="name">incTime</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Int">Int</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="index.html" class="extype" name="chisel3.iotesters">chisel3.iotesters</a>] </dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="index.html" class="extype" name="chisel3.iotesters">iotesters</a>] </dd></dl></div>
     </li><li name="chisel3.iotesters.PeekPokeTester#int" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="int[T&lt;:chisel3.Element](x:T)(implicitevidence$7:chisel3.iotesters.Pokeable[T]):BigInt"></a><a id="int[T&lt;:Element](T)(Pokeable[T]):BigInt"></a>
       <span class="permalink">
@@ -997,7 +1059,7 @@ TODO: deal with Vecs
       </span>
       
       
-    </li><li name="chisel3.iotesters.PeekPokeTester#peekFixedPoint" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="chisel3.iotesters.PeekPokeTester#peekFixedPoint" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="peekFixedPoint(signal:chisel3.experimental.FixedPoint):Double"></a><a id="peekFixedPoint(FixedPoint):Double"></a>
       <span class="permalink">
       <a href="../../chisel3/iotesters/PeekPokeTester.html#peekFixedPoint(signal:chisel3.experimental.FixedPoint):Double" title="Permalink">
@@ -1012,7 +1074,63 @@ TODO: deal with Vecs
         <span class="name">peekFixedPoint</span><span class="params">(<span name="signal">signal: <span class="extype" name="chisel3.experimental.FixedPoint">FixedPoint</span></span>)</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
       </span>
       
+      <p class="shortcomment cmt">Returns the value signal as a Double.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the value signal as a Double. Double may not be big enough to contain the
+value without precision loss. This situation will Throw ChiselException
+Consider using the more reliable <a href="#peekFixedPointBig(signal:chisel3.experimental.FixedPoint):BigDecimal" class="extmbr" name="chisel3.iotesters.PeekPokeTester#peekFixedPointBig">peekFixedPointBig</a>
+</p></div></div>
+    </li><li name="chisel3.iotesters.PeekPokeTester#peekFixedPointBig" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="peekFixedPointBig(signal:chisel3.experimental.FixedPoint):BigDecimal"></a><a id="peekFixedPointBig(FixedPoint):BigDecimal"></a>
+      <span class="permalink">
+      <a href="../../chisel3/iotesters/PeekPokeTester.html#peekFixedPointBig(signal:chisel3.experimental.FixedPoint):BigDecimal" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">peekFixedPointBig</span><span class="params">(<span name="signal">signal: <span class="extype" name="chisel3.experimental.FixedPoint">FixedPoint</span></span>)</span><span class="result">: <span class="extype" name="scala.BigDecimal">BigDecimal</span></span>
+      </span>
       
+      <p class="shortcomment cmt">returns the value of signal as BigDecimal
+</p>
+    </li><li name="chisel3.iotesters.PeekPokeTester#peekInterval" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="peekInterval(signal:chisel3.experimental.Interval):Double"></a><a id="peekInterval(Interval):Double"></a>
+      <span class="permalink">
+      <a href="../../chisel3/iotesters/PeekPokeTester.html#peekInterval(signal:chisel3.experimental.Interval):Double" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">peekInterval</span><span class="params">(<span name="signal">signal: <span class="extype" name="chisel3.experimental.Interval">Interval</span></span>)</span><span class="result">: <span class="extype" name="scala.Double">Double</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns the value signal as a Double.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the value signal as a Double. Double may not be big enough to contain the
+value without precision loss. This situation will Throw ChiselException
+Consider using the more reliable <a href="#peekIntervalBig(signal:chisel3.experimental.Interval):BigDecimal" class="extmbr" name="chisel3.iotesters.PeekPokeTester#peekIntervalBig">peekIntervalBig</a>
+</p></div></div>
+    </li><li name="chisel3.iotesters.PeekPokeTester#peekIntervalBig" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="peekIntervalBig(signal:chisel3.experimental.Interval):BigDecimal"></a><a id="peekIntervalBig(Interval):BigDecimal"></a>
+      <span class="permalink">
+      <a href="../../chisel3/iotesters/PeekPokeTester.html#peekIntervalBig(signal:chisel3.experimental.Interval):BigDecimal" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">peekIntervalBig</span><span class="params">(<span name="signal">signal: <span class="extype" name="chisel3.experimental.Interval">Interval</span></span>)</span><span class="result">: <span class="extype" name="scala.BigDecimal">BigDecimal</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">returns the value of signal as BigDecimal
+</p>
     </li><li name="chisel3.iotesters.PeekPokeTester#poke" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="poke(signal:chisel3.Aggregate,value:IndexedSeq[BigInt]):Unit"></a><a id="poke(Aggregate,IndexedSeq[BigInt]):Unit"></a>
       <span class="permalink">
@@ -1171,6 +1289,54 @@ TODO: deal with Vecs
       </span>
       <span class="symbol">
         <span class="name">pokeFixedPoint</span><span class="params">(<span name="signal">signal: <span class="extype" name="chisel3.experimental.FixedPoint">FixedPoint</span></span>, <span name="value">value: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="chisel3.iotesters.PeekPokeTester#pokeFixedPointBig" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="pokeFixedPointBig(signal:chisel3.experimental.FixedPoint,value:BigDecimal):Unit"></a><a id="pokeFixedPointBig(FixedPoint,BigDecimal):Unit"></a>
+      <span class="permalink">
+      <a href="../../chisel3/iotesters/PeekPokeTester.html#pokeFixedPointBig(signal:chisel3.experimental.FixedPoint,value:BigDecimal):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">pokeFixedPointBig</span><span class="params">(<span name="signal">signal: <span class="extype" name="chisel3.experimental.FixedPoint">FixedPoint</span></span>, <span name="value">value: <span class="extype" name="scala.BigDecimal">BigDecimal</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="chisel3.iotesters.PeekPokeTester#pokeInterval" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="pokeInterval(signal:chisel3.experimental.Interval,value:Double):Unit"></a><a id="pokeInterval(Interval,Double):Unit"></a>
+      <span class="permalink">
+      <a href="../../chisel3/iotesters/PeekPokeTester.html#pokeInterval(signal:chisel3.experimental.Interval,value:Double):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">pokeInterval</span><span class="params">(<span name="signal">signal: <span class="extype" name="chisel3.experimental.Interval">Interval</span></span>, <span name="value">value: <span class="extype" name="scala.Double">Double</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
+    </li><li name="chisel3.iotesters.PeekPokeTester#pokeIntervalBig" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="pokeIntervalBig(signal:chisel3.experimental.Interval,value:BigDecimal):Unit"></a><a id="pokeIntervalBig(Interval,BigDecimal):Unit"></a>
+      <span class="permalink">
+      <a href="../../chisel3/iotesters/PeekPokeTester.html#pokeIntervalBig(signal:chisel3.experimental.Interval,value:BigDecimal):Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">pokeIntervalBig</span><span class="params">(<span name="signal">signal: <span class="extype" name="chisel3.experimental.Interval">Interval</span></span>, <span name="value">value: <span class="extype" name="scala.BigDecimal">BigDecimal</span></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       
@@ -1346,12 +1512,12 @@ TODO: deal with Vecs
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
     </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
     </li>

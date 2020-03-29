@@ -8,17 +8,17 @@
           <meta name="keywords" content="" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
+      
       <link href="../../lib/index.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../lib/template.css" media="screen" type="text/css" rel="stylesheet" />
       <link href="../../lib/diagrams.css" media="screen" type="text/css" rel="stylesheet" id="diagrams-css" />
-      <script type="text/javascript" src="../../lib/jquery.js"></script>
+      <script type="text/javascript" src="../../lib/jquery.min.js"></script>
       <script type="text/javascript" src="../../lib/jquery.panzoom.min.js"></script>
       <script type="text/javascript" src="../../lib/jquery.mousewheel.min.js"></script>
       <script type="text/javascript" src="../../lib/index.js"></script>
       <script type="text/javascript" src="../../index.js"></script>
       <script type="text/javascript" src="../../lib/scheduler.js"></script>
       <script type="text/javascript" src="../../lib/template.js"></script>
-      <script type="text/javascript" src="../../lib/tools.tooltip.js"></script>
       <script type="text/javascript" src="../../lib/modernizr.custom.js"></script><script type="text/javascript" src="../../lib/diagrams.js" id="diagrams-js"></script>
       <script type="text/javascript">
         /* this variable can be used by the JS to determine the path to the root document */
@@ -56,7 +56,7 @@
                 <li name="_root_.root" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="_root_"></a><a id="root:_root_"></a>
       <span class="permalink">
-      <a href="index.html#_root_" title="Permalink">
+      <a href="../../index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -72,7 +72,7 @@
     </li><li name="_root_.chisel3" visbl="pub" class="indented1 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="chisel3"></a><a id="chisel3:chisel3"></a>
       <span class="permalink">
-      <a href="index.html#chisel3" title="Permalink">
+      <a href="../../chisel3/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -88,7 +88,7 @@
     </li><li name="chisel3.iotesters" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="iotesters"></a><a id="iotesters:iotesters"></a>
       <span class="permalink">
-      <a href="../chisel3/index.html#iotesters" title="Permalink">
+      <a href="../../chisel3/iotesters/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -104,7 +104,7 @@
     </li><li name="chisel3.iotesters.experimental" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="experimental"></a><a id="experimental:experimental"></a>
       <span class="permalink">
-      <a href="../../chisel3/iotesters/index.html#experimental" title="Permalink">
+      <a href="../../chisel3/iotesters/experimental/index.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -227,12 +227,20 @@
                         <a href="copyVpiFiles$.html" title="Copies the necessary header files used for verilator compilation to the specified destination folder">copyVpiFiles</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
+                        <a class="object" href="copyVsimFiles$.html" title="Copies the necessary header files used for vlog compilation to the specified destination folder"></a>
+                        <a href="copyVsimFiles$.html" title="Copies the necessary header files used for vlog compilation to the specified destination folder">copyVsimFiles</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
                         <a class="object" href="genIVLVerilogHarness$.html" title="Generates the Module specific verilator harness cpp file for verilator compilation"></a>
                         <a href="genIVLVerilogHarness$.html" title="Generates the Module specific verilator harness cpp file for verilator compilation">genIVLVerilogHarness</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="object" href="genVCSVerilogHarness$.html" title="Generates the Module specific verilator harness cpp file for verilator compilation"></a>
                         <a href="genVCSVerilogHarness$.html" title="Generates the Module specific verilator harness cpp file for verilator compilation">genVCSVerilogHarness</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="genVSIMVerilogHarness$.html" title="Generates the Module specific vsim harness verilog file for VSIM backend"></a>
+                        <a href="genVSIMVerilogHarness$.html" title="Generates the Module specific vsim harness verilog file for VSIM backend">genVSIMVerilogHarness</a>
                       </li>
               </ul>
             </div>
@@ -258,7 +266,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">TesterOptions</span><span class="params">(<span name="isGenVerilog">isGenVerilog: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="isGenHarness">isGenHarness: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="isCompiling">isCompiling: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="isRunTest">isRunTest: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="isVerbose">isVerbose: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="displayBase">displayBase: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">10</span></span>, <span name="testerSeed">testerSeed: <span class="extype" name="scala.Long">Long</span> = <span class="symbol">System.currentTimeMillis</span></span>, <span name="testCmd">testCmd: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="moreVcsFlags">moreVcsFlags: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="moreVcsCFlags">moreVcsCFlags: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="vcsCommandEdits">vcsCommandEdits: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>, <span name="backendName">backendName: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;treadle&quot;</span></span>, <span name="logFileName">logFileName: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>, <span name="waveform">waveform: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="java.io.File">File</span>] = <span class="symbol">None</span></span>, <span name="moreIvlFlags">moreIvlFlags: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="moreIvlCFlags">moreIvlCFlags: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="ivlCommandEdits">ivlCommandEdits: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>, <span name="generateVcdOutput">generateVcdOutput: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>)</span><span class="result"> extends <span class="extype" name="firrtl.ComposableOptions">ComposableOptions</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+        <span class="name">TesterOptions</span><span class="params">(<span name="isGenVerilog">isGenVerilog: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="isGenHarness">isGenHarness: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="isCompiling">isCompiling: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="isRunTest">isRunTest: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="isVerbose">isVerbose: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="displayBase">displayBase: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">10</span></span>, <span name="testerSeed">testerSeed: <span class="extype" name="scala.Long">Long</span> = <span class="symbol">System.currentTimeMillis</span></span>, <span name="testCmd">testCmd: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="moreVcsFlags">moreVcsFlags: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="moreVcsCFlags">moreVcsCFlags: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="vcsCommandEdits">vcsCommandEdits: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>, <span name="backendName">backendName: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;treadle&quot;</span></span>, <span name="logFileName">logFileName: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>, <span name="waveform">waveform: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="java.io.File">File</span>] = <span class="symbol">None</span></span>, <span name="moreIvlFlags">moreIvlFlags: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="moreIvlCFlags">moreIvlCFlags: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="ivlCommandEdits">ivlCommandEdits: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>, <span name="moreVlogFlags">moreVlogFlags: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="moreVsimCFlags">moreVsimCFlags: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="moreVsimFlags">moreVsimFlags: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="moreVsimDoCmds">moreVsimDoCmds: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="vsimCommandEdits">vsimCommandEdits: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>, <span name="generateVcdOutput">generateVcdOutput: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>, <span name="generateFsdbOutput">generateFsdbOutput: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>)</span><span class="result"> extends <span class="extype" name="firrtl.ComposableOptions">ComposableOptions</span> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
       </span>
       </h4>
 
@@ -314,9 +322,9 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="chisel3.iotesters.TesterOptions#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(isGenVerilog:Boolean,isGenHarness:Boolean,isCompiling:Boolean,isRunTest:Boolean,isVerbose:Boolean,displayBase:Int,testerSeed:Long,testCmd:Seq[String],moreVcsFlags:Seq[String],moreVcsCFlags:Seq[String],vcsCommandEdits:String,backendName:String,logFileName:String,waveform:Option[java.io.File],moreIvlFlags:Seq[String],moreIvlCFlags:Seq[String],ivlCommandEdits:String,generateVcdOutput:String):chisel3.iotesters.TesterOptions"></a><a id="&lt;init&gt;:TesterOptions"></a>
+      <a id="&lt;init&gt;(isGenVerilog:Boolean,isGenHarness:Boolean,isCompiling:Boolean,isRunTest:Boolean,isVerbose:Boolean,displayBase:Int,testerSeed:Long,testCmd:Seq[String],moreVcsFlags:Seq[String],moreVcsCFlags:Seq[String],vcsCommandEdits:String,backendName:String,logFileName:String,waveform:Option[java.io.File],moreIvlFlags:Seq[String],moreIvlCFlags:Seq[String],ivlCommandEdits:String,moreVlogFlags:Seq[String],moreVsimCFlags:Seq[String],moreVsimFlags:Seq[String],moreVsimDoCmds:Seq[String],vsimCommandEdits:String,generateVcdOutput:String,generateFsdbOutput:String):chisel3.iotesters.TesterOptions"></a><a id="&lt;init&gt;:TesterOptions"></a>
       <span class="permalink">
-      <a href="../../chisel3/iotesters/TesterOptions.html#&lt;init&gt;(isGenVerilog:Boolean,isGenHarness:Boolean,isCompiling:Boolean,isRunTest:Boolean,isVerbose:Boolean,displayBase:Int,testerSeed:Long,testCmd:Seq[String],moreVcsFlags:Seq[String],moreVcsCFlags:Seq[String],vcsCommandEdits:String,backendName:String,logFileName:String,waveform:Option[java.io.File],moreIvlFlags:Seq[String],moreIvlCFlags:Seq[String],ivlCommandEdits:String,generateVcdOutput:String):chisel3.iotesters.TesterOptions" title="Permalink">
+      <a href="../../chisel3/iotesters/TesterOptions.html#&lt;init&gt;(isGenVerilog:Boolean,isGenHarness:Boolean,isCompiling:Boolean,isRunTest:Boolean,isVerbose:Boolean,displayBase:Int,testerSeed:Long,testCmd:Seq[String],moreVcsFlags:Seq[String],moreVcsCFlags:Seq[String],vcsCommandEdits:String,backendName:String,logFileName:String,waveform:Option[java.io.File],moreIvlFlags:Seq[String],moreIvlCFlags:Seq[String],ivlCommandEdits:String,moreVlogFlags:Seq[String],moreVsimCFlags:Seq[String],moreVsimFlags:Seq[String],moreVsimDoCmds:Seq[String],vsimCommandEdits:String,generateVcdOutput:String,generateFsdbOutput:String):chisel3.iotesters.TesterOptions" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -325,7 +333,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">TesterOptions</span><span class="params">(<span name="isGenVerilog">isGenVerilog: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="isGenHarness">isGenHarness: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="isCompiling">isCompiling: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="isRunTest">isRunTest: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="isVerbose">isVerbose: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="displayBase">displayBase: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">10</span></span>, <span name="testerSeed">testerSeed: <span class="extype" name="scala.Long">Long</span> = <span class="symbol">System.currentTimeMillis</span></span>, <span name="testCmd">testCmd: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="moreVcsFlags">moreVcsFlags: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="moreVcsCFlags">moreVcsCFlags: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="vcsCommandEdits">vcsCommandEdits: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>, <span name="backendName">backendName: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;treadle&quot;</span></span>, <span name="logFileName">logFileName: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>, <span name="waveform">waveform: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="java.io.File">File</span>] = <span class="symbol">None</span></span>, <span name="moreIvlFlags">moreIvlFlags: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="moreIvlCFlags">moreIvlCFlags: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="ivlCommandEdits">ivlCommandEdits: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>, <span name="generateVcdOutput">generateVcdOutput: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>)</span>
+        <span class="name">TesterOptions</span><span class="params">(<span name="isGenVerilog">isGenVerilog: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="isGenHarness">isGenHarness: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="isCompiling">isCompiling: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="isRunTest">isRunTest: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="isVerbose">isVerbose: <span class="extype" name="scala.Boolean">Boolean</span> = <span class="symbol">false</span></span>, <span name="displayBase">displayBase: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">10</span></span>, <span name="testerSeed">testerSeed: <span class="extype" name="scala.Long">Long</span> = <span class="symbol">System.currentTimeMillis</span></span>, <span name="testCmd">testCmd: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="moreVcsFlags">moreVcsFlags: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="moreVcsCFlags">moreVcsCFlags: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="vcsCommandEdits">vcsCommandEdits: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>, <span name="backendName">backendName: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;treadle&quot;</span></span>, <span name="logFileName">logFileName: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>, <span name="waveform">waveform: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="java.io.File">File</span>] = <span class="symbol">None</span></span>, <span name="moreIvlFlags">moreIvlFlags: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="moreIvlCFlags">moreIvlCFlags: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="ivlCommandEdits">ivlCommandEdits: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>, <span name="moreVlogFlags">moreVlogFlags: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="moreVsimCFlags">moreVsimCFlags: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="moreVsimFlags">moreVsimFlags: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="moreVsimDoCmds">moreVsimDoCmds: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Seq.empty</span></span>, <span name="vsimCommandEdits">vsimCommandEdits: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>, <span name="generateVcdOutput">generateVcdOutput: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>, <span name="generateFsdbOutput">generateFsdbOutput: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;&quot;</span></span>)</span>
       </span>
       
       
@@ -434,13 +442,13 @@
         <span class="name">clone</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.AnyRef">AnyRef</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.CloneNotSupportedException]">...</span>
     </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="chisel3.iotesters.TesterOptions#displayBase" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
@@ -490,13 +498,29 @@
         <span class="name">finalize</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../../java/lang/index.html" class="extype" name="java.lang">java.lang</a>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="symbol">classOf[java.lang.Throwable]</span>
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="chisel3.iotesters.TesterOptions#generateFsdbOutput" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="generateFsdbOutput:String"></a>
+      <span class="permalink">
+      <a href="../../chisel3/iotesters/TesterOptions.html#generateFsdbOutput:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">generateFsdbOutput</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      
     </li><li name="chisel3.iotesters.TesterOptions#generateVcdOutput" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="generateVcdOutput:String"></a>
       <span class="permalink">
@@ -724,6 +748,70 @@
       </span>
       
       
+    </li><li name="chisel3.iotesters.TesterOptions#moreVlogFlags" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="moreVlogFlags:Seq[String]"></a>
+      <span class="permalink">
+      <a href="../../chisel3/iotesters/TesterOptions.html#moreVlogFlags:Seq[String]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">moreVlogFlags</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      
+      
+    </li><li name="chisel3.iotesters.TesterOptions#moreVsimCFlags" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="moreVsimCFlags:Seq[String]"></a>
+      <span class="permalink">
+      <a href="../../chisel3/iotesters/TesterOptions.html#moreVsimCFlags:Seq[String]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">moreVsimCFlags</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      
+      
+    </li><li name="chisel3.iotesters.TesterOptions#moreVsimDoCmds" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="moreVsimDoCmds:Seq[String]"></a>
+      <span class="permalink">
+      <a href="../../chisel3/iotesters/TesterOptions.html#moreVsimDoCmds:Seq[String]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">moreVsimDoCmds</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      
+      
+    </li><li name="chisel3.iotesters.TesterOptions#moreVsimFlags" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="moreVsimFlags:Seq[String]"></a>
+      <span class="permalink">
+      <a href="../../chisel3/iotesters/TesterOptions.html#moreVsimFlags:Seq[String]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">moreVsimFlags</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      
+      
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -842,6 +930,22 @@
       </span>
       
       
+    </li><li name="chisel3.iotesters.TesterOptions#vsimCommandEdits" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="vsimCommandEdits:String"></a>
+      <span class="permalink">
+      <a href="../../chisel3/iotesters/TesterOptions.html#vsimCommandEdits:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">vsimCommandEdits</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">
@@ -902,12 +1006,12 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
-                <span class="name">@native</span><span class="args">()</span>
-              
                 <span class="name">@throws</span><span class="args">(<span>
       
       <span class="defval" name="classOf[java.lang.InterruptedException]">...</span>
     </span>)</span>
+              
+                <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
     </li><li name="chisel3.iotesters.TesterOptions#waveform" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
