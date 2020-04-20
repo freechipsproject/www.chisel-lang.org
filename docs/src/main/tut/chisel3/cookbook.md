@@ -384,7 +384,7 @@ However, if we use `@chiselName` then the register previously called `_T` is now
                             |$a
                             |```""".stripMargin))
 ```
-
+### How do I get Chisel to name the results of vector reads properly?
 Currently, name information is lost when using dynamic indexing. For example:
 ```scala
 class Foo extends Module {
