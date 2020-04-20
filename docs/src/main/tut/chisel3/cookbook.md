@@ -401,7 +401,7 @@ class Foo extends Module {
 }
 ```
 
-The above code loses the `x` name:
+The above code loses the `x` name, instead using `_GEN_3` (the other `_GEN_*` signals are expected).
 ```verilog
 module Foo(
   input        clock,
