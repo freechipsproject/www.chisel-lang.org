@@ -34,6 +34,7 @@ ga('send', 'pageview');
   <li><a href="#how-can-i-dynamically-setparametrize-the-name-of-a-module">How can I dynamically set/parametrize the name of a module?</a></li>
   <li><a href="#how-do-i-create-an-optional-io">How do I create an optional I/O?</a></li>
   <li><a href="#how-do-i-get-chisel-to-name-signals-properly-in-blocks-like-whenwithclockandreset">How do I get Chisel to name signals properly in blocks like when/withClockAndReset?</a></li>
+  <li><a href="#how-do-i-get-chisel-to-name-the-results-of-vector-reads-properly">How do I get Chisel to name the results of vector reads properly?</a></li>
 </ul>
 
 <h2 id="converting-chisel-types-tofrom-uint">Converting Chisel Types to/from UInt</h2>
@@ -339,7 +340,7 @@ The reason for this is that subword assignment generally hints at a better abstr
 <p>Elaborating the Chisel module <code class="highlighter-rouge">Salt</code> yields our “desire name” for <code class="highlighter-rouge">Salt</code> and <code class="highlighter-rouge">Coffee</code> in the output Verilog:</p>
 
 <p>[[35minfo[0m] [0.000] Elaborating design…
-[[35minfo[0m] [0.058] Done elaborating.</p>
+[[35minfo[0m] [0.041] Done elaborating.</p>
 
 <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">SodiumMonochloride</span><span class="p">(</span>
   <span class="kt">input</span>   <span class="n">clock</span><span class="p">,</span>
@@ -419,7 +420,7 @@ The reason for this is that subword assignment generally hints at a better abstr
 <p>If we compile this module <em>without</em> <code class="highlighter-rouge">@chiselName</code>, Chisel is not able to name <code class="highlighter-rouge">innerReg</code> correctly (notice the <code class="highlighter-rouge">_T</code>):</p>
 
 <p>[[35minfo[0m] [0.000] Elaborating design…
-[[35minfo[0m] [0.052] Done elaborating.</p>
+[[35minfo[0m] [0.043] Done elaborating.</p>
 
 <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">TestMod</span><span class="p">(</span>
   <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
@@ -484,7 +485,7 @@ The reason for this is that subword assignment generally hints at a better abstr
 <p>However, if we use <code class="highlighter-rouge">@chiselName</code> then the register previously called <code class="highlighter-rouge">_T</code> is now <code class="highlighter-rouge">innerReg</code>:</p>
 
 <p>[[35minfo[0m] [0.000] Elaborating design…
-[[35minfo[0m] [0.033] Done elaborating.</p>
+[[35minfo[0m] [0.025] Done elaborating.</p>
 
 <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">TestMod</span><span class="p">(</span>
   <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
