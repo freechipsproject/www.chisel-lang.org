@@ -338,8 +338,8 @@ The reason for this is that subword assignment generally hints at a better abstr
 
 <p>Elaborating the Chisel module <code class="highlighter-rouge">Salt</code> yields our “desire name” for <code class="highlighter-rouge">Salt</code> and <code class="highlighter-rouge">Coffee</code> in the output Verilog:</p>
 
-<p>[[35minfo[0m] [0.001] Elaborating design…
-[[35minfo[0m] [0.050] Done elaborating.</p>
+<p>[[35minfo[0m] [0.000] Elaborating design…
+[[35minfo[0m] [0.058] Done elaborating.</p>
 
 <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">SodiumMonochloride</span><span class="p">(</span>
   <span class="kt">input</span>   <span class="n">clock</span><span class="p">,</span>
@@ -419,7 +419,7 @@ The reason for this is that subword assignment generally hints at a better abstr
 <p>If we compile this module <em>without</em> <code class="highlighter-rouge">@chiselName</code>, Chisel is not able to name <code class="highlighter-rouge">innerReg</code> correctly (notice the <code class="highlighter-rouge">_T</code>):</p>
 
 <p>[[35minfo[0m] [0.000] Elaborating design…
-[[35minfo[0m] [0.050] Done elaborating.</p>
+[[35minfo[0m] [0.052] Done elaborating.</p>
 
 <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">TestMod</span><span class="p">(</span>
   <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
@@ -484,7 +484,7 @@ The reason for this is that subword assignment generally hints at a better abstr
 <p>However, if we use <code class="highlighter-rouge">@chiselName</code> then the register previously called <code class="highlighter-rouge">_T</code> is now <code class="highlighter-rouge">innerReg</code>:</p>
 
 <p>[[35minfo[0m] [0.000] Elaborating design…
-[[35minfo[0m] [0.026] Done elaborating.</p>
+[[35minfo[0m] [0.033] Done elaborating.</p>
 
 <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">TestMod</span><span class="p">(</span>
   <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
@@ -544,6 +544,75 @@ The reason for this is that subword assignment generally hints at a better abstr
   <span class="k">end</span>
 <span class="k">endmodule</span>
 
+</code></pre></div></div>
+
+<h3 id="how-do-i-get-chisel-to-name-the-results-of-vector-reads-properly">How do I get Chisel to name the results of vector reads properly?</h3>
+
+<p>Currently, name information is lost when using dynamic indexing. For example:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Foo</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="nv">in</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Vec</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="nc">Bool</span><span class="o">()))</span>
+    <span class="k">val</span> <span class="nv">idx</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">2.</span><span class="n">W</span><span class="o">))</span>
+    <span class="k">val</span> <span class="nv">en</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+    <span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+  <span class="o">})</span>
+
+  <span class="k">val</span> <span class="nv">x</span> <span class="k">=</span> <span class="nv">io</span><span class="o">.</span><span class="py">in</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">idx</span><span class="o">)</span>
+  <span class="k">val</span> <span class="nv">y</span> <span class="k">=</span> <span class="n">x</span> <span class="o">&amp;&amp;</span> <span class="nv">io</span><span class="o">.</span><span class="py">en</span>
+  <span class="nv">io</span><span class="o">.</span><span class="py">out</span> <span class="o">:=</span> <span class="n">y</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>The above code loses the <code class="highlighter-rouge">x</code> name, instead using <code class="highlighter-rouge">_GEN_3</code> (the other <code class="highlighter-rouge">_GEN_*</code> signals are expected).</p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">Foo</span><span class="p">(</span>
+  <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
+  <span class="kt">input</span>        <span class="n">reset</span><span class="p">,</span>
+  <span class="kt">input</span>        <span class="n">io_in_0</span><span class="p">,</span>
+  <span class="kt">input</span>        <span class="n">io_in_1</span><span class="p">,</span>
+  <span class="kt">input</span>        <span class="n">io_in_2</span><span class="p">,</span>
+  <span class="kt">input</span>        <span class="n">io_in_3</span><span class="p">,</span>
+  <span class="kt">input</span>  <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">io_idx</span><span class="p">,</span>
+  <span class="kt">input</span>        <span class="n">io_en</span><span class="p">,</span>
+  <span class="kt">output</span>       <span class="n">io_out</span>
+<span class="p">);</span>
+  <span class="kt">wire</span>  <span class="mi">_</span><span class="n">GEN_1</span><span class="p">;</span> <span class="c1">// @[main.scala 15:13]</span>
+  <span class="kt">wire</span>  <span class="mi">_</span><span class="n">GEN_2</span><span class="p">;</span> <span class="c1">// @[main.scala 15:13]</span>
+  <span class="kt">wire</span>  <span class="mi">_</span><span class="n">GEN_3</span><span class="p">;</span> <span class="c1">// @[main.scala 15:13]</span>
+  <span class="k">assign</span> <span class="mi">_</span><span class="n">GEN_1</span> <span class="o">=</span> <span class="mh">2'h1</span> <span class="o">==</span> <span class="n">io_idx</span> <span class="o">?</span> <span class="n">io_in_1</span> <span class="o">:</span> <span class="n">io_in_0</span><span class="p">;</span> <span class="c1">// @[main.scala 15:13]</span>
+  <span class="k">assign</span> <span class="mi">_</span><span class="n">GEN_2</span> <span class="o">=</span> <span class="mh">2'h2</span> <span class="o">==</span> <span class="n">io_idx</span> <span class="o">?</span> <span class="n">io_in_2</span> <span class="o">:</span> <span class="mi">_</span><span class="n">GEN_1</span><span class="p">;</span> <span class="c1">// @[main.scala 15:13]</span>
+  <span class="k">assign</span> <span class="mi">_</span><span class="n">GEN_3</span> <span class="o">=</span> <span class="mh">2'h3</span> <span class="o">==</span> <span class="n">io_idx</span> <span class="o">?</span> <span class="n">io_in_3</span> <span class="o">:</span> <span class="mi">_</span><span class="n">GEN_2</span><span class="p">;</span> <span class="c1">// @[main.scala 15:13]</span>
+  <span class="k">assign</span> <span class="n">io_out</span> <span class="o">=</span> <span class="mi">_</span><span class="n">GEN_3</span> <span class="o">&amp;</span> <span class="n">io_en</span><span class="p">;</span> <span class="c1">// @[main.scala 16:10]</span>
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
+<p>This can be worked around by creating a wire and connecting the dynamic index to the wire:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">x</span> <span class="k">=</span> <span class="nc">WireInit</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">in</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">idx</span><span class="o">))</span>
+</code></pre></div></div>
+
+<p>Which produces:</p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">Foo</span><span class="p">(</span>
+  <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
+  <span class="kt">input</span>        <span class="n">reset</span><span class="p">,</span>
+  <span class="kt">input</span>        <span class="n">io_in_0</span><span class="p">,</span>
+  <span class="kt">input</span>        <span class="n">io_in_1</span><span class="p">,</span>
+  <span class="kt">input</span>        <span class="n">io_in_2</span><span class="p">,</span>
+  <span class="kt">input</span>        <span class="n">io_in_3</span><span class="p">,</span>
+  <span class="kt">input</span>  <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">io_idx</span><span class="p">,</span>
+  <span class="kt">input</span>        <span class="n">io_en</span><span class="p">,</span>
+  <span class="kt">output</span>       <span class="n">io_out</span>
+<span class="p">);</span>
+  <span class="kt">wire</span>  <span class="mi">_</span><span class="n">GEN_1</span><span class="p">;</span>
+  <span class="kt">wire</span>  <span class="mi">_</span><span class="n">GEN_2</span><span class="p">;</span>
+  <span class="kt">wire</span>  <span class="n">x</span><span class="p">;</span>
+  <span class="k">assign</span> <span class="mi">_</span><span class="n">GEN_1</span> <span class="o">=</span> <span class="mh">2'h1</span> <span class="o">==</span> <span class="n">io_idx</span> <span class="o">?</span> <span class="n">io_in_1</span> <span class="o">:</span> <span class="n">io_in_0</span><span class="p">;</span>
+  <span class="k">assign</span> <span class="mi">_</span><span class="n">GEN_2</span> <span class="o">=</span> <span class="mh">2'h2</span> <span class="o">==</span> <span class="n">io_idx</span> <span class="o">?</span> <span class="n">io_in_2</span> <span class="o">:</span> <span class="mi">_</span><span class="n">GEN_1</span><span class="p">;</span>
+  <span class="k">assign</span> <span class="n">x</span> <span class="o">=</span> <span class="mh">2'h3</span> <span class="o">==</span> <span class="n">io_idx</span> <span class="o">?</span> <span class="n">io_in_3</span> <span class="o">:</span> <span class="mi">_</span><span class="n">GEN_2</span><span class="p">;</span>
+  <span class="k">assign</span> <span class="n">io_out</span> <span class="o">=</span> <span class="n">x</span> <span class="o">&amp;</span> <span class="n">io_en</span><span class="p">;</span> <span class="c1">// @[main.scala 16:10]</span>
+<span class="k">endmodule</span>
 </code></pre></div></div>
 
 </section></div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/highlight/highlight.pack.js"></script><script>hljs.configure({languages:['scala','java','bash']});
