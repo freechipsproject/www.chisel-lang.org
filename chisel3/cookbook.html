@@ -31,10 +31,14 @@ ga('send', 'pageview');
   <li><a href="#how-do-i-create-a-finite-state-machine-fsm">How do I create a finite state machine?</a></li>
   <li><a href="#how-do-i-unpack-a-value-reverse-concatenation-like-in-verilog">How do I unpack a value (“reverse concatenation”) like in Verilog?</a></li>
   <li><a href="#how-do-i-do-subword-assignment-assign-to-some-bits-in-a-uint">How do I do subword assignment (assign to some bits in a UInt)?</a></li>
-  <li><a href="#how-can-i-dynamically-setparametrize-the-name-of-a-module">How can I dynamically set/parametrize the name of a module?</a></li>
   <li><a href="#how-do-i-create-an-optional-io">How do I create an optional I/O?</a></li>
-  <li><a href="#how-do-i-get-chisel-to-name-signals-properly-in-blocks-like-whenwithclockandreset">How do I get Chisel to name signals properly in blocks like when/withClockAndReset?</a></li>
-  <li><a href="#how-do-i-get-chisel-to-name-the-results-of-vector-reads-properly">How do I get Chisel to name the results of vector reads properly?</a></li>
+  <li>Predictable Naming
+    <ul>
+      <li><a href="#how-do-i-get-chisel-to-name-signals-properly-in-blocks-like-whenwithclockandreset">How do I get Chisel to name signals properly in blocks like when/withClockAndReset?</a></li>
+      <li><a href="#how-do-i-get-chisel-to-name-the-results-of-vector-reads-properly">How do I get Chisel to name the results of vector reads properly?</a></li>
+      <li><a href="#how-can-i-dynamically-setparametrize-the-name-of-a-module">How can I dynamically set/parametrize the name of a module?</a></li>
+    </ul>
+  </li>
 </ul>
 
 <h2 id="converting-chisel-types-tofrom-uint">Converting Chisel Types to/from UInt</h2>
@@ -314,47 +318,6 @@ The reason for this is that subword assignment generally hints at a better abstr
 <span class="o">}</span>
 </code></pre></div></div>
 
-<h3 id="how-can-i-dynamically-setparametrize-the-name-of-a-module">How can I dynamically set/parametrize the name of a module?</h3>
-
-<p>You can override the <code class="highlighter-rouge">desiredName</code> function. This works with normal Chisel modules and <code class="highlighter-rouge">BlackBox</code>es. Example:</p>
-
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3._</span>
-
-<span class="k">class</span> <span class="nc">Coffee</span> <span class="k">extends</span> <span class="nc">BlackBox</span> <span class="o">{</span>
-    <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
-        <span class="k">val</span> <span class="nv">I</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">))</span>
-        <span class="k">val</span> <span class="nv">O</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">))</span>
-    <span class="o">})</span>
-    <span class="k">override</span> <span class="k">def</span> <span class="nf">desiredName</span> <span class="k">=</span> <span class="s">"Tea"</span>
-<span class="o">}</span>
-
-<span class="k">class</span> <span class="nc">Salt</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
-    <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{})</span>
-    <span class="k">val</span> <span class="nv">drink</span> <span class="k">=</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">Coffee</span><span class="o">)</span>
-    <span class="k">override</span> <span class="k">def</span> <span class="nf">desiredName</span> <span class="k">=</span> <span class="s">"SodiumMonochloride"</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>Elaborating the Chisel module <code class="highlighter-rouge">Salt</code> yields our “desire name” for <code class="highlighter-rouge">Salt</code> and <code class="highlighter-rouge">Coffee</code> in the output Verilog:</p>
-
-<p>[[35minfo[0m] [0.000] Elaborating design…
-[[35minfo[0m] [0.053] Done elaborating.</p>
-
-<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">SodiumMonochloride</span><span class="p">(</span>
-  <span class="kt">input</span>   <span class="n">clock</span><span class="p">,</span>
-  <span class="kt">input</span>   <span class="n">reset</span>
-<span class="p">);</span>
-  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">drink_I</span><span class="p">;</span> <span class="c1">// @[cookbook.md 261:23]</span>
-  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">drink_O</span><span class="p">;</span> <span class="c1">// @[cookbook.md 261:23]</span>
-  <span class="n">Tea</span> <span class="n">drink</span> <span class="p">(</span> <span class="c1">// @[cookbook.md 261:23]</span>
-    <span class="p">.</span><span class="n">I</span><span class="p">(</span><span class="n">drink_I</span><span class="p">),</span>
-    <span class="p">.</span><span class="n">O</span><span class="p">(</span><span class="n">drink_O</span><span class="p">)</span>
-  <span class="p">);</span>
-  <span class="k">assign</span> <span class="n">drink_I</span> <span class="o">=</span> <span class="mh">32'h0</span><span class="p">;</span>
-<span class="k">endmodule</span>
-
-</code></pre></div></div>
-
 <h3 id="how-do-i-create-an-optional-io">How do I create an optional I/O?</h3>
 
 <p>The following example is a module which includes the optional port <code class="highlighter-rouge">out2</code> only if the given parameter is <code class="highlighter-rouge">true</code>.</p>
@@ -386,6 +349,8 @@ The reason for this is that subword assignment generally hints at a better abstr
   <span class="n">out</span> <span class="o">:=</span> <span class="nv">in</span><span class="o">.</span><span class="py">getOrElse</span><span class="o">(</span><span class="nv">false</span><span class="o">.</span><span class="py">B</span><span class="o">)</span>
 <span class="o">}</span>
 </code></pre></div></div>
+
+<h2 id="predictable-naming">Predictable Naming</h2>
 
 <h3 id="how-do-i-get-chisel-to-name-signals-properly-in-blocks-like-whenwithclockandreset">How do I get Chisel to name signals properly in blocks like when/withClockAndReset?</h3>
 
@@ -426,11 +391,11 @@ The reason for this is that subword assignment generally hints at a better abstr
   <span class="kt">input</span>        <span class="n">io_a</span><span class="p">,</span>
   <span class="kt">output</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">io_b</span>
 <span class="p">);</span>
-  <span class="kt">reg</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">T</span><span class="p">;</span> <span class="c1">// @[cookbook.md 373:27]</span>
+  <span class="kt">reg</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">T</span><span class="p">;</span> <span class="c1">// @[cookbook.md 328:27]</span>
   <span class="kt">reg</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">RAND_0</span><span class="p">;</span>
-  <span class="kt">wire</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">T_2</span><span class="p">;</span> <span class="c1">// @[cookbook.md 374:26]</span>
-  <span class="k">assign</span> <span class="mi">_</span><span class="n">T_2</span> <span class="o">=</span> <span class="mi">_</span><span class="n">T</span> <span class="o">+</span> <span class="mh">4'h1</span><span class="p">;</span> <span class="c1">// @[cookbook.md 374:26]</span>
-  <span class="k">assign</span> <span class="n">io_b</span> <span class="o">=</span> <span class="n">io_a</span> <span class="o">?</span> <span class="mi">_</span><span class="n">T</span> <span class="o">:</span> <span class="mh">4'ha</span><span class="p">;</span> <span class="c1">// @[cookbook.md 375:10 cookbook.md 377:10]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">T_2</span><span class="p">;</span> <span class="c1">// @[cookbook.md 329:26]</span>
+  <span class="k">assign</span> <span class="mi">_</span><span class="n">T_2</span> <span class="o">=</span> <span class="mi">_</span><span class="n">T</span> <span class="o">+</span> <span class="mh">4'h1</span><span class="p">;</span> <span class="c1">// @[cookbook.md 329:26]</span>
+  <span class="k">assign</span> <span class="n">io_b</span> <span class="o">=</span> <span class="n">io_a</span> <span class="o">?</span> <span class="mi">_</span><span class="n">T</span> <span class="o">:</span> <span class="mh">4'ha</span><span class="p">;</span> <span class="c1">// @[cookbook.md 330:10 cookbook.md 332:10]</span>
 <span class="cp">`ifdef</span> <span class="n">RANDOMIZE_GARBAGE_ASSIGN</span>
 <span class="cp">`define</span> RANDOMIZE<span class="cp">
 `endif</span>
@@ -483,7 +448,7 @@ The reason for this is that subword assignment generally hints at a better abstr
 <p>However, if we use <code class="highlighter-rouge">@chiselName</code> then the register previously called <code class="highlighter-rouge">_T</code> is now <code class="highlighter-rouge">innerReg</code>:</p>
 
 <p>[[35minfo[0m] [0.000] Elaborating design…
-[[35minfo[0m] [0.024] Done elaborating.</p>
+[[35minfo[0m] [0.039] Done elaborating.</p>
 
 <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">TestMod</span><span class="p">(</span>
   <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
@@ -491,11 +456,11 @@ The reason for this is that subword assignment generally hints at a better abstr
   <span class="kt">input</span>        <span class="n">io_a</span><span class="p">,</span>
   <span class="kt">output</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">io_b</span>
 <span class="p">);</span>
-  <span class="kt">reg</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">innerReg</span><span class="p">;</span> <span class="c1">// @[cookbook.md 345:27]</span>
+  <span class="kt">reg</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">innerReg</span><span class="p">;</span> <span class="c1">// @[cookbook.md 300:27]</span>
   <span class="kt">reg</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">RAND_0</span><span class="p">;</span>
-  <span class="kt">wire</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">T_1</span><span class="p">;</span> <span class="c1">// @[cookbook.md 346:26]</span>
-  <span class="k">assign</span> <span class="mi">_</span><span class="n">T_1</span> <span class="o">=</span> <span class="n">innerReg</span> <span class="o">+</span> <span class="mh">4'h1</span><span class="p">;</span> <span class="c1">// @[cookbook.md 346:26]</span>
-  <span class="k">assign</span> <span class="n">io_b</span> <span class="o">=</span> <span class="n">io_a</span> <span class="o">?</span> <span class="n">innerReg</span> <span class="o">:</span> <span class="mh">4'ha</span><span class="p">;</span> <span class="c1">// @[cookbook.md 347:10 cookbook.md 349:10]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">T_1</span><span class="p">;</span> <span class="c1">// @[cookbook.md 301:26]</span>
+  <span class="k">assign</span> <span class="mi">_</span><span class="n">T_1</span> <span class="o">=</span> <span class="n">innerReg</span> <span class="o">+</span> <span class="mh">4'h1</span><span class="p">;</span> <span class="c1">// @[cookbook.md 301:26]</span>
+  <span class="k">assign</span> <span class="n">io_b</span> <span class="o">=</span> <span class="n">io_a</span> <span class="o">?</span> <span class="n">innerReg</span> <span class="o">:</span> <span class="mh">4'ha</span><span class="p">;</span> <span class="c1">// @[cookbook.md 302:10 cookbook.md 304:10]</span>
 <span class="cp">`ifdef</span> <span class="n">RANDOMIZE_GARBAGE_ASSIGN</span>
 <span class="cp">`define</span> RANDOMIZE<span class="cp">
 `endif</span>
@@ -612,6 +577,47 @@ The reason for this is that subword assignment generally hints at a better abstr
   <span class="k">assign</span> <span class="n">x</span> <span class="o">=</span> <span class="mh">2'h3</span> <span class="o">==</span> <span class="n">io_idx</span> <span class="o">?</span> <span class="n">io_in_3</span> <span class="o">:</span> <span class="mi">_</span><span class="n">GEN_2</span><span class="p">;</span>
   <span class="k">assign</span> <span class="n">io_out</span> <span class="o">=</span> <span class="n">x</span> <span class="o">&amp;</span> <span class="n">io_en</span><span class="p">;</span> <span class="c1">// @[main.scala 16:10]</span>
 <span class="k">endmodule</span>
+</code></pre></div></div>
+
+<h3 id="how-can-i-dynamically-setparametrize-the-name-of-a-module">How can I dynamically set/parametrize the name of a module?</h3>
+
+<p>You can override the <code class="highlighter-rouge">desiredName</code> function. This works with normal Chisel modules and <code class="highlighter-rouge">BlackBox</code>es. Example:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3._</span>
+
+<span class="k">class</span> <span class="nc">Coffee</span> <span class="k">extends</span> <span class="nc">BlackBox</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
+        <span class="k">val</span> <span class="nv">I</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">))</span>
+        <span class="k">val</span> <span class="nv">O</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">))</span>
+    <span class="o">})</span>
+    <span class="k">override</span> <span class="k">def</span> <span class="nf">desiredName</span> <span class="k">=</span> <span class="s">"Tea"</span>
+<span class="o">}</span>
+
+<span class="k">class</span> <span class="nc">Salt</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{})</span>
+    <span class="k">val</span> <span class="nv">drink</span> <span class="k">=</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">Coffee</span><span class="o">)</span>
+    <span class="k">override</span> <span class="k">def</span> <span class="nf">desiredName</span> <span class="k">=</span> <span class="s">"SodiumMonochloride"</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Elaborating the Chisel module <code class="highlighter-rouge">Salt</code> yields our “desire name” for <code class="highlighter-rouge">Salt</code> and <code class="highlighter-rouge">Coffee</code> in the output Verilog:</p>
+
+<p>[[35minfo[0m] [0.000] Elaborating design…
+[[35minfo[0m] [0.035] Done elaborating.</p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">SodiumMonochloride</span><span class="p">(</span>
+  <span class="kt">input</span>   <span class="n">clock</span><span class="p">,</span>
+  <span class="kt">input</span>   <span class="n">reset</span>
+<span class="p">);</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">drink_I</span><span class="p">;</span> <span class="c1">// @[cookbook.md 376:23]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">drink_O</span><span class="p">;</span> <span class="c1">// @[cookbook.md 376:23]</span>
+  <span class="n">Tea</span> <span class="n">drink</span> <span class="p">(</span> <span class="c1">// @[cookbook.md 376:23]</span>
+    <span class="p">.</span><span class="n">I</span><span class="p">(</span><span class="n">drink_I</span><span class="p">),</span>
+    <span class="p">.</span><span class="n">O</span><span class="p">(</span><span class="n">drink_O</span><span class="p">)</span>
+  <span class="p">);</span>
+  <span class="k">assign</span> <span class="n">drink_I</span> <span class="o">=</span> <span class="mh">32'h0</span><span class="p">;</span>
+<span class="k">endmodule</span>
+
 </code></pre></div></div>
 
 </section></div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/highlight/highlight.pack.js"></script><script>hljs.configure({languages:['scala','java','bash']});
