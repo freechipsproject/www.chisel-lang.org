@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.3.0-RC1 - firrtl.passes.InferTypes</title>
-          <meta name="description" content="firrtl 1.3.0 - RC1 - firrtl.passes.InferTypes" />
-          <meta name="keywords" content="firrtl 1.3.0 RC1 firrtl.passes.InferTypes" />
+          <title>firrtl 1.3.0 - firrtl.passes.InferTypes</title>
+          <meta name="description" content="firrtl 1.3.0 - firrtl.passes.InferTypes" />
+          <meta name="keywords" content="firrtl 1.3.0 firrtl.passes.InferTypes" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.3.0-RC1</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.3.0</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -167,10 +167,6 @@
                         <a href="CheckFlows$.html" title="">CheckFlows</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="object" href="CheckGenders$.html" title=""></a>
-                        <a href="CheckGenders$.html" title="">CheckGenders</a>
-                      </li><li class="current-entities indented2">
-                        <span class="separator"></span>
                         <a class="object" href="CheckHighForm$.html" title=""></a>
                         <a href="CheckHighForm$.html" title="">CheckHighForm</a>
                       </li><li class="current-entities indented2">
@@ -307,10 +303,6 @@
                         <a href="ResolveFlows$.html" title="">ResolveFlows</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="object" href="ResolveGenders$.html" title=""></a>
-                        <a href="ResolveGenders$.html" title="">ResolveGenders</a>
-                      </li><li class="current-entities indented2">
-                        <span class="separator"></span>
                         <a class="object" href="ResolveKinds$.html" title=""></a>
                         <a href="ResolveKinds$.html" title="">ResolveKinds</a>
                       </li><li class="current-entities indented2">
@@ -339,16 +331,16 @@
                         <a href="VerilogPrep$.html" title="Makes changes to the Firrtl AST to make Verilog emission easier">VerilogPrep</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="object" href="VerilogRename$.html" title=""></a>
-                        <a href="VerilogRename$.html" title="">VerilogRename</a>
-                      </li><li class="current-entities indented2">
-                        <span class="separator"></span>
                         <a class="class" href="WidthGeqConstraintAnnotation.html" title=""></a>
                         <a href="WidthGeqConstraintAnnotation.html" title="">WidthGeqConstraintAnnotation</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="class" href="WrapWithRemainder.html" title=""></a>
                         <a href="WrapWithRemainder.html" title="">WrapWithRemainder</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="ZeroLengthVecs$.html" title="Handles dynamic accesses to zero-length vectors."></a>
+                        <a href="ZeroLengthVecs$.html" title="Handles dynamic accesses to zero-length vectors.">ZeroLengthVecs</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="object" href="ZeroWidth$.html" title=""></a>
@@ -389,11 +381,11 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.3.0-RC1/src/main/scala/firrtl/passes/InferTypes.scala" target="_blank">InferTypes.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.3.0/src/main/scala/firrtl/passes/InferTypes.scala" target="_blank">InferTypes.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="../options/PreservesAll.html" class="extype" name="firrtl.options.PreservesAll">PreservesAll</a>[<a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a>], <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a>, <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a>, <a href="../options/DependencyAPI.html" class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</a>[<a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a>], <a href="../options/TransformLike.html" class="extype" name="firrtl.options.TransformLike">TransformLike</a>[<a href="../CircuitState.html" class="extype" name="firrtl.CircuitState">CircuitState</a>], <a href="../../logger/LazyLogging.html" class="extype" name="logger.LazyLogging">LazyLogging</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="../options/PreservesAll.html" class="extype" name="firrtl.options.PreservesAll">PreservesAll</a>[<a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a>], <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a>, <a href="../DependencyAPIMigration.html" class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</a>, <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a>, <a href="../options/DependencyAPI.html" class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</a>[<a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a>], <a href="../options/TransformLike.html" class="extype" name="firrtl.options.TransformLike">TransformLike</a>[<a href="../CircuitState.html" class="extype" name="firrtl.CircuitState">CircuitState</a>], <a href="../../logger/LazyLogging.html" class="extype" name="logger.LazyLogging">LazyLogging</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div></div>
         
 
@@ -419,7 +411,7 @@
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="firrtl.passes.InferTypes"><span>InferTypes</span></li><li class="in" name="firrtl.options.PreservesAll"><span>PreservesAll</span></li><li class="in" name="firrtl.passes.Pass"><span>Pass</span></li><li class="in" name="firrtl.Transform"><span>Transform</span></li><li class="in" name="firrtl.options.DependencyAPI"><span>DependencyAPI</span></li><li class="in" name="firrtl.options.TransformLike"><span>TransformLike</span></li><li class="in" name="logger.LazyLogging"><span>LazyLogging</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="firrtl.passes.InferTypes"><span>InferTypes</span></li><li class="in" name="firrtl.options.PreservesAll"><span>PreservesAll</span></li><li class="in" name="firrtl.passes.Pass"><span>Pass</span></li><li class="in" name="firrtl.DependencyAPIMigration"><span>DependencyAPIMigration</span></li><li class="in" name="firrtl.Transform"><span>Transform</span></li><li class="in" name="firrtl.options.DependencyAPI"><span>DependencyAPI</span></li><li class="in" name="firrtl.options.TransformLike"><span>TransformLike</span></li><li class="in" name="logger.LazyLogging"><span>LazyLogging</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -553,32 +545,6 @@
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="firrtl.Transform#dependents" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="dependents:Seq[firrtl.options.Dependency[firrtl.Transform]]"></a><a id="dependents:Seq[Dependency[Transform]]"></a>
-      <span class="permalink">
-      <a href="../../firrtl/passes/InferTypes$.html#dependents:Seq[firrtl.options.Dependency[firrtl.Transform]]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">dependents</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="../options/Dependency.html" class="extype" name="firrtl.options.Dependency">Dependency</a>[<a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a>]]</span>
-      </span>
-      
-      <p class="shortcomment cmt">All transforms that must run <i>after</i> this transform</p><div class="fullcomment"><div class="comment cmt"><p>All transforms that must run <i>after</i> this transform</p><p><i>This is a means of prerequisite injection into some other transform.</i> Normally a transform will define its own
-prerequisites. Dependents exist for two main situations:</p><p>First, they improve the composition of optional transforms. If some first transform is optional (e.g., an
-expensive validation check), you would like to be able to conditionally cause it to run. If it is listed as a
-prerequisite on some other, second transform then it must always run before that second transform. There's no way
-to turn it off. However, by listing the second transform as a dependent of the first transform, the first
-transform will only run (and be treated as a prerequisite of the second transform) if included in a list of target
-transforms that should be run.</p><p>Second, an external library would like to inject some first transform before a second transform inside FIRRTL. In
-this situation, the second transform cannot have any knowledge of external libraries. The use of a dependent here
-allows for prerequisite injection into FIRRTL proper.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> → <a href="../options/DependencyAPI.html" class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</a></dd><dt>Note</dt><dd><span class="cmt"><p>The use of a Seq here is to preserve input order. Internally, this will be converted to a private,
-ordered Set.</p></span></dd><dt>See also</dt><dd><span class="cmt"><p><a href="CheckTypes$.html" class="extype" name="firrtl.passes.CheckTypes">firrtl.passes.CheckTypes</a> for an example of an optional checking <a href="../Transform.html" class="extype" name="firrtl.Transform">firrtl.Transform</a></p></span></dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -692,22 +658,6 @@ Called by <a href="Pass.html#runTransform(state:firrtl.CircuitState):firrtl.Circ
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="firrtl.passes.Pass#inputForm" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="inputForm:firrtl.CircuitForm"></a><a id="inputForm:CircuitForm"></a>
-      <span class="permalink">
-      <a href="../../firrtl/passes/InferTypes$.html#inputForm:firrtl.CircuitForm" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">inputForm</span><span class="result">: <a href="../CircuitForm.html" class="extype" name="firrtl.CircuitForm">CircuitForm</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">The <a href="../CircuitForm.html" class="extype" name="firrtl.CircuitForm">firrtl.CircuitForm</a> that this transform requires to operate on</p><div class="fullcomment"><div class="comment cmt"><p>The <a href="../CircuitForm.html" class="extype" name="firrtl.CircuitForm">firrtl.CircuitForm</a> that this transform requires to operate on</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a> → <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a></dd></dl></div>
     </li><li name="firrtl.options.PreservesAll#invalidates" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="invalidates(a:A):Boolean"></a><a id="invalidates(Transform):Boolean"></a>
       <span class="permalink">
@@ -826,10 +776,10 @@ Called by <a href="Pass.html#runTransform(state:firrtl.CircuitState):firrtl.Circ
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="firrtl.Transform#optionalPrerequisites" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="optionalPrerequisites:Seq[firrtl.options.Dependency[firrtl.Transform]]"></a><a id="optionalPrerequisites:Seq[Dependency[Transform]]"></a>
+    </li><li name="firrtl.DependencyAPIMigration#optionalPrerequisiteOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="optionalPrerequisiteOf:Seq[firrtl.stage.TransformManager.TransformDependency]"></a><a id="optionalPrerequisiteOf:Seq[TransformDependency]"></a>
       <span class="permalink">
-      <a href="../../firrtl/passes/InferTypes$.html#optionalPrerequisites:Seq[firrtl.options.Dependency[firrtl.Transform]]" title="Permalink">
+      <a href="../../firrtl/passes/InferTypes$.html#optionalPrerequisiteOf:Seq[firrtl.stage.TransformManager.TransformDependency]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -838,15 +788,14 @@ Called by <a href="Pass.html#runTransform(state:firrtl.CircuitState):firrtl.Circ
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">optionalPrerequisites</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="../options/Dependency.html" class="extype" name="firrtl.options.Dependency">Dependency</a>[<a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a>]]</span>
+        <span class="name">optionalPrerequisiteOf</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="../stage/TransformManager$.html#TransformDependency=firrtl.options.Dependency[firrtl.Transform]" class="extmbr" name="firrtl.stage.TransformManager.TransformDependency">TransformDependency</a>]</span>
       </span>
       
-      <p class="shortcomment cmt">All transforms that, if a prerequisite of *another* transform, will run before this transform.</p><div class="fullcomment"><div class="comment cmt"><p>All transforms that, if a prerequisite of *another* transform, will run before this transform.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> → <a href="../options/DependencyAPI.html" class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</a></dd><dt>Note</dt><dd><span class="cmt"><p>The use of a Seq here is to preserve input order. Internally, this will be converted to a private,
-ordered Set.</p></span></dd></dl></div>
-    </li><li name="firrtl.passes.Pass#outputForm" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="outputForm:firrtl.CircuitForm"></a><a id="outputForm:CircuitForm"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../DependencyAPIMigration.html" class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</a></dd></dl></div>
+    </li><li name="firrtl.DependencyAPIMigration#optionalPrerequisites" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="optionalPrerequisites:Seq[firrtl.stage.TransformManager.TransformDependency]"></a><a id="optionalPrerequisites:Seq[TransformDependency]"></a>
       <span class="permalink">
-      <a href="../../firrtl/passes/InferTypes$.html#outputForm:firrtl.CircuitForm" title="Permalink">
+      <a href="../../firrtl/passes/InferTypes$.html#optionalPrerequisites:Seq[firrtl.stage.TransformManager.TransformDependency]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -855,10 +804,10 @@ ordered Set.</p></span></dd></dl></div>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">outputForm</span><span class="result">: <a href="../CircuitForm.html" class="extype" name="firrtl.CircuitForm">CircuitForm</a></span>
+        <span class="name">optionalPrerequisites</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="../stage/TransformManager$.html#TransformDependency=firrtl.options.Dependency[firrtl.Transform]" class="extmbr" name="firrtl.stage.TransformManager.TransformDependency">TransformDependency</a>]</span>
       </span>
       
-      <p class="shortcomment cmt">The <a href="../CircuitForm.html" class="extype" name="firrtl.CircuitForm">firrtl.CircuitForm</a> that this transform outputs</p><div class="fullcomment"><div class="comment cmt"><p>The <a href="../CircuitForm.html" class="extype" name="firrtl.CircuitForm">firrtl.CircuitForm</a> that this transform outputs</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a> → <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a></dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../DependencyAPIMigration.html" class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</a></dd></dl></div>
     </li><li name="firrtl.passes.InferTypes#prerequisites" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="prerequisites:Seq[firrtl.stage.TransformManager.TransformDependency]"></a><a id="prerequisites:Seq[TransformDependency]"></a>
       <span class="permalink">
@@ -868,13 +817,13 @@ ordered Set.</p></span></dd></dl></div>
     </span>
       <span class="modifier_kind">
         <span class="modifier"></span>
-        <span class="kind">val</span>
+        <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">prerequisites</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/collection/Seq.html#scala.collection.Seq" class="extype" name="scala.collection.Seq">Seq</a>[<a href="../stage/TransformManager$.html#TransformDependency=firrtl.options.Dependency[firrtl.Transform]" class="extmbr" name="firrtl.stage.TransformManager.TransformDependency">TransformDependency</a>]</span>
+        <span class="name">prerequisites</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="../stage/TransformManager$.html#TransformDependency=firrtl.options.Dependency[firrtl.Transform]" class="extmbr" name="firrtl.stage.TransformManager.TransformDependency">TransformDependency</a>]</span>
       </span>
       
-      <p class="shortcomment cmt">All transform that must run before this transform</p><div class="fullcomment"><div class="comment cmt"><p>All transform that must run before this transform</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.passes.InferTypes">InferTypes</a> → <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> → <a href="../options/DependencyAPI.html" class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</a></dd><dt>Note</dt><dd><span class="cmt"><p>The use of a Seq here is to preserve input order. Internally, this will be converted to a private,
+      <p class="shortcomment cmt">All transform that must run before this transform</p><div class="fullcomment"><div class="comment cmt"><p>All transform that must run before this transform</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.passes.InferTypes">InferTypes</a> → <a href="../DependencyAPIMigration.html" class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</a> → <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> → <a href="../options/DependencyAPI.html" class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</a></dd><dt>Note</dt><dd><span class="cmt"><p>The use of a Seq here is to preserve input order. Internally, this will be converted to a private,
 ordered Set.</p></span></dd></dl></div>
     </li><li name="firrtl.passes.InferTypes#run" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="run(c:firrtl.ir.Circuit):firrtl.ir.Circuit"></a><a id="run(Circuit):Circuit"></a>
@@ -1033,7 +982,36 @@ ordered Set.</p></span></dd></dl></div>
 
         <div class="values members">
               <h3>Deprecated Value Members</h3>
-              <ol><li name="firrtl.Transform#getMyAnnotations" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+              <ol><li name="firrtl.options.DependencyAPI#dependents" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dependents:Seq[firrtl.options.Dependency[A]]"></a><a id="dependents:Seq[Dependency[Transform]]"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/InferTypes$.html#dependents:Seq[firrtl.options.Dependency[A]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.3) Due to confusion, 'dependents' is being renamed to 'optionalPrerequisiteOf'. Override the latter instead.">dependents</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="../options/Dependency.html" class="extype" name="firrtl.options.Dependency">Dependency</a>[<a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a>]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">All transforms that must run <i>after</i> this transform</p><div class="fullcomment"><div class="comment cmt"><p>All transforms that must run <i>after</i> this transform</p><p><i>This is a means of prerequisite injection into some other transform.</i> Normally a transform will define its own
+prerequisites. Dependents exist for two main situations:</p><p>First, they improve the composition of optional transforms. If some first transform is optional (e.g., an
+expensive validation check), you would like to be able to conditionally cause it to run. If it is listed as a
+prerequisite on some other, second transform then it must always run before that second transform. There's no way
+to turn it off. However, by listing the second transform as a dependent of the first transform, the first
+transform will only run (and be treated as a prerequisite of the second transform) if included in a list of target
+transforms that should be run.</p><p>Second, an external library would like to inject some first transform before a second transform inside FIRRTL. In
+this situation, the second transform cannot have any knowledge of external libraries. The use of a dependent here
+allows for prerequisite injection into FIRRTL proper.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../options/DependencyAPI.html" class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FIRRTL 1.3)</i> Due to confusion, 'dependents' is being renamed to 'optionalPrerequisiteOf'. Override the latter instead.</p></dd><dt>Note</dt><dd><span class="cmt"><p>The use of a Seq here is to preserve input order. Internally, this will be converted to a private,
+ordered Set.</p></span></dd><dt>See also</dt><dd><span class="cmt"><p><a href="CheckTypes$.html" class="extype" name="firrtl.passes.CheckTypes">firrtl.passes.CheckTypes</a> for an example of an optional checking <a href="../Transform.html" class="extype" name="firrtl.Transform">firrtl.Transform</a></p></span></dd></dl></div>
+    </li><li name="firrtl.Transform#getMyAnnotations" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getMyAnnotations(state:firrtl.CircuitState):Seq[firrtl.annotations.Annotation]"></a><a id="getMyAnnotations(CircuitState):Seq[Annotation]"></a>
       <span class="permalink">
       <a href="../../firrtl/passes/InferTypes$.html#getMyAnnotations(state:firrtl.CircuitState):Seq[firrtl.annotations.Annotation]" title="Permalink">
@@ -1054,6 +1032,44 @@ ordered Set.</p></span></dd></dl></div>
                 <span class="name">@deprecated</span>
               
         </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.1)</i> Just collect the actual Annotation types the transform wants</p></dd></dl></div>
+    </li><li name="firrtl.DependencyAPIMigration#inputForm" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="inputForm:firrtl.CircuitForm"></a><a id="inputForm:CircuitForm"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/InferTypes$.html#inputForm:firrtl.CircuitForm" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.3) Use Dependency API methods for equivalent functionality. See: https://bit.ly/2Voppre">inputForm</span><span class="result">: <a href="../CircuitForm.html" class="extype" name="firrtl.CircuitForm">CircuitForm</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../DependencyAPIMigration.html" class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FIRRTL 1.3)</i> Use Dependency API methods for equivalent functionality. See: https://bit.ly/2Voppre</p></dd></dl></div>
+    </li><li name="firrtl.DependencyAPIMigration#outputForm" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="outputForm:firrtl.CircuitForm"></a><a id="outputForm:CircuitForm"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/InferTypes$.html#outputForm:firrtl.CircuitForm" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.3) Use Dependency API methods for equivalent functionality. See: https://bit.ly/2Voppre">outputForm</span><span class="result">: <a href="../CircuitForm.html" class="extype" name="firrtl.CircuitForm">CircuitForm</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../DependencyAPIMigration.html" class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FIRRTL 1.3)</i> Use Dependency API methods for equivalent functionality. See: https://bit.ly/2Voppre</p></dd></dl></div>
     </li></ol>
             </div>
         </div>
@@ -1063,6 +1079,8 @@ ordered Set.</p></span></dd></dl></div>
               <h3>Inherited from <a href="../options/PreservesAll.html" class="extype" name="firrtl.options.PreservesAll">PreservesAll</a>[<a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a>]</h3>
             </div><div class="parent" name="firrtl.passes.Pass">
               <h3>Inherited from <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></h3>
+            </div><div class="parent" name="firrtl.DependencyAPIMigration">
+              <h3>Inherited from <a href="../DependencyAPIMigration.html" class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</a></h3>
             </div><div class="parent" name="firrtl.Transform">
               <h3>Inherited from <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a></h3>
             </div><div class="parent" name="firrtl.options.DependencyAPI">

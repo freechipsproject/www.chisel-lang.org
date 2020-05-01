@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.3.0-RC1 - firrtl.options.ShellOption</title>
-          <meta name="description" content="firrtl 1.3.0 - RC1 - firrtl.options.ShellOption" />
-          <meta name="keywords" content="firrtl 1.3.0 RC1 firrtl.options.ShellOption" />
+          <title>firrtl 1.3.0 - firrtl.options.ShellOption</title>
+          <meta name="description" content="firrtl 1.3.0 - firrtl.options.ShellOption" />
+          <meta name="keywords" content="firrtl 1.3.0 firrtl.options.ShellOption" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.3.0-RC1</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.3.0</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -170,6 +170,10 @@
                         <a class="trait" href="HasShellOptions.html" title="Indicates that this class/object includes options (but does not add these as a registered class)"></a>
                         <a href="HasShellOptions.html" title="Indicates that this class/object includes options (but does not add these as a registered class)">HasShellOptions</a>
                       </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="IdentityLike.html" title="Mix-in that makes a TransformLike guaranteed to be an identity function on some type."></a>
+                        <a href="IdentityLike.html" title="Mix-in that makes a TransformLike guaranteed to be an identity function on some type.">IdentityLike</a>
+                      </li><li class="current-entities indented2">
                         <a class="object" href="InputAnnotationFileAnnotation$.html" title=""></a>
                         <a class="class" href="InputAnnotationFileAnnotation.html" title="Holds a filename containing one or more annotations.Annotation to be read"></a>
                         <a href="InputAnnotationFileAnnotation.html" title="Holds a filename containing one or more annotations.Annotation to be read">InputAnnotationFileAnnotation</a>
@@ -309,7 +313,7 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Contains information about a <a href="Shell.html" class="extype" name="firrtl.options.Shell">Shell</a> command line option</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.3.0-RC1/src/main/scala/firrtl/options/Registration.scala" target="_blank">Registration.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Contains information about a <a href="Shell.html" class="extype" name="firrtl.options.Shell">Shell</a> command line option</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.3.0/src/main/scala/firrtl/options/Registration.scala" target="_blank">Registration.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -371,7 +375,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">ShellOption</span><span class="params">(<span name="longOption">longOption: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="toAnnotationSeq">toAnnotationSeq: (<span class="extype" name="firrtl.options.ShellOption.A">A</span>) ⇒ <a href="../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a></span>, <span name="helpText">helpText: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="shortOption">shortOption: <a href="https://www.scala-lang.org/api/2.12.11/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">None</span></span>, <span name="helpValueName">helpValueName: <a href="https://www.scala-lang.org/api/2.12.11/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">None</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <span class="extype" name="scopt.Read">Read</span>[<span class="extype" name="firrtl.options.ShellOption.A">A</span>]</span>)</span>
+        <span class="name">ShellOption</span><span class="params">(<span name="longOption">longOption: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="toAnnotationSeq">toAnnotationSeq: (<span class="extype" name="firrtl.options.ShellOption.A">A</span>) ⇒ <a href="../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a></span>, <span name="helpText">helpText: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="shortOption">shortOption: <a href="https://www.scala-lang.org/api/2.12.11/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">None</span></span>, <span name="helpValueName">helpValueName: <a href="https://www.scala-lang.org/api/2.12.11/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">None</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="arg0">arg0: <a href="https://javadoc.io/page/com.github.scopt/scopt_2.12/3.7.1/scopt/Read.html#scopt.Read" class="extype" name="scopt.Read">Read</a>[<span class="extype" name="firrtl.options.ShellOption.A">A</span>]</span>)</span>
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">longOption</dt><dd class="cmt"><p>a long, double-dash option</p></dd><dt class="param">toAnnotationSeq</dt><dd class="cmt"><p>a function to convert the type into an <a href="../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a></p></dd><dt class="param">helpText</dt><dd class="cmt"><p>help text</p></dd><dt class="param">shortOption</dt><dd class="cmt"><p>an optional single-dash option</p></dd><dt class="param">helpValueName</dt><dd class="cmt"><p>a string to show as a placeholder argument in help text</p></dd></dl></div>
@@ -445,7 +449,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">addOption</span><span class="params">(<span name="p">p: <span class="extype" name="scopt.OptionParser">OptionParser</span>[<a href="../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a>]</span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">addOption</span><span class="params">(<span name="p">p: <a href="https://javadoc.io/page/com.github.scopt/scopt_2.12/3.7.1/scopt/OptionParser.html#scopt.OptionParser" class="extype" name="scopt.OptionParser">OptionParser</a>[<a href="../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a>]</span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <p class="shortcomment cmt">Add this specific shell (command line) option to an option parser</p><div class="fullcomment"><div class="comment cmt"><p>Add this specific shell (command line) option to an option parser</p></div><dl class="paramcmts block"><dt class="param">p</dt><dd class="cmt"><p>an option parser</p></dd></dl></div>

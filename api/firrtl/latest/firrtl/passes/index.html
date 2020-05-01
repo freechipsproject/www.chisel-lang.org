@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.3.0-RC1 - firrtl.passes</title>
-          <meta name="description" content="firrtl 1.3.0 - RC1 - firrtl.passes" />
-          <meta name="keywords" content="firrtl 1.3.0 RC1 firrtl.passes" />
+          <title>firrtl 1.3.0 - firrtl.passes</title>
+          <meta name="description" content="firrtl 1.3.0 - firrtl.passes" />
+          <meta name="keywords" content="firrtl 1.3.0 firrtl.passes" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.3.0-RC1</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.3.0</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -295,10 +295,6 @@
                         <a href="CheckFlows$.html" title="">CheckFlows</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="object" href="CheckGenders$.html" title=""></a>
-                        <a href="CheckGenders$.html" title="">CheckGenders</a>
-                      </li><li class="current-entities indented2">
-                        <span class="separator"></span>
                         <a class="object" href="CheckHighForm$.html" title=""></a>
                         <a href="CheckHighForm$.html" title="">CheckHighForm</a>
                       </li><li class="current-entities indented2">
@@ -435,10 +431,6 @@
                         <a href="ResolveFlows$.html" title="">ResolveFlows</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="object" href="ResolveGenders$.html" title=""></a>
-                        <a href="ResolveGenders$.html" title="">ResolveGenders</a>
-                      </li><li class="current-entities indented2">
-                        <span class="separator"></span>
                         <a class="object" href="ResolveKinds$.html" title=""></a>
                         <a href="ResolveKinds$.html" title="">ResolveKinds</a>
                       </li><li class="current-entities indented2">
@@ -467,16 +459,16 @@
                         <a href="VerilogPrep$.html" title="Makes changes to the Firrtl AST to make Verilog emission easier">VerilogPrep</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="object" href="VerilogRename$.html" title=""></a>
-                        <a href="VerilogRename$.html" title="">VerilogRename</a>
-                      </li><li class="current-entities indented2">
-                        <span class="separator"></span>
                         <a class="class" href="WidthGeqConstraintAnnotation.html" title=""></a>
                         <a href="WidthGeqConstraintAnnotation.html" title="">WidthGeqConstraintAnnotation</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="class" href="WrapWithRemainder.html" title=""></a>
                         <a href="WrapWithRemainder.html" title="">WrapWithRemainder</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="ZeroLengthVecs$.html" title="Handles dynamic accesses to zero-length vectors."></a>
+                        <a href="ZeroLengthVecs$.html" title="Handles dynamic accesses to zero-length vectors.">ZeroLengthVecs</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="object" href="ZeroWidth$.html" title=""></a>
@@ -686,7 +678,7 @@ primarily consists of:</p><ul><li><a href="../stage/FirrtlStage.html" class="ext
       
       
     </li><li name="firrtl.passes.ExpandWhensAndCheck" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ExpandWhensAndCheckextendsSeqTransform"></a><a id="ExpandWhensAndCheck:ExpandWhensAndCheck"></a>
+      <a id="ExpandWhensAndCheckextendsTransformwithDependencyAPIMigration"></a><a id="ExpandWhensAndCheck:ExpandWhensAndCheck"></a>
       <span class="permalink">
       <a href="../../firrtl/passes/ExpandWhensAndCheck.html" title="Permalink">
         <i class="material-icons"></i>
@@ -697,7 +689,7 @@ primarily consists of:</p><ul><li><a href="../stage/FirrtlStage.html" class="ext
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="ExpandWhensAndCheck.html"><span class="name">ExpandWhensAndCheck</span></a><span class="result"> extends <a href="../SeqTransform.html" class="extype" name="firrtl.SeqTransform">SeqTransform</a></span>
+        <a title="" href="ExpandWhensAndCheck.html"><span class="name">ExpandWhensAndCheck</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="../DependencyAPIMigration.html" class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</a></span>
       </span>
       
       
@@ -718,7 +710,7 @@ primarily consists of:</p><ul><li><a href="../stage/FirrtlStage.html" class="ext
       
       
     </li><li name="firrtl.passes.InferWidths" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="InferWidthsextendsTransformwithResolvedAnnotationPathswithPreservesAll[firrtl.Transform]"></a><a id="InferWidths:InferWidths"></a>
+      <a id="InferWidthsextendsTransformwithResolvedAnnotationPathswithDependencyAPIMigrationwithPreservesAll[firrtl.Transform]"></a><a id="InferWidths:InferWidths"></a>
       <span class="permalink">
       <a href="../../firrtl/passes/InferWidths.html" title="Permalink">
         <i class="material-icons"></i>
@@ -729,7 +721,7 @@ primarily consists of:</p><ul><li><a href="../stage/FirrtlStage.html" class="ext
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Infers the widths of all signals with unknown widths" href="InferWidths.html"><span class="name">InferWidths</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="../ResolvedAnnotationPaths.html" class="extype" name="firrtl.ResolvedAnnotationPaths">ResolvedAnnotationPaths</a> with <a href="../options/PreservesAll.html" class="extype" name="firrtl.options.PreservesAll">PreservesAll</a>[<a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a>]</span>
+        <a title="Infers the widths of all signals with unknown widths" href="InferWidths.html"><span class="name">InferWidths</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="../ResolvedAnnotationPaths.html" class="extype" name="firrtl.ResolvedAnnotationPaths">ResolvedAnnotationPaths</a> with <a href="../DependencyAPIMigration.html" class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</a> with <a href="../options/PreservesAll.html" class="extype" name="firrtl.options.PreservesAll">PreservesAll</a>[<a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a>]</span>
       </span>
       
       <p class="shortcomment cmt">Infers the widths of all signals with unknown widths</p><div class="fullcomment"><div class="comment cmt"><p>Infers the widths of all signals with unknown widths</p><p>Is a global width inference algorithm
@@ -761,7 +753,7 @@ primarily consists of:</p><ul><li><a href="../stage/FirrtlStage.html" class="ext
       
       <p class="shortcomment cmt">Indicates that something should be inlined</p>
     </li><li name="firrtl.passes.InlineInstances" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="InlineInstancesextendsTransformwithRegisteredTransform"></a><a id="InlineInstances:InlineInstances"></a>
+      <a id="InlineInstancesextendsTransformwithDependencyAPIMigrationwithRegisteredTransform"></a><a id="InlineInstances:InlineInstances"></a>
       <span class="permalink">
       <a href="../../firrtl/passes/InlineInstances.html" title="Permalink">
         <i class="material-icons"></i>
@@ -772,7 +764,7 @@ primarily consists of:</p><ul><li><a href="../stage/FirrtlStage.html" class="ext
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Inline instances as indicated by existing InlineAnnotations" href="InlineInstances.html"><span class="name">InlineInstances</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="../options/RegisteredTransform.html" class="extype" name="firrtl.options.RegisteredTransform">RegisteredTransform</a></span>
+        <a title="Inline instances as indicated by existing InlineAnnotations" href="InlineInstances.html"><span class="name">InlineInstances</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="../DependencyAPIMigration.html" class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</a> with <a href="../options/RegisteredTransform.html" class="extype" name="firrtl.options.RegisteredTransform">RegisteredTransform</a></span>
       </span>
       
       <p class="shortcomment cmt">Inline instances as indicated by existing <a href="InlineAnnotation.html" class="extype" name="firrtl.passes.InlineAnnotation">InlineAnnotation</a>s</p><div class="fullcomment"><div class="comment cmt"><p>Inline instances as indicated by existing <a href="InlineAnnotation.html" class="extype" name="firrtl.passes.InlineAnnotation">InlineAnnotation</a>s</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>Only use on legal Firrtl. Specifically, the restriction of instance loops must have been checked, or else this
@@ -810,7 +802,7 @@ pass can infinitely recurse.</p></span></dd></dl></div>
       
       
     </li><li name="firrtl.passes.Pass" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="PassextendsTransform"></a><a id="Pass:Pass"></a>
+      <a id="PassextendsTransformwithDependencyAPIMigration"></a><a id="Pass:Pass"></a>
       <span class="permalink">
       <a href="../../firrtl/passes/Pass.html" title="Permalink">
         <i class="material-icons"></i>
@@ -821,7 +813,7 @@ pass can infinitely recurse.</p></span></dd></dl></div>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="Pass is simple transform that is generally part of a larger Transform Has an UnknownForm, because larger Transform should specify form" href="Pass.html"><span class="name">Pass</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a></span>
+        <a title="Pass is simple transform that is generally part of a larger Transform Has an UnknownForm, because larger Transform should specify form" href="Pass.html"><span class="name">Pass</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="../DependencyAPIMigration.html" class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</a></span>
       </span>
       
       <p class="shortcomment cmt"><a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a> is simple transform that is generally part of a larger <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a>
@@ -1207,7 +1199,7 @@ $ - Consolidate attaches
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="Removes all aggregate types from a firrtl.ir.Circuit" href="LowerTypes$.html"><span class="name">LowerTypes</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a></span>
+        <a title="Removes all aggregate types from a firrtl.ir.Circuit" href="LowerTypes$.html"><span class="name">LowerTypes</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="../DependencyAPIMigration.html" class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</a></span>
       </span>
       
       <p class="shortcomment cmt">Removes all aggregate types from a <a href="../ir/Circuit.html" class="extype" name="firrtl.ir.Circuit">firrtl.ir.Circuit</a>
@@ -1293,7 +1285,7 @@ wire foo_b : UInt&lt;<span class="num">16</span>&gt;</pre></li></ol>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="RemoveCHIRRTL$.html"><span class="name">RemoveCHIRRTL</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="../options/PreservesAll.html" class="extype" name="firrtl.options.PreservesAll">PreservesAll</a>[<a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a>]</span>
+        <a title="" href="RemoveCHIRRTL$.html"><span class="name">RemoveCHIRRTL</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="../DependencyAPIMigration.html" class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</a> with <a href="../options/PreservesAll.html" class="extype" name="firrtl.options.PreservesAll">PreservesAll</a>[<a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a>]</span>
       </span>
       
       
@@ -1309,7 +1301,7 @@ wire foo_b : UInt&lt;<span class="num">16</span>&gt;</pre></li></ol>
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="RemoveEmpty$.html"><span class="name">RemoveEmpty</span></a><span class="result"> extends <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></span>
+        <a title="" href="RemoveEmpty$.html"><span class="name">RemoveEmpty</span></a><span class="result"> extends <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a> with <a href="../DependencyAPIMigration.html" class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</a> with <a href="../options/PreservesAll.html" class="extype" name="firrtl.options.PreservesAll">PreservesAll</a>[<a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a>]</span>
       </span>
       
       
@@ -1423,7 +1415,7 @@ TODO Fold in to High Firrtl Const Prop
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="Resolve name collisions that would occur in LowerTypes" href="Uniquify$.html"><span class="name">Uniquify</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a></span>
+        <a title="Resolve name collisions that would occur in LowerTypes" href="Uniquify$.html"><span class="name">Uniquify</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="../DependencyAPIMigration.html" class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</a></span>
       </span>
       
       <p class="shortcomment cmt">Resolve name collisions that would occur in <a href="LowerTypes$.html" class="extype" name="firrtl.passes.LowerTypes">LowerTypes</a>
@@ -1482,6 +1474,23 @@ but nevertheless is a problem when emitting verilog</p><p>This pass finds every 
     collisions with the lowered names of instance ports
 - Also removes Attaches where a single Port OR Wire connects to 1 or more instance ports</li><li>These are expressed in the portCons of WDefInstConnectors
 </li></ul></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>The result of this pass is NOT legal Firrtl</p></span></dd></dl></div>
+    </li><li name="firrtl.passes.ZeroLengthVecs" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ZeroLengthVecs"></a><a id="ZeroLengthVecs:ZeroLengthVecs"></a>
+      <span class="permalink">
+      <a href="../../firrtl/passes/ZeroLengthVecs$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="Handles dynamic accesses to zero-length vectors." href="ZeroLengthVecs$.html"><span class="name">ZeroLengthVecs</span></a><span class="result"> extends <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a> with <a href="../options/PreservesAll.html" class="extype" name="firrtl.options.PreservesAll">PreservesAll</a>[<a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Handles dynamic accesses to zero-length vectors.</p><div class="fullcomment"><div class="comment cmt"><p>Handles dynamic accesses to zero-length vectors.
+</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>Removes assignments that use a zero-length vector as a sink</p></span>, <span class="cmt"><p>Removes signals resulting from accesses to a zero-length vector from attach groups</p></span>, <span class="cmt"><p>Removes attaches that become degenerate after zero-length-accessor removal</p></span>, <span class="cmt"><p>Replaces &quot;source&quot; references to elements of zero-length vectors with always-invalid validif</p></span></dd></dl></div>
     </li><li name="firrtl.passes.ZeroWidth" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ZeroWidth"></a><a id="ZeroWidth:ZeroWidth"></a>
       <span class="permalink">
@@ -1494,7 +1503,7 @@ but nevertheless is a problem when emitting verilog</p><p>This pass finds every 
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="ZeroWidth$.html"><span class="name">ZeroWidth</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a></span>
+        <a title="" href="ZeroWidth$.html"><span class="name">ZeroWidth</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="../DependencyAPIMigration.html" class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</a></span>
       </span>
       
       
@@ -1543,67 +1552,7 @@ cat(cat(mask.x, mask.x), cat(mask.y, mask.y))</pre></div></div>
 
         
 
-        <div class="values members">
-              <h3>Deprecated Value Members</h3>
-              <ol><li name="firrtl.passes.CheckGenders" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="CheckGenders"></a><a id="CheckGenders:CheckGenders"></a>
-      <span class="permalink">
-      <a href="../../firrtl/passes/CheckGenders$.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="CheckGenders$.html"><span class="name deprecated" title="Deprecated: (Since version 1.2) Use 'CheckFlows'. This object will be removed in 1.3">CheckGenders</span></a>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
-                <span class="name">@deprecated</span>
-              
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.2)</i> Use 'CheckFlows'. This object will be removed in 1.3</p></dd></dl></div>
-    </li><li name="firrtl.passes.ResolveGenders" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="ResolveGenders"></a><a id="ResolveGenders:ResolveGenders"></a>
-      <span class="permalink">
-      <a href="../../firrtl/passes/ResolveGenders$.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="ResolveGenders$.html"><span class="name deprecated" title="Deprecated: (Since version 1.2) Use 'ResolveFlows'. This will be removed in 1.3">ResolveGenders</span></a><span class="result"> extends <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
-                <span class="name">@deprecated</span>
-              
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.2)</i> Use 'ResolveFlows'. This will be removed in 1.3</p></dd></dl></div>
-    </li><li name="firrtl.passes.VerilogRename" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="VerilogRename"></a><a id="VerilogRename:VerilogRename"></a>
-      <span class="permalink">
-      <a href="../../firrtl/passes/VerilogRename$.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="VerilogRename$.html"><span class="name deprecated" title="Deprecated: (Since version 1.2) Use transforms.VerilogRename, will be removed in 1.3">VerilogRename</span></a><span class="result"> extends <a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
-                <span class="name">@deprecated</span>
-              
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.2)</i> Use transforms.VerilogRename, will be removed in 1.3</p></dd></dl></div>
-    </li></ol>
-            </div>
+        
         </div>
 
         <div id="inheritedMembers">

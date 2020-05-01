@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.3.0-RC1 - chisel3.util.MixedVec</title>
-          <meta name="description" content="chisel3 3.3.0 - RC1 - chisel3.util.MixedVec" />
-          <meta name="keywords" content="chisel3 3.3.0 RC1 chisel3.util.MixedVec" />
+          <title>chisel3 3.3.0 - chisel3.util.MixedVec</title>
+          <meta name="description" content="chisel3 3.3.0 - chisel3.util.MixedVec" />
+          <meta name="keywords" content="chisel3 3.3.0 chisel3.util.MixedVec" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.3.0-RC1</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.3.0</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -401,7 +401,7 @@ functions
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A hardware array of elements that can hold values of different types/widths,
 unlike Vec which can only hold elements of the same type/width.
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.3.0-RC1//src/main/scala/chisel3/util/MixedVec.scala" target="_blank">MixedVec.scala</a></dd><div class="block">Example:
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.3.0//src/main/scala/chisel3/util/MixedVec.scala" target="_blank">MixedVec.scala</a></dd><div class="block">Example:
                <ol><li class="cmt"><p></p><pre><span class="kw">val</span> v = Wire(MixedVec(<span class="std">Seq</span>(UInt(<span class="num">8.</span>W), UInt(<span class="num">16.</span>W), UInt(<span class="num">32.</span>W))))
 v(<span class="num">0</span>) := <span class="num">100.</span>U(<span class="num">8.</span>W)
 v(<span class="num">1</span>) := <span class="num">10000.</span>U(<span class="num">16.</span>W)
@@ -1353,7 +1353,7 @@ It is responsible for constructing a basic copy of the object being cloned.
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">elements</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/collection/immutable/ListMap.html#scala.collection.immutable.ListMap" class="extype" name="scala.collection.immutable.ListMap">ListMap</a>[<span class="extype" name="java.lang.String">String</span>, <span class="extype" name="chisel3.util.MixedVec.T">T</span>]</span>
+        <span class="name">elements</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/collection/immutable/ListMap.html#scala.collection.immutable.ListMap" class="extype" name="scala.collection.immutable.ListMap">ListMap</a>[<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#java.lang.String" class="extype" name="java.lang.String">String</a>, <span class="extype" name="chisel3.util.MixedVec.T">T</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="chisel3.util.MixedVec">MixedVec</a> → <a href="../Record.html" class="extype" name="chisel3.Record">Record</a></dd></dl></div>
@@ -1631,7 +1631,7 @@ It is responsible for constructing a basic copy of the object being cloned.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#java.lang.Class" class="extype" name="java.lang.Class">Class</a>[_]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
@@ -3343,7 +3343,7 @@ If not a literal, or not representable as bits (for example, is or contains Anal
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toAbsoluteTarget</span><span class="result">: <span class="extype" name="firrtl.annotations.ReferenceTarget">ReferenceTarget</span></span>
+        <span class="name">toAbsoluteTarget</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.3.0/firrtl/annotations/ReferenceTarget.html#firrtl.annotations.ReferenceTarget" class="extype" name="firrtl.annotations.ReferenceTarget">ReferenceTarget</a></span>
       </span>
       
       <p class="shortcomment cmt">Returns a FIRRTL IsMember that refers to the absolute path to this object in the elaborated hardware graph</p><div class="fullcomment"><div class="comment cmt"><p>Returns a FIRRTL IsMember that refers to the absolute path to this object in the elaborated hardware graph</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>NamedComponent → InstanceId</dd></dl></div>
@@ -3496,7 +3496,7 @@ If not a literal, or not representable as bits (for example, is or contains Anal
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toNamed</span><span class="result">: <span class="extype" name="firrtl.annotations.ComponentName">ComponentName</span></span>
+        <span class="name">toNamed</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.3.0/firrtl/annotations/ComponentName.html#firrtl.annotations.ComponentName" class="extype" name="firrtl.annotations.ComponentName">ComponentName</a></span>
       </span>
       
       <p class="shortcomment cmt">Returns a FIRRTL ComponentName that references this object</p><div class="fullcomment"><div class="comment cmt"><p>Returns a FIRRTL ComponentName that references this object</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>NamedComponent → InstanceId</dd><dt>Note</dt><dd><span class="cmt"><p>Should not be called until circuit elaboration is complete</p></span></dd></dl></div>
@@ -3598,7 +3598,7 @@ Results in &quot;<code>$className(elt0.name -&gt; elt0.value, ...)</code>&quot;
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toTarget</span><span class="result">: <span class="extype" name="firrtl.annotations.ReferenceTarget">ReferenceTarget</span></span>
+        <span class="name">toTarget</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.3.0/firrtl/annotations/ReferenceTarget.html#firrtl.annotations.ReferenceTarget" class="extype" name="firrtl.annotations.ReferenceTarget">ReferenceTarget</a></span>
       </span>
       
       <p class="shortcomment cmt">Returns a FIRRTL ReferenceTarget that references this object</p><div class="fullcomment"><div class="comment cmt"><p>Returns a FIRRTL ReferenceTarget that references this object</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>NamedComponent → InstanceId</dd><dt>Note</dt><dd><span class="cmt"><p>Should not be called until circuit elaboration is complete</p></span></dd></dl></div>

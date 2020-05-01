@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>1.2.0-RC1 - treadle.utils.ToLoFirrtl</title>
-          <meta name="description" content="1.2.0 - RC1 - treadle.utils.ToLoFirrtl" />
-          <meta name="keywords" content="1.2.0 RC1 treadle.utils.ToLoFirrtl" />
+          <title>1.2.0 - treadle.utils.ToLoFirrtl</title>
+          <meta name="description" content="1.2.0 - treadle.utils.ToLoFirrtl" />
+          <meta name="keywords" content="1.2.0 treadle.utils.ToLoFirrtl" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title"><span id="doc-version">1.2.0-RC1</span></span>
+        <span id="doc-title"><span id="doc-version">1.2.0</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -182,7 +182,7 @@
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><span class="extype" name="firrtl.Compiler">Compiler</span>, <span class="extype" name="logger.LazyLogging">LazyLogging</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="firrtl.Compiler">Compiler</span>, <span class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</span>, <span class="extype" name="firrtl.Transform">Transform</span>, <span class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</span>[<span class="extype" name="firrtl.Transform">Transform</span>], <span class="extype" name="firrtl.options.TransformLike">TransformLike</span>[<span class="extype" name="firrtl.CircuitState">CircuitState</span>], <span class="extype" name="logger.LazyLogging">LazyLogging</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -208,7 +208,7 @@
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="treadle.utils.ToLoFirrtl"><span>ToLoFirrtl</span></li><li class="in" name="firrtl.Compiler"><span>Compiler</span></li><li class="in" name="logger.LazyLogging"><span>LazyLogging</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="treadle.utils.ToLoFirrtl"><span>ToLoFirrtl</span></li><li class="in" name="firrtl.Compiler"><span>Compiler</span></li><li class="in" name="firrtl.DependencyAPIMigration"><span>DependencyAPIMigration</span></li><li class="in" name="firrtl.Transform"><span>Transform</span></li><li class="in" name="firrtl.options.DependencyAPI"><span>DependencyAPI</span></li><li class="in" name="firrtl.options.TransformLike"><span>TransformLike</span></li><li class="in" name="logger.LazyLogging"><span>LazyLogging</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -403,6 +403,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="firrtl.Compiler#execute" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="execute(state:firrtl.CircuitState):firrtl.CircuitState"></a><a id="execute(CircuitState):CircuitState"></a>
+      <span class="permalink">
+      <a href="../../treadle/utils/ToLoFirrtl$.html#execute(state:firrtl.CircuitState):firrtl.CircuitState" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">execute</span><span class="params">(<span name="state">state: <span class="extype" name="firrtl.CircuitState">CircuitState</span></span>)</span><span class="result">: <span class="extype" name="firrtl.CircuitState">CircuitState</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Compiler → Transform</dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <span class="permalink">
@@ -463,10 +479,10 @@
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="firrtl.Compiler#inputForm" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="inputForm:firrtl.CircuitForm"></a><a id="inputForm:CircuitForm"></a>
+    </li><li name="firrtl.DependencyAPIMigration#invalidates" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="invalidates(a:firrtl.Transform):Boolean"></a><a id="invalidates(Transform):Boolean"></a>
       <span class="permalink">
-      <a href="../../treadle/utils/ToLoFirrtl$.html#inputForm:firrtl.CircuitForm" title="Permalink">
+      <a href="../../treadle/utils/ToLoFirrtl$.html#invalidates(a:firrtl.Transform):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -475,10 +491,10 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">inputForm</span><span class="result">: <span class="extype" name="firrtl.CircuitForm">CircuitForm</span></span>
+        <span class="name">invalidates</span><span class="params">(<span name="a">a: <span class="extype" name="firrtl.Transform">Transform</span></span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Compiler</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DependencyAPIMigration</dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
@@ -527,6 +543,22 @@
       </span>
       
       
+    </li><li name="firrtl.Transform#name" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="name:String"></a>
+      <span class="permalink">
+      <a href="../../treadle/utils/ToLoFirrtl$.html#name:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">name</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Transform → TransformLike</dd></dl></div>
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -581,10 +613,10 @@
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="firrtl.Compiler#outputForm" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="outputForm:firrtl.CircuitForm"></a><a id="outputForm:CircuitForm"></a>
+    </li><li name="firrtl.DependencyAPIMigration#optionalPrerequisiteOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="optionalPrerequisiteOf:Seq[firrtl.stage.TransformManager.TransformDependency]"></a><a id="optionalPrerequisiteOf:Seq[TransformDependency]"></a>
       <span class="permalink">
-      <a href="../../treadle/utils/ToLoFirrtl$.html#outputForm:firrtl.CircuitForm" title="Permalink">
+      <a href="../../treadle/utils/ToLoFirrtl$.html#optionalPrerequisiteOf:Seq[firrtl.stage.TransformManager.TransformDependency]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -593,10 +625,58 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">outputForm</span><span class="result">: <span class="extype" name="firrtl.CircuitForm">CircuitForm</span></span>
+        <span class="name">optionalPrerequisiteOf</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="firrtl.stage.TransformManager.TransformDependency">TransformDependency</span>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Compiler</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DependencyAPIMigration</dd></dl></div>
+    </li><li name="firrtl.DependencyAPIMigration#optionalPrerequisites" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="optionalPrerequisites:Seq[firrtl.stage.TransformManager.TransformDependency]"></a><a id="optionalPrerequisites:Seq[TransformDependency]"></a>
+      <span class="permalink">
+      <a href="../../treadle/utils/ToLoFirrtl$.html#optionalPrerequisites:Seq[firrtl.stage.TransformManager.TransformDependency]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">optionalPrerequisites</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="firrtl.stage.TransformManager.TransformDependency">TransformDependency</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DependencyAPIMigration</dd></dl></div>
+    </li><li name="firrtl.DependencyAPIMigration#prerequisites" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="prerequisites:Seq[firrtl.stage.TransformManager.TransformDependency]"></a><a id="prerequisites:Seq[TransformDependency]"></a>
+      <span class="permalink">
+      <a href="../../treadle/utils/ToLoFirrtl$.html#prerequisites:Seq[firrtl.stage.TransformManager.TransformDependency]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">prerequisites</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="firrtl.stage.TransformManager.TransformDependency">TransformDependency</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DependencyAPIMigration</dd></dl></div>
+    </li><li name="firrtl.Transform#runTransform" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="runTransform(state:firrtl.CircuitState):firrtl.CircuitState"></a><a id="runTransform(CircuitState):CircuitState"></a>
+      <span class="permalink">
+      <a href="../../treadle/utils/ToLoFirrtl$.html#runTransform(state:firrtl.CircuitState):firrtl.CircuitState" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">runTransform</span><span class="params">(<span name="state">state: <span class="extype" name="firrtl.CircuitState">CircuitState</span></span>)</span><span class="result">: <span class="extype" name="firrtl.CircuitState">CircuitState</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Transform</dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
@@ -629,6 +709,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="firrtl.Transform#transform" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="transform(state:firrtl.CircuitState):firrtl.CircuitState"></a><a id="transform(CircuitState):CircuitState"></a>
+      <span class="permalink">
+      <a href="../../treadle/utils/ToLoFirrtl$.html#transform(state:firrtl.CircuitState):firrtl.CircuitState" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">transform</span><span class="params">(<span name="state">state: <span class="extype" name="firrtl.CircuitState">CircuitState</span></span>)</span><span class="result">: <span class="extype" name="firrtl.CircuitState">CircuitState</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Transform → TransformLike</dd></dl></div>
     </li><li name="treadle.utils.ToLoFirrtl#transforms" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="transforms:Seq[firrtl.Transform]"></a><a id="transforms:Seq[Transform]"></a>
       <span class="permalink">
@@ -740,6 +836,82 @@
                 <span class="name">@deprecated</span>
               
         </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version firrtl 1.0)</i> Please use compileAndEmit or other compile method instead</p></dd></dl></div>
+    </li><li name="firrtl.options.DependencyAPI#dependents" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dependents:Seq[firrtl.options.Dependency[A]]"></a><a id="dependents:Seq[Dependency[Transform]]"></a>
+      <span class="permalink">
+      <a href="../../treadle/utils/ToLoFirrtl$.html#dependents:Seq[firrtl.options.Dependency[A]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.3) Due to confusion, 'dependents' is being renamed to 'optionalPrerequisiteOf'. Override the latter instead.">dependents</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="firrtl.options.Dependency">Dependency</span>[<span class="extype" name="firrtl.Transform">Transform</span>]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DependencyAPI</dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FIRRTL 1.3)</i> Due to confusion, 'dependents' is being renamed to 'optionalPrerequisiteOf'. Override the latter instead.</p></dd></dl></div>
+    </li><li name="firrtl.Transform#getMyAnnotations" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getMyAnnotations(state:firrtl.CircuitState):Seq[firrtl.annotations.Annotation]"></a><a id="getMyAnnotations(CircuitState):Seq[Annotation]"></a>
+      <span class="permalink">
+      <a href="../../treadle/utils/ToLoFirrtl$.html#getMyAnnotations(state:firrtl.CircuitState):Seq[firrtl.annotations.Annotation]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 1.1) Just collect the actual Annotation types the transform wants">getMyAnnotations</span><span class="params">(<span name="state">state: <span class="extype" name="firrtl.CircuitState">CircuitState</span></span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="firrtl.annotations.Annotation">Annotation</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Transform</dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.1)</i> Just collect the actual Annotation types the transform wants</p></dd></dl></div>
+    </li><li name="firrtl.DependencyAPIMigration#inputForm" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="inputForm:firrtl.CircuitForm"></a><a id="inputForm:CircuitForm"></a>
+      <span class="permalink">
+      <a href="../../treadle/utils/ToLoFirrtl$.html#inputForm:firrtl.CircuitForm" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.3) Use Dependency API methods for equivalent functionality. See: https://bit.ly/2Voppre">inputForm</span><span class="result">: <span class="extype" name="firrtl.CircuitForm">CircuitForm</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DependencyAPIMigration</dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FIRRTL 1.3)</i> Use Dependency API methods for equivalent functionality. See: https://bit.ly/2Voppre</p></dd></dl></div>
+    </li><li name="firrtl.DependencyAPIMigration#outputForm" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="outputForm:firrtl.CircuitForm"></a><a id="outputForm:CircuitForm"></a>
+      <span class="permalink">
+      <a href="../../treadle/utils/ToLoFirrtl$.html#outputForm:firrtl.CircuitForm" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.3) Use Dependency API methods for equivalent functionality. See: https://bit.ly/2Voppre">outputForm</span><span class="result">: <span class="extype" name="firrtl.CircuitForm">CircuitForm</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DependencyAPIMigration</dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FIRRTL 1.3)</i> Use Dependency API methods for equivalent functionality. See: https://bit.ly/2Voppre</p></dd></dl></div>
     </li></ol>
             </div>
         </div>
@@ -747,6 +919,14 @@
         <div id="inheritedMembers">
         <div class="parent" name="firrtl.Compiler">
               <h3>Inherited from <span class="extype" name="firrtl.Compiler">Compiler</span></h3>
+            </div><div class="parent" name="firrtl.DependencyAPIMigration">
+              <h3>Inherited from <span class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</span></h3>
+            </div><div class="parent" name="firrtl.Transform">
+              <h3>Inherited from <span class="extype" name="firrtl.Transform">Transform</span></h3>
+            </div><div class="parent" name="firrtl.options.DependencyAPI">
+              <h3>Inherited from <span class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</span>[<span class="extype" name="firrtl.Transform">Transform</span>]</h3>
+            </div><div class="parent" name="firrtl.options.TransformLike">
+              <h3>Inherited from <span class="extype" name="firrtl.options.TransformLike">TransformLike</span>[<span class="extype" name="firrtl.CircuitState">CircuitState</span>]</h3>
             </div><div class="parent" name="logger.LazyLogging">
               <h3>Inherited from <span class="extype" name="logger.LazyLogging">LazyLogging</span></h3>
             </div><div class="parent" name="scala.AnyRef">

@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>1.2.0-RC1 - treadle.stage.phases</title>
-          <meta name="description" content="1.2.0 - RC1 - treadle.stage.phases" />
-          <meta name="keywords" content="1.2.0 RC1 treadle.stage.phases" />
+          <title>1.2.0 - treadle.stage.phases</title>
+          <meta name="description" content="1.2.0 - treadle.stage.phases" />
+          <meta name="keywords" content="1.2.0 treadle.stage.phases" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title"><span id="doc-version">1.2.0-RC1</span></span>
+        <span id="doc-title"><span id="doc-version">1.2.0</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -147,8 +147,8 @@
                         <a href="SetImplicitOutputInfo$.html" title="Set a default output stuff Sets the default target directory if one has not been defined and uses the circuit name unless there is as TopName override">SetImplicitOutputInfo</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="class" href="TreadleLowFirrtlOptimization.html" title="This provides a series of transforms that seem to be important to Treadle functionality This was based on firrtl.LowFirrtlOptimization but that has includes passes.memlib.VerilogMemDelays which can cause combinational loops for some firrtl files"></a>
-                        <a href="TreadleLowFirrtlOptimization.html" title="This provides a series of transforms that seem to be important to Treadle functionality This was based on firrtl.LowFirrtlOptimization but that has includes passes.memlib.VerilogMemDelays which can cause combinational loops for some firrtl files">TreadleLowFirrtlOptimization</a>
+                        <a class="class" href="TreadleLowFirrtlOptimization.html" title="This was a workaround for a problem in firrtl.LowFirrtlOptimization that caused problems like combinational loops for treadle's memory simulation."></a>
+                        <a href="TreadleLowFirrtlOptimization.html" title="This was a workaround for a problem in firrtl.LowFirrtlOptimization that caused problems like combinational loops for treadle's memory simulation.">TreadleLowFirrtlOptimization</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="trait" href="TreadlePhase.html" title=""></a>
@@ -248,7 +248,7 @@
       </span>
       
       
-    </li><li name="treadle.stage.phases.TreadleLowFirrtlOptimization" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="treadle.stage.phases.TreadleLowFirrtlOptimization" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="TreadleLowFirrtlOptimizationextendsSeqTransform"></a><a id="TreadleLowFirrtlOptimization:TreadleLowFirrtlOptimization"></a>
       <span class="permalink">
       <a href="../../../treadle/stage/phases/TreadleLowFirrtlOptimization.html" title="Permalink">
@@ -260,15 +260,14 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="This provides a series of transforms that seem to be important to Treadle functionality This was based on firrtl.LowFirrtlOptimization but that has includes passes.memlib.VerilogMemDelays which can cause combinational loops for some firrtl files" href="TreadleLowFirrtlOptimization.html"><span class="name">TreadleLowFirrtlOptimization</span></a><span class="result"> extends <span class="extype" name="firrtl.SeqTransform">SeqTransform</span></span>
+        <a title="This was a workaround for a problem in firrtl.LowFirrtlOptimization that caused problems like combinational loops for treadle's memory simulation." href="TreadleLowFirrtlOptimization.html"><span class="name">TreadleLowFirrtlOptimization</span></a><span class="result"> extends <span class="extype" name="firrtl.SeqTransform">SeqTransform</span></span>
       </span>
       
-      <p class="shortcomment cmt">This provides a series of transforms that
-seem to be important to Treadle functionality
-This was based on <span class="extype" name="firrtl.LowFirrtlOptimization">firrtl.LowFirrtlOptimization</span> but that
-has includes <span class="extype" name="passes.memlib.VerilogMemDelays">passes.memlib.VerilogMemDelays</span> which can cause combinational loops
-for some firrtl files
-</p>
+      <p class="shortcomment cmt">This was a workaround for a problem in firrtl.LowFirrtlOptimization that
+caused problems like combinational loops for treadle's memory simulation.</p><div class="fullcomment"><div class="comment cmt"><p>This was a workaround for a problem in firrtl.LowFirrtlOptimization that
+caused problems like combinational loops for treadle's memory simulation.
+This code should not be used going forward
+</p></div></div>
     </li><li name="treadle.stage.phases.TreadlePhase" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="TreadlePhaseextendsPhase"></a><a id="TreadlePhase:TreadlePhase"></a>
       <span class="permalink">

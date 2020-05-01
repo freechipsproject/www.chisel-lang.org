@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>1.2.0-RC1 - treadle.utils.AugmentPrintf</title>
-          <meta name="description" content="1.2.0 - RC1 - treadle.utils.AugmentPrintf" />
-          <meta name="keywords" content="1.2.0 RC1 treadle.utils.AugmentPrintf" />
+          <title>1.2.0 - treadle.utils.AugmentPrintf</title>
+          <meta name="description" content="1.2.0 - treadle.utils.AugmentPrintf" />
+          <meta name="keywords" content="1.2.0 treadle.utils.AugmentPrintf" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title"><span id="doc-version">1.2.0-RC1</span></span>
+        <span id="doc-title"><span id="doc-version">1.2.0</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -340,22 +340,6 @@ unless this pass adds a delay for each register
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="firrtl.Transform#dependents" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="dependents:Seq[firrtl.options.Dependency[firrtl.Transform]]"></a><a id="dependents:Seq[Dependency[Transform]]"></a>
-      <span class="permalink">
-      <a href="../../treadle/utils/AugmentPrintf$.html#dependents:Seq[firrtl.options.Dependency[firrtl.Transform]]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">dependents</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="firrtl.options.Dependency">Dependency</span>[<span class="extype" name="firrtl.Transform">Transform</span>]]</span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Transform → DependencyAPI</dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -598,6 +582,22 @@ unless this pass adds a delay for each register
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="firrtl.Transform#optionalPrerequisiteOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="optionalPrerequisiteOf:Seq[firrtl.options.Dependency[firrtl.Transform]]"></a><a id="optionalPrerequisiteOf:Seq[Dependency[Transform]]"></a>
+      <span class="permalink">
+      <a href="../../treadle/utils/AugmentPrintf$.html#optionalPrerequisiteOf:Seq[firrtl.options.Dependency[firrtl.Transform]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">optionalPrerequisiteOf</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="firrtl.options.Dependency">Dependency</span>[<span class="extype" name="firrtl.Transform">Transform</span>]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Transform → DependencyAPI</dd></dl></div>
     </li><li name="firrtl.Transform#optionalPrerequisites" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="optionalPrerequisites:Seq[firrtl.options.Dependency[firrtl.Transform]]"></a><a id="optionalPrerequisites:Seq[Dependency[Transform]]"></a>
       <span class="permalink">
@@ -786,7 +786,26 @@ unless this pass adds a delay for each register
 
         <div class="values members">
               <h3>Deprecated Value Members</h3>
-              <ol><li name="firrtl.Transform#getMyAnnotations" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+              <ol><li name="firrtl.options.DependencyAPI#dependents" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dependents:Seq[firrtl.options.Dependency[A]]"></a><a id="dependents:Seq[Dependency[Transform]]"></a>
+      <span class="permalink">
+      <a href="../../treadle/utils/AugmentPrintf$.html#dependents:Seq[firrtl.options.Dependency[A]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.3) Due to confusion, 'dependents' is being renamed to 'optionalPrerequisiteOf'. Override the latter instead.">dependents</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="firrtl.options.Dependency">Dependency</span>[<span class="extype" name="firrtl.Transform">Transform</span>]]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DependencyAPI</dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FIRRTL 1.3)</i> Due to confusion, 'dependents' is being renamed to 'optionalPrerequisiteOf'. Override the latter instead.</p></dd></dl></div>
+    </li><li name="firrtl.Transform#getMyAnnotations" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getMyAnnotations(state:firrtl.CircuitState):Seq[firrtl.annotations.Annotation]"></a><a id="getMyAnnotations(CircuitState):Seq[Annotation]"></a>
       <span class="permalink">
       <a href="../../treadle/utils/AugmentPrintf$.html#getMyAnnotations(state:firrtl.CircuitState):Seq[firrtl.annotations.Annotation]" title="Permalink">

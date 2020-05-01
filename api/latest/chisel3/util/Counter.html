@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.3.0-RC1 - chisel3.util.Counter</title>
-          <meta name="description" content="chisel3 3.3.0 - RC1 - chisel3.util.Counter" />
-          <meta name="keywords" content="chisel3 3.3.0 RC1 chisel3.util.Counter" />
+          <title>chisel3 3.3.0 - chisel3.util.Counter</title>
+          <meta name="description" content="chisel3 3.3.0 - chisel3.util.Counter" />
+          <meta name="keywords" content="chisel3 3.3.0 chisel3.util.Counter" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.3.0-RC1</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.3.0</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -404,7 +404,7 @@ hardware counter.</p><p>Typically instantiated with apply methods in <a href="Co
 </p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
                 <span class="name">@chiselName</span><span class="args">()</span>
               
-        </dd><dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.3.0-RC1//src/main/scala/chisel3/util/Counter.scala" target="_blank">Counter.scala</a></dd><div class="block">Example:
+        </dd><dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.3.0//src/main/scala/chisel3/util/Counter.scala" target="_blank">Counter.scala</a></dd><div class="block">Example:
                <ol><li class="cmt"><p></p><pre><span class="kw">val</span> countOn = <span class="kw">true</span>.B <span class="cmt">// increment counter every clock cycle</span>
 <span class="kw">val</span> (counterValue, counterWrap) = Counter(countOn, <span class="num">4</span>)
 when (counterValue === <span class="num">3.</span>U) {
@@ -641,7 +641,7 @@ maximum output value of the counter), need not be a power of two</p></dd></dl></
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#java.lang.Class" class="extype" name="java.lang.Class">Class</a>[_]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
@@ -682,11 +682,9 @@ maximum output value of the counter), need not be a power of two</p></dd></dl></
         <span class="name">inc</span><span class="params">()</span><span class="result">: <a href="../Bool.html" class="extype" name="chisel3.Bool">Bool</a></span>
       </span>
       
-      <p class="shortcomment cmt">Increment the counter, returning whether the counter currently is at the
-maximum and will wrap.</p><div class="fullcomment"><div class="comment cmt"><p>Increment the counter, returning whether the counter currently is at the
-maximum and will wrap. The incremented value is registered and will be
-visible on the next cycle.
-</p></div></div>
+      <p class="shortcomment cmt">Increment the counter
+</p><div class="fullcomment"><div class="comment cmt"><p>Increment the counter
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>whether the counter will wrap to zero on the next cycle</p></dd></dl><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>The incremented value is registered and will be visible on the next clock cycle</p></span></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
@@ -801,7 +799,7 @@ visible on the next cycle.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#java.lang.String" class="extype" name="java.lang.String">String</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>

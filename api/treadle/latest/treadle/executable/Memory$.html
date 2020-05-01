@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>1.2.0-RC1 - treadle.executable.Memory</title>
-          <meta name="description" content="1.2.0 - RC1 - treadle.executable.Memory" />
-          <meta name="keywords" content="1.2.0 RC1 treadle.executable.Memory" />
+          <title>1.2.0 - treadle.executable.Memory</title>
+          <meta name="description" content="1.2.0 - treadle.executable.Memory" />
+          <meta name="keywords" content="1.2.0 treadle.executable.Memory" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title"><span id="doc-version">1.2.0-RC1</span></span>
+        <span id="doc-title"><span id="doc-version">1.2.0</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -443,8 +443,8 @@
                         <a href="LtLongs.html" title="">LtLongs</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="object" href="" title=""></a>
-                        <a href="" title="">Memory</a>
+                        <a class="object" href="" title="Provides three different aspects of the code necessary to create read and write register pipelines."></a>
+                        <a href="" title="Provides three different aspects of the code necessary to create read and write register pipelines.">Memory</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="class" href="MemoryInitializer.html" title=""></a>
@@ -785,7 +785,8 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/treadle/tree/master//src/main/scala/treadle/executable/Memory.scala" target="_blank">Memory.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Provides three different aspects of the code necessary to create read and write
+register pipelines. The three cases are:</p><ul><li>Adding the symbols for the registers to be created</li><li>Adding the rendering code necessary to Expression views of the pipelines</li><li>Actually adding the pipeline registers.</li></ul><p> NOTE: See IMPORTANT NOTE above.</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/treadle/tree/master//src/main/scala/treadle/executable/Memory.scala" target="_blank">Memory.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -907,9 +908,9 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="treadle.executable.Memory#buildMemoryExpressions" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="buildMemoryExpressions(memory:firrtl.ir.DefMemory,expandedName:String,scheduler:treadle.executable.Scheduler,expressionViews:scala.collection.mutable.HashMap[treadle.executable.Symbol,treadle.executable.ExpressionView]):Unit"></a><a id="buildMemoryExpressions(DefMemory,String,Scheduler,HashMap[Symbol,ExpressionView]):Unit"></a>
+      <a id="buildMemoryExpressions(defMemory:firrtl.ir.DefMemory,expandedName:String,scheduler:treadle.executable.Scheduler,expressionViews:scala.collection.mutable.HashMap[treadle.executable.Symbol,treadle.executable.ExpressionView]):Unit"></a><a id="buildMemoryExpressions(DefMemory,String,Scheduler,HashMap[Symbol,ExpressionView]):Unit"></a>
       <span class="permalink">
-      <a href="../../treadle/executable/Memory$.html#buildMemoryExpressions(memory:firrtl.ir.DefMemory,expandedName:String,scheduler:treadle.executable.Scheduler,expressionViews:scala.collection.mutable.HashMap[treadle.executable.Symbol,treadle.executable.ExpressionView]):Unit" title="Permalink">
+      <a href="../../treadle/executable/Memory$.html#buildMemoryExpressions(defMemory:firrtl.ir.DefMemory,expandedName:String,scheduler:treadle.executable.Scheduler,expressionViews:scala.collection.mutable.HashMap[treadle.executable.Symbol,treadle.executable.ExpressionView]):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -918,14 +919,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">buildMemoryExpressions</span><span class="params">(<span name="memory">memory: <span class="extype" name="firrtl.ir.DefMemory">DefMemory</span></span>, <span name="expandedName">expandedName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="scheduler">scheduler: <a href="Scheduler.html" class="extype" name="treadle.executable.Scheduler">Scheduler</a></span>, <span name="expressionViews">expressionViews: <span class="extype" name="scala.collection.mutable.HashMap">HashMap</span>[<a href="Symbol.html" class="extype" name="treadle.executable.Symbol">Symbol</a>, <a href="ExpressionView.html" class="extype" name="treadle.executable.ExpressionView">ExpressionView</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">buildMemoryExpressions</span><span class="params">(<span name="defMemory">defMemory: <span class="extype" name="firrtl.ir.DefMemory">DefMemory</span></span>, <span name="expandedName">expandedName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="scheduler">scheduler: <a href="Scheduler.html" class="extype" name="treadle.executable.Scheduler">Scheduler</a></span>, <span name="expressionViews">expressionViews: <span class="extype" name="scala.collection.mutable.HashMap">HashMap</span>[<a href="Symbol.html" class="extype" name="treadle.executable.Symbol">Symbol</a>, <a href="ExpressionView.html" class="extype" name="treadle.executable.ExpressionView">ExpressionView</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <p class="shortcomment cmt">Construct views for all the memory elements</p><div class="fullcomment"><div class="comment cmt"><p>Construct views for all the memory elements</p></div><dl class="paramcmts block"><dt class="param">memory</dt><dd class="cmt"><p>current memory</p></dd><dt class="param">expandedName</dt><dd class="cmt"><p>full path name</p></dd><dt class="param">scheduler</dt><dd class="cmt"><p>handle to execution components</p></dd><dt class="param">expressionViews</dt><dd class="cmt"><p>where to store the generated views</p></dd></dl></div>
+      <p class="shortcomment cmt">Construct views for all the memory elements</p><div class="fullcomment"><div class="comment cmt"><p>Construct views for all the memory elements</p></div><dl class="paramcmts block"><dt class="param">defMemory</dt><dd class="cmt"><p>current memory</p></dd><dt class="param">expandedName</dt><dd class="cmt"><p>full path name</p></dd><dt class="param">scheduler</dt><dd class="cmt"><p>handle to execution components</p></dd><dt class="param">expressionViews</dt><dd class="cmt"><p>where to store the generated views</p></dd></dl></div>
     </li><li name="treadle.executable.Memory#buildMemoryInternals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="buildMemoryInternals(memory:firrtl.ir.DefMemory,expandedName:String,scheduler:treadle.executable.Scheduler,compiler:treadle.executable.ExpressionCompiler):Unit"></a><a id="buildMemoryInternals(DefMemory,String,Scheduler,ExpressionCompiler):Unit"></a>
+      <a id="buildMemoryInternals(defMemory:firrtl.ir.DefMemory,expandedName:String,scheduler:treadle.executable.Scheduler,compiler:treadle.executable.ExpressionCompiler):Unit"></a><a id="buildMemoryInternals(DefMemory,String,Scheduler,ExpressionCompiler):Unit"></a>
       <span class="permalink">
-      <a href="../../treadle/executable/Memory$.html#buildMemoryInternals(memory:firrtl.ir.DefMemory,expandedName:String,scheduler:treadle.executable.Scheduler,compiler:treadle.executable.ExpressionCompiler):Unit" title="Permalink">
+      <a href="../../treadle/executable/Memory$.html#buildMemoryInternals(defMemory:firrtl.ir.DefMemory,expandedName:String,scheduler:treadle.executable.Scheduler,compiler:treadle.executable.ExpressionCompiler):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -934,14 +935,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">buildMemoryInternals</span><span class="params">(<span name="memory">memory: <span class="extype" name="firrtl.ir.DefMemory">DefMemory</span></span>, <span name="expandedName">expandedName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="scheduler">scheduler: <a href="Scheduler.html" class="extype" name="treadle.executable.Scheduler">Scheduler</a></span>, <span name="compiler">compiler: <a href="ExpressionCompiler.html" class="extype" name="treadle.executable.ExpressionCompiler">ExpressionCompiler</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">buildMemoryInternals</span><span class="params">(<span name="defMemory">defMemory: <span class="extype" name="firrtl.ir.DefMemory">DefMemory</span></span>, <span name="expandedName">expandedName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="scheduler">scheduler: <a href="Scheduler.html" class="extype" name="treadle.executable.Scheduler">Scheduler</a></span>, <span name="compiler">compiler: <a href="ExpressionCompiler.html" class="extype" name="treadle.executable.ExpressionCompiler">ExpressionCompiler</a></span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
-      <p class="shortcomment cmt">Construct the machinery to move data into and out of the memory stack</p><div class="fullcomment"><div class="comment cmt"><p>Construct the machinery to move data into and out of the memory stack</p></div><dl class="paramcmts block"><dt class="param">memory</dt><dd class="cmt"><p>current memory</p></dd><dt class="param">expandedName</dt><dd class="cmt"><p>full path name</p></dd><dt class="param">scheduler</dt><dd class="cmt"><p>handle to execution components</p></dd><dt class="param">compiler</dt><dd class="cmt"><p>needed for assigner generation</p></dd></dl></div>
+      <p class="shortcomment cmt">Construct the machinery to move data into and out of the memory stack</p><div class="fullcomment"><div class="comment cmt"><p>Construct the machinery to move data into and out of the memory stack</p></div><dl class="paramcmts block"><dt class="param">defMemory</dt><dd class="cmt"><p>current memory</p></dd><dt class="param">expandedName</dt><dd class="cmt"><p>full path name</p></dd><dt class="param">scheduler</dt><dd class="cmt"><p>handle to execution components</p></dd><dt class="param">compiler</dt><dd class="cmt"><p>needed for assigner generation</p></dd></dl></div>
     </li><li name="treadle.executable.Memory#buildSymbols" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="buildSymbols(memory:firrtl.ir.DefMemory,expandedName:String,sensitivityGraphBuilder:treadle.executable.SensitivityGraphBuilder,registerNames:scala.collection.mutable.HashSet[String]):Seq[treadle.executable.Symbol]"></a><a id="buildSymbols(DefMemory,String,SensitivityGraphBuilder,HashSet[String]):Seq[Symbol]"></a>
+      <a id="buildSymbols(defMemory:firrtl.ir.DefMemory,expandedName:String,sensitivityGraphBuilder:treadle.executable.SensitivityGraphBuilder,registerNames:scala.collection.mutable.HashSet[String]):Seq[treadle.executable.Symbol]"></a><a id="buildSymbols(DefMemory,String,SensitivityGraphBuilder,HashSet[String]):Seq[Symbol]"></a>
       <span class="permalink">
-      <a href="../../treadle/executable/Memory$.html#buildSymbols(memory:firrtl.ir.DefMemory,expandedName:String,sensitivityGraphBuilder:treadle.executable.SensitivityGraphBuilder,registerNames:scala.collection.mutable.HashSet[String]):Seq[treadle.executable.Symbol]" title="Permalink">
+      <a href="../../treadle/executable/Memory$.html#buildSymbols(defMemory:firrtl.ir.DefMemory,expandedName:String,sensitivityGraphBuilder:treadle.executable.SensitivityGraphBuilder,registerNames:scala.collection.mutable.HashSet[String]):Seq[treadle.executable.Symbol]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -950,13 +951,13 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">buildSymbols</span><span class="params">(<span name="memory">memory: <span class="extype" name="firrtl.ir.DefMemory">DefMemory</span></span>, <span name="expandedName">expandedName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="sensitivityGraphBuilder">sensitivityGraphBuilder: <a href="SensitivityGraphBuilder.html" class="extype" name="treadle.executable.SensitivityGraphBuilder">SensitivityGraphBuilder</a></span>, <span name="registerNames">registerNames: <span class="extype" name="scala.collection.mutable.HashSet">HashSet</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="Symbol.html" class="extype" name="treadle.executable.Symbol">Symbol</a>]</span>
+        <span class="name">buildSymbols</span><span class="params">(<span name="defMemory">defMemory: <span class="extype" name="firrtl.ir.DefMemory">DefMemory</span></span>, <span name="expandedName">expandedName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="sensitivityGraphBuilder">sensitivityGraphBuilder: <a href="SensitivityGraphBuilder.html" class="extype" name="treadle.executable.SensitivityGraphBuilder">SensitivityGraphBuilder</a></span>, <span name="registerNames">registerNames: <span class="extype" name="scala.collection.mutable.HashSet">HashSet</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="Symbol.html" class="extype" name="treadle.executable.Symbol">Symbol</a>]</span>
       </span>
       
       <p class="shortcomment cmt">Builds all the symbols and dependencies for the specified memory.</p><div class="fullcomment"><div class="comment cmt"><p>Builds all the symbols and dependencies for the specified memory.
 Pipelines are constructed as registers with a regular name and
 a /in name.  Data travels up-index through a pipeline for both
-read and write pipelines.</p></div><dl class="paramcmts block"><dt class="param">memory</dt><dd class="cmt"><p>the specified memory</p></dd><dt class="param">expandedName</dt><dd class="cmt"><p>the full name of the memory</p></dd><dt class="param">sensitivityGraphBuilder</dt><dd class="cmt"><p>external graph of dependencies</p></dd></dl></div>
+read and write pipelines.</p></div><dl class="paramcmts block"><dt class="param">defMemory</dt><dd class="cmt"><p>the specified memory</p></dd><dt class="param">expandedName</dt><dd class="cmt"><p>the full name of the memory</p></dd><dt class="param">sensitivityGraphBuilder</dt><dd class="cmt"><p>external graph of dependencies</p></dd></dl></div>
     </li><li name="scala.AnyRef#clone" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="clone():Object"></a><a id="clone():AnyRef"></a>
       <span class="permalink">

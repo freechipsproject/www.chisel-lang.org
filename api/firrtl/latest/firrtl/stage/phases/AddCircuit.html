@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.3.0-RC1 - firrtl.stage.phases.AddCircuit</title>
-          <meta name="description" content="firrtl 1.3.0 - RC1 - firrtl.stage.phases.AddCircuit" />
-          <meta name="keywords" content="firrtl 1.3.0 RC1 firrtl.stage.phases.AddCircuit" />
+          <title>firrtl 1.3.0 - firrtl.stage.phases.AddCircuit</title>
+          <meta name="description" content="firrtl 1.3.0 - firrtl.stage.phases.AddCircuit" />
+          <meta name="keywords" content="firrtl 1.3.0 firrtl.stage.phases.AddCircuit" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.3.0-RC1</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.3.0</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -192,7 +192,7 @@ primarily consists of:</p><ul><li><a href="../FirrtlStage.html" class="extype" n
    assumed to be raw FIRRTL text and is sent to the <a href="../../Parser$.html" class="extype" name="firrtl.Parser">Parser</a>. The original <a href="../FirrtlFileAnnotation.html" class="extype" name="firrtl.stage.FirrtlFileAnnotation">FirrtlFileAnnotation</a> is deleted.</li><li><a href="../FirrtlSourceAnnotation.html" class="extype" name="firrtl.stage.FirrtlSourceAnnotation">FirrtlSourceAnnotation</a>s are run through the <a href="../../Parser$.html" class="extype" name="firrtl.Parser">Parser</a>. The original <a href="../FirrtlSourceAnnotation.html" class="extype" name="firrtl.stage.FirrtlSourceAnnotation">FirrtlSourceAnnotation</a> is deleted.</li><li><a href="../FirrtlCircuitAnnotation.html" class="extype" name="firrtl.stage.FirrtlCircuitAnnotation">FirrtlCircuitAnnotation</a>s are left untouched (along with all other annotations).</li></ul><p>If a <a href="../../Parser$.html" class="extype" name="firrtl.Parser">Parser</a> is used, its <a href="../../Parser$$InfoMode.html" class="extype" name="firrtl.Parser.InfoMode">InfoMode</a> is read from a <i>mandatory</i> <a href="../InfoModeAnnotation.html" class="extype" name="firrtl.stage.InfoModeAnnotation">InfoModeAnnotation</a>. If
 using an <a href="../../Parser$$InfoMode.html" class="extype" name="firrtl.Parser.InfoMode">InfoMode</a> that expects a filename, the filename is used for <a href="../FirrtlFileAnnotation.html" class="extype" name="firrtl.stage.FirrtlFileAnnotation">FirrtlFileAnnotation</a>s
 and <code>[anonymous source]</code> is used for <a href="../FirrtlSourceAnnotation.html" class="extype" name="firrtl.stage.FirrtlSourceAnnotation">FirrtlSourceAnnotation</a>s.
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.3.0-RC1/src/main/scala/firrtl/stage/phases/AddCircuit.scala" target="_blank">AddCircuit.scala</a></dd><dt>Note</dt><dd><span class="cmt"><p><b>This must be run after <a href="AddDefaults.html" class="extype" name="firrtl.stage.phases.AddDefaults">AddDefaults</a> as this <a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> depends on the existence of
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.3.0/src/main/scala/firrtl/stage/phases/AddCircuit.scala" target="_blank">AddCircuit.scala</a></dd><dt>Note</dt><dd><span class="cmt"><p><b>This must be run after <a href="AddDefaults.html" class="extype" name="firrtl.stage.phases.AddDefaults">AddDefaults</a> as this <a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a> depends on the existence of
 an <a href="../InfoModeAnnotation.html" class="extype" name="firrtl.stage.InfoModeAnnotation">InfoModeAnnotation</a>.</b>.</p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
@@ -357,32 +357,6 @@ an <a href="../InfoModeAnnotation.html" class="extype" name="firrtl.stage.InfoMo
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="firrtl.stage.phases.AddCircuit#dependents" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="dependents:Seq[Nothing]"></a>
-      <span class="permalink">
-      <a href="../../../firrtl/stage/phases/AddCircuit.html#dependents:Seq[Nothing]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">dependents</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/collection/Seq.html#scala.collection.Seq" class="extype" name="scala.collection.Seq">Seq</a>[<a href="https://www.scala-lang.org/api/2.12.11/scala/Nothing.html#scala.Nothing" class="extype" name="scala.Nothing">Nothing</a>]</span>
-      </span>
-      
-      <p class="shortcomment cmt">All transforms that must run <i>after</i> this transform</p><div class="fullcomment"><div class="comment cmt"><p>All transforms that must run <i>after</i> this transform</p><p><i>This is a means of prerequisite injection into some other transform.</i> Normally a transform will define its own
-prerequisites. Dependents exist for two main situations:</p><p>First, they improve the composition of optional transforms. If some first transform is optional (e.g., an
-expensive validation check), you would like to be able to conditionally cause it to run. If it is listed as a
-prerequisite on some other, second transform then it must always run before that second transform. There's no way
-to turn it off. However, by listing the second transform as a dependent of the first transform, the first
-transform will only run (and be treated as a prerequisite of the second transform) if included in a list of target
-transforms that should be run.</p><p>Second, an external library would like to inject some first transform before a second transform inside FIRRTL. In
-this situation, the second transform cannot have any knowledge of external libraries. The use of a dependent here
-allows for prerequisite injection into FIRRTL proper.
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.stage.phases.AddCircuit">AddCircuit</a> → <a href="../../options/DependencyAPI.html" class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</a></dd><dt>Note</dt><dd><span class="cmt"><p>The use of a Seq here is to preserve input order. Internally, this will be converted to a private,
-ordered Set.</p></span></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../../passes/CheckTypes$.html" class="extype" name="firrtl.passes.CheckTypes">firrtl.passes.CheckTypes</a> for an example of an optional checking <a href="../../Transform.html" class="extype" name="firrtl.Transform">firrtl.Transform</a></p></span></dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -594,6 +568,27 @@ annotations. This will default to the <code>simpleName</code> of the class.</p><
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="firrtl.stage.phases.AddCircuit#optionalPrerequisiteOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="optionalPrerequisiteOf:Seq[Nothing]"></a>
+      <span class="permalink">
+      <a href="../../../firrtl/stage/phases/AddCircuit.html#optionalPrerequisiteOf:Seq[Nothing]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">optionalPrerequisiteOf</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/collection/Seq.html#scala.collection.Seq" class="extype" name="scala.collection.Seq">Seq</a>[<a href="https://www.scala-lang.org/api/2.12.11/scala/Nothing.html#scala.Nothing" class="extype" name="scala.Nothing">Nothing</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">A sequence of transforms to add this transform as an <code>optionalPrerequisite</code>.</p><div class="fullcomment"><div class="comment cmt"><p>A sequence of transforms to add this transform as an <code>optionalPrerequisite</code>. The use of <code>optionalPrerequisiteOf</code>
+enables the transform declaring them to always run before some other transforms. However, declaring
+<code>optionalPrerequisiteOf</code> will not result in the sequence of transforms executing.</p><p>This is useful for providing an ordering constraint to guarantee that other transforms (e.g., emitters) will not
+be scheduled before you.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.stage.phases.AddCircuit">AddCircuit</a> → <a href="../../options/DependencyAPI.html" class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</a></dd><dt>Note</dt><dd><span class="cmt"><p>This method **will not** result in the listed transforms running. If you want to add multiple transforms at
+once, you should use a <code>DependencyManager</code> with multiple targets.</p></span></dd></dl></div>
     </li><li name="firrtl.options.DependencyAPI#optionalPrerequisites" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="optionalPrerequisites:Seq[firrtl.options.Dependency[A]]"></a><a id="optionalPrerequisites:Seq[Dependency[Phase]]"></a>
       <span class="permalink">
@@ -612,9 +607,9 @@ annotations. This will default to the <code>simpleName</code> of the class.</p><
       <p class="shortcomment cmt">All transforms that, if a prerequisite of *another* transform, will run before this transform.</p><div class="fullcomment"><div class="comment cmt"><p>All transforms that, if a prerequisite of *another* transform, will run before this transform.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../options/DependencyAPI.html" class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</a></dd><dt>Note</dt><dd><span class="cmt"><p>The use of a Seq here is to preserve input order. Internally, this will be converted to a private,
 ordered Set.</p></span></dd></dl></div>
     </li><li name="firrtl.stage.phases.AddCircuit#prerequisites" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="prerequisites:Seq[firrtl.options.Dependency[firrtl.options.Phasewithfirrtl.options.PreservesAll[firrtl.options.Phase]{defdependents:Seq[Nothing];defprerequisites:Seq[firrtl.options.Dependency[firrtl.options.Phasewithfirrtl.options.PreservesAll[firrtl.options.Phase]{defdependents:Seq[Nothing];defprerequisites:Seq[firrtl.options.Dependency[firrtl.stage.phases.AddDefaults]]}]]}]]"></a><a id="prerequisites:Seq[Dependency[PhasewithPreservesAll[Phase]{.../*2definitionsintyperefinement*/}]]"></a>
+      <a id="prerequisites:Seq[firrtl.options.Dependency[firrtl.options.Phasewithfirrtl.options.PreservesAll[firrtl.options.Phase]{defoptionalPrerequisiteOf:Seq[Nothing];defprerequisites:Seq[firrtl.options.Dependency[firrtl.options.Phasewithfirrtl.options.PreservesAll[firrtl.options.Phase]{defoptionalPrerequisiteOf:Seq[Nothing];defprerequisites:Seq[firrtl.options.Dependency[firrtl.stage.phases.AddDefaults]]}]]}]]"></a><a id="prerequisites:Seq[Dependency[PhasewithPreservesAll[Phase]{.../*2definitionsintyperefinement*/}]]"></a>
       <span class="permalink">
-      <a href="../../../firrtl/stage/phases/AddCircuit.html#prerequisites:Seq[firrtl.options.Dependency[firrtl.options.Phasewithfirrtl.options.PreservesAll[firrtl.options.Phase]{defdependents:Seq[Nothing];defprerequisites:Seq[firrtl.options.Dependency[firrtl.options.Phasewithfirrtl.options.PreservesAll[firrtl.options.Phase]{defdependents:Seq[Nothing];defprerequisites:Seq[firrtl.options.Dependency[firrtl.stage.phases.AddDefaults]]}]]}]]" title="Permalink">
+      <a href="../../../firrtl/stage/phases/AddCircuit.html#prerequisites:Seq[firrtl.options.Dependency[firrtl.options.Phasewithfirrtl.options.PreservesAll[firrtl.options.Phase]{defoptionalPrerequisiteOf:Seq[Nothing];defprerequisites:Seq[firrtl.options.Dependency[firrtl.options.Phasewithfirrtl.options.PreservesAll[firrtl.options.Phase]{defoptionalPrerequisiteOf:Seq[Nothing];defprerequisites:Seq[firrtl.options.Dependency[firrtl.stage.phases.AddDefaults]]}]]}]]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -750,7 +745,39 @@ ordered Set.</p></span></dd></dl></div>
 
         
 
-        
+        <div class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="firrtl.options.DependencyAPI#dependents" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="dependents:Seq[firrtl.options.Dependency[A]]"></a><a id="dependents:Seq[Dependency[Phase]]"></a>
+      <span class="permalink">
+      <a href="../../../firrtl/stage/phases/AddCircuit.html#dependents:Seq[firrtl.options.Dependency[A]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.3) Due to confusion, 'dependents' is being renamed to 'optionalPrerequisiteOf'. Override the latter instead.">dependents</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="../../options/Dependency.html" class="extype" name="firrtl.options.Dependency">Dependency</a>[<a href="../../options/Phase.html" class="extype" name="firrtl.options.Phase">Phase</a>]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">All transforms that must run <i>after</i> this transform</p><div class="fullcomment"><div class="comment cmt"><p>All transforms that must run <i>after</i> this transform</p><p><i>This is a means of prerequisite injection into some other transform.</i> Normally a transform will define its own
+prerequisites. Dependents exist for two main situations:</p><p>First, they improve the composition of optional transforms. If some first transform is optional (e.g., an
+expensive validation check), you would like to be able to conditionally cause it to run. If it is listed as a
+prerequisite on some other, second transform then it must always run before that second transform. There's no way
+to turn it off. However, by listing the second transform as a dependent of the first transform, the first
+transform will only run (and be treated as a prerequisite of the second transform) if included in a list of target
+transforms that should be run.</p><p>Second, an external library would like to inject some first transform before a second transform inside FIRRTL. In
+this situation, the second transform cannot have any knowledge of external libraries. The use of a dependent here
+allows for prerequisite injection into FIRRTL proper.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../options/DependencyAPI.html" class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FIRRTL 1.3)</i> Due to confusion, 'dependents' is being renamed to 'optionalPrerequisiteOf'. Override the latter instead.</p></dd><dt>Note</dt><dd><span class="cmt"><p>The use of a Seq here is to preserve input order. Internally, this will be converted to a private,
+ordered Set.</p></span></dd><dt>See also</dt><dd><span class="cmt"><p><a href="../../passes/CheckTypes$.html" class="extype" name="firrtl.passes.CheckTypes">firrtl.passes.CheckTypes</a> for an example of an optional checking <a href="../../Transform.html" class="extype" name="firrtl.Transform">firrtl.Transform</a></p></span></dd></dl></div>
+    </li></ol>
+            </div>
         </div>
 
         <div id="inheritedMembers">

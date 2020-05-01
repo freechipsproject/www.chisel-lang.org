@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.3.0-RC1 - firrtl.options</title>
-          <meta name="description" content="firrtl 1.3.0 - RC1 - firrtl.options" />
-          <meta name="keywords" content="firrtl 1.3.0 RC1 firrtl.options" />
+          <title>firrtl 1.3.0 - firrtl.options</title>
+          <meta name="description" content="firrtl 1.3.0 - firrtl.options" />
+          <meta name="keywords" content="firrtl 1.3.0 firrtl.options" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.3.0-RC1</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.3.0</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -282,6 +282,10 @@
                         <a class="trait" href="HasShellOptions.html" title="Indicates that this class/object includes options (but does not add these as a registered class)"></a>
                         <a href="HasShellOptions.html" title="Indicates that this class/object includes options (but does not add these as a registered class)">HasShellOptions</a>
                       </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="IdentityLike.html" title="Mix-in that makes a TransformLike guaranteed to be an identity function on some type."></a>
+                        <a href="IdentityLike.html" title="Mix-in that makes a TransformLike guaranteed to be an identity function on some type.">IdentityLike</a>
+                      </li><li class="current-entities indented2">
                         <a class="object" href="InputAnnotationFileAnnotation$.html" title=""></a>
                         <a class="class" href="InputAnnotationFileAnnotation.html" title="Holds a filename containing one or more annotations.Annotation to be read"></a>
                         <a href="InputAnnotationFileAnnotation.html" title="Holds a filename containing one or more annotations.Annotation to be read">InputAnnotationFileAnnotation</a>
@@ -522,7 +526,7 @@ primarily consists of:</p><ul><li><a href="../stage/FirrtlStage.html" class="ext
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.3.0-RC1/src/main/scala/firrtl/options/package.scala" target="_blank">package.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.3.0/src/main/scala/firrtl/options/package.scala" target="_blank">package.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -608,11 +612,12 @@ primarily consists of:</p><ul><li><a href="../stage/FirrtlStage.html" class="ext
       <p class="shortcomment cmt">Mixin that defines dependencies between <a href="TransformLike.html" class="extype" name="firrtl.options.TransformLike">TransformLike</a>s (hereafter referred to as
 &quot;transforms&quot;)</p><div class="fullcomment"><div class="comment cmt"><p>Mixin that defines dependencies between <a href="TransformLike.html" class="extype" name="firrtl.options.TransformLike">TransformLike</a>s (hereafter referred to as
 &quot;transforms&quot;)</p><p>This trait forms the basis of the Dependency API of the Chisel/FIRRTL Hardware Compiler Framework. Dependencies are
-defined in terms of prerequisistes, dependents, and invalidates. A prerequisite is a transform that must run before
-this transform. A dependent is a transform that must run <i>after</i> this transform. (This can be viewed as a means of
-injecting a prerequisite into some other transform.) Finally, invalidates define the set of transforms whose effects
-this transform undos/invalidates. (Invalidation then implies that a transform that is invalidated by this transform
-and needed by another transform will need to be re-run.)</p><p>This Dependency API only defines dependencies. A concrete <a href="DependencyManager.html" class="extype" name="firrtl.options.DependencyManager">DependencyManager</a> is expected to be used to statically
+defined in terms of prerequisistes, optional prerequisites, optional prerequisites of, and invalidates. A
+prerequisite is a transform that must run before this transform. An optional prerequisites is transform that should
+run before this transform if the other transform is a target (or the prerequisite of a target). An optional
+prerequisite of is an optional prerequisite injected into another transform. Finally, invalidates define the set of
+transforms whose effects this transform undos/invalidates. (Invalidation then implies that a transform that is
+invalidated by this transform and needed by another transform will need to be re-run.)</p><p>This Dependency API only defines dependencies. A concrete <a href="DependencyManager.html" class="extype" name="firrtl.options.DependencyManager">DependencyManager</a> is expected to be used to statically
 resolve a linear ordering of transforms that satisfies dependency requirements.</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>some transform</p></dd></dl></div>
     </li><li name="firrtl.options.DependencyManager" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="DependencyManager[A,B&lt;:firrtl.options.TransformLike[A]withfirrtl.options.DependencyAPI[B]]extendsTransformLike[A]withDependencyAPI[B]"></a><a id="DependencyManager[A,B&lt;:TransformLike[A]withDependencyAPI[B]]:DependencyManager[A,B]"></a>
@@ -677,7 +682,7 @@ passed</p>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="A modified OptionParser with mutable termination and additional checks" href="DuplicateHandling.html"><span class="name">DuplicateHandling</span></a><span class="result"> extends <span class="extype" name="scopt.OptionParser">OptionParser</span>[<a href="../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a>]</span>
+        <a title="A modified OptionParser with mutable termination and additional checks" href="DuplicateHandling.html"><span class="name">DuplicateHandling</span></a><span class="result"> extends <a href="https://javadoc.io/page/com.github.scopt/scopt_2.12/3.7.1/scopt/OptionParser.html#scopt.OptionParser" class="extype" name="scopt.OptionParser">OptionParser</a>[<a href="../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a>]</span>
       </span>
       
       <p class="shortcomment cmt">A modified OptionParser with mutable termination and additional checks
@@ -750,6 +755,24 @@ convert it to an <a href="OptionsException.html" class="extype" name="firrtl.opt
       
       <p class="shortcomment cmt">Indicates that this class/object includes options (but does not add these as a registered class)
 </p>
+    </li><li name="firrtl.options.IdentityLike" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="IdentityLike[A]extendsAnyRef"></a><a id="IdentityLike[A]:IdentityLike[A]"></a>
+      <span class="permalink">
+      <a href="../../firrtl/options/IdentityLike.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Mix-in that makes a TransformLike guaranteed to be an identity function on some type." href="IdentityLike.html"><span class="name">IdentityLike</span></a><span class="tparams">[<span name="A">A</span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Mix-in that makes a <a href="TransformLike.html" class="extype" name="firrtl.options.TransformLike">TransformLike</a> guaranteed to be an identity function on some
+type.</p><div class="fullcomment"><div class="comment cmt"><p>Mix-in that makes a <a href="TransformLike.html" class="extype" name="firrtl.options.TransformLike">TransformLike</a> guaranteed to be an identity function on some
+type.</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>the transformed type</p></dd></dl></div>
     </li><li name="firrtl.options.InputAnnotationFileAnnotation" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="InputAnnotationFileAnnotationextendsNoTargetAnnotationwithStageOptionwithProductwithSerializable"></a><a id="InputAnnotationFileAnnotation:InputAnnotationFileAnnotation"></a>
       <span class="permalink">

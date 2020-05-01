@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.3.0-RC1 - chisel3.BackendCompilationUtilities</title>
-          <meta name="description" content="chisel3 3.3.0 - RC1 - chisel3.BackendCompilationUtilities" />
-          <meta name="keywords" content="chisel3 3.3.0 RC1 chisel3.BackendCompilationUtilities" />
+          <title>chisel3 3.3.0 - chisel3.BackendCompilationUtilities</title>
+          <meta name="description" content="chisel3 3.3.0 - chisel3.BackendCompilationUtilities" />
+          <meta name="keywords" content="chisel3 3.3.0 chisel3.BackendCompilationUtilities" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.3.0-RC1</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.3.0</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -547,8 +547,8 @@ functions
                         <a href="package$$fromBigDecimalToLiteralInterval.html" title="">fromBigDecimalToLiteralInterval</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="class" href="package$$fromBigIntToLiteral.html" title="These implicit classes allow one to convert scala.Int|scala.BigInt to Chisel.UInt|Chisel.SInt by calling .asUInt|.asSInt on them, respectively."></a>
-                        <a href="package$$fromBigIntToLiteral.html" title="These implicit classes allow one to convert scala.Int|scala.BigInt to Chisel.UInt|Chisel.SInt by calling .asUInt|.asSInt on them, respectively.">fromBigIntToLiteral</a>
+                        <a class="class" href="package$$fromBigIntToLiteral.html" title="These implicit classes allow one to convert scala.Int or scala.BigInt to Chisel.UInt|Chisel.SInt by calling .asUInt|.asSInt on them, respectively."></a>
+                        <a href="package$$fromBigIntToLiteral.html" title="These implicit classes allow one to convert scala.Int or scala.BigInt to Chisel.UInt|Chisel.SInt by calling .asUInt|.asSInt on them, respectively.">fromBigIntToLiteral</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="class" href="package$$fromBigIntToLiteralInterval.html" title=""></a>
@@ -640,7 +640,7 @@ functions
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <span class="name">BackendCompilationUtilities</span><span class="result"> extends <span class="extype" name="firrtl.util.BackendCompilationUtilities">firrtl.util.BackendCompilationUtilities</span></span>
+        <span class="name">BackendCompilationUtilities</span><span class="result"> extends <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.3.0/firrtl/util/BackendCompilationUtilities.html#firrtl.util.BackendCompilationUtilities" class="extype" name="firrtl.util.BackendCompilationUtilities">firrtl.util.BackendCompilationUtilities</a></span>
       </span>
       </h4>
 
@@ -649,7 +649,7 @@ functions
 By default firrtl is automatically run after chisel.  an <span class="extype" name="ExecutionOptionsManager">ExecutionOptionsManager</span>
 is needed to manage options.  It can parser command line arguments or coordinate
 multiple chisel toolchain tools options.
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.3.0-RC1//src/main/scala/chisel3/Driver.scala" target="_blank">Driver.scala</a></dd><div class="block">Examples:
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.3.0//src/main/scala/chisel3/Driver.scala" target="_blank">Driver.scala</a></dd><div class="block">Examples:
                <ol><li class="cmt"><p></p><pre><span class="kw">val</span> optionsManager = <span class="kw">new</span> ExecutionOptionsManager(<span class="lit">"chisel3"</span>)
     <span class="kw">with</span> HasFirrtlOptions
     <span class="kw">with</span> HasChiselExecutionOptions {
@@ -662,7 +662,7 @@ chisel3.execute(args, () <span class="kw">=&gt;</span> <span class="kw">new</spa
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><span class="extype" name="firrtl.util.BackendCompilationUtilities">firrtl.util.BackendCompilationUtilities</span>, <span class="extype" name="logger.LazyLogging">LazyLogging</span>, <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.3.0/firrtl/util/BackendCompilationUtilities.html#firrtl.util.BackendCompilationUtilities" class="extype" name="firrtl.util.BackendCompilationUtilities">firrtl.util.BackendCompilationUtilities</a>, <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.3.0/logger/LazyLogging.html#logger.LazyLogging" class="extype" name="logger.LazyLogging">LazyLogging</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div><div class="toggleContainer block">
             <span class="toggle">
               Known Subclasses
@@ -780,7 +780,7 @@ chisel3.execute(args, () <span class="kw">=&gt;</span> <span class="kw">new</spa
         <span class="kind">lazy val</span>
       </span>
       <span class="symbol">
-        <span class="name">TestDirectory</span><span class="result">: <span class="extype" name="java.io.File">File</span></span>
+        <span class="name">TestDirectory</span><span class="result">: <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html#java.io.File" class="extype" name="java.io.File">File</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BackendCompilationUtilities</dd></dl></div>
@@ -836,7 +836,7 @@ chisel3.execute(args, () <span class="kw">=&gt;</span> <span class="kw">new</spa
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">compileFirrtlToVerilog</span><span class="params">(<span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dir">dir: <span class="extype" name="java.io.File">File</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">compileFirrtlToVerilog</span><span class="params">(<span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dir">dir: <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html#java.io.File" class="extype" name="java.io.File">File</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <p class="shortcomment cmt">Compile Chirrtl to Verilog by invoking Firrtl inside the same JVM
@@ -854,7 +854,7 @@ chisel3.execute(args, () <span class="kw">=&gt;</span> <span class="kw">new</spa
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">copyResourceToFile</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="file">file: <span class="extype" name="java.io.File">File</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">copyResourceToFile</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="file">file: <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html#java.io.File" class="extype" name="java.io.File">File</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BackendCompilationUtilities</dd></dl></div>
@@ -870,7 +870,7 @@ chisel3.execute(args, () <span class="kw">=&gt;</span> <span class="kw">new</spa
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">cppToExe</span><span class="params">(<span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dir">dir: <span class="extype" name="java.io.File">File</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/sys/process/ProcessBuilder.html#scala.sys.process.ProcessBuilder" class="extype" name="scala.sys.process.ProcessBuilder">ProcessBuilder</a></span>
+        <span class="name">cppToExe</span><span class="params">(<span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dir">dir: <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html#java.io.File" class="extype" name="java.io.File">File</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/sys/process/ProcessBuilder.html#scala.sys.process.ProcessBuilder" class="extype" name="scala.sys.process.ProcessBuilder">ProcessBuilder</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BackendCompilationUtilities</dd></dl></div>
@@ -886,7 +886,7 @@ chisel3.execute(args, () <span class="kw">=&gt;</span> <span class="kw">new</spa
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">createTestDirectory</span><span class="params">(<span name="testName">testName: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="java.io.File">File</span></span>
+        <span class="name">createTestDirectory</span><span class="params">(<span name="testName">testName: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html#java.io.File" class="extype" name="java.io.File">File</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BackendCompilationUtilities</dd></dl></div>
@@ -934,7 +934,7 @@ chisel3.execute(args, () <span class="kw">=&gt;</span> <span class="kw">new</spa
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">executeExpectingFailure</span><span class="params">(<span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dir">dir: <span class="extype" name="java.io.File">File</span></span>, <span name="assertionMsg">assertionMsg: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">executeExpectingFailure</span><span class="params">(<span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dir">dir: <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html#java.io.File" class="extype" name="java.io.File">File</a></span>, <span name="assertionMsg">assertionMsg: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BackendCompilationUtilities</dd></dl></div>
@@ -950,7 +950,7 @@ chisel3.execute(args, () <span class="kw">=&gt;</span> <span class="kw">new</spa
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">executeExpectingSuccess</span><span class="params">(<span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dir">dir: <span class="extype" name="java.io.File">File</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">executeExpectingSuccess</span><span class="params">(<span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dir">dir: <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html#java.io.File" class="extype" name="java.io.File">File</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BackendCompilationUtilities</dd></dl></div>
@@ -988,7 +988,7 @@ chisel3.execute(args, () <span class="kw">=&gt;</span> <span class="kw">new</spa
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">firrtlToVerilog</span><span class="params">(<span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dir">dir: <span class="extype" name="java.io.File">File</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/sys/process/ProcessBuilder.html#scala.sys.process.ProcessBuilder" class="extype" name="scala.sys.process.ProcessBuilder">ProcessBuilder</a></span>
+        <span class="name">firrtlToVerilog</span><span class="params">(<span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dir">dir: <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html#java.io.File" class="extype" name="java.io.File">File</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/sys/process/ProcessBuilder.html#scala.sys.process.ProcessBuilder" class="extype" name="scala.sys.process.ProcessBuilder">ProcessBuilder</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BackendCompilationUtilities</dd></dl></div>
@@ -1004,7 +1004,7 @@ chisel3.execute(args, () <span class="kw">=&gt;</span> <span class="kw">new</spa
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getClass</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.Class">Class</span>[_]</span>
+        <span class="name">getClass</span><span class="params">()</span><span class="result">: <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#java.lang.Class" class="extype" name="java.lang.Class">Class</a>[_]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
@@ -1058,7 +1058,7 @@ chisel3.execute(args, () <span class="kw">=&gt;</span> <span class="kw">new</spa
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">logger</span><span class="result">: <span class="extype" name="logger.Logger">Logger</span></span>
+        <span class="name">logger</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.3.0/logger/Logger.html#logger.Logger" class="extype" name="logger.Logger">Logger</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>LazyLogging</dd></dl></div>
@@ -1090,7 +1090,7 @@ chisel3.execute(args, () <span class="kw">=&gt;</span> <span class="kw">new</spa
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">makeHarness</span><span class="params">(<span name="template">template: (<span class="extype" name="scala.Predef.String">String</span>) ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="post">post: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="params">(<span name="f">f: <span class="extype" name="java.io.File">File</span></span>)</span><span class="result">: <span class="extype" name="java.io.File">File</span></span>
+        <span class="name">makeHarness</span><span class="params">(<span name="template">template: (<span class="extype" name="scala.Predef.String">String</span>) ⇒ <span class="extype" name="scala.Predef.String">String</span></span>, <span name="post">post: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="params">(<span name="f">f: <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html#java.io.File" class="extype" name="java.io.File">File</a></span>)</span><span class="result">: <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html#java.io.File" class="extype" name="java.io.File">File</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BackendCompilationUtilities</dd></dl></div>
@@ -1192,7 +1192,7 @@ chisel3.execute(args, () <span class="kw">=&gt;</span> <span class="kw">new</spa
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="java.lang.String">String</span></span>
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#java.lang.String" class="extype" name="java.lang.String">String</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -1208,7 +1208,7 @@ chisel3.execute(args, () <span class="kw">=&gt;</span> <span class="kw">new</spa
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">verilogToCpp</span><span class="params">(<span name="dutFile">dutFile: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dir">dir: <span class="extype" name="java.io.File">File</span></span>, <span name="vSources">vSources: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="java.io.File">File</span>]</span>, <span name="cppHarness">cppHarness: <span class="extype" name="java.io.File">File</span></span>, <span name="suppressVcd">suppressVcd: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>, <span name="resourceFileName">resourceFileName: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/sys/process/ProcessBuilder.html#scala.sys.process.ProcessBuilder" class="extype" name="scala.sys.process.ProcessBuilder">ProcessBuilder</a></span>
+        <span class="name">verilogToCpp</span><span class="params">(<span name="dutFile">dutFile: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="dir">dir: <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html#java.io.File" class="extype" name="java.io.File">File</a></span>, <span name="vSources">vSources: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html#java.io.File" class="extype" name="java.io.File">File</a>]</span>, <span name="cppHarness">cppHarness: <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html#java.io.File" class="extype" name="java.io.File">File</a></span>, <span name="suppressVcd">suppressVcd: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>, <span name="resourceFileName">resourceFileName: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/sys/process/ProcessBuilder.html#scala.sys.process.ProcessBuilder" class="extype" name="scala.sys.process.ProcessBuilder">ProcessBuilder</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BackendCompilationUtilities</dd></dl></div>
@@ -1292,7 +1292,7 @@ chisel3.execute(args, () <span class="kw">=&gt;</span> <span class="kw">new</spa
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">yosysExpectFailure</span><span class="params">(<span name="customTop">customTop: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="referenceTop">referenceTop: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="testDir">testDir: <span class="extype" name="java.io.File">File</span></span>, <span name="resets">resets: <span class="extype" name="scala.Seq">Seq</span>[(<a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>, <span class="extype" name="scala.Predef.String">String</span>, <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>)]</span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">yosysExpectFailure</span><span class="params">(<span name="customTop">customTop: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="referenceTop">referenceTop: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="testDir">testDir: <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html#java.io.File" class="extype" name="java.io.File">File</a></span>, <span name="resets">resets: <span class="extype" name="scala.Seq">Seq</span>[(<a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>, <span class="extype" name="scala.Predef.String">String</span>, <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>)]</span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BackendCompilationUtilities</dd></dl></div>
@@ -1308,7 +1308,7 @@ chisel3.execute(args, () <span class="kw">=&gt;</span> <span class="kw">new</spa
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">yosysExpectSuccess</span><span class="params">(<span name="customTop">customTop: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="referenceTop">referenceTop: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="testDir">testDir: <span class="extype" name="java.io.File">File</span></span>, <span name="resets">resets: <span class="extype" name="scala.Seq">Seq</span>[(<a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>, <span class="extype" name="scala.Predef.String">String</span>, <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>)]</span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">yosysExpectSuccess</span><span class="params">(<span name="customTop">customTop: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="referenceTop">referenceTop: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="testDir">testDir: <a href="https://docs.oracle.com/javase/8/docs/api/java/io/File.html#java.io.File" class="extype" name="java.io.File">File</a></span>, <span name="resets">resets: <span class="extype" name="scala.Seq">Seq</span>[(<a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>, <span class="extype" name="scala.Predef.String">String</span>, <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>)]</span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>BackendCompilationUtilities</dd></dl></div>
@@ -1323,9 +1323,9 @@ chisel3.execute(args, () <span class="kw">=&gt;</span> <span class="kw">new</spa
 
         <div id="inheritedMembers">
         <div class="parent" name="firrtl.util.BackendCompilationUtilities">
-              <h3>Inherited from <span class="extype" name="firrtl.util.BackendCompilationUtilities">firrtl.util.BackendCompilationUtilities</span></h3>
+              <h3>Inherited from <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.3.0/firrtl/util/BackendCompilationUtilities.html#firrtl.util.BackendCompilationUtilities" class="extype" name="firrtl.util.BackendCompilationUtilities">firrtl.util.BackendCompilationUtilities</a></h3>
             </div><div class="parent" name="logger.LazyLogging">
-              <h3>Inherited from <span class="extype" name="logger.LazyLogging">LazyLogging</span></h3>
+              <h3>Inherited from <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.3.0/logger/LazyLogging.html#logger.LazyLogging" class="extype" name="logger.LazyLogging">LazyLogging</a></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">

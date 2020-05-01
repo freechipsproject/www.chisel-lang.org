@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.3.0-RC1 - firrtl.options.RegisteredLibrary</title>
-          <meta name="description" content="firrtl 1.3.0 - RC1 - firrtl.options.RegisteredLibrary" />
-          <meta name="keywords" content="firrtl 1.3.0 RC1 firrtl.options.RegisteredLibrary" />
+          <title>firrtl 1.3.0 - firrtl.options.RegisteredLibrary</title>
+          <meta name="description" content="firrtl 1.3.0 - firrtl.options.RegisteredLibrary" />
+          <meta name="keywords" content="firrtl 1.3.0 firrtl.options.RegisteredLibrary" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.3.0-RC1</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.3.0</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -170,6 +170,10 @@
                         <a class="trait" href="HasShellOptions.html" title="Indicates that this class/object includes options (but does not add these as a registered class)"></a>
                         <a href="HasShellOptions.html" title="Indicates that this class/object includes options (but does not add these as a registered class)">HasShellOptions</a>
                       </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="IdentityLike.html" title="Mix-in that makes a TransformLike guaranteed to be an identity function on some type."></a>
+                        <a href="IdentityLike.html" title="Mix-in that makes a TransformLike guaranteed to be an identity function on some type.">IdentityLike</a>
+                      </li><li class="current-entities indented2">
                         <a class="object" href="InputAnnotationFileAnnotation$.html" title=""></a>
                         <a class="class" href="InputAnnotationFileAnnotation.html" title="Holds a filename containing one or more annotations.Annotation to be read"></a>
                         <a href="InputAnnotationFileAnnotation.html" title="Holds a filename containing one or more annotations.Annotation to be read">InputAnnotationFileAnnotation</a>
@@ -310,7 +314,7 @@
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A class that includes options that should be exposed as a group at the top level.
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.3.0-RC1/src/main/scala/firrtl/options/Registration.scala" target="_blank">Registration.scala</a></dd><dt>Note</dt><dd><span class="cmt"><p>To complete registration, include an entry in
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.3.0/src/main/scala/firrtl/options/Registration.scala" target="_blank">Registration.scala</a></dd><dt>Note</dt><dd><span class="cmt"><p>To complete registration, include an entry in
 src/main/resources/META-INF/services/firrtl.options.RegisteredLibrary</p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
@@ -471,7 +475,7 @@ src/main/resources/META-INF/services/firrtl.options.RegisteredLibrary</p></span>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">addOptions</span><span class="params">(<span name="p">p: <span class="extype" name="scopt.OptionParser">OptionParser</span>[<a href="../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a>]</span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">addOptions</span><span class="params">(<span name="p">p: <a href="https://javadoc.io/page/com.github.scopt/scopt_2.12/3.7.1/scopt/OptionParser.html#scopt.OptionParser" class="extype" name="scopt.OptionParser">OptionParser</a>[<a href="../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a>]</span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <p class="shortcomment cmt">Add all shell (command line) options to an option parser</p><div class="fullcomment"><div class="comment cmt"><p>Add all shell (command line) options to an option parser</p></div><dl class="paramcmts block"><dt class="param">p</dt><dd class="cmt"><p>an option parser</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="HasShellOptions.html" class="extype" name="firrtl.options.HasShellOptions">HasShellOptions</a></dd></dl></div>
