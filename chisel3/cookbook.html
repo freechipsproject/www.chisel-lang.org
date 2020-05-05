@@ -383,7 +383,7 @@ The reason for this is that subword assignment generally hints at a better abstr
 <p>If we compile this module <em>without</em> <code class="highlighter-rouge">@chiselName</code>, Chisel is not able to name <code class="highlighter-rouge">innerReg</code> correctly (notice the <code class="highlighter-rouge">_T</code>):</p>
 
 <p>[[35minfo[0m] [0.000] Elaborating design…
-[[35minfo[0m] [0.057] Done elaborating.</p>
+[[35minfo[0m] [0.059] Done elaborating.</p>
 
 <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">TestMod</span><span class="p">(</span>
   <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
@@ -448,7 +448,7 @@ The reason for this is that subword assignment generally hints at a better abstr
 <p>However, if we use <code class="highlighter-rouge">@chiselName</code> then the register previously called <code class="highlighter-rouge">_T</code> is now <code class="highlighter-rouge">innerReg</code>:</p>
 
 <p>[[35minfo[0m] [0.000] Elaborating design…
-[[35minfo[0m] [0.039] Done elaborating.</p>
+[[35minfo[0m] [0.037] Done elaborating.</p>
 
 <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">TestMod</span><span class="p">(</span>
   <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
@@ -603,7 +603,7 @@ The reason for this is that subword assignment generally hints at a better abstr
 <p>Elaborating the Chisel module <code class="highlighter-rouge">Salt</code> yields our “desire name” for <code class="highlighter-rouge">Salt</code> and <code class="highlighter-rouge">Coffee</code> in the output Verilog:</p>
 
 <p>[[35minfo[0m] [0.000] Elaborating design…
-[[35minfo[0m] [0.035] Done elaborating.</p>
+[[35minfo[0m] [0.027] Done elaborating.</p>
 
 <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">SodiumMonochloride</span><span class="p">(</span>
   <span class="kt">input</span>   <span class="n">clock</span><span class="p">,</span>

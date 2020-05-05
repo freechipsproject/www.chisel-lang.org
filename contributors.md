@@ -42,7 +42,6 @@
 - [`@jwright6323`](https://github.com/jwright6323)
 - [`@kammoh`](https://github.com/kammoh)
 - [`@kasanovic`](https://github.com/kasanovic)
-- [`@leonardt`](https://github.com/leonardt)
 - [`@marmbrus`](https://github.com/marmbrus)
 - [`@Martoni`](https://github.com/Martoni)
 - [`@mehnadnerd`](https://github.com/mehnadnerd)
