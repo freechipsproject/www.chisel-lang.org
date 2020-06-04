@@ -40,40 +40,24 @@ ga('send', 'pageview');
 
 <p>where <code class="highlighter-rouge">amp</code> is used to scale the fixpoint values stored in the ROM.</p>
 
-<h2 id="mem">Mem</h2>
+<h2 id="memories">Memories</h2>
 
 <p>Memories are given special treatment in Chisel since hardware implementations of memory vary greatly. For example, FPGA memories are instantiated quite differently from ASIC memories. Chisel defines a memory abstraction that can map to either simple Verilog behavioural descriptions or to instances of memory modules that are available from external memory generators provided by foundry or IP vendors.</p>
 
-<p>Chisel supports random-access memories via the <code class="highlighter-rouge">Mem</code> construct. Writes to <code class="highlighter-rouge">Mem</code>s are <strong>combinational/asynchronous-read, sequential/synchronous-write</strong>. These <code class="highlighter-rouge">Mem</code>s will likely be synthesized to register banks, since most SRAMs in modern technologies (FPGA, ASIC) tend to no longer support combinational (asynchronous) reads.</p>
+<h3 id="syncreadmem-sequentialsynchronous-read-sequentialsynchronous-write"><code class="highlighter-rouge">SyncReadMem</code>: sequential/synchronous-read, sequential/synchronous-write</h3>
 
-<p>Chisel also has a construct called <code class="highlighter-rouge">SyncReadMem</code> for <strong>sequential/synchronous-read, sequential/synchronous-write</strong> memories. These <code class="highlighter-rouge">SyncReadMem</code>s will likely be synthesized to technology SRAMs (as opposed to register banks).</p>
+<p>Chisel has a construct called <code class="highlighter-rouge">SyncReadMem</code> for sequential/synchronous-read, sequential/synchronous-write memories. These <code class="highlighter-rouge">SyncReadMem</code>s will likely be synthesized to technology SRAMs (as opposed to register banks).</p>
 
-<p>Ports into Mems are created by applying a <code class="highlighter-rouge">UInt</code> index.  A 1024-entry register file with one write port and one sequential/synchronous read port might be expressed as follows:</p>
+<p>If the same memory address is both written and sequentially read on the same clock edge, or if a sequential read enable is cleared, then the read data is undefined.</p>
 
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">width</span><span class="k">:</span><span class="kt">Int</span> <span class="o">=</span> <span class="mi">32</span>
-<span class="k">val</span> <span class="nv">addr</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="nv">width</span><span class="o">.</span><span class="py">W</span><span class="o">))</span>
-<span class="k">val</span> <span class="nv">dataIn</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="nv">width</span><span class="o">.</span><span class="py">W</span><span class="o">))</span>
-<span class="k">val</span> <span class="nv">dataOut</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="nv">width</span><span class="o">.</span><span class="py">W</span><span class="o">))</span>
-<span class="k">val</span> <span class="nv">enable</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+<p>Values on the read data port are not guaranteed to be held until the next read cycle. If that is the desired behavior, external logic to hold the last read value must be added.</p>
 
-<span class="c1">// assign data...</span>
+<h4 id="read-portwrite-port">Read port/write port</h4>
 
-<span class="c1">// Create a synchronous-read, synchronous-write memory (like in FPGAs).</span>
-<span class="k">val</span> <span class="nv">mem</span> <span class="k">=</span> <span class="nc">SyncReadMem</span><span class="o">(</span><span class="mi">1024</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">(</span><span class="nv">width</span><span class="o">.</span><span class="py">W</span><span class="o">))</span>
-<span class="c1">// Create one write port and one read port.</span>
-<span class="nv">mem</span><span class="o">.</span><span class="py">write</span><span class="o">(</span><span class="n">addr</span><span class="o">,</span> <span class="n">dataIn</span><span class="o">)</span>
-<span class="n">dataOut</span> <span class="o">:=</span> <span class="nv">mem</span><span class="o">.</span><span class="py">read</span><span class="o">(</span><span class="n">addr</span><span class="o">,</span> <span class="n">enable</span><span class="o">)</span>
-</code></pre></div></div>
-
-<p>Creating an asynchronous-read version of the above simply involves replacing <code class="highlighter-rouge">SyncReadMem</code> with just <code class="highlighter-rouge">Mem</code>.</p>
-
-<p>Chisel can also infer other features such as single ports and masks directly with Mem.</p>
-
-<p>Single-ported SRAMs can be inferred when the read and write conditions are
-mutually exclusive in the same <code class="highlighter-rouge">when</code> chain:</p>
+<p>Ports into <code class="highlighter-rouge">SyncReadMem</code>s are created by applying a <code class="highlighter-rouge">UInt</code> index.  A 1024-entry SRAM with one write port and one read port might be expressed as follows:</p>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3._</span>
-<span class="k">class</span> <span class="nc">ReadWriteSMEM</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
+<span class="k">class</span> <span class="nc">ReadWriteSmem</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">width</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">32</span>
   <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
     <span class="k">val</span> <span class="nv">enable</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
@@ -83,50 +67,80 @@ mutually exclusive in the same <code class="highlighter-rouge">when</code> chain
     <span class="k">val</span> <span class="nv">dataOut</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="nv">width</span><span class="o">.</span><span class="py">W</span><span class="o">))</span>
   <span class="o">})</span>
 
+  <span class="k">val</span> <span class="nv">mem</span> <span class="k">=</span> <span class="nc">SyncReadMem</span><span class="o">(</span><span class="mi">1024</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">(</span><span class="nv">width</span><span class="o">.</span><span class="py">W</span><span class="o">))</span>
+  <span class="c1">// Create one write port and one read port</span>
+  <span class="nv">mem</span><span class="o">.</span><span class="py">write</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">addr</span><span class="o">,</span> <span class="nv">io</span><span class="o">.</span><span class="py">dataIn</span><span class="o">)</span>
+  <span class="nv">io</span><span class="o">.</span><span class="py">dataOut</span> <span class="o">:=</span> <span class="nv">mem</span><span class="o">.</span><span class="py">read</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">addr</span><span class="o">,</span> <span class="nv">io</span><span class="o">.</span><span class="py">enable</span><span class="o">)</span>
+<span class="o">}</span>
+</code></pre></div></div>
 
-  <span class="k">val</span> <span class="nv">mem</span> <span class="k">=</span> <span class="nc">SyncReadMem</span><span class="o">(</span><span class="mi">2048</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">))</span>
+<p>Below is an example waveform of the one write port/one read port <code class="highlighter-rouge">SyncReadMem</code> with <a href="#masks">masks</a>. Note that the signal names will differ from the exact wire names generated for the <code class="highlighter-rouge">SyncReadMem</code>. With masking, it is also possible that multiple RTL arrays will be generated with the behavior below.
+<img src="https://svg.wavedrom.com/github/freechipsproject/www.chisel-lang.org/seqmem-update/docs/src/main/tut/chisel3/memories_waveforms/smem_read_write.json" alt="read/write ports example waveform" /></p>
 
+<h4 id="single-ported">Single-ported</h4>
+
+<p>Single-ported SRAMs can be inferred when the read and write conditions are mutually exclusive in the same <code class="highlighter-rouge">when</code> chain:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3._</span>
+<span class="k">class</span> <span class="nc">RWSmem</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">width</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">32</span>
+  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="nv">enable</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+    <span class="k">val</span> <span class="nv">write</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+    <span class="k">val</span> <span class="nv">addr</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">10.</span><span class="n">W</span><span class="o">))</span>
+    <span class="k">val</span> <span class="nv">dataIn</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="nv">width</span><span class="o">.</span><span class="py">W</span><span class="o">))</span>
+    <span class="k">val</span> <span class="nv">dataOut</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="nv">width</span><span class="o">.</span><span class="py">W</span><span class="o">))</span>
+  <span class="o">})</span>
+
+  <span class="k">val</span> <span class="nv">mem</span> <span class="k">=</span> <span class="nc">SyncReadMem</span><span class="o">(</span><span class="mi">1024</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">(</span><span class="nv">width</span><span class="o">.</span><span class="py">W</span><span class="o">))</span>
   <span class="nv">io</span><span class="o">.</span><span class="py">dataOut</span> <span class="o">:=</span> <span class="nc">DontCare</span>
   <span class="nf">when</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">enable</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">val</span> <span class="nv">rdwrPort</span> <span class="k">=</span> <span class="nf">mem</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">addr</span><span class="o">)</span>
     <span class="nf">when</span> <span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">write</span><span class="o">)</span> <span class="o">{</span> <span class="n">rdwrPort</span> <span class="o">:=</span> <span class="nv">io</span><span class="o">.</span><span class="py">dataIn</span> <span class="o">}</span>
       <span class="o">.</span><span class="py">otherwise</span>    <span class="o">{</span> <span class="nv">io</span><span class="o">.</span><span class="py">dataOut</span> <span class="o">:=</span> <span class="n">rdwrPort</span> <span class="o">}</span>
   <span class="o">}</span>
-
 <span class="o">}</span>
 </code></pre></div></div>
 
 <p>(The <code class="highlighter-rouge">DontCare</code> is there to make Chisel’s <a href="unconnected-wires">unconnected wire detection</a> aware that reading while writing is undefined.)</p>
 
-<p>If the same <code class="highlighter-rouge">Mem</code> address is both written and sequentially read on the same clock
-edge, or if a sequential read enable is cleared, then the read data is
-undefined.</p>
+<p>Here is an example single read/write port waveform, with <a href="#masks">masks</a> (again, generated signal names and number of arrays may differ):
+<img src="https://svg.wavedrom.com/github/freechipsproject/www.chisel-lang.org/seqmem-update/docs/src/main/tut/chisel3/memories_waveforms/smem_rw.json" alt="read/write ports example waveform" /></p>
+
+<h3 id="mem-combinationalasynchronous-read-sequentialsynchronous-write"><code class="highlighter-rouge">Mem</code>: combinational/asynchronous-read, sequential/synchronous-write</h3>
+
+<p>Chisel supports random-access memories via the <code class="highlighter-rouge">Mem</code> construct. Writes to <code class="highlighter-rouge">Mem</code>s are combinational/asynchronous-read, sequential/synchronous-write. These <code class="highlighter-rouge">Mem</code>s will likely be synthesized to register banks, since most SRAMs in modern technologies (FPGA, ASIC) tend to no longer support combinational (asynchronous) reads.</p>
+
+<p>Creating asynchronous-read versions of the examples above simply involves replacing <code class="highlighter-rouge">SyncReadMem</code> with <code class="highlighter-rouge">Mem</code>.</p>
 
 <h3 id="masks">Masks</h3>
 
-<p>Chisel memories also support write masks for subword writes. Chisel will infer masks if the data type of the memory is a vector. To infer a mask, specify the <code class="highlighter-rouge">mask</code> argument of the <code class="highlighter-rouge">write</code> function which creates write ports. A given masked length is written if the corresponding mask bit is set. For example, in the example below, if the 0th bit of mask is true, it will write the lower 8 bits of the corresponding address.</p>
+<p>Chisel memories also support write masks for subword writes. Chisel will infer masks if the data type of the memory is a vector. To infer a mask, specify the <code class="highlighter-rouge">mask</code> argument of the <code class="highlighter-rouge">write</code> function which creates write ports. A given masked length is written if the corresponding mask bit is set. For example, in the example below, if the 0th bit of mask is true, it will write the lower byte of the data at corresponding address.</p>
 
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">dataOut</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="nc">Vec</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">)))</span>
-<span class="k">val</span> <span class="nv">dataIn</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="nc">Vec</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">)))</span>
-<span class="k">val</span> <span class="nv">mask</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="nc">Vec</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="nc">Bool</span><span class="o">()))</span>
-<span class="k">val</span> <span class="nv">enable</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
-<span class="k">val</span> <span class="nv">readAddr</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">10.</span><span class="n">W</span><span class="o">))</span>
-<span class="k">val</span> <span class="nv">writeAddr</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">10.</span><span class="n">W</span><span class="o">))</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3._</span>
+<span class="k">class</span> <span class="nc">MaskedReadWriteSmem</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">width</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">8</span>
+  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="nv">enable</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+    <span class="k">val</span> <span class="nv">write</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+    <span class="k">val</span> <span class="nv">addr</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">10.</span><span class="n">W</span><span class="o">))</span>
+    <span class="k">val</span> <span class="nv">mask</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Vec</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="nc">Bool</span><span class="o">()))</span>
+    <span class="k">val</span> <span class="nv">dataIn</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Vec</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">(</span><span class="nv">width</span><span class="o">.</span><span class="py">W</span><span class="o">)))</span>
+    <span class="k">val</span> <span class="nv">dataOut</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">Vec</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">(</span><span class="nv">width</span><span class="o">.</span><span class="py">W</span><span class="o">)))</span>
+  <span class="o">})</span>
 
-<span class="c1">// ... assign values ...</span>
-
-<span class="c1">// Create a 32-bit wide memory that is byte-masked.</span>
-<span class="k">val</span> <span class="nv">mem</span> <span class="k">=</span> <span class="nc">SyncReadMem</span><span class="o">(</span><span class="mi">1024</span><span class="o">,</span> <span class="nc">Vec</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">)))</span>
-<span class="c1">// Create one masked write port and one read port.</span>
-<span class="nv">mem</span><span class="o">.</span><span class="py">write</span><span class="o">(</span><span class="n">writeAddr</span><span class="o">,</span> <span class="n">dataIn</span><span class="o">,</span> <span class="n">mask</span><span class="o">)</span>
-<span class="n">dataOut</span> <span class="o">:=</span> <span class="nv">mem</span><span class="o">.</span><span class="py">read</span><span class="o">(</span><span class="n">readAddr</span><span class="o">,</span> <span class="n">enable</span><span class="o">)</span>
+  <span class="c1">// Create a 32-bit wide memory that is byte-masked</span>
+  <span class="k">val</span> <span class="nv">mem</span> <span class="k">=</span> <span class="nc">SyncReadMem</span><span class="o">(</span><span class="mi">1024</span><span class="o">,</span> <span class="nc">Vec</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">(</span><span class="nv">width</span><span class="o">.</span><span class="py">W</span><span class="o">)))</span>
+  <span class="c1">// Write with mask</span>
+  <span class="nv">mem</span><span class="o">.</span><span class="py">write</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">addr</span><span class="o">,</span> <span class="nv">io</span><span class="o">.</span><span class="py">dataIn</span><span class="o">,</span> <span class="nv">io</span><span class="o">.</span><span class="py">mask</span><span class="o">)</span>
+  <span class="nv">io</span><span class="o">.</span><span class="py">dataOut</span> <span class="o">:=</span> <span class="nv">mem</span><span class="o">.</span><span class="py">read</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">addr</span><span class="o">,</span> <span class="nv">io</span><span class="o">.</span><span class="py">enable</span><span class="o">)</span>
+<span class="o">}</span>
 </code></pre></div></div>
 
 <p>Here is an example of masks with readwrite ports:</p>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3._</span>
-<span class="c1">// Chisel Code: Declare a new module definition</span>
-<span class="k">class</span> <span class="nc">ReadWriteSMEMWithMask</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
+<span class="k">class</span> <span class="nc">MaskedRWSmem</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">width</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">32</span>
   <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
     <span class="k">val</span> <span class="nv">enable</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
@@ -137,9 +151,7 @@ undefined.</p>
     <span class="k">val</span> <span class="nv">dataOut</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">Vec</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">(</span><span class="nv">width</span><span class="o">.</span><span class="py">W</span><span class="o">)))</span>
   <span class="o">})</span>
 
-
-  <span class="k">val</span> <span class="nv">mem</span> <span class="k">=</span> <span class="nc">SyncReadMem</span><span class="o">(</span><span class="mi">2048</span><span class="o">,</span> <span class="nc">Vec</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">)))</span>
-
+  <span class="k">val</span> <span class="nv">mem</span> <span class="k">=</span> <span class="nc">SyncReadMem</span><span class="o">(</span><span class="mi">1024</span><span class="o">,</span> <span class="nc">Vec</span><span class="o">(</span><span class="mi">2</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">(</span><span class="nv">width</span><span class="o">.</span><span class="py">W</span><span class="o">)))</span>
   <span class="nv">io</span><span class="o">.</span><span class="py">dataOut</span> <span class="o">:=</span> <span class="nc">DontCare</span>
   <span class="nf">when</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">enable</span><span class="o">)</span> <span class="o">{</span>
     <span class="k">val</span> <span class="nv">rdwrPort</span> <span class="k">=</span> <span class="nf">mem</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">addr</span><span class="o">)</span>
