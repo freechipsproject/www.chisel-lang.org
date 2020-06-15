@@ -9,125 +9,18 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 ga('create', 'UA-145179088-1' , 'auto');
 ga('send', 'pageview');
-      </script></head><body class="docs"><div id="wrapper"><div id="sidebar-wrapper"><ul id="sidebar" class="sidebar-nav"><li class="sidebar-brand"><a href="/" class="brand"><div class="brand-wrapper"><span>Chisel/FIRRTL</span></div></a></li>                                 <li><a href="/treadle/" class=" active ">Treadle</a></li> <li><a href="/api/treadle/latest/" class="">API Documentation</a> <ul class="sub_section"> <li><a href="/api/treadle/SNAPSHOT/" class="">SNAPSHOT</a></li> <li><a href="/api/treadle/1.2.0/" class="">1.2.0</a></li> <li><a href="/api/treadle/1.1.4/" class="">1.1.4</a></li> <li><a href="/api/treadle/1.1.3/" class="">1.1.3</a></li> <li><a href="/api/treadle/1.1.2/" class="">1.1.2</a></li> <li><a href="/api/treadle/1.1.1/" class="">1.1.1</a></li> <li><a href="/api/treadle/1.1.0/" class="">1.1.0</a></li> <li><a href="/api/treadle/1.0.5/" class="">1.0.5</a></li> <li><a href="/api/treadle/1.0.4/" class="">1.0.4</a></li> <li><a href="/api/treadle/1.0.3/" class="">1.0.3</a></li> <li><a href="/api/treadle/1.0.2/" class="">1.0.2</a></li> <li><a href="/api/treadle/1.0.1/" class="">1.0.1</a></li> <li><a href="/api/treadle/1.0.0/" class="">1.0.0</a></li></ul></li>  </ul></div><div id="page-content-wrapper"><div class="nav"><div class="container-fluid"><div class="row"><div class="col-lg-12"><div class="action-menu pull-left clearfix"><a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></a></div><ul class="pull-right"></ul></div></div></div></div><div id="content" data-github-owner="freechipsproject" data-github-repo="chisel3"><div class="content-wrapper"><section><h1 id="treadle--a-chiselfirrtl-execution-engine">Treadle – A Chisel/Firrtl Execution Engine</h1>
+      </script></head><body class="docs"><div id="wrapper"><div id="sidebar-wrapper"><ul id="sidebar" class="sidebar-nav"><li class="sidebar-brand"><a href="/" class="brand"><div class="brand-wrapper"><span>Chisel/FIRRTL</span></div></a></li>                                 <li><a href="/treadle/" class=" active ">Treadle</a></li> <li><a href="/treadle/HowItWorks.html" class="">How it works</a></li> <li><a href="/treadle/TreadleRepl.html" class="">TreadleRepl</a></li> <li><a href="/api/treadle/latest/" class="">API Documentation</a> <ul class="sub_section"> <li><a href="/api/treadle/SNAPSHOT/" class="">SNAPSHOT</a></li> <li><a href="/api/treadle/1.2.0/" class="">1.2.0</a></li> <li><a href="/api/treadle/1.1.4/" class="">1.1.4</a></li> <li><a href="/api/treadle/1.1.3/" class="">1.1.3</a></li> <li><a href="/api/treadle/1.1.2/" class="">1.1.2</a></li> <li><a href="/api/treadle/1.1.1/" class="">1.1.1</a></li> <li><a href="/api/treadle/1.1.0/" class="">1.1.0</a></li> <li><a href="/api/treadle/1.0.5/" class="">1.0.5</a></li> <li><a href="/api/treadle/1.0.4/" class="">1.0.4</a></li> <li><a href="/api/treadle/1.0.3/" class="">1.0.3</a></li> <li><a href="/api/treadle/1.0.2/" class="">1.0.2</a></li> <li><a href="/api/treadle/1.0.1/" class="">1.0.1</a></li> <li><a href="/api/treadle/1.0.0/" class="">1.0.0</a></li></ul></li>  </ul></div><div id="page-content-wrapper"><div class="nav"><div class="container-fluid"><div class="row"><div class="col-lg-12"><div class="action-menu pull-left clearfix"><a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></a></div><ul class="pull-right"></ul></div></div></div></div><div id="content" data-github-owner="freechipsproject" data-github-repo="chisel3"><div class="content-wrapper"><section><h2 id="what-is-the-treadle">What is the Treadle</h2>
 
-<p><strong>Treadle</strong> is an experimental circuit simulator that executes low Firrtl IR.
-It is based on earlier work on the <a href="https://github.com/freechipsproject/firrtl-interpreter">firrtl_interpreter</a>
-It will be one of the standard back-ends available as part of
-the <a href="https://github.com/ucb-bar/chisel-testers.git">chisel-testers</a> project, 
-and thus one of the tools in the
-<a href="https://github.com/freechipsproject">freechipsproject/chisel3</a> hardware synthesis toolbox. 
-This project provides a test harness supporting a peek, poke expect model.<br />
-It also provides a interactive simulator shell or repl (see treadle.sh) that allows fine grained incremental
-execution of a circuit. 
-In combination with a scala debugger such as Eclipse or IntelliJ it can be a very power way of analyzing problematic
-behavior.</p>
+<p>Treadle is a hardware circuit simulator that takes its circuit description directly from FIRRTL.
+It is based on earlier work done in the
+<a href="https://github.com/freechipsproject/firrtl-interpreter">FirrtlInterpreter</a>.
+Treadle is most commonly used as a backend for ChiselTest and ChiselTesters unit tests framework.
+It supports a Peek, Poke, Expect, Step interface.
+Treadle can be quite a bit slower for very large circuits but it spins up much faster than
+other backends so for unit tests of small to medium circuits it generally runs considerably faster.</p>
 
-<p><a href="https://github.com/ucb-bar/chisel3.git">Chisel3</a> is a high-level functional circuit generator. It produces <strong>Flexible Intermediate
-Representation for RTL</strong> or <strong>FIRRTL</strong>.  The <a href="https://github.com/ucb-bar/firrtl.git">Firrtl</a> project parses and
-transforms firrtl.  It also provides mechanisms for emitting verilog, for processing by downstream toolchains.
-<strong>Treadle</strong> parses and execute the LoFirrtl subset of Firrtl. <strong>Treadle</strong> has a short spin up time and is close to 
-the performance of verilator simulations.
-It can useful for a initial debugging of Chisel circuits and is also used for other forms of circuit analysis.</p>
-
-<h2 id="using-treadle">Using Treadle</h2>
-<h3 id="attach-it-to-your-project">Attach it to your project</h3>
-<p>If you are using the <a href="https://github.com/freechipsproject/chisel-testers">freechipsproject/chisel-testers</a> you will
-have access to <strong>Treadle</strong> through it’s dependency declarations.</p>
-
-<p>If chisel-testers is not part of your tool chain then you must add the dependency explicitly.
-To do so, in your project <code class="highlighter-rouge">build.sbt</code> add a dependency on</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>"edu.berkeley.cs" %% "treadle" % "1.1-SNAPSHOT"
-</code></pre></div></div>
-<p>There are a number of different ways to specify this dependency in the build.sbt file. If you have based your circuit on the 
-<a href="https://github.com/freechipsproject/chisel-template.git">Chisel-template</a> the addition should look like</p>
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">libraryDependencies</span> <span class="o">++=</span> <span class="nc">Seq</span><span class="o">(</span>
-  <span class="s">"edu.berkeley.cs"</span> <span class="o">%%</span> <span class="s">"chisel3"</span> <span class="o">%</span> <span class="n">chiselVersion</span><span class="o">,</span>
-  <span class="s">"edu.berkeley.cs"</span> <span class="o">%%</span> <span class="s">"chisel-iotesters"</span> <span class="o">%</span> <span class="s">"1.0"</span><span class="o">,</span>
-  <span class="s">"edu.berkeley.cs"</span> <span class="o">%%</span> <span class="s">"treadle"</span> <span class="o">%</span> <span class="s">"1.1-SNAPSHOT"</span><span class="o">,</span>
-  <span class="s">"org.scalatest"</span> <span class="o">%</span> <span class="s">"scalatest_2.11"</span> <span class="o">%</span> <span class="s">"2.2.4"</span><span class="o">,</span>
-  <span class="s">"org.scalacheck"</span> <span class="o">%%</span> <span class="s">"scalacheck"</span> <span class="o">%</span> <span class="s">"1.12.4"</span><span class="o">)</span>
-</code></pre></div></div>
-<p>for other usage consult <strong>sbt</strong> documentation</p>
-
-<h3 id="use-the-tester-metaphor">Use the Tester Metaphor</h3>
-<p>The easiest way to invoke the interpreter is through a test based harness. The InterpretiveTester is very similar to the chisel
-ClassicTester, it’s api consists of poke, peek and expect statements. Here is an example of a GCD Circuit</p>
-
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel._</span>
-<span class="k">import</span> <span class="nn">treadle.TreadleTester</span>
-<span class="k">import</span> <span class="nn">org.scalatest.</span><span class="o">{</span><span class="nc">Matchers</span><span class="o">,</span> <span class="nc">FlatSpec</span><span class="o">}</span>
-
-<span class="k">object</span> <span class="nc">GCDCalculator</span> <span class="o">{</span>
-  <span class="k">def</span> <span class="nf">computeGcd</span><span class="o">(</span><span class="n">a</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span><span class="k">:</span> <span class="o">(</span><span class="kt">Int</span><span class="o">,</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=</span> <span class="o">{</span>
-    <span class="k">var</span> <span class="n">x</span> <span class="k">=</span> <span class="n">a</span>
-    <span class="k">var</span> <span class="n">y</span> <span class="k">=</span> <span class="n">b</span>
-    <span class="k">var</span> <span class="n">depth</span> <span class="k">=</span> <span class="mi">1</span>
-    <span class="nf">while</span><span class="o">(</span><span class="n">y</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="o">)</span> <span class="o">{</span>
-      <span class="nf">if</span> <span class="o">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="o">)</span> <span class="o">{</span>
-        <span class="n">x</span> <span class="o">-=</span> <span class="n">y</span>
-      <span class="o">}</span>
-      <span class="k">else</span> <span class="o">{</span>
-        <span class="n">y</span> <span class="o">-=</span> <span class="n">x</span>
-      <span class="o">}</span>
-      <span class="n">depth</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="o">}</span>
-    <span class="o">(</span><span class="n">x</span><span class="o">,</span> <span class="n">depth</span><span class="o">)</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-
-<span class="k">class</span> <span class="nc">GCD</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
-    <span class="k">val</span> <span class="nv">a</span>  <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">16.</span><span class="n">W</span><span class="o">))</span>
-    <span class="k">val</span> <span class="nv">b</span>  <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">16.</span><span class="n">W</span><span class="o">)))</span>
-    <span class="k">val</span> <span class="nv">e</span>  <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
-    <span class="k">val</span> <span class="nv">z</span>  <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">16.</span><span class="n">W</span><span class="o">))</span>
-    <span class="k">val</span> <span class="nv">v</span>  <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
-  <span class="o">})</span>
-  <span class="k">val</span> <span class="nv">x</span>  <span class="k">=</span> <span class="nc">Reg</span><span class="o">(</span><span class="nc">UInt</span><span class="o">())</span>
-  <span class="k">val</span> <span class="nv">y</span>  <span class="k">=</span> <span class="nc">Reg</span><span class="o">(</span><span class="nc">UInt</span><span class="o">())</span>
-  <span class="nf">when</span><span class="o">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="o">)</span> <span class="o">{</span> <span class="n">x</span> <span class="o">:=</span> <span class="n">x</span> <span class="o">-</span> <span class="n">y</span> <span class="o">}</span>
-    <span class="o">.</span><span class="py">elsewhen</span><span class="o">(</span><span class="n">x</span> <span class="o">&lt;=</span> <span class="n">y</span><span class="o">)</span> <span class="o">{</span> <span class="n">y</span> <span class="o">:=</span> <span class="n">y</span> <span class="o">-</span> <span class="n">x</span> <span class="o">}</span>
-  <span class="nf">when</span> <span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">e</span><span class="o">)</span> <span class="o">{</span> <span class="n">x</span> <span class="o">:=</span> <span class="nv">io</span><span class="o">.</span><span class="py">a</span><span class="o">;</span> <span class="n">y</span> <span class="o">:=</span> <span class="nv">io</span><span class="o">.</span><span class="py">b</span> <span class="o">}</span>
-  <span class="nv">io</span><span class="o">.</span><span class="py">z</span> <span class="o">:=</span> <span class="n">x</span>
-  <span class="nv">io</span><span class="o">.</span><span class="py">v</span> <span class="o">:=</span> <span class="n">y</span> <span class="o">===</span> <span class="nc">UInt</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span>
-<span class="o">}</span>
-
-<span class="k">class</span> <span class="nc">TreadleUsageSpec</span> <span class="k">extends</span> <span class="nc">FlatSpec</span> <span class="k">with</span> <span class="nc">Matchers</span> <span class="o">{</span>
-
-  <span class="s">"GCD"</span> <span class="n">should</span> <span class="s">"return correct values for a range of inputs"</span> <span class="n">in</span> <span class="o">{</span>
-    <span class="k">val</span> <span class="nv">s</span> <span class="k">=</span> <span class="nv">Driver</span><span class="o">.</span><span class="py">emit</span><span class="o">(()</span> <span class="k">=&gt;</span> <span class="k">new</span> <span class="nc">GCD</span><span class="o">)</span>
-
-    <span class="k">val</span> <span class="nv">tester</span> <span class="k">=</span> <span class="nc">TreadleTester</span><span class="o">(</span><span class="n">s</span><span class="o">)</span>
-
-    <span class="k">for</span> <span class="o">{</span>
-      <span class="n">i</span> <span class="k">&lt;-</span> <span class="mi">1</span> <span class="n">to</span> <span class="mi">100</span>
-      <span class="n">j</span> <span class="k">&lt;-</span> <span class="mi">1</span> <span class="n">to</span> <span class="mi">100</span>
-    <span class="o">}</span> <span class="o">{</span>
-      <span class="nv">tester</span><span class="o">.</span><span class="py">poke</span><span class="o">(</span><span class="s">"io_a"</span><span class="o">,</span> <span class="n">i</span><span class="o">)</span>
-      <span class="nv">tester</span><span class="o">.</span><span class="py">poke</span><span class="o">(</span><span class="s">"io_b"</span><span class="o">,</span> <span class="n">j</span><span class="o">)</span>
-      <span class="nv">tester</span><span class="o">.</span><span class="py">poke</span><span class="o">(</span><span class="s">"io_e"</span><span class="o">,</span> <span class="mi">1</span><span class="o">)</span>
-      <span class="nv">tester</span><span class="o">.</span><span class="py">step</span><span class="o">()</span>
-      <span class="nv">tester</span><span class="o">.</span><span class="py">poke</span><span class="o">(</span><span class="s">"io_e"</span><span class="o">,</span> <span class="mi">0</span><span class="o">)</span>
-
-      <span class="k">var</span> <span class="n">cycles</span> <span class="k">=</span> <span class="mi">0</span>
-      <span class="nf">while</span> <span class="o">(</span><span class="nv">tester</span><span class="o">.</span><span class="py">peek</span><span class="o">(</span><span class="s">"io_v"</span><span class="o">)</span> <span class="o">!=</span> <span class="nc">BigInt</span><span class="o">(</span><span class="mi">1</span><span class="o">))</span> <span class="o">{</span>
-        <span class="nv">tester</span><span class="o">.</span><span class="py">step</span><span class="o">()</span>
-        <span class="n">cycles</span> <span class="o">+=</span> <span class="mi">1</span>
-      <span class="o">}</span>
-      <span class="nv">tester</span><span class="o">.</span><span class="py">expect</span><span class="o">(</span><span class="s">"io_z"</span><span class="o">,</span> <span class="nc">BigInt</span><span class="o">(</span><span class="nv">GCDCalculator</span><span class="o">.</span><span class="py">computeGcd</span><span class="o">(</span><span class="n">i</span><span class="o">,</span> <span class="n">j</span><span class="o">).</span><span class="py">_1</span><span class="o">))</span>
-      <span class="c1">// uncomment the println to see a lot of output</span>
-      <span class="c1">// println(f"GCD(${i}%3d, ${j}%3d) =&gt; ${interpretiveTester.peek("io_z")}%3d in $cycles%3d cycles")</span>
-    <span class="o">}</span>
-    <span class="nv">tester</span><span class="o">.</span><span class="py">report</span><span class="o">()</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<h3 id="about-ports-and-names">About ports and names</h3>
-<p>The firrtl transformations that result in LoFirrtl alter the names of ports.
-What would be io.a becomes io_a and so forth.</p>
-
+<p>Treadle also provides the <a href="TreadleRepl.html">TreadleRepl</a>, an interactive shell that provides
+execution and debugging commands.</p>
 </section></div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/highlight/highlight.pack.js"></script><script>hljs.configure({languages:['scala','java','bash']});
 hljs.initHighlighting();
               </script><script>((window.gitter = {}).chat = {}).options = {
