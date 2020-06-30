@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.3.0 - firrtl.annotations.transforms.EliminateTargetPaths</title>
-          <meta name="description" content="firrtl 1.3.0 - firrtl.annotations.transforms.EliminateTargetPaths" />
-          <meta name="keywords" content="firrtl 1.3.0 firrtl.annotations.transforms.EliminateTargetPaths" />
+          <title>firrtl 1.4-20200603-SNAPSHOT - firrtl.annotations.transforms.EliminateTargetPaths</title>
+          <meta name="description" content="firrtl 1.4 - 20200603 - SNAPSHOT - firrtl.annotations.transforms.EliminateTargetPaths" />
+          <meta name="keywords" content="firrtl 1.4 20200603 SNAPSHOT firrtl.annotations.transforms.EliminateTargetPaths" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.3.0</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.4-20200603-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -119,6 +119,10 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="firrtl.annotations">annotations</a></dd></dl></div>
     </li><li class="current-entities indented3">
                         <span class="separator"></span>
+                        <a class="class" href="DupedResult.html" title="Holds the mapping from original module to the new, duplicated modules The original module target is unaffected by renaming"></a>
+                        <a href="DupedResult.html" title="Holds the mapping from original module to the new, duplicated modules The original module target is unaffected by renaming">DupedResult</a>
+                      </li><li class="current-entities indented3">
+                        <a class="object" href="EliminateTargetPaths$.html" title=""></a>
                         <a class="class" href="" title="For a set of non-local targets, modify the instance/module hierarchy of the circuit such that the paths in each non-local target can be removed"></a>
                         <a href="" title="For a set of non-local targets, modify the instance/module hierarchy of the circuit such that the paths in each non-local target can be removed">EliminateTargetPaths</a>
                       </li><li class="current-entities indented3">
@@ -136,14 +140,16 @@
           <div id="content">
             <body class="class type">
       <div id="definition">
-        <div class="big-circle class">c</div>
+        <a href="EliminateTargetPaths$.html" title="See companion object"><div class="big-circle class-companion-object">c</div></a>
         <p id="owner"><a href="../../index.html" class="extype" name="firrtl">firrtl</a>.<a href="../index.html" class="extype" name="firrtl.annotations">annotations</a>.<a href="index.html" class="extype" name="firrtl.annotations.transforms">transforms</a></p>
-        <h1>EliminateTargetPaths<span class="permalink">
+        <h1><a href="EliminateTargetPaths$.html" title="See companion object">EliminateTargetPaths</a><span class="permalink">
       <a href="../../../firrtl/annotations/transforms/EliminateTargetPaths.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span></h1>
-        <h3><span class="morelinks"></span></h3>
+        <h3><span class="morelinks"><div>
+            Companion <a href="EliminateTargetPaths$.html" title="See companion object">object EliminateTargetPaths</a>
+          </div></span></h3>
       </div>
 
       <h4 id="signature" class="signature">
@@ -165,7 +171,7 @@ A/b:B/c:C -&gt; B_/c:C_
 A/b:B -&gt; A/b:B_
 B/x -&gt; (B/x, B_/x) // where x is any reference in B
 C/x -&gt; (C/x, C_/x) // where x is any reference in C
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.3.0/src/main/scala/firrtl/annotations/transforms/EliminateTargetPaths.scala" target="_blank">EliminateTargetPaths.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/master/src/main/scala/firrtl/annotations/transforms/EliminateTargetPaths.scala" target="_blank">EliminateTargetPaths.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -616,9 +622,9 @@ ordered Set.</p></span></dd></dl></div>
       <p class="shortcomment cmt">All transform that must run before this transform</p><div class="fullcomment"><div class="comment cmt"><p>All transform that must run before this transform</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.annotations.transforms.EliminateTargetPaths">EliminateTargetPaths</a> → <a href="../../DependencyAPIMigration.html" class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</a> → <a href="../../Transform.html" class="extype" name="firrtl.Transform">Transform</a> → <a href="../../options/DependencyAPI.html" class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</a></dd><dt>Note</dt><dd><span class="cmt"><p>The use of a Seq here is to preserve input order. Internally, this will be converted to a private,
 ordered Set.</p></span></dd></dl></div>
     </li><li name="firrtl.annotations.transforms.EliminateTargetPaths#run" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="run(cir:firrtl.ir.Circuit,targets:Seq[firrtl.annotations.IsMember]):(firrtl.ir.Circuit,firrtl.RenameMap)"></a><a id="run(Circuit,Seq[IsMember]):(Circuit,RenameMap)"></a>
+      <a id="run(cir:firrtl.ir.Circuit,targets:Seq[firrtl.annotations.IsMember],iGraph:firrtl.analyses.InstanceGraph):(firrtl.ir.Circuit,firrtl.RenameMap,firrtl.AnnotationSeq)"></a><a id="run(Circuit,Seq[IsMember],InstanceGraph):(Circuit,RenameMap,AnnotationSeq)"></a>
       <span class="permalink">
-      <a href="../../../firrtl/annotations/transforms/EliminateTargetPaths.html#run(cir:firrtl.ir.Circuit,targets:Seq[firrtl.annotations.IsMember]):(firrtl.ir.Circuit,firrtl.RenameMap)" title="Permalink">
+      <a href="../../../firrtl/annotations/transforms/EliminateTargetPaths.html#run(cir:firrtl.ir.Circuit,targets:Seq[firrtl.annotations.IsMember],iGraph:firrtl.analyses.InstanceGraph):(firrtl.ir.Circuit,firrtl.RenameMap,firrtl.AnnotationSeq)" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -627,7 +633,7 @@ ordered Set.</p></span></dd></dl></div>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">run</span><span class="params">(<span name="cir">cir: <a href="../../ir/Circuit.html" class="extype" name="firrtl.ir.Circuit">Circuit</a></span>, <span name="targets">targets: <span class="extype" name="scala.Seq">Seq</span>[<a href="../IsMember.html" class="extype" name="firrtl.annotations.IsMember">IsMember</a>]</span>)</span><span class="result">: (<a href="../../ir/Circuit.html" class="extype" name="firrtl.ir.Circuit">Circuit</a>, <a href="../../RenameMap.html" class="extype" name="firrtl.RenameMap">RenameMap</a>)</span>
+        <span class="name">run</span><span class="params">(<span name="cir">cir: <a href="../../ir/Circuit.html" class="extype" name="firrtl.ir.Circuit">Circuit</a></span>, <span name="targets">targets: <span class="extype" name="scala.Seq">Seq</span>[<a href="../IsMember.html" class="extype" name="firrtl.annotations.IsMember">IsMember</a>]</span>, <span name="iGraph">iGraph: <a href="../../analyses/InstanceGraph.html" class="extype" name="firrtl.analyses.InstanceGraph">InstanceGraph</a></span>)</span><span class="result">: (<a href="../../ir/Circuit.html" class="extype" name="firrtl.ir.Circuit">Circuit</a>, <a href="../../RenameMap.html" class="extype" name="firrtl.RenameMap">RenameMap</a>, <a href="../../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a>)</span>
       </span>
       
       <p class="shortcomment cmt">Returns a modified circuit and <a href="../../RenameMap.html" class="extype" name="firrtl.RenameMap">RenameMap</a> containing the associated target remapping</p>

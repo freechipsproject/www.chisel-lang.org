@@ -26,6 +26,7 @@
 - [`@edcote`](https://github.com/edcote)
 - [`@edwardcwang`](https://github.com/edwardcwang)
 - [`@ekiwi`](https://github.com/ekiwi)
+- [`@ekiwi-sifive`](https://github.com/ekiwi-sifive)
 - [`@felixonmars`](https://github.com/felixonmars)
 - [`@ferresb`](https://github.com/ferresb)
 - [`@grebe`](https://github.com/grebe)

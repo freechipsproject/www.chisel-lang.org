@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.3.0 - firrtl.annotations.ReferenceTarget</title>
-          <meta name="description" content="firrtl 1.3.0 - firrtl.annotations.ReferenceTarget" />
-          <meta name="keywords" content="firrtl 1.3.0 firrtl.annotations.ReferenceTarget" />
+          <title>firrtl 1.4-20200603-SNAPSHOT - firrtl.annotations.ReferenceTarget</title>
+          <meta name="description" content="firrtl 1.4 - 20200603 - SNAPSHOT - firrtl.annotations.ReferenceTarget" />
+          <meta name="keywords" content="firrtl 1.4 20200603 SNAPSHOT firrtl.annotations.ReferenceTarget" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.3.0</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.4-20200603-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -299,7 +299,7 @@
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Target pointing to a declared named component in a <a href="../ir/DefModule.html" class="extype" name="firrtl.ir.DefModule">firrtl.ir.DefModule</a>
 This includes: <a href="../ir/Port.html" class="extype" name="firrtl.ir.Port">firrtl.ir.Port</a>, <a href="../ir/DefWire.html" class="extype" name="firrtl.ir.DefWire">firrtl.ir.DefWire</a>, <a href="../ir/DefRegister.html" class="extype" name="firrtl.ir.DefRegister">firrtl.ir.DefRegister</a>, <a href="../ir/DefInstance.html" class="extype" name="firrtl.ir.DefInstance">firrtl.ir.DefInstance</a>,
-  <a href="../ir/DefMemory.html" class="extype" name="firrtl.ir.DefMemory">firrtl.ir.DefMemory</a>, <a href="../ir/DefNode.html" class="extype" name="firrtl.ir.DefNode">firrtl.ir.DefNode</a></p></div><dl class="paramcmts block"><dt class="param">circuit</dt><dd class="cmt"><p>Name of the encapsulating circuit</p></dd><dt class="param">module</dt><dd class="cmt"><p>Name of the root module of this reference</p></dd><dt class="param">path</dt><dd class="cmt"><p>Path through instance/ofModules</p></dd><dt class="param">ref</dt><dd class="cmt"><p>Name of component</p></dd><dt class="param">component</dt><dd class="cmt"><p>Subcomponent of this reference, e.g. field or index</p></dd></dl><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.3.0/src/main/scala/firrtl/annotations/Target.scala" target="_blank">Target.scala</a></dd></dl><div class="toggleContainer block">
+  <a href="../ir/DefMemory.html" class="extype" name="firrtl.ir.DefMemory">firrtl.ir.DefMemory</a>, <a href="../ir/DefNode.html" class="extype" name="firrtl.ir.DefNode">firrtl.ir.DefNode</a></p></div><dl class="paramcmts block"><dt class="param">circuit</dt><dd class="cmt"><p>Name of the encapsulating circuit</p></dd><dt class="param">module</dt><dd class="cmt"><p>Name of the root module of this reference</p></dd><dt class="param">path</dt><dd class="cmt"><p>Path through instance/ofModules</p></dd><dt class="param">ref</dt><dd class="cmt"><p>Name of component</p></dd><dt class="param">component</dt><dd class="cmt"><p>Subcomponent of this reference, e.g. field or index</p></dd></dl><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/master/src/main/scala/firrtl/annotations/Target.scala" target="_blank">Target.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -1152,6 +1152,22 @@ Example: Given root=A and instance=b, transforms (Top, B)/c:C -&gt; (Top, A)/b:B
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Converts this <a href="Target.html" class="extype" name="firrtl.annotations.Target">Target</a> into either a <a href="CircuitName.html" class="extype" name="firrtl.annotations.CircuitName">CircuitName</a>, <a href="ModuleName.html" class="extype" name="firrtl.annotations.ModuleName">ModuleName</a>, or <a href="ComponentName.html" class="extype" name="firrtl.annotations.ComponentName">ComponentName</a></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="IsComponent.html" class="extype" name="firrtl.annotations.IsComponent">IsComponent</a> → <a href="Target.html" class="extype" name="firrtl.annotations.Target">Target</a></dd></dl></div>
+    </li><li name="firrtl.annotations.CompleteTarget#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toString():String"></a>
+      <span class="permalink">
+      <a href="../../firrtl/annotations/ReferenceTarget.html#toString():String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="CompleteTarget.html" class="extype" name="firrtl.annotations.CompleteTarget">CompleteTarget</a> → AnyRef → Any</dd></dl></div>
     </li><li name="firrtl.annotations.CompleteTarget#toTarget" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toTarget:firrtl.annotations.CompleteTarget"></a><a id="toTarget:CompleteTarget"></a>
       <span class="permalink">

@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.3.0 - firrtl.transforms.DedupModules</title>
-          <meta name="description" content="firrtl 1.3.0 - firrtl.transforms.DedupModules" />
-          <meta name="keywords" content="firrtl 1.3.0 firrtl.transforms.DedupModules" />
+          <title>firrtl 1.4-20200603-SNAPSHOT - firrtl.transforms.DedupModules</title>
+          <meta name="description" content="firrtl 1.4 - 20200603 - SNAPSHOT - firrtl.transforms.DedupModules" />
+          <meta name="keywords" content="firrtl 1.4 20200603 SNAPSHOT firrtl.transforms.DedupModules" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.3.0</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.4-20200603-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -175,6 +175,10 @@
                         <a href="" title="Only use on legal Firrtl.">DedupModules</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
+                        <a class="class" href="DedupedResult.html" title="Holds the mapping from original module to the instances the original module pointed to The original module target is unaffected by renaming"></a>
+                        <a href="DedupedResult.html" title="Holds the mapping from original module to the instances the original module pointed to The original module target is unaffected by renaming">DedupedResult</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
                         <a class="object" href="DontCheckCombLoopsAnnotation$.html" title=""></a>
                         <a href="DontCheckCombLoopsAnnotation$.html" title="">DontCheckCombLoopsAnnotation</a>
                       </li><li class="current-entities indented2">
@@ -238,13 +242,17 @@
                         <a class="class" href="InlineCastsTransform.html" title="Inline nodes that are simple casts"></a>
                         <a href="InlineCastsTransform.html" title="Inline nodes that are simple casts">InlineCastsTransform</a>
                       </li><li class="current-entities indented2">
+                        <a class="object" href="LegalizeAndReductionsTransform$.html" title=""></a>
+                        <a class="class" href="LegalizeAndReductionsTransform.html" title="Turns andr for expression &gt; 64-bit into equality check with all ones"></a>
+                        <a href="LegalizeAndReductionsTransform.html" title="Turns andr for expression &gt; 64-bit into equality check with all ones">LegalizeAndReductionsTransform</a>
+                      </li><li class="current-entities indented2">
                         <a class="object" href="LegalizeClocksTransform$.html" title=""></a>
                         <a class="class" href="LegalizeClocksTransform.html" title="Ensure Clocks to be emitted are legal Verilog"></a>
                         <a href="LegalizeClocksTransform.html" title="Ensure Clocks to be emitted are legal Verilog">LegalizeClocksTransform</a>
                       </li><li class="current-entities indented2">
                         <a class="object" href="LogicNode$.html" title=""></a>
-                        <a class="class" href="LogicNode.html" title=""></a>
-                        <a href="LogicNode.html" title="">LogicNode</a>
+                        <a class="class" href="LogicNode.html" title="A case class that represents a net in the circuit."></a>
+                        <a href="LogicNode.html" title="A case class that represents a net in the circuit.">LogicNode</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="class" href="MaxCatLenAnnotation.html" title=""></a>
@@ -328,8 +336,19 @@
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Only use on legal Firrtl.</p><p>Specifically, the restriction of instance loops must have been checked, or else this pass can
- infinitely recurse
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.3.0/src/main/scala/firrtl/transforms/Dedup.scala" target="_blank">Dedup.scala</a></dd></dl><div class="toggleContainer block">
+infinitely recurse.</p><p>Deduped modules are renamed using a chain of 3 <a href="../RenameMap.html" class="extype" name="firrtl.RenameMap">RenameMap</a>s. The first
+<a href="../RenameMap.html" class="extype" name="firrtl.RenameMap">RenameMap</a> renames the original <a href="../annotations/ModuleTarget.html" class="extype" name="firrtl.annotations.ModuleTarget">annotations.ModuleTarget</a>s and relative
+<a href="../annotations/InstanceTarget.html" class="extype" name="firrtl.annotations.InstanceTarget">annotations.InstanceTarget</a>s to the groups of absolute <a href="../annotations/InstanceTarget.html" class="extype" name="firrtl.annotations.InstanceTarget">annotations.InstanceTarget</a>s that they
+target. These renames only affect instance names and paths and use the old
+module names. During this rename, modules will also have their instance
+names renamed if they dedup with a module that has different instance
+names.
+The second <a href="../RenameMap.html" class="extype" name="firrtl.RenameMap">RenameMap</a> renames all component names within modules that
+dedup with another module that has different component names.
+The third <a href="../RenameMap.html" class="extype" name="firrtl.RenameMap">RenameMap</a> renames original <a href="../annotations/ModuleTarget.html" class="extype" name="firrtl.annotations.ModuleTarget">annotations.ModuleTarget</a>s to their deduped
+<a href="../annotations/ModuleTarget.html" class="extype" name="firrtl.annotations.ModuleTarget">annotations.ModuleTarget</a>.</p><p>This transform will also emit <a href="DedupedResult.html" class="extype" name="firrtl.transforms.DedupedResult">DedupedResult</a> for deduped modules that
+only have one instance.
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/master/src/main/scala/firrtl/transforms/Dedup.scala" target="_blank">Dedup.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -774,9 +793,9 @@ once, you should use a <code>DependencyManager</code> with multiple targets.</p>
       <p class="shortcomment cmt">All transform that must run before this transform</p><div class="fullcomment"><div class="comment cmt"><p>All transform that must run before this transform</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.transforms.DedupModules">DedupModules</a> → <a href="../DependencyAPIMigration.html" class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</a> → <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> → <a href="../options/DependencyAPI.html" class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</a></dd><dt>Note</dt><dd><span class="cmt"><p>The use of a Seq here is to preserve input order. Internally, this will be converted to a private,
 ordered Set.</p></span></dd></dl></div>
     </li><li name="firrtl.transforms.DedupModules#run" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="run(c:firrtl.ir.Circuit,noDedups:Seq[String],annos:Seq[firrtl.annotations.Annotation]):(firrtl.ir.Circuit,firrtl.RenameMap)"></a><a id="run(Circuit,Seq[String],Seq[Annotation]):(Circuit,RenameMap)"></a>
+      <a id="run(c:firrtl.ir.Circuit,noDedups:Seq[String],previouslyDupedMap:Map[String,String]):(firrtl.ir.Circuit,firrtl.RenameMap,firrtl.AnnotationSeq)"></a><a id="run(Circuit,Seq[String],Map[String,String]):(Circuit,RenameMap,AnnotationSeq)"></a>
       <span class="permalink">
-      <a href="../../firrtl/transforms/DedupModules.html#run(c:firrtl.ir.Circuit,noDedups:Seq[String],annos:Seq[firrtl.annotations.Annotation]):(firrtl.ir.Circuit,firrtl.RenameMap)" title="Permalink">
+      <a href="../../firrtl/transforms/DedupModules.html#run(c:firrtl.ir.Circuit,noDedups:Seq[String],previouslyDupedMap:Map[String,String]):(firrtl.ir.Circuit,firrtl.RenameMap,firrtl.AnnotationSeq)" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -785,7 +804,7 @@ ordered Set.</p></span></dd></dl></div>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">run</span><span class="params">(<span name="c">c: <a href="../ir/Circuit.html" class="extype" name="firrtl.ir.Circuit">Circuit</a></span>, <span name="noDedups">noDedups: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="annos">annos: <span class="extype" name="scala.Seq">Seq</span>[<a href="../annotations/Annotation.html" class="extype" name="firrtl.annotations.Annotation">Annotation</a>]</span>)</span><span class="result">: (<a href="../ir/Circuit.html" class="extype" name="firrtl.ir.Circuit">Circuit</a>, <a href="../RenameMap.html" class="extype" name="firrtl.RenameMap">RenameMap</a>)</span>
+        <span class="name">run</span><span class="params">(<span name="c">c: <a href="../ir/Circuit.html" class="extype" name="firrtl.ir.Circuit">Circuit</a></span>, <span name="noDedups">noDedups: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="previouslyDupedMap">previouslyDupedMap: <span class="extype" name="scala.Predef.Map">Map</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: (<a href="../ir/Circuit.html" class="extype" name="firrtl.ir.Circuit">Circuit</a>, <a href="../RenameMap.html" class="extype" name="firrtl.RenameMap">RenameMap</a>, <a href="../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a>)</span>
       </span>
       
       <p class="shortcomment cmt">Deduplicates a circuit, and records renaming</p><div class="fullcomment"><div class="comment cmt"><p>Deduplicates a circuit, and records renaming</p></div><dl class="paramcmts block"><dt class="param">c</dt><dd class="cmt"><p>Circuit to dedup</p></dd><dt class="param">noDedups</dt><dd class="cmt"><p>Modules not to dedup</p></dd><dt>returns</dt><dd class="cmt"><p>Deduped Circuit and corresponding RenameMap</p></dd></dl></div>

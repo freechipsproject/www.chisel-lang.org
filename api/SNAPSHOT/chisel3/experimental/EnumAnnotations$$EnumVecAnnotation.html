@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.3.0 - chisel3.experimental.EnumAnnotations.EnumVecAnnotation</title>
-          <meta name="description" content="chisel3 3.3.0 - chisel3.experimental.EnumAnnotations.EnumVecAnnotation" />
-          <meta name="keywords" content="chisel3 3.3.0 chisel3.experimental.EnumAnnotations.EnumVecAnnotation" />
+          <title>chisel3 3.4-20200603-SNAPSHOT - chisel3.experimental.EnumAnnotations.EnumVecAnnotation</title>
+          <meta name="description" content="chisel3 3.4 - 20200603 - SNAPSHOT - chisel3.experimental.EnumAnnotations.EnumVecAnnotation" />
+          <meta name="keywords" content="chisel3 3.4 20200603 SNAPSHOT chisel3.experimental.EnumAnnotations.EnumVecAnnotation" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.3.0</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.4-20200603-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -170,7 +170,7 @@ non-experimental, you must explicitly import this package to use its contents.
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">EnumVecAnnotation</span><span class="params">(<span name="target">target: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.3.0/firrtl/annotations/Named.html#firrtl.annotations.Named" class="extype" name="firrtl.annotations.Named">Named</a></span>, <span name="typeName">typeName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="fields">fields: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>)</span><span class="result"> extends <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.3.0/firrtl/annotations/SingleTargetAnnotation.html#firrtl.annotations.SingleTargetAnnotation" class="extype" name="firrtl.annotations.SingleTargetAnnotation">SingleTargetAnnotation</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.3.0/firrtl/annotations/Named.html#firrtl.annotations.Named" class="extype" name="firrtl.annotations.Named">Named</a>] with <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <span class="name">EnumVecAnnotation</span><span class="params">(<span name="target">target: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4-20200603-SNAPSHOT/firrtl/annotations/Named.html#firrtl.annotations.Named" class="extype" name="firrtl.annotations.Named">Named</a></span>, <span name="typeName">typeName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="fields">fields: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>)</span><span class="result"> extends <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4-20200603-SNAPSHOT/firrtl/annotations/SingleTargetAnnotation.html#firrtl.annotations.SingleTargetAnnotation" class="extype" name="firrtl.annotations.SingleTargetAnnotation">SingleTargetAnnotation</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4-20200603-SNAPSHOT/firrtl/annotations/Named.html#firrtl.annotations.Named" class="extype" name="firrtl.annotations.Named">Named</a>] with <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       </h4>
 
@@ -182,11 +182,11 @@ non-experimental, you must explicitly import this package to use its contents.
   }
   <span class="kw">val</span> v = Vec(<span class="num">3</span>, MyEnum())
 }</pre><p>              Then, the <i>fields</i> parameter will be: <i>Seq(Seq(&quot;e&quot;), Seq(&quot;b&quot;, &quot;inner_e&quot;), Seq(&quot;v&quot;))</i>. Note that for any Vec that doesn't contain Bundles, this field will simply be an empty Seq.
-</p></div><dl class="paramcmts block"><dt class="param">target</dt><dd class="cmt"><p>the Vec being annotated</p></dd><dt class="param">typeName</dt><dd class="cmt"><p>the name of the enum's type (e.g. <i>&quot;mypackage.MyEnum&quot;</i>)</p></dd><dt class="param">fields</dt><dd class="cmt"><p>a list of all chains of elements leading from the Vec instance to its inner enum fields.</p></dd></dl><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.3.0//core/src/main/scala/chisel3/StrongEnum.scala" target="_blank">StrongEnum.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="paramcmts block"><dt class="param">target</dt><dd class="cmt"><p>the Vec being annotated</p></dd><dt class="param">typeName</dt><dd class="cmt"><p>the name of the enum's type (e.g. <i>&quot;mypackage.MyEnum&quot;</i>)</p></dd><dt class="param">fields</dt><dd class="cmt"><p>a list of all chains of elements leading from the Vec instance to its inner enum fields.</p></dd></dl><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/master//core/src/main/scala/chisel3/StrongEnum.scala" target="_blank">StrongEnum.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html#java.io.Serializable" class="extype" name="java.io.Serializable">Serializable</a>, <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.3.0/firrtl/annotations/SingleTargetAnnotation.html#firrtl.annotations.SingleTargetAnnotation" class="extype" name="firrtl.annotations.SingleTargetAnnotation">SingleTargetAnnotation</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.3.0/firrtl/annotations/Named.html#firrtl.annotations.Named" class="extype" name="firrtl.annotations.Named">Named</a>], <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.3.0/firrtl/annotations/Annotation.html#firrtl.annotations.Annotation" class="extype" name="firrtl.annotations.Annotation">Annotation</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/Equals.html#scala.Equals" class="extype" name="scala.Equals">Equals</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html#java.io.Serializable" class="extype" name="java.io.Serializable">Serializable</a>, <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4-20200603-SNAPSHOT/firrtl/annotations/SingleTargetAnnotation.html#firrtl.annotations.SingleTargetAnnotation" class="extype" name="firrtl.annotations.SingleTargetAnnotation">SingleTargetAnnotation</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4-20200603-SNAPSHOT/firrtl/annotations/Named.html#firrtl.annotations.Named" class="extype" name="firrtl.annotations.Named">Named</a>], <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4-20200603-SNAPSHOT/firrtl/annotations/Annotation.html#firrtl.annotations.Annotation" class="extype" name="firrtl.annotations.Annotation">Annotation</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/Equals.html#scala.Equals" class="extype" name="scala.Equals">Equals</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div></div>
         
 
@@ -244,7 +244,7 @@ non-experimental, you must explicitly import this package to use its contents.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">EnumVecAnnotation</span><span class="params">(<span name="target">target: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.3.0/firrtl/annotations/Named.html#firrtl.annotations.Named" class="extype" name="firrtl.annotations.Named">Named</a></span>, <span name="typeName">typeName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="fields">fields: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>)</span>
+        <span class="name">EnumVecAnnotation</span><span class="params">(<span name="target">target: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4-20200603-SNAPSHOT/firrtl/annotations/Named.html#firrtl.annotations.Named" class="extype" name="firrtl.annotations.Named">Named</a></span>, <span name="typeName">typeName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="fields">fields: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]]</span>)</span>
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">target</dt><dd class="cmt"><p>the Vec being annotated</p></dd><dt class="param">typeName</dt><dd class="cmt"><p>the name of the enum's type (e.g. <i>&quot;mypackage.MyEnum&quot;</i>)</p></dd><dt class="param">fields</dt><dd class="cmt"><p>a list of all chains of elements leading from the Vec instance to its inner enum fields.</p></dd></dl></div>
@@ -358,7 +358,7 @@ non-experimental, you must explicitly import this package to use its contents.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">duplicate</span><span class="params">(<span name="n">n: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.3.0/firrtl/annotations/Named.html#firrtl.annotations.Named" class="extype" name="firrtl.annotations.Named">Named</a></span>)</span><span class="result">: <a href="" class="extype" name="chisel3.experimental.EnumAnnotations.EnumVecAnnotation">EnumVecAnnotation</a></span>
+        <span class="name">duplicate</span><span class="params">(<span name="n">n: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4-20200603-SNAPSHOT/firrtl/annotations/Named.html#firrtl.annotations.Named" class="extype" name="firrtl.annotations.Named">Named</a></span>)</span><span class="result">: <a href="" class="extype" name="chisel3.experimental.EnumAnnotations.EnumVecAnnotation">EnumVecAnnotation</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="chisel3.experimental.EnumAnnotations.EnumVecAnnotation">EnumVecAnnotation</a> → SingleTargetAnnotation</dd></dl></div>
@@ -447,7 +447,7 @@ non-experimental, you must explicitly import this package to use its contents.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getTargets</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.3.0/firrtl/annotations/Target.html#firrtl.annotations.Target" class="extype" name="firrtl.annotations.Target">Target</a>]</span>
+        <span class="name">getTargets</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4-20200603-SNAPSHOT/firrtl/annotations/Target.html#firrtl.annotations.Target" class="extype" name="firrtl.annotations.Target">Target</a>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Annotation</dd></dl></div>
@@ -565,7 +565,7 @@ non-experimental, you must explicitly import this package to use its contents.
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">target</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.3.0/firrtl/annotations/Named.html#firrtl.annotations.Named" class="extype" name="firrtl.annotations.Named">Named</a></span>
+        <span class="name">target</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4-20200603-SNAPSHOT/firrtl/annotations/Named.html#firrtl.annotations.Named" class="extype" name="firrtl.annotations.Named">Named</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="chisel3.experimental.EnumAnnotations.EnumVecAnnotation">EnumVecAnnotation</a> → SingleTargetAnnotation</dd></dl></div>
@@ -597,7 +597,7 @@ non-experimental, you must explicitly import this package to use its contents.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">update</span><span class="params">(<span name="renames">renames: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.3.0/firrtl/RenameMap.html#firrtl.RenameMap" class="extype" name="firrtl.RenameMap">RenameMap</a></span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.3.0/firrtl/annotations/Annotation.html#firrtl.annotations.Annotation" class="extype" name="firrtl.annotations.Annotation">Annotation</a>]</span>
+        <span class="name">update</span><span class="params">(<span name="renames">renames: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4-20200603-SNAPSHOT/firrtl/RenameMap.html#firrtl.RenameMap" class="extype" name="firrtl.RenameMap">RenameMap</a></span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4-20200603-SNAPSHOT/firrtl/annotations/Annotation.html#firrtl.annotations.Annotation" class="extype" name="firrtl.annotations.Annotation">Annotation</a>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>SingleTargetAnnotation → Annotation</dd></dl></div>
@@ -684,9 +684,9 @@ non-experimental, you must explicitly import this package to use its contents.
             </div><div class="parent" name="java.io.Serializable">
               <h3>Inherited from <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html#java.io.Serializable" class="extype" name="java.io.Serializable">Serializable</a></h3>
             </div><div class="parent" name="firrtl.annotations.SingleTargetAnnotation">
-              <h3>Inherited from <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.3.0/firrtl/annotations/SingleTargetAnnotation.html#firrtl.annotations.SingleTargetAnnotation" class="extype" name="firrtl.annotations.SingleTargetAnnotation">SingleTargetAnnotation</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.3.0/firrtl/annotations/Named.html#firrtl.annotations.Named" class="extype" name="firrtl.annotations.Named">Named</a>]</h3>
+              <h3>Inherited from <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4-20200603-SNAPSHOT/firrtl/annotations/SingleTargetAnnotation.html#firrtl.annotations.SingleTargetAnnotation" class="extype" name="firrtl.annotations.SingleTargetAnnotation">SingleTargetAnnotation</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4-20200603-SNAPSHOT/firrtl/annotations/Named.html#firrtl.annotations.Named" class="extype" name="firrtl.annotations.Named">Named</a>]</h3>
             </div><div class="parent" name="firrtl.annotations.Annotation">
-              <h3>Inherited from <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.3.0/firrtl/annotations/Annotation.html#firrtl.annotations.Annotation" class="extype" name="firrtl.annotations.Annotation">Annotation</a></h3>
+              <h3>Inherited from <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4-20200603-SNAPSHOT/firrtl/annotations/Annotation.html#firrtl.annotations.Annotation" class="extype" name="firrtl.annotations.Annotation">Annotation</a></h3>
             </div><div class="parent" name="scala.Product">
               <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a></h3>
             </div><div class="parent" name="scala.Equals">

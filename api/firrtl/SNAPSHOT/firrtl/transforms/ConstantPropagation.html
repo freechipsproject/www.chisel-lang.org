@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.3.0 - firrtl.transforms.ConstantPropagation</title>
-          <meta name="description" content="firrtl 1.3.0 - firrtl.transforms.ConstantPropagation" />
-          <meta name="keywords" content="firrtl 1.3.0 firrtl.transforms.ConstantPropagation" />
+          <title>firrtl 1.4-20200603-SNAPSHOT - firrtl.transforms.ConstantPropagation</title>
+          <meta name="description" content="firrtl 1.4 - 20200603 - SNAPSHOT - firrtl.transforms.ConstantPropagation" />
+          <meta name="keywords" content="firrtl 1.4 20200603 SNAPSHOT firrtl.transforms.ConstantPropagation" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.3.0</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.4-20200603-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -175,6 +175,10 @@
                         <a href="DedupModules.html" title="Only use on legal Firrtl.">DedupModules</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
+                        <a class="class" href="DedupedResult.html" title="Holds the mapping from original module to the instances the original module pointed to The original module target is unaffected by renaming"></a>
+                        <a href="DedupedResult.html" title="Holds the mapping from original module to the instances the original module pointed to The original module target is unaffected by renaming">DedupedResult</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
                         <a class="object" href="DontCheckCombLoopsAnnotation$.html" title=""></a>
                         <a href="DontCheckCombLoopsAnnotation$.html" title="">DontCheckCombLoopsAnnotation</a>
                       </li><li class="current-entities indented2">
@@ -238,13 +242,17 @@
                         <a class="class" href="InlineCastsTransform.html" title="Inline nodes that are simple casts"></a>
                         <a href="InlineCastsTransform.html" title="Inline nodes that are simple casts">InlineCastsTransform</a>
                       </li><li class="current-entities indented2">
+                        <a class="object" href="LegalizeAndReductionsTransform$.html" title=""></a>
+                        <a class="class" href="LegalizeAndReductionsTransform.html" title="Turns andr for expression &gt; 64-bit into equality check with all ones"></a>
+                        <a href="LegalizeAndReductionsTransform.html" title="Turns andr for expression &gt; 64-bit into equality check with all ones">LegalizeAndReductionsTransform</a>
+                      </li><li class="current-entities indented2">
                         <a class="object" href="LegalizeClocksTransform$.html" title=""></a>
                         <a class="class" href="LegalizeClocksTransform.html" title="Ensure Clocks to be emitted are legal Verilog"></a>
                         <a href="LegalizeClocksTransform.html" title="Ensure Clocks to be emitted are legal Verilog">LegalizeClocksTransform</a>
                       </li><li class="current-entities indented2">
                         <a class="object" href="LogicNode$.html" title=""></a>
-                        <a class="class" href="LogicNode.html" title=""></a>
-                        <a href="LogicNode.html" title="">LogicNode</a>
+                        <a class="class" href="LogicNode.html" title="A case class that represents a net in the circuit."></a>
+                        <a href="LogicNode.html" title="A case class that represents a net in the circuit.">LogicNode</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="class" href="MaxCatLenAnnotation.html" title=""></a>
@@ -327,7 +335,7 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.3.0/src/main/scala/firrtl/transforms/ConstantPropagation.scala" target="_blank">ConstantPropagation.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/master/src/main/scala/firrtl/transforms/ConstantPropagation.scala" target="_blank">ConstantPropagation.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -430,6 +438,22 @@
       </span>
       
       
+    </li><li name="firrtl.transforms.ConstantPropagation.SimplifyReductionOp" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="SimplifyReductionOpextendsAnyRef"></a><a id="SimplifyReductionOp:SimplifyReductionOp"></a>
+      <span class="permalink">
+      <a href="../../firrtl/transforms/ConstantPropagation$SimplifyReductionOp.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="Interface for describing a simplification of a reduction primitive op" href="ConstantPropagation$SimplifyReductionOp.html"><span class="name">SimplifyReductionOp</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Interface for describing a simplification of a reduction primitive op</p>
     </li></ol>
             </div>
 
@@ -1043,6 +1067,22 @@ ordered Set.</p></span></dd></dl></div>
       </span>
       
       
+    </li><li name="firrtl.transforms.ConstantPropagation.FoldANDR" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FoldANDR"></a><a id="FoldANDR:FoldANDR"></a>
+      <span class="permalink">
+      <a href="../../firrtl/transforms/ConstantPropagation$FoldANDR$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ConstantPropagation$FoldANDR$.html"><span class="name">FoldANDR</span></a><span class="result"> extends <a href="ConstantPropagation$SimplifyReductionOp.html" class="extype" name="firrtl.transforms.ConstantPropagation.SimplifyReductionOp">SimplifyReductionOp</a></span>
+      </span>
+      
+      
     </li><li name="firrtl.transforms.ConstantPropagation.FoldEqual" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="FoldEqual"></a><a id="FoldEqual:FoldEqual"></a>
       <span class="permalink">
@@ -1091,6 +1131,22 @@ ordered Set.</p></span></dd></dl></div>
       </span>
       
       
+    </li><li name="firrtl.transforms.ConstantPropagation.FoldORR" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FoldORR"></a><a id="FoldORR:FoldORR"></a>
+      <span class="permalink">
+      <a href="../../firrtl/transforms/ConstantPropagation$FoldORR$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ConstantPropagation$FoldORR$.html"><span class="name">FoldORR</span></a><span class="result"> extends <a href="ConstantPropagation$SimplifyReductionOp.html" class="extype" name="firrtl.transforms.ConstantPropagation.SimplifyReductionOp">SimplifyReductionOp</a></span>
+      </span>
+      
+      
     </li><li name="firrtl.transforms.ConstantPropagation.FoldXOR" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="FoldXOR"></a><a id="FoldXOR:FoldXOR"></a>
       <span class="permalink">
@@ -1104,6 +1160,22 @@ ordered Set.</p></span></dd></dl></div>
       </span>
       <span class="symbol">
         <a title="" href="ConstantPropagation$FoldXOR$.html"><span class="name">FoldXOR</span></a><span class="result"> extends <a href="ConstantPropagation$FoldCommutativeOp.html" class="extype" name="firrtl.transforms.ConstantPropagation.FoldCommutativeOp">FoldCommutativeOp</a></span>
+      </span>
+      
+      
+    </li><li name="firrtl.transforms.ConstantPropagation.FoldXORR" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="FoldXORR"></a><a id="FoldXORR:FoldXORR"></a>
+      <span class="permalink">
+      <a href="../../firrtl/transforms/ConstantPropagation$FoldXORR$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ConstantPropagation$FoldXORR$.html"><span class="name">FoldXORR</span></a><span class="result"> extends <a href="ConstantPropagation$SimplifyReductionOp.html" class="extype" name="firrtl.transforms.ConstantPropagation.SimplifyReductionOp">SimplifyReductionOp</a></span>
       </span>
       
       

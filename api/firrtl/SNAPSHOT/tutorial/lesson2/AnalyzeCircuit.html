@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.3.0 - tutorial.lesson2.AnalyzeCircuit</title>
-          <meta name="description" content="firrtl 1.3.0 - tutorial.lesson2.AnalyzeCircuit" />
-          <meta name="keywords" content="firrtl 1.3.0 tutorial.lesson2.AnalyzeCircuit" />
+          <title>firrtl 1.4-20200603-SNAPSHOT - tutorial.lesson2.AnalyzeCircuit</title>
+          <meta name="description" content="firrtl 1.4 - 20200603 - SNAPSHOT - tutorial.lesson2.AnalyzeCircuit" />
+          <meta name="keywords" content="firrtl 1.4 20200603 SNAPSHOT tutorial.lesson2.AnalyzeCircuit" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.3.0</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.4-20200603-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -137,15 +137,13 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>AnalyzeCircuit Transform</p><p>Walks <a href="../../firrtl/ir/Circuit.html" class="extype" name="firrtl.ir.Circuit">firrtl.ir.Circuit</a>, and records the number of muxes and instances it finds, per module.</p><p>While the Firrtl parser emits a bare form of the IR (located in firrtl.ir._), it is often useful to have more
-information in these case classes. To do this, the Firrtl compiler has mirror &quot;working&quot; classes for the following IR
-nodes (which contain additional fields):</p><ul><li>DefInstance -&gt; WDefInstance</li><li>SubAccess -&gt; WSubAccess</li><li>SubIndex -&gt; WSubIndex</li><li>SubField -&gt; WSubField</li><li>Reference -&gt; WRef</li></ul><p>Take a look at <a href="../../firrtl/passes/ToWorkingIR$.html" class="extype" name="firrtl.passes.ToWorkingIR">ToWorkginIR</a> in
-<a href="https://github.com/freechipsproject/firrtl/tree/master/src/main/scala/firrtl/passes" target="_blank">src/main/scala/firrtl/passes/Passes.scala</a> to see how Firrtl IR nodes are replaced with working IR nodes.</p><p>Future lessons will explain the WIR's additional fields. For now, it is enough to know that the transform
-<a href="../../firrtl/ResolveAndCheck.html" class="extype" name="firrtl.ResolveAndCheck">firrtl.ResolveAndCheck</a> populates these fields, and checks the legality of the circuit. If your transform is
-creating new WIR nodes, use the following &quot;unknown&quot; values in the WIR node, and then call <a href="../../firrtl/ResolveAndCheck.html" class="extype" name="firrtl.ResolveAndCheck">firrtl.ResolveAndCheck</a>
-at the end of your transform:</p><ul><li>Kind -&gt; ExpKind</li><li>Flow -&gt; UnknownFlow</li><li>Type -&gt; UnknownType</li></ul><p>The following <a href="../../firrtl/CircuitForm.html" class="extype" name="firrtl.CircuitForm">firrtl.CircuitForm</a>s require WIR instead of IR nodes:</p><ul><li>HighForm</li><li>MidForm</li><li>LowForm</li></ul><p>See the following links for more detailed explanations:
-IR vs Working IR</p><ul><li>TODO(izraelevitz)
-</li></ul></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.3.0/src/main/scala/tutorial/lesson2-working-ir/AnalyzeCircuit.scala" target="_blank">AnalyzeCircuit.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>AnalyzeCircuit Transform</p><p>Walks <a href="../../firrtl/ir/Circuit.html" class="extype" name="firrtl.ir.Circuit">firrtl.ir.Circuit</a>, and records the number of muxes and instances it finds, per module.</p><p>While the Firrtl IR specification describes a written format, the AST nodes used internally by the
+implementation have additional &quot;analysis&quot; fields.</p><p>Take a look at <a href="../../firrtl/ir/Reference.html" class="extype" name="firrtl.ir.Reference">Reference</a> to see how a reference to a component name is
+augmented with relevant type, kind (memory, wire, etc), and flow information.</p><p>Future lessons will explain the IR's additional fields. For now, it is enough to know that declaring
+<a href="../../firrtl/stage/Forms$.html#Resolved:Seq[firrtl.stage.TransformManager.TransformDependency]" class="extmbr" name="firrtl.stage.Forms#Resolved">firrtl.stage.Forms.Resolved</a> as a prerequisite is a handy shorthand for ensuring that all of these
+fields will be populated with accurant information before your transform runs. If you create new IR
+nodes and do not wish to calculate the proper final values for all these fields, you can populate them
+with default 'unknown' values.</p><ul><li>Kind -&gt; ExpKind</li><li>Flow -&gt; UnknownFlow</li><li>Type -&gt; UnknownType</li></ul></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/master/src/main/scala/tutorial/lesson2-ir-fields/AnalyzeCircuit.scala" target="_blank">AnalyzeCircuit.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>

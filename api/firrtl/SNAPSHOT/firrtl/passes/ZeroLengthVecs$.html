@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.3.0 - firrtl.passes.ZeroLengthVecs</title>
-          <meta name="description" content="firrtl 1.3.0 - firrtl.passes.ZeroLengthVecs" />
-          <meta name="keywords" content="firrtl 1.3.0 firrtl.passes.ZeroLengthVecs" />
+          <title>firrtl 1.4-20200603-SNAPSHOT - firrtl.passes.ZeroLengthVecs</title>
+          <meta name="description" content="firrtl 1.4 - 20200603 - SNAPSHOT - firrtl.passes.ZeroLengthVecs" />
+          <meta name="keywords" content="firrtl 1.4 20200603 SNAPSHOT firrtl.passes.ZeroLengthVecs" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.3.0</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.4-20200603-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -382,7 +382,7 @@
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Handles dynamic accesses to zero-length vectors.
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.3.0/src/main/scala/firrtl/passes/ZeroLengthVecs.scala" target="_blank">ZeroLengthVecs.scala</a></dd><dt>Note</dt><dd><span class="cmt"><p>Removes assignments that use a zero-length vector as a sink</p></span>, <span class="cmt"><p>Removes signals resulting from accesses to a zero-length vector from attach groups</p></span>, <span class="cmt"><p>Removes attaches that become degenerate after zero-length-accessor removal</p></span>, <span class="cmt"><p>Replaces &quot;source&quot; references to elements of zero-length vectors with always-invalid validif</p></span></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/master/src/main/scala/firrtl/passes/ZeroLengthVecs.scala" target="_blank">ZeroLengthVecs.scala</a></dd><dt>Note</dt><dd><span class="cmt"><p>Removes assignments that use a zero-length vector as a sink</p></span>, <span class="cmt"><p>Removes signals resulting from accesses to a zero-length vector from attach groups</p></span>, <span class="cmt"><p>Removes attaches that become degenerate after zero-length-accessor removal</p></span>, <span class="cmt"><p>Replaces &quot;source&quot; references to elements of zero-length vectors with always-invalid validif</p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -791,9 +791,9 @@ Called by <a href="Pass.html#runTransform(state:firrtl.CircuitState):firrtl.Circ
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../DependencyAPIMigration.html" class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</a></dd></dl></div>
     </li><li name="firrtl.passes.ZeroLengthVecs#prerequisites" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="prerequisites:Seq[firrtl.options.Dependency[firrtl.passes.Passwithfirrtl.options.PreservesAll[firrtl.Transform]]]"></a><a id="prerequisites:Seq[Dependency[PasswithPreservesAll[Transform]]]"></a>
+      <a id="prerequisites:Seq[firrtl.options.Dependency[firrtl.passes.Pass]]"></a><a id="prerequisites:Seq[Dependency[Pass]]"></a>
       <span class="permalink">
-      <a href="../../firrtl/passes/ZeroLengthVecs$.html#prerequisites:Seq[firrtl.options.Dependency[firrtl.passes.Passwithfirrtl.options.PreservesAll[firrtl.Transform]]]" title="Permalink">
+      <a href="../../firrtl/passes/ZeroLengthVecs$.html#prerequisites:Seq[firrtl.options.Dependency[firrtl.passes.Pass]]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -802,7 +802,7 @@ Called by <a href="Pass.html#runTransform(state:firrtl.CircuitState):firrtl.Circ
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">prerequisites</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/collection/Seq.html#scala.collection.Seq" class="extype" name="scala.collection.Seq">Seq</a>[<a href="../options/Dependency.html" class="extype" name="firrtl.options.Dependency">Dependency</a>[<a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a> with <a href="../options/PreservesAll.html" class="extype" name="firrtl.options.PreservesAll">PreservesAll</a>[<a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a>]]]</span>
+        <span class="name">prerequisites</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/collection/Seq.html#scala.collection.Seq" class="extype" name="scala.collection.Seq">Seq</a>[<a href="../options/Dependency.html" class="extype" name="firrtl.options.Dependency">Dependency</a>[<a href="Pass.html" class="extype" name="firrtl.passes.Pass">Pass</a>]]</span>
       </span>
       
       <p class="shortcomment cmt">All transform that must run before this transform</p><div class="fullcomment"><div class="comment cmt"><p>All transform that must run before this transform</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.passes.ZeroLengthVecs">ZeroLengthVecs</a> → <a href="../DependencyAPIMigration.html" class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</a> → <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> → <a href="../options/DependencyAPI.html" class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</a></dd><dt>Note</dt><dd><span class="cmt"><p>The use of a Seq here is to preserve input order. Internally, this will be converted to a private,

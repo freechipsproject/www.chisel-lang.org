@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.3.0 - firrtl.passes.LowerTypes</title>
-          <meta name="description" content="firrtl 1.3.0 - firrtl.passes.LowerTypes" />
-          <meta name="keywords" content="firrtl 1.3.0 firrtl.passes.LowerTypes" />
+          <title>firrtl 1.4-20200603-SNAPSHOT - firrtl.passes.LowerTypes</title>
+          <meta name="description" content="firrtl 1.4 - 20200603 - SNAPSHOT - firrtl.passes.LowerTypes" />
+          <meta name="keywords" content="firrtl 1.4 20200603 SNAPSHOT firrtl.passes.LowerTypes" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.3.0</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.4-20200603-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -382,7 +382,7 @@
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Removes all aggregate types from a <a href="../ir/Circuit.html" class="extype" name="firrtl.ir.Circuit">firrtl.ir.Circuit</a>
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.3.0/src/main/scala/firrtl/passes/LowerTypes.scala" target="_blank">LowerTypes.scala</a></dd><div class="block">Example:
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/master/src/main/scala/firrtl/passes/LowerTypes.scala" target="_blank">LowerTypes.scala</a></dd><div class="block">Example:
                <ol><li class="cmt"><p></p><pre>wire foo : { a : UInt&lt;<span class="num">32</span>&gt;, b : UInt&lt;<span class="num">16</span>&gt; }</pre><p> lowers to</p><pre>wire foo_a : UInt&lt;<span class="num">32</span>&gt;
 wire foo_b : UInt&lt;<span class="num">16</span>&gt;</pre></li></ol>
             </div><dt>Note</dt><dd><span class="cmt"><p>Assumes <a href="../ir/SubAccess.html" class="extype" name="firrtl.ir.SubAccess">firrtl.ir.SubAccess</a>es have been removed</p></span>, <span class="cmt"><p>Assumes <a href="../ir/Connect.html" class="extype" name="firrtl.ir.Connect">firrtl.ir.Connect</a>s and <a href="../ir/IsInvalid.html" class="extype" name="firrtl.ir.IsInvalid">firrtl.ir.IsInvalid</a>s only operate on <a href="../ir/Expression.html" class="extype" name="firrtl.ir.Expression">firrtl.ir.Expression</a>s of ground type</p></span></dd></dl><div class="toggleContainer block">
@@ -823,7 +823,7 @@ effects of the *other* transform (parameter <code>a</code>).</p></div><dl class=
         <span class="name">loweredName</span><span class="params">(<span name="e">e: <a href="../ir/Expression.html" class="extype" name="firrtl.ir.Expression">Expression</a></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       
-      <p class="shortcomment cmt">Expands a chain of referential <a href="../ir/Expression.html" class="extype" name="firrtl.ir.Expression">firrtl.ir.Expression</a>s into the equivalent lowered name</p><div class="fullcomment"><div class="comment cmt"><p>Expands a chain of referential <a href="../ir/Expression.html" class="extype" name="firrtl.ir.Expression">firrtl.ir.Expression</a>s into the equivalent lowered name</p></div><dl class="paramcmts block"><dt class="param">e</dt><dd class="cmt"><p><a href="../ir/Expression.html" class="extype" name="firrtl.ir.Expression">firrtl.ir.Expression</a> made up of _only_ <a href="../WRef.html" class="extype" name="firrtl.WRef">firrtl.WRef</a>, <a href="../WSubField.html" class="extype" name="firrtl.WSubField">firrtl.WSubField</a>, and <a href="../WSubIndex.html" class="extype" name="firrtl.WSubIndex">firrtl.WSubIndex</a></p></dd><dt>returns</dt><dd class="cmt"><p>Lowered name of e</p></dd></dl></div>
+      <p class="shortcomment cmt">Expands a chain of referential <a href="../ir/Expression.html" class="extype" name="firrtl.ir.Expression">firrtl.ir.Expression</a>s into the equivalent lowered name</p><div class="fullcomment"><div class="comment cmt"><p>Expands a chain of referential <a href="../ir/Expression.html" class="extype" name="firrtl.ir.Expression">firrtl.ir.Expression</a>s into the equivalent lowered name</p></div><dl class="paramcmts block"><dt class="param">e</dt><dd class="cmt"><p><a href="../ir/Expression.html" class="extype" name="firrtl.ir.Expression">firrtl.ir.Expression</a> made up of _only_ <a href="../index.html#WRef=firrtl.ir.Reference" class="extmbr" name="firrtl.WRef">firrtl.WRef</a>, <a href="../index.html#WSubField=firrtl.ir.SubField" class="extmbr" name="firrtl.WSubField">firrtl.WSubField</a>, and <a href="../index.html#WSubIndex=firrtl.ir.SubIndex" class="extmbr" name="firrtl.WSubIndex">firrtl.WSubIndex</a></p></dd><dt>returns</dt><dd class="cmt"><p>Lowered name of e</p></dd></dl></div>
     </li><li name="firrtl.Transform#name" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="name:String"></a>
       <span class="permalink">

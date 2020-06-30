@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.3.0 - firrtl.ir.Reference</title>
-          <meta name="description" content="firrtl 1.3.0 - firrtl.ir.Reference" />
-          <meta name="keywords" content="firrtl 1.3.0 firrtl.ir.Reference" />
+          <title>firrtl 1.4-20200603-SNAPSHOT - firrtl.ir.Reference</title>
+          <meta name="description" content="firrtl 1.4 - 20200603 - SNAPSHOT - firrtl.ir.Reference" />
+          <meta name="keywords" content="firrtl 1.4 20200603 SNAPSHOT firrtl.ir.Reference" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.3.0</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.4-20200603-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -158,7 +158,7 @@
                         <a class="class" href="Connect.html" title=""></a>
                         <a href="Connect.html" title="">Connect</a>
                       </li><li class="current-entities indented2">
-                        <span class="separator"></span>
+                        <a class="object" href="DefInstance$.html" title=""></a>
                         <a class="class" href="DefInstance.html" title=""></a>
                         <a href="DefInstance.html" title="">DefInstance</a>
                       </li><li class="current-entities indented2">
@@ -338,7 +338,7 @@
                         <a class="object" href="ReadUnderWrite$.html" title=""></a>
                         <a href="ReadUnderWrite$.html" title="">ReadUnderWrite</a>
                       </li><li class="current-entities indented2">
-                        <span class="separator"></span>
+                        <a class="object" href="Reference$.html" title=""></a>
                         <a class="class" href="" title=""></a>
                         <a href="" title="">Reference</a>
                       </li><li class="current-entities indented2">
@@ -432,14 +432,16 @@
           <div id="content">
             <body class="class type">
       <div id="definition">
-        <div class="big-circle class">c</div>
+        <a href="Reference$.html" title="See companion object"><div class="big-circle class-companion-object">c</div></a>
         <p id="owner"><a href="../index.html" class="extype" name="firrtl">firrtl</a>.<a href="index.html" class="extype" name="firrtl.ir">ir</a></p>
-        <h1>Reference<span class="permalink">
+        <h1><a href="Reference$.html" title="See companion object">Reference</a><span class="permalink">
       <a href="../../firrtl/ir/Reference.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span></h1>
-        <h3><span class="morelinks"></span></h3>
+        <h3><span class="morelinks"><div>
+            Companion <a href="Reference$.html" title="See companion object">object Reference</a>
+          </div></span></h3>
       </div>
 
       <h4 id="signature" class="signature">
@@ -448,12 +450,12 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">Reference</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="tpe">tpe: <a href="Type.html" class="extype" name="firrtl.ir.Type">Type</a></span>)</span><span class="result"> extends <a href="Expression.html" class="extype" name="firrtl.ir.Expression">Expression</a> with <a href="HasName.html" class="extype" name="firrtl.ir.HasName">HasName</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <span class="name">Reference</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="tpe">tpe: <a href="Type.html" class="extype" name="firrtl.ir.Type">Type</a> = <span class="symbol"><span class="name"><a href="UnknownType$.html">UnknownType</a></span></span></span>, <span name="kind">kind: <a href="../Kind.html" class="extype" name="firrtl.Kind">Kind</a> = <span class="symbol"><span class="name"><a href="../UnknownKind$.html">UnknownKind</a></span></span></span>, <span name="flow">flow: <a href="../Flow.html" class="extype" name="firrtl.Flow">Flow</a> = <span class="symbol"><span class="name"><a href="../UnknownFlow$.html">UnknownFlow</a></span></span></span>)</span><span class="result"> extends <a href="Expression.html" class="extype" name="firrtl.ir.Expression">Expression</a> with <a href="HasName.html" class="extype" name="firrtl.ir.HasName">HasName</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.3.0/src/main/scala/firrtl/ir/IR.scala" target="_blank">IR.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/master/src/main/scala/firrtl/ir/IR.scala" target="_blank">IR.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -504,9 +506,9 @@
         <div id="constructors" class="members">
               <h3>Instance Constructors</h3>
               <ol><li name="firrtl.ir.Reference#&lt;init&gt;" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="&lt;init&gt;(name:String,tpe:firrtl.ir.Type):firrtl.ir.Reference"></a><a id="&lt;init&gt;:Reference"></a>
+      <a id="&lt;init&gt;(name:String,tpe:firrtl.ir.Type,kind:firrtl.Kind,flow:firrtl.Flow):firrtl.ir.Reference"></a><a id="&lt;init&gt;:Reference"></a>
       <span class="permalink">
-      <a href="../../firrtl/ir/Reference.html#&lt;init&gt;(name:String,tpe:firrtl.ir.Type):firrtl.ir.Reference" title="Permalink">
+      <a href="../../firrtl/ir/Reference.html#&lt;init&gt;(name:String,tpe:firrtl.ir.Type,kind:firrtl.Kind,flow:firrtl.Flow):firrtl.ir.Reference" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -515,7 +517,7 @@
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Reference</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="tpe">tpe: <a href="Type.html" class="extype" name="firrtl.ir.Type">Type</a></span>)</span>
+        <span class="name">Reference</span><span class="params">(<span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="tpe">tpe: <a href="Type.html" class="extype" name="firrtl.ir.Type">Type</a> = <span class="symbol"><span class="name"><a href="UnknownType$.html">UnknownType</a></span></span></span>, <span name="kind">kind: <a href="../Kind.html" class="extype" name="firrtl.Kind">Kind</a> = <span class="symbol"><span class="name"><a href="../UnknownKind$.html">UnknownKind</a></span></span></span>, <span name="flow">flow: <a href="../Flow.html" class="extype" name="firrtl.Flow">Flow</a> = <span class="symbol"><span class="name"><a href="../UnknownFlow$.html">UnknownFlow</a></span></span></span>)</span>
       </span>
       
       
@@ -655,6 +657,22 @@
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="firrtl.ir.Reference#flow" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="flow:firrtl.Flow"></a><a id="flow:Flow"></a>
+      <span class="permalink">
+      <a href="../../firrtl/ir/Reference.html#flow:firrtl.Flow" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">flow</span><span class="result">: <a href="../Flow.html" class="extype" name="firrtl.Flow">Flow</a></span>
+      </span>
+      
+      
     </li><li name="firrtl.ir.Reference#foreachExpr" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="foreachExpr(f:firrtl.ir.Expression=&gt;Unit):Unit"></a><a id="foreachExpr((Expression)⇒Unit):Unit"></a>
       <span class="permalink">
@@ -738,6 +756,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="firrtl.ir.Reference#kind" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="kind:firrtl.Kind"></a><a id="kind:Kind"></a>
+      <span class="permalink">
+      <a href="../../firrtl/ir/Reference.html#kind:firrtl.Kind" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">kind</span><span class="result">: <a href="../Kind.html" class="extype" name="firrtl.Kind">Kind</a></span>
+      </span>
+      
+      
     </li><li name="firrtl.ir.Reference#mapExpr" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="mapExpr(f:firrtl.ir.Expression=&gt;firrtl.ir.Expression):firrtl.ir.Expression"></a><a id="mapExpr((Expression)⇒Expression):Expression"></a>
       <span class="permalink">

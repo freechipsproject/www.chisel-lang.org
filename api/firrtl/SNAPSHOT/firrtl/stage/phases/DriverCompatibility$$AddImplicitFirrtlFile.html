@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.3.0 - firrtl.stage.phases.DriverCompatibility.AddImplicitFirrtlFile</title>
-          <meta name="description" content="firrtl 1.3.0 - firrtl.stage.phases.DriverCompatibility.AddImplicitFirrtlFile" />
-          <meta name="keywords" content="firrtl 1.3.0 firrtl.stage.phases.DriverCompatibility.AddImplicitFirrtlFile" />
+          <title>firrtl 1.4-20200603-SNAPSHOT - firrtl.stage.phases.DriverCompatibility.AddImplicitFirrtlFile</title>
+          <meta name="description" content="firrtl 1.4 - 20200603 - SNAPSHOT - firrtl.stage.phases.DriverCompatibility.AddImplicitFirrtlFile" />
+          <meta name="keywords" content="firrtl 1.4 20200603 SNAPSHOT firrtl.stage.phases.DriverCompatibility.AddImplicitFirrtlFile" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.3.0</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.4-20200603-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -200,7 +200,7 @@ Otherwise, opt for more explicit specification by the user.
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Add a <a href="../FirrtlFileAnnotation.html" class="extype" name="firrtl.stage.FirrtlFileAnnotation">FirrtlFileAnnotation</a> if no annotation that explictly defines a circuit exists.</p><p>This takes the option with the following precedence:</p><ul><li>If an annotation subclassing <a href="../CircuitOption.html" class="extype" name="firrtl.stage.CircuitOption">CircuitOption</a> exists, do nothing</li><li>If a <a href="DriverCompatibility$$TopNameAnnotation.html" class="extype" name="firrtl.stage.phases.DriverCompatibility.TopNameAnnotation">TopNameAnnotation</a> exists, use that to derive a <a href="../FirrtlFileAnnotation.html" class="extype" name="firrtl.stage.FirrtlFileAnnotation">FirrtlFileAnnotation</a> and append it</li><li>Do nothing</li></ul><p>In the case of (3) above, this <a href="../../AnnotationSeq.html" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a> is likely insufficient for FIRRTL to work with (no circuit was
 passed). However, instead of catching this here, we rely on <a href="Checks.html" class="extype" name="firrtl.stage.phases.Checks">Checks</a> to validate the annotations.
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.3.0/src/main/scala/firrtl/stage/phases/DriverCompatibility.scala" target="_blank">DriverCompatibility.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/master/src/main/scala/firrtl/stage/phases/DriverCompatibility.scala" target="_blank">DriverCompatibility.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
