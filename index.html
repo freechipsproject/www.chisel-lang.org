@@ -16,7 +16,7 @@ Hardware Compiler Framework</h1><h2></h2><p class="text-center"><a href="https:/
 
 <h2 id="upcoming-events">Upcoming Events</h2>
 
-<p>Chisel/FIRRTL development meetings happen every Monday from 1100–1300 PT.</p>
+<p>Chisel/FIRRTL development meetings happen every Monday and Tuesday from 1100–1200 PT.</p>
 
 <p>Call-in info and meeting notes are available <a href="https://docs.google.com/document/d/1Mpnqigmx6F8jdC77YWP3akp9H2V1bS1b2XiYjVX0brE">here</a>.</p>
 
@@ -79,9 +79,22 @@ This generator methodology enables the creation of re-usable components and libr
 </code></pre></div></div>
 
 <p>and use and re-use them across designs:</p>
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">movingAverage3Filter</span> <span class="k">=</span> <span class="nc">FirFilter</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">,</span> <span class="nc">Seq</span><span class="o">(</span><span class="mf">1.</span><span class="n">U</span><span class="o">,</span> <span class="mf">1.</span><span class="n">U</span><span class="o">,</span> <span class="mf">1.</span><span class="n">U</span><span class="o">))</span>  <span class="c1">// same 3-point moving average filter as before</span>
-<span class="k">val</span> <span class="nv">delayFilter</span> <span class="k">=</span> <span class="nc">FirFilter</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">,</span> <span class="nc">Seq</span><span class="o">(</span><span class="mf">0.</span><span class="n">U</span><span class="o">,</span> <span class="mf">1.</span><span class="n">U</span><span class="o">))</span>  <span class="c1">// 1-cycle delay as a FIR filter</span>
-<span class="k">val</span> <span class="nv">triangleFilter</span> <span class="k">=</span> <span class="nc">FirFilter</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">,</span> <span class="nc">Seq</span><span class="o">(</span><span class="mf">1.</span><span class="n">U</span><span class="o">,</span> <span class="mf">2.</span><span class="n">U</span><span class="o">,</span> <span class="mf">3.</span><span class="n">U</span><span class="o">,</span> <span class="mf">2.</span><span class="n">U</span><span class="o">,</span> <span class="mf">1.</span><span class="n">U</span><span class="o">))</span>  <span class="c1">// 5-point FIR filter with a triangle impulse response</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">movingAverage3Filter</span> <span class="k">=</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">FirFilter</span><span class="o">(</span><span class="mi">8</span><span class="o">,</span> <span class="nc">Seq</span><span class="o">(</span><span class="mf">1.</span><span class="n">U</span><span class="o">,</span> <span class="mf">1.</span><span class="n">U</span><span class="o">,</span> <span class="mf">1.</span><span class="n">U</span><span class="o">)))</span>  <span class="c1">// same 3-point moving average filter as before</span>
+<span class="k">val</span> <span class="nv">delayFilter</span> <span class="k">=</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">FirFilter</span><span class="o">(</span><span class="mi">8</span><span class="o">,</span> <span class="nc">Seq</span><span class="o">(</span><span class="mf">0.</span><span class="n">U</span><span class="o">,</span> <span class="mf">1.</span><span class="n">U</span><span class="o">)))</span>  <span class="c1">// 1-cycle delay as a FIR filter</span>
+<span class="k">val</span> <span class="nv">triangleFilter</span> <span class="k">=</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">FirFilter</span><span class="o">(</span><span class="mi">8</span><span class="o">,</span> <span class="nc">Seq</span><span class="o">(</span><span class="mf">1.</span><span class="n">U</span><span class="o">,</span> <span class="mf">2.</span><span class="n">U</span><span class="o">,</span> <span class="mf">3.</span><span class="n">U</span><span class="o">,</span> <span class="mf">2.</span><span class="n">U</span><span class="o">,</span> <span class="mf">1.</span><span class="n">U</span><span class="o">)))</span>  <span class="c1">// 5-point FIR filter with a triangle impulse response</span>
+</code></pre></div></div>
+
+<p>The above can be converted to Verilog using <code class="highlighter-rouge">ChiselStage</code>:</p>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3.stage.</span><span class="o">{</span><span class="nc">ChiselStage</span><span class="o">,</span> <span class="nc">ChiselGeneratorAnnotation</span><span class="o">}</span>
+
+<span class="o">(</span><span class="k">new</span> <span class="nv">chisel3</span><span class="o">.</span><span class="py">stage</span><span class="o">.</span><span class="py">ChiselStage</span><span class="o">).</span><span class="py">execute</span><span class="o">(</span>
+  <span class="nc">Array</span><span class="o">(</span><span class="s">"-X"</span><span class="o">,</span> <span class="s">"verilog"</span><span class="o">),</span>
+  <span class="nc">Seq</span><span class="o">(</span><span class="nc">ChiselGeneratorAnnotation</span><span class="o">(()</span> <span class="k">=&gt;</span> <span class="k">new</span> <span class="nc">FirFilter</span><span class="o">(</span><span class="mi">8</span><span class="o">,</span> <span class="nc">Seq</span><span class="o">(</span><span class="mf">1.</span><span class="n">U</span><span class="o">,</span> <span class="mf">1.</span><span class="n">U</span><span class="o">,</span> <span class="mf">1.</span><span class="n">U</span><span class="o">)))))</span>
+</code></pre></div></div>
+
+<p>Alternatively, you may generate some Verilog directly for inspection:</p>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">verilogString</span> <span class="k">=</span> <span class="o">(</span><span class="k">new</span> <span class="nv">chisel3</span><span class="o">.</span><span class="py">stage</span><span class="o">.</span><span class="py">ChiselStage</span><span class="o">).</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">FirFilter</span><span class="o">(</span><span class="mi">8</span><span class="o">,</span> <span class="nc">Seq</span><span class="o">(</span><span class="mf">0.</span><span class="n">U</span><span class="o">,</span> <span class="mf">1.</span><span class="n">U</span><span class="o">)))</span>
+<span class="nf">println</span><span class="o">(</span><span class="n">verilogString</span><span class="o">)</span>
 </code></pre></div></div>
 
 <h2 id="getting-started">Getting Started</h2>
@@ -124,7 +137,7 @@ This generator methodology enables the creation of re-usable components and libr
   <li><a href="https://github.com/freechipsproject/chisel3/wiki"><strong>Wiki</strong></a>, which contains various feature-specific tutorials and frequently-asked questions.</li>
   <li><a href="https://www.chisel-lang.org/api/latest/chisel3/index.html"><strong>ScalaDoc</strong></a>, a listing, description, and examples of the functionality exposed by Chisel</li>
   <li><a href="https://gitter.im/freechipsproject/chisel3"><strong>Gitter</strong></a>, where you can ask questions or discuss anything Chisel</li>
-  <li><a href="https://www.chisel-lang.org"><strong>Website</strong></a></li>
+  <li><a href="https://www.chisel-lang.org"><strong>Website</strong></a> (<a href="https://github.com/freechipsproject/www.chisel-lang.org/">source</a>)</li>
 </ul>
 
 <p>If you are migrating from Chisel2, see <a href="https://www.chisel-lang.org/chisel3/chisel3-vs-chisel2.html">the migration guide</a>.</p>
@@ -194,7 +207,7 @@ Firrtl file for further processing.</li>
 contain commonly used interfaces and constructors (like <code class="highlighter-rouge">Decoupled</code>, which
 wraps a signal with a ready-valid pair) as well as fully parameterizable
 circuit generators (like arbiters and multiplexors).</li>
-  <li><strong>Driver utilities</strong>, <code class="highlighter-rouge">chisel3.Driver</code>, which contains compilation and test
+  <li><strong>Chisel Stage</strong>, <code class="highlighter-rouge">chisel3.stage.*</code>, which contains compilation and test
 functions that are invoked in the standard Verilog generation and simulation
 testing infrastructure. These can also be used as part of custom flows.</li>
 </ul>
