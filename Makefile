@@ -1,3 +1,4 @@
+baseDir ?= $(abspath .)
 buildDir ?= build
 subprojects = $(buildDir)/subprojects
 apis = $(buildDir)/api
@@ -171,7 +172,8 @@ api-copy = \
 	$(diagrammerTags:v%=docs/target/site/api/diagrammer/%/index.html) docs/target/site/api/diagrammer/SNAPSHOT/index.html \
 
 .PHONY: all clean mrproper publish serve \
-	apis-chisel apis-firrtl apis-chisel-testers apis-treadle apis-diagrammer apis-chiseltest
+	apis-chisel apis-firrtl apis-chisel-testers apis-treadle apis-diagrammer apis-chiseltest \
+	specs-firrtl
 .PRECIOUS: \
 	$(subprojects)/chisel3/%/.git $(subprojects)/chisel3/%/target/scala-$(scalaVersion)/unidoc/index.html \
 	$(subprojects)/firrtl/%/.git $(subprojects)/firrtl/%/target/scala-$(scalaVersion)/unidoc/index.html \
@@ -196,6 +198,9 @@ apis-chiseltest: $(chiseltestTags:%=$(apis)/chiseltest/%/index.html)
 apis-treadle: $(treadleTags:%=$(apis)/treadle/%/index.html) $(apis)/treadle/$(treadleSnapshot)/index.html
 apis-diagrammer: $(diagrammerTags:%=$(apis)/diagrammer/%/index.html) $(apis)/diagrammer/$(diagrammerSnapshot)/index.html
 
+# Targets to build FIRRTL specs
+specs-firrtl: $(firrtlTags:%=$(apis)/firrtl/%/spec.pdf) $(apis)/firrtl/$(firrtlSnapshot)/spec.pdf
+
 # Remove the output of all build targets
 clean:
 	rm -rf docs/target docs/src/main/tut/contributors.md
@@ -219,6 +224,16 @@ docs/target/site/index.html: build.sbt docs/src/main/tut/contributors.md $(www-s
 # Determine contributors
 docs/src/main/tut/contributors.md: build.sbt
 	sbt contributors/determineContributors
+
+# Copy the FIRRTL spec. This has the effect of only building the spec
+# if it wasn't already committed in a specific version of the
+# repository.
+$(apis)/firrtl/%/spec.pdf: $(subprojects)/firrtl/%/spec/spec.pdf | $(apis)/firrtl/%/
+	cp $< $@
+
+# Build the FIRRTL spec
+$(subprojects)/firrtl/%/spec/spec.pdf: $(subprojects)/firrtl/%/spec/spec.tex
+	(cd $(<D) && $(baseDir)/scripts/build-firrtl-spec.sh)
 
 # Copy built API into site
 docs/target/site/api/latest: docs/target/site/api/$(chiselLatest)/index.html
@@ -246,29 +261,29 @@ docs/target/site/api/chiseltest/latest: docs/target/site/api/chiseltest/$(chisel
 # use by the subproject/tag (e.g., 2.11 or 2.12) is a function of the
 # tag. Consequently, the rule searches for the expected output
 # directory and copies that.
-$(apis)/chisel3/%/index.html: $(subprojects)/chisel3/%/.git | $(apis)/chisel3/%/
+$(apis)/chisel3/%/index.html: | $(subprojects)/chisel3/%/.git $(apis)/chisel3/%/
 	(cd $(subprojects)/chisel3/$* && sbt unidoc)
 	find $(<D) -type d -name unidoc -exec cp -r '{}'/. $(@D) ';'
-$(apis)/firrtl/%/index.html: $(subprojects)/firrtl/%/.git | $(apis)/firrtl/%/
+$(apis)/firrtl/%/index.html: | $(subprojects)/firrtl/%/.git $(apis)/firrtl/%/
 	(cd $(subprojects)/firrtl/$* && sbt unidoc)
 	find $(<D) -type d -name unidoc -exec cp -r '{}'/. $(@D) ';'
-$(apis)/chisel-testers/%/index.html: $(subprojects)/chisel-testers/%/.git | $(apis)/chisel-testers/%/
+$(apis)/chisel-testers/%/index.html: | $(subprojects)/chisel-testers/%/.git $(apis)/chisel-testers/%/
 	(cd $(subprojects)/chisel-testers/$* && sbt doc)
 	find $(<D) -type d -name api -exec cp -r '{}'/. $(@D) ';'
-$(apis)/treadle/%/index.html: $(subprojects)/treadle/%/.git | $(apis)/treadle/%/
+$(apis)/treadle/%/index.html: | $(subprojects)/treadle/%/.git $(apis)/treadle/%/
 	(cd $(subprojects)/treadle/$* && sbt doc)
 	find $(<D) -type d -name api -exec cp -r '{}'/. $(@D) ';'
-$(apis)/diagrammer/%/index.html: $(subprojects)/diagrammer/%/.git | $(apis)/diagrammer/%/
+$(apis)/diagrammer/%/index.html: | $(subprojects)/diagrammer/%/.git $(apis)/diagrammer/%/
 	(cd $(subprojects)/diagrammer/$* && sbt doc)
 	find $(<D) -type d -name api -exec cp -r '{}'/. $(@D) ';'
-$(apis)/chiseltest/%/index.html: $(subprojects)/chiseltest/%/.git | $(apis)/chiseltest/%/
+$(apis)/chiseltest/%/index.html: | $(subprojects)/chiseltest/%/.git $(apis)/chiseltest/%/
 	(cd $(subprojects)/chiseltest/$* && sbt doc)
 	find $(<D) -type d -name api -exec cp -r '{}'/. $(@D) ';'
 
 # Copy *SNAPSHOT* API of subprojects into API directory
 docs/target/site/api/SNAPSHOT/index.html: $(apis)/chisel3/$(chiselSnapshot)/index.html | docs/target/site/api/SNAPSHOT/
 	cp -r $(<D)/. $(@D)
-docs/target/site/api/firrtl/SNAPSHOT/index.html: $(apis)/firrtl/$(firrtlSnapshot)/index.html | docs/target/site/api/firrtl/SNAPSHOT/
+docs/target/site/api/firrtl/SNAPSHOT/index.html: $(apis)/firrtl/$(firrtlSnapshot)/index.html $(apis)/firrtl/$(firrtlSnapshot)/spec.pdf | docs/target/site/api/firrtl/SNAPSHOT/
 	cp -r $(<D)/. $(@D)
 docs/target/site/api/chisel-testers/SNAPSHOT/index.html: $(apis)/chisel-testers/$(testersSnapshot)/index.html | docs/target/site/api/chisel-testers/SNAPSHOT/
 	cp -r $(<D)/. $(@D)
@@ -282,7 +297,7 @@ docs/target/site/api/chiseltest/SNAPSHOT/index.html: $(apis)/chiseltest/$(chisel
 # Copy *old* API of subprojects from API directory into website
 docs/target/site/api/%/index.html: $(apis)/chisel3/v%/index.html | docs/target/site/api/%/
 	cp -r $(<D)/. $(@D)
-docs/target/site/api/firrtl/%/index.html: $(apis)/firrtl/v%/index.html | docs/target/site/api/firrtl/%/
+docs/target/site/api/firrtl/%/index.html: $(apis)/firrtl/v%/index.html $(apis)/firrtl/v%/spec.pdf | docs/target/site/api/firrtl/%/
 	cp -r $(<D)/. $(@D)
 docs/target/site/api/chisel-testers/%/index.html: $(apis)/chisel-testers/v%/index.html | docs/target/site/api/chisel-testers/%/
 	cp -r $(<D)/. $(@D)
@@ -298,8 +313,8 @@ docs/target/site/api/chiseltest/%/index.html: $(apis)/chiseltest/v%/index.html |
 	git submodule update --init --depth 1 $*
 $(subprojects)/chisel3/%/.git:
 	git clone "https://github.com/freechipsproject/chisel3.git" --depth 1 --branch $* $(dir $@)
-$(subprojects)/firrtl/%/.git:
-	git clone "https://github.com/freechipsproject/firrtl.git" --depth 1 --branch $* $(dir $@)
+$(subprojects)/firrtl/%/.git $(subprojects)/firrtl/%/spec/spec.tex:
+	git clone "https://github.com/freechipsproject/firrtl.git" --depth 1 --branch $* $(dir $(subprojects)/firrtl/$*/.git)
 $(subprojects)/chisel-testers/%/.git:
 	git clone "https://github.com/freechipsproject/chisel-testers.git" --depth 1 --branch $* $(dir $@)
 $(subprojects)/treadle/%/.git:

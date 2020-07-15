@@ -321,6 +321,56 @@ options:
         url: api/firrtl/1.0.1/
       - title: 1.0.0
         url: api/firrtl/1.0.0/
+  - title: Specification
+    url: api/firrtl/latest/spec.pdf
+    menu_type: firrtl
+    nested_options:
+      - title: SNAPSHOT
+        url: api/firrtl/SNAPSHOT/spec.pdf
+      - title: 1.3.2
+        url: api/firrtl/1.3.2/spec.pdf
+      - title: 1.3.1
+        url: api/firrtl/1.3.1/spec.pdf
+      - title: 1.3.0
+        url: api/firrtl/1.3.0/spec.pdf
+      - title: 1.2.7
+        url: api/firrtl/1.2.7/spec.pdf
+      - title: 1.2.6
+        url: api/firrtl/1.2.6/spec.pdf
+      - title: 1.2.5
+        url: api/firrtl/1.2.5/spec.pdf
+      - title: 1.2.4
+        url: api/firrtl/1.2.4/spec.pdf
+      - title: 1.2.3
+        url: api/firrtl/1.2.3/spec.pdf
+      - title: 1.2.2
+        url: api/firrtl/1.2.2/spec.pdf
+      - title: 1.2.1
+        url: api/firrtl/1.2.1/spec.pdf
+      - title: 1.2.0
+        url: api/firrtl/1.2.0/spec.pdf
+      - title: 1.1.7
+        url: api/firrtl/1.1.7/spec.pdf
+      - title: 1.1.6
+        url: api/firrtl/1.1.6/spec.pdf
+      - title: 1.1.5
+        url: api/firrtl/1.1.5/spec.pdf
+      - title: 1.1.4
+        url: api/firrtl/1.1.4/spec.pdf
+      - title: 1.1.3
+        url: api/firrtl/1.1.3/spec.pdf
+      - title: 1.1.2
+        url: api/firrtl/1.1.2/spec.pdf
+      - title: 1.1.1
+        url: api/firrtl/1.1.1/spec.pdf
+      - title: 1.1.0
+        url: api/firrtl/1.1.0/spec.pdf
+      - title: 1.0.2
+        url: api/firrtl/1.0.2/spec.pdf
+      - title: 1.0.1
+        url: api/firrtl/1.0.1/spec.pdf
+      - title: 1.0.0
+        url: api/firrtl/1.0.0/spec.pdf
 
   # Treadle Site
   - title: Treadle
