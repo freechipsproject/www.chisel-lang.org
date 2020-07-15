@@ -190,16 +190,16 @@ api-copy = \
 # Build the site into the default directory (docs/target/site)
 all: docs/target/site/index.html
 
+# Targets to build FIRRTL specs
+specs-firrtl: $(firrtlTags:%=$(apis)/firrtl/%/spec.pdf) $(apis)/firrtl/$(firrtlSnapshot)/spec.pdf
+
 # Targets to build the legacy APIS of only a specific subproject
 apis-chisel: $(chiselTags:%=$(apis)/chisel3/%/index.html) $(apis)/chisel3/$(chiselSnapshot)/index.html
-apis-firrtl: $(firrtlTags:%=$(apis)/firrtl/%/index.html) $(apis)/firrtl/$(firrtlSnapshot)/index.html
+apis-firrtl: $(firrtlTags:%=$(apis)/firrtl/%/index.html) $(apis)/firrtl/$(firrtlSnapshot)/index.html specs-firrtl
 apis-chisel-testers: $(testersTags:%=$(apis)/chisel-testers/%/index.html) $(apis)/chisel-testers/$(testersSnapshot)/index.html
 apis-chiseltest: $(chiseltestTags:%=$(apis)/chiseltest/%/index.html)
 apis-treadle: $(treadleTags:%=$(apis)/treadle/%/index.html) $(apis)/treadle/$(treadleSnapshot)/index.html
 apis-diagrammer: $(diagrammerTags:%=$(apis)/diagrammer/%/index.html) $(apis)/diagrammer/$(diagrammerSnapshot)/index.html
-
-# Targets to build FIRRTL specs
-specs-firrtl: $(firrtlTags:%=$(apis)/firrtl/%/spec.pdf) $(apis)/firrtl/$(firrtlSnapshot)/spec.pdf
 
 # Remove the output of all build targets
 clean:
