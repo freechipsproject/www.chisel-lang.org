@@ -10,7 +10,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-145179088-1' , 'auto');
 ga('send', 'pageview');
       </script></head><body><header id="site-header"><div class="navbar-wrapper"><div class="container"><div class="row"><div class="col-xs-6"><a href="/" class="brand"><div class="icon-wrapper"><span>Chisel/FIRRTL</span></div></a></div><div class="col-xs-6"><nav class="text-right"><ul class=""><li><a href="https://github.com/freechipsproject/chisel3"><i class="fa fa-github"></i><span class="hidden-xs">GitHub</span></a></li><li><a href="api/latest/"><i class="fa fa-file-text"></i><span class="hidden-xs">API Documentation</span></a></li></ul></nav></div></div></div></div><div class="jumbotron"><div class="container"><h1 class="text-center">Chisel/FIRRTL
-Hardware Compiler Framework</h1><h2></h2><p class="text-center"><a href="https://github.com/freechipsproject/chisel3" class="btn btn-outline-inverse">View on GitHub</a></p></div></div><div><ul class="horizontalNav">                                                                                     <li><a class="" href="/chisel3/">Chisel3</a></li>  <li><a class="" href="/chisel-testers/">Testers</a></li>  <li><a class="" href="/chiseltest/">ChiselTest</a></li>  <li><a class="" href="/firrtl/">FIRRTL</a></li>  <li><a class="" href="/treadle/">Treadle</a></li>  <li><a class="" href="/diagrammer/">Diagrammer</a></li>  <li><a class="" href="/community.html">Community</a></li> </ul></div></header><main id="site-main"><section class="use"><div class="container"><div id="content"><p><img src="https://raw.githubusercontent.com/freechipsproject/chisel3/master/doc/images/chisel_logo.svg?sanitize=true" alt="Chisel 3" /></p>
+Hardware Compiler Framework</h1><h2></h2><p class="text-center"><a href="https://github.com/freechipsproject/chisel3" class="btn btn-outline-inverse">View on GitHub</a></p></div></div><div><ul class="horizontalNav">                                                                                     <li><a class="" href="/chisel3/">Chisel3</a></li>  <li><a class="" href="/chisel-testers/">Testers</a></li>  <li><a class="" href="/chiseltest/">ChiselTest</a></li>  <li><a class="" href="/firrtl/">FIRRTL</a></li>  <li><a class="" href="/treadle/">Treadle</a></li>  <li><a class="" href="/diagrammer/">Diagrammer</a></li>  <li><a class="" href="/community.html">Community</a></li> </ul></div></header><main id="site-main"><section class="use"><div class="container"><div id="content"><p><img src="https://raw.githubusercontent.com/freechipsproject/chisel3/master/docs/src/images/chisel_logo.svg?sanitize=true" alt="Chisel 3" /></p>
 
 <hr />
 
@@ -38,7 +38,7 @@ This generator methodology enables the creation of re-usable components and libr
 
 <p>Consider an FIR filter that implements a convolution operation, as depicted in this block diagram:</p>
 
-<p><img src="https://raw.githubusercontent.com/freechipsproject/chisel3/master/doc/images/fir_filter.svg?sanitize=true" width="512" /></p>
+<p><img src="https://raw.githubusercontent.com/freechipsproject/chisel3/master/docs/src/images/fir_filter.svg?sanitize=true" width="512" /></p>
 
 <p>While Chisel provides similar base primitives as synthesizable Verilog, and <em>could</em> be used as such:</p>
 
@@ -152,9 +152,19 @@ This generator methodology enables the creation of re-usable components and libr
 
 <h3 id="compiling-and-testing-chisel">Compiling and Testing Chisel</h3>
 
-<p>In the chisel3 repository directory compile the Chisel library:</p>
+<p>First, clone and build the master branch of <a href="https://github.com/freechipsproject/firrtl">FIRRTL</a> and <a href="https://github.com/freechipsproject/treadle">Treadle</a>, as the master branch of Chisel may depend on unreleased changes in those projects:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sbt compile
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/freechipsproject/firrtl.git
+git clone https://github.com/freechipsproject/treadle.git
+pushd firrtl; sbt publishLocal; popd
+pushd treadle; sbt publishLocal; popd
+</code></pre></div></div>
+
+<p>Clone and build the Chisel library:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/freechipsproject/chisel3.git
+cd chisel3
+sbt compile
 </code></pre></div></div>
 
 <p>If the compilation succeeded, you can then run the included unit tests by invoking:</p>
