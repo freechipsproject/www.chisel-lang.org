@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.4-20200603-SNAPSHOT - chisel3.util.experimental</title>
-          <meta name="description" content="chisel3 3.4 - 20200603 - SNAPSHOT - chisel3.util.experimental" />
-          <meta name="keywords" content="chisel3 3.4 20200603 SNAPSHOT chisel3.util.experimental" />
+          <title>chisel3 3.4.0-RC3 - chisel3.util.experimental</title>
+          <meta name="description" content="chisel3 3.4.0 - RC3 - chisel3.util.experimental" />
+          <meta name="keywords" content="chisel3 3.4.0 RC3 chisel3.util.experimental" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.4-20200603-SNAPSHOT</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.4.0-RC3</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -151,6 +151,10 @@ functions
                         <a href="LoadMemoryTransform.html" title="This transform only is activated if Verilog is being generated (determined by presence of the proper emit annotation) when activated it creates additional Verilog files that contain modules bound to the modules that contain an initializable memory">LoadMemoryTransform</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
+                        <a class="object" href="group$.html" title="Marks that a module to be ignored in Dedup Transform in Firrtl pass"></a>
+                        <a href="group$.html" title="Marks that a module to be ignored in Dedup Transform in Firrtl pass">group</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
                         <a class="object" href="loadMemoryFromFile$.html" title="loadMemoryFromFile is an annotation generator that helps with loading a memory from a text file."></a>
                         <a href="loadMemoryFromFile$.html" title="loadMemoryFromFile is an annotation generator that helps with loading a memory from a text file.">loadMemoryFromFile</a>
                       </li><li name="chisel3.util.random" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -260,7 +264,7 @@ functions
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="This is the annotation created when using loadMemoryFromFile, it records the memory, the load file and the format of the file." href="ChiselLoadMemoryAnnotation.html"><span class="name">ChiselLoadMemoryAnnotation</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../../Data.html" class="extype" name="chisel3.Data">Data</a></span>]</span><span class="params">(<span name="target">target: <a href="../../MemBase.html" class="extype" name="chisel3.MemBase">MemBase</a>[<span class="extype" name="chisel3.util.experimental.ChiselLoadMemoryAnnotation.T">T</span>]</span>, <span name="fileName">fileName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="hexOrBinary">hexOrBinary: <span class="extype" name="firrtl.annotations.MemoryLoadFileType.FileType">FileType</span> = <span class="symbol">MemoryLoadFileType.Hex</span></span>)</span><span class="result"> extends <a href="../../experimental/ChiselAnnotation.html" class="extype" name="chisel3.experimental.ChiselAnnotation">ChiselAnnotation</a> with <a href="../../experimental/RunFirrtlTransform.html" class="extype" name="chisel3.experimental.RunFirrtlTransform">RunFirrtlTransform</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="This is the annotation created when using loadMemoryFromFile, it records the memory, the load file and the format of the file." href="ChiselLoadMemoryAnnotation.html"><span class="name">ChiselLoadMemoryAnnotation</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../../Data.html" class="extype" name="chisel3.Data">Data</a></span>]</span><span class="params">(<span name="target">target: <a href="../../MemBase.html" class="extype" name="chisel3.MemBase">MemBase</a>[<span class="extype" name="chisel3.util.experimental.ChiselLoadMemoryAnnotation.T">T</span>]</span>, <span name="fileName">fileName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="hexOrBinary">hexOrBinary: <span class="extype" name="firrtl.annotations.MemoryLoadFileType.FileType">FileType</span> = <span class="symbol">MemoryLoadFileType.Hex</span></span>)</span><span class="result"> extends <a href="../../experimental/ChiselAnnotation.html" class="extype" name="chisel3.experimental.ChiselAnnotation">ChiselAnnotation</a> with <a href="../../experimental/RunFirrtlTransform.html" class="extype" name="chisel3.experimental.RunFirrtlTransform">RunFirrtlTransform</a> with <a href="https://www.scala-lang.org/api/2.12.12/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.12/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       <p class="shortcomment cmt">This is the annotation created when using <a href="loadMemoryFromFile$.html" class="extype" name="chisel3.util.experimental.loadMemoryFromFile">loadMemoryFromFile</a>, it records the memory, the load file
@@ -278,7 +282,7 @@ and the format of the file.</p></div><dl class="paramcmts block"><dt class="para
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="Flattens an instance of a module" href="FlattenInstance.html"><span class="name">FlattenInstance</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="Flattens an instance of a module" href="FlattenInstance.html"><span class="name">FlattenInstance</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <p class="shortcomment cmt">Flattens an instance of a module
@@ -318,7 +322,7 @@ and the format of the file.</p></div><dl class="paramcmts block"><dt class="para
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="Inlines an instance of a module" href="InlineInstance.html"><span class="name">InlineInstance</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="Inlines an instance of a module" href="InlineInstance.html"><span class="name">InlineInstance</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <p class="shortcomment cmt">Inlines an instance of a module
@@ -362,7 +366,7 @@ and the format of the file.</p></div><dl class="paramcmts block"><dt class="para
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="This transform only is activated if Verilog is being generated (determined by presence of the proper emit annotation) when activated it creates additional Verilog files that contain modules bound to the modules that contain an initializable memory" href="LoadMemoryTransform.html"><span class="name">LoadMemoryTransform</span></a><span class="result"> extends <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4-20200603-SNAPSHOT/firrtl/Transform.html#firrtl.Transform" class="extype" name="firrtl.Transform">Transform</a></span>
+        <a title="This transform only is activated if Verilog is being generated (determined by presence of the proper emit annotation) when activated it creates additional Verilog files that contain modules bound to the modules that contain an initializable memory" href="LoadMemoryTransform.html"><span class="name">LoadMemoryTransform</span></a><span class="result"> extends <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0-RC3/firrtl/Transform.html#firrtl.Transform" class="extype" name="firrtl.Transform">Transform</a></span>
       </span>
       
       <p class="shortcomment cmt">This transform only is activated if Verilog is being generated (determined by presence of the proper emit
@@ -442,6 +446,38 @@ automatically. Non-hierarchical boring unsafely relies on user input to generate
 naming may result in naming conflicts that the user must handle.</p><p>The automatic generation of hierarchical names relies on a global, mutable namespace. This is currently persistent
 across circuit elaborations.
 </p></div></div>
+    </li><li name="chisel3.util.experimental.group" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="group"></a><a id="group:group"></a>
+      <span class="permalink">
+      <a href="../../../chisel3/util/experimental/group$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="Marks that a module to be ignored in Dedup Transform in Firrtl pass" href="group$.html"><span class="name">group</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Marks that a module to be ignored in Dedup Transform in Firrtl pass
+</p><div class="fullcomment"><div class="comment cmt"><p>Marks that a module to be ignored in Dedup Transform in Firrtl pass
+</p></div><dl class="attributes block"> <div class="block">Example:
+               <ol><li class="cmt"><p></p><pre><span class="kw">class</span> MyModule <span class="kw">extends</span> Module {
+  <span class="kw">val</span> io = IO(<span class="kw">new</span> Bundle{
+    <span class="kw">val</span> a = Input(Bool())
+    <span class="kw">val</span> b = Output(Bool())
+  })
+  <span class="kw">val</span> reg1 = RegInit(<span class="num">0.</span>U)
+  reg1 := io.a
+  <span class="kw">val</span> reg2 = RegNext(reg1)
+  io.b := reg2
+  group(<span class="std">Seq</span>(reg1, reg2), <span class="lit">"DosRegisters"</span>, <span class="lit">"doubleReg"</span>)
+}</pre></li></ol>
+            </div><dt>Note</dt><dd><span class="cmt"><p>Intermediate wires will get pulled into the new instance, but intermediate registers will not
+      because they are also connected to their module's clock port. This means that if you want
+      a register to be included in a group, it must be explicitly referred to in the input list.</p></span></dd></dl></div>
     </li><li name="chisel3.util.experimental.loadMemoryFromFile" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="loadMemoryFromFile"></a><a id="loadMemoryFromFile:loadMemoryFromFile"></a>
       <span class="permalink">

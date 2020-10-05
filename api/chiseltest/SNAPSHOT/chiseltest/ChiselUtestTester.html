@@ -293,7 +293,7 @@ work as expected, or may have unforeseen side effects, or may be powerful yet da
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="internal/TestEnvInterface.html" class="extype" name="chiseltest.internal.TestEnvInterface">TestEnvInterface</a>, <span class="extype" name="utest.TestSuite">TestSuite</span>, <span class="extype" name="utest.TestSuiteVersionSpecific">TestSuiteVersionSpecific</span>, <span class="extype" name="utest.framework.Executor">Executor</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><a href="internal/TestEnvInterface.html" class="extype" name="chiseltest.internal.TestEnvInterface">TestEnvInterface</a>, <span class="extype" name="utest.TestSuite">TestSuite</span>, <span class="extype" name="utest.framework.Executor">Executor</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -319,7 +319,7 @@ work as expected, or may have unforeseen side effects, or may be powerful yet da
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="chiseltest.ChiselUtestTester"><span>ChiselUtestTester</span></li><li class="in" name="chiseltest.internal.TestEnvInterface"><span>TestEnvInterface</span></li><li class="in" name="utest.TestSuite"><span>TestSuite</span></li><li class="in" name="utest.TestSuiteVersionSpecific"><span>TestSuiteVersionSpecific</span></li><li class="in" name="utest.framework.Executor"><span>Executor</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="chiseltest.ChiselUtestTester"><span>ChiselUtestTester</span></li><li class="in" name="chiseltest.internal.TestEnvInterface"><span>TestEnvInterface</span></li><li class="in" name="utest.TestSuite"><span>TestSuite</span></li><li class="in" name="utest.framework.Executor"><span>Executor</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -462,6 +462,22 @@ if there is not a TargetDirAnnotation already present
       </span>
       <span class="symbol">
         <span class="name">batchedFailures</span><span class="result">: <span class="extype" name="scala.collection.mutable.ArrayBuffer">ArrayBuffer</span>[<span class="extype" name="scala.Exception">Exception</span>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="internal/TestEnvInterface.html" class="extype" name="chiseltest.internal.TestEnvInterface">TestEnvInterface</a></dd></dl></div>
+    </li><li name="chiseltest.internal.TestEnvInterface#bigintToHex" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="bigintToHex(x:BigInt):String"></a><a id="bigintToHex(BigInt):String"></a>
+      <span class="permalink">
+      <a href="../chiseltest/ChiselUtestTester.html#bigintToHex(x:BigInt):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">bigintToHex</span><span class="params">(<span name="x">x: <span class="extype" name="scala.BigInt">BigInt</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="internal/TestEnvInterface.html" class="extype" name="chiseltest.internal.TestEnvInterface">TestEnvInterface</a></dd></dl></div>
@@ -728,9 +744,9 @@ testCircuit(<span class="kw">new</span> PlusOne, <span class="std">Seq</span>(Wr
   c.io.output.expect(<span class="num">2.</span>U)
 }</pre></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>The DUT type, must be a subclass of MultiIOModule</p></dd><dt class="param">dutGen</dt><dd class="cmt"><p>A generator of a Chisel Module</p></dd></dl><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>This API is experimental and forward compatibility is not yet guaranteed</p></span></dd></dl></div>
     </li><li name="chiseltest.internal.TestEnvInterface#testerExpect" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="testerExpect(expected:Any,actual:Any,signal:String,msg:Option[String]):Unit"></a><a id="testerExpect(Any,Any,String,Option[String]):Unit"></a>
+      <a id="testerExpect(expected:BigInt,actual:BigInt,signal:String,msg:Option[String],decode:Option[BigInt=&gt;String]):Unit"></a><a id="testerExpect(BigInt,BigInt,String,Option[String],Option[(BigInt)⇒String]):Unit"></a>
       <span class="permalink">
-      <a href="../chiseltest/ChiselUtestTester.html#testerExpect(expected:Any,actual:Any,signal:String,msg:Option[String]):Unit" title="Permalink">
+      <a href="../chiseltest/ChiselUtestTester.html#testerExpect(expected:BigInt,actual:BigInt,signal:String,msg:Option[String],decode:Option[BigInt=&gt;String]):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -739,7 +755,7 @@ testCircuit(<span class="kw">new</span> PlusOne, <span class="std">Seq</span>(Wr
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">testerExpect</span><span class="params">(<span name="expected">expected: <span class="extype" name="scala.Any">Any</span></span>, <span name="actual">actual: <span class="extype" name="scala.Any">Any</span></span>, <span name="signal">signal: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="msg">msg: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">testerExpect</span><span class="params">(<span name="expected">expected: <span class="extype" name="scala.BigInt">BigInt</span></span>, <span name="actual">actual: <span class="extype" name="scala.BigInt">BigInt</span></span>, <span name="signal">signal: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="msg">msg: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="decode">decode: <span class="extype" name="scala.Option">Option</span>[(<span class="extype" name="scala.BigInt">BigInt</span>) ⇒ <span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <p class="shortcomment cmt">Expect a specific value on a wire, calling testerFail if the expectation isn't met.</p><div class="fullcomment"><div class="comment cmt"><p>Expect a specific value on a wire, calling testerFail if the expectation isn't met.
@@ -951,7 +967,7 @@ Failures queued until the next checkpoint.
 
         <div class="values members">
               <h3>Deprecated Value Members</h3>
-              <ol><li name="utest.TestSuiteVersionSpecific#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+              <ol><li name="utest.TestSuite#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="apply(expr:Unit):utest.Tests"></a><a id="apply(Unit):Tests"></a>
       <span class="permalink">
       <a href="../chiseltest/ChiselUtestTester.html#apply(expr:Unit):utest.Tests" title="Permalink">
@@ -966,7 +982,7 @@ Failures queued until the next checkpoint.
         <span class="name deprecated" title="Deprecated: Use utest.Tests{...} instead">apply</span><span class="params">(<span name="expr">expr: <span class="extype" name="scala.Unit">Unit</span></span>)</span><span class="result">: <span class="extype" name="utest.Tests">Tests</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TestSuiteVersionSpecific</dd><dt>Annotations</dt><dd>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TestSuite</dd><dt>Annotations</dt><dd>
                 <span class="name">@deprecated</span>
               
         </dd><dt>Deprecated</dt><dd class="cmt"><p>Use <code>utest.Tests{...}</code> instead</p></dd></dl></div>
@@ -979,8 +995,6 @@ Failures queued until the next checkpoint.
               <h3>Inherited from <a href="internal/TestEnvInterface.html" class="extype" name="chiseltest.internal.TestEnvInterface">TestEnvInterface</a></h3>
             </div><div class="parent" name="utest.TestSuite">
               <h3>Inherited from <span class="extype" name="utest.TestSuite">TestSuite</span></h3>
-            </div><div class="parent" name="utest.TestSuiteVersionSpecific">
-              <h3>Inherited from <span class="extype" name="utest.TestSuiteVersionSpecific">TestSuiteVersionSpecific</span></h3>
             </div><div class="parent" name="utest.framework.Executor">
               <h3>Inherited from <span class="extype" name="utest.framework.Executor">Executor</span></h3>
             </div><div class="parent" name="scala.AnyRef">

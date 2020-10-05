@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.4-20200603-SNAPSHOT - chisel3.util</title>
-          <meta name="description" content="chisel3 3.4 - 20200603 - SNAPSHOT - chisel3.util" />
-          <meta name="keywords" content="chisel3 3.4 20200603 SNAPSHOT chisel3.util" />
+          <title>chisel3 3.4.0-RC3 - chisel3.util</title>
+          <meta name="description" content="chisel3 3.4.0 - RC3 - chisel3.util" />
+          <meta name="keywords" content="chisel3 3.4.0 RC3 chisel3.util" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.4-20200603-SNAPSHOT</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.4.0-RC3</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -299,10 +299,6 @@ functions
                         <a href="IrrevocableIO.html" title="A concrete subclass of ReadyValidIO that promises to not change the value of 'bits' after a cycle where 'valid' is high and 'ready' is low.">IrrevocableIO</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="object" href="LFSR16$.html" title="LFSR16 generates a 16-bit linear feedback shift register, returning the register contents."></a>
-                        <a href="LFSR16$.html" title="LFSR16 generates a 16-bit linear feedback shift register, returning the register contents.">LFSR16</a>
-                      </li><li class="current-entities indented2">
-                        <span class="separator"></span>
                         <a class="object" href="ListLookup$.html" title="For each element in a list, muxes (looks up) between cases (one per list element) based on a common address."></a>
                         <a href="ListLookup$.html" title="For each element in a list, muxes (looks up) between cases (one per list element) based on a common address.">ListLookup</a>
                       </li><li class="current-entities indented2">
@@ -483,11 +479,11 @@ functions
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>The util package provides extensions to core chisel for common hardware components and utility
 functions
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/master//src/main/scala/chisel3/util/util.scala" target="_blank">util.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.4.0-RC3//src/main/scala/chisel3/util/util.scala" target="_blank">util.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div></div>
         
 
@@ -613,7 +609,7 @@ care bits. Equality comparisons will ignore don't care bits.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Used to generate an inline (logic directly in the containing Module, no internal Module is created) hardware counter." href="Counter.html"><span class="name">Counter</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="Used to generate an inline (logic directly in the containing Module, no internal Module is created) hardware counter." href="Counter.html"><span class="name">Counter</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <p class="shortcomment cmt">Used to generate an inline (logic directly in the containing Module, no internal Module is created)
@@ -622,10 +618,14 @@ hardware counter.</p><p>Typically instantiated with apply methods in <a href="Co
 </p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
                 <span class="name">@chiselName</span><span class="args">()</span>
               
-        </dd><div class="block">Example:
+        </dd><div class="block">Examples:
                <ol><li class="cmt"><p></p><pre><span class="kw">val</span> countOn = <span class="kw">true</span>.B <span class="cmt">// increment counter every clock cycle</span>
 <span class="kw">val</span> (counterValue, counterWrap) = Counter(countOn, <span class="num">4</span>)
 when (counterValue === <span class="num">3.</span>U) {
+  ...
+}</pre></li>, <li class="cmt"><p></p><pre><span class="cmt">// Using Scala Range API</span>
+<span class="kw">val</span> (counterValue, counterWrap) = Counter(<span class="num">0</span> until <span class="num">10</span> by <span class="num">2</span>)
+when (counterValue === <span class="num">4.</span>U) {
   ...
 }</pre></li></ol>
             </div></dl></div>
@@ -664,7 +664,7 @@ of ready or valid.</p></div></div>
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="Defines a set of unique UInt constants" href="Enum.html"><span class="name">Enum</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="Defines a set of unique UInt constants" href="Enum.html"><span class="name">Enum</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <p class="shortcomment cmt">Defines a set of unique UInt constants</p><div class="fullcomment"><div class="comment cmt"><p>Defines a set of unique UInt constants</p><p>Unpack with a list to specify an enumeration. Usually used with <a href="switch$.html" class="extype" name="chisel3.util.switch">switch</a> to describe a finite
@@ -809,7 +809,7 @@ Additionally, once 'valid' is raised it will never be lowered until after
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="A hardware array of elements that can hold values of different types/widths, unlike Vec which can only hold elements of the same type/width." href="MixedVec.html"><span class="name">MixedVec</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></span>]</span><span class="result"> extends <a href="../Record.html" class="extype" name="chisel3.Record">Record</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/collection/IndexedSeq.html#scala.collection.IndexedSeq" class="extype" name="scala.collection.IndexedSeq">IndexedSeq</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>]</span>
+        <a title="A hardware array of elements that can hold values of different types/widths, unlike Vec which can only hold elements of the same type/width." href="MixedVec.html"><span class="name">MixedVec</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></span>]</span><span class="result"> extends <a href="../Record.html" class="extype" name="chisel3.Record">Record</a> with <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/IndexedSeq.html#scala.collection.IndexedSeq" class="extype" name="scala.collection.IndexedSeq">IndexedSeq</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>]</span>
       </span>
       
       <p class="shortcomment cmt">A hardware array of elements that can hold values of different types/widths,
@@ -945,7 +945,7 @@ The actual semantics of ready/valid are enforced via the use of concrete subclas
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Implementation details for switch." href="SwitchContext.html"><span class="name">SwitchContext</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../Element.html" class="extype" name="chisel3.Element">Element</a></span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="Implementation details for switch." href="SwitchContext.html"><span class="name">SwitchContext</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../Element.html" class="extype" name="chisel3.Element">Element</a></span>]</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <p class="shortcomment cmt">Implementation details for <a href="switch$.html" class="extype" name="chisel3.util.switch">switch</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Implementation details for <a href="switch$.html" class="extype" name="chisel3.util.switch">switch</a>. See <a href="switch$.html" class="extype" name="chisel3.util.switch">switch</a> and <a href="is$.html" class="extype" name="chisel3.util.is">is</a> for the
@@ -1205,7 +1205,7 @@ FillInterleaved(<span class="num">2</span>, <span class="std">Seq</span>(<span c
         <a title="Implicit conversions to automatically convert scala.Boolean and scala.Int to Bool and UInt respectively" href="ImplicitConversions$.html"><span class="name">ImplicitConversions</span></a>
       </span>
       
-      <p class="shortcomment cmt">Implicit conversions to automatically convert <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html" class="extype" name="scala.Boolean">scala.Boolean</a> and <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html" class="extype" name="scala.Int">scala.Int</a> to <a href="../Bool.html" class="extype" name="chisel3.Bool">Bool</a>
+      <p class="shortcomment cmt">Implicit conversions to automatically convert <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html" class="extype" name="scala.Boolean">scala.Boolean</a> and <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html" class="extype" name="scala.Int">scala.Int</a> to <a href="../Bool.html" class="extype" name="chisel3.Bool">Bool</a>
  and <a href="../UInt.html" class="extype" name="chisel3.UInt">UInt</a> respectively
 </p>
     </li><li name="chisel3.util.Irrevocable" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
@@ -1506,7 +1506,7 @@ PopCount(myUIntWire)  <span class="cmt">// dynamic count</span></pre></li></ol>
 is set.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a bit vector in which only the least-significant 1 bit in the input vector, if any,
 is set.
 </p></div><dl class="attributes block"> <div class="block">Example:
-               <ol><li class="cmt"><p></p><pre>PriorityEncoderOH((<span class="kw">false</span>.B, <span class="kw">true</span>.B, <span class="kw">true</span>.B, <span class="kw">false</span>.B)) <span class="cmt">// results in (false.B, false.B, true.B, false.B)</span></pre></li></ol>
+               <ol><li class="cmt"><p></p><pre>PriorityEncoderOH(<span class="std">Seq</span>(<span class="kw">false</span>.B, <span class="kw">true</span>.B, <span class="kw">true</span>.B, <span class="kw">false</span>.B)) <span class="cmt">// results in Seq(false.B, true.B, false.B, false.B)</span></pre></li></ol>
             </div></dl></div>
     </li><li name="chisel3.util.PriorityMux" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="PriorityMux"></a><a id="PriorityMux:PriorityMux"></a>
@@ -1908,38 +1908,7 @@ log2Up(<span class="num">4</span>)  <span class="cmt">// returns 2</span></pre><
 
         <div class="values members">
               <h3>Deprecated Value Members</h3>
-              <ol><li name="chisel3.util.LFSR16" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="LFSR16"></a><a id="LFSR16:LFSR16"></a>
-      <span class="permalink">
-      <a href="../../chisel3/util/LFSR16$.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a title="LFSR16 generates a 16-bit linear feedback shift register, returning the register contents." href="LFSR16$.html"><span class="name deprecated" title="Deprecated: (Since version 3.2) LFSR16 is deprecated in favor of the parameterized chisel3.util.random.LFSR">LFSR16</span></a>
-      </span>
-      
-      <p class="shortcomment cmt">LFSR16 generates a 16-bit linear feedback shift register, returning the register contents.</p><div class="fullcomment"><div class="comment cmt"><p>LFSR16 generates a 16-bit linear feedback shift register, returning the register contents.
-This is useful for generating a pseudo-random sequence.</p><p>The example below, taken from the unit tests, creates two 4-sided dice using <code>LFSR16</code> primitives:</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
-                <span class="name">@deprecated</span>
-              
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 3.2)</i> LFSR16 is deprecated in favor of the parameterized chisel3.util.random.LFSR</p></dd><div class="block">Example:
-               <ol><li class="cmt"><p></p><pre><span class="kw">val</span> bins = Reg(Vec(<span class="num">8</span>, UInt(<span class="num">32.</span>W)))
-
-<span class="cmt">// Create two 4 sided dice and roll them each cycle.</span>
-<span class="cmt">// Use tap points on each LFSR so values are more independent</span>
-<span class="kw">val</span> die0 = Cat(<span class="std">Seq</span>.tabulate(<span class="num">2</span>) { i <span class="kw">=&gt;</span> LFSR16()(i) })
-<span class="kw">val</span> die1 = Cat(<span class="std">Seq</span>.tabulate(<span class="num">2</span>) { i <span class="kw">=&gt;</span> LFSR16()(i + <span class="num">2</span>) })
-
-<span class="kw">val</span> rollValue = die0 +&amp; die1  <span class="cmt">// Note +& is critical because sum will need an extra bit.</span>
-
-bins(rollValue) := bins(rollValue) + <span class="num">1.</span>U</pre></li></ol>
-            </div></dl></div>
-    </li><li name="chisel3.util.unless" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+              <ol><li name="chisel3.util.unless" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="unless"></a><a id="unless:unless"></a>
       <span class="permalink">
       <a href="../../chisel3/util/unless$.html" title="Permalink">
@@ -1964,9 +1933,9 @@ bins(rollValue) := bins(rollValue) + <span class="num">1.</span>U</pre></li></ol
 
         <div id="inheritedMembers">
         <div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
             </div>
         
         </div>

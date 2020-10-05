@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.4-20200603-SNAPSHOT - chisel3.util.Pipe</title>
-          <meta name="description" content="chisel3 3.4 - 20200603 - SNAPSHOT - chisel3.util.Pipe" />
-          <meta name="keywords" content="chisel3 3.4 20200603 SNAPSHOT chisel3.util.Pipe" />
+          <title>chisel3 3.4.0-RC3 - chisel3.util.Pipe</title>
+          <meta name="description" content="chisel3 3.4.0 - RC3 - chisel3.util.Pipe" />
+          <meta name="keywords" content="chisel3 3.4.0 RC3 chisel3.util.Pipe" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.4-20200603-SNAPSHOT</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.4.0-RC3</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -213,10 +213,6 @@ functions
                         <span class="separator"></span>
                         <a class="class" href="IrrevocableIO.html" title="A concrete subclass of ReadyValidIO that promises to not change the value of 'bits' after a cycle where 'valid' is high and 'ready' is low."></a>
                         <a href="IrrevocableIO.html" title="A concrete subclass of ReadyValidIO that promises to not change the value of 'bits' after a cycle where 'valid' is high and 'ready' is low.">IrrevocableIO</a>
-                      </li><li class="current-entities indented2">
-                        <span class="separator"></span>
-                        <a class="object" href="LFSR16$.html" title="LFSR16 generates a 16-bit linear feedback shift register, returning the register contents."></a>
-                        <a href="LFSR16$.html" title="LFSR16 generates a 16-bit linear feedback shift register, returning the register contents.">LFSR16</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="object" href="ListLookup$.html" title="For each element in a list, muxes (looks up) between cases (one per list element) based on a common address."></a>
@@ -408,11 +404,11 @@ pipe.io.enq := producer.io
 consumer.io := pipe.io.deq</pre><p>If you already have the <a href="Valid.html" class="extype" name="chisel3.util.Valid">Valid</a> input or the components of a <a href="Valid.html" class="extype" name="chisel3.util.Valid">Valid</a> interface, it may be simpler to use the
 <a href="Pipe$.html" class="extype" name="chisel3.util.Pipe">Pipe factory</a> companion object. This, which <a href="" class="extype" name="chisel3.util.Pipe">Pipe</a> internally utilizes, will automatically connect the
 input for you.
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/master//src/main/scala/chisel3/util/Valid.scala" target="_blank">Valid.scala</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="Pipe$.html" class="extype" name="chisel3.util.Pipe">Pipe factory</a> for an alternative API</p></span><span class="cmt"><p><a href="Valid.html" class="extype" name="chisel3.util.Valid">Valid</a> interface</p></span><span class="cmt"><p><a href="Queue.html" class="extype" name="chisel3.util.Queue">Queue</a> and the <a href="Queue$.html" class="extype" name="chisel3.util.Queue">Queue factory</a> for actual queues</p></span><span class="cmt"><p>The <a href="ShiftRegister$.html" class="extype" name="chisel3.util.ShiftRegister">ShiftRegister factory</a> to generate a pipe without a <a href="Valid.html" class="extype" name="chisel3.util.Valid">Valid</a> interface</p></span></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.4.0-RC3//src/main/scala/chisel3/util/Valid.scala" target="_blank">Valid.scala</a></dd><dt>See also</dt><dd><span class="cmt"><p><a href="Pipe$.html" class="extype" name="chisel3.util.Pipe">Pipe factory</a> for an alternative API</p></span><span class="cmt"><p><a href="Valid.html" class="extype" name="chisel3.util.Valid">Valid</a> interface</p></span><span class="cmt"><p><a href="Queue.html" class="extype" name="chisel3.util.Queue">Queue</a> and the <a href="Queue$.html" class="extype" name="chisel3.util.Queue">Queue factory</a> for actual queues</p></span><span class="cmt"><p>The <a href="ShiftRegister$.html" class="extype" name="chisel3.util.ShiftRegister">ShiftRegister factory</a> to generate a pipe without a <a href="Valid.html" class="extype" name="chisel3.util.Valid">Valid</a> interface</p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><span class="extype" name="chisel3.internal.LegacyModule">LegacyModule</span>, <a href="../MultiIOModule.html" class="extype" name="chisel3.MultiIOModule">MultiIOModule</a>, <a href="../RawModule.html" class="extype" name="chisel3.RawModule">RawModule</a>, <a href="../experimental/BaseModule.html" class="extype" name="chisel3.experimental.BaseModule">BaseModule</a>, <span class="extype" name="chisel3.internal.HasId">HasId</span>, <span class="extype" name="chisel3.internal.InstanceId">internal.InstanceId</span>, <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="chisel3.internal.LegacyModule">LegacyModule</span>, <a href="../MultiIOModule.html" class="extype" name="chisel3.MultiIOModule">MultiIOModule</a>, <a href="../RawModule.html" class="extype" name="chisel3.RawModule">RawModule</a>, <a href="../experimental/BaseModule.html" class="extype" name="chisel3.experimental.BaseModule">BaseModule</a>, <span class="extype" name="chisel3.internal.HasId">HasId</span>, <span class="extype" name="chisel3.internal.InstanceId">internal.InstanceId</span>, <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div></div>
         
 
@@ -470,7 +466,7 @@ input for you.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">Pipe</span><span class="params">(<span name="gen">gen: <span class="extype" name="chisel3.util.Pipe.T">T</span></span>, <span name="latency">latency: <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a> = <span class="symbol">1</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="compileOptions">compileOptions: <a href="../CompileOptions.html" class="extype" name="chisel3.CompileOptions">CompileOptions</a></span>)</span>
+        <span class="name">Pipe</span><span class="params">(<span name="gen">gen: <span class="extype" name="chisel3.util.Pipe.T">T</span></span>, <span name="latency">latency: <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a> = <span class="symbol">1</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="compileOptions">compileOptions: <a href="../CompileOptions.html" class="extype" name="chisel3.CompileOptions">CompileOptions</a></span>)</span>
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">gen</dt><dd class="cmt"><p>a Chisel type</p></dd><dt class="param">latency</dt><dd class="cmt"><p>the number of pipeline stages</p></dd></dl></div>
@@ -516,7 +512,7 @@ input for you.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -532,7 +528,7 @@ input for you.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -548,7 +544,7 @@ input for you.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -586,7 +582,7 @@ are problematic.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">_bindIoInPlace</span><span class="params">(<span name="iodef">iodef: <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">_bindIoInPlace</span><span class="params">(<span name="iodef">iodef: <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <p class="shortcomment cmt">Chisel2 code didn't require the IO(...) wrapper and would assign a Chisel type directly to
@@ -605,7 +601,7 @@ io, then do operations on it. This binds a Chisel type in-place (mutably) as an 
         <span class="kind">var</span>
       </span>
       <span class="symbol">
-        <span class="name">_closed</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">_closed</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../experimental/BaseModule.html" class="extype" name="chisel3.experimental.BaseModule">BaseModule</a></dd></dl></div>
@@ -621,7 +617,7 @@ io, then do operations on it. This binds a Chisel type in-place (mutably) as an 
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">_compatAutoWrapPorts</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">_compatAutoWrapPorts</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <p class="shortcomment cmt">Compatibility function.</p><div class="fullcomment"><div class="comment cmt"><p>Compatibility function. Allows Chisel2 code which had ports without the IO wrapper to
@@ -639,7 +635,7 @@ compile under Bindings checks. Does nothing in non-compatibility mode.</p><p>Sho
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">_compatIoPortBound</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">_compatIoPortBound</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>LegacyModule</dd></dl></div>
@@ -703,7 +699,7 @@ compile under Bindings checks. Does nothing in non-compatibility mode.</p><p>Sho
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -731,6 +727,22 @@ compile under Bindings checks. Does nothing in non-compatibility mode.</p><p>Sho
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../RawModule.html" class="extype" name="chisel3.RawModule">RawModule</a></dd></dl></div>
+    </li><li name="chisel3.internal.HasId#computeName" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="computeName(defaultPrefix:Option[String],defaultSeed:Option[String]):Option[String]"></a><a id="computeName(Option[String],Option[String]):Option[String]"></a>
+      <span class="permalink">
+      <a href="../../chisel3/util/Pipe.html#computeName(defaultPrefix:Option[String],defaultSeed:Option[String]):Option[String]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">computeName</span><span class="params">(<span name="defaultPrefix">defaultPrefix: <a href="https://www.scala-lang.org/api/2.12.12/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="defaultSeed">defaultSeed: <a href="https://www.scala-lang.org/api/2.12.12/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Computes the name of this HasId, if one exists</p><div class="fullcomment"><div class="comment cmt"><p>Computes the name of this HasId, if one exists</p></div><dl class="paramcmts block"><dt class="param">defaultPrefix</dt><dd class="cmt"><p>Optionally provide a default prefix for computing the name</p></dd><dt class="param">defaultSeed</dt><dd class="cmt"><p>Optionally provide default seed for computing the name</p></dd><dt>returns</dt><dd class="cmt"><p>the name, if it can be computed</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasId</dd></dl></div>
     </li><li name="chisel3.experimental.BaseModule#desiredName" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="desiredName:String"></a>
       <span class="permalink">
@@ -762,7 +774,7 @@ https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getSimpleName--</
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -778,7 +790,7 @@ https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getSimpleName--</
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="that">that: <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">equals</span><span class="params">(<span name="that">that: <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasId → AnyRef → Any</dd></dl></div>
@@ -794,7 +806,7 @@ https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getSimpleName--</
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -804,6 +816,22 @@ https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getSimpleName--</
     </span>)</span>
               
         </dd></dl></div>
+    </li><li name="chisel3.util.Pipe#gen" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="gen:T"></a>
+      <span class="permalink">
+      <a href="../../chisel3/util/Pipe.html#gen:T" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">gen</span><span class="result">: <span class="extype" name="chisel3.util.Pipe.T">T</span></span>
+      </span>
+      
+      
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
@@ -835,7 +863,7 @@ https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getSimpleName--</
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getCommands</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/collection/Seq.html#scala.collection.Seq" class="extype" name="scala.collection.Seq">Seq</a>[<span class="extype" name="chisel3.internal.firrtl.Command">Command</span>]</span>
+        <span class="name">getCommands</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/Seq.html#scala.collection.Seq" class="extype" name="scala.collection.Seq">Seq</a>[<span class="extype" name="chisel3.internal.firrtl.Command">Command</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../RawModule.html" class="extype" name="chisel3.RawModule">RawModule</a></dd></dl></div>
@@ -851,7 +879,7 @@ https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getSimpleName--</
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getIds</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/collection/Seq.html#scala.collection.Seq" class="extype" name="scala.collection.Seq">Seq</a>[<span class="extype" name="chisel3.internal.HasId">HasId</span>]</span>
+        <span class="name">getIds</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/Seq.html#scala.collection.Seq" class="extype" name="scala.collection.Seq">Seq</a>[<span class="extype" name="chisel3.internal.HasId">HasId</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../experimental/BaseModule.html" class="extype" name="chisel3.experimental.BaseModule">BaseModule</a></dd></dl></div>
@@ -867,7 +895,7 @@ https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getSimpleName--</
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getModulePorts</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/collection/Seq.html#scala.collection.Seq" class="extype" name="scala.collection.Seq">Seq</a>[<a href="../Data.html" class="extype" name="chisel3.Data">Data</a>]</span>
+        <span class="name">getModulePorts</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/Seq.html#scala.collection.Seq" class="extype" name="scala.collection.Seq">Seq</a>[<a href="../Data.html" class="extype" name="chisel3.Data">Data</a>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../index.html" class="extype" name="chisel3">chisel3</a>] </dd><dt>Definition Classes</dt><dd><a href="../experimental/BaseModule.html" class="extype" name="chisel3.experimental.BaseModule">BaseModule</a></dd></dl></div>
@@ -887,6 +915,22 @@ https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getSimpleName--</
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../RawModule.html" class="extype" name="chisel3.RawModule">RawModule</a></dd></dl></div>
+    </li><li name="chisel3.internal.HasId#hasSeed" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="hasSeed:Boolean"></a>
+      <span class="permalink">
+      <a href="../../chisel3/util/Pipe.html#hasSeed:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">hasSeed</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      
+      <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Whether either autoName or suggestName has been called</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasId</dd></dl></div>
     </li><li name="chisel3.internal.HasId#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">
@@ -899,7 +943,7 @@ https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getSimpleName--</
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasId → AnyRef → Any</dd></dl></div>
@@ -947,10 +991,26 @@ https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getSimpleName--</
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="chisel3.util.Pipe#latency" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="latency:Int"></a>
+      <span class="permalink">
+      <a href="../../chisel3/util/Pipe.html#latency:Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">latency</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+      </span>
+      
+      
     </li><li name="chisel3.experimental.BaseModule#name" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="name:String"></a>
       <span class="permalink">
@@ -979,7 +1039,7 @@ https://docs.oracle.com/javase/8/docs/api/java/lang/Class.html#getSimpleName--</
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">nameIds</span><span class="params">(<span name="rootClass">rootClass: <span class="extype" name="scala.Predef.Class">Class</span>[_]</span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/collection/mutable/HashMap.html#scala.collection.mutable.HashMap" class="extype" name="scala.collection.mutable.HashMap">HashMap</a>[<span class="extype" name="chisel3.internal.HasId">HasId</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>
+        <span class="name">nameIds</span><span class="params">(<span name="rootClass">rootClass: <span class="extype" name="scala.Predef.Class">Class</span>[_]</span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/mutable/HashMap.html#scala.collection.mutable.HashMap" class="extype" name="scala.collection.mutable.HashMap">HashMap</a>[<span class="extype" name="chisel3.internal.HasId">HasId</span>, <span class="extype" name="scala.Predef.String">String</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Called at the Module.apply(...) level after this Module has finished elaborating.</p><div class="fullcomment"><div class="comment cmt"><p>Called at the Module.apply(...) level after this Module has finished elaborating.
@@ -997,7 +1057,7 @@ Returns a map of nodes -&gt; names, for named nodes.</p><p>Helper method.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -1013,7 +1073,7 @@ Returns a map of nodes -&gt; names, for named nodes.</p><p>Helper method.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1032,7 +1092,7 @@ Returns a map of nodes -&gt; names, for named nodes.</p><p>Helper method.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1051,7 +1111,7 @@ Returns a map of nodes -&gt; names, for named nodes.</p><p>Helper method.
         <span class="kind">var</span>
       </span>
       <span class="symbol">
-        <span class="name">override_clock</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="../Clock.html" class="extype" name="chisel3.Clock">Clock</a>]</span>
+        <span class="name">override_clock</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="../Clock.html" class="extype" name="chisel3.Clock">Clock</a>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>LegacyModule</dd></dl></div>
@@ -1067,7 +1127,7 @@ Returns a map of nodes -&gt; names, for named nodes.</p><p>Helper method.
         <span class="kind">var</span>
       </span>
       <span class="symbol">
-        <span class="name">override_reset</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="../Bool.html" class="extype" name="chisel3.Bool">Bool</a>]</span>
+        <span class="name">override_reset</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="../Bool.html" class="extype" name="chisel3.Bool">Bool</a>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>LegacyModule</dd></dl></div>
@@ -1131,7 +1191,7 @@ Returns a map of nodes -&gt; names, for named nodes.</p><p>Helper method.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">portsContains</span><span class="params">(<span name="elem">elem: <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">portsContains</span><span class="params">(<span name="elem">elem: <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../experimental/BaseModule.html" class="extype" name="chisel3.experimental.BaseModule">BaseModule</a></dd></dl></div>
@@ -1147,7 +1207,7 @@ Returns a map of nodes -&gt; names, for named nodes.</p><p>Helper method.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">portsSize</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span class="name">portsSize</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../experimental/BaseModule.html" class="extype" name="chisel3.experimental.BaseModule">BaseModule</a></dd></dl></div>
@@ -1168,9 +1228,9 @@ Returns a map of nodes -&gt; names, for named nodes.</p><p>Helper method.
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../MultiIOModule.html" class="extype" name="chisel3.MultiIOModule">MultiIOModule</a></dd></dl></div>
     </li><li name="chisel3.internal.HasId#suggestName" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="suggestName(name:=&gt;String):HasId.this.type"></a><a id="suggestName(⇒String):Pipe.this.type"></a>
+      <a id="suggestName(seed:=&gt;String):HasId.this.type"></a><a id="suggestName(⇒String):Pipe.this.type"></a>
       <span class="permalink">
-      <a href="../../chisel3/util/Pipe.html#suggestName(name:=&gt;String):HasId.this.type" title="Permalink">
+      <a href="../../chisel3/util/Pipe.html#suggestName(seed:=&gt;String):HasId.this.type" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1179,10 +1239,14 @@ Returns a map of nodes -&gt; names, for named nodes.</p><p>Helper method.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">suggestName</span><span class="params">(<span name="name">name: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="chisel3.util.Pipe">Pipe</a>.this.type</span>
+        <span class="name">suggestName</span><span class="params">(<span name="seed">seed: ⇒ <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="" class="extype" name="chisel3.util.Pipe">Pipe</a>.this.type</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasId</dd></dl></div>
+      <p class="shortcomment cmt">Takes the first seed suggested.</p><div class="fullcomment"><div class="comment cmt"><p>Takes the first seed suggested. Multiple calls to this function will be ignored.
+If the final computed name conflicts with another name, it may get uniquified by appending
+a digit at the end.</p><p>Is a higher priority than <span class="extype" name="autoSeed">autoSeed</span>, in that regardless of whether <span class="extype" name="autoSeed">autoSeed</span>
+was called, <a href="#suggestName(seed:=&gt;String):HasId.this.type" class="extmbr" name="chisel3.util.Pipe#suggestName">suggestName</a> will always take precedence.
+</p></div><dl class="paramcmts block"><dt class="param">seed</dt><dd class="cmt"><p>The seed for the name of this component</p></dd><dt>returns</dt><dd class="cmt"><p>this object</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasId</dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
@@ -1211,7 +1275,7 @@ Returns a map of nodes -&gt; names, for named nodes.</p><p>Helper method.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toAbsoluteTarget</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4-20200603-SNAPSHOT/firrtl/annotations/IsModule.html#firrtl.annotations.IsModule" class="extype" name="firrtl.annotations.IsModule">IsModule</a></span>
+        <span class="name">toAbsoluteTarget</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0-RC3/firrtl/annotations/IsModule.html#firrtl.annotations.IsModule" class="extype" name="firrtl.annotations.IsModule">IsModule</a></span>
       </span>
       
       <p class="shortcomment cmt">Returns a FIRRTL ModuleTarget that references this object
@@ -1229,7 +1293,7 @@ Returns a map of nodes -&gt; names, for named nodes.</p><p>Helper method.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toNamed</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4-20200603-SNAPSHOT/firrtl/annotations/ModuleName.html#firrtl.annotations.ModuleName" class="extype" name="firrtl.annotations.ModuleName">ModuleName</a></span>
+        <span class="name">toNamed</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0-RC3/firrtl/annotations/ModuleName.html#firrtl.annotations.ModuleName" class="extype" name="firrtl.annotations.ModuleName">ModuleName</a></span>
       </span>
       
       <p class="shortcomment cmt">Returns a FIRRTL ModuleName that references this object
@@ -1263,7 +1327,7 @@ Returns a map of nodes -&gt; names, for named nodes.</p><p>Helper method.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toTarget</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4-20200603-SNAPSHOT/firrtl/annotations/ModuleTarget.html#firrtl.annotations.ModuleTarget" class="extype" name="firrtl.annotations.ModuleTarget">ModuleTarget</a></span>
+        <span class="name">toTarget</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0-RC3/firrtl/annotations/ModuleTarget.html#firrtl.annotations.ModuleTarget" class="extype" name="firrtl.annotations.ModuleTarget">ModuleTarget</a></span>
       </span>
       
       <p class="shortcomment cmt">Returns a FIRRTL ModuleTarget that references this object
@@ -1281,7 +1345,7 @@ Returns a map of nodes -&gt; names, for named nodes.</p><p>Helper method.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1303,7 +1367,7 @@ Returns a map of nodes -&gt; names, for named nodes.</p><p>Helper method.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1325,7 +1389,7 @@ Returns a map of nodes -&gt; names, for named nodes.</p><p>Helper method.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1360,9 +1424,9 @@ Returns a map of nodes -&gt; names, for named nodes.</p><p>Helper method.
             </div><div class="parent" name="chisel3.internal.InstanceId">
               <h3>Inherited from <span class="extype" name="chisel3.internal.InstanceId">internal.InstanceId</span></h3>
             </div><div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
             </div>
         
         </div>

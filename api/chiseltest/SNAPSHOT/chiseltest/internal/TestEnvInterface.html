@@ -381,6 +381,22 @@ if there is not a TargetDirAnnotation already present
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
+    </li><li name="chiseltest.internal.TestEnvInterface#bigintToHex" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="bigintToHex(x:BigInt):String"></a><a id="bigintToHex(BigInt):String"></a>
+      <span class="permalink">
+      <a href="../../chiseltest/internal/TestEnvInterface.html#bigintToHex(x:BigInt):String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">bigintToHex</span><span class="params">(<span name="x">x: <span class="extype" name="scala.BigInt">BigInt</span></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
     </li><li name="chiseltest.internal.TestEnvInterface#checkpoint" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="checkpoint():Unit"></a>
       <span class="permalink">
@@ -616,9 +632,9 @@ if there is not a TargetDirAnnotation already present
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="chiseltest.internal.TestEnvInterface#testerExpect" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="testerExpect(expected:Any,actual:Any,signal:String,msg:Option[String]):Unit"></a><a id="testerExpect(Any,Any,String,Option[String]):Unit"></a>
+      <a id="testerExpect(expected:BigInt,actual:BigInt,signal:String,msg:Option[String],decode:Option[BigInt=&gt;String]):Unit"></a><a id="testerExpect(BigInt,BigInt,String,Option[String],Option[(BigInt)⇒String]):Unit"></a>
       <span class="permalink">
-      <a href="../../chiseltest/internal/TestEnvInterface.html#testerExpect(expected:Any,actual:Any,signal:String,msg:Option[String]):Unit" title="Permalink">
+      <a href="../../chiseltest/internal/TestEnvInterface.html#testerExpect(expected:BigInt,actual:BigInt,signal:String,msg:Option[String],decode:Option[BigInt=&gt;String]):Unit" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -627,7 +643,7 @@ if there is not a TargetDirAnnotation already present
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">testerExpect</span><span class="params">(<span name="expected">expected: <span class="extype" name="scala.Any">Any</span></span>, <span name="actual">actual: <span class="extype" name="scala.Any">Any</span></span>, <span name="signal">signal: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="msg">msg: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+        <span class="name">testerExpect</span><span class="params">(<span name="expected">expected: <span class="extype" name="scala.BigInt">BigInt</span></span>, <span name="actual">actual: <span class="extype" name="scala.BigInt">BigInt</span></span>, <span name="signal">signal: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="msg">msg: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="decode">decode: <span class="extype" name="scala.Option">Option</span>[(<span class="extype" name="scala.BigInt">BigInt</span>) ⇒ <span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
       </span>
       
       <p class="shortcomment cmt">Expect a specific value on a wire, calling testerFail if the expectation isn't met.</p><div class="fullcomment"><div class="comment cmt"><p>Expect a specific value on a wire, calling testerFail if the expectation isn't met.

@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.4-20200603-SNAPSHOT - firrtl.options.DependencyManager</title>
-          <meta name="description" content="firrtl 1.4 - 20200603 - SNAPSHOT - firrtl.options.DependencyManager" />
-          <meta name="keywords" content="firrtl 1.4 20200603 SNAPSHOT firrtl.options.DependencyManager" />
+          <title>firrtl 1.4.0-RC3 - firrtl.options.DependencyManager</title>
+          <meta name="description" content="firrtl 1.4.0 - RC3 - firrtl.options.DependencyManager" />
+          <meta name="keywords" content="firrtl 1.4.0 RC3 firrtl.options.DependencyManager" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.4-20200603-SNAPSHOT</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.4.0-RC3</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -118,6 +118,10 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="firrtl.options">options</a></dd></dl></div>
     </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="CustomFileEmission.html" title="Mix-in that lets an Annotation serialize itself to a file separate from the output annotation file."></a>
+                        <a href="CustomFileEmission.html" title="Mix-in that lets an Annotation serialize itself to a file separate from the output annotation file.">CustomFileEmission</a>
+                      </li><li class="current-entities indented2">
                         <a class="object" href="Dependency$.html" title=""></a>
                         <a class="class" href="Dependency.html" title=""></a>
                         <a href="Dependency.html" title="">Dependency</a>
@@ -314,11 +318,11 @@
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A <a href="TransformLike.html" class="extype" name="firrtl.options.TransformLike">TransformLike</a> that resolves a linear ordering of dependencies based on
-requirements.</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>the type over which this transforms</p></dd><dt class="tparam">B</dt><dd class="cmt"><p>the type of the <a href="TransformLike.html" class="extype" name="firrtl.options.TransformLike">TransformLike</a></p></dd></dl><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/master/src/main/scala/firrtl/options/DependencyManager.scala" target="_blank">DependencyManager.scala</a></dd></dl><div class="toggleContainer block">
+requirements.</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>the type over which this transforms</p></dd><dt class="tparam">B</dt><dd class="cmt"><p>the type of the <a href="TransformLike.html" class="extype" name="firrtl.options.TransformLike">TransformLike</a></p></dd></dl><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.4.0-RC3/src/main/scala/firrtl/options/DependencyManager.scala" target="_blank">DependencyManager.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="DependencyAPI.html" class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</a>[<span class="extype" name="firrtl.options.DependencyManager.B">B</span>], <a href="TransformLike.html" class="extype" name="firrtl.options.TransformLike">TransformLike</a>[<span class="extype" name="firrtl.options.DependencyManager.A">A</span>], <a href="../../logger/LazyLogging.html" class="extype" name="logger.LazyLogging">LazyLogging</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="DependencyAPI.html" class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</a>[<span class="extype" name="firrtl.options.DependencyManager.B">B</span>], <a href="TransformLike.html" class="extype" name="firrtl.options.TransformLike">TransformLike</a>[<span class="extype" name="firrtl.options.DependencyManager.A">A</span>], <a href="../../logger/LazyLogging.html" class="extype" name="logger.LazyLogging">LazyLogging</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div><div class="toggleContainer block">
             <span class="toggle">
               Known Subclasses
@@ -385,7 +389,7 @@ requirements.</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd 
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">copy</span><span class="params">(<span name="targets">targets: <span class="extype" name="scala.Seq">Seq</span>[<a href="Dependency.html" class="extype" name="firrtl.options.Dependency">Dependency</a>[<span class="extype" name="firrtl.options.DependencyManager.B">B</span>]]</span>, <span name="currentState">currentState: <span class="extype" name="scala.Seq">Seq</span>[<a href="Dependency.html" class="extype" name="firrtl.options.Dependency">Dependency</a>[<span class="extype" name="firrtl.options.DependencyManager.B">B</span>]]</span>, <span name="knownObjects">knownObjects: <a href="https://www.scala-lang.org/api/2.12.11/scala/collection/immutable/Set.html#scala.collection.immutable.Set" class="extype" name="scala.collection.immutable.Set">Set</a>[<span class="extype" name="firrtl.options.DependencyManager.B">B</span>] = <span class="symbol"><span class="name"><a href="#dependencyToObject:scala.collection.mutable.LinkedHashMap[firrtl.options.Dependency[B],B]">dependencyToObject.values.toSet</a></span></span></span>)</span><span class="result">: <span class="extype" name="firrtl.options.DependencyManager.B">B</span></span>
+        <span class="name">copy</span><span class="params">(<span name="targets">targets: <span class="extype" name="scala.Seq">Seq</span>[<a href="Dependency.html" class="extype" name="firrtl.options.Dependency">Dependency</a>[<span class="extype" name="firrtl.options.DependencyManager.B">B</span>]]</span>, <span name="currentState">currentState: <span class="extype" name="scala.Seq">Seq</span>[<a href="Dependency.html" class="extype" name="firrtl.options.Dependency">Dependency</a>[<span class="extype" name="firrtl.options.DependencyManager.B">B</span>]]</span>, <span name="knownObjects">knownObjects: <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/immutable/Set.html#scala.collection.immutable.Set" class="extype" name="scala.collection.immutable.Set">Set</a>[<span class="extype" name="firrtl.options.DependencyManager.B">B</span>] = <span class="symbol"><span class="name"><a href="#dependencyToObject:scala.collection.mutable.LinkedHashMap[firrtl.options.Dependency[B],B]">dependencyToObject.values.toSet</a></span></span></span>)</span><span class="result">: <span class="extype" name="firrtl.options.DependencyManager.B">B</span></span>
       </span>
       
       <p class="shortcomment cmt">A method that will create a copy of this <a href="" class="extype" name="firrtl.options.DependencyManager">DependencyManager</a>, but with different
@@ -421,7 +425,7 @@ requirements. This is used to solve sub-problems arising from invalidations.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">knownObjects</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/collection/Set.html#scala.collection.Set" class="extype" name="scala.collection.Set">Set</a>[<span class="extype" name="firrtl.options.DependencyManager.B">B</span>]</span>
+        <span class="name">knownObjects</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/Set.html#scala.collection.Set" class="extype" name="scala.collection.Set">Set</a>[<span class="extype" name="firrtl.options.DependencyManager.B">B</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Existing transform objects that have already been constructed</p>
@@ -477,7 +481,7 @@ a set based on the ordering defined here.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -493,7 +497,7 @@ a set based on the ordering defined here.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -509,7 +513,7 @@ a set based on the ordering defined here.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -541,7 +545,7 @@ a set based on the ordering defined here.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -565,7 +569,7 @@ a set based on the ordering defined here.
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">colormap</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/collection/Seq.html#scala.collection.Seq" class="extype" name="scala.collection.Seq">Seq</a>[<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#java.lang.String" class="extype" name="java.lang.String">String</a>]</span>
+        <span class="name">colormap</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/Seq.html#scala.collection.Seq" class="extype" name="scala.collection.Seq">Seq</a>[<a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#java.lang.String" class="extype" name="java.lang.String">String</a>]</span>
       </span>
       
       <p class="shortcomment cmt">This colormap uses Colorbrewer's 4-class OrRd color scheme</p><div class="fullcomment"><div class="comment cmt"><p>This colormap uses Colorbrewer's 4-class OrRd color scheme</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd></dl></div>
@@ -581,7 +585,7 @@ a set based on the ordering defined here.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">customPrintHandling</span><span class="params">(<span name="tab">tab: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="charSet">charSet: <a href="DependencyManagerUtils$$CharSet.html" class="extype" name="firrtl.options.DependencyManagerUtils.CharSet">CharSet</a></span>, <span name="size">size: <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="https://www.scala-lang.org/api/2.12.11/scala/PartialFunction.html#scala.PartialFunction" class="extype" name="scala.PartialFunction">PartialFunction</a>[(<span class="extype" name="firrtl.options.DependencyManager.B">B</span>, <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>), <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]]]</span>
+        <span class="name">customPrintHandling</span><span class="params">(<span name="tab">tab: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="charSet">charSet: <a href="DependencyManagerUtils$$CharSet.html" class="extype" name="firrtl.options.DependencyManagerUtils.CharSet">CharSet</a></span>, <span name="size">size: <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="https://www.scala-lang.org/api/2.12.12/scala/PartialFunction.html#scala.PartialFunction" class="extype" name="scala.PartialFunction">PartialFunction</a>[(<span class="extype" name="firrtl.options.DependencyManager.B">B</span>, <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>), <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]]]</span>
       </span>
       
       <p class="shortcomment cmt">A method that can be overridden to define custom print handling.</p><div class="fullcomment"><div class="comment cmt"><p>A method that can be overridden to define custom print handling. This is useful if you would like to make some
@@ -633,7 +637,7 @@ optionalPrerequisiteOf
         <span class="kind">lazy val</span>
       </span>
       <span class="symbol">
-        <span class="name">dependencyToObject</span><span class="result">: <span class="extype" name="scala.collection.mutable.LinkedHashMap">LinkedHashMap</span>[<a href="Dependency.html" class="extype" name="firrtl.options.Dependency">Dependency</a>[<span class="extype" name="firrtl.options.DependencyManager.B">B</span>], <span class="extype" name="firrtl.options.DependencyManager.B">B</span>]</span>
+        <span class="name">dependencyToObject</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/mutable/LinkedHashMap.html#scala.collection.mutable.LinkedHashMap" class="extype" name="scala.collection.mutable.LinkedHashMap">LinkedHashMap</a>[<a href="Dependency.html" class="extype" name="firrtl.options.Dependency">Dependency</a>[<span class="extype" name="firrtl.options.DependencyManager.B">B</span>], <span class="extype" name="firrtl.options.DependencyManager.B">B</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Store of conversions between classes and objects.</p><div class="fullcomment"><div class="comment cmt"><p>Store of conversions between classes and objects. Objects that do not exist in the map will be lazily constructed.
@@ -650,7 +654,7 @@ optionalPrerequisiteOf
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -666,7 +670,7 @@ optionalPrerequisiteOf
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -682,7 +686,7 @@ optionalPrerequisiteOf
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -740,7 +744,7 @@ optionalPrerequisiteOf
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
@@ -775,7 +779,7 @@ optionalPrerequisiteOf
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">invalidates</span><span class="params">(<span name="a">a: <span class="extype" name="firrtl.options.DependencyManager.B">B</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">invalidates</span><span class="params">(<span name="a">a: <span class="extype" name="firrtl.options.DependencyManager.B">B</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <p class="shortcomment cmt">A function that, given *another* transform (parameter <code>a</code>) will return true if this transform invalidates/undos the
@@ -793,7 +797,7 @@ effects of the *other* transform (parameter <code>a</code>).</p></div><dl class=
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
@@ -825,7 +829,7 @@ effects of the *other* transform (parameter <code>a</code>).</p></div><dl class=
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -841,7 +845,7 @@ effects of the *other* transform (parameter <code>a</code>).</p></div><dl class=
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -860,7 +864,7 @@ effects of the *other* transform (parameter <code>a</code>).</p></div><dl class=
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -879,7 +883,7 @@ effects of the *other* transform (parameter <code>a</code>).</p></div><dl class=
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">optionalPrerequisiteOf</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/collection/Seq.html#scala.collection.Seq" class="extype" name="scala.collection.Seq">Seq</a>[<a href="https://www.scala-lang.org/api/2.12.11/scala/Nothing.html#scala.Nothing" class="extype" name="scala.Nothing">Nothing</a>]</span>
+        <span class="name">optionalPrerequisiteOf</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/Seq.html#scala.collection.Seq" class="extype" name="scala.collection.Seq">Seq</a>[<a href="https://www.scala-lang.org/api/2.12.12/scala/Nothing.html#scala.Nothing" class="extype" name="scala.Nothing">Nothing</a>]</span>
       </span>
       
       <p class="shortcomment cmt">A sequence of transforms to add this transform as an <code>optionalPrerequisite</code>.</p><div class="fullcomment"><div class="comment cmt"><p>A sequence of transforms to add this transform as an <code>optionalPrerequisite</code>. The use of <code>optionalPrerequisiteOf</code>
@@ -900,7 +904,7 @@ once, you should use a <code>DependencyManager</code> with multiple targets.</p>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">optionalPrerequisites</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/collection/Seq.html#scala.collection.Seq" class="extype" name="scala.collection.Seq">Seq</a>[<a href="https://www.scala-lang.org/api/2.12.11/scala/Nothing.html#scala.Nothing" class="extype" name="scala.Nothing">Nothing</a>]</span>
+        <span class="name">optionalPrerequisites</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/Seq.html#scala.collection.Seq" class="extype" name="scala.collection.Seq">Seq</a>[<a href="https://www.scala-lang.org/api/2.12.12/scala/Nothing.html#scala.Nothing" class="extype" name="scala.Nothing">Nothing</a>]</span>
       </span>
       
       <p class="shortcomment cmt">All transforms that, if a prerequisite of *another* transform, will run before this transform.</p><div class="fullcomment"><div class="comment cmt"><p>All transforms that, if a prerequisite of *another* transform, will run before this transform.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.options.DependencyManager">DependencyManager</a> → <a href="DependencyAPI.html" class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</a></dd><dt>Note</dt><dd><span class="cmt"><p>The use of a Seq here is to preserve input order. Internally, this will be converted to a private,
@@ -1049,7 +1053,7 @@ re-lowerings due to invalidations. Re-lowerings are implemented as new <a href="
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1071,7 +1075,7 @@ re-lowerings due to invalidations. Re-lowerings are implemented as new <a href="
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1093,7 +1097,7 @@ re-lowerings due to invalidations. Re-lowerings are implemented as new <a href="
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1172,9 +1176,9 @@ ordered Set.</p></span></dd><dt>See also</dt><dd><span class="cmt"><p><a href=".
             </div><div class="parent" name="logger.LazyLogging">
               <h3>Inherited from <a href="../../logger/LazyLogging.html" class="extype" name="logger.LazyLogging">LazyLogging</a></h3>
             </div><div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
             </div>
         
         </div>

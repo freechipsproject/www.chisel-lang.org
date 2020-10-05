@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.4-20200603-SNAPSHOT - firrtl.analyses</title>
-          <meta name="description" content="firrtl 1.4 - 20200603 - SNAPSHOT - firrtl.analyses" />
-          <meta name="keywords" content="firrtl 1.4 20200603 SNAPSHOT firrtl.analyses" />
+          <title>firrtl 1.4.0-RC3 - firrtl.analyses</title>
+          <meta name="description" content="firrtl 1.4.0 - RC3 - firrtl.analyses" />
+          <meta name="keywords" content="firrtl 1.4.0 RC3 firrtl.analyses" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.4-20200603-SNAPSHOT</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.4.0-RC3</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -102,13 +102,29 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
     </li><li class="current-entities indented2">
+                        <a class="object" href="CircuitGraph$.html" title="Use to construct CircuitGraph Also contains useful related functions"></a>
+                        <a class="class" href="CircuitGraph.html" title="Graph-representation of a FIRRTL Circuit"></a>
+                        <a href="CircuitGraph.html" title="Graph-representation of a FIRRTL Circuit">CircuitGraph</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="ConnectionGraph$.html" title=""></a>
+                        <a class="class" href="ConnectionGraph.html" title="Class to represent circuit connection."></a>
+                        <a href="ConnectionGraph.html" title="Class to represent circuit connection.">ConnectionGraph</a>
+                      </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="class" href="GetNamespace.html" title="Create a namespace with this circuit"></a>
                         <a href="GetNamespace.html" title="Create a namespace with this circuit">GetNamespace</a>
                       </li><li class="current-entities indented2">
+                        <a class="object" href="IRLookup$.html" title=""></a>
+                        <a class="class" href="IRLookup.html" title="Handy lookup for obtaining AST information about a given Target"></a>
+                        <a href="IRLookup.html" title="Handy lookup for obtaining AST information about a given Target">IRLookup</a>
+                      </li><li class="current-entities indented2">
                         <a class="object" href="InstanceGraph$.html" title=""></a>
                         <a class="class" href="InstanceGraph.html" title="A class representing the instance hierarchy of a working IR Circuit"></a>
                         <a href="InstanceGraph.html" title="A class representing the instance hierarchy of a working IR Circuit">InstanceGraph</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="InstanceKeyGraph$.html" title=""></a>
+                        <a class="class" href="InstanceKeyGraph.html" title="A class representing the instance hierarchy of firrtl Circuit This is a faster version of the old InstanceGraph which only uses pairs of InstanceName and Module name as vertex keys instead of using WDefInstance which will hash the instance type causing some performance issues."></a>
+                        <a href="InstanceKeyGraph.html" title="A class representing the instance hierarchy of firrtl Circuit This is a faster version of the old InstanceGraph which only uses pairs of InstanceName and Module name as vertex keys instead of using WDefInstance which will hash the instance type causing some performance issues.">InstanceKeyGraph</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="class" href="ModuleNamespaceAnnotation.html" title=""></a>
@@ -117,6 +133,14 @@
                         <a class="object" href="NodeCount$.html" title=""></a>
                         <a class="class" href="NodeCount.html" title="This is not intended to be used as a metric for the size of an actual circuit, but rather to debug the compiler itself Works because all FirrtlNodes implement Product (case classes do)"></a>
                         <a href="NodeCount.html" title="This is not intended to be used as a metric for the size of an actual circuit, but rather to debug the compiler itself Works because all FirrtlNodes implement Product (case classes do)">NodeCount</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="SymbolTable$.html" title="Provides convenience methods to populate SymbolTables."></a>
+                        <a class="trait" href="SymbolTable.html" title="This trait represents a data structure that stores information on all the symbols available in a single firrtl module."></a>
+                        <a href="SymbolTable.html" title="This trait represents a data structure that stores information on all the symbols available in a single firrtl module.">SymbolTable</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="TokenTagger$.html" title=""></a>
+                        <a class="class" href="TokenTagger.html" title="Used for obtaining a tag for a given label unnamed Target."></a>
+                        <a href="TokenTagger.html" title="Used for obtaining a tag for a given label unnamed Target.">TokenTagger</a>
                       </li><li name="firrtl.annotations" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="annotations"></a><a id="annotations:annotations"></a>
       <span class="permalink">
@@ -146,6 +170,22 @@
       </span>
       <span class="symbol">
         <a title="" href="../antlr/index.html"><span class="name">antlr</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
+    </li><li name="firrtl.backends" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="backends"></a><a id="backends:backends"></a>
+      <span class="permalink">
+      <a href="../../firrtl/backends/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../backends/index.html"><span class="name">backends</span></a>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
@@ -197,6 +237,38 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
+    </li><li name="firrtl.features" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="features"></a><a id="features:features"></a>
+      <span class="permalink">
+      <a href="../../firrtl/features/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../features/index.html"><span class="name">features</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
+    </li><li name="firrtl.fuzzer" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="fuzzer"></a><a id="fuzzer:fuzzer"></a>
+      <span class="permalink">
+      <a href="../../firrtl/fuzzer/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../fuzzer/index.html"><span class="name">fuzzer</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
     </li><li name="firrtl.graph" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="graph"></a><a id="graph:graph"></a>
       <span class="permalink">
@@ -226,6 +298,22 @@
       </span>
       <span class="symbol">
         <a title="" href="../ir/index.html"><span class="name">ir</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
+    </li><li name="firrtl.jqf" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="jqf"></a><a id="jqf:jqf"></a>
+      <span class="permalink">
+      <a href="../../firrtl/jqf/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../jqf/index.html"><span class="name">jqf</span></a>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
@@ -409,8 +497,42 @@ primarily consists of:</p><ul><li><a href="../stage/FirrtlStage.html" class="ext
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="firrtl.analyses.GetNamespace" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="GetNamespaceextendsTransformwithDependencyAPIMigrationwithPreservesAll[firrtl.Transform]"></a><a id="GetNamespace:GetNamespace"></a>
+              <ol><li name="firrtl.analyses.CircuitGraph" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="CircuitGraphextendsAnyRef"></a><a id="CircuitGraph:CircuitGraph"></a>
+      <span class="permalink">
+      <a href="../../firrtl/analyses/CircuitGraph.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Graph-representation of a FIRRTL Circuit" href="CircuitGraph.html"><span class="name">CircuitGraph</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Graph-representation of a FIRRTL Circuit</p><div class="fullcomment"><div class="comment cmt"><p>Graph-representation of a FIRRTL Circuit</p><p>Requires Middle FIRRTL
+Useful for writing design-specific custom-transforms that require connectivity information
+</p></div></div>
+    </li><li name="firrtl.analyses.ConnectionGraph" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ConnectionGraphextendsDiGraph[firrtl.annotations.ReferenceTarget]"></a><a id="ConnectionGraph:ConnectionGraph"></a>
+      <span class="permalink">
+      <a href="../../firrtl/analyses/ConnectionGraph.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Class to represent circuit connection." href="ConnectionGraph.html"><span class="name">ConnectionGraph</span></a><span class="result"> extends <a href="../graph/DiGraph.html" class="extype" name="firrtl.graph.DiGraph">DiGraph</a>[<a href="../annotations/ReferenceTarget.html" class="extype" name="firrtl.annotations.ReferenceTarget">ReferenceTarget</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Class to represent circuit connection.</p>
+    </li><li name="firrtl.analyses.GetNamespace" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="GetNamespaceextendsTransformwithDependencyAPIMigration"></a><a id="GetNamespace:GetNamespace"></a>
       <span class="permalink">
       <a href="../../firrtl/analyses/GetNamespace.html" title="Permalink">
         <i class="material-icons"></i>
@@ -421,15 +543,15 @@ primarily consists of:</p><ul><li><a href="../stage/FirrtlStage.html" class="ext
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Create a namespace with this circuit" href="GetNamespace.html"><span class="name">GetNamespace</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="../DependencyAPIMigration.html" class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</a> with <a href="../options/PreservesAll.html" class="extype" name="firrtl.options.PreservesAll">PreservesAll</a>[<a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a>]</span>
+        <a title="Create a namespace with this circuit" href="GetNamespace.html"><span class="name">GetNamespace</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="../DependencyAPIMigration.html" class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</a></span>
       </span>
       
       <p class="shortcomment cmt">Create a namespace with this circuit</p><div class="fullcomment"><div class="comment cmt"><p>Create a namespace with this circuit</p><p>namespace is used by RenameModules to get unique names
 </p></div></div>
-    </li><li name="firrtl.analyses.InstanceGraph" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="InstanceGraphextendsAnyRef"></a><a id="InstanceGraph:InstanceGraph"></a>
+    </li><li name="firrtl.analyses.IRLookup" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="IRLookupextendsAnyRef"></a><a id="IRLookup:IRLookup"></a>
       <span class="permalink">
-      <a href="../../firrtl/analyses/InstanceGraph.html" title="Permalink">
+      <a href="../../firrtl/analyses/IRLookup.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -438,11 +560,30 @@ primarily consists of:</p><ul><li><a href="../stage/FirrtlStage.html" class="ext
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="A class representing the instance hierarchy of a working IR Circuit" href="InstanceGraph.html"><span class="name">InstanceGraph</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="Handy lookup for obtaining AST information about a given Target" href="IRLookup.html"><span class="name">IRLookup</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
-      <p class="shortcomment cmt">A class representing the instance hierarchy of a working IR Circuit
+      <p class="shortcomment cmt">Handy lookup for obtaining AST information about a given Target
 </p>
+    </li><li name="firrtl.analyses.InstanceKeyGraph" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InstanceKeyGraphextendsAnyRef"></a><a id="InstanceKeyGraph:InstanceKeyGraph"></a>
+      <span class="permalink">
+      <a href="../../firrtl/analyses/InstanceKeyGraph.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A class representing the instance hierarchy of firrtl Circuit This is a faster version of the old InstanceGraph which only uses pairs of InstanceName and Module name as vertex keys instead of using WDefInstance which will hash the instance type causing some performance issues." href="InstanceKeyGraph.html"><span class="name">InstanceKeyGraph</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A class representing the instance hierarchy of firrtl Circuit
+This is a faster version of the old <code>InstanceGraph</code> which only uses
+pairs of InstanceName and Module name as vertex keys instead of using WDefInstance
+which will hash the instance type causing some performance issues.</p>
     </li><li name="firrtl.analyses.ModuleNamespaceAnnotation" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="ModuleNamespaceAnnotationextendsNoTargetAnnotationwithProductwithSerializable"></a><a id="ModuleNamespaceAnnotation:ModuleNamespaceAnnotation"></a>
       <span class="permalink">
@@ -455,7 +596,7 @@ primarily consists of:</p><ul><li><a href="../stage/FirrtlStage.html" class="ext
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="" href="ModuleNamespaceAnnotation.html"><span class="name">ModuleNamespaceAnnotation</span></a><span class="params">(<span name="namespace">namespace: <a href="../Namespace.html" class="extype" name="firrtl.Namespace">Namespace</a></span>)</span><span class="result"> extends <a href="../annotations/NoTargetAnnotation.html" class="extype" name="firrtl.annotations.NoTargetAnnotation">NoTargetAnnotation</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="" href="ModuleNamespaceAnnotation.html"><span class="name">ModuleNamespaceAnnotation</span></a><span class="params">(<span name="namespace">namespace: <a href="../Namespace.html" class="extype" name="firrtl.Namespace">Namespace</a></span>)</span><span class="result"> extends <a href="../annotations/NoTargetAnnotation.html" class="extype" name="firrtl.annotations.NoTargetAnnotation">NoTargetAnnotation</a> with <a href="https://www.scala-lang.org/api/2.12.12/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.12/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       
@@ -471,13 +612,84 @@ primarily consists of:</p><ul><li><a href="../stage/FirrtlStage.html" class="ext
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="This is not intended to be used as a metric for the size of an actual circuit, but rather to debug the compiler itself Works because all FirrtlNodes implement Product (case classes do)" href="NodeCount.html"><span class="name">NodeCount</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="This is not intended to be used as a metric for the size of an actual circuit, but rather to debug the compiler itself Works because all FirrtlNodes implement Product (case classes do)" href="NodeCount.html"><span class="name">NodeCount</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <p class="shortcomment cmt">This is not intended to be used as a metric for the size of an actual
   circuit, but rather to debug the compiler itself
 Works because all FirrtlNodes implement Product (case classes do)
 </p>
+    </li><li name="firrtl.analyses.SymbolTable" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
+      <a id="SymbolTableextendsAnyRef"></a><a id="SymbolTable:SymbolTable"></a>
+      <span class="permalink">
+      <a href="../../firrtl/analyses/SymbolTable.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="This trait represents a data structure that stores information on all the symbols available in a single firrtl module." href="SymbolTable.html"><span class="name">SymbolTable</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">This trait represents a data structure that stores information
+on all the symbols available in a single firrtl module.</p><div class="fullcomment"><div class="comment cmt"><p>This trait represents a data structure that stores information
+on all the symbols available in a single firrtl module.
+The module can either be scanned all at once using the
+scanModule helper function from the companion object or
+the SymbolTable can be updated while traversing the module by
+calling the declare method every time a declaration is encountered.
+Different implementations of SymbolTable might want to store different
+information (e.g., only the names without the types) or build
+different indices depending on what information the transform needs.
+</p></div></div>
+    </li><li name="firrtl.analyses.TokenTagger" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TokenTaggerextendsAnyRef"></a><a id="TokenTagger:TokenTagger"></a>
+      <span class="permalink">
+      <a href="../../firrtl/analyses/TokenTagger.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Used for obtaining a tag for a given label unnamed Target." href="TokenTagger.html"><span class="name">TokenTagger</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Used for obtaining a tag for a given label unnamed Target.</p>
+    </li><li name="firrtl.analyses.InstanceGraph" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="InstanceGraphextendsAnyRef"></a><a id="InstanceGraph:InstanceGraph"></a>
+      <span class="permalink">
+      <a href="../../firrtl/analyses/InstanceGraph.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="A class representing the instance hierarchy of a working IR Circuit" href="InstanceGraph.html"><span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.4) Use InstanceKeyGraph instead.">InstanceGraph</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A class representing the instance hierarchy of a working IR Circuit
+</p><div class="fullcomment"><div class="comment cmt"><p>A class representing the instance hierarchy of a working IR Circuit
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FIRRTL 1.4)</i> Use InstanceKeyGraph instead.</p></dd><dt>Note</dt><dd><span class="cmt"><p>The current implementation has some performance problems, which is why <a href="InstanceKeyGraph.html" class="extype" name="firrtl.analyses.InstanceKeyGraph">InstanceKeyGraph</a>
+      exists and should be preferred for new use cases. Eventually the old class will be deprecated
+      in favor of the new implementation.
+      The performance problems in the old implementation stem from the fact that DefInstance is used as the
+      key to the underlying Map. DefInstance contains the type of the module besides the module and instance names.
+      This type is not needed as it can be inferred from the module name. If the module name is the same,
+      the type will be the same and vice versa.
+      Hashing and comparing deep bundle types however is inefficient which can manifest in slower then necessary
+      lookups and insertions.</p></span></dd></dl></div>
     </li></ol>
             </div>
 
@@ -486,10 +698,10 @@ Works because all FirrtlNodes implement Product (case classes do)
         <div class="values members">
               <h3>Value Members</h3>
               <ol>
-                <li name="firrtl.analyses.InstanceGraph" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="InstanceGraph"></a><a id="InstanceGraph:InstanceGraph"></a>
+                <li name="firrtl.analyses.CircuitGraph" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="CircuitGraph"></a><a id="CircuitGraph:CircuitGraph"></a>
       <span class="permalink">
-      <a href="../../firrtl/analyses/InstanceGraph$.html" title="Permalink">
+      <a href="../../firrtl/analyses/CircuitGraph$.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -498,7 +710,57 @@ Works because all FirrtlNodes implement Product (case classes do)
         <span class="kind">object</span>
       </span>
       <span class="symbol">
-        <a title="" href="InstanceGraph$.html"><span class="name">InstanceGraph</span></a>
+        <a title="Use to construct CircuitGraph Also contains useful related functions" href="CircuitGraph$.html"><span class="name">CircuitGraph</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Use to construct <a href="CircuitGraph.html" class="extype" name="firrtl.analyses.CircuitGraph">CircuitGraph</a>
+Also contains useful related functions
+</p>
+    </li><li name="firrtl.analyses.ConnectionGraph" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="ConnectionGraph"></a><a id="ConnectionGraph:ConnectionGraph"></a>
+      <span class="permalink">
+      <a href="../../firrtl/analyses/ConnectionGraph$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="ConnectionGraph$.html"><span class="name">ConnectionGraph</span></a>
+      </span>
+      
+      
+    </li><li name="firrtl.analyses.IRLookup" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="IRLookup"></a><a id="IRLookup:IRLookup"></a>
+      <span class="permalink">
+      <a href="../../firrtl/analyses/IRLookup$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="IRLookup$.html"><span class="name">IRLookup</span></a>
+      </span>
+      
+      
+    </li><li name="firrtl.analyses.InstanceKeyGraph" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="InstanceKeyGraph"></a><a id="InstanceKeyGraph:InstanceKeyGraph"></a>
+      <span class="permalink">
+      <a href="../../firrtl/analyses/InstanceKeyGraph$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="InstanceKeyGraph$.html"><span class="name">InstanceKeyGraph</span></a>
       </span>
       
       
@@ -518,13 +780,67 @@ Works because all FirrtlNodes implement Product (case classes do)
       </span>
       
       
+    </li><li name="firrtl.analyses.SymbolTable" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SymbolTable"></a><a id="SymbolTable:SymbolTable"></a>
+      <span class="permalink">
+      <a href="../../firrtl/analyses/SymbolTable$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="Provides convenience methods to populate SymbolTables." href="SymbolTable$.html"><span class="name">SymbolTable</span></a>
+      </span>
+      
+      <p class="shortcomment cmt">Provides convenience methods to populate SymbolTables.</p>
+    </li><li name="firrtl.analyses.TokenTagger" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="TokenTagger"></a><a id="TokenTagger:TokenTagger"></a>
+      <span class="permalink">
+      <a href="../../firrtl/analyses/TokenTagger$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="TokenTagger$.html"><span class="name">TokenTagger</span></a>
+      </span>
+      
+      
     </li>
               </ol>
             </div>
 
         
 
-        
+        <div class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="firrtl.analyses.InstanceGraph" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="InstanceGraph"></a><a id="InstanceGraph:InstanceGraph"></a>
+      <span class="permalink">
+      <a href="../../firrtl/analyses/InstanceGraph$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="InstanceGraph$.html"><span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.4) Use InstanceKeyGraph instead.">InstanceGraph</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FIRRTL 1.4)</i> Use InstanceKeyGraph instead.</p></dd></dl></div>
+    </li></ol>
+            </div>
         </div>
 
         <div id="inheritedMembers">

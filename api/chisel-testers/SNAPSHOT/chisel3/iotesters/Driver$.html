@@ -492,9 +492,9 @@ command line
 command line
 </p></div><dl class="paramcmts block"><dt class="param">args</dt><dd class="cmt"><p>A *main* style array of string options</p></dd><dt class="param">dut</dt><dd class="cmt"><p>The device to be tested, (device-under-test)</p></dd><dt class="param">testerGen</dt><dd class="cmt"><p>A peek-poke tester with test for the dey</p></dd><dt>returns</dt><dd class="cmt"><p>Returns true if all tests in testerGen pass</p></dd></dl></div>
     </li><li name="chisel3.iotesters.Driver#execute" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="execute[T&lt;:chisel3.MultiIOModule](dutGenerator:()=&gt;T,optionsManager:chisel3.iotesters.TesterOptionsManager)(testerGen:T=&gt;chisel3.iotesters.PeekPokeTester[T]):Boolean"></a><a id="execute[T&lt;:MultiIOModule](()⇒T,TesterOptionsManager)((T)⇒PeekPokeTester[T]):Boolean"></a>
+      <a id="execute[T&lt;:chisel3.MultiIOModule](dutGenerator:()=&gt;T,optionsManager:chisel3.iotesters.TesterOptionsManager,firrtlSourceOverride:Option[String])(testerGen:T=&gt;chisel3.iotesters.PeekPokeTester[T]):Boolean"></a><a id="execute[T&lt;:MultiIOModule](()⇒T,TesterOptionsManager,Option[String])((T)⇒PeekPokeTester[T]):Boolean"></a>
       <span class="permalink">
-      <a href="../../chisel3/iotesters/Driver$.html#execute[T&lt;:chisel3.MultiIOModule](dutGenerator:()=&gt;T,optionsManager:chisel3.iotesters.TesterOptionsManager)(testerGen:T=&gt;chisel3.iotesters.PeekPokeTester[T]):Boolean" title="Permalink">
+      <a href="../../chisel3/iotesters/Driver$.html#execute[T&lt;:chisel3.MultiIOModule](dutGenerator:()=&gt;T,optionsManager:chisel3.iotesters.TesterOptionsManager,firrtlSourceOverride:Option[String])(testerGen:T=&gt;chisel3.iotesters.PeekPokeTester[T]):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -503,7 +503,7 @@ command line
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">execute</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="chisel3.MultiIOModule">MultiIOModule</span></span>]</span><span class="params">(<span name="dutGenerator">dutGenerator: () ⇒ <span class="extype" name="chisel3.iotesters.Driver.execute.T">T</span></span>, <span name="optionsManager">optionsManager: <a href="TesterOptionsManager.html" class="extype" name="chisel3.iotesters.TesterOptionsManager">TesterOptionsManager</a></span>)</span><span class="params">(<span name="testerGen">testerGen: (<span class="extype" name="chisel3.iotesters.Driver.execute.T">T</span>) ⇒ <a href="PeekPokeTester.html" class="extype" name="chisel3.iotesters.PeekPokeTester">PeekPokeTester</a>[<span class="extype" name="chisel3.iotesters.Driver.execute.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
+        <span class="name">execute</span><span class="tparams">[<span name="T">T &lt;: <span class="extype" name="chisel3.MultiIOModule">MultiIOModule</span></span>]</span><span class="params">(<span name="dutGenerator">dutGenerator: () ⇒ <span class="extype" name="chisel3.iotesters.Driver.execute.T">T</span></span>, <span name="optionsManager">optionsManager: <a href="TesterOptionsManager.html" class="extype" name="chisel3.iotesters.TesterOptionsManager">TesterOptionsManager</a></span>, <span name="firrtlSourceOverride">firrtlSourceOverride: <span class="extype" name="scala.Option">Option</span>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">None</span></span>)</span><span class="params">(<span name="testerGen">testerGen: (<span class="extype" name="chisel3.iotesters.Driver.execute.T">T</span>) ⇒ <a href="PeekPokeTester.html" class="extype" name="chisel3.iotesters.PeekPokeTester">PeekPokeTester</a>[<span class="extype" name="chisel3.iotesters.Driver.execute.T">T</span>]</span>)</span><span class="result">: <span class="extype" name="scala.Boolean">Boolean</span></span>
       </span>
       
       <p class="shortcomment cmt">This executes a test harness that extends peek-poke tester upon a device under test

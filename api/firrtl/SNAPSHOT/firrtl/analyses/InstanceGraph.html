@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.4-20200603-SNAPSHOT - firrtl.analyses.InstanceGraph</title>
-          <meta name="description" content="firrtl 1.4 - 20200603 - SNAPSHOT - firrtl.analyses.InstanceGraph" />
-          <meta name="keywords" content="firrtl 1.4 20200603 SNAPSHOT firrtl.analyses.InstanceGraph" />
+          <title>firrtl 1.4.0-RC3 - firrtl.analyses.InstanceGraph</title>
+          <meta name="description" content="firrtl 1.4.0 - RC3 - firrtl.analyses.InstanceGraph" />
+          <meta name="keywords" content="firrtl 1.4.0 RC3 firrtl.analyses.InstanceGraph" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.4-20200603-SNAPSHOT</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.4.0-RC3</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -102,13 +102,29 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="firrtl">firrtl</a></dd></dl></div>
     </li><li class="current-entities indented2">
+                        <a class="object" href="CircuitGraph$.html" title="Use to construct CircuitGraph Also contains useful related functions"></a>
+                        <a class="class" href="CircuitGraph.html" title="Graph-representation of a FIRRTL Circuit"></a>
+                        <a href="CircuitGraph.html" title="Graph-representation of a FIRRTL Circuit">CircuitGraph</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="ConnectionGraph$.html" title=""></a>
+                        <a class="class" href="ConnectionGraph.html" title="Class to represent circuit connection."></a>
+                        <a href="ConnectionGraph.html" title="Class to represent circuit connection.">ConnectionGraph</a>
+                      </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="class" href="GetNamespace.html" title="Create a namespace with this circuit"></a>
                         <a href="GetNamespace.html" title="Create a namespace with this circuit">GetNamespace</a>
                       </li><li class="current-entities indented2">
+                        <a class="object" href="IRLookup$.html" title=""></a>
+                        <a class="class" href="IRLookup.html" title="Handy lookup for obtaining AST information about a given Target"></a>
+                        <a href="IRLookup.html" title="Handy lookup for obtaining AST information about a given Target">IRLookup</a>
+                      </li><li class="current-entities indented2">
                         <a class="object" href="InstanceGraph$.html" title=""></a>
                         <a class="class" href="" title="A class representing the instance hierarchy of a working IR Circuit"></a>
                         <a href="" title="A class representing the instance hierarchy of a working IR Circuit">InstanceGraph</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="InstanceKeyGraph$.html" title=""></a>
+                        <a class="class" href="InstanceKeyGraph.html" title="A class representing the instance hierarchy of firrtl Circuit This is a faster version of the old InstanceGraph which only uses pairs of InstanceName and Module name as vertex keys instead of using WDefInstance which will hash the instance type causing some performance issues."></a>
+                        <a href="InstanceKeyGraph.html" title="A class representing the instance hierarchy of firrtl Circuit This is a faster version of the old InstanceGraph which only uses pairs of InstanceName and Module name as vertex keys instead of using WDefInstance which will hash the instance type causing some performance issues.">InstanceKeyGraph</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="class" href="ModuleNamespaceAnnotation.html" title=""></a>
@@ -117,6 +133,14 @@
                         <a class="object" href="NodeCount$.html" title=""></a>
                         <a class="class" href="NodeCount.html" title="This is not intended to be used as a metric for the size of an actual circuit, but rather to debug the compiler itself Works because all FirrtlNodes implement Product (case classes do)"></a>
                         <a href="NodeCount.html" title="This is not intended to be used as a metric for the size of an actual circuit, but rather to debug the compiler itself Works because all FirrtlNodes implement Product (case classes do)">NodeCount</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="SymbolTable$.html" title="Provides convenience methods to populate SymbolTables."></a>
+                        <a class="trait" href="SymbolTable.html" title="This trait represents a data structure that stores information on all the symbols available in a single firrtl module."></a>
+                        <a href="SymbolTable.html" title="This trait represents a data structure that stores information on all the symbols available in a single firrtl module.">SymbolTable</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="TokenTagger$.html" title=""></a>
+                        <a class="class" href="TokenTagger.html" title="Used for obtaining a tag for a given label unnamed Target."></a>
+                        <a href="TokenTagger.html" title="Used for obtaining a tag for a given label unnamed Target.">TokenTagger</a>
                       </li>
               </ul>
             </div>
@@ -142,17 +166,28 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">InstanceGraph</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.4) Use InstanceKeyGraph instead.">InstanceGraph</span><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       </h4>
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A class representing the instance hierarchy of a working IR Circuit
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/master/src/main/scala/firrtl/analyses/InstanceGraph.scala" target="_blank">InstanceGraph.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FIRRTL 1.4)</i> Use InstanceKeyGraph instead.</p></dd><dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.4.0-RC3/src/main/scala/firrtl/analyses/InstanceGraph.scala" target="_blank">InstanceGraph.scala</a></dd><dt>Note</dt><dd><span class="cmt"><p>The current implementation has some performance problems, which is why <a href="InstanceKeyGraph.html" class="extype" name="firrtl.analyses.InstanceKeyGraph">InstanceKeyGraph</a>
+      exists and should be preferred for new use cases. Eventually the old class will be deprecated
+      in favor of the new implementation.
+      The performance problems in the old implementation stem from the fact that DefInstance is used as the
+      key to the underlying Map. DefInstance contains the type of the module besides the module and instance names.
+      This type is not needed as it can be inferred from the module name. If the module name is the same,
+      the type will be the same and vice versa.
+      Hashing and comparing deep bundle types however is inefficient which can manifest in slower then necessary
+      lookups and insertions.</p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div></div>
         
 
@@ -236,7 +271,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -252,7 +287,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -268,7 +303,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -300,7 +335,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -324,7 +359,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -340,7 +375,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -356,7 +391,7 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -366,100 +401,6 @@
     </span>)</span>
               
         </dd></dl></div>
-    </li><li name="firrtl.analyses.InstanceGraph#findInstancesInHierarchy" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="findInstancesInHierarchy(module:String):Seq[Seq[firrtl.WDefInstance]]"></a><a id="findInstancesInHierarchy(String):Seq[Seq[WDefInstance]]"></a>
-      <span class="permalink">
-      <a href="../../firrtl/analyses/InstanceGraph.html#findInstancesInHierarchy(module:String):Seq[Seq[firrtl.WDefInstance]]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">findInstancesInHierarchy</span><span class="params">(<span name="module">module: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Seq">Seq</span>[<a href="../index.html#WDefInstance=firrtl.ir.DefInstance" class="extmbr" name="firrtl.WDefInstance">WDefInstance</a>]]</span>
-      </span>
-      
-      <p class="shortcomment cmt">Finds the absolute paths (each represented by a Seq of instances
-representing the chain of hierarchy) of all instances of a particular
-module.</p><div class="fullcomment"><div class="comment cmt"><p>Finds the absolute paths (each represented by a Seq of instances
-representing the chain of hierarchy) of all instances of a particular
-module. Note that this includes one implicit instance of the top (main)
-module of the circuit. If the module is not instantiated within the
-hierarchy of the top module of the circuit, it will return Nil.
-</p></div><dl class="paramcmts block"><dt class="param">module</dt><dd class="cmt"><p>the name of the selected module</p></dd><dt>returns</dt><dd class="cmt"><p>a Seq[ Seq[WDefInstance] ] of absolute instance paths</p></dd></dl></div>
-    </li><li name="firrtl.analyses.InstanceGraph#fullHierarchy" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="fullHierarchy:scala.collection.mutable.LinkedHashMap[firrtl.WDefInstance,Seq[Seq[firrtl.WDefInstance]]]"></a><a id="fullHierarchy:LinkedHashMap[WDefInstance,Seq[Seq[WDefInstance]]]"></a>
-      <span class="permalink">
-      <a href="../../firrtl/analyses/InstanceGraph.html#fullHierarchy:scala.collection.mutable.LinkedHashMap[firrtl.WDefInstance,Seq[Seq[firrtl.WDefInstance]]]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">lazy val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">fullHierarchy</span><span class="result">: <span class="extype" name="scala.collection.mutable.LinkedHashMap">LinkedHashMap</span>[<a href="../index.html#WDefInstance=firrtl.ir.DefInstance" class="extmbr" name="firrtl.WDefInstance">WDefInstance</a>, <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Seq">Seq</span>[<a href="../index.html#WDefInstance=firrtl.ir.DefInstance" class="extmbr" name="firrtl.WDefInstance">WDefInstance</a>]]]</span>
-      </span>
-      
-      <p class="shortcomment cmt">A list of absolute paths (each represented by a Seq of instances)
-of all module instances in the Circuit.</p>
-    </li><li name="firrtl.analyses.InstanceGraph#getChildrenInstanceMap" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getChildrenInstanceMap:scala.collection.Map[firrtl.annotations.TargetToken.OfModule,scala.collection.Map[firrtl.annotations.TargetToken.Instance,firrtl.annotations.TargetToken.OfModule]]"></a><a id="getChildrenInstanceMap:Map[OfModule,Map[Instance,OfModule]]"></a>
-      <span class="permalink">
-      <a href="../../firrtl/analyses/InstanceGraph.html#getChildrenInstanceMap:scala.collection.Map[firrtl.annotations.TargetToken.OfModule,scala.collection.Map[firrtl.annotations.TargetToken.Instance,firrtl.annotations.TargetToken.OfModule]]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getChildrenInstanceMap</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/collection/Map.html#scala.collection.Map" class="extype" name="scala.collection.Map">Map</a>[<a href="../annotations/TargetToken$$OfModule.html" class="extype" name="firrtl.annotations.TargetToken.OfModule">OfModule</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/collection/Map.html#scala.collection.Map" class="extype" name="scala.collection.Map">Map</a>[<a href="../annotations/TargetToken$$Instance.html" class="extype" name="firrtl.annotations.TargetToken.Instance">Instance</a>, <a href="../annotations/TargetToken$$OfModule.html" class="extype" name="firrtl.annotations.TargetToken.OfModule">OfModule</a>]]</span>
-      </span>
-      
-      <p class="shortcomment cmt">Given a circuit, returns a map from module name to a map
-in turn mapping instances names to corresponding module names
-</p>
-    </li><li name="firrtl.analyses.InstanceGraph#getChildrenInstanceOfModule" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getChildrenInstanceOfModule:scala.collection.mutable.LinkedHashMap[String,scala.collection.mutable.LinkedHashSet[(firrtl.annotations.TargetToken.Instance,firrtl.annotations.TargetToken.OfModule)]]"></a><a id="getChildrenInstanceOfModule:LinkedHashMap[String,LinkedHashSet[(Instance,OfModule)]]"></a>
-      <span class="permalink">
-      <a href="../../firrtl/analyses/InstanceGraph.html#getChildrenInstanceOfModule:scala.collection.mutable.LinkedHashMap[String,scala.collection.mutable.LinkedHashSet[(firrtl.annotations.TargetToken.Instance,firrtl.annotations.TargetToken.OfModule)]]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getChildrenInstanceOfModule</span><span class="result">: <span class="extype" name="scala.collection.mutable.LinkedHashMap">LinkedHashMap</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.collection.mutable.LinkedHashSet">LinkedHashSet</span>[(<a href="../annotations/TargetToken$$Instance.html" class="extype" name="firrtl.annotations.TargetToken.Instance">Instance</a>, <a href="../annotations/TargetToken$$OfModule.html" class="extype" name="firrtl.annotations.TargetToken.OfModule">OfModule</a>)]]</span>
-      </span>
-      
-      <p class="shortcomment cmt">Given a circuit, returns a map from module name to children
-instance/module <a href="../annotations/TargetToken.html" class="extype" name="firrtl.annotations.TargetToken">firrtl.annotations.TargetToken</a>s
-</p>
-    </li><li name="firrtl.analyses.InstanceGraph#getChildrenInstances" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="getChildrenInstances:scala.collection.mutable.LinkedHashMap[String,scala.collection.mutable.LinkedHashSet[firrtl.WDefInstance]]"></a><a id="getChildrenInstances:LinkedHashMap[String,LinkedHashSet[WDefInstance]]"></a>
-      <span class="permalink">
-      <a href="../../firrtl/analyses/InstanceGraph.html#getChildrenInstances:scala.collection.mutable.LinkedHashMap[String,scala.collection.mutable.LinkedHashSet[firrtl.WDefInstance]]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">getChildrenInstances</span><span class="result">: <span class="extype" name="scala.collection.mutable.LinkedHashMap">LinkedHashMap</span>[<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.collection.mutable.LinkedHashSet">LinkedHashSet</span>[<a href="../index.html#WDefInstance=firrtl.ir.DefInstance" class="extmbr" name="firrtl.WDefInstance">WDefInstance</a>]]</span>
-      </span>
-      
-      <p class="shortcomment cmt">Given a circuit, returns a map from module name to children
-instance/module definitions
-</p>
     </li><li name="scala.AnyRef#getClass" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getClass():Class[_]"></a>
       <span class="permalink">
@@ -479,27 +420,6 @@ instance/module definitions
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="firrtl.analyses.InstanceGraph#graph" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="graph:firrtl.graph.DiGraph[firrtl.WDefInstance]"></a><a id="graph:DiGraph[WDefInstance]"></a>
-      <span class="permalink">
-      <a href="../../firrtl/analyses/InstanceGraph.html#graph:firrtl.graph.DiGraph[firrtl.WDefInstance]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">lazy val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">graph</span><span class="result">: <a href="../graph/DiGraph.html" class="extype" name="firrtl.graph.DiGraph">DiGraph</a>[<a href="../index.html#WDefInstance=firrtl.ir.DefInstance" class="extmbr" name="firrtl.WDefInstance">WDefInstance</a>]</span>
-      </span>
-      
-      <p class="shortcomment cmt">A directed graph showing the instance dependencies among modules
-in the circuit.</p><div class="fullcomment"><div class="comment cmt"><p>A directed graph showing the instance dependencies among modules
-in the circuit. Every WDefInstance of a module has an edge to
-every WDefInstance arising from every instance statement in
-that module.
-</p></div></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">
@@ -512,7 +432,7 @@ that module.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
@@ -531,76 +451,10 @@ that module.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
-    </li><li name="firrtl.analyses.InstanceGraph#lowestCommonAncestor" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="lowestCommonAncestor(moduleA:Seq[firrtl.WDefInstance],moduleB:Seq[firrtl.WDefInstance]):Seq[firrtl.WDefInstance]"></a><a id="lowestCommonAncestor(Seq[WDefInstance],Seq[WDefInstance]):Seq[WDefInstance]"></a>
-      <span class="permalink">
-      <a href="../../firrtl/analyses/InstanceGraph.html#lowestCommonAncestor(moduleA:Seq[firrtl.WDefInstance],moduleB:Seq[firrtl.WDefInstance]):Seq[firrtl.WDefInstance]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">lowestCommonAncestor</span><span class="params">(<span name="moduleA">moduleA: <span class="extype" name="scala.Seq">Seq</span>[<a href="../index.html#WDefInstance=firrtl.ir.DefInstance" class="extmbr" name="firrtl.WDefInstance">WDefInstance</a>]</span>, <span name="moduleB">moduleB: <span class="extype" name="scala.Seq">Seq</span>[<a href="../index.html#WDefInstance=firrtl.ir.DefInstance" class="extmbr" name="firrtl.WDefInstance">WDefInstance</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="../index.html#WDefInstance=firrtl.ir.DefInstance" class="extmbr" name="firrtl.WDefInstance">WDefInstance</a>]</span>
-      </span>
-      
-      <p class="shortcomment cmt">Finds the lowest common ancestor instances for two module names in
-a design
-</p>
-    </li><li name="firrtl.analyses.InstanceGraph#moduleMap" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="moduleMap:scala.collection.immutable.Map[String,firrtl.ir.DefModule]"></a><a id="moduleMap:Map[String,DefModule]"></a>
-      <span class="permalink">
-      <a href="../../firrtl/analyses/InstanceGraph.html#moduleMap:scala.collection.immutable.Map[String,firrtl.ir.DefModule]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">moduleMap</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/collection/immutable/Map.html#scala.collection.immutable.Map" class="extype" name="scala.collection.immutable.Map">Map</a>[<span class="extype" name="scala.Predef.String">String</span>, <a href="../ir/DefModule.html" class="extype" name="firrtl.ir.DefModule">DefModule</a>]</span>
-      </span>
-      
-      
-    </li><li name="firrtl.analyses.InstanceGraph#moduleOrder" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="moduleOrder:Seq[firrtl.ir.DefModule]"></a><a id="moduleOrder:Seq[DefModule]"></a>
-      <span class="permalink">
-      <a href="../../firrtl/analyses/InstanceGraph.html#moduleOrder:Seq[firrtl.ir.DefModule]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">moduleOrder</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="../ir/DefModule.html" class="extype" name="firrtl.ir.DefModule">DefModule</a>]</span>
-      </span>
-      
-      <p class="shortcomment cmt">Module order from highest module to leaf module</p><div class="fullcomment"><div class="comment cmt"><p>Module order from highest module to leaf module</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>sequence of modules in order from top to leaf</p></dd></dl></div>
-    </li><li name="firrtl.analyses.InstanceGraph#modules" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="modules:scala.collection.Set[firrtl.annotations.TargetToken.OfModule]"></a><a id="modules:Set[OfModule]"></a>
-      <span class="permalink">
-      <a href="../../firrtl/analyses/InstanceGraph.html#modules:scala.collection.Set[firrtl.annotations.TargetToken.OfModule]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">lazy val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">modules</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/collection/Set.html#scala.collection.Set" class="extype" name="scala.collection.Set">Set</a>[<a href="../annotations/TargetToken$$OfModule.html" class="extype" name="firrtl.annotations.TargetToken.OfModule">OfModule</a>]</span>
-      </span>
-      
-      <p class="shortcomment cmt">The set of all modules in the circuit</p>
     </li><li name="scala.AnyRef#ne" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="ne(x$1:AnyRef):Boolean"></a><a id="ne(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -613,7 +467,7 @@ a design
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -629,7 +483,7 @@ a design
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -648,50 +502,13 @@ a design
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="firrtl.analyses.InstanceGraph#reachableModules" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="reachableModules:scala.collection.Set[firrtl.annotations.TargetToken.OfModule]"></a><a id="reachableModules:Set[OfModule]"></a>
-      <span class="permalink">
-      <a href="../../firrtl/analyses/InstanceGraph.html#reachableModules:scala.collection.Set[firrtl.annotations.TargetToken.OfModule]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">lazy val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">reachableModules</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/collection/Set.html#scala.collection.Set" class="extype" name="scala.collection.Set">Set</a>[<a href="../annotations/TargetToken$$OfModule.html" class="extype" name="firrtl.annotations.TargetToken.OfModule">OfModule</a>]</span>
-      </span>
-      
-      <p class="shortcomment cmt">The set of all modules in the circuit reachable from the top module</p>
-    </li><li name="firrtl.analyses.InstanceGraph#staticInstanceCount" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="staticInstanceCount:Map[firrtl.annotations.TargetToken.OfModule,Int]"></a><a id="staticInstanceCount:Map[OfModule,Int]"></a>
-      <span class="permalink">
-      <a href="../../firrtl/analyses/InstanceGraph.html#staticInstanceCount:Map[firrtl.annotations.TargetToken.OfModule,Int]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">lazy val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">staticInstanceCount</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../annotations/TargetToken$$OfModule.html" class="extype" name="firrtl.annotations.TargetToken.OfModule">OfModule</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>
-      </span>
-      
-      <p class="shortcomment cmt">A count of the *static* number of instances of each module.</p><div class="fullcomment"><div class="comment cmt"><p>A count of the *static* number of instances of each module. For any module other than the top (main) module, this is
-equivalent to the number of inst statements in the circuit instantiating each module, irrespective of the number
-of times (if any) the enclosing module appears in the hierarchy. Note that top module of the circuit has an
-associated count of one, even though it is never directly instantiated. Any modules *not* instantiated at all will
-have a count of zero.
-</p></div></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
@@ -724,38 +541,6 @@ have a count of zero.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
-    </li><li name="firrtl.analyses.InstanceGraph#tour" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="tour:firrtl.graph.EulerTour[Seq[firrtl.WDefInstance]]"></a><a id="tour:EulerTour[Seq[WDefInstance]]"></a>
-      <span class="permalink">
-      <a href="../../firrtl/analyses/InstanceGraph.html#tour:firrtl.graph.EulerTour[Seq[firrtl.WDefInstance]]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">lazy val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">tour</span><span class="result">: <a href="../graph/EulerTour.html" class="extype" name="firrtl.graph.EulerTour">EulerTour</a>[<span class="extype" name="scala.Seq">Seq</span>[<a href="../index.html#WDefInstance=firrtl.ir.DefInstance" class="extmbr" name="firrtl.WDefInstance">WDefInstance</a>]]</span>
-      </span>
-      
-      <p class="shortcomment cmt">An <a href="../graph/EulerTour.html" class="extype" name="firrtl.graph.EulerTour">EulerTour</a> representation of the <a href="../graph/DiGraph.html" class="extype" name="firrtl.graph.DiGraph">DiGraph</a></p>
-    </li><li name="firrtl.analyses.InstanceGraph#unreachableModules" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="unreachableModules:scala.collection.Set[firrtl.annotations.TargetToken.OfModule]"></a><a id="unreachableModules:Set[OfModule]"></a>
-      <span class="permalink">
-      <a href="../../firrtl/analyses/InstanceGraph.html#unreachableModules:scala.collection.Set[firrtl.annotations.TargetToken.OfModule]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">lazy val</span>
-      </span>
-      <span class="symbol">
-        <span class="name">unreachableModules</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/collection/Set.html#scala.collection.Set" class="extype" name="scala.collection.Set">Set</a>[<a href="../annotations/TargetToken$$OfModule.html" class="extype" name="firrtl.annotations.TargetToken.OfModule">OfModule</a>]</span>
-      </span>
-      
-      <p class="shortcomment cmt">The set of all modules *not* reachable in the circuit</p>
     </li><li name="scala.AnyRef#wait" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="wait():Unit"></a>
       <span class="permalink">
@@ -768,7 +553,7 @@ have a count of zero.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -790,7 +575,7 @@ have a count of zero.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -812,7 +597,7 @@ have a count of zero.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -830,14 +615,319 @@ have a count of zero.
 
         
 
-        
+        <div class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="firrtl.analyses.InstanceGraph#findInstancesInHierarchy" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="findInstancesInHierarchy(module:String):Seq[Seq[firrtl.ir.DefInstance]]"></a><a id="findInstancesInHierarchy(String):Seq[Seq[DefInstance]]"></a>
+      <span class="permalink">
+      <a href="../../firrtl/analyses/InstanceGraph.html#findInstancesInHierarchy(module:String):Seq[Seq[firrtl.ir.DefInstance]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.4) Use InstanceKeyGraph.findInstancesInHierarchy instead (now with caching of vertices!).">findInstancesInHierarchy</span><span class="params">(<span name="module">module: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Seq">Seq</span>[<a href="../ir/DefInstance.html" class="extype" name="firrtl.ir.DefInstance">DefInstance</a>]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Finds the absolute paths (each represented by a Seq of instances
+representing the chain of hierarchy) of all instances of a particular
+module.</p><div class="fullcomment"><div class="comment cmt"><p>Finds the absolute paths (each represented by a Seq of instances
+representing the chain of hierarchy) of all instances of a particular
+module. Note that this includes one implicit instance of the top (main)
+module of the circuit. If the module is not instantiated within the
+hierarchy of the top module of the circuit, it will return Nil.
+</p></div><dl class="paramcmts block"><dt class="param">module</dt><dd class="cmt"><p>the name of the selected module</p></dd><dt>returns</dt><dd class="cmt"><p>a Seq[ Seq[DefInstance] ] of absolute instance paths</p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FIRRTL 1.4)</i> Use InstanceKeyGraph.findInstancesInHierarchy instead (now with caching of vertices!).</p></dd></dl></div>
+    </li><li name="firrtl.analyses.InstanceGraph#fullHierarchy" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="fullHierarchy:scala.collection.mutable.LinkedHashMap[firrtl.ir.DefInstance,Seq[Seq[firrtl.ir.DefInstance]]]"></a><a id="fullHierarchy:LinkedHashMap[DefInstance,Seq[Seq[DefInstance]]]"></a>
+      <span class="permalink">
+      <a href="../../firrtl/analyses/InstanceGraph.html#fullHierarchy:scala.collection.mutable.LinkedHashMap[firrtl.ir.DefInstance,Seq[Seq[firrtl.ir.DefInstance]]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.4) Use InstanceKeyGraph.fullHierarchy instead.">fullHierarchy</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/mutable/LinkedHashMap.html#scala.collection.mutable.LinkedHashMap" class="extype" name="scala.collection.mutable.LinkedHashMap">LinkedHashMap</a>[<a href="../ir/DefInstance.html" class="extype" name="firrtl.ir.DefInstance">DefInstance</a>, <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Seq">Seq</span>[<a href="../ir/DefInstance.html" class="extype" name="firrtl.ir.DefInstance">DefInstance</a>]]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">A list of absolute paths (each represented by a Seq of instances)
+of all module instances in the Circuit.</p><div class="fullcomment"><div class="comment cmt"><p>A list of absolute paths (each represented by a Seq of instances)
+of all module instances in the Circuit.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FIRRTL 1.4)</i> Use InstanceKeyGraph.fullHierarchy instead.</p></dd></dl></div>
+    </li><li name="firrtl.analyses.InstanceGraph#getChildrenInstanceMap" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getChildrenInstanceMap:scala.collection.Map[firrtl.annotations.TargetToken.OfModule,scala.collection.Map[firrtl.annotations.TargetToken.Instance,firrtl.annotations.TargetToken.OfModule]]"></a><a id="getChildrenInstanceMap:Map[OfModule,Map[Instance,OfModule]]"></a>
+      <span class="permalink">
+      <a href="../../firrtl/analyses/InstanceGraph.html#getChildrenInstanceMap:scala.collection.Map[firrtl.annotations.TargetToken.OfModule,scala.collection.Map[firrtl.annotations.TargetToken.Instance,firrtl.annotations.TargetToken.OfModule]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.4) Use InstanceKeyGraph.getChildInstanceMap instead.">getChildrenInstanceMap</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/Map.html#scala.collection.Map" class="extype" name="scala.collection.Map">Map</a>[<a href="../annotations/TargetToken$$OfModule.html" class="extype" name="firrtl.annotations.TargetToken.OfModule">OfModule</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/Map.html#scala.collection.Map" class="extype" name="scala.collection.Map">Map</a>[<a href="../annotations/TargetToken$$Instance.html" class="extype" name="firrtl.annotations.TargetToken.Instance">Instance</a>, <a href="../annotations/TargetToken$$OfModule.html" class="extype" name="firrtl.annotations.TargetToken.OfModule">OfModule</a>]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Given a circuit, returns a map from module name to a map
+in turn mapping instances names to corresponding module names
+</p><div class="fullcomment"><div class="comment cmt"><p>Given a circuit, returns a map from module name to a map
+in turn mapping instances names to corresponding module names
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FIRRTL 1.4)</i> Use InstanceKeyGraph.getChildInstanceMap instead.</p></dd></dl></div>
+    </li><li name="firrtl.analyses.InstanceGraph#getChildrenInstanceOfModule" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getChildrenInstanceOfModule:scala.collection.mutable.LinkedHashMap[String,scala.collection.mutable.LinkedHashSet[(firrtl.annotations.TargetToken.Instance,firrtl.annotations.TargetToken.OfModule)]]"></a><a id="getChildrenInstanceOfModule:LinkedHashMap[String,LinkedHashSet[(Instance,OfModule)]]"></a>
+      <span class="permalink">
+      <a href="../../firrtl/analyses/InstanceGraph.html#getChildrenInstanceOfModule:scala.collection.mutable.LinkedHashMap[String,scala.collection.mutable.LinkedHashSet[(firrtl.annotations.TargetToken.Instance,firrtl.annotations.TargetToken.OfModule)]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.4) Use InstanceKeyGraph.getChildInstances instead.">getChildrenInstanceOfModule</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/mutable/LinkedHashMap.html#scala.collection.mutable.LinkedHashMap" class="extype" name="scala.collection.mutable.LinkedHashMap">LinkedHashMap</a>[<span class="extype" name="scala.Predef.String">String</span>, <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/mutable/LinkedHashSet.html#scala.collection.mutable.LinkedHashSet" class="extype" name="scala.collection.mutable.LinkedHashSet">LinkedHashSet</a>[(<a href="../annotations/TargetToken$$Instance.html" class="extype" name="firrtl.annotations.TargetToken.Instance">Instance</a>, <a href="../annotations/TargetToken$$OfModule.html" class="extype" name="firrtl.annotations.TargetToken.OfModule">OfModule</a>)]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Given a circuit, returns a map from module name to children
+instance/module <a href="../annotations/TargetToken.html" class="extype" name="firrtl.annotations.TargetToken">firrtl.annotations.TargetToken</a>s
+</p><div class="fullcomment"><div class="comment cmt"><p>Given a circuit, returns a map from module name to children
+instance/module <a href="../annotations/TargetToken.html" class="extype" name="firrtl.annotations.TargetToken">firrtl.annotations.TargetToken</a>s
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FIRRTL 1.4)</i> Use InstanceKeyGraph.getChildInstances instead.</p></dd></dl></div>
+    </li><li name="firrtl.analyses.InstanceGraph#getChildrenInstances" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getChildrenInstances:scala.collection.mutable.LinkedHashMap[String,scala.collection.mutable.LinkedHashSet[firrtl.ir.DefInstance]]"></a><a id="getChildrenInstances:LinkedHashMap[String,LinkedHashSet[DefInstance]]"></a>
+      <span class="permalink">
+      <a href="../../firrtl/analyses/InstanceGraph.html#getChildrenInstances:scala.collection.mutable.LinkedHashMap[String,scala.collection.mutable.LinkedHashSet[firrtl.ir.DefInstance]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.4) Use InstanceKeyGraph.getChildInstances instead.">getChildrenInstances</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/mutable/LinkedHashMap.html#scala.collection.mutable.LinkedHashMap" class="extype" name="scala.collection.mutable.LinkedHashMap">LinkedHashMap</a>[<span class="extype" name="scala.Predef.String">String</span>, <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/mutable/LinkedHashSet.html#scala.collection.mutable.LinkedHashSet" class="extype" name="scala.collection.mutable.LinkedHashSet">LinkedHashSet</a>[<a href="../ir/DefInstance.html" class="extype" name="firrtl.ir.DefInstance">DefInstance</a>]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Given a circuit, returns a map from module name to children
+instance/module definitions
+</p><div class="fullcomment"><div class="comment cmt"><p>Given a circuit, returns a map from module name to children
+instance/module definitions
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FIRRTL 1.4)</i> Use InstanceKeyGraph.getChildInstances instead.</p></dd></dl></div>
+    </li><li name="firrtl.analyses.InstanceGraph#graph" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="graph:firrtl.graph.DiGraph[firrtl.ir.DefInstance]"></a><a id="graph:DiGraph[DefInstance]"></a>
+      <span class="permalink">
+      <a href="../../firrtl/analyses/InstanceGraph.html#graph:firrtl.graph.DiGraph[firrtl.ir.DefInstance]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.4) Use InstanceKeyGraph.graph instead.">graph</span><span class="result">: <a href="../graph/DiGraph.html" class="extype" name="firrtl.graph.DiGraph">DiGraph</a>[<a href="../ir/DefInstance.html" class="extype" name="firrtl.ir.DefInstance">DefInstance</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">A directed graph showing the instance dependencies among modules
+in the circuit.</p><div class="fullcomment"><div class="comment cmt"><p>A directed graph showing the instance dependencies among modules
+in the circuit. Every DefInstance of a module has an edge to
+every DefInstance arising from every instance statement in
+that module.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FIRRTL 1.4)</i> Use InstanceKeyGraph.graph instead.</p></dd></dl></div>
+    </li><li name="firrtl.analyses.InstanceGraph#lowestCommonAncestor" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="lowestCommonAncestor(moduleA:Seq[firrtl.ir.DefInstance],moduleB:Seq[firrtl.ir.DefInstance]):Seq[firrtl.ir.DefInstance]"></a><a id="lowestCommonAncestor(Seq[DefInstance],Seq[DefInstance]):Seq[DefInstance]"></a>
+      <span class="permalink">
+      <a href="../../firrtl/analyses/InstanceGraph.html#lowestCommonAncestor(moduleA:Seq[firrtl.ir.DefInstance],moduleB:Seq[firrtl.ir.DefInstance]):Seq[firrtl.ir.DefInstance]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.4) Use InstanceKeyGraph and EulerTour(iGraph.graph, iGraph.top).rmq(moduleA, moduleB).">lowestCommonAncestor</span><span class="params">(<span name="moduleA">moduleA: <span class="extype" name="scala.Seq">Seq</span>[<a href="../ir/DefInstance.html" class="extype" name="firrtl.ir.DefInstance">DefInstance</a>]</span>, <span name="moduleB">moduleB: <span class="extype" name="scala.Seq">Seq</span>[<a href="../ir/DefInstance.html" class="extype" name="firrtl.ir.DefInstance">DefInstance</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="../ir/DefInstance.html" class="extype" name="firrtl.ir.DefInstance">DefInstance</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Finds the lowest common ancestor instances for two module names in
+a design
+</p><div class="fullcomment"><div class="comment cmt"><p>Finds the lowest common ancestor instances for two module names in
+a design
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FIRRTL 1.4)</i> Use InstanceKeyGraph and EulerTour(iGraph.graph, iGraph.top).rmq(moduleA, moduleB).</p></dd></dl></div>
+    </li><li name="firrtl.analyses.InstanceGraph#moduleMap" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="moduleMap:scala.collection.immutable.Map[String,firrtl.ir.DefModule]"></a><a id="moduleMap:Map[String,DefModule]"></a>
+      <span class="permalink">
+      <a href="../../firrtl/analyses/InstanceGraph.html#moduleMap:scala.collection.immutable.Map[String,firrtl.ir.DefModule]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.4) Use InstanceKeyGraph.moduleMap instead.">moduleMap</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/immutable/Map.html#scala.collection.immutable.Map" class="extype" name="scala.collection.immutable.Map">Map</a>[<span class="extype" name="scala.Predef.String">String</span>, <a href="../ir/DefModule.html" class="extype" name="firrtl.ir.DefModule">DefModule</a>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FIRRTL 1.4)</i> Use InstanceKeyGraph.moduleMap instead.</p></dd></dl></div>
+    </li><li name="firrtl.analyses.InstanceGraph#moduleOrder" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="moduleOrder:Seq[firrtl.ir.DefModule]"></a><a id="moduleOrder:Seq[DefModule]"></a>
+      <span class="permalink">
+      <a href="../../firrtl/analyses/InstanceGraph.html#moduleOrder:Seq[firrtl.ir.DefModule]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.4) Use InstanceKeyGraph.moduleOrder instead.">moduleOrder</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="../ir/DefModule.html" class="extype" name="firrtl.ir.DefModule">DefModule</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">Module order from highest module to leaf module</p><div class="fullcomment"><div class="comment cmt"><p>Module order from highest module to leaf module</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>sequence of modules in order from top to leaf</p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FIRRTL 1.4)</i> Use InstanceKeyGraph.moduleOrder instead.</p></dd></dl></div>
+    </li><li name="firrtl.analyses.InstanceGraph#modules" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="modules:scala.collection.Set[firrtl.annotations.TargetToken.OfModule]"></a><a id="modules:Set[OfModule]"></a>
+      <span class="permalink">
+      <a href="../../firrtl/analyses/InstanceGraph.html#modules:scala.collection.Set[firrtl.annotations.TargetToken.OfModule]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.4) Use InstanceKeyGraph instead.">modules</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/Set.html#scala.collection.Set" class="extype" name="scala.collection.Set">Set</a>[<a href="../annotations/TargetToken$$OfModule.html" class="extype" name="firrtl.annotations.TargetToken.OfModule">OfModule</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">The set of all modules in the circuit</p><div class="fullcomment"><div class="comment cmt"><p>The set of all modules in the circuit</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FIRRTL 1.4)</i> Use InstanceKeyGraph instead.</p></dd></dl></div>
+    </li><li name="firrtl.analyses.InstanceGraph#reachableModules" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="reachableModules:scala.collection.Set[firrtl.annotations.TargetToken.OfModule]"></a><a id="reachableModules:Set[OfModule]"></a>
+      <span class="permalink">
+      <a href="../../firrtl/analyses/InstanceGraph.html#reachableModules:scala.collection.Set[firrtl.annotations.TargetToken.OfModule]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.4) Use InstanceKeyGraph instead.">reachableModules</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/Set.html#scala.collection.Set" class="extype" name="scala.collection.Set">Set</a>[<a href="../annotations/TargetToken$$OfModule.html" class="extype" name="firrtl.annotations.TargetToken.OfModule">OfModule</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">The set of all modules in the circuit reachable from the top module</p><div class="fullcomment"><div class="comment cmt"><p>The set of all modules in the circuit reachable from the top module</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FIRRTL 1.4)</i> Use InstanceKeyGraph instead.</p></dd></dl></div>
+    </li><li name="firrtl.analyses.InstanceGraph#staticInstanceCount" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="staticInstanceCount:Map[firrtl.annotations.TargetToken.OfModule,Int]"></a><a id="staticInstanceCount:Map[OfModule,Int]"></a>
+      <span class="permalink">
+      <a href="../../firrtl/analyses/InstanceGraph.html#staticInstanceCount:Map[firrtl.annotations.TargetToken.OfModule,Int]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.4) Use InstanceKeyGraph.staticInstanceCount instead.">staticInstanceCount</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="../annotations/TargetToken$$OfModule.html" class="extype" name="firrtl.annotations.TargetToken.OfModule">OfModule</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">A count of the *static* number of instances of each module.</p><div class="fullcomment"><div class="comment cmt"><p>A count of the *static* number of instances of each module. For any module other than the top (main) module, this is
+equivalent to the number of inst statements in the circuit instantiating each module, irrespective of the number
+of times (if any) the enclosing module appears in the hierarchy. Note that top module of the circuit has an
+associated count of one, even though it is never directly instantiated. Any modules *not* instantiated at all will
+have a count of zero.
+</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FIRRTL 1.4)</i> Use InstanceKeyGraph.staticInstanceCount instead.</p></dd></dl></div>
+    </li><li name="firrtl.analyses.InstanceGraph#tour" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="tour:firrtl.graph.EulerTour[Seq[firrtl.ir.DefInstance]]"></a><a id="tour:EulerTour[Seq[DefInstance]]"></a>
+      <span class="permalink">
+      <a href="../../firrtl/analyses/InstanceGraph.html#tour:firrtl.graph.EulerTour[Seq[firrtl.ir.DefInstance]]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.4) Should have been private. Do not use outside of InstanceGraph.">tour</span><span class="result">: <a href="../graph/EulerTour.html" class="extype" name="firrtl.graph.EulerTour">EulerTour</a>[<span class="extype" name="scala.Seq">Seq</span>[<a href="../ir/DefInstance.html" class="extype" name="firrtl.ir.DefInstance">DefInstance</a>]]</span>
+      </span>
+      
+      <p class="shortcomment cmt">An <a href="../graph/EulerTour.html" class="extype" name="firrtl.graph.EulerTour">EulerTour</a> representation of the <a href="../graph/DiGraph.html" class="extype" name="firrtl.graph.DiGraph">DiGraph</a></p><div class="fullcomment"><div class="comment cmt"><p>An <a href="../graph/EulerTour.html" class="extype" name="firrtl.graph.EulerTour">EulerTour</a> representation of the <a href="../graph/DiGraph.html" class="extype" name="firrtl.graph.DiGraph">DiGraph</a></p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FIRRTL 1.4)</i> Should have been private. Do not use outside of InstanceGraph.</p></dd></dl></div>
+    </li><li name="firrtl.analyses.InstanceGraph#unreachableModules" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="unreachableModules:scala.collection.Set[firrtl.annotations.TargetToken.OfModule]"></a><a id="unreachableModules:Set[OfModule]"></a>
+      <span class="permalink">
+      <a href="../../firrtl/analyses/InstanceGraph.html#unreachableModules:scala.collection.Set[firrtl.annotations.TargetToken.OfModule]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">lazy val</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.4) Use InstanceKeyGraph.unreachableModules instead.">unreachableModules</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/Set.html#scala.collection.Set" class="extype" name="scala.collection.Set">Set</a>[<a href="../annotations/TargetToken$$OfModule.html" class="extype" name="firrtl.annotations.TargetToken.OfModule">OfModule</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">The set of all modules *not* reachable in the circuit</p><div class="fullcomment"><div class="comment cmt"><p>The set of all modules *not* reachable in the circuit</p></div><dl class="attributes block"> <dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FIRRTL 1.4)</i> Use InstanceKeyGraph.unreachableModules instead.</p></dd></dl></div>
+    </li></ol>
+            </div>
         </div>
 
         <div id="inheritedMembers">
         <div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
             </div>
         
         </div>

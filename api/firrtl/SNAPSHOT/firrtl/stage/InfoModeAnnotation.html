@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.4-20200603-SNAPSHOT - firrtl.stage.InfoModeAnnotation</title>
-          <meta name="description" content="firrtl 1.4 - 20200603 - SNAPSHOT - firrtl.stage.InfoModeAnnotation" />
-          <meta name="keywords" content="firrtl 1.4 20200603 SNAPSHOT firrtl.stage.InfoModeAnnotation" />
+          <title>firrtl 1.4.0-RC3 - firrtl.stage.InfoModeAnnotation</title>
+          <meta name="description" content="firrtl 1.4.0 - RC3 - firrtl.stage.InfoModeAnnotation" />
+          <meta name="keywords" content="firrtl 1.4.0 RC3 firrtl.stage.InfoModeAnnotation" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.4-20200603-SNAPSHOT</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.4.0-RC3</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -203,6 +203,10 @@ primarily consists of:</p><ul><li><a href="FirrtlStage.html" class="extype" name
                         <a class="class" href="OutputFileAnnotation.html" title="An explicit output file the emitter will write to"></a>
                         <a href="OutputFileAnnotation.html" title="An explicit output file the emitter will write to">OutputFileAnnotation</a>
                       </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="PrettyNoExprInlining$.html" title="Turn off all expression inlining"></a>
+                        <a href="PrettyNoExprInlining$.html" title="Turn off all expression inlining">PrettyNoExprInlining</a>
+                      </li><li class="current-entities indented2">
                         <a class="object" href="RunFirrtlTransformAnnotation$.html" title=""></a>
                         <a class="class" href="RunFirrtlTransformAnnotation.html" title="Holds the unambiguous class name of a Transform to run"></a>
                         <a href="RunFirrtlTransformAnnotation.html" title="Holds the unambiguous class name of a Transform to run">RunFirrtlTransformAnnotation</a>
@@ -210,6 +214,10 @@ primarily consists of:</p><ul><li><a href="FirrtlStage.html" class="extype" name
                         <a class="object" href="TransformManager$.html" title=""></a>
                         <a class="class" href="TransformManager.html" title="A Transform that ensures some other Transforms and their prerequisites are executed."></a>
                         <a href="TransformManager.html" title="A Transform that ensures some other Transforms and their prerequisites are executed.">TransformManager</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="object" href="WarnNoScalaVersionDeprecation$.html" title="Suppresses warning about Scala 2.11 deprecation"></a>
+                        <a href="WarnNoScalaVersionDeprecation$.html" title="Suppresses warning about Scala 2.11 deprecation">WarnNoScalaVersionDeprecation</a>
                       </li>
               </ul>
             </div>
@@ -235,16 +243,16 @@ primarily consists of:</p><ul><li><a href="FirrtlStage.html" class="extype" name
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">InfoModeAnnotation</span><span class="params">(<span name="modeName">modeName: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;use&quot;</span></span>)</span><span class="result"> extends <a href="../annotations/NoTargetAnnotation.html" class="extype" name="firrtl.annotations.NoTargetAnnotation">NoTargetAnnotation</a> with <a href="FirrtlOption.html" class="extype" name="firrtl.stage.FirrtlOption">FirrtlOption</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <span class="name">InfoModeAnnotation</span><span class="params">(<span name="modeName">modeName: <span class="extype" name="scala.Predef.String">String</span> = <span class="symbol">&quot;use&quot;</span></span>)</span><span class="result"> extends <a href="../annotations/NoTargetAnnotation.html" class="extype" name="firrtl.annotations.NoTargetAnnotation">NoTargetAnnotation</a> with <a href="FirrtlOption.html" class="extype" name="firrtl.stage.FirrtlOption">FirrtlOption</a> with <a href="https://www.scala-lang.org/api/2.12.12/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.12/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Sets the info mode style</p><ul><li>set with <code>--info-mode</code></li></ul></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/master/src/main/scala/firrtl/stage/FirrtlAnnotations.scala" target="_blank">FirrtlAnnotations.scala</a></dd><dt>Note</dt><dd><span class="cmt"><p>This cannote be directly converted to <a href="../Parser$$InfoMode.html" class="extype" name="firrtl.Parser.InfoMode">Parser.InfoMode</a> as that depends on an optional <a href="FirrtlFileAnnotation.html" class="extype" name="firrtl.stage.FirrtlFileAnnotation">FirrtlFileAnnotation</a></p></span></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Sets the info mode style</p><ul><li>set with <code>--info-mode</code></li></ul></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.4.0-RC3/src/main/scala/firrtl/stage/FirrtlAnnotations.scala" target="_blank">FirrtlAnnotations.scala</a></dd><dt>Note</dt><dd><span class="cmt"><p>This cannote be directly converted to <a href="../Parser$$InfoMode.html" class="extype" name="firrtl.Parser.InfoMode">Parser.InfoMode</a> as that depends on an optional <a href="FirrtlFileAnnotation.html" class="extype" name="firrtl.stage.FirrtlFileAnnotation">FirrtlFileAnnotation</a></p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html#java.io.Serializable" class="extype" name="java.io.Serializable">Serializable</a>, <a href="FirrtlOption.html" class="extype" name="firrtl.stage.FirrtlOption">FirrtlOption</a>, <a href="../options/Unserializable.html" class="extype" name="firrtl.options.Unserializable">Unserializable</a>, <a href="../annotations/NoTargetAnnotation.html" class="extype" name="firrtl.annotations.NoTargetAnnotation">NoTargetAnnotation</a>, <a href="../annotations/Annotation.html" class="extype" name="firrtl.annotations.Annotation">Annotation</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/Equals.html#scala.Equals" class="extype" name="scala.Equals">Equals</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="https://www.scala-lang.org/api/2.12.12/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html#java.io.Serializable" class="extype" name="java.io.Serializable">Serializable</a>, <a href="FirrtlOption.html" class="extype" name="firrtl.stage.FirrtlOption">FirrtlOption</a>, <a href="../options/Unserializable.html" class="extype" name="firrtl.options.Unserializable">Unserializable</a>, <a href="../annotations/NoTargetAnnotation.html" class="extype" name="firrtl.annotations.NoTargetAnnotation">NoTargetAnnotation</a>, <a href="../annotations/Annotation.html" class="extype" name="firrtl.annotations.Annotation">Annotation</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/Equals.html#scala.Equals" class="extype" name="scala.Equals">Equals</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div></div>
         
 
@@ -328,7 +336,7 @@ primarily consists of:</p><ul><li><a href="FirrtlStage.html" class="extype" name
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -344,7 +352,7 @@ primarily consists of:</p><ul><li><a href="FirrtlStage.html" class="extype" name
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -360,7 +368,7 @@ primarily consists of:</p><ul><li><a href="FirrtlStage.html" class="extype" name
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -392,7 +400,7 @@ primarily consists of:</p><ul><li><a href="FirrtlStage.html" class="extype" name
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -416,7 +424,7 @@ primarily consists of:</p><ul><li><a href="FirrtlStage.html" class="extype" name
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -432,7 +440,7 @@ primarily consists of:</p><ul><li><a href="FirrtlStage.html" class="extype" name
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -489,7 +497,7 @@ primarily consists of:</p><ul><li><a href="FirrtlStage.html" class="extype" name
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
@@ -521,7 +529,7 @@ primarily consists of:</p><ul><li><a href="FirrtlStage.html" class="extype" name
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -537,7 +545,7 @@ primarily consists of:</p><ul><li><a href="FirrtlStage.html" class="extype" name
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -556,7 +564,7 @@ primarily consists of:</p><ul><li><a href="FirrtlStage.html" class="extype" name
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -609,7 +617,7 @@ primarily consists of:</p><ul><li><a href="FirrtlStage.html" class="extype" name
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toInfoMode</span><span class="params">(<span name="infoSource">infoSource: <a href="https://www.scala-lang.org/api/2.12.11/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">None</span></span>)</span><span class="result">: <a href="../Parser$$InfoMode.html" class="extype" name="firrtl.Parser.InfoMode">InfoMode</a></span>
+        <span class="name">toInfoMode</span><span class="params">(<span name="infoSource">infoSource: <a href="https://www.scala-lang.org/api/2.12.12/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">None</span></span>)</span><span class="result">: <a href="../Parser$$InfoMode.html" class="extype" name="firrtl.Parser.InfoMode">InfoMode</a></span>
       </span>
       
       <p class="shortcomment cmt">Return the <a href="../Parser$$InfoMode.html" class="extype" name="firrtl.Parser.InfoMode">Parser.InfoMode</a> equivalent for this <a href="../annotations/Annotation.html" class="extype" name="firrtl.annotations.Annotation">Annotation</a></p><div class="fullcomment"><div class="comment cmt"><p>Return the <a href="../Parser$$InfoMode.html" class="extype" name="firrtl.Parser.InfoMode">Parser.InfoMode</a> equivalent for this <a href="../annotations/Annotation.html" class="extype" name="firrtl.annotations.Annotation">Annotation</a></p></div><dl class="paramcmts block"><dt class="param">infoSource</dt><dd class="cmt"><p>the name of a file to use for &quot;gen&quot; or &quot;append&quot; info modes</p></dd></dl></div>
@@ -641,7 +649,7 @@ primarily consists of:</p><ul><li><a href="FirrtlStage.html" class="extype" name
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -663,7 +671,7 @@ primarily consists of:</p><ul><li><a href="FirrtlStage.html" class="extype" name
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -685,7 +693,7 @@ primarily consists of:</p><ul><li><a href="FirrtlStage.html" class="extype" name
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -708,7 +716,7 @@ primarily consists of:</p><ul><li><a href="FirrtlStage.html" class="extype" name
 
         <div id="inheritedMembers">
         <div class="parent" name="scala.Serializable">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></h3>
             </div><div class="parent" name="java.io.Serializable">
               <h3>Inherited from <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html#java.io.Serializable" class="extype" name="java.io.Serializable">Serializable</a></h3>
             </div><div class="parent" name="firrtl.stage.FirrtlOption">
@@ -720,13 +728,13 @@ primarily consists of:</p><ul><li><a href="FirrtlStage.html" class="extype" name
             </div><div class="parent" name="firrtl.annotations.Annotation">
               <h3>Inherited from <a href="../annotations/Annotation.html" class="extype" name="firrtl.annotations.Annotation">Annotation</a></h3>
             </div><div class="parent" name="scala.Product">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a></h3>
             </div><div class="parent" name="scala.Equals">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.11/scala/Equals.html#scala.Equals" class="extype" name="scala.Equals">Equals</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/Equals.html#scala.Equals" class="extype" name="scala.Equals">Equals</a></h3>
             </div><div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
             </div>
         
         </div>

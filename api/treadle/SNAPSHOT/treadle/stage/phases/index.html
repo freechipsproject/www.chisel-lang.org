@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>1.3-20200603-SNAPSHOT - treadle.stage.phases</title>
-          <meta name="description" content="1.3 - 20200603 - SNAPSHOT - treadle.stage.phases" />
-          <meta name="keywords" content="1.3 20200603 SNAPSHOT treadle.stage.phases" />
+          <title>1.3.0-RC3 - treadle.stage.phases</title>
+          <meta name="description" content="1.3.0 - RC3 - treadle.stage.phases" />
+          <meta name="keywords" content="1.3.0 RC3 treadle.stage.phases" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title"><span id="doc-version">1.3-20200603-SNAPSHOT</span></span>
+        <span id="doc-title"><span id="doc-version">1.3.0-RC3</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -119,10 +119,6 @@
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="treadle.stage">stage</a></dd></dl></div>
     </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="class" href="ChirrtlToLow.html" title=""></a>
-                        <a href="ChirrtlToLow.html" title="">ChirrtlToLow</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
                         <a class="object" href="CreateTester$.html" title=""></a>
                         <a href="CreateTester$.html" title="">CreateTester</a>
                       </li><li class="current-entities indented3">
@@ -131,28 +127,12 @@
                         <a href="GetFirrtlAst$.html" title="There are multiple ways to get a FirrtlCircuit into treadle.">GetFirrtlAst</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
-                        <a class="class" href="HighToLow.html" title=""></a>
-                        <a href="HighToLow.html" title="">HighToLow</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="object" href="PrepareAst$.html" title="Call a bunch of transforms so TreadleTester can operate"></a>
-                        <a href="PrepareAst$.html" title="Call a bunch of transforms so TreadleTester can operate">PrepareAst</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="object" href="PrepareAstFromLowFIRRTL$.html" title="Prepare the AST from low FIRRTL."></a>
-                        <a href="PrepareAstFromLowFIRRTL$.html" title="Prepare the AST from low FIRRTL.">PrepareAstFromLowFIRRTL</a>
+                        <a class="class" href="PrepareAst.html" title="Call a bunch of transforms so TreadleTester can operate"></a>
+                        <a href="PrepareAst.html" title="Call a bunch of transforms so TreadleTester can operate">PrepareAst</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="object" href="SetImplicitOutputInfo$.html" title="Set a default output stuff Sets the default target directory if one has not been defined and uses the circuit name unless there is as TopName override"></a>
                         <a href="SetImplicitOutputInfo$.html" title="Set a default output stuff Sets the default target directory if one has not been defined and uses the circuit name unless there is as TopName override">SetImplicitOutputInfo</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="class" href="TreadleLowFirrtlOptimization.html" title="This was a workaround for a problem in firrtl.LowFirrtlOptimization that caused problems like combinational loops for treadle's memory simulation."></a>
-                        <a href="TreadleLowFirrtlOptimization.html" title="This was a workaround for a problem in firrtl.LowFirrtlOptimization that caused problems like combinational loops for treadle's memory simulation.">TreadleLowFirrtlOptimization</a>
-                      </li><li class="current-entities indented3">
-                        <span class="separator"></span>
-                        <a class="trait" href="TreadlePhase.html" title=""></a>
-                        <a href="TreadlePhase.html" title="">TreadlePhase</a>
                       </li>
               </ul>
             </div>
@@ -216,10 +196,10 @@
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="treadle.stage.phases.ChirrtlToLow" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ChirrtlToLowextendsTransform"></a><a id="ChirrtlToLow:ChirrtlToLow"></a>
+              <ol><li name="treadle.stage.phases.PrepareAst" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="PrepareAstextendsPhase"></a><a id="PrepareAst:PrepareAst"></a>
       <span class="permalink">
-      <a href="../../../treadle/stage/phases/ChirrtlToLow.html" title="Permalink">
+      <a href="../../../treadle/stage/phases/PrepareAst.html" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -228,62 +208,11 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="ChirrtlToLow.html"><span class="name">ChirrtlToLow</span></a><span class="result"> extends <span class="extype" name="firrtl.Transform">Transform</span></span>
+        <a title="Call a bunch of transforms so TreadleTester can operate" href="PrepareAst.html"><span class="name">PrepareAst</span></a><span class="result"> extends <span class="extype" name="firrtl.options.Phase">Phase</span></span>
       </span>
       
-      
-    </li><li name="treadle.stage.phases.HighToLow" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="HighToLowextendsTransform"></a><a id="HighToLow:HighToLow"></a>
-      <span class="permalink">
-      <a href="../../../treadle/stage/phases/HighToLow.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="HighToLow.html"><span class="name">HighToLow</span></a><span class="result"> extends <span class="extype" name="firrtl.Transform">Transform</span></span>
-      </span>
-      
-      
-    </li><li name="treadle.stage.phases.TreadleLowFirrtlOptimization" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="TreadleLowFirrtlOptimizationextendsSeqTransform"></a><a id="TreadleLowFirrtlOptimization:TreadleLowFirrtlOptimization"></a>
-      <span class="permalink">
-      <a href="../../../treadle/stage/phases/TreadleLowFirrtlOptimization.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">class</span>
-      </span>
-      <span class="symbol">
-        <a title="This was a workaround for a problem in firrtl.LowFirrtlOptimization that caused problems like combinational loops for treadle's memory simulation." href="TreadleLowFirrtlOptimization.html"><span class="name">TreadleLowFirrtlOptimization</span></a><span class="result"> extends <span class="extype" name="firrtl.SeqTransform">SeqTransform</span></span>
-      </span>
-      
-      <p class="shortcomment cmt">This was a workaround for a problem in firrtl.LowFirrtlOptimization that
-caused problems like combinational loops for treadle's memory simulation.</p><div class="fullcomment"><div class="comment cmt"><p>This was a workaround for a problem in firrtl.LowFirrtlOptimization that
-caused problems like combinational loops for treadle's memory simulation.
-This code should not be used going forward
-</p></div></div>
-    </li><li name="treadle.stage.phases.TreadlePhase" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="TreadlePhaseextendsPhase"></a><a id="TreadlePhase:TreadlePhase"></a>
-      <span class="permalink">
-      <a href="../../../treadle/stage/phases/TreadlePhase.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">trait</span>
-      </span>
-      <span class="symbol">
-        <a title="" href="TreadlePhase.html"><span class="name">TreadlePhase</span></a><span class="result"> extends <span class="extype" name="firrtl.options.Phase">Phase</span></span>
-      </span>
-      
-      
+      <p class="shortcomment cmt">Call a bunch of transforms so TreadleTester can operate
+</p>
     </li></ol>
             </div>
 
@@ -329,39 +258,6 @@ There is a priority to these methods
 2. Specify Firrtl text with a FirrtlSourceAnnotation
 3. Specify a file containing Firrtl with the FirrtlFileAnnotation
 </p></div></div>
-    </li><li name="treadle.stage.phases.PrepareAst" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="PrepareAst"></a><a id="PrepareAst:PrepareAst"></a>
-      <span class="permalink">
-      <a href="../../../treadle/stage/phases/PrepareAst$.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a title="Call a bunch of transforms so TreadleTester can operate" href="PrepareAst$.html"><span class="name">PrepareAst</span></a><span class="result"> extends <a href="TreadlePhase.html" class="extype" name="treadle.stage.phases.TreadlePhase">TreadlePhase</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Call a bunch of transforms so TreadleTester can operate
-</p>
-    </li><li name="treadle.stage.phases.PrepareAstFromLowFIRRTL" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="PrepareAstFromLowFIRRTL"></a><a id="PrepareAstFromLowFIRRTL:PrepareAstFromLowFIRRTL"></a>
-      <span class="permalink">
-      <a href="../../../treadle/stage/phases/PrepareAstFromLowFIRRTL$.html" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">object</span>
-      </span>
-      <span class="symbol">
-        <a title="Prepare the AST from low FIRRTL." href="PrepareAstFromLowFIRRTL$.html"><span class="name">PrepareAstFromLowFIRRTL</span></a><span class="result"> extends <a href="TreadlePhase.html" class="extype" name="treadle.stage.phases.TreadlePhase">TreadlePhase</a></span>
-      </span>
-      
-      <p class="shortcomment cmt">Prepare the AST from low FIRRTL.</p>
     </li><li name="treadle.stage.phases.SetImplicitOutputInfo" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="SetImplicitOutputInfo"></a><a id="SetImplicitOutputInfo:SetImplicitOutputInfo"></a>
       <span class="permalink">
