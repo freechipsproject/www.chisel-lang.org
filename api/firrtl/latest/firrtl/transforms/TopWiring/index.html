@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.3.2 - firrtl.transforms.TopWiring</title>
-          <meta name="description" content="firrtl 1.3.2 - firrtl.transforms.TopWiring" />
-          <meta name="keywords" content="firrtl 1.3.2 firrtl.transforms.TopWiring" />
+          <title>firrtl 1.4.0 - firrtl.transforms.TopWiring</title>
+          <meta name="description" content="firrtl 1.4.0 - firrtl.transforms.TopWiring" />
+          <meta name="keywords" content="firrtl 1.4.0 firrtl.transforms.TopWiring" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.3.2</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.4.0</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -129,7 +129,23 @@
                         <span class="separator"></span>
                         <a class="class" href="TopWiringTransform.html" title="Punch out annotated ports out to the toplevel of the circuit."></a>
                         <a href="TopWiringTransform.html" title="Punch out annotated ports out to the toplevel of the circuit.">TopWiringTransform</a>
-                      </li>
+                      </li><li name="firrtl.transforms.formal" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="formal"></a><a id="formal:formal"></a>
+      <span class="permalink">
+      <a href="../../../firrtl/transforms/formal/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../formal/index.html"><span class="name">formal</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="firrtl.transforms">transforms</a></dd></dl></div>
+    </li>
               </ul>
             </div>
           </div>
@@ -180,7 +196,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="Annotation for indicating component to be wired, and what prefix to add to the ports that are generated" href="TopWiringAnnotation.html"><span class="name">TopWiringAnnotation</span></a><span class="params">(<span name="target">target: <a href="../../annotations/ComponentName.html" class="extype" name="firrtl.annotations.ComponentName">ComponentName</a></span>, <span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="../../annotations/SingleTargetAnnotation.html" class="extype" name="firrtl.annotations.SingleTargetAnnotation">SingleTargetAnnotation</a>[<a href="../../annotations/ComponentName.html" class="extype" name="firrtl.annotations.ComponentName">ComponentName</a>] with <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="Annotation for indicating component to be wired, and what prefix to add to the ports that are generated" href="TopWiringAnnotation.html"><span class="name">TopWiringAnnotation</span></a><span class="params">(<span name="target">target: <a href="../../annotations/ComponentName.html" class="extype" name="firrtl.annotations.ComponentName">ComponentName</a></span>, <span name="prefix">prefix: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="../../annotations/SingleTargetAnnotation.html" class="extype" name="firrtl.annotations.SingleTargetAnnotation">SingleTargetAnnotation</a>[<a href="../../annotations/ComponentName.html" class="extype" name="firrtl.annotations.ComponentName">ComponentName</a>] with <a href="https://www.scala-lang.org/api/2.12.12/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.12/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       <p class="shortcomment cmt">Annotation for indicating component to be wired, and what prefix to add to the ports that are generated</p>
@@ -196,7 +212,7 @@
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="Annotation for optional output files, and what directory to put those files in (absolute path) *" href="TopWiringOutputFilesAnnotation.html"><span class="name">TopWiringOutputFilesAnnotation</span></a><span class="params">(<span name="dirName">dirName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="outputFunction">outputFunction: (<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Seq">Seq</span>[((<a href="../../annotations/ComponentName.html" class="extype" name="firrtl.annotations.ComponentName">ComponentName</a>, <a href="../../ir/Type.html" class="extype" name="firrtl.ir.Type">Type</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a>, <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>], <span class="extype" name="scala.Predef.String">String</span>), <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>)], <a href="../../CircuitState.html" class="extype" name="firrtl.CircuitState">CircuitState</a>) ⇒ <a href="../../CircuitState.html" class="extype" name="firrtl.CircuitState">CircuitState</a></span>)</span><span class="result"> extends <a href="../../annotations/NoTargetAnnotation.html" class="extype" name="firrtl.annotations.NoTargetAnnotation">NoTargetAnnotation</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.11/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="Annotation for optional output files, and what directory to put those files in (absolute path) *" href="TopWiringOutputFilesAnnotation.html"><span class="name">TopWiringOutputFilesAnnotation</span></a><span class="params">(<span name="dirName">dirName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="outputFunction">outputFunction: (<span class="extype" name="scala.Predef.String">String</span>, <span class="extype" name="scala.Seq">Seq</span>[((<a href="../../annotations/ComponentName.html" class="extype" name="firrtl.annotations.ComponentName">ComponentName</a>, <a href="../../ir/Type.html" class="extype" name="firrtl.ir.Type">Type</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a>, <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>], <span class="extype" name="scala.Predef.String">String</span>), <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>)], <a href="../../CircuitState.html" class="extype" name="firrtl.CircuitState">CircuitState</a>) ⇒ <a href="../../CircuitState.html" class="extype" name="firrtl.CircuitState">CircuitState</a></span>)</span><span class="result"> extends <a href="../../annotations/NoTargetAnnotation.html" class="extype" name="firrtl.annotations.NoTargetAnnotation">NoTargetAnnotation</a> with <a href="https://www.scala-lang.org/api/2.12.12/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.12/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       <p class="shortcomment cmt">Annotation for optional output files, and what directory to put those files in (absolute path) *</p>
@@ -216,8 +232,8 @@
       </span>
       
       <p class="shortcomment cmt">Punch out annotated ports out to the toplevel of the circuit.</p><div class="fullcomment"><div class="comment cmt"><p>Punch out annotated ports out to the toplevel of the circuit.
-    This also has an option to pass a function as a parmeter to generate
-    custom output files as a result of the additional ports</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>This *does* work for deduped modules</p></span></dd></dl></div>
+   This also has an option to pass a function as a parmeter to generate
+   custom output files as a result of the additional ports</p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>This *does* work for deduped modules</p></span></dd></dl></div>
     </li></ol>
             </div>
 

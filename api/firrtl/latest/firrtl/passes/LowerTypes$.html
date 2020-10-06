@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.3.2 - firrtl.passes.LowerTypes</title>
-          <meta name="description" content="firrtl 1.3.2 - firrtl.passes.LowerTypes" />
-          <meta name="keywords" content="firrtl 1.3.2 firrtl.passes.LowerTypes" />
+          <title>firrtl 1.4.0 - firrtl.passes.LowerTypes</title>
+          <meta name="description" content="firrtl 1.4.0 - firrtl.passes.LowerTypes" />
+          <meta name="keywords" content="firrtl 1.4.0 firrtl.passes.LowerTypes" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.3.2</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.4.0</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -230,7 +230,7 @@
                         <a class="class" href="InlineAnnotation.html" title="Indicates that something should be inlined"></a>
                         <a href="InlineAnnotation.html" title="Indicates that something should be inlined">InlineAnnotation</a>
                       </li><li class="current-entities indented2">
-                        <span class="separator"></span>
+                        <a class="object" href="InlineInstances$.html" title=""></a>
                         <a class="class" href="InlineInstances.html" title="Inline instances as indicated by existing InlineAnnotations"></a>
                         <a href="InlineInstances.html" title="Inline instances as indicated by existing InlineAnnotations">InlineInstances</a>
                       </li><li class="current-entities indented2">
@@ -239,8 +239,8 @@
                         <a href="Legalize$.html" title="">Legalize</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="object" href="" title="Removes all aggregate types from a firrtl.ir.Circuit"></a>
-                        <a href="" title="Removes all aggregate types from a firrtl.ir.Circuit">LowerTypes</a>
+                        <a class="object" href="" title="Flattens Bundles and Vecs."></a>
+                        <a href="" title="Flattens Bundles and Vecs.">LowerTypes</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="class" href="MPort.html" title=""></a>
@@ -319,8 +319,8 @@
                         <a href="TrimIntervals.html" title="Replaces IntervalType with SIntType, three AST walks: 1) Align binary points">TrimIntervals</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
-                        <a class="object" href="Uniquify$.html" title="Resolve name collisions that would occur in LowerTypes"></a>
-                        <a href="Uniquify$.html" title="Resolve name collisions that would occur in LowerTypes">Uniquify</a>
+                        <a class="object" href="Uniquify$.html" title="Resolve name collisions that would occur in the old LowerTypes pass"></a>
+                        <a href="Uniquify$.html" title="Resolve name collisions that would occur in the old LowerTypes pass">Uniquify</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="object" href="VerilogModulusCleanup$.html" title="Verilog has the width of (a % b) = Max(W(a), W(b)) FIRRTL has the width of (a % b) = Min(W(a), W(b)), which makes more sense, but nevertheless is a problem when emitting verilog"></a>
@@ -381,15 +381,13 @@
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Removes all aggregate types from a <a href="../ir/Circuit.html" class="extype" name="firrtl.ir.Circuit">firrtl.ir.Circuit</a>
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.3.2/src/main/scala/firrtl/passes/LowerTypes.scala" target="_blank">LowerTypes.scala</a></dd><div class="block">Example:
-               <ol><li class="cmt"><p></p><pre>wire foo : { a : UInt&lt;<span class="num">32</span>&gt;, b : UInt&lt;<span class="num">16</span>&gt; }</pre><p> lowers to</p><pre>wire foo_a : UInt&lt;<span class="num">32</span>&gt;
-wire foo_b : UInt&lt;<span class="num">16</span>&gt;</pre></li></ol>
-            </div><dt>Note</dt><dd><span class="cmt"><p>Assumes <a href="../ir/SubAccess.html" class="extype" name="firrtl.ir.SubAccess">firrtl.ir.SubAccess</a>es have been removed</p></span>, <span class="cmt"><p>Assumes <a href="../ir/Connect.html" class="extype" name="firrtl.ir.Connect">firrtl.ir.Connect</a>s and <a href="../ir/IsInvalid.html" class="extype" name="firrtl.ir.IsInvalid">firrtl.ir.IsInvalid</a>s only operate on <a href="../ir/Expression.html" class="extype" name="firrtl.ir.Expression">firrtl.ir.Expression</a>s of ground type</p></span></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Flattens Bundles and Vecs.
+- Some implicit bundle types remain, but with a limited depth:</p><ul><li>the type of a memory is still a bundle with depth 2 (mem -&gt; port -&gt; field), see <a href="MemPortUtils$.html#memType(mem:firrtl.ir.DefMemory):firrtl.ir.BundleType" class="extmbr" name="firrtl.passes.MemPortUtils#memType">MemPortUtils.memType</a></li><li>the type of a module instance is still a bundle with depth 1 (instance -&gt; port)
+</li></ul></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.4.0/src/main/scala/firrtl/passes/LowerTypes.scala" target="_blank">LowerTypes.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="../DependencyAPIMigration.html" class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</a>, <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a>, <a href="../options/DependencyAPI.html" class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</a>[<a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a>], <a href="../options/TransformLike.html" class="extype" name="firrtl.options.TransformLike">TransformLike</a>[<a href="../CircuitState.html" class="extype" name="firrtl.CircuitState">CircuitState</a>], <a href="../../logger/LazyLogging.html" class="extype" name="logger.LazyLogging">LazyLogging</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="../DependencyAPIMigration.html" class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</a>, <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a>, <a href="../options/DependencyAPI.html" class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</a>[<a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a>], <a href="../options/TransformLike.html" class="extype" name="firrtl.options.TransformLike">TransformLike</a>[<a href="../CircuitState.html" class="extype" name="firrtl.CircuitState">CircuitState</a>], <a href="../../logger/LazyLogging.html" class="extype" name="logger.LazyLogging">LazyLogging</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div></div>
         
 
@@ -435,26 +433,7 @@ wire foo_b : UInt&lt;<span class="num">16</span>&gt;</pre></li></ol>
         <div id="allMembers">
         
 
-        <div id="types" class="types members">
-              <h3>Type Members</h3>
-              <ol><li name="firrtl.passes.LowerTypes.MemDataTypeMap" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MemDataTypeMap=scala.collection.mutable.HashMap[String,firrtl.ir.Type]"></a><a id="MemDataTypeMap:MemDataTypeMap"></a>
-      <span class="permalink">
-      <a href="../../firrtl/passes/LowerTypes$.html#MemDataTypeMap=scala.collection.mutable.HashMap[String,firrtl.ir.Type]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">type</span>
-      </span>
-      <span class="symbol">
-        <span class="name">MemDataTypeMap</span><span class="result alias"> = <a href="https://www.scala-lang.org/api/2.12.11/scala/collection/mutable/HashMap.html#scala.collection.mutable.HashMap" class="extype" name="scala.collection.mutable.HashMap">HashMap</a>[<span class="extype" name="scala.Predef.String">String</span>, <a href="../ir/Type.html" class="extype" name="firrtl.ir.Type">Type</a>]</span>
-      </span>
-      
-      
-    </li></ol>
-            </div>
+        
 
         
 
@@ -473,7 +452,7 @@ wire foo_b : UInt&lt;<span class="num">16</span>&gt;</pre></li></ol>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -489,7 +468,7 @@ wire foo_b : UInt&lt;<span class="num">16</span>&gt;</pre></li></ol>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -505,7 +484,7 @@ wire foo_b : UInt&lt;<span class="num">16</span>&gt;</pre></li></ol>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -537,7 +516,7 @@ wire foo_b : UInt&lt;<span class="num">16</span>&gt;</pre></li></ol>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -577,7 +556,7 @@ wire foo_b : UInt&lt;<span class="num">16</span>&gt;</pre></li></ol>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -593,7 +572,7 @@ wire foo_b : UInt&lt;<span class="num">16</span>&gt;</pre></li></ol>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -630,7 +609,7 @@ Called by <a href="#runTransform(state:firrtl.CircuitState):firrtl.CircuitState"
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -671,7 +650,7 @@ Called by <a href="#runTransform(state:firrtl.CircuitState):firrtl.CircuitState"
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
@@ -690,7 +669,7 @@ Called by <a href="#runTransform(state:firrtl.CircuitState):firrtl.CircuitState"
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">invalidates</span><span class="params">(<span name="a">a: <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">invalidates</span><span class="params">(<span name="a">a: <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <p class="shortcomment cmt">A function that, given *another* transform (parameter <code>a</code>) will return true if this transform invalidates/undos the
@@ -708,7 +687,7 @@ effects of the *other* transform (parameter <code>a</code>).</p></div><dl class=
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
@@ -728,70 +707,6 @@ effects of the *other* transform (parameter <code>a</code>).</p></div><dl class=
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../../logger/LazyLogging.html" class="extype" name="logger.LazyLogging">LazyLogging</a></dd></dl></div>
-    </li><li name="firrtl.passes.LowerTypes#lowerTypes" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="lowerTypes(renames:firrtl.RenameMap)(m:firrtl.ir.DefModule):firrtl.ir.DefModule"></a><a id="lowerTypes(RenameMap)(DefModule):DefModule"></a>
-      <span class="permalink">
-      <a href="../../firrtl/passes/LowerTypes$.html#lowerTypes(renames:firrtl.RenameMap)(m:firrtl.ir.DefModule):firrtl.ir.DefModule" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">lowerTypes</span><span class="params">(<span name="renames">renames: <a href="../RenameMap.html" class="extype" name="firrtl.RenameMap">RenameMap</a></span>)</span><span class="params">(<span name="m">m: <a href="../ir/DefModule.html" class="extype" name="firrtl.ir.DefModule">DefModule</a></span>)</span><span class="result">: <a href="../ir/DefModule.html" class="extype" name="firrtl.ir.DefModule">DefModule</a></span>
-      </span>
-      
-      
-    </li><li name="firrtl.passes.LowerTypes#lowerTypesExp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="lowerTypesExp(memDataTypeMap:firrtl.passes.LowerTypes.MemDataTypeMap,info:firrtl.ir.Info,mname:String)(e:firrtl.ir.Expression):firrtl.ir.Expression"></a><a id="lowerTypesExp(MemDataTypeMap,Info,String)(Expression):Expression"></a>
-      <span class="permalink">
-      <a href="../../firrtl/passes/LowerTypes$.html#lowerTypesExp(memDataTypeMap:firrtl.passes.LowerTypes.MemDataTypeMap,info:firrtl.ir.Info,mname:String)(e:firrtl.ir.Expression):firrtl.ir.Expression" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">lowerTypesExp</span><span class="params">(<span name="memDataTypeMap">memDataTypeMap: <a href="#MemDataTypeMap=scala.collection.mutable.HashMap[String,firrtl.ir.Type]" class="extmbr" name="firrtl.passes.LowerTypes.MemDataTypeMap">MemDataTypeMap</a></span>, <span name="info">info: <a href="../ir/Info.html" class="extype" name="firrtl.ir.Info">Info</a></span>, <span name="mname">mname: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="params">(<span name="e">e: <a href="../ir/Expression.html" class="extype" name="firrtl.ir.Expression">Expression</a></span>)</span><span class="result">: <a href="../ir/Expression.html" class="extype" name="firrtl.ir.Expression">Expression</a></span>
-      </span>
-      
-      
-    </li><li name="firrtl.passes.LowerTypes#lowerTypesMemExp" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="lowerTypesMemExp(memDataTypeMap:firrtl.passes.LowerTypes.MemDataTypeMap,info:firrtl.ir.Info,mname:String)(e:firrtl.ir.Expression):Seq[firrtl.ir.Expression]"></a><a id="lowerTypesMemExp(MemDataTypeMap,Info,String)(Expression):Seq[Expression]"></a>
-      <span class="permalink">
-      <a href="../../firrtl/passes/LowerTypes$.html#lowerTypesMemExp(memDataTypeMap:firrtl.passes.LowerTypes.MemDataTypeMap,info:firrtl.ir.Info,mname:String)(e:firrtl.ir.Expression):Seq[firrtl.ir.Expression]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">lowerTypesMemExp</span><span class="params">(<span name="memDataTypeMap">memDataTypeMap: <a href="#MemDataTypeMap=scala.collection.mutable.HashMap[String,firrtl.ir.Type]" class="extmbr" name="firrtl.passes.LowerTypes.MemDataTypeMap">MemDataTypeMap</a></span>, <span name="info">info: <a href="../ir/Info.html" class="extype" name="firrtl.ir.Info">Info</a></span>, <span name="mname">mname: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="params">(<span name="e">e: <a href="../ir/Expression.html" class="extype" name="firrtl.ir.Expression">Expression</a></span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="../ir/Expression.html" class="extype" name="firrtl.ir.Expression">Expression</a>]</span>
-      </span>
-      
-      
-    </li><li name="firrtl.passes.LowerTypes#lowerTypesStmt" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="lowerTypesStmt(memDataTypeMap:firrtl.passes.LowerTypes.MemDataTypeMap,minfo:firrtl.ir.Info,mname:String,renames:firrtl.RenameMap)(s:firrtl.ir.Statement):firrtl.ir.Statement"></a><a id="lowerTypesStmt(MemDataTypeMap,Info,String,RenameMap)(Statement):Statement"></a>
-      <span class="permalink">
-      <a href="../../firrtl/passes/LowerTypes$.html#lowerTypesStmt(memDataTypeMap:firrtl.passes.LowerTypes.MemDataTypeMap,minfo:firrtl.ir.Info,mname:String,renames:firrtl.RenameMap)(s:firrtl.ir.Statement):firrtl.ir.Statement" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">lowerTypesStmt</span><span class="params">(<span name="memDataTypeMap">memDataTypeMap: <a href="#MemDataTypeMap=scala.collection.mutable.HashMap[String,firrtl.ir.Type]" class="extmbr" name="firrtl.passes.LowerTypes.MemDataTypeMap">MemDataTypeMap</a></span>, <span name="minfo">minfo: <a href="../ir/Info.html" class="extype" name="firrtl.ir.Info">Info</a></span>, <span name="mname">mname: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="renames">renames: <a href="../RenameMap.html" class="extype" name="firrtl.RenameMap">RenameMap</a></span>)</span><span class="params">(<span name="s">s: <a href="../ir/Statement.html" class="extype" name="firrtl.ir.Statement">Statement</a></span>)</span><span class="result">: <a href="../ir/Statement.html" class="extype" name="firrtl.ir.Statement">Statement</a></span>
-      </span>
-      
-      
     </li><li name="firrtl.passes.LowerTypes#loweredName" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="loweredName(s:Seq[String]):String"></a><a id="loweredName(Seq[String]):String"></a>
       <span class="permalink">
@@ -823,7 +738,7 @@ effects of the *other* transform (parameter <code>a</code>).</p></div><dl class=
         <span class="name">loweredName</span><span class="params">(<span name="e">e: <a href="../ir/Expression.html" class="extype" name="firrtl.ir.Expression">Expression</a></span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       
-      <p class="shortcomment cmt">Expands a chain of referential <a href="../ir/Expression.html" class="extype" name="firrtl.ir.Expression">firrtl.ir.Expression</a>s into the equivalent lowered name</p><div class="fullcomment"><div class="comment cmt"><p>Expands a chain of referential <a href="../ir/Expression.html" class="extype" name="firrtl.ir.Expression">firrtl.ir.Expression</a>s into the equivalent lowered name</p></div><dl class="paramcmts block"><dt class="param">e</dt><dd class="cmt"><p><a href="../ir/Expression.html" class="extype" name="firrtl.ir.Expression">firrtl.ir.Expression</a> made up of _only_ <a href="../WRef.html" class="extype" name="firrtl.WRef">firrtl.WRef</a>, <a href="../WSubField.html" class="extype" name="firrtl.WSubField">firrtl.WSubField</a>, and <a href="../WSubIndex.html" class="extype" name="firrtl.WSubIndex">firrtl.WSubIndex</a></p></dd><dt>returns</dt><dd class="cmt"><p>Lowered name of e</p></dd></dl></div>
+      <p class="shortcomment cmt">Expands a chain of referential <a href="../ir/Expression.html" class="extype" name="firrtl.ir.Expression">firrtl.ir.Expression</a>s into the equivalent lowered name</p><div class="fullcomment"><div class="comment cmt"><p>Expands a chain of referential <a href="../ir/Expression.html" class="extype" name="firrtl.ir.Expression">firrtl.ir.Expression</a>s into the equivalent lowered name</p></div><dl class="paramcmts block"><dt class="param">e</dt><dd class="cmt"><p><a href="../ir/Expression.html" class="extype" name="firrtl.ir.Expression">firrtl.ir.Expression</a> made up of _only_ <a href="../index.html#WRef=firrtl.ir.Reference" class="extmbr" name="firrtl.WRef">firrtl.WRef</a>, <a href="../index.html#WSubField=firrtl.ir.SubField" class="extmbr" name="firrtl.WSubField">firrtl.WSubField</a>, and <a href="../index.html#WSubIndex=firrtl.ir.SubIndex" class="extmbr" name="firrtl.WSubIndex">firrtl.WSubIndex</a></p></dd><dt>returns</dt><dd class="cmt"><p>Lowered name of e</p></dd></dl><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>Please make sure that there will be no name collisions when you use this outside of the context of LowerTypes!</p></span></dd></dl></div>
     </li><li name="firrtl.Transform#name" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="name:String"></a>
       <span class="permalink">
@@ -852,7 +767,7 @@ effects of the *other* transform (parameter <code>a</code>).</p></div><dl class=
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -868,7 +783,7 @@ effects of the *other* transform (parameter <code>a</code>).</p></div><dl class=
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -887,7 +802,7 @@ effects of the *other* transform (parameter <code>a</code>).</p></div><dl class=
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -895,9 +810,9 @@ effects of the *other* transform (parameter <code>a</code>).</p></div><dl class=
               
         </dd></dl></div>
     </li><li name="firrtl.passes.LowerTypes#optionalPrerequisiteOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="optionalPrerequisiteOf:Seq[Nothing]"></a>
+      <a id="optionalPrerequisiteOf:Seq[firrtl.stage.TransformManager.TransformDependency]"></a><a id="optionalPrerequisiteOf:Seq[TransformDependency]"></a>
       <span class="permalink">
-      <a href="../../firrtl/passes/LowerTypes$.html#optionalPrerequisiteOf:Seq[Nothing]" title="Permalink">
+      <a href="../../firrtl/passes/LowerTypes$.html#optionalPrerequisiteOf:Seq[firrtl.stage.TransformManager.TransformDependency]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -906,7 +821,7 @@ effects of the *other* transform (parameter <code>a</code>).</p></div><dl class=
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">optionalPrerequisiteOf</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/collection/Seq.html#scala.collection.Seq" class="extype" name="scala.collection.Seq">Seq</a>[<a href="https://www.scala-lang.org/api/2.12.11/scala/Nothing.html#scala.Nothing" class="extype" name="scala.Nothing">Nothing</a>]</span>
+        <span class="name">optionalPrerequisiteOf</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="../stage/TransformManager$.html#TransformDependency=firrtl.options.Dependency[firrtl.Transform]" class="extmbr" name="firrtl.stage.TransformManager.TransformDependency">TransformDependency</a>]</span>
       </span>
       
       <p class="shortcomment cmt">A sequence of transforms to add this transform as an <code>optionalPrerequisite</code>.</p><div class="fullcomment"><div class="comment cmt"><p>A sequence of transforms to add this transform as an <code>optionalPrerequisite</code>. The use of <code>optionalPrerequisiteOf</code>
@@ -948,54 +863,6 @@ once, you should use a <code>DependencyManager</code> with multiple targets.</p>
       
       <p class="shortcomment cmt">All transform that must run before this transform</p><div class="fullcomment"><div class="comment cmt"><p>All transform that must run before this transform</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.passes.LowerTypes">LowerTypes</a> → <a href="../DependencyAPIMigration.html" class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</a> → <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> → <a href="../options/DependencyAPI.html" class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</a></dd><dt>Note</dt><dd><span class="cmt"><p>The use of a Seq here is to preserve input order. Internally, this will be converted to a private,
 ordered Set.</p></span></dd></dl></div>
-    </li><li name="firrtl.passes.LowerTypes#renameExps" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="renameExps(renames:firrtl.RenameMap,e:firrtl.ir.Expression,root:String):Seq[String]"></a><a id="renameExps(RenameMap,Expression,String):Seq[String]"></a>
-      <span class="permalink">
-      <a href="../../firrtl/passes/LowerTypes$.html#renameExps(renames:firrtl.RenameMap,e:firrtl.ir.Expression,root:String):Seq[String]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">renameExps</span><span class="params">(<span name="renames">renames: <a href="../RenameMap.html" class="extype" name="firrtl.RenameMap">RenameMap</a></span>, <span name="e">e: <a href="../ir/Expression.html" class="extype" name="firrtl.ir.Expression">Expression</a></span>, <span name="root">root: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
-      </span>
-      
-      
-    </li><li name="firrtl.passes.LowerTypes#renameExps" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="renameExps(renames:firrtl.RenameMap,n:String,t:firrtl.ir.Type):Seq[String]"></a><a id="renameExps(RenameMap,String,Type):Seq[String]"></a>
-      <span class="permalink">
-      <a href="../../firrtl/passes/LowerTypes$.html#renameExps(renames:firrtl.RenameMap,n:String,t:firrtl.ir.Type):Seq[String]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">renameExps</span><span class="params">(<span name="renames">renames: <a href="../RenameMap.html" class="extype" name="firrtl.RenameMap">RenameMap</a></span>, <span name="n">n: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="t">t: <a href="../ir/Type.html" class="extype" name="firrtl.ir.Type">Type</a></span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
-      </span>
-      
-      
-    </li><li name="firrtl.passes.LowerTypes#renameExps" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="renameExps(renames:firrtl.RenameMap,n:String,t:firrtl.ir.Type,root:String):Seq[String]"></a><a id="renameExps(RenameMap,String,Type,String):Seq[String]"></a>
-      <span class="permalink">
-      <a href="../../firrtl/passes/LowerTypes$.html#renameExps(renames:firrtl.RenameMap,n:String,t:firrtl.ir.Type,root:String):Seq[String]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">renameExps</span><span class="params">(<span name="renames">renames: <a href="../RenameMap.html" class="extype" name="firrtl.RenameMap">RenameMap</a></span>, <span name="n">n: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="t">t: <a href="../ir/Type.html" class="extype" name="firrtl.ir.Type">Type</a></span>, <span name="root">root: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Predef.String">String</span>]</span>
-      </span>
-      
-      
     </li><li name="firrtl.Transform#runTransform" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="runTransform(state:firrtl.CircuitState):firrtl.CircuitState"></a><a id="runTransform(CircuitState):CircuitState"></a>
       <span class="permalink">
@@ -1073,7 +940,7 @@ ordered Set.</p></span></dd></dl></div>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1095,7 +962,7 @@ ordered Set.</p></span></dd></dl></div>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="https://www.scala-lang.org/api/2.12.11/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1117,7 +984,7 @@ ordered Set.</p></span></dd></dl></div>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.11/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.11/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1166,27 +1033,6 @@ allows for prerequisite injection into FIRRTL proper.
               
         </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FIRRTL 1.3)</i> Due to confusion, 'dependents' is being renamed to 'optionalPrerequisiteOf'. Override the latter instead.</p></dd><dt>Note</dt><dd><span class="cmt"><p>The use of a Seq here is to preserve input order. Internally, this will be converted to a private,
 ordered Set.</p></span></dd><dt>See also</dt><dd><span class="cmt"><p><a href="CheckTypes$.html" class="extype" name="firrtl.passes.CheckTypes">firrtl.passes.CheckTypes</a> for an example of an optional checking <a href="../Transform.html" class="extype" name="firrtl.Transform">firrtl.Transform</a></p></span></dd></dl></div>
-    </li><li name="firrtl.Transform#getMyAnnotations" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="getMyAnnotations(state:firrtl.CircuitState):Seq[firrtl.annotations.Annotation]"></a><a id="getMyAnnotations(CircuitState):Seq[Annotation]"></a>
-      <span class="permalink">
-      <a href="../../firrtl/passes/LowerTypes$.html#getMyAnnotations(state:firrtl.CircuitState):Seq[firrtl.annotations.Annotation]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">final </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name deprecated" title="Deprecated: (Since version 1.1) Just collect the actual Annotation types the transform wants">getMyAnnotations</span><span class="params">(<span name="state">state: <a href="../CircuitState.html" class="extype" name="firrtl.CircuitState">CircuitState</a></span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="../annotations/Annotation.html" class="extype" name="firrtl.annotations.Annotation">Annotation</a>]</span>
-      </span>
-      
-      <p class="shortcomment cmt">Convenience method to get annotations relevant to this Transform
-</p><div class="fullcomment"><div class="comment cmt"><p>Convenience method to get annotations relevant to this Transform
-</p></div><dl class="paramcmts block"><dt class="param">state</dt><dd class="cmt"><p>The <a href="../CircuitState.html" class="extype" name="firrtl.CircuitState">CircuitState</a> form which to extract annotations</p></dd><dt>returns</dt><dd class="cmt"><p>A collection of annotations</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a></dd><dt>Annotations</dt><dd>
-                <span class="name">@deprecated</span>
-              
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.1)</i> Just collect the actual Annotation types the transform wants</p></dd></dl></div>
     </li><li name="firrtl.DependencyAPIMigration#inputForm" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="inputForm:firrtl.CircuitForm"></a><a id="inputForm:CircuitForm"></a>
       <span class="permalink">
@@ -1241,9 +1087,9 @@ ordered Set.</p></span></dd><dt>See also</dt><dd><span class="cmt"><p><a href="C
             </div><div class="parent" name="logger.LazyLogging">
               <h3>Inherited from <a href="../../logger/LazyLogging.html" class="extype" name="logger.LazyLogging">LazyLogging</a></h3>
             </div><div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.11/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.11/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
             </div>
         
         </div>

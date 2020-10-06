@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>1.2.2 - treadle.executable.MemoryInitializer</title>
-          <meta name="description" content="1.2.2 - treadle.executable.MemoryInitializer" />
-          <meta name="keywords" content="1.2.2 treadle.executable.MemoryInitializer" />
+          <title>1.3.0 - treadle.executable.MemoryInitializer</title>
+          <meta name="description" content="1.3.0 - treadle.executable.MemoryInitializer" />
+          <meta name="keywords" content="1.3.0 treadle.executable.MemoryInitializer" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title"><span id="doc-version">1.2.2</span></span>
+        <span id="doc-title"><span id="doc-version">1.3.0</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -387,6 +387,10 @@
                         <a href="HeadLongs.html" title="">HeadLongs</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
+                        <a class="class" href="IndicesAndRadix.html" title=""></a>
+                        <a href="IndicesAndRadix.html" title="">IndicesAndRadix</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
                         <a class="trait" href="IntExpressionResult.html" title=""></a>
                         <a href="IntExpressionResult.html" title="">IntExpressionResult</a>
                       </li><li class="current-entities indented2">
@@ -730,6 +734,10 @@
                         <a class="class" href="VcdHook.html" title=""></a>
                         <a href="VcdHook.html" title="">VcdHook</a>
                       </li><li class="current-entities indented2">
+                        <a class="object" href="VcdMemoryLoggingController$.html" title=""></a>
+                        <a class="class" href="VcdMemoryLoggingController.html" title="Controls whether a given memory cell should be logged to vcd output if logAllRadixOpt is defined then all indices for all memories should be logged otherwise if memory has an entry then check the memory index if the set contains -1 then all indices should be logged for that memory"></a>
+                        <a href="VcdMemoryLoggingController.html" title="Controls whether a given memory cell should be logged to vcd output if logAllRadixOpt is defined then all indices for all memories should be logged otherwise if memory has an entry then check the memory index if the set contains -1 then all indices should be logged for that memory">VcdMemoryLoggingController</a>
+                      </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="class" href="WaveformValues.html" title=""></a>
                         <a href="WaveformValues.html" title="">WaveformValues</a>
@@ -780,7 +788,7 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">MemoryInitializer</span><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <span class="name">MemoryInitializer</span><span class="result"> extends <span class="extype" name="logger.LazyLogging">LazyLogging</span></span>
       </span>
       </h4>
 
@@ -789,7 +797,7 @@
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="logger.LazyLogging">LazyLogging</span>, <span class="extype" name="scala.AnyRef">AnyRef</span>, <span class="extype" name="scala.Any">Any</span></div>
         </div></div>
         
 
@@ -815,7 +823,7 @@
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="treadle.executable.MemoryInitializer"><span>MemoryInitializer</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="treadle.executable.MemoryInitializer"><span>MemoryInitializer</span></li><li class="in" name="logger.LazyLogging"><span>LazyLogging</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -1041,6 +1049,22 @@
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="treadle.executable.MemoryInitializer#handleInitializers" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="handleInitializers():Unit"></a>
+      <span class="permalink">
+      <a href="../../treadle/executable/MemoryInitializer.html#handleInitializers():Unit" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">handleInitializers</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Unit">Unit</span></span>
+      </span>
+      
+      
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">
@@ -1092,6 +1116,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
+    </li><li name="logger.LazyLogging#logger" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="logger:logger.Logger"></a><a id="logger:Logger"></a>
+      <span class="permalink">
+      <a href="../../treadle/executable/MemoryInitializer.html#logger:logger.Logger" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">logger</span><span class="result">: <span class="extype" name="logger.Logger">Logger</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>LazyLogging</dd></dl></div>
     </li><li name="treadle.executable.MemoryInitializer#memoryLoadAnnotations" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="memoryLoadAnnotations:Seq[firrtl.annotations.LoadMemoryAnnotation]"></a><a id="memoryLoadAnnotations:Seq[LoadMemoryAnnotation]"></a>
       <span class="permalink">
@@ -1288,7 +1328,9 @@
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="scala.AnyRef">
+        <div class="parent" name="logger.LazyLogging">
+              <h3>Inherited from <span class="extype" name="logger.LazyLogging">LazyLogging</span></h3>
+            </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <span class="extype" name="scala.AnyRef">AnyRef</span></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <span class="extype" name="scala.Any">Any</span></h3>

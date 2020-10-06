@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>1.2.2 - treadle.executable</title>
-          <meta name="description" content="1.2.2 - treadle.executable" />
-          <meta name="keywords" content="1.2.2 treadle.executable" />
+          <title>1.3.0 - treadle.executable</title>
+          <meta name="description" content="1.3.0 - treadle.executable" />
+          <meta name="keywords" content="1.3.0 treadle.executable" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title"><span id="doc-version">1.2.2</span></span>
+        <span id="doc-title"><span id="doc-version">1.3.0</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -85,6 +85,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../../index.html" class="extype" name="_root_">root</a></dd></dl></div>
+    </li><li name="treadle.blackboxes" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="blackboxes"></a><a id="blackboxes:blackboxes"></a>
+      <span class="permalink">
+      <a href="../../treadle/blackboxes/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="../blackboxes/index.html"><span class="name">blackboxes</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="treadle">treadle</a></dd></dl></div>
     </li><li name="treadle.chronometry" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="chronometry"></a><a id="chronometry:chronometry"></a>
       <span class="permalink">
@@ -401,6 +417,10 @@
                         <span class="separator"></span>
                         <a class="class" href="HeadLongs.html" title=""></a>
                         <a href="HeadLongs.html" title="">HeadLongs</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="class" href="IndicesAndRadix.html" title=""></a>
+                        <a href="IndicesAndRadix.html" title="">IndicesAndRadix</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="trait" href="IntExpressionResult.html" title=""></a>
@@ -745,6 +765,10 @@
                         <span class="separator"></span>
                         <a class="class" href="VcdHook.html" title=""></a>
                         <a href="VcdHook.html" title="">VcdHook</a>
+                      </li><li class="current-entities indented2">
+                        <a class="object" href="VcdMemoryLoggingController$.html" title=""></a>
+                        <a class="class" href="VcdMemoryLoggingController.html" title="Controls whether a given memory cell should be logged to vcd output if logAllRadixOpt is defined then all indices for all memories should be logged otherwise if memory has an entry then check the memory index if the set contains -1 then all indices should be logged for that memory"></a>
+                        <a href="VcdMemoryLoggingController.html" title="Controls whether a given memory cell should be logged to vcd output if logAllRadixOpt is defined then all indices for all memories should be logged otherwise if memory has an entry then check the memory index if the set contains -1 then all indices should be logged for that memory">VcdMemoryLoggingController</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="class" href="WaveformValues.html" title=""></a>
@@ -1748,7 +1772,7 @@ This class only supports (2 ** 31) - 1 of any ints, longs or bigs.
       
       
     </li><li name="treadle.executable.ExecutionEngine" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="ExecutionEngineextendsAnyRef"></a><a id="ExecutionEngine:ExecutionEngine"></a>
+      <a id="ExecutionEngineextendsLazyLogging"></a><a id="ExecutionEngine:ExecutionEngine"></a>
       <span class="permalink">
       <a href="../../treadle/executable/ExecutionEngine.html" title="Permalink">
         <i class="material-icons"></i>
@@ -1759,7 +1783,7 @@ This class only supports (2 ** 31) - 1 of any ints, longs or bigs.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="ExecutionEngine.html"><span class="name">ExecutionEngine</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a title="" href="ExecutionEngine.html"><span class="name">ExecutionEngine</span></a><span class="result"> extends <span class="extype" name="logger.LazyLogging">LazyLogging</span></span>
       </span>
       
       
@@ -2121,6 +2145,22 @@ to see that is rendered last.
       </span>
       
       
+    </li><li name="treadle.executable.IndicesAndRadix" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="IndicesAndRadixextendsProductwithSerializable"></a><a id="IndicesAndRadix:IndicesAndRadix"></a>
+      <span class="permalink">
+      <a href="../../treadle/executable/IndicesAndRadix.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="IndicesAndRadix.html"><span class="name">IndicesAndRadix</span></a><span class="params">(<span name="indices">indices: <span class="extype" name="scala.Predef.Set">Set</span>[<span class="extype" name="scala.Int">Int</span>]</span>, <span name="radix">radix: <span class="extype" name="scala.Int">Int</span> = <span class="symbol">10</span></span>)</span><span class="result"> extends <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
     </li><li name="treadle.executable.IntExpressionResult" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
       <a id="IntExpressionResultextendsExpressionResult"></a><a id="IntExpressionResult:IntExpressionResult"></a>
       <span class="permalink">
@@ -2298,7 +2338,7 @@ to see that is rendered last.
       
       
     </li><li name="treadle.executable.MemoryInitializer" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="MemoryInitializerextendsAnyRef"></a><a id="MemoryInitializer:MemoryInitializer"></a>
+      <a id="MemoryInitializerextendsLazyLogging"></a><a id="MemoryInitializer:MemoryInitializer"></a>
       <span class="permalink">
       <a href="../../treadle/executable/MemoryInitializer.html" title="Permalink">
         <i class="material-icons"></i>
@@ -2309,7 +2349,7 @@ to see that is rendered last.
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="" href="MemoryInitializer.html"><span class="name">MemoryInitializer</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+        <a title="" href="MemoryInitializer.html"><span class="name">MemoryInitializer</span></a><span class="result"> extends <span class="extype" name="logger.LazyLogging">LazyLogging</span></span>
       </span>
       
       
@@ -3347,6 +3387,26 @@ repeatedly and registers will only be advanced on the first call.
       </span>
       
       
+    </li><li name="treadle.executable.VcdMemoryLoggingController" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VcdMemoryLoggingControllerextendsAnyRef"></a><a id="VcdMemoryLoggingController:VcdMemoryLoggingController"></a>
+      <span class="permalink">
+      <a href="../../treadle/executable/VcdMemoryLoggingController.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Controls whether a given memory cell should be logged to vcd output if logAllRadixOpt is defined then all indices for all memories should be logged otherwise if memory has an entry then check the memory index if the set contains -1 then all indices should be logged for that memory" href="VcdMemoryLoggingController.html"><span class="name">VcdMemoryLoggingController</span></a><span class="result"> extends <span class="extype" name="scala.AnyRef">AnyRef</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Controls whether a given memory cell should be logged to vcd output
+if logAllRadixOpt is defined then all indices for all memories should be logged
+otherwise if memory has an entry then check the memory index
+if the set contains -1 then all indices should be logged for that memory
+</p>
     </li><li name="treadle.executable.WaveformValues" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="WaveformValuesextendsProductwithSerializable"></a><a id="WaveformValues:WaveformValues"></a>
       <span class="permalink">
@@ -3661,7 +3721,8 @@ repeatedly and registers will only be advanced on the first call.
       
       <p class="shortcomment cmt">Provides three different aspects of the code necessary to create read and write
 register pipelines.</p><div class="fullcomment"><div class="comment cmt"><p>Provides three different aspects of the code necessary to create read and write
-register pipelines. The three cases are:</p><ul><li>Adding the symbols for the registers to be created</li><li>Adding the rendering code necessary to Expression views of the pipelines</li><li>Actually adding the pipeline registers.</li></ul><p> NOTE: See IMPORTANT NOTE above.</p></div></div>
+register pipelines. The three cases are:</p><ul><li>Adding the symbols for the registers to be created</li><li>Adding the rendering code necessary to Expression views of the pipelines</li><li>Actually adding the pipeline registers.</li></ul><p> NOTE: See IMPORTANT NOTE above.
+</p></div></div>
     </li><li name="treadle.executable.NegativeEdge" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="NegativeEdge"></a><a id="NegativeEdge:NegativeEdge"></a>
       <span class="permalink">
@@ -3851,6 +3912,22 @@ register pipelines. The three cases are:</p><ul><li>Adding the symbols for the r
       </span>
       <span class="symbol">
         <a title="" href="UnsignedInt$.html"><span class="name">UnsignedInt</span></a><span class="result"> extends <a href="DataType.html" class="extype" name="treadle.executable.DataType">DataType</a> with <span class="extype" name="scala.Product">Product</span> with <span class="extype" name="scala.Serializable">Serializable</span></span>
+      </span>
+      
+      
+    </li><li name="treadle.executable.VcdMemoryLoggingController" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="VcdMemoryLoggingController"></a><a id="VcdMemoryLoggingController:VcdMemoryLoggingController"></a>
+      <span class="permalink">
+      <a href="../../treadle/executable/VcdMemoryLoggingController$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="VcdMemoryLoggingController$.html"><span class="name">VcdMemoryLoggingController</span></a><span class="result"> extends <span class="extype" name="logger.LazyLogging">LazyLogging</span></span>
       </span>
       
       
