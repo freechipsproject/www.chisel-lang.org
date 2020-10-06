@@ -1,10 +1,14 @@
 buildDir ?= build
 subprojects = $(buildDir)/subprojects
 apis = $(buildDir)/api
+docs = $(buildDir)/docs
+
+www-docs = \
+    $(shell find chisel3/docs/ -name "*.md")
 
 www-src = \
-	$(shell find docs/src/main/tut/ -name "*.md") \
 	$(shell find docs/src/main/resources) \
+	docs/src/main/tut/chisel3 \
 	chisel3/README.md \
 	firrtl/README.md \
 	chisel-testers/README.md \
@@ -264,6 +268,10 @@ $(apis)/diagrammer/%/index.html: $(subprojects)/diagrammer/%/.git | $(apis)/diag
 $(apis)/chiseltest/%/index.html: $(subprojects)/chiseltest/%/.git | $(apis)/chiseltest/%/
 	(cd $(subprojects)/chiseltest/$* && sbt doc)
 	find $(<D) -type d -name api -exec cp -r '{}'/. $(@D) ';'
+
+# Build docs in subproject with a specific tag.
+docs/src/main/tut/chisel3: chisel3/.git $(www-docs)
+	(cd chisel3 && sbt docs/mdoc && cp -r docs/generated ../docs/src/main/tut/chisel3)
 
 # Copy *SNAPSHOT* API of subprojects into API directory
 docs/target/site/api/SNAPSHOT/index.html: $(apis)/chisel3/$(chiselSnapshot)/index.html | docs/target/site/api/SNAPSHOT/
