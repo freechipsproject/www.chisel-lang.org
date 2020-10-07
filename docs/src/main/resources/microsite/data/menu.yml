@@ -8,14 +8,14 @@ options:
   - title: Cookbooks
     menu_type: chisel3
     menu_section: chisel3
-    url: cookbooks.html
+    url: chisel3/cookbooks.html
     nested_options:
       - title: Naming
         url: chisel3/docs/cookbooks/naming.html
         menu_type: chisel3
         menu_section: naming
   - title: Explanations
-    url: explanations.html
+    url: chisel3/explanations.html
     menu_type: chisel3
     menu_section: chisel3
     nested_options:
@@ -42,7 +42,7 @@ options:
   - title: Wiki (Deprecated)
     menu_type: chisel3
     menu_section: chisel3
-    url: wiki-deprecated.html
+    url: chisel3/wiki-deprecated.html
     nested_options:
       - title: Introduction
         url: chisel3/docs/wiki-deprecated/introduction.html

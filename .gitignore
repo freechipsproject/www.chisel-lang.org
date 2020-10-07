@@ -4,6 +4,7 @@
 target
 project/target
 build
+docs/src/main/tut/chisel3/docs/
 
 travis-deploy-key
 travis-deploy-key.pub
@@ -13,5 +14,6 @@ test_run_dir
 *.v
 *.fir
 *.DS_STORE
+.idea
 
 docs/src/main/tut/contributors.md
