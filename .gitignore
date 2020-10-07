@@ -12,5 +12,6 @@ test_run_dir
 *.anno.json
 *.v
 *.fir
+*.DS_STORE
 
 docs/src/main/tut/contributors.md
