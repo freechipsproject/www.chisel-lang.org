@@ -9,39 +9,41 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 ga('create', 'UA-145179088-1' , 'auto');
 ga('send', 'pageview');
-      </script></head><body class="docs"><div id="wrapper"><div id="sidebar-wrapper"><ul id="sidebar" class="sidebar-nav"><li class="sidebar-brand"><a href="/" class="brand"><div class="brand-wrapper"><span>Chisel/FIRRTL</span></div></a></li>                             <li><a href="/chiseltest/" class=" active ">ChiselTest</a></li> <li><a href="/api/chiseltest/latest" class="">API Documentation</a> <ul class="sub_section"> <li><a href="/api/chiseltest/SNAPSHOT/" class="">SNAPSHOT</a></li> <li><a href="/api/chiseltest/0.3.0/" class="">0.3.0</a></li> <li><a href="/api/chiseltest/0.2.2/" class="">0.2.2</a></li> <li><a href="/api/chiseltest/0.2.1/" class="">0.2.1</a></li> <li><a href="/api/chiseltest/0.2.0/" class="">0.2.0</a></li> <li><a href="/api/chiseltest/0.1.7/" class="">0.1.7</a></li> <li><a href="/api/chiseltest/0.1.6/" class="">0.1.6</a></li> <li><a href="/api/chiseltest/0.1.5/" class="">0.1.5</a></li> <li><a href="/api/chiseltest/0.1.4/" class="">0.1.4</a></li> <li><a href="/api/chiseltest/0.1.3/" class="">0.1.3</a></li> <li><a href="/api/chiseltest/0.1.2/" class="">0.1.2</a></li> <li><a href="/api/chiseltest/0.1.1/" class="">0.1.1</a></li> <li><a href="/api/chiseltest/0.1.0/" class="">0.1.0</a></li></ul></li>        </ul></div><div id="page-content-wrapper"><div class="nav"><div class="container-fluid"><div class="row"><div class="col-lg-12"><div class="action-menu pull-left clearfix"><a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></a></div><ul class="pull-right"></ul></div></div></div></div><div id="content" data-github-owner="freechipsproject" data-github-repo="chisel3"><div class="content-wrapper"><section><h1 id="chisel-testers2">chisel-testers2</h1>
+      </script></head><body class="docs"><div id="wrapper"><div id="sidebar-wrapper"><ul id="sidebar" class="sidebar-nav"><li class="sidebar-brand"><a href="/" class="brand"><div class="brand-wrapper"><span>Chisel/FIRRTL</span></div></a></li>         <li><a href="/chiseltest/" class=" active ">ChiselTest</a></li> <li><a href="/api/chiseltest/latest" class="">API Documentation</a> <ul class="sub_section"> <li><a href="/api/chiseltest/SNAPSHOT/" class="">SNAPSHOT</a></li> <li><a href="/api/chiseltest/0.3.0/" class="">0.3.0</a></li> <li><a href="/api/chiseltest/0.2.2/" class="">0.2.2</a></li> <li><a href="/api/chiseltest/0.2.1/" class="">0.2.1</a></li> <li><a href="/api/chiseltest/0.2.0/" class="">0.2.0</a></li> <li><a href="/api/chiseltest/0.1.7/" class="">0.1.7</a></li> <li><a href="/api/chiseltest/0.1.6/" class="">0.1.6</a></li> <li><a href="/api/chiseltest/0.1.5/" class="">0.1.5</a></li> <li><a href="/api/chiseltest/0.1.4/" class="">0.1.4</a></li> <li><a href="/api/chiseltest/0.1.3/" class="">0.1.3</a></li> <li><a href="/api/chiseltest/0.1.2/" class="">0.1.2</a></li> <li><a href="/api/chiseltest/0.1.1/" class="">0.1.1</a></li> <li><a href="/api/chiseltest/0.1.0/" class="">0.1.0</a></li></ul></li>        </ul></div><div id="page-content-wrapper"><div class="nav"><div class="container-fluid"><div class="row"><div class="col-lg-12"><div class="action-menu pull-left clearfix"><a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars" aria-hidden="true"></i></a></div><ul class="pull-right"></ul></div></div></div></div><div id="content" data-github-owner="freechipsproject" data-github-repo="chisel3"><div class="content-wrapper"><section><h1 id="chiseltest">ChiselTest</h1>
+<p><em>formerly known as testers2</em></p>
+
 <p>This is <strong>alpha software</strong> that is currently under development, and interfaces may be subject to change (see <a href="#stability">stability</a> for details).
 However, it is very much in a usable state, so if you’re fine living on the bleeding edge, give it a try.</p>
 
 <h2 id="overview">Overview</h2>
-<p>Testers2 is a test harness for <a href="https://github.com/freechipsproject/chisel3">Chisel</a>-based RTL designs, currently supporting directed testing (all test stimulus manually specified - no constrained random and coverage-driven flows).
-Testers2 emphasizes tests that are lightweight (minimizes boilerplate code), easy to read and write (understandability), and compose (for better test code reuse).</p>
+<p>ChiselTest is a test harness for <a href="https://github.com/freechipsproject/chisel3">Chisel</a>-based RTL designs, currently supporting directed testing (all test stimulus manually specified - no constrained random and coverage-driven flows).
+ChiselTest emphasizes tests that are lightweight (minimizes boilerplate code), easy to read and write (understandability), and compose (for better test code reuse).</p>
 
 <p>The core primitives are similar to nonsynthesizable Verilog: input pin assignment (<code class="highlighter-rouge">poke</code>), pin value assertion (<code class="highlighter-rouge">expect</code>), and time advance (<code class="highlighter-rouge">step</code>). Threading concurrency is also supported with the use of <code class="highlighter-rouge">fork</code> and <code class="highlighter-rouge">join</code>, and concurrent accesses to wires are checked to prevent race conditions.</p>
 
-<h3 id="migrating-from-chisel-testers">Migrating from chisel-testers</h3>
-<p>The core abstractions (<code class="highlighter-rouge">poke</code>, <code class="highlighter-rouge">expect</code>, <code class="highlighter-rouge">step</code>) are similar to <a href="https://github.com/freechipsproject/chisel-testers">chisel-testers</a>, but the syntax is inverted: instead of doing <code class="highlighter-rouge">tester.poke(wire, value)</code> with a Scala number value, in testers2 you would write <code class="highlighter-rouge">write.poke(value)</code> with a Chisel literal value.
+<h3 id="migrating-from-chisel-testers--iotesters">Migrating from chisel-testers / iotesters</h3>
+<p>The core abstractions (<code class="highlighter-rouge">poke</code>, <code class="highlighter-rouge">expect</code>, <code class="highlighter-rouge">step</code>) are similar to <a href="https://github.com/freechipsproject/chisel-testers">chisel-testers</a>, but the syntax is inverted: instead of doing <code class="highlighter-rouge">tester.poke(wire, value)</code> with a Scala number value, in ChiselTest you would write <code class="highlighter-rouge">wire.poke(value)</code> with a Chisel literal value.
 Furthermore, as no reference to the tester context is needed, test helper functions can be defined outside a test class and written as libraries.</p>
 
 <p>Currently, this should support all the functionality that was in chisel-testers, and provides additional features.
 This project is meant to supersede chisel-testers, and eventually may become a default part of chisel3.</p>
 
-<p>Test cases written in chisel-testers cannot be directly used in testers2, as the syntax is significantly different.</p>
+<p>Test cases written in chisel-testers cannot be directly used in ChiselTest, as the syntax is significantly different.</p>
 
 <h2 id="getting-started">Getting Started</h2>
 
 <h3 id="installation">Installation</h3>
 <p>To use chisel-testers as a managed dependency, add this in your build.sbt:</p>
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"edu.berkeley.cs"</span> <span class="o">%%</span> <span class="s">"chisel-testers2"</span> <span class="o">%</span> <span class="s">"0.1-SNAPSHOT"</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"edu.berkeley.cs"</span> <span class="o">%%</span> <span class="s">"chiseltest"</span> <span class="o">%</span> <span class="s">"0.2.1"</span>
 </code></pre></div></div>
 
-<p>Note, chisel-testers2 snapshots generally track chisel3 snapshots, and requires the use of a chisel3 snapshot.
+<p>Note, <code class="highlighter-rouge">chiseltest</code> snapshots generally track chisel3 snapshots, and requires the use of a chisel3 snapshot.
 We may introduce versioned snapshots and releases in the future, tied to a particular release of chisel3.</p>
 
-<p>You can also build testers2 locally with <code class="highlighter-rouge">publishLocal</code>.</p>
+<p>You can also build ChiselTest locally with <code class="highlighter-rouge">publishLocal</code>.</p>
 
 <h3 id="writing-a-test">Writing a Test</h3>
-<p>Testers2 integrates with the <a href="http://scalatest.org">ScalaTest</a> framework, which provides a framework for detection and execution of unit tests.</p>
+<p>ChiselTest integrates with the <a href="http://scalatest.org">ScalaTest</a> framework, which provides a framework for detection and execution of unit tests.</p>
 
 <p>Assuming a typical Chisel project, create a new file in <code class="highlighter-rouge">src/test/scala/</code>, for example, <code class="highlighter-rouge">BasicTest.scala</code>.</p>
 
@@ -49,8 +51,8 @@ We may introduce versioned snapshots and releases in the future, tied to a parti
 <ol>
   <li>Add the necessary imports:
     <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">org.scalatest._</span>
+<span class="k">import</span> <span class="nn">chiseltest._</span>
 <span class="k">import</span> <span class="nn">chisel3._</span>
-<span class="k">import</span> <span class="nn">chisel3.tester._</span>
 </code></pre></div>    </div>
   </li>
   <li>Create a test class:
@@ -95,10 +97,10 @@ If you’re using <a href="http://scala-sbt.org">sbt</a>, you can either run <co
 <h2 id="usage-references">Usage References</h2>
 <p>See the test cases for examples:</p>
 <ul>
-  <li><a href="src/test/scala/chisel3/tests/BasicTest.scala">BasicTest</a> shows basic <code class="highlighter-rouge">peek</code>, <code class="highlighter-rouge">poke</code>, and <code class="highlighter-rouge">step</code> functionality</li>
-  <li><a href="src/test/scala/chisel3/tests/QueueTest.scala">QueueTest</a> shows example uses of the DecoupledDriver library, providing functions like <code class="highlighter-rouge">enqueueNow</code>, <code class="highlighter-rouge">expectDequeueNow</code>, their sequence variants, <code class="highlighter-rouge">expectPeek</code>, and <code class="highlighter-rouge">expectInvalid</code>.
-Also, check out the <a href="src/main/scala/chisel3/tester/DecoupledDriver.scala">DecoupledDriver</a> implementation, and note that it is not a special case, but code that any user can write.</li>
-  <li><a href="src/test/scala/chisel3/tests/BundleLiteralsSpec.scala">BundleLiteralsSpec</a> shows examples of using bundle literals to poke and expect bundle wires.
+  <li><a href="src/test/scala/chiseltest/tests/BasicTest.scala">BasicTest</a> shows basic <code class="highlighter-rouge">peek</code>, <code class="highlighter-rouge">poke</code>, and <code class="highlighter-rouge">step</code> functionality</li>
+  <li><a href="src/test/scala/chiseltest/tests/QueueTest.scala">QueueTest</a> shows example uses of the DecoupledDriver library, providing functions like <code class="highlighter-rouge">enqueueNow</code>, <code class="highlighter-rouge">expectDequeueNow</code>, their sequence variants, <code class="highlighter-rouge">expectPeek</code>, and <code class="highlighter-rouge">expectInvalid</code>.
+Also, check out the <a href="src/main/scala/chiseltest/DecoupledDriver.scala">DecoupledDriver</a> implementation, and note that it is not a special case, but code that any user can write.</li>
+  <li><a href="src/test/scala/chiseltest/tests/BundleLiteralsSpec.scala">BundleLiteralsSpec</a> shows examples of using bundle literals to poke and expect bundle wires.
     <ul>
       <li>Note: Bundle literals are still an experimental chisel3 feature and need to be explicitly imported:
         <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3.experimental.BundleLiterals._</span>
@@ -106,12 +108,12 @@ Also, check out the <a href="src/main/scala/chisel3/tester/DecoupledDriver.scala
       </li>
     </ul>
   </li>
-  <li><a href="src/test/scala/chisel3/tests/ShiftRegisterTest.scala">ShiftRegisterTest</a> shows an example of using fork/join to define a test helper function, where multiple invocations of it are pipelined using <code class="highlighter-rouge">fork</code>.</li>
-  <li><a href="src/test/scala/chisel3/experimental/tests/VerilatorBasicTests.scala">VerilatorBasicTests</a> shows an example using Verilator as the simulator.
+  <li><a href="src/test/scala/chiseltest/tests/ShiftRegisterTest.scala">ShiftRegisterTest</a> shows an example of using fork/join to define a test helper function, where multiple invocations of it are pipelined using <code class="highlighter-rouge">fork</code>.</li>
+  <li><a href="src/test/scala/chiseltest/experimental/tests/VerilatorBasicTests.scala">VerilatorBasicTests</a> shows an example using Verilator as the simulator.
     <ul>
       <li>Note: the simulator is selected by passing an annotation into the <code class="highlighter-rouge">test</code> function, which requires experimental imports:
-        <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3.tester.experimental.TestOptionBuilder._</span>
-<span class="k">import</span> <span class="nn">chisel3.tester.internal.VerilatorBackendAnnotation</span>
+        <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chiseltest.experimental.TestOptionBuilder._</span>
+<span class="k">import</span> <span class="nn">chiseltest.internal.VerilatorBackendAnnotation</span>
 </code></pre></div>        </div>
         <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">test</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyModule</span><span class="o">).</span><span class="py">withAnnotations</span><span class="o">(</span><span class="nc">Seq</span><span class="o">(</span><span class="nc">VerilatorBackendAnnotation</span><span class="o">))</span> <span class="o">{</span> <span class="n">c</span> <span class="k">=&gt;</span>
   <span class="c1">// test body here</span>
@@ -130,12 +132,12 @@ Pokes and peeks/expects to wires from threads are checked during runtime to ensu
 This can be used to create monitors that run after other main testdriver threads have been run, and can read wires those threads have poked.</li>
   <li><code class="highlighter-rouge">timescope</code> allows pokes to be scoped - that is, pokes inside the timescope block “disappear” and the wire reverts to its previous value at the end of the block.
 This fits well with the pattern of assigning a default pull-up/down to a wire, and temporarily overriding that value, for example a Decoupled <code class="highlighter-rouge">valid</code> signal defaulting low but driven high during an enqueue transaction.
-See <a href="src/test/scala/chisel3/tests/TimescopeTest.scala">TimescopeTest</a> for examples.</li>
+See <a href="src/test/scala/chiseltest/tests/TimescopeTest.scala">TimescopeTest</a> for examples.</li>
 </ul>
 
 <h2 id="quick-references">Quick References</h2>
 <p>To dump VCDs (into the test_run_dir subfolder) using sbt:</p>
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>testOnly chisel3.tests.BasicTest -- -DwriteVcd=1
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>testOnly chiseltest.tests.BasicTest -- -DwriteVcd=1
 </code></pre></div></div>
 
 <h2 id="stability">Stability</h2>

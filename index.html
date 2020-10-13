@@ -10,7 +10,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-145179088-1' , 'auto');
 ga('send', 'pageview');
       </script></head><body><header id="site-header"><div class="navbar-wrapper"><div class="container"><div class="row"><div class="col-xs-6"><a href="/" class="brand"><div class="icon-wrapper"><span>Chisel/FIRRTL</span></div></a></div><div class="col-xs-6"><nav class="text-right"><ul class=""><li><a href="https://github.com/freechipsproject/chisel3"><i class="fa fa-github"></i><span class="hidden-xs">GitHub</span></a></li><li><a href="api/latest/"><i class="fa fa-file-text"></i><span class="hidden-xs">API Documentation</span></a></li></ul></nav></div></div></div></div><div class="jumbotron"><div class="container"><h1 class="text-center">Chisel/FIRRTL
-Hardware Compiler Framework</h1><h2></h2><p class="text-center"><a href="https://github.com/freechipsproject/chisel3" class="btn btn-outline-inverse">View on GitHub</a></p></div></div><div><ul class="horizontalNav">                                                                                     <li><a class="" href="/chisel3/">Chisel3</a></li>  <li><a class="" href="/chisel-testers/">Testers</a></li>  <li><a class="" href="/chiseltest/">ChiselTest</a></li>  <li><a class="" href="/firrtl/">FIRRTL</a></li>  <li><a class="" href="/treadle/">Treadle</a></li>  <li><a class="" href="/diagrammer/">Diagrammer</a></li>  <li><a class="" href="/community.html">Community</a></li> </ul></div></header><main id="site-main"><section class="use"><div class="container"><div id="content"><p><img src="https://raw.githubusercontent.com/freechipsproject/chisel3/master/docs/src/images/chisel_logo.svg?sanitize=true" alt="Chisel 3" /></p>
+Hardware Compiler Framework</h1><h2></h2><p class="text-center"><a href="https://github.com/freechipsproject/chisel3" class="btn btn-outline-inverse">View on GitHub</a></p></div></div><div><ul class="horizontalNav">                                                                                               <li><a class="" href="/chisel3/">Chisel3</a></li>  <li><a class="" href="/chisel-testers/">Testers</a></li>  <li><a class="" href="/chiseltest/">ChiselTest</a></li>  <li><a class="" href="/firrtl/">FIRRTL</a></li>  <li><a class="" href="/treadle/">Treadle</a></li>  <li><a class="" href="/diagrammer/">Diagrammer</a></li>  <li><a class="" href="/community.html">Community</a></li> </ul></div></header><main id="site-main"><section class="use"><div class="container"><div id="content"><p><img src="https://raw.githubusercontent.com/freechipsproject/chisel3/master/docs/src/images/chisel_logo.svg?sanitize=true" alt="Chisel 3" /></p>
 
 <hr />
 
@@ -147,8 +147,8 @@ This generator methodology enables the creation of re-usable components and libr
 
 <p><img src="https://raw.githubusercontent.com/freechipsproject/chisel3/master/doc/images/type_hierarchy.svg?sanitize=true" alt="Image" /></p>
 
-<h2 id="developer-documentation">Developer Documentation</h2>
-<p>This section describes how to get started developing Chisel itself, including how to test your version locally against other projects that pull in Chisel using <a href="https://www.scala-sbt.org/1.x/docs/Library-Dependencies.html">sbt’s managed dependencies</a>.</p>
+<h2 id="contributor-documentation">Contributor Documentation</h2>
+<p>This section describes how to get started contributing to Chisel itself, including how to test your version locally against other projects that pull in Chisel using <a href="https://www.scala-sbt.org/1.x/docs/Library-Dependencies.html">sbt’s managed dependencies</a>.</p>
 
 <h3 id="compiling-and-testing-chisel">Compiling and Testing Chisel</h3>
 
@@ -175,10 +175,10 @@ sbt compile
 <h3 id="running-projects-against-local-chisel">Running Projects Against Local Chisel</h3>
 
 <p>To use the development version of Chisel (<code class="highlighter-rouge">master</code> branch), you will need to build from source and <code class="highlighter-rouge">publishLocal</code>.
-The repository version can be found in the build.sbt file.
+The repository version can be found in the <a href="build.sbt">build.sbt</a> file.
 As of the time of writing it was:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>version := "3.2-SNAPSHOT"
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>version := "3.4-SNAPSHOT"
 </code></pre></div></div>
 
 <p>To publish your version of Chisel to the local Ivy (sbt’s dependency manager) repository, run:</p>
@@ -191,8 +191,34 @@ If you need to un-publish your local copy of Chisel, remove the directory genera
 
 <p>In order to have your projects use this version of Chisel, you should update the <code class="highlighter-rouge">libraryDependencies</code> setting in your project’s build.sbt file to:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>libraryDependencies += "edu.berkeley.cs" %% "chisel3" % "3.2-SNAPSHOT"
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>libraryDependencies += "edu.berkeley.cs" %% "chisel3" % "3.4-SNAPSHOT"
 </code></pre></div></div>
+
+<h3 id="building-chisel-with-firrtl-in-the-same-sbt-project">Building Chisel with FIRRTL in the same SBT Project</h3>
+
+<p>While we recommend using the library dependency approach as described above, it is possible to build Chisel and FIRRTL in a single SBT project.</p>
+
+<p><strong>Caveats</strong></p>
+<ul>
+  <li>This only works for the “main” configuration; you cannot build the Chisel tests this way because <code class="highlighter-rouge">treadle</code> is only supported as a library dependency.</li>
+  <li>Do not <code class="highlighter-rouge">publishLocal</code> when building this way. The published artifact will be missing the FIRRTL dependency.</li>
+</ul>
+
+<p>This works by using <a href="http://eed3si9n.com/hot-source-dependencies-using-sbt-sriracha">sbt-sriracha</a>, an SBT plugin for toggling between source and library dependencies.
+It provides two JVM system properties that, when set, will tell SBT to include FIRRTL as a source project:</p>
+<ul>
+  <li><code class="highlighter-rouge">sbt.sourcemode</code> - when set to true, SBT will look for FIRRTL in the workspace</li>
+  <li><code class="highlighter-rouge">sbt.workspace</code> - sets the root directory of the workspace</li>
+</ul>
+
+<p>Example use:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># From root of this repo</span>
+git clone git@github.com:freechipsproject/firrtl.git
+sbt <span class="nt">-Dsbt</span>.sourcemode<span class="o">=</span><span class="nb">true</span> <span class="nt">-Dsbt</span>.workspace<span class="o">=</span><span class="nv">$PWD</span>
+</code></pre></div></div>
+
+<p>This is primarily useful for building projects that themselves want to include Chisel as a source dependency.
+As an example, see <a href="https://github.com/chipsalliance/rocket-chip">Rocket Chip</a></p>
 
 <h3 id="chisel3-architecture-overview">Chisel3 Architecture Overview</h3>
 
