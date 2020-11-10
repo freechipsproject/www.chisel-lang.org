@@ -85,7 +85,7 @@ adds two real numbers together.  The numbers are represented in chisel3 as 64-bi
 
 <h3 id="blackboxes-with-verilog-in-a-resource-file">Blackboxes with Verilog in a Resource File</h3>
 
-<p>In order to deliver the verilog snippet above to the backend simulator, chisel3 provides the following tools based on the chisel/firrtl <a href="../explanations/annotations.md">annotation system</a>.  Add the trait <code class="highlighter-rouge">HasBlackBoxResource</code> to the declaration, and then call a function in the body to say where the system can find the verilog.  The Module now looks like</p>
+<p>In order to deliver the verilog snippet above to the backend simulator, chisel3 provides the following tools based on the chisel/firrtl <a href="../explanations/annotations">annotation system</a>.  Add the trait <code class="highlighter-rouge">HasBlackBoxResource</code> to the declaration, and then call a function in the body to say where the system can find the verilog.  The Module now looks like</p>
 
 <p>```mdoc scala:silent:reset
 class BlackBoxRealAdd extends BlackBox with HasBlackBoxResource {

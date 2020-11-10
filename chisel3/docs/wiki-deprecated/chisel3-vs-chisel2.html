@@ -115,7 +115,7 @@ for instructions on preparing your Chisel2 designs for Chisel3.</p>
 <ul>
   <li><code class="highlighter-rouge">Mem(..., orderedWrites)</code> is no longer supported,</li>
   <li>masked writes are only supported for <code class="highlighter-rouge">Mem[Vec[_]]</code>,</li>
-  <li>Chisel3 Vecs must all have the same type, unlike with Chisel2. Use <code class="highlighter-rouge">MixedVec</code> (see <a href="bundles-and-vecs.md">Bundles and Vecs</a>) for Vecs where the elements are of different types.</li>
+  <li>Chisel3 Vecs must all have the same type, unlike with Chisel2. Use <code class="highlighter-rouge">MixedVec</code> (see <a href="../explanations/bundles-and-vecs">Bundles and Vecs</a>) for Vecs where the elements are of different types.</li>
   <li>connections between <code class="highlighter-rouge">UInt</code> and <code class="highlighter-rouge">SInt</code> are illegal.</li>
   <li>the <code class="highlighter-rouge">Node</code> class and object no longer exist (the class should have been private in Chisel2)</li>
   <li><code class="highlighter-rouge">printf()</code> is defined in the Chisel object and produces simulation printf()’s.

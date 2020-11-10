@@ -17,7 +17,7 @@ they are declared. In addition, this release includes prolific use of a new pref
 naming of signals programmatically generated from function calls.</p>
 
 <p>This document explains how naming now works in Chisel for signal and module names. For cookbook examples on how to fix
-systemic name-stability issues, please refer to the naming <a href="../cookbooks/naming.md">cookbook</a>.</p>
+systemic name-stability issues, please refer to the naming <a href="../cookbooks/naming">cookbook</a>.</p>
 
 <h3 id="compiler-plugin">Compiler Plugin</h3>
 
@@ -51,8 +51,8 @@ side with a call to <code class="highlighter-rouge">autoNameRecursively</code>, 
   <span class="c1">// val io = autoNameRecursively("io", IO(new MyBundle()))</span>
 <span class="o">}</span>
 <span class="nf">println</span><span class="o">(</span><span class="nv">ChiselStage</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">Example1</span><span class="o">))</span>
-<span class="c1">// [[35minfo[0m] [0.000] Elaborating design...</span>
-<span class="c1">// [[35minfo[0m] [0.117] Done elaborating.</span>
+<span class="c1">// [[35minfo[0m] [0.001] Elaborating design...</span>
+<span class="c1">// [[35minfo[0m] [0.105] Done elaborating.</span>
 <span class="c1">// module Example1(</span>
 <span class="c1">//   input        clock,</span>
 <span class="c1">//   input        reset,</span>
@@ -83,7 +83,7 @@ side of the val declaration:</p>
 
 <span class="nf">println</span><span class="o">(</span><span class="nv">ChiselStage</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">Example2</span><span class="o">))</span>
 <span class="c1">// [[35minfo[0m] [0.000] Elaborating design...</span>
-<span class="c1">// [[35minfo[0m] [0.014] Done elaborating.</span>
+<span class="c1">// [[35minfo[0m] [0.017] Done elaborating.</span>
 <span class="c1">// module Example2(</span>
 <span class="c1">//   input        clock,</span>
 <span class="c1">//   input        reset,</span>
@@ -118,7 +118,7 @@ side of the val declaration:</p>
 
 <span class="nf">println</span><span class="o">(</span><span class="nv">ChiselStage</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">Example3</span><span class="o">))</span>
 <span class="c1">// [[35minfo[0m] [0.000] Elaborating design...</span>
-<span class="c1">// [[35minfo[0m] [0.007] Done elaborating.</span>
+<span class="c1">// [[35minfo[0m] [0.009] Done elaborating.</span>
 <span class="c1">// module Example3(</span>
 <span class="c1">//   input        clock,</span>
 <span class="c1">//   input        reset,</span>
@@ -160,7 +160,7 @@ but don’t want to influence other names in the module.</p>
 
 <span class="nf">println</span><span class="o">(</span><span class="nv">ChiselStage</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">Example4</span><span class="o">))</span>
 <span class="c1">// [[35minfo[0m] [0.000] Elaborating design...</span>
-<span class="c1">// [[35minfo[0m] [0.007] Done elaborating.</span>
+<span class="c1">// [[35minfo[0m] [0.009] Done elaborating.</span>
 <span class="c1">// module Example4(</span>
 <span class="c1">//   input        clock,</span>
 <span class="c1">//   input        reset,</span>
@@ -202,7 +202,7 @@ but don’t want to influence other names in the module.</p>
 
 <span class="nf">println</span><span class="o">(</span><span class="nv">ChiselStage</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">Example6</span><span class="o">))</span>
 <span class="c1">// [[35minfo[0m] [0.000] Elaborating design...</span>
-<span class="c1">// [[35minfo[0m] [0.009] Done elaborating.</span>
+<span class="c1">// [[35minfo[0m] [0.010] Done elaborating.</span>
 <span class="c1">// module Example6(</span>
 <span class="c1">//   input        clock,</span>
 <span class="c1">//   input        reset,</span>
@@ -229,7 +229,7 @@ don’t want the prefixing behavior. In this case, you can use the <code class="
 
 <span class="nf">println</span><span class="o">(</span><span class="nv">ChiselStage</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">Example7</span><span class="o">))</span>
 <span class="c1">// [[35minfo[0m] [0.000] Elaborating design...</span>
-<span class="c1">// [[35minfo[0m] [0.007] Done elaborating.</span>
+<span class="c1">// [[35minfo[0m] [0.009] Done elaborating.</span>
 <span class="c1">// module Example7(</span>
 <span class="c1">//   input        clock,</span>
 <span class="c1">//   input        reset,</span>
@@ -258,7 +258,7 @@ name will still be prefixed (including by the plugin). You can always use the <c
 
 <span class="nf">println</span><span class="o">(</span><span class="nv">ChiselStage</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">Example8</span><span class="o">))</span>
 <span class="c1">// [[35minfo[0m] [0.000] Elaborating design...</span>
-<span class="c1">// [[35minfo[0m] [0.007] Done elaborating.</span>
+<span class="c1">// [[35minfo[0m] [0.010] Done elaborating.</span>
 <span class="c1">// module Example8(</span>
 <span class="c1">//   input        clock,</span>
 <span class="c1">//   input        reset,</span>
@@ -302,7 +302,7 @@ names more stable and is highly recommended to do.</p>
 <span class="c1">// </span>
 <span class="nf">println</span><span class="o">(</span><span class="nv">ChiselStage</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">Example9</span><span class="o">(</span><span class="mi">1</span><span class="o">)))</span>
 <span class="c1">// [[35minfo[0m] [0.000] Elaborating design...</span>
-<span class="c1">// [[35minfo[0m] [0.001] Done elaborating.</span>
+<span class="c1">// [[35minfo[0m] [0.002] Done elaborating.</span>
 <span class="c1">// module EXAMPLE9WITHWIDTH1(</span>
 <span class="c1">//   input   clock,</span>
 <span class="c1">//   input   reset,</span>

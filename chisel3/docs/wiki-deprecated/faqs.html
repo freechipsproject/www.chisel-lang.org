@@ -31,7 +31,7 @@ ga('send', 'pageview');
 
 <h3 id="how-do-i-do--eg-like-that-in-verilog-in-chisel">How do I do … (e.g. like that in Verilog) in Chisel?</h3>
 
-<p>See the <a href="cookbook.md">cookbook</a>.</p>
+<p>See the <a href="cookbook">cookbook</a>.</p>
 
 <h3 id="how-can-i-contribute-to-chisel">How can I contribute to Chisel?</h3>
 
@@ -93,7 +93,7 @@ We publish these to Sonatype/Maven on a bi-weekly basis.</p>
 
 <h3 id="why-chisel">Why Chisel?</h3>
 
-<p>Borrowed from <a href="introduction.md">Chisel Introduction</a></p>
+<p>Borrowed from <a href="introduction">Chisel Introduction</a></p>
 
 <blockquote>
   <p>We were motivated to develop a new hardware language by years of
@@ -248,7 +248,7 @@ res3: java.io.File = output.fir
 <h3 id="why-doesnt-chisel-tell-me-which-wires-arent-connected">Why doesn’t Chisel tell me which wires aren’t connected?</h3>
 
 <p>As of commit <a href="https://github.com/freechipsproject/chisel3/commit/c313e137d4e562ef20195312501840ceab8cbc6a">c313e13</a> it can!
-Please visit the wiki page <a href="unconnected-wires.md">Unconnected Wires</a> for details.</p>
+Please visit the wiki page <a href="unconnected-wires">Unconnected Wires</a> for details.</p>
 
 <h3 id="what-does-reference--is-not-fully-initialized-mean">What does <code class="highlighter-rouge">Reference ... is not fully initialized.</code> mean?</h3>
 
@@ -257,7 +257,7 @@ Please visit the wiki page <a href="unconnected-wires.md">Unconnected Wires</a> 
 <p>In Chisel2 compatibility mode (<code class="highlighter-rouge">NotStrict</code> compile options), chisel generates firrtl code that disables firrtl’s initialized wire checks.
 In pure chisel3 (<code class="highlighter-rouge">Strict</code> compile options), the generated firrtl code does not contain these disablers (<code class="highlighter-rouge">is invalid</code>).
 Output wires that are not driven (not connected) are reported by firrtl as <code class="highlighter-rouge">not fully initialized</code>.
-Please visit the wiki page <a href="unconnected-wires.md">Unconnected Wires</a> for details on solving the problem.</p>
+Please visit the wiki page <a href="unconnected-wires">Unconnected Wires</a> for details on solving the problem.</p>
 
 <h3 id="can-i-specify-behavior-before-and-after-generated-initial-blocks">Can I specify behavior before and after generated initial blocks?</h3>
 

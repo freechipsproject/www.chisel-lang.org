@@ -28,12 +28,12 @@ renaming these signals with more context-dependent names, but it is a work in pr
 
 <p>This is the infamous <code class="highlighter-rouge">Queue</code> instability problem. In general, these cases are best solved at the source - the module
 itself! If you overwrite <code class="highlighter-rouge">desiredName</code> to include parameter information (see the
-<a href="../explanations/naming.md#set-a-module-name">explanation</a> for more info), then this can avoid this problem permanantly.
+<a href="../explanations/naming#set-a-module-name">explanation</a> for more info), then this can avoid this problem permanantly.
 We’ve done this with some Chisel utilities with great results!</p>
 
 <h3 id="i-want-to-add-some-hardware-or-assertions-but-each-time-i-do-all-the-signal-names-get-bumped">I want to add some hardware or assertions, but each time I do all the signal names get bumped!</h3>
 
-<p>This is the classic “ECO” problem, and we provide descriptions in <a href="../explanations/naming.md">explanation</a>. In short,
+<p>This is the classic “ECO” problem, and we provide descriptions in <a href="../explanations/naming">explanation</a>. In short,
 we recommend wrapping all additional logic in a prefix scope, which enables a unique namespace. This should prevent
 name collisions, which are what triggers all those annoying signal name bumps!</p>
 
@@ -55,8 +55,8 @@ name collisions, which are what triggers all those annoying signal name bumps!</
 <span class="o">}</span>
 
 <span class="nf">println</span><span class="o">(</span><span class="nv">ChiselStage</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">ExampleNoPrefix</span><span class="o">))</span>
-<span class="c1">// [[35minfo[0m] [0.144] Elaborating design...</span>
-<span class="c1">// [[35minfo[0m] [0.255] Done elaborating.</span>
+<span class="c1">// [[35minfo[0m] [0.003] Elaborating design...</span>
+<span class="c1">// [[35minfo[0m] [0.109] Done elaborating.</span>
 <span class="c1">// module ExampleNoPrefix(</span>
 <span class="c1">//   input        clock,</span>
 <span class="c1">//   input        reset,</span>
@@ -69,6 +69,65 @@ name collisions, which are what triggers all those annoying signal name bumps!</
 <span class="c1">//</span>
 </code></pre></div></div>
 
+<h3 id="i-am-still-not-getting-the-name-i-want-for-example-inlining-an-instance-changes-my-name">I am still not getting the name I want. For example, inlining an instance changes my name!</h3>
+
+<p>In cases where a FIRRTL transform renames a signal/instance, you can use the <code class="highlighter-rouge">forcename</code> API:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3.util.experimental.</span><span class="o">{</span><span class="n">forceName</span><span class="o">,</span> <span class="nc">InlineInstance</span><span class="o">}</span>
+
+<span class="k">class</span> <span class="nc">WrapperExample</span> <span class="k">extends</span> <span class="nc">MultiIOModule</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">in</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">3.</span><span class="n">W</span><span class="o">)))</span>
+  <span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">3.</span><span class="n">W</span><span class="o">)))</span>
+  <span class="k">val</span> <span class="nv">inst</span> <span class="k">=</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">Wrapper</span><span class="o">)</span>
+  <span class="nv">inst</span><span class="o">.</span><span class="py">in</span> <span class="o">:=</span> <span class="n">in</span>
+  <span class="n">out</span> <span class="o">:=</span> <span class="nv">inst</span><span class="o">.</span><span class="py">out</span>
+<span class="o">}</span>
+<span class="k">class</span> <span class="nc">Wrapper</span> <span class="k">extends</span> <span class="nc">MultiIOModule</span> <span class="k">with</span> <span class="nc">InlineInstance</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">in</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">3.</span><span class="n">W</span><span class="o">)))</span>
+  <span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">3.</span><span class="n">W</span><span class="o">)))</span>
+  <span class="k">val</span> <span class="nv">inst</span> <span class="k">=</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyLeaf</span><span class="o">)</span>
+  <span class="nf">forceName</span><span class="o">(</span><span class="n">inst</span><span class="o">,</span> <span class="s">"inst"</span><span class="o">)</span>
+  <span class="nv">inst</span><span class="o">.</span><span class="py">in</span> <span class="o">:=</span> <span class="n">in</span>
+  <span class="n">out</span> <span class="o">:=</span> <span class="nv">inst</span><span class="o">.</span><span class="py">out</span>
+<span class="o">}</span>
+<span class="k">class</span> <span class="nc">MyLeaf</span> <span class="k">extends</span> <span class="nc">MultiIOModule</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">in</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">3.</span><span class="n">W</span><span class="o">)))</span>
+  <span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">3.</span><span class="n">W</span><span class="o">)))</span>
+  <span class="n">out</span> <span class="o">:=</span> <span class="n">in</span>
+<span class="o">}</span>
+
+<span class="nf">println</span><span class="o">(</span><span class="nv">ChiselStage</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">WrapperExample</span><span class="o">))</span>
+<span class="c1">// [[35minfo[0m] [0.000] Elaborating design...</span>
+<span class="c1">// [[35minfo[0m] [0.039] Done elaborating.</span>
+<span class="c1">// module MyLeaf(</span>
+<span class="c1">//   input  [2:0] in,</span>
+<span class="c1">//   output [2:0] out</span>
+<span class="c1">// );</span>
+<span class="c1">//   assign out = in; // @[naming.md 67:7]</span>
+<span class="c1">// endmodule</span>
+<span class="c1">// module WrapperExample(</span>
+<span class="c1">//   input        clock,</span>
+<span class="c1">//   input        reset,</span>
+<span class="c1">//   input  [2:0] in,</span>
+<span class="c1">//   output [2:0] out</span>
+<span class="c1">// );</span>
+<span class="c1">//   wire [2:0] inst_in;</span>
+<span class="c1">//   wire [2:0] inst_out;</span>
+<span class="c1">//   wire [2:0] inst_in; // @[naming.md 57:20]</span>
+<span class="c1">//   wire [2:0] inst_out; // @[naming.md 57:20]</span>
+<span class="c1">//   MyLeaf inst ( // @[naming.md 57:20]</span>
+<span class="c1">//     .in(inst_in),</span>
+<span class="c1">//     .out(inst_out)</span>
+<span class="c1">//   );</span>
+<span class="c1">//   assign inst_out = inst_out; // @[naming.md 60:7]</span>
+<span class="c1">//   assign inst_in = inst_in; // @[naming.md 59:11]</span>
+<span class="c1">//   assign out = inst_out; // @[naming.md 50:7]</span>
+<span class="c1">//   assign inst_in = in; // @[naming.md 49:11]</span>
+<span class="c1">// endmodule</span>
+<span class="c1">//</span>
+</code></pre></div></div>
+
+<p>This can be used to rename instances and non-aggregate typed signals.</p>
 </section></div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/highlight/highlight.pack.js"></script><script>hljs.configure({languages:['scala','java','bash']});
 hljs.initHighlighting();
               </script><script>((window.gitter = {}).chat = {}).options = {
