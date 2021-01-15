@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.4.0 - chisel3.util.BitPat</title>
-          <meta name="description" content="chisel3 3.4.0 - chisel3.util.BitPat" />
-          <meta name="keywords" content="chisel3 3.4.0 chisel3.util.BitPat" />
+          <title>chisel3 3.4.1 - chisel3.util.BitPat</title>
+          <meta name="description" content="chisel3 3.4.1 - chisel3.util.BitPat" />
+          <meta name="keywords" content="chisel3 3.4.1 chisel3.util.BitPat" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.4.0</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.4.1</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -201,6 +201,18 @@ functions
                         <span class="separator"></span>
                         <a class="trait" href="HasBlackBoxResource.html" title=""></a>
                         <a href="HasBlackBoxResource.html" title="">HasBlackBoxResource</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="HasExtModuleInline.html" title=""></a>
+                        <a href="HasExtModuleInline.html" title="">HasExtModuleInline</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="HasExtModulePath.html" title=""></a>
+                        <a href="HasExtModulePath.html" title="">HasExtModulePath</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="HasExtModuleResource.html" title=""></a>
+                        <a href="HasExtModuleResource.html" title="">HasExtModuleResource</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="object" href="ImplicitConversions$.html" title="Implicit conversions to automatically convert scala.Boolean and scala.Int to Bool and UInt respectively"></a>
@@ -397,7 +409,7 @@ functions
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Bit patterns are literals with masks, used to represent values with don't
 care bits. Equality comparisons will ignore don't care bits.
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.4.0//src/main/scala/chisel3/util/BitPat.scala" target="_blank">BitPat.scala</a></dd><div class="block">Example:
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.4.1//src/main/scala/chisel3/util/BitPat.scala" target="_blank">BitPat.scala</a></dd><div class="block">Example:
                <ol><li class="cmt"><p></p><pre><span class="lit">"b10101"</span>.U === BitPat(<span class="lit">"b101??"</span>) <span class="cmt">// evaluates to true.B</span>
 <span class="lit">"b10111"</span>.U === BitPat(<span class="lit">"b101??"</span>) <span class="cmt">// evaluates to true.B</span>
 <span class="lit">"b10001"</span>.U === BitPat(<span class="lit">"b101??"</span>) <span class="cmt">// evaluates to false.B</span></pre></li></ol>
@@ -405,7 +417,7 @@ care bits. Equality comparisons will ignore don't care bits.
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="../SourceInfoDoc.html" class="extype" name="chisel3.SourceInfoDoc">SourceInfoDoc</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="../SourceInfoDoc.html" class="extype" name="chisel3.SourceInfoDoc">SourceInfoDoc</a>, <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div></div>
         
 
@@ -463,7 +475,7 @@ care bits. Equality comparisons will ignore don't care bits.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">BitPat</span><span class="params">(<span name="value">value: <span class="extype" name="scala.BigInt">BigInt</span></span>, <span name="mask">mask: <span class="extype" name="scala.BigInt">BigInt</span></span>, <span name="width">width: <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span>
+        <span class="name">BitPat</span><span class="params">(<span name="value">value: <a href="../../scala/index.html#BigInt=scala.math.BigInt" class="extmbr" name="scala.BigInt">BigInt</a></span>, <span name="mask">mask: <a href="../../scala/index.html#BigInt=scala.math.BigInt" class="extmbr" name="scala.BigInt">BigInt</a></span>, <span name="width">width: <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span>
       </span>
       
       
@@ -601,7 +613,7 @@ care bits. Equality comparisons will ignore don't care bits.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -657,7 +669,7 @@ care bits. Equality comparisons will ignore don't care bits.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -781,7 +793,7 @@ care bits. Equality comparisons will ignore don't care bits.
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">mask</span><span class="result">: <span class="extype" name="scala.BigInt">BigInt</span></span>
+        <span class="name">mask</span><span class="result">: <a href="../../scala/index.html#BigInt=scala.math.BigInt" class="extmbr" name="scala.BigInt">BigInt</a></span>
       </span>
       
       
@@ -797,7 +809,7 @@ care bits. Equality comparisons will ignore don't care bits.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -883,7 +895,7 @@ care bits. Equality comparisons will ignore don't care bits.
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">value</span><span class="result">: <span class="extype" name="scala.BigInt">BigInt</span></span>
+        <span class="name">value</span><span class="result">: <a href="../../scala/index.html#BigInt=scala.math.BigInt" class="extmbr" name="scala.BigInt">BigInt</a></span>
       </span>
       
       
@@ -992,7 +1004,7 @@ care bits. Equality comparisons will ignore don't care bits.
         <div class="parent" name="chisel3.SourceInfoDoc">
               <h3>Inherited from <a href="../SourceInfoDoc.html" class="extype" name="chisel3.SourceInfoDoc">SourceInfoDoc</a></h3>
             </div><div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+              <h3>Inherited from <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
             </div>

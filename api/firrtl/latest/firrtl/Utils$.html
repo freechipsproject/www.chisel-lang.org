@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.4.0 - firrtl.Utils</title>
-          <meta name="description" content="firrtl 1.4.0 - firrtl.Utils" />
-          <meta name="keywords" content="firrtl 1.4.0 firrtl.Utils" />
+          <title>firrtl 1.4.1 - firrtl.Utils</title>
+          <meta name="description" content="firrtl 1.4.1 - firrtl.Utils" />
+          <meta name="keywords" content="firrtl 1.4.1 firrtl.Utils" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.4.0</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.4.1</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -1082,7 +1082,7 @@ primarily consists of:</p><ul><li><a href="stage/FirrtlStage.html" class="extype
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.4.0/src/main/scala/firrtl/Utils.scala" target="_blank">Utils.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.4.1/src/main/scala/firrtl/Utils.scala" target="_blank">Utils.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -1531,6 +1531,22 @@ to produce better names when generating prefix unique names.</u></p></div><dl cl
       <p class="shortcomment cmt">Gets the root declaration of an expression
 </p><div class="fullcomment"><div class="comment cmt"><p>Gets the root declaration of an expression
 </p></div><dl class="paramcmts block"><dt class="param">m</dt><dd class="cmt"><p>the <a href="ir/Module.html" class="extype" name="firrtl.ir.Module">firrtl.ir.Module</a> to search</p></dd><dt class="param">expr</dt><dd class="cmt"><p>the <a href="ir/Expression.html" class="extype" name="firrtl.ir.Expression">firrtl.ir.Expression</a> that refers to some declaration</p></dd><dt>returns</dt><dd class="cmt"><p>the <a href="ir/IsDeclaration.html" class="extype" name="firrtl.ir.IsDeclaration">firrtl.ir.IsDeclaration</a> of <code>expr</code></p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="Utils$$DeclarationNotFoundException.html" class="extype" name="firrtl.Utils.DeclarationNotFoundException"><code>DeclarationNotFoundException</code></a> if no declaration of <code>expr</code> is found</p></span></dd></dl></div>
+    </li><li name="firrtl.Utils#getGroundZero" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="getGroundZero(tpe:firrtl.ir.GroundType):firrtl.ir.Expression"></a><a id="getGroundZero(GroundType):Expression"></a>
+      <span class="permalink">
+      <a href="../firrtl/Utils$.html#getGroundZero(tpe:firrtl.ir.GroundType):firrtl.ir.Expression" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">getGroundZero</span><span class="params">(<span name="tpe">tpe: <a href="ir/GroundType.html" class="extype" name="firrtl.ir.GroundType">GroundType</a></span>)</span><span class="result">: <a href="ir/Expression.html" class="extype" name="firrtl.ir.Expression">Expression</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns an <a href="ir/Expression.html" class="extype" name="firrtl.ir.Expression">Expression</a> equal to zero for a given <a href="ir/GroundType.html" class="extype" name="firrtl.ir.GroundType">GroundType</a></p><div class="fullcomment"><div class="comment cmt"><p>Returns an <a href="ir/Expression.html" class="extype" name="firrtl.ir.Expression">Expression</a> equal to zero for a given <a href="ir/GroundType.html" class="extype" name="firrtl.ir.GroundType">GroundType</a></p></div><dl class="attributes block"> <dt>Note</dt><dd><span class="cmt"><p>Does not support <a href="ir/AnalogType.html" class="extype" name="firrtl.ir.AnalogType">AnalogType</a> nor <a href="ir/IntervalType.html" class="extype" name="firrtl.ir.IntervalType">IntervalType</a></p></span></dd></dl></div>
     </li><li name="firrtl.Utils#getKids" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="getKids(e:firrtl.ir.Expression):Seq[firrtl.ir.Expression]"></a><a id="getKids(Expression):Seq[Expression]"></a>
       <span class="permalink">
@@ -2687,13 +2703,13 @@ wide for the width
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name deprecated" title="Deprecated: (Since version 1.2) get_flip is fundamentally slow, use to_flip(flow(expr))">get_flip</span><span class="params">(<span name="t">t: <a href="ir/Type.html" class="extype" name="firrtl.ir.Type">Type</a></span>, <span name="i">i: <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="f">f: <a href="ir/Orientation.html" class="extype" name="firrtl.ir.Orientation">Orientation</a></span>)</span><span class="result">: <a href="ir/Orientation.html" class="extype" name="firrtl.ir.Orientation">Orientation</a></span>
+        <span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.2) get_flip is fundamentally slow, use to_flip(flow(expr))">get_flip</span><span class="params">(<span name="t">t: <a href="ir/Type.html" class="extype" name="firrtl.ir.Type">Type</a></span>, <span name="i">i: <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="f">f: <a href="ir/Orientation.html" class="extype" name="firrtl.ir.Orientation">Orientation</a></span>)</span><span class="result">: <a href="ir/Orientation.html" class="extype" name="firrtl.ir.Orientation">Orientation</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
                 <span class="name">@deprecated</span>
               
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.2)</i> get_flip is fundamentally slow, use to_flip(flow(expr))</p></dd></dl></div>
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FIRRTL 1.2)</i> get_flip is fundamentally slow, use to_flip(flow(expr))</p></dd></dl></div>
     </li><li name="firrtl.Utils#indent" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="indent(str:String):String"></a><a id="indent(String):String"></a>
       <span class="permalink">

@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.4.0 - firrtl.transforms.ManipulateNamesBlocklistAnnotation</title>
-          <meta name="description" content="firrtl 1.4.0 - firrtl.transforms.ManipulateNamesBlocklistAnnotation" />
-          <meta name="keywords" content="firrtl 1.4.0 firrtl.transforms.ManipulateNamesBlocklistAnnotation" />
+          <title>firrtl 1.4.1 - firrtl.transforms.ManipulateNamesBlocklistAnnotation</title>
+          <meta name="description" content="firrtl 1.4.1 - firrtl.transforms.ManipulateNamesBlocklistAnnotation" />
+          <meta name="keywords" content="firrtl 1.4.1 firrtl.transforms.ManipulateNamesBlocklistAnnotation" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.4.0</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.4.1</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -347,6 +347,10 @@
                         <a href="SimplifyMems.html" title="Lowers memories without splitting them, but without the complexity of ReplaceMemMacros">SimplifyMems</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
+                        <a class="class" href="SortModules.html" title="Return a circuit where all modules (and external modules) are defined before use."></a>
+                        <a href="SortModules.html" title="Return a circuit where all modules (and external modules) are defined before use.">SortModules</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
                         <a class="class" href="VerilogRename.html" title="Transform that removes collisions with Verilog keywords"></a>
                         <a href="VerilogRename.html" title="Transform that removes collisions with Verilog keywords">VerilogRename</a>
                       </li>
@@ -379,7 +383,7 @@
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Annotation to prevent name manipulation of<a href="../annotations/Target.html" class="extype" name="firrtl.annotations.Target">Target</a>s in a transform that subclasses
 <a href="ManipulateNames.html" class="extype" name="firrtl.transforms.ManipulateNames">ManipulateNames</a>. All listed targets will not be modified.
-</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>a sub-type of <a href="ManipulateNames.html" class="extype" name="firrtl.transforms.ManipulateNames">ManipulateNames</a></p></dd><dt class="param">targets</dt><dd class="cmt"><p>FIRRTL IR targets to exclude from name manipulation</p></dd><dt class="param">transform</dt><dd class="cmt"><p>the transform that this should apply to</p></dd></dl><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.4.0/src/main/scala/firrtl/transforms/ManipulateNames.scala" target="_blank">ManipulateNames.scala</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html" class="extype" name="java.lang.IllegalArgumentException"><code>java.lang.IllegalArgumentException</code></a> if any non-local targets are given</p></span></dd><dt>Note</dt><dd><span class="cmt"><p>All targets must be local. Name modification in a non-local target (e.g., a node in a
+</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>a sub-type of <a href="ManipulateNames.html" class="extype" name="firrtl.transforms.ManipulateNames">ManipulateNames</a></p></dd><dt class="param">targets</dt><dd class="cmt"><p>FIRRTL IR targets to exclude from name manipulation</p></dd><dt class="param">transform</dt><dd class="cmt"><p>the transform that this should apply to</p></dd></dl><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.4.1/src/main/scala/firrtl/transforms/ManipulateNames.scala" target="_blank">ManipulateNames.scala</a></dd><dt>Exceptions thrown</dt><dd><span class="cmt"><p><a href="https://docs.oracle.com/javase/8/docs/api/java/lang/IllegalArgumentException.html" class="extype" name="java.lang.IllegalArgumentException"><code>java.lang.IllegalArgumentException</code></a> if any non-local targets are given</p></span></dd><dt>Note</dt><dd><span class="cmt"><p>All targets must be local. Name modification in a non-local target (e.g., a node in a
 specific instance) makes no structural modification and will be ignored during deduplication. If you want this
 behavior, use a combination of a sub-class of this annotation and a <a href="NoDedupAnnotation.html" class="extype" name="firrtl.transforms.NoDedupAnnotation">NoDedupAnnotation</a>.</p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">
@@ -560,7 +564,8 @@ behavior, use a combination of a sub-class of this annotation and a <a href="NoD
         <span class="name">duplicate</span><span class="params">(<span name="a">a: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Seq">Seq</span>[<a href="../annotations/Target.html" class="extype" name="firrtl.annotations.Target">Target</a>]]</span>)</span><span class="result">: <a href="" class="extype" name="firrtl.transforms.ManipulateNamesBlocklistAnnotation">ManipulateNamesBlocklistAnnotation</a>[<span class="extype" name="firrtl.transforms.ManipulateNamesBlocklistAnnotation.A">A</span>]</span>
       </span>
       
-      <p class="shortcomment cmt">Create another instance of this Annotation</p><div class="fullcomment"><div class="comment cmt"><p>Create another instance of this Annotation</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.transforms.ManipulateNamesBlocklistAnnotation">ManipulateNamesBlocklistAnnotation</a> → <a href="../annotations/MultiTargetAnnotation.html" class="extype" name="firrtl.annotations.MultiTargetAnnotation">MultiTargetAnnotation</a></dd></dl></div>
+      <p class="shortcomment cmt">Create another instance of this Annotation</p><div class="fullcomment"><div class="comment cmt"><p>Create another instance of this Annotation</p><p>The inner Seqs correspond to the renames of the inner Seqs of targets
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.transforms.ManipulateNamesBlocklistAnnotation">ManipulateNamesBlocklistAnnotation</a> → <a href="../annotations/MultiTargetAnnotation.html" class="extype" name="firrtl.annotations.MultiTargetAnnotation">MultiTargetAnnotation</a></dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -779,9 +784,7 @@ Seq(Seq(TargetA3), Seq(TargetB1), Seq(TargetC)); Seq(Seq(TargetA3), Seq(TargetB2
         <span class="name">targets</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Seq">Seq</span>[<a href="../annotations/Target.html" class="extype" name="firrtl.annotations.Target">Target</a>]]</span>
       </span>
       
-      <p class="shortcomment cmt">Contains a sequence of <a href="../annotations/Target.html" class="extype" name="firrtl.annotations.Target">Target</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Contains a sequence of <a href="../annotations/Target.html" class="extype" name="firrtl.annotations.Target">Target</a>.
-When created, <a href="#targets:Seq[Seq[firrtl.annotations.Target]]" class="extmbr" name="firrtl.transforms.ManipulateNamesBlocklistAnnotation#targets">targets</a> should be assigned by <code>Seq(Seq(TargetA), Seq(TargetB), Seq(TargetC))</code>
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.transforms.ManipulateNamesBlocklistAnnotation">ManipulateNamesBlocklistAnnotation</a> → <a href="../annotations/MultiTargetAnnotation.html" class="extype" name="firrtl.annotations.MultiTargetAnnotation">MultiTargetAnnotation</a></dd></dl></div>
+      <p class="shortcomment cmt">Contains a nested sequence of <a href="../annotations/Target.html" class="extype" name="firrtl.annotations.Target">Target</a></p><div class="fullcomment"><div class="comment cmt"><p>Contains a nested sequence of <a href="../annotations/Target.html" class="extype" name="firrtl.annotations.Target">Target</a></p><p>Each inner Seq should contain a single element. For example:</p><pre><span class="kw">def</span> targets = <span class="std">Seq</span>(<span class="std">Seq</span>(foo), <span class="std">Seq</span>(bar))</pre></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.transforms.ManipulateNamesBlocklistAnnotation">ManipulateNamesBlocklistAnnotation</a> → <a href="../annotations/MultiTargetAnnotation.html" class="extype" name="firrtl.annotations.MultiTargetAnnotation">MultiTargetAnnotation</a></dd></dl></div>
     </li><li name="firrtl.transforms.ManipulateNamesBlocklistAnnotation#transform" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="transform:firrtl.options.Dependency[A]"></a><a id="transform:Dependency[A]"></a>
       <span class="permalink">

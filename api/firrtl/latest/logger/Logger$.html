@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.4.0 - logger.Logger</title>
-          <meta name="description" content="firrtl 1.4.0 - logger.Logger" />
-          <meta name="keywords" content="firrtl 1.4.0 logger.Logger" />
+          <title>firrtl 1.4.1 - logger.Logger</title>
+          <meta name="description" content="firrtl 1.4.1 - logger.Logger" />
+          <meta name="keywords" content="firrtl 1.4.1 logger.Logger" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.4.0</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.4.1</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -177,7 +177,7 @@
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Singleton in control of what is supposed to get logged, how it's to be logged and where it is to be logged
 We uses a dynamic variable in case multiple threads are used as can be in scalatests
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.4.0/src/main/scala/logger/Logger.scala" target="_blank">Logger.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.4.1/src/main/scala/logger/Logger.scala" target="_blank">Logger.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -831,14 +831,14 @@ package2.class will not work if package2 is within package1</p></div><dl class="
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name deprecated" title="Deprecated: (Since version 1.2) Use makescope(opts: FirrtlOptions)">makeScope</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="args">args: <a href="https://www.scala-lang.org/api/2.12.12/scala/Array.html#scala.Array" class="extype" name="scala.Array">Array</a>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Array.empty</span></span>)</span><span class="params">(<span name="codeBlock">codeBlock: ⇒ <span class="extype" name="logger.Logger.makeScope.A">A</span></span>)</span><span class="result">: <span class="extype" name="logger.Logger.makeScope.A">A</span></span>
+        <span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.2) Use makescope(opts: FirrtlOptions)">makeScope</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="args">args: <a href="https://www.scala-lang.org/api/2.12.12/scala/Array.html#scala.Array" class="extype" name="scala.Array">Array</a>[<span class="extype" name="scala.Predef.String">String</span>] = <span class="symbol">Array.empty</span></span>)</span><span class="params">(<span name="codeBlock">codeBlock: ⇒ <span class="extype" name="logger.Logger.makeScope.A">A</span></span>)</span><span class="result">: <span class="extype" name="logger.Logger.makeScope.A">A</span></span>
       </span>
       
       <p class="shortcomment cmt">See makeScope using manager.</p><div class="fullcomment"><div class="comment cmt"><p>See makeScope using manager.  This creates a manager from a command line arguments style
 list of strings</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>return type of codeBlock</p></dd><dt class="param">args</dt><dd class="cmt"><p>List of strings</p></dd><dt class="param">codeBlock</dt><dd class="cmt"><p>the block to call</p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
                 <span class="name">@deprecated</span>
               
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.2)</i> Use makescope(opts: FirrtlOptions)</p></dd></dl></div>
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FIRRTL 1.2)</i> Use makescope(opts: FirrtlOptions)</p></dd></dl></div>
     </li><li name="logger.Logger#makeScope" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="makeScope[A](manager:firrtl.ExecutionOptionsManager)(codeBlock:=&gt;A):A"></a><a id="makeScope[A](ExecutionOptionsManager)(⇒A):A"></a>
       <span class="permalink">
@@ -851,7 +851,7 @@ list of strings</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><d
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name deprecated" title="Deprecated: (Since version 1.2) Use makeScope(opts: FirrtlOptions)">makeScope</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="manager">manager: <a href="../firrtl/ExecutionOptionsManager.html" class="extype" name="firrtl.ExecutionOptionsManager">ExecutionOptionsManager</a></span>)</span><span class="params">(<span name="codeBlock">codeBlock: ⇒ <span class="extype" name="logger.Logger.makeScope.A">A</span></span>)</span><span class="result">: <span class="extype" name="logger.Logger.makeScope.A">A</span></span>
+        <span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.2) Use makeScope(opts: FirrtlOptions)">makeScope</span><span class="tparams">[<span name="A">A</span>]</span><span class="params">(<span name="manager">manager: <a href="../firrtl/ExecutionOptionsManager.html" class="extype" name="firrtl.ExecutionOptionsManager">ExecutionOptionsManager</a></span>)</span><span class="params">(<span name="codeBlock">codeBlock: ⇒ <span class="extype" name="logger.Logger.makeScope.A">A</span></span>)</span><span class="result">: <span class="extype" name="logger.Logger.makeScope.A">A</span></span>
       </span>
       
       <p class="shortcomment cmt">This creates a block of code that will have access to the
@@ -860,7 +860,7 @@ thread specific logger.  The state will be set according to the
 logging options set in the common options of the manager</p></div><dl class="paramcmts block"><dt class="tparam">A</dt><dd class="cmt"><p>The return type of codeBlock</p></dd><dt class="param">manager</dt><dd class="cmt"><p>source of logger settings</p></dd><dt class="param">codeBlock</dt><dd class="cmt"><p>code to be run with these logger settings</p></dd><dt>returns</dt><dd class="cmt"><p>Whatever block returns</p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
                 <span class="name">@deprecated</span>
               
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.2)</i> Use makeScope(opts: FirrtlOptions)</p></dd></dl></div>
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FIRRTL 1.2)</i> Use makeScope(opts: FirrtlOptions)</p></dd></dl></div>
     </li><li name="logger.Logger#setOptions" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="setOptions(optionsManager:firrtl.ExecutionOptionsManager):Unit"></a><a id="setOptions(ExecutionOptionsManager):Unit"></a>
       <span class="permalink">
@@ -873,7 +873,7 @@ logging options set in the common options of the manager</p></div><dl class="par
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name deprecated" title="Deprecated: (Since version 1.2) Use setOptions(annotations: AnnotationSeq)">setOptions</span><span class="params">(<span name="optionsManager">optionsManager: <a href="../firrtl/ExecutionOptionsManager.html" class="extype" name="firrtl.ExecutionOptionsManager">ExecutionOptionsManager</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.2) Use setOptions(annotations: AnnotationSeq)">setOptions</span><span class="params">(<span name="optionsManager">optionsManager: <a href="../firrtl/ExecutionOptionsManager.html" class="extype" name="firrtl.ExecutionOptionsManager">ExecutionOptionsManager</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <p class="shortcomment cmt">This is used to set the options that have been set in a optionsManager or are coming
@@ -881,7 +881,7 @@ from the command line via an options manager</p><div class="fullcomment"><div cl
 from the command line via an options manager</p></div><dl class="paramcmts block"><dt class="param">optionsManager</dt><dd class="cmt"><p>manager</p></dd></dl><dl class="attributes block"> <dt>Annotations</dt><dd>
                 <span class="name">@deprecated</span>
               
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 1.2)</i> Use setOptions(annotations: AnnotationSeq)</p></dd></dl></div>
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FIRRTL 1.2)</i> Use setOptions(annotations: AnnotationSeq)</p></dd></dl></div>
     </li></ol>
             </div>
         </div>

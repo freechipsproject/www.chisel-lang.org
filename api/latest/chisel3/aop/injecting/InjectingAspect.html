@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.4.0 - chisel3.aop.injecting.InjectingAspect</title>
-          <meta name="description" content="chisel3 3.4.0 - chisel3.aop.injecting.InjectingAspect" />
-          <meta name="keywords" content="chisel3 3.4.0 chisel3.aop.injecting.InjectingAspect" />
+          <title>chisel3 3.4.1 - chisel3.aop.injecting.InjectingAspect</title>
+          <meta name="description" content="chisel3 3.4.1 - chisel3.aop.injecting.InjectingAspect" />
+          <meta name="keywords" content="chisel3 3.4.1 chisel3.aop.injecting.InjectingAspect" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.4.0</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.4.1</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -160,18 +160,18 @@ and the aggregate types <a href="../../Bundle.html" class="extype" name="chisel3
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <span class="name">InjectingAspect</span><span class="tparams">[<span name="T">T &lt;: <a href="../../RawModule.html" class="extype" name="chisel3.RawModule">RawModule</a></span>, <span name="M">M &lt;: <a href="../../RawModule.html" class="extype" name="chisel3.RawModule">RawModule</a></span>]</span><span class="params">(<span name="selectRoots">selectRoots: (<span class="extype" name="chisel3.aop.injecting.InjectingAspect.T">T</span>) ⇒ <span class="extype" name="scala.Iterable">Iterable</span>[<span class="extype" name="chisel3.aop.injecting.InjectingAspect.M">M</span>]</span>, <span name="injection">injection: (<span class="extype" name="chisel3.aop.injecting.InjectingAspect.M">M</span>) ⇒ <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>)</span><span class="result"> extends <a href="InjectorAspect.html" class="extype" name="chisel3.aop.injecting.InjectorAspect">InjectorAspect</a>[<span class="extype" name="chisel3.aop.injecting.InjectingAspect.T">T</span>, <span class="extype" name="chisel3.aop.injecting.InjectingAspect.M">M</span>] with <a href="https://www.scala-lang.org/api/2.12.12/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.12/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <span class="name">InjectingAspect</span><span class="tparams">[<span name="T">T &lt;: <a href="../../RawModule.html" class="extype" name="chisel3.RawModule">RawModule</a></span>, <span name="M">M &lt;: <a href="../../RawModule.html" class="extype" name="chisel3.RawModule">RawModule</a></span>]</span><span class="params">(<span name="selectRoots">selectRoots: (<span class="extype" name="chisel3.aop.injecting.InjectingAspect.T">T</span>) ⇒ <a href="../../../scala/index.html#Iterable[+A]=Iterable[A]" class="extmbr" name="scala.Iterable">Iterable</a>[<span class="extype" name="chisel3.aop.injecting.InjectingAspect.M">M</span>]</span>, <span name="injection">injection: (<span class="extype" name="chisel3.aop.injecting.InjectingAspect.M">M</span>) ⇒ <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>)</span><span class="result"> extends <a href="InjectorAspect.html" class="extype" name="chisel3.aop.injecting.InjectorAspect">InjectorAspect</a>[<span class="extype" name="chisel3.aop.injecting.InjectingAspect.T">T</span>, <span class="extype" name="chisel3.aop.injecting.InjectingAspect.M">M</span>] with <a href="https://www.scala-lang.org/api/2.12.12/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.12/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       </h4>
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Aspect to inject Chisel code into a module of type M
 </p></div><dl class="paramcmts block"><dt class="tparam">T</dt><dd class="cmt"><p>Type of top-level module</p></dd><dt class="tparam">M</dt><dd class="cmt"><p>Type of root module (join point)</p></dd><dt class="param">selectRoots</dt><dd class="cmt"><p>Given top-level module, pick the instances of a module to apply the aspect (root module)</p></dd><dt class="param">injection</dt><dd class="cmt"><p>Function to generate Chisel hardware that will be injected to the end of module m
-                 Signals in m can be referenced and assigned to as if inside m (yes, it is a bit magical)</p></dd></dl><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.4.0//src/main/scala/chisel3/aop/injecting/InjectingAspect.scala" target="_blank">InjectingAspect.scala</a></dd></dl><div class="toggleContainer block">
+                 Signals in m can be referenced and assigned to as if inside m (yes, it is a bit magical)</p></dd></dl><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.4.1//src/main/scala/chisel3/aop/injecting/InjectingAspect.scala" target="_blank">InjectingAspect.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="https://www.scala-lang.org/api/2.12.12/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html#java.io.Serializable" class="extype" name="java.io.Serializable">Serializable</a>, <a href="InjectorAspect.html" class="extype" name="chisel3.aop.injecting.InjectorAspect">InjectorAspect</a>[<span class="extype" name="chisel3.aop.injecting.InjectingAspect.T">T</span>, <span class="extype" name="chisel3.aop.injecting.InjectingAspect.M">M</span>], <a href="../Aspect.html" class="extype" name="chisel3.aop.Aspect">Aspect</a>[<span class="extype" name="chisel3.aop.injecting.InjectingAspect.T">T</span>], <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/annotations/NoTargetAnnotation.html#firrtl.annotations.NoTargetAnnotation" class="extype" name="firrtl.annotations.NoTargetAnnotation">NoTargetAnnotation</a>, <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/options/Unserializable.html#firrtl.options.Unserializable" class="extype" name="firrtl.options.Unserializable">Unserializable</a>, <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/annotations/Annotation.html#firrtl.annotations.Annotation" class="extype" name="firrtl.annotations.Annotation">Annotation</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/Equals.html#scala.Equals" class="extype" name="scala.Equals">Equals</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="https://www.scala-lang.org/api/2.12.12/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a>, <a href="https://docs.oracle.com/javase/8/docs/api/java/io/Serializable.html#java.io.Serializable" class="extype" name="java.io.Serializable">Serializable</a>, <a href="InjectorAspect.html" class="extype" name="chisel3.aop.injecting.InjectorAspect">InjectorAspect</a>[<span class="extype" name="chisel3.aop.injecting.InjectingAspect.T">T</span>, <span class="extype" name="chisel3.aop.injecting.InjectingAspect.M">M</span>], <a href="../Aspect.html" class="extype" name="chisel3.aop.Aspect">Aspect</a>[<span class="extype" name="chisel3.aop.injecting.InjectingAspect.T">T</span>], <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/annotations/NoTargetAnnotation.html#firrtl.annotations.NoTargetAnnotation" class="extype" name="firrtl.annotations.NoTargetAnnotation">NoTargetAnnotation</a>, <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/options/Unserializable.html#firrtl.options.Unserializable" class="extype" name="firrtl.options.Unserializable">Unserializable</a>, <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/annotations/Annotation.html#firrtl.annotations.Annotation" class="extype" name="firrtl.annotations.Annotation">Annotation</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/Equals.html#scala.Equals" class="extype" name="scala.Equals">Equals</a>, <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div></div>
         
 
@@ -229,7 +229,7 @@ and the aggregate types <a href="../../Bundle.html" class="extype" name="chisel3
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">InjectingAspect</span><span class="params">(<span name="selectRoots">selectRoots: (<span class="extype" name="chisel3.aop.injecting.InjectingAspect.T">T</span>) ⇒ <span class="extype" name="scala.Iterable">Iterable</span>[<span class="extype" name="chisel3.aop.injecting.InjectingAspect.M">M</span>]</span>, <span name="injection">injection: (<span class="extype" name="chisel3.aop.injecting.InjectingAspect.M">M</span>) ⇒ <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>)</span>
+        <span class="name">InjectingAspect</span><span class="params">(<span name="selectRoots">selectRoots: (<span class="extype" name="chisel3.aop.injecting.InjectingAspect.T">T</span>) ⇒ <a href="../../../scala/index.html#Iterable[+A]=Iterable[A]" class="extmbr" name="scala.Iterable">Iterable</a>[<span class="extype" name="chisel3.aop.injecting.InjectingAspect.M">M</span>]</span>, <span name="injection">injection: (<span class="extype" name="chisel3.aop.injecting.InjectingAspect.M">M</span>) ⇒ <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>)</span>
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">selectRoots</dt><dd class="cmt"><p>Given top-level module, pick the instances of a module to apply the aspect (root module)</p></dd><dt class="param">injection</dt><dd class="cmt"><p>Function to generate Chisel hardware that will be injected to the end of module m
@@ -320,7 +320,7 @@ and the aggregate types <a href="../../Bundle.html" class="extype" name="chisel3
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -344,7 +344,7 @@ and the aggregate types <a href="../../Bundle.html" class="extype" name="chisel3
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -401,7 +401,7 @@ and the aggregate types <a href="../../Bundle.html" class="extype" name="chisel3
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getTargets</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/annotations/Target.html#firrtl.annotations.Target" class="extype" name="firrtl.annotations.Target">Target</a>]</span>
+        <span class="name">getTargets</span><span class="result">: <a href="../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/annotations/Target.html#firrtl.annotations.Target" class="extype" name="firrtl.annotations.Target">Target</a>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Annotation</dd></dl></div>
@@ -449,7 +449,7 @@ and the aggregate types <a href="../../Bundle.html" class="extype" name="chisel3
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -503,7 +503,7 @@ and the aggregate types <a href="../../Bundle.html" class="extype" name="chisel3
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">selectRoots</span><span class="result">: (<span class="extype" name="chisel3.aop.injecting.InjectingAspect.T">T</span>) ⇒ <span class="extype" name="scala.Iterable">Iterable</span>[<span class="extype" name="chisel3.aop.injecting.InjectingAspect.M">M</span>]</span>
+        <span class="name">selectRoots</span><span class="result">: (<span class="extype" name="chisel3.aop.injecting.InjectingAspect.T">T</span>) ⇒ <a href="../../../scala/index.html#Iterable[+A]=Iterable[A]" class="extmbr" name="scala.Iterable">Iterable</a>[<span class="extype" name="chisel3.aop.injecting.InjectingAspect.M">M</span>]</span>
       </span>
       
       
@@ -540,9 +540,9 @@ and the aggregate types <a href="../../Bundle.html" class="extype" name="chisel3
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
     </li><li name="chisel3.aop.injecting.InjectorAspect#toAnnotation" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="toAnnotation(modules:Iterable[M],circuit:String):firrtl.AnnotationSeq"></a><a id="toAnnotation(Iterable[M],String):AnnotationSeq"></a>
+      <a id="toAnnotation(modules:Iterable[M],circuit:String,moduleNames:Seq[String]):firrtl.AnnotationSeq"></a><a id="toAnnotation(Iterable[M],String,Seq[String]):AnnotationSeq"></a>
       <span class="permalink">
-      <a href="../../../chisel3/aop/injecting/InjectingAspect.html#toAnnotation(modules:Iterable[M],circuit:String):firrtl.AnnotationSeq" title="Permalink">
+      <a href="../../../chisel3/aop/injecting/InjectingAspect.html#toAnnotation(modules:Iterable[M],circuit:String,moduleNames:Seq[String]):firrtl.AnnotationSeq" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -551,10 +551,12 @@ and the aggregate types <a href="../../Bundle.html" class="extype" name="chisel3
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toAnnotation</span><span class="params">(<span name="modules">modules: <span class="extype" name="scala.Iterable">Iterable</span>[<span class="extype" name="chisel3.aop.injecting.InjectingAspect.M">M</span>]</span>, <span name="circuit">circuit: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/AnnotationSeq.html#firrtl.AnnotationSeq" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a></span>
+        <span class="name">toAnnotation</span><span class="params">(<span name="modules">modules: <a href="../../../scala/index.html#Iterable[+A]=Iterable[A]" class="extmbr" name="scala.Iterable">Iterable</a>[<span class="extype" name="chisel3.aop.injecting.InjectingAspect.M">M</span>]</span>, <span name="circuit">circuit: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="moduleNames">moduleNames: <a href="../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/AnnotationSeq.html#firrtl.AnnotationSeq" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="InjectorAspect.html" class="extype" name="chisel3.aop.injecting.InjectorAspect">InjectorAspect</a></dd></dl></div>
+      <p class="shortcomment cmt">Returns annotations which contain all injection logic
+</p><div class="fullcomment"><div class="comment cmt"><p>Returns annotations which contain all injection logic
+</p></div><dl class="paramcmts block"><dt class="param">modules</dt><dd class="cmt"><p>The modules to inject into</p></dd><dt class="param">circuit</dt><dd class="cmt"><p>Top level circuit</p></dd><dt class="param">moduleNames</dt><dd class="cmt"><p>The names of all existing modules in the original circuit, to avoid name collisions</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="InjectorAspect.html" class="extype" name="chisel3.aop.injecting.InjectorAspect">InjectorAspect</a></dd></dl></div>
     </li><li name="chisel3.aop.injecting.InjectorAspect#toAnnotation" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toAnnotation(top:T):firrtl.AnnotationSeq"></a><a id="toAnnotation(T):AnnotationSeq"></a>
       <span class="permalink">
@@ -567,7 +569,7 @@ and the aggregate types <a href="../../Bundle.html" class="extype" name="chisel3
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toAnnotation</span><span class="params">(<span name="top">top: <span class="extype" name="chisel3.aop.injecting.InjectingAspect.T">T</span></span>)</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/AnnotationSeq.html#firrtl.AnnotationSeq" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a></span>
+        <span class="name">toAnnotation</span><span class="params">(<span name="top">top: <span class="extype" name="chisel3.aop.injecting.InjectingAspect.T">T</span></span>)</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/AnnotationSeq.html#firrtl.AnnotationSeq" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a></span>
       </span>
       
       <p class="shortcomment cmt">Convert this Aspect to a seq of FIRRTL annotation</p><div class="fullcomment"><div class="comment cmt"><p>Convert this Aspect to a seq of FIRRTL annotation</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="InjectorAspect.html" class="extype" name="chisel3.aop.injecting.InjectorAspect">InjectorAspect</a> → <a href="../Aspect.html" class="extype" name="chisel3.aop.Aspect">Aspect</a></dd></dl></div>
@@ -583,7 +585,7 @@ and the aggregate types <a href="../../Bundle.html" class="extype" name="chisel3
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">update</span><span class="params">(<span name="renames">renames: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/RenameMap.html#firrtl.RenameMap" class="extype" name="firrtl.RenameMap">RenameMap</a></span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/annotations/NoTargetAnnotation.html#firrtl.annotations.NoTargetAnnotation" class="extype" name="firrtl.annotations.NoTargetAnnotation">NoTargetAnnotation</a>]</span>
+        <span class="name">update</span><span class="params">(<span name="renames">renames: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/RenameMap.html#firrtl.RenameMap" class="extype" name="firrtl.RenameMap">RenameMap</a></span>)</span><span class="result">: <a href="../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/annotations/NoTargetAnnotation.html#firrtl.annotations.NoTargetAnnotation" class="extype" name="firrtl.annotations.NoTargetAnnotation">NoTargetAnnotation</a>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>NoTargetAnnotation → Annotation</dd></dl></div>
@@ -661,7 +663,31 @@ and the aggregate types <a href="../../Bundle.html" class="extype" name="chisel3
 
         
 
-        
+        <div class="values members">
+              <h3>Deprecated Value Members</h3>
+              <ol><li name="chisel3.aop.injecting.InjectorAspect#toAnnotation" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="toAnnotation(modules:Iterable[M],circuit:String):firrtl.AnnotationSeq"></a><a id="toAnnotation(Iterable[M],String):AnnotationSeq"></a>
+      <span class="permalink">
+      <a href="../../../chisel3/aop/injecting/InjectingAspect.html#toAnnotation(modules:Iterable[M],circuit:String):firrtl.AnnotationSeq" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version 3.4.1) Use other toAnnotation method to pass in names of all existing modules">toAnnotation</span><span class="params">(<span name="modules">modules: <a href="../../../scala/index.html#Iterable[+A]=Iterable[A]" class="extmbr" name="scala.Iterable">Iterable</a>[<span class="extype" name="chisel3.aop.injecting.InjectingAspect.M">M</span>]</span>, <span name="circuit">circuit: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/AnnotationSeq.html#firrtl.AnnotationSeq" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Returns annotations which contain all injection logic
+</p><div class="fullcomment"><div class="comment cmt"><p>Returns annotations which contain all injection logic
+</p></div><dl class="paramcmts block"><dt class="param">modules</dt><dd class="cmt"><p>The modules to inject into</p></dd><dt class="param">circuit</dt><dd class="cmt"><p>Top level circuit</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="InjectorAspect.html" class="extype" name="chisel3.aop.injecting.InjectorAspect">InjectorAspect</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 3.4.1)</i> Use other toAnnotation method to pass in names of all existing modules</p></dd></dl></div>
+    </li></ol>
+            </div>
         </div>
 
         <div id="inheritedMembers">
@@ -674,17 +700,17 @@ and the aggregate types <a href="../../Bundle.html" class="extype" name="chisel3
             </div><div class="parent" name="chisel3.aop.Aspect">
               <h3>Inherited from <a href="../Aspect.html" class="extype" name="chisel3.aop.Aspect">Aspect</a>[<span class="extype" name="chisel3.aop.injecting.InjectingAspect.T">T</span>]</h3>
             </div><div class="parent" name="firrtl.annotations.NoTargetAnnotation">
-              <h3>Inherited from <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/annotations/NoTargetAnnotation.html#firrtl.annotations.NoTargetAnnotation" class="extype" name="firrtl.annotations.NoTargetAnnotation">NoTargetAnnotation</a></h3>
+              <h3>Inherited from <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/annotations/NoTargetAnnotation.html#firrtl.annotations.NoTargetAnnotation" class="extype" name="firrtl.annotations.NoTargetAnnotation">NoTargetAnnotation</a></h3>
             </div><div class="parent" name="firrtl.options.Unserializable">
-              <h3>Inherited from <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/options/Unserializable.html#firrtl.options.Unserializable" class="extype" name="firrtl.options.Unserializable">Unserializable</a></h3>
+              <h3>Inherited from <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/options/Unserializable.html#firrtl.options.Unserializable" class="extype" name="firrtl.options.Unserializable">Unserializable</a></h3>
             </div><div class="parent" name="firrtl.annotations.Annotation">
-              <h3>Inherited from <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/annotations/Annotation.html#firrtl.annotations.Annotation" class="extype" name="firrtl.annotations.Annotation">Annotation</a></h3>
+              <h3>Inherited from <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/annotations/Annotation.html#firrtl.annotations.Annotation" class="extype" name="firrtl.annotations.Annotation">Annotation</a></h3>
             </div><div class="parent" name="scala.Product">
               <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a></h3>
             </div><div class="parent" name="scala.Equals">
               <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/Equals.html#scala.Equals" class="extype" name="scala.Equals">Equals</a></h3>
             </div><div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+              <h3>Inherited from <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
             </div>

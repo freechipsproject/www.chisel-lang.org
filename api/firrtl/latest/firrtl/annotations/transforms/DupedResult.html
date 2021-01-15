@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.4.0 - firrtl.annotations.transforms.DupedResult</title>
-          <meta name="description" content="firrtl 1.4.0 - firrtl.annotations.transforms.DupedResult" />
-          <meta name="keywords" content="firrtl 1.4.0 firrtl.annotations.transforms.DupedResult" />
+          <title>firrtl 1.4.1 - firrtl.annotations.transforms.DupedResult</title>
+          <meta name="description" content="firrtl 1.4.1 - firrtl.annotations.transforms.DupedResult" />
+          <meta name="keywords" content="firrtl 1.4.1 firrtl.annotations.transforms.DupedResult" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.4.0</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.4.1</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -166,7 +166,7 @@
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Holds the mapping from original module to the new, duplicated modules
-The original module target is unaffected by renaming</p></div><dl class="paramcmts block"><dt class="param">newModules</dt><dd class="cmt"><p>Instance target of what the original module now points to</p></dd><dt class="param">originalModule</dt><dd class="cmt"><p>Original module</p></dd></dl><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.4.0/src/main/scala/firrtl/annotations/transforms/EliminateTargetPaths.scala" target="_blank">EliminateTargetPaths.scala</a></dd></dl><div class="toggleContainer block">
+The original module target is unaffected by renaming</p></div><dl class="paramcmts block"><dt class="param">newModules</dt><dd class="cmt"><p>Instance target of what the original module now points to</p></dd><dt class="param">originalModule</dt><dd class="cmt"><p>Original module</p></dd></dl><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.4.1/src/main/scala/firrtl/annotations/transforms/EliminateTargetPaths.scala" target="_blank">EliminateTargetPaths.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -345,7 +345,8 @@ The original module target is unaffected by renaming</p></div><dl class="paramcm
         <span class="name">duplicate</span><span class="params">(<span name="n">n: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Seq">Seq</span>[<a href="../Target.html" class="extype" name="firrtl.annotations.Target">Target</a>]]</span>)</span><span class="result">: <a href="../Annotation.html" class="extype" name="firrtl.annotations.Annotation">Annotation</a></span>
       </span>
       
-      <p class="shortcomment cmt">Create another instance of this Annotation</p><div class="fullcomment"><div class="comment cmt"><p>Create another instance of this Annotation</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.annotations.transforms.DupedResult">DupedResult</a> → <a href="../MultiTargetAnnotation.html" class="extype" name="firrtl.annotations.MultiTargetAnnotation">MultiTargetAnnotation</a></dd></dl></div>
+      <p class="shortcomment cmt">Create another instance of this Annotation</p><div class="fullcomment"><div class="comment cmt"><p>Create another instance of this Annotation</p><p>The inner Seqs correspond to the renames of the inner Seqs of targets
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.annotations.transforms.DupedResult">DupedResult</a> → <a href="../MultiTargetAnnotation.html" class="extype" name="firrtl.annotations.MultiTargetAnnotation">MultiTargetAnnotation</a></dd></dl></div>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -596,9 +597,7 @@ Seq(Seq(TargetA3), Seq(TargetB1), Seq(TargetC)); Seq(Seq(TargetA3), Seq(TargetB2
         <span class="name">targets</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="scala.Seq">Seq</span>[<a href="../Target.html" class="extype" name="firrtl.annotations.Target">Target</a>]]</span>
       </span>
       
-      <p class="shortcomment cmt">Contains a sequence of <a href="../Target.html" class="extype" name="firrtl.annotations.Target">Target</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Contains a sequence of <a href="../Target.html" class="extype" name="firrtl.annotations.Target">Target</a>.
-When created, <a href="#targets:Seq[Seq[firrtl.annotations.Target]]" class="extmbr" name="firrtl.annotations.transforms.DupedResult#targets">targets</a> should be assigned by <code>Seq(Seq(TargetA), Seq(TargetB), Seq(TargetC))</code>
-</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.annotations.transforms.DupedResult">DupedResult</a> → <a href="../MultiTargetAnnotation.html" class="extype" name="firrtl.annotations.MultiTargetAnnotation">MultiTargetAnnotation</a></dd></dl></div>
+      <p class="shortcomment cmt">Contains a nested sequence of <a href="../Target.html" class="extype" name="firrtl.annotations.Target">Target</a></p><div class="fullcomment"><div class="comment cmt"><p>Contains a nested sequence of <a href="../Target.html" class="extype" name="firrtl.annotations.Target">Target</a></p><p>Each inner Seq should contain a single element. For example:</p><pre><span class="kw">def</span> targets = <span class="std">Seq</span>(<span class="std">Seq</span>(foo), <span class="std">Seq</span>(bar))</pre></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="firrtl.annotations.transforms.DupedResult">DupedResult</a> → <a href="../MultiTargetAnnotation.html" class="extype" name="firrtl.annotations.MultiTargetAnnotation">MultiTargetAnnotation</a></dd></dl></div>
     </li><li name="firrtl.annotations.MultiTargetAnnotation#update" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="update(renames:firrtl.RenameMap):Seq[firrtl.annotations.Annotation]"></a><a id="update(RenameMap):Seq[Annotation]"></a>
       <span class="permalink">

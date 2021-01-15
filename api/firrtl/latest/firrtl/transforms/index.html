@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.4.0 - firrtl.transforms</title>
-          <meta name="description" content="firrtl 1.4.0 - firrtl.transforms" />
-          <meta name="keywords" content="firrtl 1.4.0 firrtl.transforms" />
+          <title>firrtl 1.4.1 - firrtl.transforms</title>
+          <meta name="description" content="firrtl 1.4.1 - firrtl.transforms" />
+          <meta name="keywords" content="firrtl 1.4.1 firrtl.transforms" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.4.0</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.4.1</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -608,6 +608,10 @@ primarily consists of:</p><ul><li><a href="../stage/FirrtlStage.html" class="ext
                         <a href="SimplifyMems.html" title="Lowers memories without splitting them, but without the complexity of ReplaceMemMacros">SimplifyMems</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
+                        <a class="class" href="SortModules.html" title="Return a circuit where all modules (and external modules) are defined before use."></a>
+                        <a href="SortModules.html" title="Return a circuit where all modules (and external modules) are defined before use.">SortModules</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
                         <a class="class" href="VerilogRename.html" title="Transform that removes collisions with Verilog keywords"></a>
                         <a href="VerilogRename.html" title="Transform that removes collisions with Verilog keywords">VerilogRename</a>
                       </li><li name="firrtl.traversals" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
@@ -670,7 +674,7 @@ primarily consists of:</p><ul><li><a href="../stage/FirrtlStage.html" class="ext
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.4.0/src/main/scala/firrtl/transforms/package.scala" target="_blank">package.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.4.1/src/main/scala/firrtl/transforms/package.scala" target="_blank">package.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
@@ -1603,6 +1607,22 @@ useful for emission to languages that support non-expanding arithmetic (like Ver
       
       <p class="shortcomment cmt">Lowers memories without splitting them, but without the complexity of ReplaceMemMacros
 </p>
+    </li><li name="firrtl.transforms.SortModules" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="SortModulesextendsTransformwithDependencyAPIMigration"></a><a id="SortModules:SortModules"></a>
+      <span class="permalink">
+      <a href="../../firrtl/transforms/SortModules.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Return a circuit where all modules (and external modules) are defined before use." href="SortModules.html"><span class="name">SortModules</span></a><span class="result"> extends <a href="../Transform.html" class="extype" name="firrtl.Transform">Transform</a> with <a href="../DependencyAPIMigration.html" class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Return a circuit where all modules (and external modules) are defined before use.</p>
     </li><li name="firrtl.transforms.VerilogRename" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="VerilogRenameextendsRemoveKeywordCollisions"></a><a id="VerilogRename:VerilogRename"></a>
       <span class="permalink">

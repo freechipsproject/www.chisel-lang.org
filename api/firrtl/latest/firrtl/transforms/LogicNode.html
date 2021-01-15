@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>firrtl 1.4.0 - firrtl.transforms.LogicNode</title>
-          <meta name="description" content="firrtl 1.4.0 - firrtl.transforms.LogicNode" />
-          <meta name="keywords" content="firrtl 1.4.0 firrtl.transforms.LogicNode" />
+          <title>firrtl 1.4.1 - firrtl.transforms.LogicNode</title>
+          <meta name="description" content="firrtl 1.4.1 - firrtl.transforms.LogicNode" />
+          <meta name="keywords" content="firrtl 1.4.1 firrtl.transforms.LogicNode" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">firrtl<span id="doc-version">1.4.0</span></span>
+        <span id="doc-title">firrtl<span id="doc-version">1.4.1</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -347,6 +347,10 @@
                         <a href="SimplifyMems.html" title="Lowers memories without splitting them, but without the complexity of ReplaceMemMacros">SimplifyMems</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
+                        <a class="class" href="SortModules.html" title="Return a circuit where all modules (and external modules) are defined before use."></a>
+                        <a href="SortModules.html" title="Return a circuit where all modules (and external modules) are defined before use.">SortModules</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
                         <a class="class" href="VerilogRename.html" title="Transform that removes collisions with Verilog keywords"></a>
                         <a href="VerilogRename.html" title="Transform that removes collisions with Verilog keywords">VerilogRename</a>
                       </li>
@@ -384,7 +388,7 @@ checking is an analysis on the netlist of the circuit; the fields are specialize
 Since all wires are ground types, a given ground type net may only be a subfield of an instance
 or a memory port. Therefore, it is uniquely specified within its module context by its name, its
 optional parent instance (a WDefInstance or WDefMemory), and its optional memory port name.
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.4.0/src/main/scala/firrtl/transforms/CheckCombLoops.scala" target="_blank">CheckCombLoops.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/firrtl/tree/v1.4.1/src/main/scala/firrtl/transforms/CheckCombLoops.scala" target="_blank">CheckCombLoops.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>

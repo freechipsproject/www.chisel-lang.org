@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.4.0 - chisel3.stage.phases.Convert</title>
-          <meta name="description" content="chisel3 3.4.0 - chisel3.stage.phases.Convert" />
-          <meta name="keywords" content="chisel3 3.4.0 chisel3.stage.phases.Convert" />
+          <title>chisel3 3.4.1 - chisel3.stage.phases.Convert</title>
+          <meta name="description" content="chisel3 3.4.1 - chisel3.stage.phases.Convert" />
+          <meta name="keywords" content="chisel3 3.4.1 chisel3.stage.phases.Convert" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.4.0</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.4.1</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -188,17 +188,17 @@ and the aggregate types <a href="../../Bundle.html" class="extype" name="chisel3
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">Convert</span><span class="result"> extends <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/options/Phase.html#firrtl.options.Phase" class="extype" name="firrtl.options.Phase">Phase</a></span>
+        <span class="name">Convert</span><span class="result"> extends <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/options/Phase.html#firrtl.options.Phase" class="extype" name="firrtl.options.Phase">Phase</a></span>
       </span>
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>This prepares a <a href="../ChiselCircuitAnnotation.html" class="extype" name="chisel3.stage.ChiselCircuitAnnotation">ChiselCircuitAnnotation</a> for compilation with FIRRTL. This does three things:</p><ul><li>Uses <span class="extype" name="chisel3.internal.firrtl.Converter">chisel3.internal.firrtl.Converter</span> to generate a <span class="extype" name="FirrtlCircuitAnnotation">FirrtlCircuitAnnotation</span></li><li>Extracts all <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/annotations/Annotation.html" class="extype" name="firrtl.annotations.Annotation">firrtl.annotations.Annotation</a>s from the <span class="extype" name="chisel3.internal.firrtl.Circuit">chisel3.internal.firrtl.Circuit</span></li><li>Generates any needed <span class="extype" name="RunFirrtlTransformAnnotation">RunFirrtlTransformAnnotation</span>s from extracted <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/annotations/Annotation.html" class="extype" name="firrtl.annotations.Annotation">firrtl.annotations.Annotation</a>s
-</li></ul></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.4.0//src/main/scala/chisel3/stage/phases/Convert.scala" target="_blank">Convert.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>This prepares a <a href="../ChiselCircuitAnnotation.html" class="extype" name="chisel3.stage.ChiselCircuitAnnotation">ChiselCircuitAnnotation</a> for compilation with FIRRTL. This does three things:</p><ul><li>Uses <span class="extype" name="chisel3.internal.firrtl.Converter">chisel3.internal.firrtl.Converter</span> to generate a <span class="extype" name="FirrtlCircuitAnnotation">FirrtlCircuitAnnotation</span></li><li>Extracts all <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/annotations/Annotation.html" class="extype" name="firrtl.annotations.Annotation">firrtl.annotations.Annotation</a>s from the <span class="extype" name="chisel3.internal.firrtl.Circuit">chisel3.internal.firrtl.Circuit</span></li><li>Generates any needed <span class="extype" name="RunFirrtlTransformAnnotation">RunFirrtlTransformAnnotation</span>s from extracted <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/annotations/Annotation.html" class="extype" name="firrtl.annotations.Annotation">firrtl.annotations.Annotation</a>s
+</li></ul></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.4.1//src/main/scala/chisel3/stage/phases/Convert.scala" target="_blank">Convert.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/options/Phase.html#firrtl.options.Phase" class="extype" name="firrtl.options.Phase">Phase</a>, <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/options/DependencyAPI.html#firrtl.options.DependencyAPI" class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/options/Phase.html#firrtl.options.Phase" class="extype" name="firrtl.options.Phase">Phase</a>], <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/options/TransformLike.html#firrtl.options.TransformLike" class="extype" name="firrtl.options.TransformLike">TransformLike</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/AnnotationSeq.html#firrtl.AnnotationSeq" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a>], <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/logger/LazyLogging.html#logger.LazyLogging" class="extype" name="logger.LazyLogging">LazyLogging</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/options/Phase.html#firrtl.options.Phase" class="extype" name="firrtl.options.Phase">Phase</a>, <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/options/DependencyAPI.html#firrtl.options.DependencyAPI" class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/options/Phase.html#firrtl.options.Phase" class="extype" name="firrtl.options.Phase">Phase</a>], <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/options/TransformLike.html#firrtl.options.TransformLike" class="extype" name="firrtl.options.TransformLike">TransformLike</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/AnnotationSeq.html#firrtl.AnnotationSeq" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a>], <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/logger/LazyLogging.html#logger.LazyLogging" class="extype" name="logger.LazyLogging">LazyLogging</a>, <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div></div>
         
 
@@ -346,7 +346,7 @@ and the aggregate types <a href="../../Bundle.html" class="extype" name="chisel3
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -370,7 +370,7 @@ and the aggregate types <a href="../../Bundle.html" class="extype" name="chisel3
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -462,7 +462,7 @@ and the aggregate types <a href="../../Bundle.html" class="extype" name="chisel3
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">invalidates</span><span class="params">(<span name="a">a: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/options/Phase.html#firrtl.options.Phase" class="extype" name="firrtl.options.Phase">Phase</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">invalidates</span><span class="params">(<span name="a">a: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/options/Phase.html#firrtl.options.Phase" class="extype" name="firrtl.options.Phase">Phase</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="chisel3.stage.phases.Convert">Convert</a> → DependencyAPI</dd></dl></div>
@@ -494,7 +494,7 @@ and the aggregate types <a href="../../Bundle.html" class="extype" name="chisel3
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">logger</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/logger/Logger.html#logger.Logger" class="extype" name="logger.Logger">Logger</a></span>
+        <span class="name">logger</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/logger/Logger.html#logger.Logger" class="extype" name="logger.Logger">Logger</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>LazyLogging</dd></dl></div>
@@ -526,7 +526,7 @@ and the aggregate types <a href="../../Bundle.html" class="extype" name="chisel3
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -612,7 +612,7 @@ and the aggregate types <a href="../../Bundle.html" class="extype" name="chisel3
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">prerequisites</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/Seq.html#scala.collection.Seq" class="extype" name="scala.collection.Seq">Seq</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/options/Dependency.html#firrtl.options.Dependency" class="extype" name="firrtl.options.Dependency">Dependency</a>[<a href="Elaborate.html" class="extype" name="chisel3.stage.phases.Elaborate">Elaborate</a>]]</span>
+        <span class="name">prerequisites</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/Seq.html#scala.collection.Seq" class="extype" name="scala.collection.Seq">Seq</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/options/Dependency.html#firrtl.options.Dependency" class="extype" name="firrtl.options.Dependency">Dependency</a>[<a href="Elaborate.html" class="extype" name="chisel3.stage.phases.Elaborate">Elaborate</a>]]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="chisel3.stage.phases.Convert">Convert</a> → DependencyAPI</dd></dl></div>
@@ -660,7 +660,7 @@ and the aggregate types <a href="../../Bundle.html" class="extype" name="chisel3
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">transform</span><span class="params">(<span name="annotations">annotations: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/AnnotationSeq.html#firrtl.AnnotationSeq" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a></span>)</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/AnnotationSeq.html#firrtl.AnnotationSeq" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a></span>
+        <span class="name">transform</span><span class="params">(<span name="annotations">annotations: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/AnnotationSeq.html#firrtl.AnnotationSeq" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a></span>)</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/AnnotationSeq.html#firrtl.AnnotationSeq" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="chisel3.stage.phases.Convert">Convert</a> → TransformLike</dd></dl></div>
@@ -752,7 +752,7 @@ and the aggregate types <a href="../../Bundle.html" class="extype" name="chisel3
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.3) Due to confusion, 'dependents' is being renamed to 'optionalPrerequisiteOf'. Override the latter instead.">dependents</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/options/Dependency.html#firrtl.options.Dependency" class="extype" name="firrtl.options.Dependency">Dependency</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/options/Phase.html#firrtl.options.Phase" class="extype" name="firrtl.options.Phase">Phase</a>]]</span>
+        <span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.3) Due to confusion, 'dependents' is being renamed to 'optionalPrerequisiteOf'. Override the latter instead.">dependents</span><span class="result">: <a href="../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/options/Dependency.html#firrtl.options.Dependency" class="extype" name="firrtl.options.Dependency">Dependency</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/options/Phase.html#firrtl.options.Phase" class="extype" name="firrtl.options.Phase">Phase</a>]]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DependencyAPI</dd><dt>Annotations</dt><dd>
@@ -765,15 +765,15 @@ and the aggregate types <a href="../../Bundle.html" class="extype" name="chisel3
 
         <div id="inheritedMembers">
         <div class="parent" name="firrtl.options.Phase">
-              <h3>Inherited from <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/options/Phase.html#firrtl.options.Phase" class="extype" name="firrtl.options.Phase">Phase</a></h3>
+              <h3>Inherited from <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/options/Phase.html#firrtl.options.Phase" class="extype" name="firrtl.options.Phase">Phase</a></h3>
             </div><div class="parent" name="firrtl.options.DependencyAPI">
-              <h3>Inherited from <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/options/DependencyAPI.html#firrtl.options.DependencyAPI" class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/options/Phase.html#firrtl.options.Phase" class="extype" name="firrtl.options.Phase">Phase</a>]</h3>
+              <h3>Inherited from <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/options/DependencyAPI.html#firrtl.options.DependencyAPI" class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/options/Phase.html#firrtl.options.Phase" class="extype" name="firrtl.options.Phase">Phase</a>]</h3>
             </div><div class="parent" name="firrtl.options.TransformLike">
-              <h3>Inherited from <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/options/TransformLike.html#firrtl.options.TransformLike" class="extype" name="firrtl.options.TransformLike">TransformLike</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/AnnotationSeq.html#firrtl.AnnotationSeq" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a>]</h3>
+              <h3>Inherited from <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/options/TransformLike.html#firrtl.options.TransformLike" class="extype" name="firrtl.options.TransformLike">TransformLike</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/AnnotationSeq.html#firrtl.AnnotationSeq" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a>]</h3>
             </div><div class="parent" name="logger.LazyLogging">
-              <h3>Inherited from <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/logger/LazyLogging.html#logger.LazyLogging" class="extype" name="logger.LazyLogging">LazyLogging</a></h3>
+              <h3>Inherited from <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/logger/LazyLogging.html#logger.LazyLogging" class="extype" name="logger.LazyLogging">LazyLogging</a></h3>
             </div><div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+              <h3>Inherited from <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
             </div>

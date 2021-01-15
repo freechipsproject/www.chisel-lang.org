@@ -101,6 +101,22 @@
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="dotvisualizer">dotvisualizer</a></dd></dl></div>
+    </li><li name="dotvisualizer.stage" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="stage"></a><a id="stage:stage"></a>
+      <span class="permalink">
+      <a href="../dotvisualizer/stage/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="stage/index.html"><span class="name">stage</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="dotvisualizer">dotvisualizer</a></dd></dl></div>
     </li><li name="dotvisualizer.transforms" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="transforms"></a><a id="transforms:transforms"></a>
       <span class="permalink">
@@ -118,57 +134,25 @@
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="dotvisualizer">dotvisualizer</a></dd></dl></div>
     </li><li class="current-entities indented1">
-                        <a class="object" href="Config$.html" title=""></a>
-                        <a class="class" href="Config.html" title=""></a>
-                        <a href="Config.html" title="">Config</a>
-                      </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="class" href="DotTimeOut.html" title=""></a>
-                        <a href="DotTimeOut.html" title="">DotTimeOut</a>
-                      </li><li class="current-entities indented1">
-                        <span class="separator"></span>
-                        <a class="object" href="FirrtlDiagrammer$.html" title=""></a>
-                        <a href="FirrtlDiagrammer$.html" title="">FirrtlDiagrammer</a>
+                        <a class="object" href="FirrtlDiagrammer$.html" title="This library implements a graphviz dot file render."></a>
+                        <a href="FirrtlDiagrammer$.html" title="This library implements a graphviz dot file render.">FirrtlDiagrammer</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="class" href="" title="Workaround for https://github.com/freechipsproject/firrtl/issues/498 from @jackkoenig"></a>
                         <a href="" title="Workaround for https://github.com/freechipsproject/firrtl/issues/498 from @jackkoenig">FixupOps</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="trait" href="OptionAnnotation.html" title="This library implements a graphviz dot file render."></a>
-                        <a href="OptionAnnotation.html" title="This library implements a graphviz dot file render.">OptionAnnotation</a>
-                      </li><li class="current-entities indented1">
-                        <span class="separator"></span>
-                        <a class="class" href="RankDirAnnotation.html" title=""></a>
-                        <a href="RankDirAnnotation.html" title="">RankDirAnnotation</a>
+                        <a class="class" href="RenderSvg.html" title=""></a>
+                        <a href="RenderSvg.html" title="">RenderSvg</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
                         <a class="class" href="Scope.html" title=""></a>
                         <a href="Scope.html" title="">Scope</a>
                       </li><li class="current-entities indented1">
                         <span class="separator"></span>
-                        <a class="class" href="SetOpenProgram.html" title=""></a>
-                        <a href="SetOpenProgram.html" title="">SetOpenProgram</a>
-                      </li><li class="current-entities indented1">
-                        <span class="separator"></span>
-                        <a class="class" href="SetRenderProgram.html" title=""></a>
-                        <a href="SetRenderProgram.html" title="">SetRenderProgram</a>
-                      </li><li class="current-entities indented1">
-                        <span class="separator"></span>
-                        <a class="object" href="ShowPrintfsAnnotation$.html" title=""></a>
-                        <a href="ShowPrintfsAnnotation$.html" title="">ShowPrintfsAnnotation</a>
-                      </li><li class="current-entities indented1">
-                        <span class="separator"></span>
-                        <a class="class" href="StartModule.html" title=""></a>
-                        <a href="StartModule.html" title="">StartModule</a>
-                      </li><li class="current-entities indented1">
-                        <span class="separator"></span>
-                        <a class="object" href="ToLoFirrtl$.html" title="Use these lowering transforms to prepare circuit for compiling"></a>
-                        <a href="ToLoFirrtl$.html" title="Use these lowering transforms to prepare circuit for compiling">ToLoFirrtl</a>
-                      </li><li class="current-entities indented1">
-                        <span class="separator"></span>
-                        <a class="object" href="UseRankAnnotation$.html" title=""></a>
-                        <a href="UseRankAnnotation$.html" title="">UseRankAnnotation</a>
+                        <a class="class" href="ToLoFirrtl.html" title="Use these lowering transforms to prepare circuit for compiling"></a>
+                        <a href="ToLoFirrtl.html" title="Use these lowering transforms to prepare circuit for compiling">ToLoFirrtl</a>
                       </li>
               </ul>
             </div>
@@ -192,7 +176,7 @@
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">FixupOps</span><span class="result"> extends <span class="extype" name="firrtl.Transform">Transform</span></span>
+        <span class="name">FixupOps</span><span class="result"> extends <span class="extype" name="firrtl.Transform">Transform</span> with <span class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</span></span>
       </span>
       </h4>
 
@@ -202,7 +186,7 @@
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><span class="extype" name="firrtl.Transform">Transform</span>, <span class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</span>[<span class="extype" name="firrtl.Transform">Transform</span>], <span class="extype" name="firrtl.options.TransformLike">TransformLike</span>[<span class="extype" name="firrtl.CircuitState">CircuitState</span>], <span class="extype" name="logger.LazyLogging">LazyLogging</span>, <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><span class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</span>, <span class="extype" name="firrtl.Transform">Transform</span>, <span class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</span>[<span class="extype" name="firrtl.Transform">Transform</span>], <span class="extype" name="firrtl.options.TransformLike">TransformLike</span>[<span class="extype" name="firrtl.CircuitState">CircuitState</span>], <span class="extype" name="logger.LazyLogging">LazyLogging</span>, <a href="https://www.scala-lang.org/api/2.12.10/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.10/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div></div>
         
 
@@ -228,7 +212,7 @@
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="dotvisualizer.FixupOps"><span>FixupOps</span></li><li class="in" name="firrtl.Transform"><span>Transform</span></li><li class="in" name="firrtl.options.DependencyAPI"><span>DependencyAPI</span></li><li class="in" name="firrtl.options.TransformLike"><span>TransformLike</span></li><li class="in" name="logger.LazyLogging"><span>LazyLogging</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="dotvisualizer.FixupOps"><span>FixupOps</span></li><li class="in" name="firrtl.DependencyAPIMigration"><span>DependencyAPIMigration</span></li><li class="in" name="firrtl.Transform"><span>Transform</span></li><li class="in" name="firrtl.options.DependencyAPI"><span>DependencyAPI</span></li><li class="in" name="firrtl.options.TransformLike"><span>TransformLike</span></li><li class="in" name="logger.LazyLogging"><span>LazyLogging</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -470,23 +454,7 @@
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="dotvisualizer.FixupOps#inputForm" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="inputForm:firrtl.CircuitForm"></a><a id="inputForm:CircuitForm"></a>
-      <span class="permalink">
-      <a href="../dotvisualizer/FixupOps.html#inputForm:firrtl.CircuitForm" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">inputForm</span><span class="result">: <span class="extype" name="firrtl.CircuitForm">CircuitForm</span></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="dotvisualizer.FixupOps">FixupOps</a> → Transform</dd></dl></div>
-    </li><li name="firrtl.Transform#invalidates" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="dotvisualizer.FixupOps#invalidates" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="invalidates(a:firrtl.Transform):Boolean"></a><a id="invalidates(Transform):Boolean"></a>
       <span class="permalink">
       <a href="../dotvisualizer/FixupOps.html#invalidates(a:firrtl.Transform):Boolean" title="Permalink">
@@ -501,7 +469,7 @@
         <span class="name">invalidates</span><span class="params">(<span name="a">a: <span class="extype" name="firrtl.Transform">Transform</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.10/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Transform → DependencyAPI</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="dotvisualizer.FixupOps">FixupOps</a> → DependencyAPIMigration → Transform → DependencyAPI</dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
@@ -604,10 +572,10 @@
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="firrtl.Transform#optionalPrerequisiteOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="optionalPrerequisiteOf:Seq[firrtl.options.Dependency[firrtl.Transform]]"></a><a id="optionalPrerequisiteOf:Seq[Dependency[Transform]]"></a>
+    </li><li name="dotvisualizer.FixupOps#optionalPrerequisiteOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="optionalPrerequisiteOf:Seq[Nothing]"></a>
       <span class="permalink">
-      <a href="../dotvisualizer/FixupOps.html#optionalPrerequisiteOf:Seq[firrtl.options.Dependency[firrtl.Transform]]" title="Permalink">
+      <a href="../dotvisualizer/FixupOps.html#optionalPrerequisiteOf:Seq[Nothing]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -616,14 +584,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">optionalPrerequisiteOf</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="firrtl.options.Dependency">Dependency</span>[<span class="extype" name="firrtl.Transform">Transform</span>]]</span>
+        <span class="name">optionalPrerequisiteOf</span><span class="result">: <span class="extype" name="scala.collection.Seq">Seq</span>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Nothing.html#scala.Nothing" class="extype" name="scala.Nothing">Nothing</a>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Transform → DependencyAPI</dd></dl></div>
-    </li><li name="firrtl.Transform#optionalPrerequisites" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="optionalPrerequisites:Seq[firrtl.options.Dependency[firrtl.Transform]]"></a><a id="optionalPrerequisites:Seq[Dependency[Transform]]"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="dotvisualizer.FixupOps">FixupOps</a> → DependencyAPIMigration → Transform → DependencyAPI</dd></dl></div>
+    </li><li name="dotvisualizer.FixupOps#optionalPrerequisites" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="optionalPrerequisites:Seq[Nothing]"></a>
       <span class="permalink">
-      <a href="../dotvisualizer/FixupOps.html#optionalPrerequisites:Seq[firrtl.options.Dependency[firrtl.Transform]]" title="Permalink">
+      <a href="../dotvisualizer/FixupOps.html#optionalPrerequisites:Seq[Nothing]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -632,14 +600,14 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">optionalPrerequisites</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="firrtl.options.Dependency">Dependency</span>[<span class="extype" name="firrtl.Transform">Transform</span>]]</span>
+        <span class="name">optionalPrerequisites</span><span class="result">: <span class="extype" name="scala.collection.Seq">Seq</span>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Nothing.html#scala.Nothing" class="extype" name="scala.Nothing">Nothing</a>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Transform → DependencyAPI</dd></dl></div>
-    </li><li name="dotvisualizer.FixupOps#outputForm" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="outputForm:firrtl.CircuitForm"></a><a id="outputForm:CircuitForm"></a>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="dotvisualizer.FixupOps">FixupOps</a> → DependencyAPIMigration → Transform → DependencyAPI</dd></dl></div>
+    </li><li name="dotvisualizer.FixupOps#prerequisites" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="prerequisites:Seq[Nothing]"></a>
       <span class="permalink">
-      <a href="../dotvisualizer/FixupOps.html#outputForm:firrtl.CircuitForm" title="Permalink">
+      <a href="../dotvisualizer/FixupOps.html#prerequisites:Seq[Nothing]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -648,26 +616,10 @@
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">outputForm</span><span class="result">: <span class="extype" name="firrtl.CircuitForm">CircuitForm</span></span>
+        <span class="name">prerequisites</span><span class="result">: <span class="extype" name="scala.collection.Seq">Seq</span>[<a href="https://www.scala-lang.org/api/2.12.10/scala/Nothing.html#scala.Nothing" class="extype" name="scala.Nothing">Nothing</a>]</span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="dotvisualizer.FixupOps">FixupOps</a> → Transform</dd></dl></div>
-    </li><li name="firrtl.Transform#prerequisites" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="prerequisites:Seq[firrtl.options.Dependency[firrtl.Transform]]"></a><a id="prerequisites:Seq[Dependency[Transform]]"></a>
-      <span class="permalink">
-      <a href="../dotvisualizer/FixupOps.html#prerequisites:Seq[firrtl.options.Dependency[firrtl.Transform]]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">prerequisites</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="firrtl.options.Dependency">Dependency</span>[<span class="extype" name="firrtl.Transform">Transform</span>]]</span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Transform → DependencyAPI</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="dotvisualizer.FixupOps">FixupOps</a> → DependencyAPIMigration → Transform → DependencyAPI</dd></dl></div>
     </li><li name="firrtl.Transform#runTransform" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="runTransform(state:firrtl.CircuitState):firrtl.CircuitState"></a><a id="runTransform(CircuitState):CircuitState"></a>
       <span class="permalink">
@@ -827,12 +779,52 @@
                 <span class="name">@deprecated</span>
               
         </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FIRRTL 1.3)</i> Due to confusion, 'dependents' is being renamed to 'optionalPrerequisiteOf'. Override the latter instead.</p></dd></dl></div>
+    </li><li name="firrtl.DependencyAPIMigration#inputForm" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="inputForm:firrtl.CircuitForm"></a><a id="inputForm:CircuitForm"></a>
+      <span class="permalink">
+      <a href="../dotvisualizer/FixupOps.html#inputForm:firrtl.CircuitForm" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.3) Use Dependency API methods for equivalent functionality. See: https://bit.ly/2Voppre">inputForm</span><span class="result">: <span class="extype" name="firrtl.CircuitForm">CircuitForm</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DependencyAPIMigration</dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FIRRTL 1.3)</i> Use Dependency API methods for equivalent functionality. See: https://bit.ly/2Voppre</p></dd></dl></div>
+    </li><li name="firrtl.DependencyAPIMigration#outputForm" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="outputForm:firrtl.CircuitForm"></a><a id="outputForm:CircuitForm"></a>
+      <span class="permalink">
+      <a href="../dotvisualizer/FixupOps.html#outputForm:firrtl.CircuitForm" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.3) Use Dependency API methods for equivalent functionality. See: https://bit.ly/2Voppre">outputForm</span><span class="result">: <span class="extype" name="firrtl.CircuitForm">CircuitForm</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DependencyAPIMigration</dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version FIRRTL 1.3)</i> Use Dependency API methods for equivalent functionality. See: https://bit.ly/2Voppre</p></dd></dl></div>
     </li></ol>
             </div>
         </div>
 
         <div id="inheritedMembers">
-        <div class="parent" name="firrtl.Transform">
+        <div class="parent" name="firrtl.DependencyAPIMigration">
+              <h3>Inherited from <span class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</span></h3>
+            </div><div class="parent" name="firrtl.Transform">
               <h3>Inherited from <span class="extype" name="firrtl.Transform">Transform</span></h3>
             </div><div class="parent" name="firrtl.options.DependencyAPI">
               <h3>Inherited from <span class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</span>[<span class="extype" name="firrtl.Transform">Transform</span>]</h3>

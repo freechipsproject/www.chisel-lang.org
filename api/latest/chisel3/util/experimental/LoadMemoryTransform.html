@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.4.0 - chisel3.util.experimental.LoadMemoryTransform</title>
-          <meta name="description" content="chisel3 3.4.0 - chisel3.util.experimental.LoadMemoryTransform" />
-          <meta name="keywords" content="chisel3 3.4.0 chisel3.util.experimental.LoadMemoryTransform" />
+          <title>chisel3 3.4.1 - chisel3.util.experimental.LoadMemoryTransform</title>
+          <meta name="description" content="chisel3 3.4.1 - chisel3.util.experimental.LoadMemoryTransform" />
+          <meta name="keywords" content="chisel3 3.4.1 chisel3.util.experimental.LoadMemoryTransform" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.4.0</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.4.1</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -143,12 +143,24 @@ functions
                         <a href="FlattenInstance.html" title="Flattens an instance of a module">FlattenInstance</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
+                        <a class="class" href="ForceNameAnnotation.html" title="Links the user-specified name to force to, with the signal/instance in the FIRRTL design"></a>
+                        <a href="ForceNameAnnotation.html" title="Links the user-specified name to force to, with the signal/instance in the FIRRTL design">ForceNameAnnotation</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="ForceNamesTransform.html" title="Forces the name of marked signals to a certain name"></a>
+                        <a href="ForceNamesTransform.html" title="Forces the name of marked signals to a certain name">ForceNamesTransform</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
                         <a class="trait" href="InlineInstance.html" title="Inlines an instance of a module"></a>
                         <a href="InlineInstance.html" title="Inlines an instance of a module">InlineInstance</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="class" href="" title="This transform only is activated if Verilog is being generated (determined by presence of the proper emit annotation) when activated it creates additional Verilog files that contain modules bound to the modules that contain an initializable memory"></a>
                         <a href="" title="This transform only is activated if Verilog is being generated (determined by presence of the proper emit annotation) when activated it creates additional Verilog files that contain modules bound to the modules that contain an initializable memory">LoadMemoryTransform</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="forceName$.html" title=""></a>
+                        <a href="forceName$.html" title="">forceName</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="object" href="group$.html" title="Marks that a module to be ignored in Dedup Transform in Firrtl pass"></a>
@@ -180,7 +192,7 @@ functions
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">LoadMemoryTransform</span><span class="result"> extends <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/Transform.html#firrtl.Transform" class="extype" name="firrtl.Transform">Transform</a></span>
+        <span class="name">LoadMemoryTransform</span><span class="result"> extends <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/Transform.html#firrtl.Transform" class="extype" name="firrtl.Transform">Transform</a></span>
       </span>
       </h4>
 
@@ -189,11 +201,11 @@ functions
 annotation) when activated it creates additional Verilog files that contain modules bound to the modules that
 contain an initializable memory</p><p>Currently the only non-Verilog based simulation that can support loading memory from a file is treadle but it does
 not need this transform to do that.
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.4.0//src/main/scala/chisel3/util/experimental/LoadMemoryTransform.scala" target="_blank">LoadMemoryTransform.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.4.1//src/main/scala/chisel3/util/experimental/LoadMemoryTransform.scala" target="_blank">LoadMemoryTransform.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/Transform.html#firrtl.Transform" class="extype" name="firrtl.Transform">Transform</a>, <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/options/DependencyAPI.html#firrtl.options.DependencyAPI" class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/Transform.html#firrtl.Transform" class="extype" name="firrtl.Transform">Transform</a>], <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/options/TransformLike.html#firrtl.options.TransformLike" class="extype" name="firrtl.options.TransformLike">TransformLike</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/CircuitState.html#firrtl.CircuitState" class="extype" name="firrtl.CircuitState">CircuitState</a>], <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/logger/LazyLogging.html#logger.LazyLogging" class="extype" name="logger.LazyLogging">LazyLogging</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/Transform.html#firrtl.Transform" class="extype" name="firrtl.Transform">Transform</a>, <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/options/DependencyAPI.html#firrtl.options.DependencyAPI" class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/Transform.html#firrtl.Transform" class="extype" name="firrtl.Transform">Transform</a>], <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/options/TransformLike.html#firrtl.options.TransformLike" class="extype" name="firrtl.options.TransformLike">TransformLike</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/CircuitState.html#firrtl.CircuitState" class="extype" name="firrtl.CircuitState">CircuitState</a>], <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/logger/LazyLogging.html#logger.LazyLogging" class="extype" name="logger.LazyLogging">LazyLogging</a>, <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div></div>
         
 
@@ -341,7 +353,7 @@ not need this transform to do that.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -365,7 +377,7 @@ not need this transform to do that.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -397,7 +409,7 @@ not need this transform to do that.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">execute</span><span class="params">(<span name="state">state: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/CircuitState.html#firrtl.CircuitState" class="extype" name="firrtl.CircuitState">CircuitState</a></span>)</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/CircuitState.html#firrtl.CircuitState" class="extype" name="firrtl.CircuitState">CircuitState</a></span>
+        <span class="name">execute</span><span class="params">(<span name="state">state: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/CircuitState.html#firrtl.CircuitState" class="extype" name="firrtl.CircuitState">CircuitState</a></span>)</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/CircuitState.html#firrtl.CircuitState" class="extype" name="firrtl.CircuitState">CircuitState</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="chisel3.util.experimental.LoadMemoryTransform">LoadMemoryTransform</a> → Transform</dd></dl></div>
@@ -473,7 +485,7 @@ not need this transform to do that.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">inputForm</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/CircuitForm.html#firrtl.CircuitForm" class="extype" name="firrtl.CircuitForm">CircuitForm</a></span>
+        <span class="name">inputForm</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/CircuitForm.html#firrtl.CircuitForm" class="extype" name="firrtl.CircuitForm">CircuitForm</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="chisel3.util.experimental.LoadMemoryTransform">LoadMemoryTransform</a> → Transform</dd></dl></div>
@@ -489,7 +501,7 @@ not need this transform to do that.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">invalidates</span><span class="params">(<span name="a">a: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/Transform.html#firrtl.Transform" class="extype" name="firrtl.Transform">Transform</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">invalidates</span><span class="params">(<span name="a">a: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/Transform.html#firrtl.Transform" class="extype" name="firrtl.Transform">Transform</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Transform → DependencyAPI</dd></dl></div>
@@ -521,7 +533,7 @@ not need this transform to do that.
         <span class="kind">val</span>
       </span>
       <span class="symbol">
-        <span class="name">logger</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/logger/Logger.html#logger.Logger" class="extype" name="logger.Logger">Logger</a></span>
+        <span class="name">logger</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/logger/Logger.html#logger.Logger" class="extype" name="logger.Logger">Logger</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd>LazyLogging</dd></dl></div>
@@ -553,7 +565,7 @@ not need this transform to do that.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -607,7 +619,7 @@ not need this transform to do that.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">optionalPrerequisiteOf</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/options/Dependency.html#firrtl.options.Dependency" class="extype" name="firrtl.options.Dependency">Dependency</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/Transform.html#firrtl.Transform" class="extype" name="firrtl.Transform">Transform</a>]]</span>
+        <span class="name">optionalPrerequisiteOf</span><span class="result">: <a href="../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/options/Dependency.html#firrtl.options.Dependency" class="extype" name="firrtl.options.Dependency">Dependency</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/Transform.html#firrtl.Transform" class="extype" name="firrtl.Transform">Transform</a>]]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Transform → DependencyAPI</dd></dl></div>
@@ -623,7 +635,7 @@ not need this transform to do that.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">optionalPrerequisites</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/options/Dependency.html#firrtl.options.Dependency" class="extype" name="firrtl.options.Dependency">Dependency</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/Transform.html#firrtl.Transform" class="extype" name="firrtl.Transform">Transform</a>]]</span>
+        <span class="name">optionalPrerequisites</span><span class="result">: <a href="../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/options/Dependency.html#firrtl.options.Dependency" class="extype" name="firrtl.options.Dependency">Dependency</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/Transform.html#firrtl.Transform" class="extype" name="firrtl.Transform">Transform</a>]]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Transform → DependencyAPI</dd></dl></div>
@@ -639,7 +651,7 @@ not need this transform to do that.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">outputForm</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/CircuitForm.html#firrtl.CircuitForm" class="extype" name="firrtl.CircuitForm">CircuitForm</a></span>
+        <span class="name">outputForm</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/CircuitForm.html#firrtl.CircuitForm" class="extype" name="firrtl.CircuitForm">CircuitForm</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="chisel3.util.experimental.LoadMemoryTransform">LoadMemoryTransform</a> → Transform</dd></dl></div>
@@ -655,7 +667,7 @@ not need this transform to do that.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">prerequisites</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/options/Dependency.html#firrtl.options.Dependency" class="extype" name="firrtl.options.Dependency">Dependency</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/Transform.html#firrtl.Transform" class="extype" name="firrtl.Transform">Transform</a>]]</span>
+        <span class="name">prerequisites</span><span class="result">: <a href="../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/options/Dependency.html#firrtl.options.Dependency" class="extype" name="firrtl.options.Dependency">Dependency</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/Transform.html#firrtl.Transform" class="extype" name="firrtl.Transform">Transform</a>]]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Transform → DependencyAPI</dd></dl></div>
@@ -671,7 +683,7 @@ not need this transform to do that.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">run</span><span class="params">(<span name="circuit">circuit: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/ir/Circuit.html#firrtl.ir.Circuit" class="extype" name="firrtl.ir.Circuit">Circuit</a></span>, <span name="annotations">annotations: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/AnnotationSeq.html#firrtl.AnnotationSeq" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a></span>)</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/ir/Circuit.html#firrtl.ir.Circuit" class="extype" name="firrtl.ir.Circuit">Circuit</a></span>
+        <span class="name">run</span><span class="params">(<span name="circuit">circuit: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/ir/Circuit.html#firrtl.ir.Circuit" class="extype" name="firrtl.ir.Circuit">Circuit</a></span>, <span name="annotations">annotations: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/AnnotationSeq.html#firrtl.AnnotationSeq" class="extype" name="firrtl.AnnotationSeq">AnnotationSeq</a></span>)</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/ir/Circuit.html#firrtl.ir.Circuit" class="extype" name="firrtl.ir.Circuit">Circuit</a></span>
       </span>
       
       <p class="shortcomment cmt">run the pass</p><div class="fullcomment"><div class="comment cmt"><p>run the pass</p></div><dl class="paramcmts block"><dt class="param">circuit</dt><dd class="cmt"><p>the circuit</p></dd><dt class="param">annotations</dt><dd class="cmt"><p>all the annotations</p></dd></dl></div>
@@ -687,7 +699,7 @@ not need this transform to do that.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">runTransform</span><span class="params">(<span name="state">state: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/CircuitState.html#firrtl.CircuitState" class="extype" name="firrtl.CircuitState">CircuitState</a></span>)</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/CircuitState.html#firrtl.CircuitState" class="extype" name="firrtl.CircuitState">CircuitState</a></span>
+        <span class="name">runTransform</span><span class="params">(<span name="state">state: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/CircuitState.html#firrtl.CircuitState" class="extype" name="firrtl.CircuitState">CircuitState</a></span>)</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/CircuitState.html#firrtl.CircuitState" class="extype" name="firrtl.CircuitState">CircuitState</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Transform</dd></dl></div>
@@ -735,7 +747,7 @@ not need this transform to do that.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">transform</span><span class="params">(<span name="state">state: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/CircuitState.html#firrtl.CircuitState" class="extype" name="firrtl.CircuitState">CircuitState</a></span>)</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/CircuitState.html#firrtl.CircuitState" class="extype" name="firrtl.CircuitState">CircuitState</a></span>
+        <span class="name">transform</span><span class="params">(<span name="state">state: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/CircuitState.html#firrtl.CircuitState" class="extype" name="firrtl.CircuitState">CircuitState</a></span>)</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/CircuitState.html#firrtl.CircuitState" class="extype" name="firrtl.CircuitState">CircuitState</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Transform → TransformLike</dd></dl></div>
@@ -827,7 +839,7 @@ not need this transform to do that.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.3) Due to confusion, 'dependents' is being renamed to 'optionalPrerequisiteOf'. Override the latter instead.">dependents</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/options/Dependency.html#firrtl.options.Dependency" class="extype" name="firrtl.options.Dependency">Dependency</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/Transform.html#firrtl.Transform" class="extype" name="firrtl.Transform">Transform</a>]]</span>
+        <span class="name deprecated" title="Deprecated: (Since version FIRRTL 1.3) Due to confusion, 'dependents' is being renamed to 'optionalPrerequisiteOf'. Override the latter instead.">dependents</span><span class="result">: <a href="../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/options/Dependency.html#firrtl.options.Dependency" class="extype" name="firrtl.options.Dependency">Dependency</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/Transform.html#firrtl.Transform" class="extype" name="firrtl.Transform">Transform</a>]]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>DependencyAPI</dd><dt>Annotations</dt><dd>
@@ -840,15 +852,15 @@ not need this transform to do that.
 
         <div id="inheritedMembers">
         <div class="parent" name="firrtl.Transform">
-              <h3>Inherited from <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/Transform.html#firrtl.Transform" class="extype" name="firrtl.Transform">Transform</a></h3>
+              <h3>Inherited from <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/Transform.html#firrtl.Transform" class="extype" name="firrtl.Transform">Transform</a></h3>
             </div><div class="parent" name="firrtl.options.DependencyAPI">
-              <h3>Inherited from <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/options/DependencyAPI.html#firrtl.options.DependencyAPI" class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/Transform.html#firrtl.Transform" class="extype" name="firrtl.Transform">Transform</a>]</h3>
+              <h3>Inherited from <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/options/DependencyAPI.html#firrtl.options.DependencyAPI" class="extype" name="firrtl.options.DependencyAPI">DependencyAPI</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/Transform.html#firrtl.Transform" class="extype" name="firrtl.Transform">Transform</a>]</h3>
             </div><div class="parent" name="firrtl.options.TransformLike">
-              <h3>Inherited from <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/options/TransformLike.html#firrtl.options.TransformLike" class="extype" name="firrtl.options.TransformLike">TransformLike</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/CircuitState.html#firrtl.CircuitState" class="extype" name="firrtl.CircuitState">CircuitState</a>]</h3>
+              <h3>Inherited from <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/options/TransformLike.html#firrtl.options.TransformLike" class="extype" name="firrtl.options.TransformLike">TransformLike</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/CircuitState.html#firrtl.CircuitState" class="extype" name="firrtl.CircuitState">CircuitState</a>]</h3>
             </div><div class="parent" name="logger.LazyLogging">
-              <h3>Inherited from <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/logger/LazyLogging.html#logger.LazyLogging" class="extype" name="logger.LazyLogging">LazyLogging</a></h3>
+              <h3>Inherited from <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/logger/LazyLogging.html#logger.LazyLogging" class="extype" name="logger.LazyLogging">LazyLogging</a></h3>
             </div><div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+              <h3>Inherited from <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
             </div>

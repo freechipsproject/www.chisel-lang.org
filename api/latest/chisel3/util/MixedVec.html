@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.4.0 - chisel3.util.MixedVec</title>
-          <meta name="description" content="chisel3 3.4.0 - chisel3.util.MixedVec" />
-          <meta name="keywords" content="chisel3 3.4.0 chisel3.util.MixedVec" />
+          <title>chisel3 3.4.1 - chisel3.util.MixedVec</title>
+          <meta name="description" content="chisel3 3.4.1 - chisel3.util.MixedVec" />
+          <meta name="keywords" content="chisel3 3.4.1 chisel3.util.MixedVec" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.4.0</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.4.1</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -201,6 +201,18 @@ functions
                         <span class="separator"></span>
                         <a class="trait" href="HasBlackBoxResource.html" title=""></a>
                         <a href="HasBlackBoxResource.html" title="">HasBlackBoxResource</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="HasExtModuleInline.html" title=""></a>
+                        <a href="HasExtModuleInline.html" title="">HasExtModuleInline</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="HasExtModulePath.html" title=""></a>
+                        <a href="HasExtModulePath.html" title="">HasExtModulePath</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="HasExtModuleResource.html" title=""></a>
+                        <a href="HasExtModuleResource.html" title="">HasExtModuleResource</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="object" href="ImplicitConversions$.html" title="Implicit conversions to automatically convert scala.Boolean and scala.Int to Bool and UInt respectively"></a>
@@ -397,7 +409,7 @@ functions
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>A hardware array of elements that can hold values of different types/widths,
 unlike Vec which can only hold elements of the same type/width.
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.4.0//src/main/scala/chisel3/util/MixedVec.scala" target="_blank">MixedVec.scala</a></dd><div class="block">Example:
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.4.1//src/main/scala/chisel3/util/MixedVec.scala" target="_blank">MixedVec.scala</a></dd><div class="block">Example:
                <ol><li class="cmt"><p></p><pre><span class="kw">val</span> v = Wire(MixedVec(<span class="std">Seq</span>(UInt(<span class="num">8.</span>W), UInt(<span class="num">16.</span>W), UInt(<span class="num">32.</span>W))))
 v(<span class="num">0</span>) := <span class="num">100.</span>U(<span class="num">8.</span>W)
 v(<span class="num">1</span>) := <span class="num">10000.</span>U(<span class="num">16.</span>W)
@@ -406,7 +418,7 @@ v(<span class="num">2</span>) := <span class="num">101.</span>U(<span class="num
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="https://www.scala-lang.org/api/2.12.12/scala/collection/IndexedSeq.html#scala.collection.IndexedSeq" class="extype" name="scala.collection.IndexedSeq">IndexedSeq</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/IndexedSeqLike.html#scala.collection.IndexedSeqLike" class="extype" name="scala.collection.IndexedSeqLike">IndexedSeqLike</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>, <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/IndexedSeq.html#scala.collection.IndexedSeq" class="extype" name="scala.collection.IndexedSeq">IndexedSeq</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>]], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/Seq.html#scala.collection.Seq" class="extype" name="scala.collection.Seq">Seq</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/SeqLike.html#scala.collection.SeqLike" class="extype" name="scala.collection.SeqLike">SeqLike</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>, <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/IndexedSeq.html#scala.collection.IndexedSeq" class="extype" name="scala.collection.IndexedSeq">IndexedSeq</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>]], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/GenSeq.html#scala.collection.GenSeq" class="extype" name="scala.collection.GenSeq">GenSeq</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/GenSeqLike.html#scala.collection.GenSeqLike" class="extype" name="scala.collection.GenSeqLike">GenSeqLike</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>, <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/IndexedSeq.html#scala.collection.IndexedSeq" class="extype" name="scala.collection.IndexedSeq">IndexedSeq</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>]], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/Iterable.html#scala.collection.Iterable" class="extype" name="scala.collection.Iterable">Iterable</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/IterableLike.html#scala.collection.IterableLike" class="extype" name="scala.collection.IterableLike">IterableLike</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>, <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/IndexedSeq.html#scala.collection.IndexedSeq" class="extype" name="scala.collection.IndexedSeq">IndexedSeq</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>]], <a href="https://www.scala-lang.org/api/2.12.12/scala/Equals.html#scala.Equals" class="extype" name="scala.Equals">Equals</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/GenIterable.html#scala.collection.GenIterable" class="extype" name="scala.collection.GenIterable">GenIterable</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/GenIterableLike.html#scala.collection.GenIterableLike" class="extype" name="scala.collection.GenIterableLike">GenIterableLike</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>, <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/IndexedSeq.html#scala.collection.IndexedSeq" class="extype" name="scala.collection.IndexedSeq">IndexedSeq</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>]], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/Traversable.html#scala.collection.Traversable" class="extype" name="scala.collection.Traversable">Traversable</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/GenTraversable.html#scala.collection.GenTraversable" class="extype" name="scala.collection.GenTraversable">GenTraversable</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/generic/GenericTraversableTemplate.html#scala.collection.generic.GenericTraversableTemplate" class="extype" name="scala.collection.generic.GenericTraversableTemplate">GenericTraversableTemplate</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>, <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/IndexedSeq.html#scala.collection.IndexedSeq" class="extype" name="scala.collection.IndexedSeq">IndexedSeq</a>], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/TraversableLike.html#scala.collection.TraversableLike" class="extype" name="scala.collection.TraversableLike">TraversableLike</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>, <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/IndexedSeq.html#scala.collection.IndexedSeq" class="extype" name="scala.collection.IndexedSeq">IndexedSeq</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>]], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/GenTraversableLike.html#scala.collection.GenTraversableLike" class="extype" name="scala.collection.GenTraversableLike">GenTraversableLike</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>, <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/IndexedSeq.html#scala.collection.IndexedSeq" class="extype" name="scala.collection.IndexedSeq">IndexedSeq</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>]], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/Parallelizable.html#scala.collection.Parallelizable" class="extype" name="scala.collection.Parallelizable">Parallelizable</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>, <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/parallel/ParSeq.html#scala.collection.parallel.ParSeq" class="extype" name="scala.collection.parallel.ParSeq">ParSeq</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>]], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/TraversableOnce.html#scala.collection.TraversableOnce" class="extype" name="scala.collection.TraversableOnce">TraversableOnce</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/GenTraversableOnce.html#scala.collection.GenTraversableOnce" class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/generic/FilterMonadic.html#scala.collection.generic.FilterMonadic" class="extype" name="scala.collection.generic.FilterMonadic">FilterMonadic</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>, <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/IndexedSeq.html#scala.collection.IndexedSeq" class="extype" name="scala.collection.IndexedSeq">IndexedSeq</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>]], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/generic/HasNewBuilder.html#scala.collection.generic.HasNewBuilder" class="extype" name="scala.collection.generic.HasNewBuilder">HasNewBuilder</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>, IndexedSeq[T] @scala.annotation.unchecked.uncheckedVariance], <a href="https://www.scala-lang.org/api/2.12.12/scala/PartialFunction.html#scala.PartialFunction" class="extype" name="scala.PartialFunction">PartialFunction</a>[<a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>, <span class="extype" name="chisel3.util.MixedVec.T">T</span>], (<a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>) ⇒ <span class="extype" name="chisel3.util.MixedVec.T">T</span>, <a href="../Record.html" class="extype" name="chisel3.Record">Record</a>, <a href="../Aggregate.html" class="extype" name="chisel3.Aggregate">Aggregate</a>, <a href="../Data.html" class="extype" name="chisel3.Data">Data</a>, <a href="../SourceInfoDoc.html" class="extype" name="chisel3.SourceInfoDoc">SourceInfoDoc</a>, <span class="extype" name="chisel3.internal.NamedComponent">NamedComponent</span>, <span class="extype" name="chisel3.internal.HasId">HasId</span>, <span class="extype" name="chisel3.internal.InstanceId">internal.InstanceId</span>, <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="https://www.scala-lang.org/api/2.12.12/scala/collection/IndexedSeq.html#scala.collection.IndexedSeq" class="extype" name="scala.collection.IndexedSeq">IndexedSeq</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/IndexedSeqLike.html#scala.collection.IndexedSeqLike" class="extype" name="scala.collection.IndexedSeqLike">IndexedSeqLike</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>, <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/IndexedSeq.html#scala.collection.IndexedSeq" class="extype" name="scala.collection.IndexedSeq">IndexedSeq</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>]], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/Seq.html#scala.collection.Seq" class="extype" name="scala.collection.Seq">Seq</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/SeqLike.html#scala.collection.SeqLike" class="extype" name="scala.collection.SeqLike">SeqLike</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>, <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/IndexedSeq.html#scala.collection.IndexedSeq" class="extype" name="scala.collection.IndexedSeq">IndexedSeq</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>]], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/GenSeq.html#scala.collection.GenSeq" class="extype" name="scala.collection.GenSeq">GenSeq</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/GenSeqLike.html#scala.collection.GenSeqLike" class="extype" name="scala.collection.GenSeqLike">GenSeqLike</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>, <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/IndexedSeq.html#scala.collection.IndexedSeq" class="extype" name="scala.collection.IndexedSeq">IndexedSeq</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>]], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/Iterable.html#scala.collection.Iterable" class="extype" name="scala.collection.Iterable">Iterable</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/IterableLike.html#scala.collection.IterableLike" class="extype" name="scala.collection.IterableLike">IterableLike</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>, <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/IndexedSeq.html#scala.collection.IndexedSeq" class="extype" name="scala.collection.IndexedSeq">IndexedSeq</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>]], <a href="https://www.scala-lang.org/api/2.12.12/scala/Equals.html#scala.Equals" class="extype" name="scala.Equals">Equals</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/GenIterable.html#scala.collection.GenIterable" class="extype" name="scala.collection.GenIterable">GenIterable</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/GenIterableLike.html#scala.collection.GenIterableLike" class="extype" name="scala.collection.GenIterableLike">GenIterableLike</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>, <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/IndexedSeq.html#scala.collection.IndexedSeq" class="extype" name="scala.collection.IndexedSeq">IndexedSeq</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>]], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/Traversable.html#scala.collection.Traversable" class="extype" name="scala.collection.Traversable">Traversable</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/GenTraversable.html#scala.collection.GenTraversable" class="extype" name="scala.collection.GenTraversable">GenTraversable</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/generic/GenericTraversableTemplate.html#scala.collection.generic.GenericTraversableTemplate" class="extype" name="scala.collection.generic.GenericTraversableTemplate">GenericTraversableTemplate</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>, <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/IndexedSeq.html#scala.collection.IndexedSeq" class="extype" name="scala.collection.IndexedSeq">IndexedSeq</a>], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/TraversableLike.html#scala.collection.TraversableLike" class="extype" name="scala.collection.TraversableLike">TraversableLike</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>, <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/IndexedSeq.html#scala.collection.IndexedSeq" class="extype" name="scala.collection.IndexedSeq">IndexedSeq</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>]], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/GenTraversableLike.html#scala.collection.GenTraversableLike" class="extype" name="scala.collection.GenTraversableLike">GenTraversableLike</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>, <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/IndexedSeq.html#scala.collection.IndexedSeq" class="extype" name="scala.collection.IndexedSeq">IndexedSeq</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>]], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/Parallelizable.html#scala.collection.Parallelizable" class="extype" name="scala.collection.Parallelizable">Parallelizable</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>, <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/parallel/ParSeq.html#scala.collection.parallel.ParSeq" class="extype" name="scala.collection.parallel.ParSeq">ParSeq</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>]], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/TraversableOnce.html#scala.collection.TraversableOnce" class="extype" name="scala.collection.TraversableOnce">TraversableOnce</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/GenTraversableOnce.html#scala.collection.GenTraversableOnce" class="extype" name="scala.collection.GenTraversableOnce">GenTraversableOnce</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/generic/FilterMonadic.html#scala.collection.generic.FilterMonadic" class="extype" name="scala.collection.generic.FilterMonadic">FilterMonadic</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>, <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/IndexedSeq.html#scala.collection.IndexedSeq" class="extype" name="scala.collection.IndexedSeq">IndexedSeq</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>]], <a href="https://www.scala-lang.org/api/2.12.12/scala/collection/generic/HasNewBuilder.html#scala.collection.generic.HasNewBuilder" class="extype" name="scala.collection.generic.HasNewBuilder">HasNewBuilder</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>, IndexedSeq[T] @scala.annotation.unchecked.uncheckedVariance], <a href="https://www.scala-lang.org/api/2.12.12/scala/PartialFunction.html#scala.PartialFunction" class="extype" name="scala.PartialFunction">PartialFunction</a>[<a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>, <span class="extype" name="chisel3.util.MixedVec.T">T</span>], (<a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>) ⇒ <span class="extype" name="chisel3.util.MixedVec.T">T</span>, <a href="../Record.html" class="extype" name="chisel3.Record">Record</a>, <a href="../Aggregate.html" class="extype" name="chisel3.Aggregate">Aggregate</a>, <a href="../Data.html" class="extype" name="chisel3.Data">Data</a>, <a href="../SourceInfoDoc.html" class="extype" name="chisel3.SourceInfoDoc">SourceInfoDoc</a>, <span class="extype" name="chisel3.internal.NamedComponent">NamedComponent</span>, <span class="extype" name="chisel3.internal.HasId">HasId</span>, <span class="extype" name="chisel3.internal.InstanceId">internal.InstanceId</span>, <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div></div>
         
 
@@ -464,7 +476,7 @@ v(<span class="num">2</span>) := <span class="num">101.</span>U(<span class="num
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">MixedVec</span><span class="params">(<span name="eltsIn">eltsIn: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>]</span>)</span>
+        <span class="name">MixedVec</span><span class="params">(<span name="eltsIn">eltsIn: <a href="../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>]</span>)</span>
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt class="param">eltsIn</dt><dd class="cmt"><p>Element types. Must be Chisel types.</p></dd></dl></div>
@@ -656,7 +668,7 @@ v(<span class="num">2</span>) := <span class="num">101.</span>U(<span class="num
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $colon$eq" class="name">:=</span><span class="params">(<span name="that">that: <span class="extype" name="scala.Seq">Seq</span>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>]</span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span title="gt4s: $colon$eq" class="name">:=</span><span class="params">(<span name="that">that: <a href="../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>]</span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <p class="shortcomment cmt">Strong bulk connect, assigning elements in this MixedVec from elements in a Seq.</p><div class="fullcomment"><div class="comment cmt"><p>Strong bulk connect, assigning elements in this MixedVec from elements in a Seq.
@@ -723,7 +735,7 @@ v(<span class="num">2</span>) := <span class="num">101.</span>U(<span class="num
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">addString</span><span class="params">(<span name="b">b: <span class="extype" name="scala.StringBuilder">StringBuilder</span></span>)</span><span class="result">: <span class="extype" name="scala.StringBuilder">StringBuilder</span></span>
+        <span class="name">addString</span><span class="params">(<span name="b">b: <a href="../../scala/index.html#StringBuilder=StringBuilder" class="extmbr" name="scala.StringBuilder">StringBuilder</a></span>)</span><span class="result">: <a href="../../scala/index.html#StringBuilder=StringBuilder" class="extmbr" name="scala.StringBuilder">StringBuilder</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce</dd></dl></div>
@@ -739,7 +751,7 @@ v(<span class="num">2</span>) := <span class="num">101.</span>U(<span class="num
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">addString</span><span class="params">(<span name="b">b: <span class="extype" name="scala.StringBuilder">StringBuilder</span></span>, <span name="sep">sep: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.StringBuilder">StringBuilder</span></span>
+        <span class="name">addString</span><span class="params">(<span name="b">b: <a href="../../scala/index.html#StringBuilder=StringBuilder" class="extmbr" name="scala.StringBuilder">StringBuilder</a></span>, <span name="sep">sep: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="../../scala/index.html#StringBuilder=StringBuilder" class="extmbr" name="scala.StringBuilder">StringBuilder</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce</dd></dl></div>
@@ -755,7 +767,7 @@ v(<span class="num">2</span>) := <span class="num">101.</span>U(<span class="num
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">addString</span><span class="params">(<span name="b">b: <span class="extype" name="scala.StringBuilder">StringBuilder</span></span>, <span name="start">start: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="sep">sep: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="end">end: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <span class="extype" name="scala.StringBuilder">StringBuilder</span></span>
+        <span class="name">addString</span><span class="params">(<span name="b">b: <a href="../../scala/index.html#StringBuilder=StringBuilder" class="extmbr" name="scala.StringBuilder">StringBuilder</a></span>, <span name="start">start: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="sep">sep: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="end">end: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result">: <a href="../../scala/index.html#StringBuilder=StringBuilder" class="extmbr" name="scala.StringBuilder">StringBuilder</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce</dd></dl></div>
@@ -1004,7 +1016,7 @@ was called, <a href="../Data.html#suggestName(seed:=&gt;String):HasId.this.type"
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1417,7 +1429,7 @@ It is responsible for constructing a basic copy of the object being cloned.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -1682,7 +1694,7 @@ It is responsible for constructing a basic copy of the object being cloned.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getElements</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="../Data.html" class="extype" name="chisel3.Data">Data</a>]</span>
+        <span class="name">getElements</span><span class="result">: <a href="../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="../Data.html" class="extype" name="chisel3.Data">Data</a>]</span>
       </span>
       
       <p class="shortcomment cmt">Returns a Seq of the immediate contents of this Aggregate, in order.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a Seq of the immediate contents of this Aggregate, in order.
@@ -2291,7 +2303,7 @@ It is responsible for constructing a basic copy of the object being cloned.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">litOption</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.BigInt">BigInt</span>]</span>
+        <span class="name">litOption</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="../../scala/index.html#BigInt=scala.math.BigInt" class="extmbr" name="scala.BigInt">BigInt</a>]</span>
       </span>
       
       <p class="shortcomment cmt">Return an Aggregate's literal value if it is a literal, None otherwise.</p><div class="fullcomment"><div class="comment cmt"><p>Return an Aggregate's literal value if it is a literal, None otherwise.
@@ -2309,7 +2321,7 @@ If any element of the aggregate is not a literal with a defined width, the resul
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">litValue</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.BigInt">BigInt</span></span>
+        <span class="name">litValue</span><span class="params">()</span><span class="result">: <a href="../../scala/index.html#BigInt=scala.math.BigInt" class="extmbr" name="scala.BigInt">BigInt</a></span>
       </span>
       
       <p class="shortcomment cmt">Returns the literal value if this is a literal that is representable as bits, otherwise crashes.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the literal value if this is a literal that is representable as bits, otherwise crashes.
@@ -2342,7 +2354,7 @@ If any element of the aggregate is not a literal with a defined width, the resul
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">max</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="chisel3.util.MixedVec.T">T</span></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="cmp">cmp: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="scala.collection.TraversableOnce.max.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="chisel3.util.MixedVec.T">T</span></span>
+        <span class="name">max</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="chisel3.util.MixedVec.T">T</span></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="cmp">cmp: <a href="../../scala/index.html#Ordering[T]=scala.math.Ordering[T]" class="extmbr" name="scala.Ordering">Ordering</a>[<span class="extype" name="scala.collection.TraversableOnce.max.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="chisel3.util.MixedVec.T">T</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
@@ -2358,7 +2370,7 @@ If any element of the aggregate is not a literal with a defined width, the resul
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">maxBy</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="chisel3.util.MixedVec.T">T</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.maxBy.B">B</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="cmp">cmp: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="scala.collection.TraversableOnce.maxBy.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="chisel3.util.MixedVec.T">T</span></span>
+        <span class="name">maxBy</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="chisel3.util.MixedVec.T">T</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.maxBy.B">B</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="cmp">cmp: <a href="../../scala/index.html#Ordering[T]=scala.math.Ordering[T]" class="extmbr" name="scala.Ordering">Ordering</a>[<span class="extype" name="scala.collection.TraversableOnce.maxBy.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="chisel3.util.MixedVec.T">T</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
@@ -2374,7 +2386,7 @@ If any element of the aggregate is not a literal with a defined width, the resul
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">min</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="chisel3.util.MixedVec.T">T</span></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="cmp">cmp: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="scala.collection.TraversableOnce.min.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="chisel3.util.MixedVec.T">T</span></span>
+        <span class="name">min</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="chisel3.util.MixedVec.T">T</span></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="cmp">cmp: <a href="../../scala/index.html#Ordering[T]=scala.math.Ordering[T]" class="extmbr" name="scala.Ordering">Ordering</a>[<span class="extype" name="scala.collection.TraversableOnce.min.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="chisel3.util.MixedVec.T">T</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
@@ -2390,7 +2402,7 @@ If any element of the aggregate is not a literal with a defined width, the resul
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">minBy</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="chisel3.util.MixedVec.T">T</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.minBy.B">B</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="cmp">cmp: <span class="extype" name="scala.Ordering">Ordering</span>[<span class="extype" name="scala.collection.TraversableOnce.minBy.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="chisel3.util.MixedVec.T">T</span></span>
+        <span class="name">minBy</span><span class="tparams">[<span name="B">B</span>]</span><span class="params">(<span name="f">f: (<span class="extype" name="chisel3.util.MixedVec.T">T</span>) ⇒ <span class="extype" name="scala.collection.TraversableOnce.minBy.B">B</span></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="cmp">cmp: <a href="../../scala/index.html#Ordering[T]=scala.math.Ordering[T]" class="extmbr" name="scala.Ordering">Ordering</a>[<span class="extype" name="scala.collection.TraversableOnce.minBy.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="chisel3.util.MixedVec.T">T</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
@@ -2454,7 +2466,7 @@ If any element of the aggregate is not a literal with a defined width, the resul
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -2716,7 +2728,7 @@ If any element of the aggregate is not a literal with a defined width, the resul
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">product</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="chisel3.util.MixedVec.T">T</span></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="num">num: <span class="extype" name="scala.Numeric">Numeric</span>[<span class="extype" name="scala.collection.TraversableOnce.product.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.collection.TraversableOnce.product.B">B</span></span>
+        <span class="name">product</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="chisel3.util.MixedVec.T">T</span></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="num">num: <a href="../../scala/index.html#Numeric[T&lt;:&lt;?&gt;]=scala.math.Numeric[T]" class="extmbr" name="scala.Numeric">Numeric</a>[<span class="extype" name="scala.collection.TraversableOnce.product.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.collection.TraversableOnce.product.B">B</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
@@ -2892,7 +2904,7 @@ If any element of the aggregate is not a literal with a defined width, the resul
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">reversed</span><span class="result">: <span class="extype" name="scala.List">List</span>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>]</span>
+        <span class="name">reversed</span><span class="result">: <a href="../../scala/index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[this] </dd><dt>Definition Classes</dt><dd>TraversableOnce</dd></dl></div>
@@ -3251,7 +3263,7 @@ was called, <a href="#suggestName(seed:=&gt;String):HasId.this.type" class="extm
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">sum</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="chisel3.util.MixedVec.T">T</span></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="num">num: <span class="extype" name="scala.Numeric">Numeric</span>[<span class="extype" name="scala.collection.TraversableOnce.sum.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.collection.TraversableOnce.sum.B">B</span></span>
+        <span class="name">sum</span><span class="tparams">[<span name="B">B &gt;: <span class="extype" name="chisel3.util.MixedVec.T">T</span></span>]</span><span class="params">(<span class="implicit">implicit </span><span name="num">num: <a href="../../scala/index.html#Numeric[T]=scala.math.Numeric[T]" class="extmbr" name="scala.Numeric">Numeric</a>[<span class="extype" name="scala.collection.TraversableOnce.sum.B">B</span>]</span>)</span><span class="result">: <span class="extype" name="scala.collection.TraversableOnce.sum.B">B</span></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
@@ -3395,7 +3407,7 @@ was called, <a href="#suggestName(seed:=&gt;String):HasId.this.type" class="extm
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toAbsoluteTarget</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/annotations/ReferenceTarget.html#firrtl.annotations.ReferenceTarget" class="extype" name="firrtl.annotations.ReferenceTarget">ReferenceTarget</a></span>
+        <span class="name">toAbsoluteTarget</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/annotations/ReferenceTarget.html#firrtl.annotations.ReferenceTarget" class="extype" name="firrtl.annotations.ReferenceTarget">ReferenceTarget</a></span>
       </span>
       
       <p class="shortcomment cmt">Returns a FIRRTL IsMember that refers to the absolute path to this object in the elaborated hardware graph</p><div class="fullcomment"><div class="comment cmt"><p>Returns a FIRRTL IsMember that refers to the absolute path to this object in the elaborated hardware graph</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>NamedComponent → InstanceId</dd></dl></div>
@@ -3516,7 +3528,7 @@ was called, <a href="#suggestName(seed:=&gt;String):HasId.this.type" class="extm
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toList</span><span class="result">: <span class="extype" name="scala.List">List</span>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>]</span>
+        <span class="name">toList</span><span class="result">: <a href="../../scala/index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
@@ -3548,7 +3560,7 @@ was called, <a href="#suggestName(seed:=&gt;String):HasId.this.type" class="extm
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toNamed</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/annotations/ComponentName.html#firrtl.annotations.ComponentName" class="extype" name="firrtl.annotations.ComponentName">ComponentName</a></span>
+        <span class="name">toNamed</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/annotations/ComponentName.html#firrtl.annotations.ComponentName" class="extype" name="firrtl.annotations.ComponentName">ComponentName</a></span>
       </span>
       
       <p class="shortcomment cmt">Returns a FIRRTL ComponentName that references this object</p><div class="fullcomment"><div class="comment cmt"><p>Returns a FIRRTL ComponentName that references this object</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>NamedComponent → InstanceId</dd><dt>Note</dt><dd><span class="cmt"><p>Should not be called until circuit elaboration is complete</p></span></dd></dl></div>
@@ -3650,7 +3662,7 @@ Results in &quot;<code>$className(elt0.name -&gt; elt0.value, ...)</code>&quot;
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toTarget</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/annotations/ReferenceTarget.html#firrtl.annotations.ReferenceTarget" class="extype" name="firrtl.annotations.ReferenceTarget">ReferenceTarget</a></span>
+        <span class="name">toTarget</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/annotations/ReferenceTarget.html#firrtl.annotations.ReferenceTarget" class="extype" name="firrtl.annotations.ReferenceTarget">ReferenceTarget</a></span>
       </span>
       
       <p class="shortcomment cmt">Returns a FIRRTL ReferenceTarget that references this object</p><div class="fullcomment"><div class="comment cmt"><p>Returns a FIRRTL ReferenceTarget that references this object</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>NamedComponent → InstanceId</dd><dt>Note</dt><dd><span class="cmt"><p>Should not be called until circuit elaboration is complete</p></span></dd></dl></div>
@@ -3691,7 +3703,7 @@ Results in &quot;<code>$className(elt0.name -&gt; elt0.value, ...)</code>&quot;
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toVector</span><span class="result">: <span class="extype" name="scala.Vector">Vector</span>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>]</span>
+        <span class="name">toVector</span><span class="result">: <a href="../../scala/index.html#Vector[+A&lt;:&lt;?&gt;]=scala.collection.immutable.Vector[A]" class="extmbr" name="scala.Vector">Vector</a>[<span class="extype" name="chisel3.util.MixedVec.T">T</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>TraversableOnce → GenTraversableOnce</dd></dl></div>
@@ -4091,7 +4103,7 @@ Results in &quot;<code>$className(elt0.name -&gt; elt0.value, ...)</code>&quot;
             </div><div class="parent" name="chisel3.internal.InstanceId">
               <h3>Inherited from <span class="extype" name="chisel3.internal.InstanceId">internal.InstanceId</span></h3>
             </div><div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+              <h3>Inherited from <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
             </div>

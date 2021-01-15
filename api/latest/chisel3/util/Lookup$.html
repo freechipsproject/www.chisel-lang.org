@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.4.0 - chisel3.util.Lookup</title>
-          <meta name="description" content="chisel3 3.4.0 - chisel3.util.Lookup" />
-          <meta name="keywords" content="chisel3 3.4.0 chisel3.util.Lookup" />
+          <title>chisel3 3.4.1 - chisel3.util.Lookup</title>
+          <meta name="description" content="chisel3 3.4.1 - chisel3.util.Lookup" />
+          <meta name="keywords" content="chisel3 3.4.1 chisel3.util.Lookup" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.4.0</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.4.1</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -201,6 +201,18 @@ functions
                         <span class="separator"></span>
                         <a class="trait" href="HasBlackBoxResource.html" title=""></a>
                         <a href="HasBlackBoxResource.html" title="">HasBlackBoxResource</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="HasExtModuleInline.html" title=""></a>
+                        <a href="HasExtModuleInline.html" title="">HasExtModuleInline</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="HasExtModulePath.html" title=""></a>
+                        <a href="HasExtModulePath.html" title="">HasExtModulePath</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
+                        <a class="trait" href="HasExtModuleResource.html" title=""></a>
+                        <a href="HasExtModuleResource.html" title="">HasExtModuleResource</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="object" href="ImplicitConversions$.html" title="Implicit conversions to automatically convert scala.Boolean and scala.Int to Bool and UInt respectively"></a>
@@ -395,13 +407,13 @@ functions
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Muxes between cases based on whether an address matches any pattern for a case.
 Similar to <a href="MuxLookup$.html" class="extype" name="chisel3.util.MuxLookup">MuxLookup</a>, but uses <a href="BitPat.html" class="extype" name="chisel3.util.BitPat">BitPat</a> for address comparison.
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.4.0//src/main/scala/chisel3/util/Lookup.scala" target="_blank">Lookup.scala</a></dd><dt>Note</dt><dd><span class="cmt"><p>This appears to be an odd, specialized operator that we haven't seen used much, and seems
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.4.1//src/main/scala/chisel3/util/Lookup.scala" target="_blank">Lookup.scala</a></dd><dt>Note</dt><dd><span class="cmt"><p>This appears to be an odd, specialized operator that we haven't seen used much, and seems
       to be a holdover from chisel2. This may be deprecated and removed, usage is not
       recommended.</p></span></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div></div>
         
 
@@ -514,7 +526,7 @@ Similar to <a href="MuxLookup$.html" class="extype" name="chisel3.util.MuxLookup
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="T">T &lt;: <a href="../Bits.html" class="extype" name="chisel3.Bits">Bits</a></span>]</span><span class="params">(<span name="addr">addr: <a href="../UInt.html" class="extype" name="chisel3.UInt">UInt</a></span>, <span name="default">default: <span class="extype" name="chisel3.util.Lookup.apply.T">T</span></span>, <span name="mapping">mapping: <span class="extype" name="scala.Seq">Seq</span>[(<a href="BitPat.html" class="extype" name="chisel3.util.BitPat">BitPat</a>, <span class="extype" name="chisel3.util.Lookup.apply.T">T</span>)]</span>)</span><span class="result">: <span class="extype" name="chisel3.util.Lookup.apply.T">T</span></span>
+        <span class="name">apply</span><span class="tparams">[<span name="T">T &lt;: <a href="../Bits.html" class="extype" name="chisel3.Bits">Bits</a></span>]</span><span class="params">(<span name="addr">addr: <a href="../UInt.html" class="extype" name="chisel3.UInt">UInt</a></span>, <span name="default">default: <span class="extype" name="chisel3.util.Lookup.apply.T">T</span></span>, <span name="mapping">mapping: <a href="../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[(<a href="BitPat.html" class="extype" name="chisel3.util.BitPat">BitPat</a>, <span class="extype" name="chisel3.util.Lookup.apply.T">T</span>)]</span>)</span><span class="result">: <span class="extype" name="chisel3.util.Lookup.apply.T">T</span></span>
       </span>
       
       
@@ -546,7 +558,7 @@ Similar to <a href="MuxLookup$.html" class="extype" name="chisel3.util.MuxLookup
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -570,7 +582,7 @@ Similar to <a href="MuxLookup$.html" class="extype" name="chisel3.util.MuxLookup
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -678,7 +690,7 @@ Similar to <a href="MuxLookup$.html" class="extype" name="chisel3.util.MuxLookup
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -831,7 +843,7 @@ Similar to <a href="MuxLookup$.html" class="extype" name="chisel3.util.MuxLookup
 
         <div id="inheritedMembers">
         <div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+              <h3>Inherited from <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
             </div>

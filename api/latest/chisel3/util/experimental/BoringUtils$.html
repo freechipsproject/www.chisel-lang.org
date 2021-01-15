@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.4.0 - chisel3.util.experimental.BoringUtils</title>
-          <meta name="description" content="chisel3 3.4.0 - chisel3.util.experimental.BoringUtils" />
-          <meta name="keywords" content="chisel3 3.4.0 chisel3.util.experimental.BoringUtils" />
+          <title>chisel3 3.4.1 - chisel3.util.experimental.BoringUtils</title>
+          <meta name="description" content="chisel3 3.4.1 - chisel3.util.experimental.BoringUtils" />
+          <meta name="keywords" content="chisel3 3.4.1 chisel3.util.experimental.BoringUtils" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.4.0</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.4.1</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -143,12 +143,24 @@ functions
                         <a href="FlattenInstance.html" title="Flattens an instance of a module">FlattenInstance</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
+                        <a class="class" href="ForceNameAnnotation.html" title="Links the user-specified name to force to, with the signal/instance in the FIRRTL design"></a>
+                        <a href="ForceNameAnnotation.html" title="Links the user-specified name to force to, with the signal/instance in the FIRRTL design">ForceNameAnnotation</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="ForceNamesTransform.html" title="Forces the name of marked signals to a certain name"></a>
+                        <a href="ForceNamesTransform.html" title="Forces the name of marked signals to a certain name">ForceNamesTransform</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
                         <a class="trait" href="InlineInstance.html" title="Inlines an instance of a module"></a>
                         <a href="InlineInstance.html" title="Inlines an instance of a module">InlineInstance</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="class" href="LoadMemoryTransform.html" title="This transform only is activated if Verilog is being generated (determined by presence of the proper emit annotation) when activated it creates additional Verilog files that contain modules bound to the modules that contain an initializable memory"></a>
                         <a href="LoadMemoryTransform.html" title="This transform only is activated if Verilog is being generated (determined by presence of the proper emit annotation) when activated it creates additional Verilog files that contain modules bound to the modules that contain an initializable memory">LoadMemoryTransform</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="forceName$.html" title=""></a>
+                        <a href="forceName$.html" title="">forceName</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="object" href="group$.html" title="Marks that a module to be ignored in Dedup Transform in Firrtl pass"></a>
@@ -231,11 +243,11 @@ matched by a <code>name</code> key that indicates they should be wired together.
 automatically. Non-hierarchical boring unsafely relies on user input to generate this name. Use of non-hierarchical
 naming may result in naming conflicts that the user must handle.</p><p>The automatic generation of hierarchical names relies on a global, mutable namespace. This is currently persistent
 across circuit elaborations.
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.4.0//src/main/scala/chisel3/util/experimental/BoringUtils.scala" target="_blank">BoringUtils.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.4.1//src/main/scala/chisel3/util/experimental/BoringUtils.scala" target="_blank">BoringUtils.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div></div>
         
 
@@ -398,7 +410,7 @@ from specific identical sources differently)</p></dd><dt class="param">uniqueNam
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">bore</span><span class="params">(<span name="source">source: <a href="../../Data.html" class="extype" name="chisel3.Data">Data</a></span>, <span name="sinks">sinks: <span class="extype" name="scala.Seq">Seq</span>[<a href="../../Data.html" class="extype" name="chisel3.Data">Data</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+        <span class="name">bore</span><span class="params">(<span name="source">source: <a href="../../Data.html" class="extype" name="chisel3.Data">Data</a></span>, <span name="sinks">sinks: <a href="../../../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="../../Data.html" class="extype" name="chisel3.Data">Data</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       
       <p class="shortcomment cmt">Connect a source to one or more sinks</p><div class="fullcomment"><div class="comment cmt"><p>Connect a source to one or more sinks</p></div><dl class="paramcmts block"><dt class="param">source</dt><dd class="cmt"><p>a source component</p></dd><dt class="param">sinks</dt><dd class="cmt"><p>one or more sink components</p></dd><dt>returns</dt><dd class="cmt"><p>the name of the signal used to connect the source to the
@@ -416,7 +428,7 @@ component</p></span></dd></dl></div>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -440,7 +452,7 @@ component</p></span></dd></dl></div>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -548,7 +560,7 @@ component</p></span></dd></dl></div>
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -701,7 +713,7 @@ component</p></span></dd></dl></div>
 
         <div id="inheritedMembers">
         <div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+              <h3>Inherited from <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
             </div>

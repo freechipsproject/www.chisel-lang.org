@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.4.0 - Chisel.Enum</title>
-          <meta name="description" content="chisel3 3.4.0 - Chisel.Enum" />
-          <meta name="keywords" content="chisel3 3.4.0 Chisel.Enum" />
+          <title>chisel3 3.4.1 - Chisel.Enum</title>
+          <meta name="description" content="chisel3 3.4.1 - Chisel.Enum" />
+          <meta name="keywords" content="chisel3 3.4.1 Chisel.Enum" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.4.0</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.4.1</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -292,11 +292,11 @@ and the aggregate types <a href="../chisel3/Bundle.html" class="extype" name="ch
       </h4>
 
       
-          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.4.0//src/main/scala/chisel3/compatibility.scala" target="_blank">compatibility.scala</a></dd></dl><div class="toggleContainer block">
+          <div id="comment" class="fullcommenttop"><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.4.1//src/main/scala/chisel3/compatibility.scala" target="_blank">compatibility.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="../chisel3/util/Enum.html" class="extype" name="chisel3.util.Enum">Enum</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="../chisel3/util/Enum.html" class="extype" name="chisel3.util.Enum">Enum</a>, <a href="../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div></div>
         
 
@@ -409,7 +409,7 @@ and the aggregate types <a href="../chisel3/Bundle.html" class="extype" name="ch
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="tparams">[<span name="T">T &lt;: <a href="index.html#Bits=chisel3.Bits" class="extmbr" name="Chisel.Bits">Bits</a></span>]</span><span class="params">(<span name="nodeType">nodeType: <span class="extype" name="Chisel.Enum.apply.T">T</span></span>, <span name="n">n: <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <span class="extype" name="scala.List">List</span>[<span class="extype" name="Chisel.Enum.apply.T">T</span>]</span>
+        <span class="name">apply</span><span class="tparams">[<span name="T">T &lt;: <a href="index.html#Bits=chisel3.Bits" class="extmbr" name="Chisel.Bits">Bits</a></span>]</span><span class="params">(<span name="nodeType">nodeType: <span class="extype" name="Chisel.Enum.apply.T">T</span></span>, <span name="n">n: <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="../scala/index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<span class="extype" name="Chisel.Enum.apply.T">T</span>]</span>
       </span>
       
       <p class="shortcomment cmt">Returns n unique values of the specified type.</p><div class="fullcomment"><div class="comment cmt"><p>Returns n unique values of the specified type. Can be used with unpacking to define enums.</p><p>nodeType must be of UInt type (note that Bits() creates a UInt) with unspecified width.
@@ -437,7 +437,7 @@ switch (current_state) {
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">apply</span><span class="params">(<span name="n">n: <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <span class="extype" name="scala.List">List</span>[<a href="../chisel3/UInt.html" class="extype" name="chisel3.UInt">chisel3.UInt</a>]</span>
+        <span class="name">apply</span><span class="params">(<span name="n">n: <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="../scala/index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="../chisel3/UInt.html" class="extype" name="chisel3.UInt">chisel3.UInt</a>]</span>
       </span>
       
       <p class="shortcomment cmt">Returns n unique UInt values
@@ -471,7 +471,7 @@ switch (current_state) {
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -495,7 +495,7 @@ switch (current_state) {
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">createValues</span><span class="params">(<span name="n">n: <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="../chisel3/UInt.html" class="extype" name="chisel3.UInt">chisel3.UInt</a>]</span>
+        <span class="name">createValues</span><span class="params">(<span name="n">n: <a href="https://www.scala-lang.org/api/2.12.12/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="../chisel3/UInt.html" class="extype" name="chisel3.UInt">chisel3.UInt</a>]</span>
       </span>
       
       <p class="shortcomment cmt">Returns a sequence of Bits subtypes with values from 0 until n.</p><div class="fullcomment"><div class="comment cmt"><p>Returns a sequence of Bits subtypes with values from 0 until n. Helper method.</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../chisel3/util/Enum.html" class="extype" name="chisel3.util.Enum">Enum</a></dd></dl></div>
@@ -511,7 +511,7 @@ switch (current_state) {
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -619,7 +619,7 @@ switch (current_state) {
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -781,7 +781,7 @@ switch (current_state) {
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name deprecated" title="Deprecated: (Since version not soon enough) Use list-based Enum">apply</span><span class="tparams">[<span name="T">T &lt;: <a href="index.html#Bits=chisel3.Bits" class="extmbr" name="Chisel.Bits">Bits</a></span>]</span><span class="params">(<span name="nodeType">nodeType: <span class="extype" name="Chisel.Enum.apply.T">T</span></span>, <span name="l">l: <span class="extype" name="scala.List">List</span>[<a href="https://www.scala-lang.org/api/2.12.12/scala/Symbol.html#scala.Symbol" class="extype" name="scala.Symbol">Symbol</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="https://www.scala-lang.org/api/2.12.12/scala/Symbol.html#scala.Symbol" class="extype" name="scala.Symbol">Symbol</a>, <span class="extype" name="Chisel.Enum.apply.T">T</span>]</span>
+        <span class="name deprecated" title="Deprecated: (Since version not soon enough) Use list-based Enum">apply</span><span class="tparams">[<span name="T">T &lt;: <a href="index.html#Bits=chisel3.Bits" class="extmbr" name="Chisel.Bits">Bits</a></span>]</span><span class="params">(<span name="nodeType">nodeType: <span class="extype" name="Chisel.Enum.apply.T">T</span></span>, <span name="l">l: <a href="../scala/index.html#List[+A]=List[A]" class="extmbr" name="scala.List">List</a>[<a href="https://www.scala-lang.org/api/2.12.12/scala/Symbol.html#scala.Symbol" class="extype" name="scala.Symbol">Symbol</a>]</span>)</span><span class="result">: <span class="extype" name="scala.Predef.Map">Map</span>[<a href="https://www.scala-lang.org/api/2.12.12/scala/Symbol.html#scala.Symbol" class="extype" name="scala.Symbol">Symbol</a>, <span class="extype" name="Chisel.Enum.apply.T">T</span>]</span>
       </span>
       
       <p class="shortcomment cmt">An old Enum API that returns a map of symbols to UInts.</p><div class="fullcomment"><div class="comment cmt"><p>An old Enum API that returns a map of symbols to UInts.</p><p>Unlike the new list-based Enum, which can be unpacked into vals that the compiler
@@ -823,7 +823,7 @@ Deprecation is only to nag users to do something safer.
         <div class="parent" name="chisel3.util.Enum">
               <h3>Inherited from <a href="../chisel3/util/Enum.html" class="extype" name="chisel3.util.Enum">Enum</a></h3>
             </div><div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+              <h3>Inherited from <a href="../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
             </div>

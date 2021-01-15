@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.4.0 - chisel3.Aggregate</title>
-          <meta name="description" content="chisel3 3.4.0 - chisel3.Aggregate" />
-          <meta name="keywords" content="chisel3 3.4.0 chisel3.Aggregate" />
+          <title>chisel3 3.4.1 - chisel3.Aggregate</title>
+          <meta name="description" content="chisel3 3.4.1 - chisel3.Aggregate" />
+          <meta name="keywords" content="chisel3 3.4.1 chisel3.Aggregate" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.4.0</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.4.1</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -123,6 +123,22 @@ and the aggregate types <a href="Bundle.html" class="extype" name="chisel3.Bundl
       <p class="shortcomment cmt">These definitions exist to deal with those clients that relied on chisel3.core.</p><div class="fullcomment"><div class="comment cmt"><p>These definitions exist to deal with those clients that relied on chisel3.core.
 They are deprecated and will be removed in the future.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="chisel3">chisel3</a></dd></dl></div>
+    </li><li name="chisel3.docs" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="docs"></a><a id="docs:docs"></a>
+      <span class="permalink">
+      <a href="../chisel3/docs/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="docs/index.html"><span class="name">docs</span></a>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="index.html" class="extype" name="chisel3">chisel3</a></dd></dl></div>
     </li><li name="chisel3.experimental" visbl="pub" class="indented2 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="experimental"></a><a id="experimental:experimental"></a>
       <span class="permalink">
@@ -647,11 +663,11 @@ functions
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>An abstract class for data types that solely consist of (are an aggregate
 of) other Data objects.
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.4.0//core/src/main/scala/chisel3/Aggregate.scala" target="_blank">Aggregate.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/freechipsproject/chisel3/tree/v3.4.1//core/src/main/scala/chisel3/Aggregate.scala" target="_blank">Aggregate.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="Data.html" class="extype" name="chisel3.Data">Data</a>, <a href="SourceInfoDoc.html" class="extype" name="chisel3.SourceInfoDoc">SourceInfoDoc</a>, <span class="extype" name="chisel3.internal.NamedComponent">NamedComponent</span>, <span class="extype" name="chisel3.internal.HasId">HasId</span>, <span class="extype" name="chisel3.internal.InstanceId">internal.InstanceId</span>, <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="Data.html" class="extype" name="chisel3.Data">Data</a>, <a href="SourceInfoDoc.html" class="extype" name="chisel3.SourceInfoDoc">SourceInfoDoc</a>, <span class="extype" name="chisel3.internal.NamedComponent">NamedComponent</span>, <span class="extype" name="chisel3.internal.HasId">HasId</span>, <span class="extype" name="chisel3.internal.InstanceId">internal.InstanceId</span>, <a href="../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div><div class="toggleContainer block">
             <span class="toggle">
               Known Subclasses
@@ -736,7 +752,7 @@ It is responsible for constructing a basic copy of the object being cloned.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getElements</span><span class="result">: <span class="extype" name="scala.Seq">Seq</span>[<a href="Data.html" class="extype" name="chisel3.Data">Data</a>]</span>
+        <span class="name">getElements</span><span class="result">: <a href="../scala/index.html#Seq[+A]=Seq[A]" class="extmbr" name="scala.Seq">Seq</a>[<a href="Data.html" class="extype" name="chisel3.Data">Data</a>]</span>
       </span>
       
       <p class="shortcomment cmt">Returns a Seq of the immediate contents of this Aggregate, in order.</p>
@@ -993,7 +1009,7 @@ was called, <a href="Data.html#suggestName(seed:=&gt;String):HasId.this.type" cl
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <span class="name">clone</span><span class="params">()</span><span class="result">: <a href="../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1065,7 +1081,7 @@ was called, <a href="Data.html#suggestName(seed:=&gt;String):HasId.this.type" cl
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -1250,7 +1266,7 @@ was called, <a href="Data.html#suggestName(seed:=&gt;String):HasId.this.type" cl
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">litOption</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.BigInt">BigInt</span>]</span>
+        <span class="name">litOption</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="../scala/index.html#BigInt=scala.math.BigInt" class="extmbr" name="scala.BigInt">BigInt</a>]</span>
       </span>
       
       <p class="shortcomment cmt">Return an Aggregate's literal value if it is a literal, None otherwise.</p><div class="fullcomment"><div class="comment cmt"><p>Return an Aggregate's literal value if it is a literal, None otherwise.
@@ -1268,7 +1284,7 @@ If any element of the aggregate is not a literal with a defined width, the resul
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">litValue</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.BigInt">BigInt</span></span>
+        <span class="name">litValue</span><span class="params">()</span><span class="result">: <a href="../scala/index.html#BigInt=scala.math.BigInt" class="extmbr" name="scala.BigInt">BigInt</a></span>
       </span>
       
       <p class="shortcomment cmt">Returns the literal value if this is a literal that is representable as bits, otherwise crashes.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the literal value if this is a literal that is representable as bits, otherwise crashes.
@@ -1285,7 +1301,7 @@ If any element of the aggregate is not a literal with a defined width, the resul
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.12/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -1423,7 +1439,7 @@ was called, <a href="#suggestName(seed:=&gt;String):HasId.this.type" class="extm
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toAbsoluteTarget</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/annotations/ReferenceTarget.html#firrtl.annotations.ReferenceTarget" class="extype" name="firrtl.annotations.ReferenceTarget">ReferenceTarget</a></span>
+        <span class="name">toAbsoluteTarget</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/annotations/ReferenceTarget.html#firrtl.annotations.ReferenceTarget" class="extype" name="firrtl.annotations.ReferenceTarget">ReferenceTarget</a></span>
       </span>
       
       <p class="shortcomment cmt">Returns a FIRRTL IsMember that refers to the absolute path to this object in the elaborated hardware graph</p><div class="fullcomment"><div class="comment cmt"><p>Returns a FIRRTL IsMember that refers to the absolute path to this object in the elaborated hardware graph</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>NamedComponent → InstanceId</dd></dl></div>
@@ -1439,7 +1455,7 @@ was called, <a href="#suggestName(seed:=&gt;String):HasId.this.type" class="extm
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toNamed</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/annotations/ComponentName.html#firrtl.annotations.ComponentName" class="extype" name="firrtl.annotations.ComponentName">ComponentName</a></span>
+        <span class="name">toNamed</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/annotations/ComponentName.html#firrtl.annotations.ComponentName" class="extype" name="firrtl.annotations.ComponentName">ComponentName</a></span>
       </span>
       
       <p class="shortcomment cmt">Returns a FIRRTL ComponentName that references this object</p><div class="fullcomment"><div class="comment cmt"><p>Returns a FIRRTL ComponentName that references this object</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>NamedComponent → InstanceId</dd><dt>Note</dt><dd><span class="cmt"><p>Should not be called until circuit elaboration is complete</p></span></dd></dl></div>
@@ -1471,7 +1487,7 @@ was called, <a href="#suggestName(seed:=&gt;String):HasId.this.type" class="extm
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toTarget</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/annotations/ReferenceTarget.html#firrtl.annotations.ReferenceTarget" class="extype" name="firrtl.annotations.ReferenceTarget">ReferenceTarget</a></span>
+        <span class="name">toTarget</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/annotations/ReferenceTarget.html#firrtl.annotations.ReferenceTarget" class="extype" name="firrtl.annotations.ReferenceTarget">ReferenceTarget</a></span>
       </span>
       
       <p class="shortcomment cmt">Returns a FIRRTL ReferenceTarget that references this object</p><div class="fullcomment"><div class="comment cmt"><p>Returns a FIRRTL ReferenceTarget that references this object</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>NamedComponent → InstanceId</dd><dt>Note</dt><dd><span class="cmt"><p>Should not be called until circuit elaboration is complete</p></span></dd></dl></div>
@@ -1604,7 +1620,7 @@ was called, <a href="#suggestName(seed:=&gt;String):HasId.this.type" class="extm
             </div><div class="parent" name="chisel3.internal.InstanceId">
               <h3>Inherited from <span class="extype" name="chisel3.internal.InstanceId">internal.InstanceId</span></h3>
             </div><div class="parent" name="scala.AnyRef">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></h3>
+              <h3>Inherited from <a href="../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
               <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.12/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
             </div>

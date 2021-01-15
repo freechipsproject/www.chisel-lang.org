@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.4.0 - chisel3.util.experimental</title>
-          <meta name="description" content="chisel3 3.4.0 - chisel3.util.experimental" />
-          <meta name="keywords" content="chisel3 3.4.0 chisel3.util.experimental" />
+          <title>chisel3 3.4.1 - chisel3.util.experimental</title>
+          <meta name="description" content="chisel3 3.4.1 - chisel3.util.experimental" />
+          <meta name="keywords" content="chisel3 3.4.1 chisel3.util.experimental" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.4.0</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.4.1</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -143,12 +143,24 @@ functions
                         <a href="FlattenInstance.html" title="Flattens an instance of a module">FlattenInstance</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
+                        <a class="class" href="ForceNameAnnotation.html" title="Links the user-specified name to force to, with the signal/instance in the FIRRTL design"></a>
+                        <a href="ForceNameAnnotation.html" title="Links the user-specified name to force to, with the signal/instance in the FIRRTL design">ForceNameAnnotation</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="class" href="ForceNamesTransform.html" title="Forces the name of marked signals to a certain name"></a>
+                        <a href="ForceNamesTransform.html" title="Forces the name of marked signals to a certain name">ForceNamesTransform</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
                         <a class="trait" href="InlineInstance.html" title="Inlines an instance of a module"></a>
                         <a href="InlineInstance.html" title="Inlines an instance of a module">InlineInstance</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="class" href="LoadMemoryTransform.html" title="This transform only is activated if Verilog is being generated (determined by presence of the proper emit annotation) when activated it creates additional Verilog files that contain modules bound to the modules that contain an initializable memory"></a>
                         <a href="LoadMemoryTransform.html" title="This transform only is activated if Verilog is being generated (determined by presence of the proper emit annotation) when activated it creates additional Verilog files that contain modules bound to the modules that contain an initializable memory">LoadMemoryTransform</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="forceName$.html" title=""></a>
+                        <a href="forceName$.html" title="">forceName</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="object" href="group$.html" title="Marks that a module to be ignored in Dedup Transform in Firrtl pass"></a>
@@ -248,7 +260,7 @@ functions
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="An exception related to BoringUtils" href="BoringUtilsException.html"><span class="name">BoringUtilsException</span></a><span class="result"> extends <span class="extype" name="scala.Exception">Exception</span></span>
+        <a title="An exception related to BoringUtils" href="BoringUtilsException.html"><span class="name">BoringUtilsException</span></a><span class="result"> extends <a href="../../../scala/index.html#Exception=Exception" class="extmbr" name="scala.Exception">Exception</a></span>
       </span>
       
       <p class="shortcomment cmt">An exception related to BoringUtils</p>
@@ -282,7 +294,7 @@ and the format of the file.</p></div><dl class="paramcmts block"><dt class="para
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="Flattens an instance of a module" href="FlattenInstance.html"><span class="name">FlattenInstance</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="Flattens an instance of a module" href="FlattenInstance.html"><span class="name">FlattenInstance</span></a><span class="result"> extends <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <p class="shortcomment cmt">Flattens an instance of a module
@@ -310,6 +322,42 @@ and the format of the file.</p></div><dl class="paramcmts block"><dt class="para
   <span class="std">Seq</span>(x, y, z).map(_.io.a := io.a)
 }</pre></li></ol>
             </div></dl></div>
+    </li><li name="chisel3.util.experimental.ForceNameAnnotation" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ForceNameAnnotationextendsSingleTargetAnnotation[firrtl.annotations.IsMember]withProductwithSerializable"></a><a id="ForceNameAnnotation:ForceNameAnnotation"></a>
+      <span class="permalink">
+      <a href="../../../chisel3/util/experimental/ForceNameAnnotation.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">case class</span>
+      </span>
+      <span class="symbol">
+        <a title="Links the user-specified name to force to, with the signal/instance in the FIRRTL design" href="ForceNameAnnotation.html"><span class="name">ForceNameAnnotation</span></a><span class="params">(<span name="target">target: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/annotations/IsMember.html#firrtl.annotations.IsMember" class="extype" name="firrtl.annotations.IsMember">IsMember</a></span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/annotations/SingleTargetAnnotation.html#firrtl.annotations.SingleTargetAnnotation" class="extype" name="firrtl.annotations.SingleTargetAnnotation">SingleTargetAnnotation</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/annotations/IsMember.html#firrtl.annotations.IsMember" class="extype" name="firrtl.annotations.IsMember">IsMember</a>] with <a href="https://www.scala-lang.org/api/2.12.12/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.12/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Links the user-specified name to force to, with the signal/instance in the FIRRTL design
+</p><div class="fullcomment"><div class="comment cmt"><p>Links the user-specified name to force to, with the signal/instance in the FIRRTL design
+</p></div><dl class="paramcmts block"><dt class="param">target</dt><dd class="cmt"><p>signal/instance to force the name</p></dd><dt class="param">name</dt><dd class="cmt"><p>name to force it to be</p></dd></dl><dl class="attributes block"> <dt>Exceptions thrown</dt><dd><span class="cmt"><p><span class="extype" name="CustomTransformException"><code>CustomTransformException</code></span> when the signal is renamed to &gt;1 target</p></span></dd></dl></div>
+    </li><li name="chisel3.util.experimental.ForceNamesTransform" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="ForceNamesTransformextendsTransformwithDependencyAPIMigration"></a><a id="ForceNamesTransform:ForceNamesTransform"></a>
+      <span class="permalink">
+      <a href="../../../chisel3/util/experimental/ForceNamesTransform.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">class</span>
+      </span>
+      <span class="symbol">
+        <a title="Forces the name of marked signals to a certain name" href="ForceNamesTransform.html"><span class="name">ForceNamesTransform</span></a><span class="result"> extends <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/Transform.html#firrtl.Transform" class="extype" name="firrtl.Transform">Transform</a> with <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/DependencyAPIMigration.html#firrtl.DependencyAPIMigration" class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Forces the name of marked signals to a certain name</p><div class="fullcomment"><div class="comment cmt"><p>Forces the name of marked signals to a certain name</p><ul><li>If there is a conflict in the enclosing module's namespace, throws an exception</li><li>Renames signals of ground types only. If you rename an intermediate module, it will throw an error</li><li>Renames instances as well (as well as port names)
+Common usages:</li><li>Use to avoid prefixing behavior on specific instances whose enclosing modules are inlined
+</li></ul></div></div>
     </li><li name="chisel3.util.experimental.InlineInstance" visbl="pub" class="indented0 " data-isabs="true" fullComment="yes" group="Ungrouped">
       <a id="InlineInstanceextendsAnyRef"></a><a id="InlineInstance:InlineInstance"></a>
       <span class="permalink">
@@ -322,7 +370,7 @@ and the format of the file.</p></div><dl class="paramcmts block"><dt class="para
         <span class="kind">trait</span>
       </span>
       <span class="symbol">
-        <a title="Inlines an instance of a module" href="InlineInstance.html"><span class="name">InlineInstance</span></a><span class="result"> extends <a href="https://www.scala-lang.org/api/2.12.12/scala/AnyRef.html#scala.AnyRef" class="extype" name="scala.AnyRef">AnyRef</a></span>
+        <a title="Inlines an instance of a module" href="InlineInstance.html"><span class="name">InlineInstance</span></a><span class="result"> extends <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
       </span>
       
       <p class="shortcomment cmt">Inlines an instance of a module
@@ -366,7 +414,7 @@ and the format of the file.</p></div><dl class="paramcmts block"><dt class="para
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="This transform only is activated if Verilog is being generated (determined by presence of the proper emit annotation) when activated it creates additional Verilog files that contain modules bound to the modules that contain an initializable memory" href="LoadMemoryTransform.html"><span class="name">LoadMemoryTransform</span></a><span class="result"> extends <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.0/firrtl/Transform.html#firrtl.Transform" class="extype" name="firrtl.Transform">Transform</a></span>
+        <a title="This transform only is activated if Verilog is being generated (determined by presence of the proper emit annotation) when activated it creates additional Verilog files that contain modules bound to the modules that contain an initializable memory" href="LoadMemoryTransform.html"><span class="name">LoadMemoryTransform</span></a><span class="result"> extends <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.1/firrtl/Transform.html#firrtl.Transform" class="extype" name="firrtl.Transform">Transform</a></span>
       </span>
       
       <p class="shortcomment cmt">This transform only is activated if Verilog is being generated (determined by presence of the proper emit
@@ -446,6 +494,22 @@ automatically. Non-hierarchical boring unsafely relies on user input to generate
 naming may result in naming conflicts that the user must handle.</p><p>The automatic generation of hierarchical names relies on a global, mutable namespace. This is currently persistent
 across circuit elaborations.
 </p></div></div>
+    </li><li name="chisel3.util.experimental.forceName" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="forceName"></a><a id="forceName:forceName"></a>
+      <span class="permalink">
+      <a href="../../../chisel3/util/experimental/forceName$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="forceName$.html"><span class="name">forceName</span></a>
+      </span>
+      
+      
     </li><li name="chisel3.util.experimental.group" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="group"></a><a id="group:group"></a>
       <span class="permalink">
