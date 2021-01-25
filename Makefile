@@ -240,7 +240,7 @@ publish: all
 
 # Start a Jekyll server for the site
 serve: all
-	(cd docs/target/site && jekyll serve)
+	(cd docs/target/site && jekyll serve --incremental)
 
 # Build the sbt-microsite
 docs/target/site/index.html: build.sbt docs/src/main/tut/contributors.md $(www-src) $(api-copy) | $(api-latest)
