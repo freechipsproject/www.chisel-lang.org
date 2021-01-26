@@ -42,11 +42,6 @@ lazy val micrositeSettings = Seq(
    * - Other READMEs become the landing pages of each sub-project's documentation
    */
   micrositeExtraMdFiles := Map(
-    file("chisel3/README.md") -> ExtraMdFileConfig(
-      "index.md", "home",
-      Map("title" -> "Home",
-          "section" -> "home",
-          "technologies" -> technologies)),
     file("chisel-testers/README.md") -> ExtraMdFileConfig(
       "chisel-testers/index.md", "docs",
       Map("title" -> "Testers",
