@@ -263,8 +263,8 @@ Below, the left-hand side connection to <code class="highlighter-rouge">io.out(0
 <span class="c1">// 	at logger.Logger$.makeScope(Logger.scala:164)</span>
 <span class="c1">// 	at firrtl.options.Stage.transform(Stage.scala:47)</span>
 <span class="c1">// 	at firrtl.options.Stage.execute(Stage.scala:58)</span>
-<span class="c1">// 	at repl.MdocSession$App7$$anonfun$32.apply(cookbook.md:216)</span>
-<span class="c1">// 	at repl.MdocSession$App7$$anonfun$32.apply(cookbook.md:216)</span>
+<span class="c1">// 	at repl.MdocSession$App7$$anonfun$44.apply(cookbook.md:216)</span>
+<span class="c1">// 	at repl.MdocSession$App7$$anonfun$44.apply(cookbook.md:216)</span>
 <span class="c1">// Caused by: chisel3.internal.ChiselException: Cannot reassign to read-only Bool(OpResult in Foo)</span>
 <span class="c1">// 	at chisel3.internal.throwException$.apply(Error.scala:85)</span>
 <span class="c1">// 	at chisel3.Data.connect(Data.scala:408)</span>
@@ -273,14 +273,14 @@ Below, the left-hand side connection to <code class="highlighter-rouge">io.out(0
 <span class="c1">// 	at chisel3.internal.prefix$.apply(prefix.scala:32)</span>
 <span class="c1">// 	at chisel3.Data.$colon$eq(Data.scala:524)</span>
 <span class="c1">// 	at repl.MdocSession$App7$Foo.&lt;init&gt;(cookbook.md:208)</span>
-<span class="c1">// 	at repl.MdocSession$App7$$anonfun$32$$anonfun$apply$6.apply(cookbook.md:216)</span>
-<span class="c1">// 	at repl.MdocSession$App7$$anonfun$32$$anonfun$apply$6.apply(cookbook.md:216)</span>
+<span class="c1">// 	at repl.MdocSession$App7$$anonfun$44$$anonfun$apply$24.apply(cookbook.md:216)</span>
+<span class="c1">// 	at repl.MdocSession$App7$$anonfun$44$$anonfun$apply$24.apply(cookbook.md:216)</span>
 <span class="c1">// 	at chisel3.Module$.do_apply(Module.scala:54)</span>
 <span class="c1">// 	at chisel3.stage.ChiselGeneratorAnnotation.$anonfun$elaborate$1(ChiselAnnotations.scala:60)</span>
-<span class="c1">// 	at chisel3.internal.Builder$.$anonfun$build$1(Builder.scala:638)</span>
+<span class="c1">// 	at chisel3.internal.Builder$.$anonfun$build$1(Builder.scala:645)</span>
 <span class="c1">// 	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:62)</span>
-<span class="c1">// 	at chisel3.internal.Builder$.build(Builder.scala:635)</span>
-<span class="c1">// 	at chisel3.internal.Builder$.build(Builder.scala:631)</span>
+<span class="c1">// 	at chisel3.internal.Builder$.build(Builder.scala:642)</span>
+<span class="c1">// 	at chisel3.internal.Builder$.build(Builder.scala:638)</span>
 <span class="c1">// 	at chisel3.stage.ChiselGeneratorAnnotation.elaborate(ChiselAnnotations.scala:60)</span>
 <span class="c1">// 	at chisel3.stage.phases.Elaborate.$anonfun$transform$1(Elaborate.scala:24)</span>
 <span class="c1">// 	at scala.collection.immutable.List.flatMap(List.scala:366)</span>
@@ -385,26 +385,26 @@ The reason for this is that subword assignment generally hints at a better abstr
 
 <p>If we compile this module <em>without</em> <code class="highlighter-rouge">@chiselName</code>, Chisel is not able to name <code class="highlighter-rouge">innerReg</code> correctly (notice the <code class="highlighter-rouge">_T</code>):</p>
 
-<p>[[35minfo[0m] [0.000] Elaborating design…
-[[34mdeprecated[0m] class repl.MdocSession$App11$TestModWithout<script type="math/tex">anonfun$48</script>anon$6 (1 calls): Unable to automatically infer cloneType on class repl.MdocSession$App11$TestModWithout<script type="math/tex">anonfun$48</script>anon$6: constructor has parameters ($outer) that are not both immutable and accessible. Either make all parameters immutable and accessible (vals) so cloneType can be inferred, or define a custom cloneType method.
+<p>Elaborating design…
+[[34mdeprecated[0m] class repl.MdocSession$App11$TestModWithout<script type="math/tex">anonfun$68</script>anonfun$apply$33<script type="math/tex">anon$6 (1 calls): chisel3.1 autoclonetype failed, falling back to 3.0 behavior using null as the outer instance. Autoclonetype failure reason: Unable to determine instance of outer class class repl.MdocSession$App11$TestModWithout</script>anonfun$68$$anonfun$apply$33, no candidates assignable to outer class types; examined List(repl.MdocSession$App11$TestModWithout@55fb94d6)
 [[33mwarn[0m] [33mThere were 1 deprecated function(s) used. These may stop compiling in a future release - you are encouraged to fix these issues.[0m
 [[33mwarn[0m] Line numbers for deprecations reported by Chisel may be inaccurate; enable scalac compiler deprecation warnings via either of the following methods:
 [[33mwarn[0m]   In the sbt interactive console, enter:
 [[33mwarn[0m]     set scalacOptions in ThisBuild ++= Seq(“-unchecked”, “-deprecation”)
 [[33mwarn[0m]   or, in your build.sbt, add the line:
 [[33mwarn[0m]     scalacOptions := Seq(“-unchecked”, “-deprecation”)
-[[35minfo[0m] [0.030] Done elaborating.</p>
+Done elaborating.</p>
 
 <p>However, if we use <code class="highlighter-rouge">@chiselName</code> then the register previously called <code class="highlighter-rouge">_T</code> is now <code class="highlighter-rouge">innerReg</code>:
-[[35minfo[0m] [0.000] Elaborating design…
-[[34mdeprecated[0m] class repl.MdocSession$App11$TestMod<script type="math/tex">anonfun$43</script>anon$5 (1 calls): Unable to automatically infer cloneType on class repl.MdocSession$App11$TestMod<script type="math/tex">anonfun$43</script>anon$5: constructor has parameters ($outer) that are not both immutable and accessible. Either make all parameters immutable and accessible (vals) so cloneType can be inferred, or define a custom cloneType method.
+Elaborating design…
+[[34mdeprecated[0m] class repl.MdocSession$App11$TestMod<script type="math/tex">anonfun$61</script>anonfun$apply$31<script type="math/tex">anon$5 (1 calls): chisel3.1 autoclonetype failed, falling back to 3.0 behavior using null as the outer instance. Autoclonetype failure reason: Unable to determine instance of outer class class repl.MdocSession$App11$TestMod</script>anonfun$61$$anonfun$apply$31, no candidates assignable to outer class types; examined List(repl.MdocSession$App11$TestMod@604f555)
 [[33mwarn[0m] [33mThere were 1 deprecated function(s) used. These may stop compiling in a future release - you are encouraged to fix these issues.[0m
 [[33mwarn[0m] Line numbers for deprecations reported by Chisel may be inaccurate; enable scalac compiler deprecation warnings via either of the following methods:
 [[33mwarn[0m]   In the sbt interactive console, enter:
 [[33mwarn[0m]     set scalacOptions in ThisBuild ++= Seq(“-unchecked”, “-deprecation”)
 [[33mwarn[0m]   or, in your build.sbt, add the line:
 [[33mwarn[0m]     scalacOptions := Seq(“-unchecked”, “-deprecation”)
-[[35minfo[0m] [0.027] Done elaborating.</p>
+Done elaborating.</p>
 
 <h3 id="how-do-i-get-chisel-to-name-the-results-of-vector-reads-properly">How do I get Chisel to name the results of vector reads properly?</h3>
 
@@ -497,16 +497,16 @@ The reason for this is that subword assignment generally hints at a better abstr
 </code></pre></div></div>
 
 <p>Elaborating the Chisel module <code class="highlighter-rouge">Salt</code> yields our “desire name” for <code class="highlighter-rouge">Salt</code> and <code class="highlighter-rouge">Coffee</code> in the output Verilog:
-[[35minfo[0m] [0.000] Elaborating design…
-[[34mdeprecated[0m] class repl.MdocSession$App14$Salt<script type="math/tex">anonfun$62</script>anon$8 (1 calls): Unable to automatically infer cloneType on class repl.MdocSession$App14$Salt<script type="math/tex">anonfun$62</script>anon$8: constructor has parameters ($outer) that are not both immutable and accessible. Either make all parameters immutable and accessible (vals) so cloneType can be inferred, or define a custom cloneType method.
-[[34mdeprecated[0m] class repl.MdocSession$App14$Coffee<script type="math/tex">anonfun$61</script>anon$7 (1 calls): Unable to automatically infer cloneType on class repl.MdocSession$App14$Coffee<script type="math/tex">anonfun$61</script>anon$7: constructor has parameters ($outer) that are not both immutable and accessible. Either make all parameters immutable and accessible (vals) so cloneType can be inferred, or define a custom cloneType method.
+Elaborating design…
+[[34mdeprecated[0m] class repl.MdocSession$App14$Salt<script type="math/tex">anonfun$86</script>anonfun$apply$36<script type="math/tex">anon$8 (1 calls): chisel3.1 autoclonetype failed, falling back to 3.0 behavior using null as the outer instance. Autoclonetype failure reason: Unable to determine instance of outer class class repl.MdocSession$App14$Salt</script>anonfun$86<script type="math/tex">anonfun$apply$36, no candidates assignable to outer class types; examined List(repl.MdocSession$App14$Salt@353de57)
+[[34mdeprecated[0m] class repl.MdocSession$App14$Coffee</script>anonfun$83<script type="math/tex">anonfun$apply$35</script>anon$7 (1 calls): chisel3.1 autoclonetype failed, falling back to 3.0 behavior using null as the outer instance. Autoclonetype failure reason: Unable to determine instance of outer class class repl.MdocSession$App14$Coffee<script type="math/tex">anonfun$83</script>anonfun$apply$35, no candidates assignable to outer class types; examined List(repl.MdocSession$App14$Coffee@39619c00)
 [[33mwarn[0m] [33mThere were 2 deprecated function(s) used. These may stop compiling in a future release - you are encouraged to fix these issues.[0m
 [[33mwarn[0m] Line numbers for deprecations reported by Chisel may be inaccurate; enable scalac compiler deprecation warnings via either of the following methods:
 [[33mwarn[0m]   In the sbt interactive console, enter:
 [[33mwarn[0m]     set scalacOptions in ThisBuild ++= Seq(“-unchecked”, “-deprecation”)
 [[33mwarn[0m]   or, in your build.sbt, add the line:
 [[33mwarn[0m]     scalacOptions := Seq(“-unchecked”, “-deprecation”)
-[[35minfo[0m] [0.149] Done elaborating.</p>
+Done elaborating.</p>
 </section></div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/highlight/highlight.pack.js"></script><script>hljs.configure({languages:['scala','java','bash']});
 hljs.initHighlighting();
               </script><script>((window.gitter = {}).chat = {}).options = {

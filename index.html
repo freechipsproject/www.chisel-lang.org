@@ -10,7 +10,7 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 ga('create', 'UA-145179088-1' , 'auto');
 ga('send', 'pageview');
       </script></head><body><header id="site-header"><div class="navbar-wrapper"><div class="container"><div class="row"><div class="col-xs-6"><a href="/" class="brand"><div class="icon-wrapper"><span>Chisel/FIRRTL</span></div></a></div><div class="col-xs-6"><nav class="text-right"><ul class=""><li><a href="https://github.com/freechipsproject/chisel3"><i class="fa fa-github"></i><span class="hidden-xs">GitHub</span></a></li><li><a href="api/latest/"><i class="fa fa-file-text"></i><span class="hidden-xs">API Documentation</span></a></li></ul></nav></div></div></div></div><div class="jumbotron"><div class="container"><h1 class="text-center">Chisel/FIRRTL
-Hardware Compiler Framework</h1><h2></h2><p class="text-center"><a href="https://github.com/freechipsproject/chisel3" class="btn btn-outline-inverse">View on GitHub</a></p></div></div><div><ul class="horizontalNav">                                                                                               <li><a class="" href="/chisel3/">Chisel3</a></li>  <li><a class="" href="/chisel-testers/">Testers</a></li>  <li><a class="" href="/chiseltest/">ChiselTest</a></li>  <li><a class="" href="/firrtl/">FIRRTL</a></li>  <li><a class="" href="/treadle/">Treadle</a></li>  <li><a class="" href="/diagrammer/">Diagrammer</a></li>  <li><a class="" href="/community.html">Community</a></li> </ul></div></header><main id="site-main"><section class="use"><div class="container"><div id="content"><p><img src="https://raw.githubusercontent.com/freechipsproject/chisel3/master/docs/src/images/chisel_logo.svg?sanitize=true" alt="Chisel 3" /></p>
+Hardware Compiler Framework</h1><h2></h2><p class="text-center"><a href="https://github.com/freechipsproject/chisel3" class="btn btn-outline-inverse">View on GitHub</a></p></div></div><div><ul class="horizontalNav">                                                                                                 <li><a class="" href="/chisel3/">Chisel3</a></li>  <li><a class="" href="/chisel-testers/">Testers</a></li>  <li><a class="" href="/chiseltest/">ChiselTest</a></li>  <li><a class="" href="/firrtl/">FIRRTL</a></li>  <li><a class="" href="/treadle/">Treadle</a></li>  <li><a class="" href="/diagrammer/">Diagrammer</a></li>  <li><a class="" href="/community.html">Community</a></li> </ul></div></header><main id="site-main"><section class="use"><div class="container"><div id="content"><p><img src="https://raw.githubusercontent.com/chipsalliance/chisel3/master/docs/src/images/chisel_logo.svg?sanitize=true" alt="Chisel 3" /></p>
 
 <hr />
 
@@ -22,9 +22,9 @@ Hardware Compiler Framework</h1><h2></h2><p class="text-center"><a href="https:/
 
 <hr />
 
-<p><a href="https://gitter.im/freechipsproject/chisel3?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/freechipsproject/chisel3.svg" alt="Join the chat at https://gitter.im/freechipsproject/chisel3" /></a>
-<a href="https://circleci.com/gh/freechipsproject/chisel3/tree/master"><img src="https://circleci.com/gh/freechipsproject/chisel3/tree/master.svg?style=shield" alt="CircleCI" /></a>
-<a href="https://github.com/freechipsproject/chisel3/releases/latest"><img src="https://img.shields.io/github/tag/freechipsproject/chisel3.svg?label=release" alt="GitHub tag (latest SemVer)" /></a></p>
+<p><a href="https://gitter.im/chipsalliance/chisel3?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/chipsalliance/chisel3.svg" alt="Join the chat at https://gitter.im/chipsalliance/chisel3" /></a>
+<a href="https://circleci.com/gh/chipsalliance/chisel3/tree/master"><img src="https://circleci.com/gh/chipsalliance/chisel3/tree/master.svg?style=shield" alt="CircleCI" /></a>
+<a href="https://github.com/chipsalliance/chisel3/releases/latest"><img src="https://img.shields.io/github/tag/chipsalliance/chisel3.svg?label=release" alt="GitHub tag (latest SemVer)" /></a></p>
 
 <p><a href="https://www.chisel-lang.org"><strong>Chisel</strong></a> is a hardware design language that facilitates <strong>advanced circuit generation and design reuse for both ASIC and FPGA digital logic designs</strong>.
 Chisel adds hardware construction primitives to the <a href="https://www.scala-lang.org">Scala</a> programming language, providing designers with the power of a modern programming language to write complex, parameterizable circuit generators that produce synthesizable Verilog.
@@ -32,13 +32,13 @@ This generator methodology enables the creation of re-usable components and libr
 
 <p>For more information on the benefits of Chisel see: <a href="https://stackoverflow.com/questions/53007782/what-benefits-does-chisel-offer-over-classic-hardware-description-languages">“What benefits does Chisel offer over classic Hardware Description Languages?”</a></p>
 
-<p>Chisel is powered by <a href="https://github.com/freechipsproject/firrtl">FIRRTL (Flexible Intermediate Representation for RTL)</a>, a hardware compiler framework that performs optimizations of Chisel-generated circuits and supports custom user-defined circuit transformations.</p>
+<p>Chisel is powered by <a href="https://github.com/chipsalliance/firrtl">FIRRTL (Flexible Intermediate Representation for RTL)</a>, a hardware compiler framework that performs optimizations of Chisel-generated circuits and supports custom user-defined circuit transformations.</p>
 
 <h2 id="what-does-chisel-code-look-like">What does Chisel code look like?</h2>
 
 <p>Consider an FIR filter that implements a convolution operation, as depicted in this block diagram:</p>
 
-<p><img src="https://raw.githubusercontent.com/freechipsproject/chisel3/master/docs/src/images/fir_filter.svg?sanitize=true" width="512" /></p>
+<p><img src="https://raw.githubusercontent.com/chipsalliance/chisel3/master/docs/src/images/fir_filter.svg?sanitize=true" width="512" /></p>
 
 <p>While Chisel provides similar base primitives as synthesizable Verilog, and <em>could</em> be used as such:</p>
 
@@ -107,17 +107,13 @@ This generator methodology enables the creation of re-usable components and libr
 
 <h3 id="build-your-own-chisel-projects">Build Your Own Chisel Projects</h3>
 
-<p>See <a href="https://github.com/freechipsproject/chisel3/blob/master/SETUP.md">the setup instructions</a> for how to set up your environment to run Chisel locally.</p>
+<p>See <a href="https://github.com/chipsalliance/chisel3/blob/master/SETUP.md">the setup instructions</a> for how to set up your environment to run Chisel locally.</p>
 
 <p>When you’re ready to build your own circuits in Chisel, <strong>we recommend starting from the <a href="https://github.com/freechipsproject/chisel-template">Chisel Template</a> repository</strong>, which provides a pre-configured project, example design, and testbench. Follow the <a href="https://github.com/freechipsproject/chisel-template">chisel-template readme</a> to get started.</p>
 
 <p>If you insist on setting up your own project, the magic SBT lines are:</p>
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">resolvers</span> <span class="o">++=</span> <span class="nc">Seq</span><span class="o">(</span>
-  <span class="nv">Resolver</span><span class="o">.</span><span class="py">sonatypeRepo</span><span class="o">(</span><span class="s">"snapshots"</span><span class="o">),</span>
-  <span class="nv">Resolver</span><span class="o">.</span><span class="py">sonatypeRepo</span><span class="o">(</span><span class="s">"releases"</span><span class="o">)</span>
-<span class="o">)</span>
-<span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"edu.berkeley.cs"</span> <span class="o">%%</span> <span class="s">"chisel3"</span> <span class="o">%</span> <span class="s">"3.2-SNAPSHOT"</span>
-<span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"edu.berkeley.cs"</span> <span class="o">%%</span> <span class="s">"chisel-testers2"</span> <span class="o">%</span> <span class="s">"0.1-SNAPSHOT"</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"edu.berkeley.cs"</span> <span class="o">%%</span> <span class="s">"chisel3"</span> <span class="o">%</span> <span class="s">"3.4.0"</span>
+<span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"edu.berkeley.cs"</span> <span class="o">%%</span> <span class="s">"chiseltest"</span> <span class="o">%</span> <span class="s">"0.3.0"</span> <span class="o">%</span> <span class="s">"test"</span>
 </code></pre></div></div>
 
 <h3 id="design-verification">Design Verification</h3>
@@ -134,9 +130,9 @@ This generator methodology enables the creation of re-usable components and libr
 
 <ul>
   <li><a href="https://github.com/freechipsproject/chisel-cheatsheet/releases/latest/download/chisel_cheatsheet.pdf"><strong>Cheat Sheet</strong></a>, a 2-page reference of the base Chisel syntax and libraries</li>
-  <li><a href="https://github.com/freechipsproject/chisel3/wiki"><strong>Wiki</strong></a>, which contains various feature-specific tutorials and frequently-asked questions.</li>
+  <li><a href="https://github.com/chipsalliance/chisel3/wiki"><strong>Wiki</strong></a>, which contains various feature-specific tutorials and frequently-asked questions.</li>
   <li><a href="https://www.chisel-lang.org/api/latest/chisel3/index.html"><strong>ScalaDoc</strong></a>, a listing, description, and examples of the functionality exposed by Chisel</li>
-  <li><a href="https://gitter.im/freechipsproject/chisel3"><strong>Gitter</strong></a>, where you can ask questions or discuss anything Chisel</li>
+  <li><a href="https://gitter.im/chipsalliance/chisel3"><strong>Gitter</strong></a>, where you can ask questions or discuss anything Chisel</li>
   <li><a href="https://www.chisel-lang.org"><strong>Website</strong></a> (<a href="https://github.com/freechipsproject/www.chisel-lang.org/">source</a>)</li>
 </ul>
 
@@ -145,24 +141,24 @@ This generator methodology enables the creation of re-usable components and libr
 <h3 id="data-types-overview">Data Types Overview</h3>
 <p>These are the base data types for defining circuit components:</p>
 
-<p><img src="https://raw.githubusercontent.com/freechipsproject/chisel3/master/docs/src/images/type_hierarchy.svg?sanitize=true" alt="Image" /></p>
+<p><img src="https://raw.githubusercontent.com/chipsalliance/chisel3/master/docs/src/images/type_hierarchy.svg?sanitize=true" alt="Image" /></p>
 
 <h2 id="contributor-documentation">Contributor Documentation</h2>
 <p>This section describes how to get started contributing to Chisel itself, including how to test your version locally against other projects that pull in Chisel using <a href="https://www.scala-sbt.org/1.x/docs/Library-Dependencies.html">sbt’s managed dependencies</a>.</p>
 
 <h3 id="compiling-and-testing-chisel">Compiling and Testing Chisel</h3>
 
-<p>First, clone and build the master branch of <a href="https://github.com/freechipsproject/firrtl">FIRRTL</a> and <a href="https://github.com/freechipsproject/treadle">Treadle</a>, as the master branch of Chisel may depend on unreleased changes in those projects:</p>
+<p>First, clone and build the master branch of <a href="https://github.com/chipsalliance/firrtl">FIRRTL</a> and <a href="https://github.com/chipsalliance/treadle">Treadle</a>, as the master branch of Chisel may depend on unreleased changes in those projects:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/freechipsproject/firrtl.git
-git clone https://github.com/freechipsproject/treadle.git
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/chipsalliance/firrtl.git
+git clone https://github.com/chipsalliance/treadle.git
 pushd firrtl; sbt publishLocal; popd
 pushd treadle; sbt publishLocal; popd
 </code></pre></div></div>
 
 <p>Clone and build the Chisel library:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/freechipsproject/chisel3.git
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/chipsalliance/chisel3.git
 cd chisel3
 sbt compile
 </code></pre></div></div>
@@ -213,7 +209,7 @@ It provides two JVM system properties that, when set, will tell SBT to include F
 
 <p>Example use:</p>
 <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># From root of this repo</span>
-git clone git@github.com:freechipsproject/firrtl.git
+git clone git@github.com:chipsalliance/firrtl.git
 sbt <span class="nt">-Dsbt</span>.sourcemode<span class="o">=</span><span class="nb">true</span> <span class="nt">-Dsbt</span>.workspace<span class="o">=</span><span class="nv">$PWD</span>
 </code></pre></div></div>
 

@@ -39,7 +39,7 @@ name collisions, which are what triggers all those annoying signal name bumps!</
 
 <h3 id="i-want-to-force-a-signal-or-instance-name-to-something-how-do-i-do-that">I want to force a signal (or instance) name to something, how do I do that?</h3>
 
-<p>Use the <code class="highlighter-rouge">.suggestName</code> method, which is on all classes which subtype ‘Data’.</p>
+<p>Use the <code class="highlighter-rouge">.suggestName</code> method, which is on all classes which subtype <code class="highlighter-rouge">Data</code>.</p>
 
 <h3 id="all-this-prefixing-is-annoying-how-do-i-fix-it">All this prefixing is annoying, how do I fix it?</h3>
 
@@ -53,20 +53,17 @@ name collisions, which are what triggers all those annoying signal name bumps!</
 
   <span class="n">out</span> <span class="o">:=</span> <span class="n">add</span>
 <span class="o">}</span>
+</code></pre></div></div>
 
-<span class="nf">println</span><span class="o">(</span><span class="nv">ChiselStage</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">ExampleNoPrefix</span><span class="o">))</span>
-<span class="c1">// [[35minfo[0m] [0.003] Elaborating design...</span>
-<span class="c1">// [[35minfo[0m] [0.084] Done elaborating.</span>
-<span class="c1">// module ExampleNoPrefix(</span>
-<span class="c1">//   input        clock,</span>
-<span class="c1">//   input        reset,</span>
-<span class="c1">//   input  [1:0] in,</span>
-<span class="c1">//   output [1:0] out</span>
-<span class="c1">// );</span>
-<span class="c1">//   wire [1:0] _T_1 = in + in; // @[naming.md 30:27]</span>
-<span class="c1">//   assign out = _T_1 + in; // @[naming.md 30:32]</span>
-<span class="c1">// endmodule</span>
-<span class="c1">//</span>
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">ExampleNoPrefix</span><span class="p">(</span>
+  <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
+  <span class="kt">input</span>        <span class="n">reset</span><span class="p">,</span>
+  <span class="kt">input</span>  <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span>
+<span class="p">);</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">T_1</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 27:27]</span>
+  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="mi">_</span><span class="n">T_1</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 27:32]</span>
+<span class="k">endmodule</span>
 </code></pre></div></div>
 
 <h3 id="i-am-still-not-getting-the-name-i-want-for-example-inlining-an-instance-changes-my-name">I am still not getting the name I want. For example, inlining an instance changes my name!</h3>
@@ -95,36 +92,33 @@ name collisions, which are what triggers all those annoying signal name bumps!</
   <span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">3.</span><span class="n">W</span><span class="o">)))</span>
   <span class="n">out</span> <span class="o">:=</span> <span class="n">in</span>
 <span class="o">}</span>
+</code></pre></div></div>
 
-<span class="nf">println</span><span class="o">(</span><span class="nv">ChiselStage</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">WrapperExample</span><span class="o">))</span>
-<span class="c1">// [[35minfo[0m] [0.000] Elaborating design...</span>
-<span class="c1">// [[35minfo[0m] [0.030] Done elaborating.</span>
-<span class="c1">// module MyLeaf(</span>
-<span class="c1">//   input  [2:0] in,</span>
-<span class="c1">//   output [2:0] out</span>
-<span class="c1">// );</span>
-<span class="c1">//   assign out = in; // @[naming.md 67:7]</span>
-<span class="c1">// endmodule</span>
-<span class="c1">// module WrapperExample(</span>
-<span class="c1">//   input        clock,</span>
-<span class="c1">//   input        reset,</span>
-<span class="c1">//   input  [2:0] in,</span>
-<span class="c1">//   output [2:0] out</span>
-<span class="c1">// );</span>
-<span class="c1">//   wire [2:0] inst_in;</span>
-<span class="c1">//   wire [2:0] inst_out;</span>
-<span class="c1">//   wire [2:0] inst_in; // @[naming.md 57:20]</span>
-<span class="c1">//   wire [2:0] inst_out; // @[naming.md 57:20]</span>
-<span class="c1">//   MyLeaf inst ( // @[naming.md 57:20]</span>
-<span class="c1">//     .in(inst_in),</span>
-<span class="c1">//     .out(inst_out)</span>
-<span class="c1">//   );</span>
-<span class="c1">//   assign inst_out = inst_out; // @[naming.md 60:7]</span>
-<span class="c1">//   assign inst_in = inst_in; // @[naming.md 59:11]</span>
-<span class="c1">//   assign out = inst_out; // @[naming.md 50:7]</span>
-<span class="c1">//   assign inst_in = in; // @[naming.md 49:11]</span>
-<span class="c1">// endmodule</span>
-<span class="c1">//</span>
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">MyLeaf</span><span class="p">(</span>
+  <span class="kt">input</span>  <span class="p">[</span><span class="mi">2</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="p">[</span><span class="mi">2</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span>
+<span class="p">);</span>
+  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 67:7]</span>
+<span class="k">endmodule</span>
+<span class="k">module</span> <span class="n">WrapperExample</span><span class="p">(</span>
+  <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
+  <span class="kt">input</span>        <span class="n">reset</span><span class="p">,</span>
+  <span class="kt">input</span>  <span class="p">[</span><span class="mi">2</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="p">[</span><span class="mi">2</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span>
+<span class="p">);</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">2</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">inst_in</span><span class="p">;</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">2</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">inst_out</span><span class="p">;</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">2</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">inst_in</span><span class="p">;</span> <span class="c1">// @[naming.md 57:20]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">2</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">inst_out</span><span class="p">;</span> <span class="c1">// @[naming.md 57:20]</span>
+  <span class="n">MyLeaf</span> <span class="n">inst</span> <span class="p">(</span> <span class="c1">// @[naming.md 57:20]</span>
+    <span class="p">.</span><span class="n">in</span><span class="p">(</span><span class="n">inst_in</span><span class="p">),</span>
+    <span class="p">.</span><span class="n">out</span><span class="p">(</span><span class="n">inst_out</span><span class="p">)</span>
+  <span class="p">);</span>
+  <span class="k">assign</span> <span class="n">inst_out</span> <span class="o">=</span> <span class="n">inst_out</span><span class="p">;</span> <span class="c1">// @[naming.md 60:7]</span>
+  <span class="k">assign</span> <span class="n">inst_in</span> <span class="o">=</span> <span class="n">inst_in</span><span class="p">;</span> <span class="c1">// @[naming.md 59:11]</span>
+  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="n">inst_out</span><span class="p">;</span> <span class="c1">// @[naming.md 50:7]</span>
+  <span class="k">assign</span> <span class="n">inst_in</span> <span class="o">=</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 49:11]</span>
+<span class="k">endmodule</span>
 </code></pre></div></div>
 
 <p>This can be used to rename instances and non-aggregate typed signals.</p>

@@ -21,17 +21,17 @@ systemic name-stability issues, please refer to the naming <a href="../cookbooks
 
 <h3 id="compiler-plugin">Compiler Plugin</h3>
 
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3.internal.plugin._</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Imports used by the following examples</span>
 <span class="k">import</span> <span class="nn">chisel3._</span>
-<span class="k">import</span> <span class="nn">chisel3.experimental.prefix</span>
-<span class="k">import</span> <span class="nn">chisel3.experimental.noPrefix</span>
+<span class="k">import</span> <span class="nn">chisel3.experimental.</span><span class="o">{</span><span class="n">prefix</span><span class="o">,</span> <span class="n">noPrefix</span><span class="o">}</span>
 <span class="k">import</span> <span class="nn">chisel3.stage.ChiselStage</span>
 </code></pre></div></div>
 
 <p>With the release of Chisel 3.4, users should add the following line to their build.sbt settings to get the improved
 naming:</p>
 
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">addCompilerPlugin</span><span class="o">(</span><span class="s">"edu.berkeley.cs"</span> <span class="o">%</span> <span class="s">"chisel3-plugin"</span> <span class="o">%</span> <span class="n">chiselVersion</span> <span class="n">cross</span> <span class="nv">CrossVersion</span><span class="o">.</span><span class="py">full</span><span class="o">)</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// chiselVersion is the String version (eg. "3.4.0")</span>
+<span class="nf">addCompilerPlugin</span><span class="o">(</span><span class="s">"edu.berkeley.cs"</span> <span class="o">%</span> <span class="s">"chisel3-plugin"</span> <span class="o">%</span> <span class="n">chiselVersion</span> <span class="n">cross</span> <span class="nv">CrossVersion</span><span class="o">.</span><span class="py">full</span><span class="o">)</span>
 </code></pre></div></div>
 
 <p>This plugin will run after the ‘typer’ phase of the Scala compiler. It looks for any user code which is of the form
@@ -44,22 +44,20 @@ side with a call to <code class="highlighter-rouge">autoNameRecursively</code>, 
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">MyBundle</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">foo</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">3.</span><span class="n">W</span><span class="o">))</span>
-  <span class="c1">// val foo = autoNameRecursively("foo", Input(UInt(3.W)))</span>
+  <span class="c1">// val foo = autoNameRecursively("foo")(Input(UInt(3.W)))</span>
 <span class="o">}</span>
 <span class="k">class</span> <span class="nc">Example1</span> <span class="k">extends</span> <span class="nc">MultiIOModule</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyBundle</span><span class="o">())</span>
-  <span class="c1">// val io = autoNameRecursively("io", IO(new MyBundle()))</span>
+  <span class="c1">// val io = autoNameRecursively("io")(IO(new MyBundle()))</span>
 <span class="o">}</span>
-<span class="nf">println</span><span class="o">(</span><span class="nv">ChiselStage</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">Example1</span><span class="o">))</span>
-<span class="c1">// [[35minfo[0m] [0.000] Elaborating design...</span>
-<span class="c1">// [[35minfo[0m] [0.084] Done elaborating.</span>
-<span class="c1">// module Example1(</span>
-<span class="c1">//   input        clock,</span>
-<span class="c1">//   input        reset,</span>
-<span class="c1">//   input  [2:0] io_foo</span>
-<span class="c1">// );</span>
-<span class="c1">// endmodule</span>
-<span class="c1">//</span>
+</code></pre></div></div>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">Example1</span><span class="p">(</span>
+  <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
+  <span class="kt">input</span>        <span class="n">reset</span><span class="p">,</span>
+  <span class="kt">input</span>  <span class="p">[</span><span class="mi">2</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">io_foo</span>
+<span class="p">);</span>
+<span class="k">endmodule</span>
 </code></pre></div></div>
 
 <p>Otherwise, it is rewritten to also include the name as a prefix to any signals generated while executing the right-hand-
@@ -67,70 +65,88 @@ side of the val declaration:</p>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Example2</span> <span class="k">extends</span> <span class="nc">MultiIOModule</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">in</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">2.</span><span class="n">W</span><span class="o">)))</span>
-  <span class="c1">// val in = autoNameRecursively("in", prefix("in")(IO(Input(UInt(2.W)))))</span>
+  <span class="c1">// val in = autoNameRecursively("in")(prefix("in")(IO(Input(UInt(2.W)))))</span>
 
   <span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">2.</span><span class="n">W</span><span class="o">)))</span>
-  <span class="c1">// val out = autoNameRecursively("out", prefix("out")(IO(Output(UInt(2.W)))))</span>
+  <span class="c1">// val out = autoNameRecursively("out")(prefix("out")(IO(Output(UInt(2.W)))))</span>
 
   <span class="k">def</span> <span class="nf">inXin</span><span class="o">()</span> <span class="k">=</span> <span class="n">in</span> <span class="o">*</span> <span class="n">in</span>
 
   <span class="k">val</span> <span class="nv">add</span> <span class="k">=</span> <span class="mf">3.</span><span class="n">U</span> <span class="o">+</span> <span class="nf">inXin</span><span class="o">()</span>
-  <span class="c1">// val add = autoNameRecursively("add", prefix("add")(3.U + inXin()))</span>
+  <span class="c1">// val add = autoNameRecursively("add")(prefix("add")(3.U + inXin()))</span>
   <span class="c1">// Note that the intermediate result of the multiplication is prefixed with `add`</span>
 
   <span class="n">out</span> <span class="o">:=</span> <span class="n">add</span> <span class="o">+</span> <span class="mf">1.</span><span class="n">U</span>
 <span class="o">}</span>
+</code></pre></div></div>
 
-<span class="nf">println</span><span class="o">(</span><span class="nv">ChiselStage</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">Example2</span><span class="o">))</span>
-<span class="c1">// [[35minfo[0m] [0.000] Elaborating design...</span>
-<span class="c1">// [[35minfo[0m] [0.016] Done elaborating.</span>
-<span class="c1">// module Example2(</span>
-<span class="c1">//   input        clock,</span>
-<span class="c1">//   input        reset,</span>
-<span class="c1">//   input  [1:0] in,</span>
-<span class="c1">//   output [1:0] out</span>
-<span class="c1">// );</span>
-<span class="c1">//   wire [3:0] _add_T = in * in; // @[naming.md 51:20]</span>
-<span class="c1">//   wire [3:0] add = 4'h3 + _add_T; // @[naming.md 53:17]</span>
-<span class="c1">//   wire [3:0] _out_T_1 = add + 4'h1; // @[naming.md 57:14]</span>
-<span class="c1">//   assign out = _out_T_1[1:0]; // @[naming.md 57:7]</span>
-<span class="c1">// endmodule</span>
-<span class="c1">//</span>
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">Example2</span><span class="p">(</span>
+  <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
+  <span class="kt">input</span>        <span class="n">reset</span><span class="p">,</span>
+  <span class="kt">input</span>  <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span>
+<span class="p">);</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">add_T</span> <span class="o">=</span> <span class="n">in</span> <span class="o">*</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 48:20]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">add</span> <span class="o">=</span> <span class="mh">4'h3</span> <span class="o">+</span> <span class="mi">_</span><span class="n">add_T</span><span class="p">;</span> <span class="c1">// @[naming.md 50:17]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">out_T_1</span> <span class="o">=</span> <span class="n">add</span> <span class="o">+</span> <span class="mh">4'h1</span><span class="p">;</span> <span class="c1">// @[naming.md 54:14]</span>
+  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="mi">_</span><span class="n">out_T_1</span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">];</span> <span class="c1">// @[naming.md 54:7]</span>
+<span class="k">endmodule</span>
 </code></pre></div></div>
 
 <p>Note that the naming also works if the hardware type is nested in an <code class="highlighter-rouge">Option</code> or a subtype of <code class="highlighter-rouge">Iterable</code>:</p>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Example3</span> <span class="k">extends</span> <span class="nc">MultiIOModule</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">in</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">2.</span><span class="n">W</span><span class="o">)))</span>
-  <span class="c1">// val in = autoNameRecursively("in", prefix("in")(IO(Input(UInt(2.W)))))</span>
+  <span class="c1">// val in = autoNameRecursively("in")(prefix("in")(IO(Input(UInt(2.W)))))</span>
 
   <span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">()))</span>
-  <span class="c1">// val out = autoNameRecursively("out", prefix("out")(IO(Output(UInt(2.W)))))</span>
+  <span class="c1">// val out = autoNameRecursively("out")(prefix("out")(IO(Output(UInt(2.W)))))</span>
 
   <span class="k">def</span> <span class="nf">inXin</span><span class="o">()</span> <span class="k">=</span> <span class="n">in</span> <span class="o">*</span> <span class="n">in</span>
 
   <span class="k">val</span> <span class="nv">opt</span> <span class="k">=</span> <span class="nc">Some</span><span class="o">(</span><span class="mf">3.</span><span class="n">U</span> <span class="o">+</span> <span class="nf">inXin</span><span class="o">())</span>
   <span class="c1">// Note that the intermediate result of the inXin() is prefixed with `opt`:</span>
-  <span class="c1">// val opt = autoNameRecursively("opt", prefix("opt")(Some(3.U + inXin())))</span>
+  <span class="c1">// val opt = autoNameRecursively("opt")(prefix("opt")(Some(3.U + inXin())))</span>
 
   <span class="n">out</span> <span class="o">:=</span> <span class="nv">opt</span><span class="o">.</span><span class="py">get</span> <span class="o">+</span> <span class="mf">1.</span><span class="n">U</span>
 <span class="o">}</span>
-
-<span class="nf">println</span><span class="o">(</span><span class="nv">ChiselStage</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">Example3</span><span class="o">))</span>
-<span class="c1">// [[35minfo[0m] [0.000] Elaborating design...</span>
-<span class="c1">// [[35minfo[0m] [0.007] Done elaborating.</span>
-<span class="c1">// module Example3(</span>
-<span class="c1">//   input        clock,</span>
-<span class="c1">//   input        reset,</span>
-<span class="c1">//   input  [1:0] in,</span>
-<span class="c1">//   output [3:0] out</span>
-<span class="c1">// );</span>
-<span class="c1">//   wire [3:0] _opt_T = in * in; // @[naming.md 74:20]</span>
-<span class="c1">//   wire [3:0] opt = 4'h3 + _opt_T; // @[naming.md 76:22]</span>
-<span class="c1">//   assign out = opt + 4'h1; // @[naming.md 80:18]</span>
-<span class="c1">// endmodule</span>
-<span class="c1">//</span>
 </code></pre></div></div>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">Example3</span><span class="p">(</span>
+  <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
+  <span class="kt">input</span>        <span class="n">reset</span><span class="p">,</span>
+  <span class="kt">input</span>  <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span>
+<span class="p">);</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">opt_T</span> <span class="o">=</span> <span class="n">in</span> <span class="o">*</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 74:20]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">opt</span> <span class="o">=</span> <span class="mh">4'h3</span> <span class="o">+</span> <span class="mi">_</span><span class="n">opt_T</span><span class="p">;</span> <span class="c1">// @[naming.md 76:22]</span>
+  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="n">opt</span> <span class="o">+</span> <span class="mh">4'h1</span><span class="p">;</span> <span class="c1">// @[naming.md 80:18]</span>
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
+<p>There is also a slight variant (<code class="highlighter-rouge">autoNameRecursivelyProduct</code>) for naming hardware with names provided by an unapply:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">UnapplyExample</span> <span class="k">extends</span> <span class="nc">MultiIOModule</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="nf">mkIO</span><span class="o">()</span> <span class="k">=</span> <span class="o">(</span><span class="nc">IO</span><span class="o">(</span><span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">2.</span><span class="n">W</span><span class="o">))),</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">())))</span>
+  <span class="nf">val</span> <span class="o">(</span><span class="n">in</span><span class="o">,</span> <span class="n">out</span><span class="o">)</span> <span class="k">=</span> <span class="nf">mkIO</span><span class="o">()</span>
+  <span class="c1">// val (in, out) = autoNameRecursivelyProduct(List(Some("in"), Some("out")))(mkIO())</span>
+
+  <span class="n">out</span> <span class="o">:=</span> <span class="n">in</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">UnapplyExample</span><span class="p">(</span>
+  <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
+  <span class="kt">input</span>        <span class="n">reset</span><span class="p">,</span>
+  <span class="kt">input</span>  <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span>
+<span class="p">);</span>
+  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 98:7]</span>
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
+<p>Note that the compiler plugin will not insert a prefix in these cases because it is ambiguous what the prefix should be.
+Users who desire a prefix are encouraged to provide one as <a href="#prefixing">described below</a>.</p>
 
 <h3 id="prefixing">Prefixing</h3>
 
@@ -157,36 +173,29 @@ but don’t want to influence other names in the module.</p>
 
   <span class="n">out</span> <span class="o">:=</span> <span class="nf">prefix</span><span class="o">(</span><span class="s">"ECO"</span><span class="o">)</span> <span class="o">{</span> <span class="n">add</span> <span class="o">+</span> <span class="mf">1.</span><span class="n">U</span> <span class="o">+</span> <span class="n">in</span> <span class="o">}</span>
 <span class="o">}</span>
+</code></pre></div></div>
 
-<span class="nf">println</span><span class="o">(</span><span class="nv">ChiselStage</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">Example4</span><span class="o">))</span>
-<span class="c1">// [[35minfo[0m] [0.000] Elaborating design...</span>
-<span class="c1">// [[35minfo[0m] [0.007] Done elaborating.</span>
-<span class="c1">// module Example4(</span>
-<span class="c1">//   input        clock,</span>
-<span class="c1">//   input        reset,</span>
-<span class="c1">//   input  [1:0] in,</span>
-<span class="c1">//   output [1:0] out</span>
-<span class="c1">// );</span>
-<span class="c1">//   wire [1:0] _add_T_1 = in + in; // @[naming.md 94:16]</span>
-<span class="c1">//   wire [1:0] add = _add_T_1 + in; // @[naming.md 94:21]</span>
-<span class="c1">//   assign out = add + 2'h1; // @[naming.md 96:14]</span>
-<span class="c1">// endmodule</span>
-<span class="c1">// </span>
-<span class="nf">println</span><span class="o">(</span><span class="nv">ChiselStage</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">Example5</span><span class="o">))</span>
-<span class="c1">// [[35minfo[0m] [0.001] Elaborating design...</span>
-<span class="c1">// [[35minfo[0m] [0.012] Done elaborating.</span>
-<span class="c1">// module Example5(</span>
-<span class="c1">//   input        clock,</span>
-<span class="c1">//   input        reset,</span>
-<span class="c1">//   input  [1:0] in,</span>
-<span class="c1">//   output [1:0] out</span>
-<span class="c1">// );</span>
-<span class="c1">//   wire [1:0] _add_T_1 = in + in; // @[naming.md 104:16]</span>
-<span class="c1">//   wire [1:0] add = _add_T_1 + in; // @[naming.md 104:21]</span>
-<span class="c1">//   wire [1:0] _out_ECO_T_1 = add + 2'h1; // @[naming.md 106:30]</span>
-<span class="c1">//   assign out = _out_ECO_T_1 + in; // @[naming.md 106:36]</span>
-<span class="c1">// endmodule</span>
-<span class="c1">//</span>
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">Example4</span><span class="p">(</span>
+  <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
+  <span class="kt">input</span>        <span class="n">reset</span><span class="p">,</span>
+  <span class="kt">input</span>  <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span>
+<span class="p">);</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">add_T_1</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 115:16]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">add</span> <span class="o">=</span> <span class="mi">_</span><span class="n">add_T_1</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 115:21]</span>
+  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="n">add</span> <span class="o">+</span> <span class="mh">2'h1</span><span class="p">;</span> <span class="c1">// @[naming.md 117:14]</span>
+<span class="k">endmodule</span>
+<span class="k">module</span> <span class="n">Example5</span><span class="p">(</span>
+  <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
+  <span class="kt">input</span>        <span class="n">reset</span><span class="p">,</span>
+  <span class="kt">input</span>  <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span>
+<span class="p">);</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">add_T_1</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 125:16]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">add</span> <span class="o">=</span> <span class="mi">_</span><span class="n">add_T_1</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 125:21]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">out_ECO_T_1</span> <span class="o">=</span> <span class="n">add</span> <span class="o">+</span> <span class="mh">2'h1</span><span class="p">;</span> <span class="c1">// @[naming.md 127:30]</span>
+  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="mi">_</span><span class="n">out_ECO_T_1</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 127:36]</span>
+<span class="k">endmodule</span>
 </code></pre></div></div>
 
 <p>Also note that the prefixes append to each other (including the prefix generated by the compiler plugin):</p>
@@ -199,20 +208,17 @@ but don’t want to influence other names in the module.</p>
 
   <span class="n">out</span> <span class="o">:=</span> <span class="n">add</span>
 <span class="o">}</span>
+</code></pre></div></div>
 
-<span class="nf">println</span><span class="o">(</span><span class="nv">ChiselStage</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">Example6</span><span class="o">))</span>
-<span class="c1">// [[35minfo[0m] [0.000] Elaborating design...</span>
-<span class="c1">// [[35minfo[0m] [0.007] Done elaborating.</span>
-<span class="c1">// module Example6(</span>
-<span class="c1">//   input        clock,</span>
-<span class="c1">//   input        reset,</span>
-<span class="c1">//   input  [1:0] in,</span>
-<span class="c1">//   output [1:0] out</span>
-<span class="c1">// );</span>
-<span class="c1">//   wire [1:0] _add_foo_T_1 = in + in; // @[naming.md 123:32]</span>
-<span class="c1">//   assign out = _add_foo_T_1 + in; // @[naming.md 123:37]</span>
-<span class="c1">// endmodule</span>
-<span class="c1">//</span>
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">Example6</span><span class="p">(</span>
+  <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
+  <span class="kt">input</span>        <span class="n">reset</span><span class="p">,</span>
+  <span class="kt">input</span>  <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span>
+<span class="p">);</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">add_foo_T_1</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 147:32]</span>
+  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="mi">_</span><span class="n">add_foo_T_1</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 147:37]</span>
+<span class="k">endmodule</span>
 </code></pre></div></div>
 
 <p>Sometimes you may want to disable the prefixing. This might occur if you are writing a library function and
@@ -226,20 +232,17 @@ don’t want the prefixing behavior. In this case, you can use the <code class="
 
   <span class="n">out</span> <span class="o">:=</span> <span class="n">add</span>
 <span class="o">}</span>
+</code></pre></div></div>
 
-<span class="nf">println</span><span class="o">(</span><span class="nv">ChiselStage</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">Example7</span><span class="o">))</span>
-<span class="c1">// [[35minfo[0m] [0.000] Elaborating design...</span>
-<span class="c1">// [[35minfo[0m] [0.007] Done elaborating.</span>
-<span class="c1">// module Example7(</span>
-<span class="c1">//   input        clock,</span>
-<span class="c1">//   input        reset,</span>
-<span class="c1">//   input  [1:0] in,</span>
-<span class="c1">//   output [1:0] out</span>
-<span class="c1">// );</span>
-<span class="c1">//   wire [1:0] _T_1 = in + in; // @[naming.md 139:27]</span>
-<span class="c1">//   assign out = _T_1 + in; // @[naming.md 139:32]</span>
-<span class="c1">// endmodule</span>
-<span class="c1">//</span>
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">Example7</span><span class="p">(</span>
+  <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
+  <span class="kt">input</span>        <span class="n">reset</span><span class="p">,</span>
+  <span class="kt">input</span>  <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span>
+<span class="p">);</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">T_1</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 166:27]</span>
+  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="mi">_</span><span class="n">T_1</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 166:32]</span>
+<span class="k">endmodule</span>
 </code></pre></div></div>
 
 <h3 id="suggest-a-signals-name-or-the-instance-name-of-a-module">Suggest a Signal’s Name (or the instance name of a Module)</h3>
@@ -255,20 +258,17 @@ name will still be prefixed (including by the plugin). You can always use the <c
 
   <span class="n">out</span> <span class="o">:=</span> <span class="n">add</span>
 <span class="o">}</span>
+</code></pre></div></div>
 
-<span class="nf">println</span><span class="o">(</span><span class="nv">ChiselStage</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">Example8</span><span class="o">))</span>
-<span class="c1">// [[35minfo[0m] [0.000] Elaborating design...</span>
-<span class="c1">// [[35minfo[0m] [0.007] Done elaborating.</span>
-<span class="c1">// module Example8(</span>
-<span class="c1">//   input        clock,</span>
-<span class="c1">//   input        reset,</span>
-<span class="c1">//   input  [1:0] in,</span>
-<span class="c1">//   output [1:0] out</span>
-<span class="c1">// );</span>
-<span class="c1">//   wire [1:0] add_foo = in + in; // @[naming.md 155:23]</span>
-<span class="c1">//   assign out = in + add_foo; // @[naming.md 155:17]</span>
-<span class="c1">// endmodule</span>
-<span class="c1">//</span>
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">Example8</span><span class="p">(</span>
+  <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
+  <span class="kt">input</span>        <span class="n">reset</span><span class="p">,</span>
+  <span class="kt">input</span>  <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span>
+<span class="p">);</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">add_foo</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 185:23]</span>
+  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="n">add_foo</span><span class="p">;</span> <span class="c1">// @[naming.md 185:17]</span>
+<span class="k">endmodule</span>
 </code></pre></div></div>
 
 <h3 id="set-a-module-name">Set a Module Name</h3>
@@ -286,33 +286,26 @@ names more stable and is highly recommended to do.</p>
 
   <span class="n">out</span> <span class="o">:=</span> <span class="n">add</span>
 <span class="o">}</span>
+</code></pre></div></div>
 
-<span class="nf">println</span><span class="o">(</span><span class="nv">ChiselStage</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">Example9</span><span class="o">(</span><span class="mi">8</span><span class="o">)))</span>
-<span class="c1">// [[35minfo[0m] [0.000] Elaborating design...</span>
-<span class="c1">// [[35minfo[0m] [0.008] Done elaborating.</span>
-<span class="c1">// module EXAMPLE9WITHWIDTH8(</span>
-<span class="c1">//   input        clock,</span>
-<span class="c1">//   input        reset,</span>
-<span class="c1">//   input  [7:0] in,</span>
-<span class="c1">//   output [7:0] out</span>
-<span class="c1">// );</span>
-<span class="c1">//   wire [7:0] add_foo = in + in; // @[naming.md 172:23]</span>
-<span class="c1">//   assign out = in + add_foo; // @[naming.md 172:17]</span>
-<span class="c1">// endmodule</span>
-<span class="c1">// </span>
-<span class="nf">println</span><span class="o">(</span><span class="nv">ChiselStage</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">Example9</span><span class="o">(</span><span class="mi">1</span><span class="o">)))</span>
-<span class="c1">// [[35minfo[0m] [0.000] Elaborating design...</span>
-<span class="c1">// [[35minfo[0m] [0.001] Done elaborating.</span>
-<span class="c1">// module EXAMPLE9WITHWIDTH1(</span>
-<span class="c1">//   input   clock,</span>
-<span class="c1">//   input   reset,</span>
-<span class="c1">//   input   in,</span>
-<span class="c1">//   output  out</span>
-<span class="c1">// );</span>
-<span class="c1">//   wire  add_foo = in + in; // @[naming.md 172:23]</span>
-<span class="c1">//   assign out = in + add_foo; // @[naming.md 172:17]</span>
-<span class="c1">// endmodule</span>
-<span class="c1">//</span>
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">EXAMPLE9WITHWIDTH8</span><span class="p">(</span>
+  <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
+  <span class="kt">input</span>        <span class="n">reset</span><span class="p">,</span>
+  <span class="kt">input</span>  <span class="p">[</span><span class="mi">7</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="p">[</span><span class="mi">7</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span>
+<span class="p">);</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">7</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">add_foo</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 205:23]</span>
+  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="n">add_foo</span><span class="p">;</span> <span class="c1">// @[naming.md 205:17]</span>
+<span class="k">endmodule</span>
+<span class="k">module</span> <span class="n">EXAMPLE9WITHWIDTH1</span><span class="p">(</span>
+  <span class="kt">input</span>   <span class="n">clock</span><span class="p">,</span>
+  <span class="kt">input</span>   <span class="n">reset</span><span class="p">,</span>
+  <span class="kt">input</span>   <span class="n">in</span><span class="p">,</span>
+  <span class="kt">output</span>  <span class="n">out</span>
+<span class="p">);</span>
+  <span class="kt">wire</span>  <span class="n">add_foo</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 205:23]</span>
+  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="n">add_foo</span><span class="p">;</span> <span class="c1">// @[naming.md 205:17]</span>
+<span class="k">endmodule</span>
 </code></pre></div></div>
 
 <h3 id="reflection-naming">Reflection Naming</h3>

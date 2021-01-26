@@ -108,21 +108,15 @@ that a user datatype also does not require <code class="highlighter-rouge">new</
 
 <p>This generates the following Verilog:</p>
 
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3.stage.ChiselStage</span>
-
-<span class="nf">println</span><span class="o">(</span><span class="nv">ChiselStage</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyFlippedModule</span><span class="o">()))</span>
-<span class="c1">// [[35minfo[0m] [0.000] Elaborating design...</span>
-<span class="c1">// [[35minfo[0m] [0.117] Done elaborating.</span>
-<span class="c1">// module MyFlippedModule(</span>
-<span class="c1">//   input   normalBundle_a,</span>
-<span class="c1">//   output  normalBundle_b,</span>
-<span class="c1">//   output  flippedBundle_a,</span>
-<span class="c1">//   input   flippedBundle_b</span>
-<span class="c1">// );</span>
-<span class="c1">//   assign normalBundle_b = normalBundle_a; // @[bundles-and-vecs.md 73:18]</span>
-<span class="c1">//   assign flippedBundle_a = flippedBundle_b; // @[bundles-and-vecs.md 78:19]</span>
-<span class="c1">// endmodule</span>
-<span class="c1">//</span>
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">MyFlippedModule</span><span class="p">(</span>
+  <span class="kt">input</span>   <span class="n">normalBundle_a</span><span class="p">,</span>
+  <span class="kt">output</span>  <span class="n">normalBundle_b</span><span class="p">,</span>
+  <span class="kt">output</span>  <span class="n">flippedBundle_a</span><span class="p">,</span>
+  <span class="kt">input</span>   <span class="n">flippedBundle_b</span>
+<span class="p">);</span>
+  <span class="k">assign</span> <span class="n">normalBundle_b</span> <span class="o">=</span> <span class="n">normalBundle_a</span><span class="p">;</span> <span class="c1">// @[bundles-and-vecs.md 73:18]</span>
+  <span class="k">assign</span> <span class="n">flippedBundle_a</span> <span class="o">=</span> <span class="n">flippedBundle_b</span><span class="p">;</span> <span class="c1">// @[bundles-and-vecs.md 78:19]</span>
+<span class="k">endmodule</span>
 </code></pre></div></div>
 
 <h3 id="mixedvec">MixedVec</h3>
