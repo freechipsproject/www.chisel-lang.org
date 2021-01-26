@@ -1,0 +1,15 @@
+name: Chisel/FIRRTL
+plugins:
+- jekyll-redirect-from
+baseurl: ''
+description: |-
+  Chisel/FIRRTL
+  Hardware Compiler Framework
+highlighter: rouge
+docs: true
+collections:
+  tut:
+    output: true
+version: 0.1.0-SNAPSHOT
+org: docs
+markdown: kramdown
