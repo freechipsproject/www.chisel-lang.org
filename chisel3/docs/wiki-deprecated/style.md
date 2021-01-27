@@ -10,7 +10,6 @@ Writing your code so someone else (or yourself) can grok it later is important
 to code health and quality.
 
 ## Filenames
-
 The source file name consists of the case-sensitive name of the top-level class
 it contains, plus ".scala".
 
@@ -47,7 +46,6 @@ import chisel3._
 ```
 
 ## Imports
-
 Avoid wildcard ( ._ ) imports, with the exception of chisel3._
 All other imports must call out used methods.
 `import chisel3._` must be first, and separated from remaining imports with an extra blank line.
@@ -68,7 +66,6 @@ val myClassOne = new ClassOne
 ```
 
 ## Tests
-
 Test classes are named starting with the name of the class they are testing, and
 ending with "Test".
 Test files must start with the name of the class you are testing and end with
@@ -82,7 +79,6 @@ package tests
 ```
 
 ## Comments
-
 We use scaladoc to automatically generate documentation from the source code.
 
 ```scala
@@ -271,10 +267,9 @@ of camel case.
 Note that the casing of the original words is almost entirely disregarded.
 Example:
 
-| Prose form     | UpperCamelCase | lowerCamelCase | Incorrect         |
-|:---------------|:---------------|:---------------|:------------------|
-| find GCD       | FindGcd        | findGcd        | ~~findGCD~~       |
-| state for FSM  | StateForFsm    | stateForFsm    | ~~stateForFSM~~   |
-| mock dut       | MockDut        | mockDut        | ~~MockDUT~~       |
-| FIFO Generator | FifoGenerator  | fifoGenerator  | ~~FIFOGenerator~~ |
-
+Prose form     | UpperCamelCase | lowerCamelCase | Incorrect
+:------------- | :------------- | :------------- | :------------
+find GCD       | FindGcd        | findGcd        | ~~findGCD~~
+state for FSM  | StateForFsm    | stateForFsm    | ~~stateForFSM~~
+mock dut       | MockDut        | mockDut        | ~~MockDUT~~
+FIFO Generator | FifoGenerator  | fifoGenerator  | ~~FIFOGenerator~~
