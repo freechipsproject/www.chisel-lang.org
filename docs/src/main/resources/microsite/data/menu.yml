@@ -6,7 +6,7 @@ options:
     menu_section: chisel3
     url: chisel3/docs/introduction.html
   - title: Resources
-    url:chisel3/docs/resources/resources.html
+    url: chisel3/docs/resources/resources.html
     menu_type: chisel3
     menu_section: chisel3
   - title: Cookbooks
@@ -82,7 +82,7 @@ options:
         menu_type: chisel3
         menu_section: interfaces-and-connections
       - title: Blackboxes
-         url: chisel3/docs/explanations/blackboxes.html
+        url: chisel3/docs/explanations/blackboxes.html
         menu_type: chisel3
         menu_section: blackboxes
       - title: Enumerations
