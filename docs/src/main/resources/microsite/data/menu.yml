@@ -9,6 +9,9 @@ options:
     url: chisel3/docs/resources/resources.html
     menu_type: chisel3
     menu_section: chisel3
+    nested_options:
+      - title: FAQ
+        url: chisel3/docs/resources/faqs.html
   - title: Cookbooks
     menu_type: chisel3
     menu_section: chisel3
