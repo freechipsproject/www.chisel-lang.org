@@ -49,6 +49,8 @@
 - [`@johnsbrew`](https://github.com/johnsbrew)
 - [`@jwright6323`](https://github.com/jwright6323)
 - [`@kasanovic`](https://github.com/kasanovic)
+- [`@learning-chip`](https://github.com/learning-chip)
+- [`@lizhirui`](https://github.com/lizhirui)
 - [`@ljwljwljwljw`](https://github.com/ljwljwljwljw)
 - [`@lmy441900`](https://github.com/lmy441900)
 - [`@lu-ping`](https://github.com/lu-ping)
