@@ -15,8 +15,9 @@ ga('send', 'pageview');
 
 <h2 id="rom">ROM</h2>
 
-<p>Users can define read only memories with a <code class="language-plaintext highlighter-rouge">Vec</code>:
-``` scala mdoc:compile-only
+<p>Users can define read only memories with a <code class="language-plaintext highlighter-rouge">Vec</code>:</p>
+
+<p>``` scala mdoc:compile-only
     VecInit(inits: Seq[T])
     VecInit(elt0: T, elts: T*)</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
@@ -56,6 +57,7 @@ If the same memory address is both written and sequentially read on the same clo
 Values on the read data port are not guaranteed to be held until the next read cycle. If that is the desired behavior, external logic to hold the last read value must be added.
 
 #### Read port/write port
+
 Ports into `SyncReadMem`s are created by applying a `UInt` index.  A 1024-entry SRAM with one write port and one read port might be expressed as follows:
 
 ```scala
@@ -79,9 +81,10 @@ class ReadWriteSmem extends Module {
 
 <p>Below is an example waveform of the one write port/one read port <code class="language-plaintext highlighter-rouge">SyncReadMem</code> with <a href="#masks">masks</a>. Note that the signal names will differ from the exact wire names generated for the <code class="language-plaintext highlighter-rouge">SyncReadMem</code>. With masking, it is also possible that multiple RTL arrays will be generated with the behavior below.</p>
 
-<p><img src="https://svg.wavedrom.com/github/freechipsproject/www.chisel-lang.org/master/docs/src/main/tut/chisel3/memories_waveforms/smem_read_write.json" alt="read/write ports example waveform" /></p>
+<p><img src="https://svg.wavedrom.com/github/freechipsproject/www.chisel-lang.org/master/docs/src/main/resources/json/smem_read_write.json" alt="read/write ports example waveform" /></p>
 
 <h4 id="single-ported">Single-ported</h4>
+
 <p>Single-ported SRAMs can be inferred when the read and write conditions are mutually exclusive in the same <code class="language-plaintext highlighter-rouge">when</code> chain:</p>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3._</span>
@@ -109,7 +112,7 @@ class ReadWriteSmem extends Module {
 
 <p>Here is an example single read/write port waveform, with <a href="#masks">masks</a> (again, generated signal names and number of arrays may differ):</p>
 
-<p><img src="https://svg.wavedrom.com/github/freechipsproject/www.chisel-lang.org/master/docs/src/main/tut/chisel3/memories_waveforms/smem_rw.json" alt="read/write ports example waveform" /></p>
+<p><img src="https://svg.wavedrom.com/github/freechipsproject/www.chisel-lang.org/master/docs/src/main/resources/json/smem_rw.json" alt="read/write ports example waveform" /></p>
 
 <h3 id="mem-combinationalasynchronous-read-sequentialsynchronous-write"><code class="language-plaintext highlighter-rouge">Mem</code>: combinational/asynchronous-read, sequential/synchronous-write</h3>
 
@@ -170,6 +173,12 @@ class ReadWriteSmem extends Module {
   <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div></div>
+
+<h3 id="memory-initialization">Memory Initialization</h3>
+
+<p>Chisel memories can be initialized from an external <code class="language-plaintext highlighter-rouge">binary</code> or <code class="language-plaintext highlighter-rouge">hex</code> file emitting proper Verilog for synthesis or simulation. There are multiple modes of initialization.</p>
+
+<p>For more information, check the experimental docs on <a href="../appendix/experimental-features#loading-memories">Loading Memories</a> feature.</p>
 
 </section></div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/highlight/highlight.pack.js"></script><script src="/lunr/lunr.js"></script><script>
 // For all code blocks, copy the language from the containing div

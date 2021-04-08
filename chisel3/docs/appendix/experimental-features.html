@@ -16,7 +16,7 @@ ga('send', 'pageview');
   <li><a href="#module-variants">Module Variants</a></li>
   <li><a href="#bundle-literals">Module Variants</a></li>
   <li><a href="#interval-type">Interval Type</a></li>
-  <li><a href="#loading-memories">Loading Memories in Simulation</a></li>
+  <li><a href="#loading-memories">Loading Memories for simulation or FPGA initialization</a></li>
 </ul>
 
 <h3 id="fixedpoint--">FixedPoint  <a name="fixed-point"></a></h3>
@@ -246,47 +246,146 @@ behavior of squeeze with inputs outside of the produced range is undefined.</p>
   </tbody>
 </table>
 
-<h2 id="loading-memories-in-simulation-">Loading Memories in simulation <a name="loading-memories"></a></h2>
+<h2 id="loading-memories-for-simulation-or-fpga-initialization-">Loading Memories for simulation or FPGA initialization <a name="loading-memories"></a></h2>
 
-<p>Chisel now supports an experimental method for annotating memories to be loaded from a text file containing
-hex or binary numbers. When using verilog simulation it uses the <code class="language-plaintext highlighter-rouge">$readmemh</code> or <code class="language-plaintext highlighter-rouge">$readmemb</code>
-verilog extension. The treadle simulator can also load memories using the same annotation.</p>
+<p>Chisel supports multiple experimental methods for annotating memories to be loaded from a text file containing hex or binary data. When using verilog simulation it uses the <code class="language-plaintext highlighter-rouge">$readmemh</code> or <code class="language-plaintext highlighter-rouge">$readmemb</code> verilog extension. The treadle simulator can also load memories using the same annotation.</p>
 
-<h3 id="how-to-annotate">How to annotate</h3>
-<p>Assuming you have a memory in a Module</p>
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">memory</span> <span class="k">=</span> <span class="nc">Mem</span><span class="o">(</span><span class="n">memoryDepth</span><span class="o">,</span> <span class="n">memoryType</span><span class="o">)</span>
+<h3 id="inline-initialization-with-external-file">Inline initialization with external file</h3>
+
+<p>Memories can be initialized by generating inline <code class="language-plaintext highlighter-rouge">readmemh</code> or <code class="language-plaintext highlighter-rouge">readmemb</code> statements in the output Verilog.</p>
+
+<p>The function <code class="language-plaintext highlighter-rouge">loadMemoryFromFileInline</code> from <code class="language-plaintext highlighter-rouge">chisel3.util.experimental</code> allows the memory to be initialized by the synthesis software from the specified file. Chisel does not validate the file contents nor its location. Both the memory initialization file and the Verilog source should be accessible for the toolchain.</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3._</span>
+<span class="k">import</span> <span class="nn">chisel3.util.experimental.loadMemoryFromFileInline</span>
+
+<span class="k">class</span> <span class="nc">InitMemInline</span><span class="o">(</span><span class="n">memoryFile</span><span class="k">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">width</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">32</span>
+  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="nv">enable</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+    <span class="k">val</span> <span class="nv">write</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+    <span class="k">val</span> <span class="nv">addr</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">10.</span><span class="n">W</span><span class="o">))</span>
+    <span class="k">val</span> <span class="nv">dataIn</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="nv">width</span><span class="o">.</span><span class="py">W</span><span class="o">))</span>
+    <span class="k">val</span> <span class="nv">dataOut</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="nv">width</span><span class="o">.</span><span class="py">W</span><span class="o">))</span>
+  <span class="o">})</span>
+
+  <span class="k">val</span> <span class="nv">mem</span> <span class="k">=</span> <span class="nc">SyncReadMem</span><span class="o">(</span><span class="mi">1024</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">(</span><span class="nv">width</span><span class="o">.</span><span class="py">W</span><span class="o">))</span>
+  <span class="c1">// Initialize memory</span>
+  <span class="nf">if</span> <span class="o">(</span><span class="nv">memoryFile</span><span class="o">.</span><span class="py">trim</span><span class="o">().</span><span class="py">nonEmpty</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nf">loadMemoryFromFileInline</span><span class="o">(</span><span class="n">mem</span><span class="o">,</span> <span class="n">memoryFile</span><span class="o">)</span>
+  <span class="o">}</span>
+  <span class="nv">io</span><span class="o">.</span><span class="py">dataOut</span> <span class="o">:=</span> <span class="nc">DontCare</span>
+  <span class="nf">when</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">enable</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="nv">rdwrPort</span> <span class="k">=</span> <span class="nf">mem</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">addr</span><span class="o">)</span>
+    <span class="nf">when</span> <span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">write</span><span class="o">)</span> <span class="o">{</span> <span class="n">rdwrPort</span> <span class="o">:=</span> <span class="nv">io</span><span class="o">.</span><span class="py">dataIn</span> <span class="o">}</span>
+      <span class="o">.</span><span class="py">otherwise</span>    <span class="o">{</span> <span class="nv">io</span><span class="o">.</span><span class="py">dataOut</span> <span class="o">:=</span> <span class="n">rdwrPort</span> <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
 </code></pre></div></div>
 
-<p>At the top of your file just add the import</p>
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3.util.experimental.loadMemoryFromFile</span>
-</code></pre></div></div>
-<p>Now just add the memory annotation using</p>
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nf">loadMemoryFromFile</span><span class="o">(</span><span class="n">memory</span><span class="o">,</span> <span class="s">"/workspace/workdir/mem1.txt"</span><span class="o">)</span>
-</code></pre></div></div>
 <p>The default is to use <code class="language-plaintext highlighter-rouge">$readmemh</code> (which assumes all numbers in the file are in ascii hex),
-bu to use ascii binary there is an optional third argument. You will need to add an additional import.</p>
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">firrtl.annotations.MemoryLoadFileType</span>
+but to use ascii binary there is an optional <code class="language-plaintext highlighter-rouge">hexOrBinary</code> argument which can be set to <code class="language-plaintext highlighter-rouge">MemoryLoadFileType.Hex</code> or <code class="language-plaintext highlighter-rouge">MemoryLoadFileType.Binary</code>. You will need to add an additional import.</p>
+
+<p>By default, the inline initialization will generate the memory <code class="language-plaintext highlighter-rouge">readmem</code> statements inside an <code class="language-plaintext highlighter-rouge">ifndef SYNTHESIS</code> block, which suits ASIC workflow.</p>
+
+<p>Some synthesis tools (like Synplify and Yosys) define <code class="language-plaintext highlighter-rouge">SYNTHESIS</code> so the <code class="language-plaintext highlighter-rouge">readmem</code> statement is not read when inside this block.</p>
+
+<p>To control this, one can use the <code class="language-plaintext highlighter-rouge">MemoryNoSynthInit</code> and <code class="language-plaintext highlighter-rouge">MemorySynthInit</code> annotations from <code class="language-plaintext highlighter-rouge">firrtl.annotations</code>. The former which is the default setting when no annotation is present generates <code class="language-plaintext highlighter-rouge">readmem</code> inside the block. Using the latter, the statement are generated outside the <code class="language-plaintext highlighter-rouge">ifndef</code> block so it can be used by FPGA synthesis tools.</p>
+
+<p>Below an example for initialization suited for FPGA workflows:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3._</span>
+<span class="k">import</span> <span class="nn">chisel3.util.experimental.loadMemoryFromFileInline</span>
+<span class="k">import</span> <span class="nn">chisel3.experimental.</span><span class="o">{</span><span class="n">annotate</span><span class="o">,</span> <span class="nc">ChiselAnnotation</span><span class="o">}</span>
+<span class="k">import</span> <span class="nn">firrtl.annotations.MemorySynthInit</span>
+
+<span class="k">class</span> <span class="nc">InitMemInlineFPGA</span><span class="o">(</span><span class="n">memoryFile</span><span class="k">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">width</span><span class="k">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="mi">32</span>
+  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="nv">enable</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+    <span class="k">val</span> <span class="nv">write</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+    <span class="k">val</span> <span class="nv">addr</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">10.</span><span class="n">W</span><span class="o">))</span>
+    <span class="k">val</span> <span class="nv">dataIn</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="nv">width</span><span class="o">.</span><span class="py">W</span><span class="o">))</span>
+    <span class="k">val</span> <span class="nv">dataOut</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="nv">width</span><span class="o">.</span><span class="py">W</span><span class="o">))</span>
+  <span class="o">})</span>
+
+  <span class="c1">// Notice the annotation below</span>
+  <span class="nf">annotate</span><span class="o">(</span><span class="k">new</span> <span class="nc">ChiselAnnotation</span> <span class="o">{</span>
+    <span class="k">override</span> <span class="k">def</span> <span class="nf">toFirrtl</span> <span class="k">=</span>
+      <span class="nc">MemorySynthInit</span>
+  <span class="o">})</span>
+
+  <span class="k">val</span> <span class="nv">mem</span> <span class="k">=</span> <span class="nc">SyncReadMem</span><span class="o">(</span><span class="mi">1024</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">(</span><span class="nv">width</span><span class="o">.</span><span class="py">W</span><span class="o">))</span>
+  <span class="nf">if</span> <span class="o">(</span><span class="nv">memoryFile</span><span class="o">.</span><span class="py">trim</span><span class="o">().</span><span class="py">nonEmpty</span><span class="o">)</span> <span class="o">{</span>
+    <span class="nf">loadMemoryFromFileInline</span><span class="o">(</span><span class="n">mem</span><span class="o">,</span> <span class="n">memoryFile</span><span class="o">)</span>
+  <span class="o">}</span>
+  <span class="nv">io</span><span class="o">.</span><span class="py">dataOut</span> <span class="o">:=</span> <span class="nc">DontCare</span>
+  <span class="nf">when</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">enable</span><span class="o">)</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="nv">rdwrPort</span> <span class="k">=</span> <span class="nf">mem</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">addr</span><span class="o">)</span>
+    <span class="nf">when</span> <span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">write</span><span class="o">)</span> <span class="o">{</span> <span class="n">rdwrPort</span> <span class="o">:=</span> <span class="nv">io</span><span class="o">.</span><span class="py">dataIn</span> <span class="o">}</span>
+      <span class="o">.</span><span class="py">otherwise</span>    <span class="o">{</span> <span class="nv">io</span><span class="o">.</span><span class="py">dataOut</span> <span class="o">:=</span> <span class="n">rdwrPort</span> <span class="o">}</span>
+  <span class="o">}</span>
+<span class="o">}</span>
 </code></pre></div></div>
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nf">loadMemoryFromFile</span><span class="o">(</span><span class="n">memory</span><span class="o">,</span> <span class="s">"/workspace/workdir/mem1.txt"</span><span class="o">,</span> <span class="nv">MemoryLoadFileType</span><span class="o">.</span><span class="py">Binary</span><span class="o">)</span>
+
+<h4 id="systemverilog-bind-initialization">SystemVerilog Bind Initialization</h4>
+
+<p>Chisel can also initialize memories by generating a SV bind module with <code class="language-plaintext highlighter-rouge">readmemh</code> or <code class="language-plaintext highlighter-rouge">readmemb</code> statements by using the function <code class="language-plaintext highlighter-rouge">loadMemoryFromFile</code> from <code class="language-plaintext highlighter-rouge">chisel3.util.experimental</code>.</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3._</span>
+<span class="k">import</span> <span class="nn">chisel3.util.experimental.loadMemoryFromFile</span>
+
+<span class="k">class</span> <span class="nc">InitMemBind</span><span class="o">(</span><span class="k">val</span> <span class="nv">bits</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="k">val</span> <span class="nv">size</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">filename</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="nv">nia</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="nv">bits</span><span class="o">.</span><span class="py">W</span><span class="o">))</span>
+    <span class="k">val</span> <span class="nv">insn</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">))</span>
+  <span class="o">})</span>
+
+  <span class="k">val</span> <span class="nv">memory</span> <span class="k">=</span> <span class="nc">Mem</span><span class="o">(</span><span class="n">size</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">))</span>
+  <span class="nv">io</span><span class="o">.</span><span class="py">insn</span> <span class="o">:=</span> <span class="nf">memory</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">nia</span> <span class="o">&gt;&gt;</span> <span class="mi">2</span><span class="o">);</span>
+  <span class="nf">loadMemoryFromFile</span><span class="o">(</span><span class="n">memory</span><span class="o">,</span> <span class="n">filename</span><span class="o">)</span>
+<span class="o">}</span>
 </code></pre></div></div>
-<p>See: <a href="https://freechipsproject/chisel-testers/src/test/scala/examples/ComplexMemoryLoadingSpec.scala">ComplexMemoryLoadingSpec.scala</a> and
-<a href="https://github.com/freechipsproject/chisel-testers/src/test/scala/examples/LoadMemoryFromFileSpec.scala">LoadMemoryFromFileSpec.scala</a>
-for working examples.</p>
+
+<p>Which generates the bind module:</p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">BindsTo_0_Foo</span><span class="p">(</span>
+  <span class="kt">input</span>         <span class="n">clock</span><span class="p">,</span>
+  <span class="kt">input</span>         <span class="n">reset</span><span class="p">,</span>
+  <span class="kt">input</span>  <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">io_nia</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">io_insn</span>
+<span class="p">);</span>
+
+<span class="k">initial</span> <span class="k">begin</span>
+  <span class="p">$</span><span class="nb">readmemh</span><span class="p">(</span><span class="s">"test.hex"</span><span class="p">,</span> <span class="n">Foo</span><span class="p">.</span><span class="n">memory</span><span class="p">);</span>
+<span class="k">end</span>
+<span class="k">endmodule</span>
+
+<span class="k">bind</span> <span class="n">Foo</span> <span class="n">BindsTo_0_Foo</span> <span class="n">BindsTo_0_Foo_Inst</span><span class="p">(.</span><span class="o">*</span><span class="p">);</span>
+</code></pre></div></div>
 
 <h3 id="notes-on-files">Notes on files</h3>
-<p>There is no simple answer to where to put this file. It’s probably best to create a resource directory somewhere and reference that through a full path. Because these files may be large, we did not want to copy them.</p>
+
+<p>There is no simple answer to where to put the <code class="language-plaintext highlighter-rouge">hex</code> or <code class="language-plaintext highlighter-rouge">bin</code> file with the initial contents. It’s probably best to create a resource directory somewhere and reference that through a full path or place the file beside the generated Verilog. Another option is adding the path to the memory file in the synthesis tool path. Because these files may be large, Chisel does not copy them.</p>
 <blockquote>
   <p>Don’t forget there is no decimal option, so a 10 in an input file will be 16 decimal</p>
 </blockquote>
 
+<p>See: <a href="https://github.com/freechipsproject/chisel-testers/blob/master/src/test/scala/examples/ComplexMemoryLoadingSpec.scala">ComplexMemoryLoadingSpec.scala</a> and
+<a href="https://github.com/freechipsproject/chisel-testers/blob/master/src/test/scala/examples/LoadMemoryFromFileSpec.scala">LoadMemoryFromFileSpec.scala</a>
+for working examples.</p>
+
 <h3 id="aggregate-memories">Aggregate memories</h3>
+
 <p>Aggregate memories are supported but in bit of a clunky way. Since they will be split up into a memory per field, the following convention was adopted.  When specifying the file for such a memory the file name should be regarded as a template. If the memory is a Bundle e.g.</p>
+
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">MemDataType</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">a</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">16.</span><span class="n">W</span><span class="o">)</span>
   <span class="k">val</span> <span class="nv">b</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">)</span>
   <span class="k">val</span> <span class="nv">c</span> <span class="k">=</span> <span class="nc">Bool</span><span class="o">()</span>
 <span class="o">}</span>
 </code></pre></div></div>
+
 <p>The memory will be split into <code class="language-plaintext highlighter-rouge">memory_a</code>, <code class="language-plaintext highlighter-rouge">memory_b</code>, and <code class="language-plaintext highlighter-rouge">memory_c</code>. Similarly if a load file is specified as <code class="language-plaintext highlighter-rouge">"memory-load.txt"</code> the simulation will expect that there will be three files, <code class="language-plaintext highlighter-rouge">"memory-load_a.txt"</code>, <code class="language-plaintext highlighter-rouge">"memory-load_b.txt"</code>, <code class="language-plaintext highlighter-rouge">"memory-load_c.txt"</code></p>
 
 <blockquote>
