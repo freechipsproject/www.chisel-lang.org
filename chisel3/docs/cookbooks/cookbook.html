@@ -18,6 +18,7 @@ ga('send', 'pageview');
     <ul>
       <li><a href="#how-do-i-create-a-uint-from-an-instance-of-a-bundle">How do I create a UInt from an instance of a Bundle?</a></li>
       <li><a href="#how-do-i-create-a-bundle-from-a-uint">How do I create a Bundle from a UInt?</a></li>
+      <li><a href="#how-can-i-tieoff-a-bundlevec-to-0">How can I tieoff a Bundle/Vec to 0?</a></li>
       <li><a href="#how-do-i-create-a-vec-of-bools-from-a-uint">How do I create a Vec of Bools from a UInt?</a></li>
       <li><a href="#how-do-i-create-a-uint-from-a-vec-of-bool">How do I create a UInt from a Vec of Bool?</a></li>
     </ul>
@@ -79,6 +80,35 @@ ga('send', 'pageview');
 <span class="o">}</span>
 </code></pre></div></div>
 
+<h3 id="how-can-i-tieoff-a-bundlevec-to-0">How can I tieoff a Bundle/Vec to 0?</h3>
+
+<p>You can use <code class="language-plaintext highlighter-rouge">asTypeOf</code> as above. If you don’t want to worry about the type of the thing
+you are tying off, you can use <code class="language-plaintext highlighter-rouge">chiselTypeOf</code>:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3._</span>
+
+<span class="k">class</span> <span class="nc">MyBundle</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">foo</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">4.</span><span class="n">W</span><span class="o">)</span>
+  <span class="k">val</span> <span class="nv">bar</span> <span class="k">=</span> <span class="nc">Vec</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">1.</span><span class="n">W</span><span class="o">))</span>
+<span class="o">}</span>
+
+<span class="k">class</span> <span class="nc">Foo</span><span class="o">(</span><span class="n">typ</span><span class="k">:</span> <span class="kt">Data</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">RawModule</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">bundleA</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="n">typ</span><span class="o">))</span>
+  <span class="k">val</span> <span class="nv">bundleB</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="n">typ</span><span class="o">))</span>
+  
+  <span class="c1">// typ is already a Chisel Data Type, so can use it directly here, but you </span>
+  <span class="c1">// need to know that bundleA is of type typ</span>
+  <span class="n">bundleA</span> <span class="o">:=</span> <span class="mf">0.</span><span class="nv">U</span><span class="o">.</span><span class="py">asTypeOf</span><span class="o">(</span><span class="n">typ</span><span class="o">)</span>
+  
+  <span class="c1">// bundleB is a Hardware data IO(Output(...)) so need to call chiselTypeOf,</span>
+  <span class="c1">// but this will work no matter the type of bundleB:</span>
+  <span class="n">bundleB</span> <span class="o">:=</span> <span class="mf">0.</span><span class="nv">U</span><span class="o">.</span><span class="py">asTypeOf</span><span class="o">(</span><span class="nf">chiselTypeOf</span><span class="o">(</span><span class="n">bundleB</span><span class="o">))</span> 
+<span class="o">}</span>
+
+<span class="k">class</span> <span class="nc">Bar</span> <span class="k">extends</span> <span class="nc">RawModule</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">foo</span> <span class="k">=</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">Foo</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyBundle</span><span class="o">()))</span>
+<span class="o">}</span>
+</code></pre></div></div>
 <h3 id="how-do-i-create-a-vec-of-bools-from-a-uint">How do I create a Vec of Bools from a UInt?</h3>
 
 <p>Use <a href="https://www.chisel-lang.org/api/latest/chisel3/VecInit$.html"><code class="language-plaintext highlighter-rouge">VecInit</code></a> given a <code class="language-plaintext highlighter-rouge">Seq[Bool]</code> generated using the <a href="https://www.chisel-lang.org/api/latest/chisel3/UInt.html#asBools():Seq[chisel3.Bool]"><code class="language-plaintext highlighter-rouge">asBools</code></a> method.</p>
@@ -245,9 +275,9 @@ Below, the left-hand side connection to <code class="language-plaintext highligh
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span><span class="k">new</span> <span class="nc">ChiselStage</span><span class="o">).</span><span class="py">execute</span><span class="o">(</span><span class="nc">Array</span><span class="o">(</span><span class="s">"-X"</span><span class="o">,</span> <span class="s">"verilog"</span><span class="o">),</span> <span class="nc">Seq</span><span class="o">(</span><span class="k">new</span> <span class="nc">ChiselGeneratorAnnotation</span><span class="o">(()</span> <span class="k">=&gt;</span> <span class="k">new</span> <span class="nc">Foo</span><span class="o">)))</span>
 <span class="c1">// chisel3.internal.ChiselException: Cannot reassign to read-only Bool(OpResult in Foo)</span>
 <span class="c1">// 	at ... ()</span>
-<span class="c1">// 	at repl.MdocSession$App7$Foo.&lt;init&gt;(cookbook.md:208)</span>
-<span class="c1">// 	at repl.MdocSession$App7$$anonfun$44$$anonfun$apply$24.apply(cookbook.md:216)</span>
-<span class="c1">// 	at repl.MdocSession$App7$$anonfun$44$$anonfun$apply$24.apply(cookbook.md:216)</span>
+<span class="c1">// 	at repl.MdocSession$App8$Foo.&lt;init&gt;(cookbook.md:242)</span>
+<span class="c1">// 	at repl.MdocSession$App8$$anonfun$51$$anonfun$apply$27.apply(cookbook.md:250)</span>
+<span class="c1">// 	at repl.MdocSession$App8$$anonfun$51$$anonfun$apply$27.apply(cookbook.md:250)</span>
 <span class="c1">// 	at ... ()</span>
 <span class="c1">// 	at ... (Stack trace trimmed to user code only. Rerun with --full-stacktrace to see the full stack trace)</span>
 </code></pre></div></div>
@@ -336,7 +366,7 @@ The reason for this is that subword assignment generally hints at a better abstr
 <p>If we compile this module <em>without</em> <code class="language-plaintext highlighter-rouge">@chiselName</code>, Chisel is not able to name <code class="language-plaintext highlighter-rouge">innerReg</code> correctly (notice the <code class="language-plaintext highlighter-rouge">_T</code>):</p>
 
 <p>Elaborating design…
-[[34mdeprecated[0m] class repl.MdocSession$App11$TestModWithout\(anonfun$69\)anonfun$apply$33\(anon$6 (1 calls): chisel3.1 autoclonetype failed, falling back to 3.0 behavior using null as the outer instance. Autoclonetype failure reason: Unable to determine instance of outer class class repl.MdocSession$App11$TestModWithout\)anonfun$69$$anonfun$apply$33, no candidates assignable to outer class types; examined List(repl.MdocSession$App11$TestModWithout@78b5caf1)
+[[34mdeprecated[0m] class repl.MdocSession$App12$TestModWithout\(anonfun$76\)anonfun$apply$36\(anon$6 (1 calls): chisel3.1 autoclonetype failed, falling back to 3.0 behavior using null as the outer instance. Autoclonetype failure reason: Unable to determine instance of outer class class repl.MdocSession$App12$TestModWithout\)anonfun$76$$anonfun$apply$36, no candidates assignable to outer class types; examined List(repl.MdocSession$App12$TestModWithout@37a81802)
 [[33mwarn[0m] [33mThere were 1 deprecated function(s) used. These may stop compiling in a future release - you are encouraged to fix these issues.[0m
 [[33mwarn[0m] Line numbers for deprecations reported by Chisel may be inaccurate; enable scalac compiler deprecation warnings via either of the following methods:
 [[33mwarn[0m]   In the sbt interactive console, enter:
@@ -347,7 +377,7 @@ Done elaborating.</p>
 
 <p>However, if we use <code class="language-plaintext highlighter-rouge">@chiselName</code> then the register previously called <code class="language-plaintext highlighter-rouge">_T</code> is now <code class="language-plaintext highlighter-rouge">innerReg</code>:
 Elaborating design…
-[[34mdeprecated[0m] class repl.MdocSession$App11$TestMod\(anonfun$62\)anonfun$apply$31\(anon$5 (1 calls): chisel3.1 autoclonetype failed, falling back to 3.0 behavior using null as the outer instance. Autoclonetype failure reason: Unable to determine instance of outer class class repl.MdocSession$App11$TestMod\)anonfun$62$$anonfun$apply$31, no candidates assignable to outer class types; examined List(repl.MdocSession$App11$TestMod@77feafc3)
+[[34mdeprecated[0m] class repl.MdocSession$App12$TestMod\(anonfun$69\)anonfun$apply$34\(anon$5 (1 calls): chisel3.1 autoclonetype failed, falling back to 3.0 behavior using null as the outer instance. Autoclonetype failure reason: Unable to determine instance of outer class class repl.MdocSession$App12$TestMod\)anonfun$69$$anonfun$apply$34, no candidates assignable to outer class types; examined List(repl.MdocSession$App12$TestMod@68023a6d)
 [[33mwarn[0m] [33mThere were 1 deprecated function(s) used. These may stop compiling in a future release - you are encouraged to fix these issues.[0m
 [[33mwarn[0m] Line numbers for deprecations reported by Chisel may be inaccurate; enable scalac compiler deprecation warnings via either of the following methods:
 [[33mwarn[0m]   In the sbt interactive console, enter:
@@ -441,8 +471,8 @@ Done elaborating.</p>
 
 <p>Elaborating the Chisel module <code class="language-plaintext highlighter-rouge">Salt</code> yields our “desire name” for <code class="language-plaintext highlighter-rouge">Salt</code> and <code class="language-plaintext highlighter-rouge">Coffee</code> in the output Verilog:
 Elaborating design…
-[[34mdeprecated[0m] class repl.MdocSession$App14$Salt\(anonfun$95\)anonfun$apply$39\(anon$9 (1 calls): chisel3.1 autoclonetype failed, falling back to 3.0 behavior using null as the outer instance. Autoclonetype failure reason: Unable to determine instance of outer class class repl.MdocSession$App14$Salt\)anonfun$95\(anonfun$apply$39, no candidates assignable to outer class types; examined List(repl.MdocSession$App14$Salt@350b59bc)
-[[34mdeprecated[0m] class repl.MdocSession$App14$Coffee\)anonfun$92\(anonfun$apply$38\)anon$8 (1 calls): chisel3.1 autoclonetype failed, falling back to 3.0 behavior using null as the outer instance. Autoclonetype failure reason: Unable to determine instance of outer class class repl.MdocSession$App14$Coffee\(anonfun$92\)anonfun$apply$38, no candidates assignable to outer class types; examined List(repl.MdocSession$App14$Coffee@2fcd9cf6)
+[[34mdeprecated[0m] class repl.MdocSession$App15$Salt\(anonfun$102\)anonfun$apply$42\(anon$9 (1 calls): chisel3.1 autoclonetype failed, falling back to 3.0 behavior using null as the outer instance. Autoclonetype failure reason: Unable to determine instance of outer class class repl.MdocSession$App15$Salt\)anonfun$102\(anonfun$apply$42, no candidates assignable to outer class types; examined List(repl.MdocSession$App15$Salt@4cc5ca5c)
+[[34mdeprecated[0m] class repl.MdocSession$App15$Coffee\)anonfun$99\(anonfun$apply$41\)anon$8 (1 calls): chisel3.1 autoclonetype failed, falling back to 3.0 behavior using null as the outer instance. Autoclonetype failure reason: Unable to determine instance of outer class class repl.MdocSession$App15$Coffee\(anonfun$99\)anonfun$apply$41, no candidates assignable to outer class types; examined List(repl.MdocSession$App15$Coffee@1707f7b1)
 [[33mwarn[0m] [33mThere were 2 deprecated function(s) used. These may stop compiling in a future release - you are encouraged to fix these issues.[0m
 [[33mwarn[0m] Line numbers for deprecations reported by Chisel may be inaccurate; enable scalac compiler deprecation warnings via either of the following methods:
 [[33mwarn[0m]   In the sbt interactive console, enter:
