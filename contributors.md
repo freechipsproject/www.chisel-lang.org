@@ -45,7 +45,6 @@
 - [`@jackkoenig`](https://github.com/jackkoenig)
 - [`@jascondley`](https://github.com/jascondley)
 - [`@jcmartin`](https://github.com/jcmartin)
-- [`@jerryz123`](https://github.com/jerryz123)
 - [`@jimmysitu`](https://github.com/jimmysitu)
 - [`@johnsbrew`](https://github.com/johnsbrew)
 - [`@jwright6323`](https://github.com/jwright6323)
