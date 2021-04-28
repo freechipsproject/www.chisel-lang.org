@@ -22,6 +22,7 @@
 - [`@davidbiancolin`](https://github.com/davidbiancolin)
 - [`@debs-sifive`](https://github.com/debs-sifive)
 - [`@dependabot-preview[bot]`](https://github.com/apps/dependabot-preview)
+- [`@dependabot[bot]`](https://github.com/apps/dependabot)
 - [`@diningyo`](https://github.com/diningyo)
 - [`@djmmoss`](https://github.com/djmmoss)
 - [`@dkravitz-sifive`](https://github.com/dkravitz-sifive)

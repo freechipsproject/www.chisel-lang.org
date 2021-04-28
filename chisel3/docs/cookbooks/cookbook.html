@@ -60,6 +60,10 @@ ga('send', 'pageview');
   <span class="nv">bundle</span><span class="o">.</span><span class="py">foo</span> <span class="o">:=</span> <span class="mh">0xc</span><span class="o">.</span><span class="py">U</span>
   <span class="nv">bundle</span><span class="o">.</span><span class="py">bar</span> <span class="o">:=</span> <span class="mh">0x3</span><span class="o">.</span><span class="py">U</span>
   <span class="k">val</span> <span class="nv">uint</span> <span class="k">=</span> <span class="nv">bundle</span><span class="o">.</span><span class="py">asUInt</span>
+  <span class="nf">printf</span><span class="o">(</span><span class="n">p</span><span class="s">"$uint"</span><span class="o">)</span> <span class="c1">// 195</span>
+
+  <span class="c1">// Test</span>
+  <span class="nf">assert</span><span class="o">(</span><span class="n">uint</span> <span class="o">===</span> <span class="mh">0xc3</span><span class="o">.</span><span class="py">U</span><span class="o">)</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
@@ -77,6 +81,12 @@ ga('send', 'pageview');
 <span class="k">class</span> <span class="nc">Foo</span> <span class="k">extends</span> <span class="nc">RawModule</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">uint</span> <span class="k">=</span> <span class="mh">0xb4</span><span class="o">.</span><span class="py">U</span>
   <span class="k">val</span> <span class="nv">bundle</span> <span class="k">=</span> <span class="nv">uint</span><span class="o">.</span><span class="py">asTypeOf</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyBundle</span><span class="o">)</span>
+  
+  <span class="nf">printf</span><span class="o">(</span><span class="n">p</span><span class="s">"$bundle"</span><span class="o">)</span> <span class="c1">// Bundle(foo -&gt; 11, bar -&gt; 4)</span>
+
+  <span class="c1">// Test</span>
+  <span class="nf">assert</span><span class="o">(</span><span class="nv">bundle</span><span class="o">.</span><span class="py">foo</span> <span class="o">===</span> <span class="mh">0xb</span><span class="o">.</span><span class="py">U</span><span class="o">)</span>
+  <span class="nf">assert</span><span class="o">(</span><span class="nv">bundle</span><span class="o">.</span><span class="py">bar</span> <span class="o">===</span> <span class="mh">0x4</span><span class="o">.</span><span class="py">U</span><span class="o">)</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
@@ -118,6 +128,14 @@ you are tying off, you can use <code class="language-plaintext highlighter-rouge
 <span class="k">class</span> <span class="nc">Foo</span> <span class="k">extends</span> <span class="nc">RawModule</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">uint</span> <span class="k">=</span> <span class="mh">0xc</span><span class="o">.</span><span class="py">U</span>
   <span class="k">val</span> <span class="nv">vec</span> <span class="k">=</span> <span class="nc">VecInit</span><span class="o">(</span><span class="nv">uint</span><span class="o">.</span><span class="py">asBools</span><span class="o">)</span>
+
+  <span class="nf">printf</span><span class="o">(</span><span class="n">p</span><span class="s">"$vec"</span><span class="o">)</span> <span class="c1">// Vec(0, 0, 1, 1)</span>
+
+  <span class="c1">// Test</span>
+  <span class="nf">assert</span><span class="o">(</span><span class="nf">vec</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span> <span class="o">===</span> <span class="nv">false</span><span class="o">.</span><span class="py">B</span><span class="o">)</span>
+  <span class="nf">assert</span><span class="o">(</span><span class="nf">vec</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span> <span class="o">===</span> <span class="nv">false</span><span class="o">.</span><span class="py">B</span><span class="o">)</span>
+  <span class="nf">assert</span><span class="o">(</span><span class="nf">vec</span><span class="o">(</span><span class="mi">2</span><span class="o">)</span> <span class="o">===</span> <span class="nv">true</span><span class="o">.</span><span class="py">B</span><span class="o">)</span>
+  <span class="nf">assert</span><span class="o">(</span><span class="nf">vec</span><span class="o">(</span><span class="mi">3</span><span class="o">)</span> <span class="o">===</span> <span class="nv">true</span><span class="o">.</span><span class="py">B</span><span class="o">)</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
@@ -130,6 +148,13 @@ you are tying off, you can use <code class="language-plaintext highlighter-rouge
 <span class="k">class</span> <span class="nc">Foo</span> <span class="k">extends</span> <span class="nc">RawModule</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">vec</span> <span class="k">=</span> <span class="nc">VecInit</span><span class="o">(</span><span class="nv">true</span><span class="o">.</span><span class="py">B</span><span class="o">,</span> <span class="nv">false</span><span class="o">.</span><span class="py">B</span><span class="o">,</span> <span class="nv">true</span><span class="o">.</span><span class="py">B</span><span class="o">,</span> <span class="nv">true</span><span class="o">.</span><span class="py">B</span><span class="o">)</span>
   <span class="k">val</span> <span class="nv">uint</span> <span class="k">=</span> <span class="nv">vec</span><span class="o">.</span><span class="py">asUInt</span>
+
+  <span class="nf">printf</span><span class="o">(</span><span class="n">p</span><span class="s">"$uint"</span><span class="o">)</span> <span class="c1">// 13</span>
+
+  <span class="c1">// Test</span>
+  <span class="c1">// (remember leftmost Bool in Vec is low order bit)</span>
+  <span class="nf">assert</span><span class="o">(</span><span class="mh">0xd</span><span class="o">.</span><span class="py">U</span> <span class="o">===</span> <span class="n">uint</span><span class="o">)</span>
+
 <span class="o">}</span>
 </code></pre></div></div>
 
@@ -275,9 +300,9 @@ Below, the left-hand side connection to <code class="language-plaintext highligh
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span><span class="k">new</span> <span class="nc">ChiselStage</span><span class="o">).</span><span class="py">execute</span><span class="o">(</span><span class="nc">Array</span><span class="o">(</span><span class="s">"-X"</span><span class="o">,</span> <span class="s">"verilog"</span><span class="o">),</span> <span class="nc">Seq</span><span class="o">(</span><span class="k">new</span> <span class="nc">ChiselGeneratorAnnotation</span><span class="o">(()</span> <span class="k">=&gt;</span> <span class="k">new</span> <span class="nc">Foo</span><span class="o">)))</span>
 <span class="c1">// chisel3.internal.ChiselException: Cannot reassign to read-only Bool(OpResult in Foo)</span>
 <span class="c1">// 	at ... ()</span>
-<span class="c1">// 	at repl.MdocSession$App8$Foo.&lt;init&gt;(cookbook.md:242)</span>
-<span class="c1">// 	at repl.MdocSession$App8$$anonfun$51$$anonfun$apply$27.apply(cookbook.md:250)</span>
-<span class="c1">// 	at repl.MdocSession$App8$$anonfun$51$$anonfun$apply$27.apply(cookbook.md:250)</span>
+<span class="c1">// 	at repl.MdocSession$App8$Foo.&lt;init&gt;(cookbook.md:267)</span>
+<span class="c1">// 	at repl.MdocSession$App8$$anonfun$51$$anonfun$apply$27.apply(cookbook.md:275)</span>
+<span class="c1">// 	at repl.MdocSession$App8$$anonfun$51$$anonfun$apply$27.apply(cookbook.md:275)</span>
 <span class="c1">// 	at ... ()</span>
 <span class="c1">// 	at ... (Stack trace trimmed to user code only. Rerun with --full-stacktrace to see the full stack trace)</span>
 </code></pre></div></div>
@@ -337,54 +362,8 @@ The reason for this is that subword assignment generally hints at a better abstr
 
 <h3 id="how-do-i-get-chisel-to-name-signals-properly-in-blocks-like-whenwithclockandreset">How do I get Chisel to name signals properly in blocks like when/withClockAndReset?</h3>
 
-<p>To get Chisel to name signals (wires and registers) declared inside of blocks like <code class="language-plaintext highlighter-rouge">when</code>, <code class="language-plaintext highlighter-rouge">withClockAndReset</code>, etc, use the <a href="https://www.chisel-lang.org/api/latest/chisel3/experimental/package$$chiselName.html"><code class="language-plaintext highlighter-rouge">@chiselName</code></a> annotation as shown below:</p>
+<p>Use the compiler plugin, and check out the <a href="#naming">Naming Cookbook</a> if that still does not do what you want.</p>
 
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3._</span>
-<span class="k">import</span> <span class="nn">chisel3.experimental.chiselName</span>
-
-<span class="nd">@chiselName</span>
-<span class="k">class</span> <span class="nc">TestMod</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
-    <span class="k">val</span> <span class="nv">a</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
-    <span class="k">val</span> <span class="nv">b</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">4.</span><span class="n">W</span><span class="o">))</span>
-  <span class="o">})</span>
-  <span class="nf">when</span> <span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">a</span><span class="o">)</span> <span class="o">{</span>
-    <span class="k">val</span> <span class="nv">innerReg</span> <span class="k">=</span> <span class="nc">RegInit</span><span class="o">(</span><span class="mf">5.</span><span class="nf">U</span><span class="o">(</span><span class="mf">4.</span><span class="n">W</span><span class="o">))</span>
-    <span class="n">innerReg</span> <span class="o">:=</span> <span class="n">innerReg</span> <span class="o">+</span> <span class="mf">1.</span><span class="n">U</span>
-    <span class="nv">io</span><span class="o">.</span><span class="py">b</span> <span class="o">:=</span> <span class="n">innerReg</span>
-  <span class="o">}</span> <span class="o">.</span><span class="py">otherwise</span> <span class="o">{</span>
-    <span class="nv">io</span><span class="o">.</span><span class="py">b</span> <span class="o">:=</span> <span class="mf">10.</span><span class="n">U</span>
-  <span class="o">}</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>Note that you will need to add the following line to your project’s <code class="language-plaintext highlighter-rouge">build.sbt</code> file.</p>
-
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">addCompilerPlugin</span><span class="o">(</span><span class="s">"org.scalamacros"</span> <span class="o">%</span> <span class="s">"paradise"</span> <span class="o">%</span> <span class="s">"2.1.0"</span> <span class="n">cross</span> <span class="nv">CrossVersion</span><span class="o">.</span><span class="py">full</span><span class="o">)</span>
-</code></pre></div></div>
-
-<p>If we compile this module <em>without</em> <code class="language-plaintext highlighter-rouge">@chiselName</code>, Chisel is not able to name <code class="language-plaintext highlighter-rouge">innerReg</code> correctly (notice the <code class="language-plaintext highlighter-rouge">_T</code>):</p>
-
-<p>Elaborating design…
-[[34mdeprecated[0m] class repl.MdocSession$App12$TestModWithout\(anonfun$76\)anonfun$apply$36\(anon$6 (1 calls): chisel3.1 autoclonetype failed, falling back to 3.0 behavior using null as the outer instance. Autoclonetype failure reason: Unable to determine instance of outer class class repl.MdocSession$App12$TestModWithout\)anonfun$76$$anonfun$apply$36, no candidates assignable to outer class types; examined List(repl.MdocSession$App12$TestModWithout@66caa77b)
-[[33mwarn[0m] [33mThere were 1 deprecated function(s) used. These may stop compiling in a future release - you are encouraged to fix these issues.[0m
-[[33mwarn[0m] Line numbers for deprecations reported by Chisel may be inaccurate; enable scalac compiler deprecation warnings via either of the following methods:
-[[33mwarn[0m]   In the sbt interactive console, enter:
-[[33mwarn[0m]     set scalacOptions in ThisBuild ++= Seq(“-unchecked”, “-deprecation”)
-[[33mwarn[0m]   or, in your build.sbt, add the line:
-[[33mwarn[0m]     scalacOptions := Seq(“-unchecked”, “-deprecation”)
-Done elaborating.</p>
-
-<p>However, if we use <code class="language-plaintext highlighter-rouge">@chiselName</code> then the register previously called <code class="language-plaintext highlighter-rouge">_T</code> is now <code class="language-plaintext highlighter-rouge">innerReg</code>:
-Elaborating design…
-[[34mdeprecated[0m] class repl.MdocSession$App12$TestMod\(anonfun$69\)anonfun$apply$34\(anon$5 (1 calls): chisel3.1 autoclonetype failed, falling back to 3.0 behavior using null as the outer instance. Autoclonetype failure reason: Unable to determine instance of outer class class repl.MdocSession$App12$TestMod\)anonfun$69$$anonfun$apply$34, no candidates assignable to outer class types; examined List(repl.MdocSession$App12$TestMod@153f2654)
-[[33mwarn[0m] [33mThere were 1 deprecated function(s) used. These may stop compiling in a future release - you are encouraged to fix these issues.[0m
-[[33mwarn[0m] Line numbers for deprecations reported by Chisel may be inaccurate; enable scalac compiler deprecation warnings via either of the following methods:
-[[33mwarn[0m]   In the sbt interactive console, enter:
-[[33mwarn[0m]     set scalacOptions in ThisBuild ++= Seq(“-unchecked”, “-deprecation”)
-[[33mwarn[0m]   or, in your build.sbt, add the line:
-[[33mwarn[0m]     scalacOptions := Seq(“-unchecked”, “-deprecation”)
-Done elaborating.</p>
 <h3 id="how-do-i-get-chisel-to-name-the-results-of-vector-reads-properly">How do I get Chisel to name the results of vector reads properly?</h3>
 <p>Currently, name information is lost when using dynamic indexing. For example:</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Foo</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
@@ -471,8 +450,8 @@ Done elaborating.</p>
 
 <p>Elaborating the Chisel module <code class="language-plaintext highlighter-rouge">Salt</code> yields our “desire name” for <code class="language-plaintext highlighter-rouge">Salt</code> and <code class="language-plaintext highlighter-rouge">Coffee</code> in the output Verilog:
 Elaborating design…
-[[34mdeprecated[0m] class repl.MdocSession$App15$Salt\(anonfun$102\)anonfun$apply$42\(anon$9 (1 calls): chisel3.1 autoclonetype failed, falling back to 3.0 behavior using null as the outer instance. Autoclonetype failure reason: Unable to determine instance of outer class class repl.MdocSession$App15$Salt\)anonfun$102\(anonfun$apply$42, no candidates assignable to outer class types; examined List(repl.MdocSession$App15$Salt@68fd3dda)
-[[34mdeprecated[0m] class repl.MdocSession$App15$Coffee\)anonfun$99\(anonfun$apply$41\)anon$8 (1 calls): chisel3.1 autoclonetype failed, falling back to 3.0 behavior using null as the outer instance. Autoclonetype failure reason: Unable to determine instance of outer class class repl.MdocSession$App15$Coffee\(anonfun$99\)anonfun$apply$41, no candidates assignable to outer class types; examined List(repl.MdocSession$App15$Coffee@4790fde4)
+[[34mdeprecated[0m] class repl.MdocSession$App12$Salt\(anonfun$80\)anonfun$apply$38\(anon$7 (1 calls): chisel3.1 autoclonetype failed, falling back to 3.0 behavior using null as the outer instance. Autoclonetype failure reason: Unable to determine instance of outer class class repl.MdocSession$App12$Salt\)anonfun$80\(anonfun$apply$38, no candidates assignable to outer class types; examined List(repl.MdocSession$App12$Salt@2b5e67c4)
+[[34mdeprecated[0m] class repl.MdocSession$App12$Coffee\)anonfun$77\(anonfun$apply$37\)anon$6 (1 calls): chisel3.1 autoclonetype failed, falling back to 3.0 behavior using null as the outer instance. Autoclonetype failure reason: Unable to determine instance of outer class class repl.MdocSession$App12$Coffee\(anonfun$77\)anonfun$apply$37, no candidates assignable to outer class types; examined List(repl.MdocSession$App12$Coffee@1ffbbd46)
 [[33mwarn[0m] [33mThere were 2 deprecated function(s) used. These may stop compiling in a future release - you are encouraged to fix these issues.[0m
 [[33mwarn[0m] Line numbers for deprecations reported by Chisel may be inaccurate; enable scalac compiler deprecation warnings via either of the following methods:
 [[33mwarn[0m]   In the sbt interactive console, enter:
