@@ -58,7 +58,6 @@
 - [`@lu-ping`](https://github.com/lu-ping)
 - [`@marmbrus`](https://github.com/marmbrus)
 - [`@Martoni`](https://github.com/Martoni)
-- [`@mehnadnerd`](https://github.com/mehnadnerd)
 - [`@mwachs5`](https://github.com/mwachs5)
 - [`@NELEwb`](https://github.com/NELEwb)
 - [`@nullobject`](https://github.com/nullobject)
