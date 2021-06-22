@@ -44,6 +44,7 @@
 - [`@ingallsj`](https://github.com/ingallsj)
 - [`@jackbackrack`](https://github.com/jackbackrack)
 - [`@jackkoenig`](https://github.com/jackkoenig)
+- [`@jared-barocsi`](https://github.com/jared-barocsi)
 - [`@jascondley`](https://github.com/jascondley)
 - [`@jcmartin`](https://github.com/jcmartin)
 - [`@jimmysitu`](https://github.com/jimmysitu)
