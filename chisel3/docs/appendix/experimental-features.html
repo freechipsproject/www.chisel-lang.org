@@ -62,6 +62,7 @@ new ways of defining Modules</p>
   <span class="k">assign</span> <span class="n">out_b</span> <span class="o">=</span> <span class="mh">1'h1</span><span class="p">;</span> <span class="c1">// @[experimental-features.md 22:7]</span>
 <span class="k">endmodule</span>
 </code></pre></div></div>
+
 <p>Partial specification is allowed, defaulting any unconnected fields to 0 (regardless of type).</p>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Example2</span> <span class="k">extends</span> <span class="nc">RawModule</span> <span class="o">{</span>
@@ -78,6 +79,7 @@ new ways of defining Modules</p>
   <span class="k">assign</span> <span class="n">out_b</span> <span class="o">=</span> <span class="mh">1'h1</span><span class="p">;</span> <span class="c1">// @[experimental-features.md 37:7]</span>
 <span class="k">endmodule</span>
 </code></pre></div></div>
+
 <p>Bundle literals can also be nested arbitrarily.</p>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ChildBundle</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
@@ -103,6 +105,7 @@ new ways of defining Modules</p>
   <span class="k">assign</span> <span class="n">out_b_foo</span> <span class="o">=</span> <span class="mh">8'h2a</span><span class="p">;</span> <span class="c1">// @[experimental-features.md 63:7]</span>
 <span class="k">endmodule</span>
 </code></pre></div></div>
+
 <p>Vec literals are not yet supported.</p>
 
 <h3 id="interval-type-">Interval Type <a name="interval-type"></a></h3>

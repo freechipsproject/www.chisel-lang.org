@@ -62,6 +62,7 @@ In contrast with <code class="language-plaintext highlighter-rouge">Chisel.util.
   <span class="o">}</span>
 <span class="o">}</span>
 </code></pre></div></div>
+
 <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">AluMux1File</span><span class="p">(</span>
   <span class="kt">input</span>         <span class="n">clock</span><span class="p">,</span>
   <span class="kt">input</span>         <span class="n">reset</span><span class="p">,</span>
@@ -75,6 +76,7 @@ In contrast with <code class="language-plaintext highlighter-rouge">Chisel.util.
   <span class="k">assign</span> <span class="n">io_aluMux1Out</span> <span class="o">=</span> <span class="mi">_</span><span class="n">T_2</span> <span class="o">?</span> <span class="n">io_rs1Out</span> <span class="o">:</span> <span class="mi">_</span><span class="n">GEN_0</span><span class="p">;</span> <span class="c1">// @[Conditional.scala 40:58 chisel-enum.md 73:21]</span>
 <span class="k">endmodule</span>
 </code></pre></div></div>
+
 <p>ChiselEnum also allows for the user to directly set the Values by passing an <code class="language-plaintext highlighter-rouge">UInt</code> to <code class="language-plaintext highlighter-rouge">Value(...)</code>
 as shown below. Note that the magnitude of each <code class="language-plaintext highlighter-rouge">Value</code> must be strictly greater than the one before
 it.</p>
@@ -132,47 +134,49 @@ it.</p>
 <p>However, if you cast from a <code class="language-plaintext highlighter-rouge">UInt</code> to an Enum type when there are undefined states in the Enum values
 that the <code class="language-plaintext highlighter-rouge">UInt</code> could hit, you will see a warning like the following:</p>
 
-<p>```Elaborating design…
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Elaborating design...
 [[33mwarn[0m] chisel-enum.md:139: Casting non-literal UInt to repl.MdocSession$App$Opcode. You can use repl.MdocSession$App$Opcode.safe to cast without this warning. in class repl.MdocSession$App$FromUInt$$anonfun$40
 [[33mwarn[0m] There were [33m1 warning(s)[0m during hardware elaboration.
-Done elaborating.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>(Note that the name of the Enum is ugly as an artifact of our documentation generation flow, it will
-be cleaner in normal use).
+Done elaborating.
+</code></pre></div></div>
 
-You can avoid this warning by using the `.safe` factory method which returns the cast Enum in addition
-to a `Bool` indicating if the Enum is in a valid state:
+<p>(Note that the name of the Enum is ugly as an artifact of our documentation generation flow, it will
+be cleaner in normal use).</p>
 
-```scala
-class SafeFromUInt extends MultiIOModule {
-  val in = IO(Input(UInt(7.W)))
-  val out = IO(Output(Opcode()))
-  val (value, valid) = Opcode.safe(in)
-  assert(valid, "Enum state must be valid, got %d!", in)
-  out := value
-}
+<p>You can avoid this warning by using the <code class="language-plaintext highlighter-rouge">.safe</code> factory method which returns the cast Enum in addition
+to a <code class="language-plaintext highlighter-rouge">Bool</code> indicating if the Enum is in a valid state:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">SafeFromUInt</span> <span class="k">extends</span> <span class="nc">MultiIOModule</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">in</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">7.</span><span class="n">W</span><span class="o">)))</span>
+  <span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="nc">Opcode</span><span class="o">()))</span>
+  <span class="nf">val</span> <span class="o">(</span><span class="n">value</span><span class="o">,</span> <span class="n">valid</span><span class="o">)</span> <span class="k">=</span> <span class="nv">Opcode</span><span class="o">.</span><span class="py">safe</span><span class="o">(</span><span class="n">in</span><span class="o">)</span>
+  <span class="nf">assert</span><span class="o">(</span><span class="n">valid</span><span class="o">,</span> <span class="s">"Enum state must be valid, got %d!"</span><span class="o">,</span> <span class="n">in</span><span class="o">)</span>
+  <span class="n">out</span> <span class="o">:=</span> <span class="n">value</span>
+<span class="o">}</span>
 </code></pre></div></div>
 
 <p>Now there will be no warning:</p>
 
-<p>```Elaborating design…
-Done elaborating.</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
-## Testing
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Elaborating design...
+Done elaborating.
+</code></pre></div></div>
 
-The _Type_ of the enums values is `&lt;ChiselEnum Object&gt;.Type` which can be useful for passing the values
+<h2 id="testing">Testing</h2>
+
+<p>The <em>Type</em> of the enums values is <code class="language-plaintext highlighter-rouge">&lt;ChiselEnum Object&gt;.Type</code> which can be useful for passing the values
 as parameters to a function (or any other time a type annotation is needed).
-Calling `.litValue` on an enum value will return the integer value of that object as a
-[`BigInt`](https://www.scala-lang.org/api/2.12.13/scala/math/BigInt.html).
+Calling <code class="language-plaintext highlighter-rouge">.litValue</code> on an enum value will return the integer value of that object as a
+<a href="https://www.scala-lang.org/api/2.12.13/scala/math/BigInt.html"><code class="language-plaintext highlighter-rouge">BigInt</code></a>.</p>
 
-```scala
-def expectedSel(sel: AluMux1Sel.Type): Boolean = sel match {
-  case AluMux1Sel.selectRS1 =&gt; (sel.litValue == 0)
-  case AluMux1Sel.selectPC  =&gt; (sel.litValue == 1)
-  case _                    =&gt; false
-}
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">expectedSel</span><span class="o">(</span><span class="n">sel</span><span class="k">:</span> <span class="kt">AluMux1Sel.Type</span><span class="o">)</span><span class="k">:</span> <span class="kt">Boolean</span> <span class="o">=</span> <span class="n">sel</span> <span class="k">match</span> <span class="o">{</span>
+  <span class="k">case</span> <span class="nv">AluMux1Sel</span><span class="o">.</span><span class="py">selectRS1</span> <span class="k">=&gt;</span> <span class="o">(</span><span class="nv">sel</span><span class="o">.</span><span class="py">litValue</span> <span class="o">==</span> <span class="mi">0</span><span class="o">)</span>
+  <span class="k">case</span> <span class="nv">AluMux1Sel</span><span class="o">.</span><span class="py">selectPC</span>  <span class="k">=&gt;</span> <span class="o">(</span><span class="nv">sel</span><span class="o">.</span><span class="py">litValue</span> <span class="o">==</span> <span class="mi">1</span><span class="o">)</span>
+  <span class="k">case</span> <span class="k">_</span>                    <span class="k">=&gt;</span> <span class="kc">false</span>
+<span class="o">}</span>
 </code></pre></div></div>
 
 <p>Some additional useful methods defined on the <code class="language-plaintext highlighter-rouge">ChiselEnum</code> object are:</p>
+
 <ul>
   <li><code class="language-plaintext highlighter-rouge">.all</code>: returns the enum values within the enumeration</li>
   <li><code class="language-plaintext highlighter-rouge">.getWidth</code>: returns the width of the hardware type</li>
