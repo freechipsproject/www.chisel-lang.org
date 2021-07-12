@@ -175,6 +175,19 @@ Calling <code class="language-plaintext highlighter-rouge">.litValue</code> on a
 <span class="o">}</span>
 </code></pre></div></div>
 
+<p>The enum value type also defines some convenience methods for working with <code class="language-plaintext highlighter-rouge">ChiselEnum</code> values. For example, continuing with the RISC-V opcode
+example, one could easily create hardware signal that is only asserted on LOAD/STORE operations (when the enum value is equal to <code class="language-plaintext highlighter-rouge">Opcode.load</code>
+or <code class="language-plaintext highlighter-rouge">Opcode.store</code>) using the <code class="language-plaintext highlighter-rouge">.isOneOf</code> method:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">LoadStoreExample</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="nv">opcode</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Opcode</span><span class="o">())</span>
+    <span class="k">val</span> <span class="nv">load_or_store</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
+  <span class="o">})</span>
+  <span class="nv">io</span><span class="o">.</span><span class="py">load_or_store</span> <span class="o">:=</span> <span class="nv">io</span><span class="o">.</span><span class="py">opcode</span><span class="o">.</span><span class="py">isOneOf</span><span class="o">(</span><span class="nv">Opcode</span><span class="o">.</span><span class="py">load</span><span class="o">,</span> <span class="nv">Opcode</span><span class="o">.</span><span class="py">store</span><span class="o">)</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
 <p>Some additional useful methods defined on the <code class="language-plaintext highlighter-rouge">ChiselEnum</code> object are:</p>
 
 <ul>
