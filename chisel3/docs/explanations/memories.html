@@ -16,25 +16,30 @@ ga('send', 'pageview');
 <h2 id="rom">ROM</h2>
 
 <p>Users can define read-only memories by constructing a <code class="language-plaintext highlighter-rouge">Vec</code> with <code class="language-plaintext highlighter-rouge">VecInit</code>.
-<code class="language-plaintext highlighter-rouge">VecInit</code> can except either a variable-argument number of <code class="language-plaintext highlighter-rouge">Data</code> literals or a <code class="language-plaintext highlighter-rouge">Seq[Data]</code> literals that initialize the ROM.</p>
+<code class="language-plaintext highlighter-rouge">VecInit</code> can accept either a variable-argument number of <code class="language-plaintext highlighter-rouge">Data</code> literals or a <code class="language-plaintext highlighter-rouge">Seq[Data]</code> literals that initialize the ROM.</p>
 
 <p>For example, users can create a small ROM initialized to 1, 2, 4, 8 and loop through all values using a counter as an address generator as follows:</p>
 
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">m</span> <span class="k">=</span> <span class="nc">VecInit</span><span class="o">(</span><span class="mf">1.</span><span class="n">U</span><span class="o">,</span> <span class="mf">2.</span><span class="n">U</span><span class="o">,</span> <span class="mf">4.</span><span class="n">U</span><span class="o">,</span> <span class="mf">8.</span><span class="n">U</span><span class="o">)</span>
-<span class="k">val</span> <span class="nv">r</span> <span class="k">=</span> <span class="nf">m</span><span class="o">(</span><span class="nf">counter</span><span class="o">(</span><span class="nv">m</span><span class="o">.</span><span class="py">length</span><span class="o">.</span><span class="py">U</span><span class="o">))</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3._</span>
+<span class="k">import</span> <span class="nn">chisel3.util.Counter</span>
+<span class="k">val</span> <span class="nv">m</span> <span class="k">=</span> <span class="nc">VecInit</span><span class="o">(</span><span class="mf">1.</span><span class="n">U</span><span class="o">,</span> <span class="mf">2.</span><span class="n">U</span><span class="o">,</span> <span class="mf">4.</span><span class="n">U</span><span class="o">,</span> <span class="mf">8.</span><span class="n">U</span><span class="o">)</span>
+<span class="k">val</span> <span class="nv">c</span> <span class="k">=</span> <span class="nc">Counter</span><span class="o">(</span><span class="nv">m</span><span class="o">.</span><span class="py">length</span><span class="o">)</span>
+<span class="nv">c</span><span class="o">.</span><span class="py">inc</span><span class="o">()</span>
+<span class="k">val</span> <span class="nv">r</span> <span class="k">=</span> <span class="nf">m</span><span class="o">(</span><span class="nv">c</span><span class="o">.</span><span class="py">value</span><span class="o">)</span>
 </code></pre></div></div>
 
-<p>We can create an <em>n</em> value sine lookup table using a ROM initialized as follows:</p>
+<p>We can create an <em>n</em> value sine lookup table generator using a ROM initialized as follows:</p>
 
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">sinTable</span><span class="o">(</span><span class="n">amp</span><span class="k">:</span> <span class="kt">Double</span><span class="o">,</span> <span class="n">n</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=</span> <span class="o">{</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3._</span>
+
+<span class="k">val</span> <span class="nv">Pi</span> <span class="k">=</span> <span class="nv">math</span><span class="o">.</span><span class="py">Pi</span>
+<span class="k">def</span> <span class="nf">sinTable</span><span class="o">(</span><span class="n">amp</span><span class="k">:</span> <span class="kt">Double</span><span class="o">,</span> <span class="n">n</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">times</span> <span class="k">=</span>
     <span class="o">(</span><span class="mi">0</span> <span class="n">until</span> <span class="n">n</span><span class="o">).</span><span class="py">map</span><span class="o">(</span><span class="n">i</span> <span class="k">=&gt;</span> <span class="o">(</span><span class="n">i</span><span class="o">*</span><span class="mi">2</span><span class="o">*</span><span class="nc">Pi</span><span class="o">)/(</span><span class="nv">n</span><span class="o">.</span><span class="py">toDouble</span><span class="o">-</span><span class="mi">1</span><span class="o">)</span> <span class="o">-</span> <span class="nc">Pi</span><span class="o">)</span>
   <span class="k">val</span> <span class="nv">inits</span> <span class="k">=</span>
-    <span class="nv">times</span><span class="o">.</span><span class="py">map</span><span class="o">(</span><span class="n">t</span> <span class="k">=&gt;</span> <span class="nv">Math</span><span class="o">.</span><span class="py">round</span><span class="o">(</span><span class="n">amp</span> <span class="o">*</span> <span class="nf">sin</span><span class="o">(</span><span class="n">t</span><span class="o">)).</span><span class="py">asSInt</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">))</span>
+    <span class="nv">times</span><span class="o">.</span><span class="py">map</span><span class="o">(</span><span class="n">t</span> <span class="k">=&gt;</span> <span class="nv">Math</span><span class="o">.</span><span class="py">round</span><span class="o">(</span><span class="n">amp</span> <span class="o">*</span> <span class="nv">math</span><span class="o">.</span><span class="py">sin</span><span class="o">(</span><span class="n">t</span><span class="o">)).</span><span class="py">asSInt</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">))</span>
   <span class="nc">VecInit</span><span class="o">(</span><span class="n">inits</span><span class="o">)</span>
 <span class="o">}</span>
-<span class="k">def</span> <span class="nf">sinWave</span><span class="o">(</span><span class="n">amp</span><span class="k">:</span> <span class="kt">Double</span><span class="o">,</span> <span class="n">n</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">=</span>
-  <span class="nf">sinTable</span><span class="o">(</span><span class="n">amp</span><span class="o">,</span> <span class="n">n</span><span class="o">)(</span><span class="nf">counter</span><span class="o">(</span><span class="nv">n</span><span class="o">.</span><span class="py">U</span><span class="o">))</span>
 </code></pre></div></div>
 
 <p>where <code class="language-plaintext highlighter-rouge">amp</code> is used to scale the fixpoint values stored in the ROM.</p>
