@@ -40,6 +40,11 @@ ga('send', 'pageview');
       <li><a href="#how-can-i-dynamically-setparametrize-the-name-of-a-module">How can I dynamically set/parametrize the name of a module?</a></li>
     </ul>
   </li>
+  <li>Directionality
+    <ul>
+      <li><a href="#how-do-i-strip-directions-from-a-bidirectional-bundle-or-other-data">How do I strip directions from a bidirectional Bundle (or other Data)?</a></li>
+    </ul>
+  </li>
 </ul>
 
 <h2 id="converting-chisel-types-tofrom-uint">Converting Chisel Types to/from UInt</h2>
@@ -467,6 +472,48 @@ The reason for this is that subword assignment generally hints at a better abstr
   <span class="k">assign</span> <span class="n">drink_I</span> <span class="o">=</span> <span class="mh">32'h0</span><span class="p">;</span>
 <span class="k">endmodule</span>
 </code></pre></div></div>
+
+<h2 id="directionality">Directionality</h2>
+
+<h3 id="how-do-i-strip-directions-from-a-bidirectional-bundle-or-other-data">How do I strip directions from a bidirectional Bundle (or other Data)?</h3>
+
+<p>Given a bidirectional port like a <code class="language-plaintext highlighter-rouge">Decoupled</code>, you will get an error if you try to connect it directly
+to a register:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3.util.Decoupled</span>
+<span class="k">class</span> <span class="nc">BadRegConnect</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="nv">enq</span> <span class="k">=</span> <span class="nc">Decoupled</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">))</span>
+  <span class="o">})</span>
+  
+  <span class="k">val</span> <span class="nv">monitor</span> <span class="k">=</span> <span class="nc">Reg</span><span class="o">(</span><span class="nf">chiselTypeOf</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">enq</span><span class="o">))</span>
+  <span class="n">monitor</span> <span class="o">:=</span> <span class="nv">io</span><span class="o">.</span><span class="py">enq</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">ChiselStage</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">BadRegConnect</span><span class="o">)</span>
+<span class="c1">// firrtl.passes.CheckHighFormLike$RegWithFlipException:  @[cookbook.md 408:20]: [module BadRegConnect] Register monitor cannot be a bundle type with flips.</span>
+</code></pre></div></div>
+
+<p>While there is no construct to “strip direction” in Chisel3, wrapping a type in <code class="language-plaintext highlighter-rouge">Output(...)</code>
+(the default direction in Chisel3) will
+set all of the individual elements to output direction.
+This will have the desired result when used to construct a Register:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3.util.Decoupled</span>
+<span class="k">class</span> <span class="nc">CoercedRegConnect</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="nv">enq</span> <span class="k">=</span> <span class="nc">Flipped</span><span class="o">(</span><span class="nc">Decoupled</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">)))</span>
+  <span class="o">})</span>
+  
+  <span class="c1">// Make a Reg which contains all of the bundle's signals, regardless of their directionality</span>
+  <span class="k">val</span> <span class="nv">monitor</span> <span class="k">=</span> <span class="nc">Reg</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="nf">chiselTypeOf</span><span class="o">(</span><span class="nv">io</span><span class="o">.</span><span class="py">enq</span><span class="o">)))</span>
+  <span class="c1">// Even though io.enq is bidirectional, := will drive all fields of monitor with the fields of io.enq</span>
+  <span class="n">monitor</span> <span class="o">:=</span> <span class="nv">io</span><span class="o">.</span><span class="py">enq</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<!-- Just make sure it actually works -->
 </section></div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/highlight/highlight.pack.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/verilog.min.js"></script><script src="/lunr/lunr.js"></script><script>
 // For all code blocks, copy the language from the containing div
 // to the inner code tag (where hljs expects it to be)
