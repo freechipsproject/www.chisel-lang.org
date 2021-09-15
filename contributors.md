@@ -2,7 +2,6 @@
 - [`@abejgonzalez`](https://github.com/abejgonzalez)
 - [`@albert-magyar`](https://github.com/albert-magyar)
 - [`@albertchen-sifive`](https://github.com/albertchen-sifive)
-- [`@alonamid`](https://github.com/alonamid)
 - [`@andreaTP`](https://github.com/andreaTP)
 - [`@anniej-sifive`](https://github.com/anniej-sifive)
 - [`@aswaterman`](https://github.com/aswaterman)
