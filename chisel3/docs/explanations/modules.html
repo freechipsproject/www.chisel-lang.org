@@ -142,9 +142,9 @@ a specific naming convention for clock or reset.</p>
 <p>In the example above, the <code class="language-plaintext highlighter-rouge">RawModule</code> is used to change the reset polarity
 of module <code class="language-plaintext highlighter-rouge">SlaveSpi</code>. Indeed, the reset is active high by default in Chisel
 modules, then using <code class="language-plaintext highlighter-rouge">withClockAndReset(clock, !rstn)</code> we can use an active low
-reset in entire design.</p>
+reset in the entire design.</p>
 
-<p>The clock is just wired as it, but if needed, <code class="language-plaintext highlighter-rouge">RawModule</code> can be used in
+<p>The clock is just wired as is, but if needed, <code class="language-plaintext highlighter-rouge">RawModule</code> can be used in
 conjunction with <code class="language-plaintext highlighter-rouge">BlackBox</code> to connect a differential clock input for example.</p>
 </section></div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/highlight/highlight.pack.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/verilog.min.js"></script><script src="/lunr/lunr.js"></script><script>
 // For all code blocks, copy the language from the containing div

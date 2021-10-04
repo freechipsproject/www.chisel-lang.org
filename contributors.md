@@ -13,7 +13,6 @@
 - [`@caryan`](https://github.com/caryan)
 - [`@ccelio`](https://github.com/ccelio)
 - [`@chick`](https://github.com/chick)
-- [`@claford-v-lawrence`](https://github.com/claford-v-lawrence)
 - [`@colin4124`](https://github.com/colin4124)
 - [`@colinschmidt`](https://github.com/colinschmidt)
 - [`@danluu`](https://github.com/danluu)
