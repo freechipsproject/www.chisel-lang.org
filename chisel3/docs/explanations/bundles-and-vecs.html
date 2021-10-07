@@ -132,47 +132,20 @@ can use a MixedVec:</p>
 <span class="o">}</span>
 </code></pre></div></div>
 
-<h3 id="a-note-on-clonetype">A note on <code class="language-plaintext highlighter-rouge">cloneType</code></h3>
+<h3 id="a-note-on-clonetype-for-chisel--35">A note on <code class="language-plaintext highlighter-rouge">cloneType</code> (For Chisel &lt; 3.5)</h3>
 
-<p>Since Chisel is built on top of Scala and the JVM, it needs to know how to construct copies of bundles for various
-purposes (creating wires, IOs, etc). If you have a parametrized bundle and Chisel can’t automatically figure out how to
-clone your bundle, you will need to create a custom <code class="language-plaintext highlighter-rouge">cloneType</code> method in your bundle. Most of the time, this is as
-simple as <code class="language-plaintext highlighter-rouge">override def cloneType = (new YourBundleHere(...)).asInstanceOf[this.type]</code>.</p>
+<p>NOTE: This section <strong>only applies to Chisel before Chisel 3.5</strong>.
+As of Chisel 3.5, <code class="language-plaintext highlighter-rouge">Bundle</code>s should <strong>not</strong> <code class="language-plaintext highlighter-rouge">override def cloneType</code>,
+as this is a compiler error when using the chisel3 compiler plugin for inferring <code class="language-plaintext highlighter-rouge">cloneType</code>.
+(It is a warning in Chisel 3.4.4)</p>
 
-<p>Note that in the vast majority of cases, <strong>this is not required</strong> as Chisel can figure out how to clone most bundles
-automatically.</p>
-
-<p>Here is an example of a parametrized bundle (<code class="language-plaintext highlighter-rouge">ExampleBundle</code>) that features a custom <code class="language-plaintext highlighter-rouge">cloneType</code>.</p>
-
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ExampleBundle</span><span class="o">(</span><span class="n">a</span><span class="k">:</span> <span class="kt">Int</span><span class="o">,</span> <span class="n">b</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
-    <span class="k">val</span> <span class="nv">foo</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="nv">a</span><span class="o">.</span><span class="py">W</span><span class="o">)</span>
-    <span class="k">val</span> <span class="nv">bar</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="nv">b</span><span class="o">.</span><span class="py">W</span><span class="o">)</span>
-    <span class="k">override</span> <span class="k">def</span> <span class="nf">cloneType</span> <span class="k">=</span> <span class="o">(</span><span class="k">new</span> <span class="nc">ExampleBundle</span><span class="o">(</span><span class="n">a</span><span class="o">,</span> <span class="n">b</span><span class="o">)).</span><span class="py">asInstanceOf</span><span class="o">[</span><span class="kt">this.</span><span class="k">type</span><span class="o">]</span>
-<span class="o">}</span>
-
-<span class="k">class</span> <span class="nc">ExampleBundleModule</span><span class="o">(</span><span class="n">btype</span><span class="k">:</span> <span class="kt">ExampleBundle</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
-    <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
-        <span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">))</span>
-        <span class="k">val</span> <span class="nv">b</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nf">chiselTypeOf</span><span class="o">(</span><span class="n">btype</span><span class="o">))</span>
-    <span class="o">})</span>
-    <span class="nv">io</span><span class="o">.</span><span class="py">out</span> <span class="o">:=</span> <span class="nv">io</span><span class="o">.</span><span class="py">b</span><span class="o">.</span><span class="py">foo</span> <span class="o">+</span> <span class="nv">io</span><span class="o">.</span><span class="py">b</span><span class="o">.</span><span class="py">bar</span>
-<span class="o">}</span>
-
-<span class="k">class</span> <span class="nc">Top</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
-    <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
-        <span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">))</span>
-        <span class="k">val</span> <span class="nv">in</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">17.</span><span class="n">W</span><span class="o">))</span>
-    <span class="o">})</span>
-    <span class="k">val</span> <span class="nv">x</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="k">new</span> <span class="nc">ExampleBundle</span><span class="o">(</span><span class="mi">31</span><span class="o">,</span> <span class="mi">17</span><span class="o">))</span>
-    <span class="n">x</span> <span class="o">:=</span> <span class="nc">DontCare</span>
-    <span class="k">val</span> <span class="nv">m</span> <span class="k">=</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">ExampleBundleModule</span><span class="o">(</span><span class="n">x</span><span class="o">))</span>
-    <span class="nv">m</span><span class="o">.</span><span class="py">io</span><span class="o">.</span><span class="py">b</span><span class="o">.</span><span class="py">foo</span> <span class="o">:=</span> <span class="nv">io</span><span class="o">.</span><span class="py">in</span>
-    <span class="nv">m</span><span class="o">.</span><span class="py">io</span><span class="o">.</span><span class="py">b</span><span class="o">.</span><span class="py">bar</span> <span class="o">:=</span> <span class="nv">io</span><span class="o">.</span><span class="py">in</span>
-    <span class="nv">io</span><span class="o">.</span><span class="py">out</span> <span class="o">:=</span> <span class="nv">m</span><span class="o">.</span><span class="py">io</span><span class="o">.</span><span class="py">out</span>
-<span class="o">}</span>
-</code></pre></div></div>
-
-<p>Generally cloneType can be automatically defined if all arguments to the Bundle are vals e.g.</p>
+<p>Since Chisel is built on top of Scala and the JVM,
+it needs to know how to construct copies of <code class="language-plaintext highlighter-rouge">Bundle</code>s for various
+purposes (creating wires, IOs, etc).
+If you have a parametrized <code class="language-plaintext highlighter-rouge">Bundle</code> and Chisel can’t automatically figure out how to
+clone it, you will need to create a custom <code class="language-plaintext highlighter-rouge">cloneType</code> method in your bundle. 
+In the vast majority of cases, <strong>this is not required</strong>
+as Chisel can figure out how to clone most <code class="language-plaintext highlighter-rouge">Bundle</code>s automatically:</p>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">MyCloneTypeBundle</span><span class="o">(</span><span class="k">val</span> <span class="nv">bitwidth</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
    <span class="k">val</span> <span class="nv">field</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="nv">bitwidth</span><span class="o">.</span><span class="py">W</span><span class="o">)</span>
@@ -180,12 +153,14 @@ automatically.</p>
 <span class="o">}</span>
 </code></pre></div></div>
 
-<p>The only caveat is if you are passing something of type Data as a “generator” parameter, in which case you should make
-it a <code class="language-plaintext highlighter-rouge">private val</code>.</p>
+<p>The only caveat is if you are passing something of type <code class="language-plaintext highlighter-rouge">Data</code> as a “generator” parameter,
+in which case you should make it a <code class="language-plaintext highlighter-rouge">private val</code>, and define a <code class="language-plaintext highlighter-rouge">cloneType</code> method with
+<code class="language-plaintext highlighter-rouge">override def cloneType = (new YourBundleHere(...)).asInstanceOf[this.type]</code>.</p>
 
-<p>For example, consider the following Bundle. Because its <code class="language-plaintext highlighter-rouge">gen</code> variable is not a <code class="language-plaintext highlighter-rouge">private val</code>, the user has to
-explicitly define the <code class="language-plaintext highlighter-rouge">cloneType</code> method.</p>
+<p>For example, consider the following <code class="language-plaintext highlighter-rouge">Bundle</code>. Because its <code class="language-plaintext highlighter-rouge">gen</code> variable is not a <code class="language-plaintext highlighter-rouge">private val</code>, the user has to
+explicitly define the <code class="language-plaintext highlighter-rouge">cloneType</code> method:</p>
 
+<!-- Cannot compile this because the cloneType is now a warning -->
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3.util.</span><span class="o">{</span><span class="nc">Decoupled</span><span class="o">,</span> <span class="nc">Irrevocable</span><span class="o">}</span>
 <span class="k">class</span> <span class="nc">RegisterWriteIOExplicitCloneType</span><span class="o">[</span><span class="kt">T</span> <span class="k">&lt;:</span> <span class="kt">Data</span><span class="o">](</span><span class="n">gen</span><span class="k">:</span> <span class="kt">T</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">request</span>  <span class="k">=</span> <span class="nc">Flipped</span><span class="o">(</span><span class="nc">Decoupled</span><span class="o">(</span><span class="n">gen</span><span class="o">))</span>
@@ -196,7 +171,8 @@ explicitly define the <code class="language-plaintext highlighter-rouge">cloneTy
 
 <p>We can make this this infer cloneType by making <code class="language-plaintext highlighter-rouge">gen</code> private since it is a “type parameter”:</p>
 
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">RegisterWriteIO</span><span class="o">[</span><span class="kt">T</span> <span class="k">&lt;:</span> <span class="kt">Data</span><span class="o">](</span><span class="k">private</span> <span class="k">val</span> <span class="nv">gen</span><span class="k">:</span> <span class="kt">T</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3.util.</span><span class="o">{</span><span class="nc">Decoupled</span><span class="o">,</span> <span class="nc">Irrevocable</span><span class="o">}</span>
+<span class="k">class</span> <span class="nc">RegisterWriteIO</span><span class="o">[</span><span class="kt">T</span> <span class="k">&lt;:</span> <span class="kt">Data</span><span class="o">](</span><span class="k">private</span> <span class="k">val</span> <span class="nv">gen</span><span class="k">:</span> <span class="kt">T</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">request</span>  <span class="k">=</span> <span class="nc">Flipped</span><span class="o">(</span><span class="nc">Decoupled</span><span class="o">(</span><span class="n">gen</span><span class="o">))</span>
   <span class="k">val</span> <span class="nv">response</span> <span class="k">=</span> <span class="nc">Irrevocable</span><span class="o">(</span><span class="nc">Bool</span><span class="o">())</span>
 <span class="o">}</span>
