@@ -54,6 +54,10 @@ options:
         url: chisel3/docs/explanations/data-types.html
         menu_type: chisel3
         menu_section: data-types
+      - title: Dataview
+        url: chisel3/docs/explanations/dataview.html
+        menu_type: chisel3
+        menu_section: dataview
       - title: Bundles and Vecs
         url: chisel3/docs/explanations/bundles-and-vecs.html
         menu_type: chisel3
@@ -138,6 +142,11 @@ options:
         url: chisel3/docs/explanations/annotations.html
         menu_type: chisel3
         menu_section: annotations
+      
+      - title: Blackboxes
+        url: chisel3/docs/explanations/blackboxes.html
+        menu_type: chisel3
+        menu_section: blackboxes
   - title: Appendix
     url: chisel3/docs/appendix/appendix.html
     menu_type: chisel3
