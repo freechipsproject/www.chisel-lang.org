@@ -27,7 +27,7 @@ options:
         url: chisel3/docs/cookbooks/troubleshooting.html
         menu_type: chisel3
         menu_section: troubleshooting
-      - title: Dataview
+      - title: DataView Cookbook
         url: chisel3/docs/cookbooks/Dataview.html
         menu_type: chisel3
         menu_section: Dataview
