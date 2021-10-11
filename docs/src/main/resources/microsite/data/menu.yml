@@ -34,7 +34,7 @@ options:
       - title: Hierarchy Cookbook
         url: chisel3/docs/cookbooks/hierarchy.html
         menu_type: chisel3
-        menu_section: Hierarchy Cookbook
+        menu_section: hierarchy-cookbook
         
         
   - title: Explanations
@@ -142,11 +142,7 @@ options:
         url: chisel3/docs/explanations/annotations.html
         menu_type: chisel3
         menu_section: annotations
-      
-      - title: Blackboxes
-        url: chisel3/docs/explanations/blackboxes.html
-        menu_type: chisel3
-        menu_section: blackboxes
+
   - title: Appendix
     url: chisel3/docs/appendix/appendix.html
     menu_type: chisel3
