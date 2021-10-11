@@ -27,6 +27,16 @@ options:
         url: chisel3/docs/cookbooks/troubleshooting.html
         menu_type: chisel3
         menu_section: troubleshooting
+      - title: Dataview
+        url: chisel3/docs/cookbooks/Dataview.html
+        menu_type: chisel3
+        menu_section: Dataview
+      - title: Hierarchy Cookbook
+        url: chisel3/docs/cookbooks/hierarchy.html
+        menu_type: chisel3
+        menu_section: Hierarchy Cookbook
+        
+        
   - title: Explanations
     url: chisel3/docs/explanations/explanations.html
     menu_type: chisel3
