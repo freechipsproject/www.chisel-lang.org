@@ -118,13 +118,13 @@ This generator methodology enables the creation of re-usable components and libr
 
 <h3 id="build-your-own-chisel-projects">Build Your Own Chisel Projects</h3>
 
-<p>See <a href="https://github.com/chipsalliance/chisel3/blob/master/SETUP.md">the setup instructions</a> for how to set up your environment to run Chisel locally.</p>
+<p>See <a href="SETUP.md">the setup instructions</a> for how to set up your environment to build Chisel locally.</p>
 
 <p>When you’re ready to build your own circuits in Chisel, <strong>we recommend starting from the <a href="https://github.com/freechipsproject/chisel-template">Chisel Template</a> repository</strong>, which provides a pre-configured project, example design, and testbench. Follow the <a href="https://github.com/freechipsproject/chisel-template">chisel-template readme</a> to get started.</p>
 
 <p>If you insist on setting up your own project, the magic SBT lines are:</p>
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"edu.berkeley.cs"</span> <span class="o">%%</span> <span class="s">"chisel3"</span> <span class="o">%</span> <span class="s">"3.4.0"</span>
-<span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"edu.berkeley.cs"</span> <span class="o">%%</span> <span class="s">"chiseltest"</span> <span class="o">%</span> <span class="s">"0.3.0"</span> <span class="o">%</span> <span class="s">"test"</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"edu.berkeley.cs"</span> <span class="o">%%</span> <span class="s">"chisel3"</span> <span class="o">%</span> <span class="s">"3.4.4"</span>
+<span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"edu.berkeley.cs"</span> <span class="o">%%</span> <span class="s">"chiseltest"</span> <span class="o">%</span> <span class="s">"0.3.4"</span> <span class="o">%</span> <span class="s">"test"</span>
 </code></pre></div></div>
 
 <h3 id="design-verification">Design Verification</h3>
@@ -166,24 +166,24 @@ This generator methodology enables the creation of re-usable components and libr
 
 <h3 id="compiling-and-testing-chisel">Compiling and Testing Chisel</h3>
 
-<p>First, clone and build the master branch of <a href="https://github.com/chipsalliance/firrtl">FIRRTL</a> and <a href="https://github.com/chipsalliance/treadle">Treadle</a>, as the master branch of Chisel may depend on unreleased changes in those projects:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/chipsalliance/firrtl.git
-git clone https://github.com/chipsalliance/treadle.git
-pushd firrtl; sbt publishLocal; popd
-pushd treadle; sbt publishLocal; popd
-</code></pre></div></div>
+<p>You must first install required dependencies to build Chisel locally, please see <a href="SETUP.md">the setup instructions</a>.</p>
 
 <p>Clone and build the Chisel library:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/chipsalliance/chisel3.git
-cd chisel3
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone https://github.com/chipsalliance/chisel3.git
+<span class="nb">cd </span>chisel3
 sbt compile
 </code></pre></div></div>
 
 <p>If the compilation succeeded, you can then run the included unit tests by invoking:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sbt test
+</code></pre></div></div>
+
+<p>If you would like to run the tests without the compiler plugin (less common), you can do so by first launching <code class="language-plaintext highlighter-rouge">sbt</code>,
+then running <code class="language-plaintext highlighter-rouge">noPluginTests / test</code>:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sbt
+&gt; noPluginTests / test
 </code></pre></div></div>
 
 <h3 id="running-projects-against-local-chisel">Running Projects Against Local Chisel</h3>
