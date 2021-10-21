@@ -11,6 +11,7 @@
 - [`@blhguo`](https://github.com/blhguo)
 - [`@Burnleydev1`](https://github.com/Burnleydev1)
 - [`@bwrcbcr`](https://github.com/bwrcbcr)
+- [`@carlosedp`](https://github.com/carlosedp)
 - [`@caryan`](https://github.com/caryan)
 - [`@ccelio`](https://github.com/ccelio)
 - [`@chick`](https://github.com/chick)
