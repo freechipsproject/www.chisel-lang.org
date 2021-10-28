@@ -101,13 +101,14 @@ ga('send', 'pageview');
 you are tying off, you can use <code class="language-plaintext highlighter-rouge">chiselTypeOf</code>:</p>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3._</span>
+<span class="k">import</span> <span class="nn">chisel3.stage.ChiselStage</span>
 
 <span class="k">class</span> <span class="nc">MyBundle</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">foo</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">4.</span><span class="n">W</span><span class="o">)</span>
   <span class="k">val</span> <span class="nv">bar</span> <span class="k">=</span> <span class="nc">Vec</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">1.</span><span class="n">W</span><span class="o">))</span>
 <span class="o">}</span>
 
-<span class="k">class</span> <span class="nc">Foo</span><span class="o">(</span><span class="n">typ</span><span class="k">:</span> <span class="kt">Data</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">RawModule</span> <span class="o">{</span>
+<span class="k">class</span> <span class="nc">Foo</span><span class="o">(</span><span class="n">typ</span><span class="k">:</span> <span class="kt">MyBundle</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">RawModule</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">bundleA</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="n">typ</span><span class="o">))</span>
   <span class="k">val</span> <span class="nv">bundleB</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="n">typ</span><span class="o">))</span>
   
@@ -120,9 +121,7 @@ you are tying off, you can use <code class="language-plaintext highlighter-rouge
   <span class="n">bundleB</span> <span class="o">:=</span> <span class="mf">0.</span><span class="nv">U</span><span class="o">.</span><span class="py">asTypeOf</span><span class="o">(</span><span class="nf">chiselTypeOf</span><span class="o">(</span><span class="n">bundleB</span><span class="o">))</span> 
 <span class="o">}</span>
 
-<span class="k">class</span> <span class="nc">Bar</span> <span class="k">extends</span> <span class="nc">RawModule</span> <span class="o">{</span>
-  <span class="k">val</span> <span class="nv">foo</span> <span class="k">=</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">Foo</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyBundle</span><span class="o">()))</span>
-<span class="o">}</span>
+<span class="nv">ChiselStage</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">Foo</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyBundle</span><span class="o">))</span>
 </code></pre></div></div>
 <h3 id="how-do-i-create-a-vec-of-bools-from-a-uint">How do I create a Vec of Bools from a UInt?</h3>
 
@@ -305,9 +304,9 @@ Below, the left-hand side connection to <code class="language-plaintext highligh
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span><span class="k">new</span> <span class="nc">ChiselStage</span><span class="o">).</span><span class="py">execute</span><span class="o">(</span><span class="nc">Array</span><span class="o">(</span><span class="s">"-X"</span><span class="o">,</span> <span class="s">"verilog"</span><span class="o">),</span> <span class="nc">Seq</span><span class="o">(</span><span class="k">new</span> <span class="nc">ChiselGeneratorAnnotation</span><span class="o">(()</span> <span class="k">=&gt;</span> <span class="k">new</span> <span class="nc">Foo</span><span class="o">)))</span>
 <span class="c1">// chisel3.internal.ChiselException: Cannot reassign to read-only Bool(OpResult in Foo)</span>
 <span class="c1">// 	at ... ()</span>
-<span class="c1">// 	at repl.MdocSession$App8$Foo.&lt;init&gt;(cookbook.md:267)</span>
-<span class="c1">// 	at repl.MdocSession$App8$$anonfun$51$$anonfun$apply$27.apply(cookbook.md:275)</span>
-<span class="c1">// 	at repl.MdocSession$App8$$anonfun$51$$anonfun$apply$27.apply(cookbook.md:275)</span>
+<span class="c1">// 	at repl.MdocSession$App9$Foo.&lt;init&gt;(cookbook.md:268)</span>
+<span class="c1">// 	at repl.MdocSession$App9$$anonfun$52$$anonfun$apply$26.apply(cookbook.md:276)</span>
+<span class="c1">// 	at repl.MdocSession$App9$$anonfun$52$$anonfun$apply$26.apply(cookbook.md:276)</span>
 <span class="c1">// 	at ... ()</span>
 <span class="c1">// 	at ... (Stack trace trimmed to user code only. Rerun with --full-stacktrace to see the full stack trace)</span>
 </code></pre></div></div>
@@ -463,9 +462,9 @@ The reason for this is that subword assignment generally hints at a better abstr
   <span class="kt">input</span>   <span class="n">clock</span><span class="p">,</span>
   <span class="kt">input</span>   <span class="n">reset</span>
 <span class="p">);</span>
-  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">drink_I</span><span class="p">;</span> <span class="c1">// @[cookbook.md 377:23]</span>
-  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">drink_O</span><span class="p">;</span> <span class="c1">// @[cookbook.md 377:23]</span>
-  <span class="n">Tea</span> <span class="n">drink</span> <span class="p">(</span> <span class="c1">// @[cookbook.md 377:23]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">drink_I</span><span class="p">;</span> <span class="c1">// @[cookbook.md 378:23]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">drink_O</span><span class="p">;</span> <span class="c1">// @[cookbook.md 378:23]</span>
+  <span class="n">Tea</span> <span class="n">drink</span> <span class="p">(</span> <span class="c1">// @[cookbook.md 378:23]</span>
     <span class="p">.</span><span class="n">I</span><span class="p">(</span><span class="n">drink_I</span><span class="p">),</span>
     <span class="p">.</span><span class="n">O</span><span class="p">(</span><span class="n">drink_O</span><span class="p">)</span>
   <span class="p">);</span>
@@ -492,7 +491,7 @@ to a register:</p>
 </code></pre></div></div>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">ChiselStage</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">BadRegConnect</span><span class="o">)</span>
-<span class="c1">// firrtl.passes.CheckHighFormLike$RegWithFlipException:  @[cookbook.md 408:20]: [module BadRegConnect] Register monitor cannot be a bundle type with flips.</span>
+<span class="c1">// firrtl.passes.CheckHighFormLike$RegWithFlipException:  @[cookbook.md 409:20]: [module BadRegConnect] Register monitor cannot be a bundle type with flips.</span>
 </code></pre></div></div>
 
 <p>While there is no construct to “strip direction” in Chisel3, wrapping a type in <code class="language-plaintext highlighter-rouge">Output(...)</code>

@@ -47,6 +47,7 @@
 - [`@jared-barocsi`](https://github.com/jared-barocsi)
 - [`@jascondley`](https://github.com/jascondley)
 - [`@jcmartin`](https://github.com/jcmartin)
+- [`@jiegec`](https://github.com/jiegec)
 - [`@jimmysitu`](https://github.com/jimmysitu)
 - [`@johnsbrew`](https://github.com/johnsbrew)
 - [`@jwright6323`](https://github.com/jwright6323)
