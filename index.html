@@ -120,10 +120,17 @@ This generator methodology enables the creation of re-usable components and libr
 
 <p>See <a href="SETUP.md">the setup instructions</a> for how to set up your environment to build Chisel locally.</p>
 
-<p>When you’re ready to build your own circuits in Chisel, <strong>we recommend starting from the <a href="https://github.com/freechipsproject/chisel-template">Chisel Template</a> repository</strong>, which provides a pre-configured project, example design, and testbench. Follow the <a href="https://github.com/freechipsproject/chisel-template">chisel-template readme</a> to get started.</p>
+<p>When you’re ready to build your own circuits in Chisel, <strong>we recommend starting from the <a href="https://github.com/freechipsproject/chisel-template">Chisel Template</a> repository</strong>, which provides a pre-configured project, example design, and testbench.
+Follow the <a href="https://github.com/freechipsproject/chisel-template">chisel-template README</a> to get started.</p>
 
-<p>If you insist on setting up your own project, the magic SBT lines are:</p>
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"edu.berkeley.cs"</span> <span class="o">%%</span> <span class="s">"chisel3"</span> <span class="o">%</span> <span class="s">"3.4.4"</span>
+<p>If you insist on setting up your own project from scratch, your project needs to depend on both the chisel3-plugin (Scalac plugin) and the chisel3 library.
+For example, in SBT this could be expressed as:</p>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// build.sbt</span>
+<span class="n">scalaVersion</span> <span class="o">:=</span> <span class="s">"2.12.13"</span>
+<span class="nf">addCompilerPlugin</span><span class="o">(</span><span class="s">"edu.berkeley.cs"</span> <span class="o">%</span> <span class="s">"chisel3-plugin"</span> <span class="o">%</span> <span class="s">"3.4.4"</span> <span class="n">cross</span> <span class="nv">CrossVersion</span><span class="o">.</span><span class="py">full</span><span class="o">)</span>
+<span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"edu.berkeley.cs"</span> <span class="o">%%</span> <span class="s">"chisel3"</span> <span class="o">%</span> <span class="s">"3.4.4"</span>
+<span class="n">scalacOptions</span> <span class="o">+=</span> <span class="s">"-Xsource:2.11"</span>
+<span class="c1">// We also recommend using chiseltest for writing unit tests </span>
 <span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"edu.berkeley.cs"</span> <span class="o">%%</span> <span class="s">"chiseltest"</span> <span class="o">%</span> <span class="s">"0.3.4"</span> <span class="o">%</span> <span class="s">"test"</span>
 </code></pre></div></div>
 
