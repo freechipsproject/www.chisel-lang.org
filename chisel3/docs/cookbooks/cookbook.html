@@ -33,6 +33,7 @@ ga('send', 'pageview');
   <li><a href="#how-do-i-unpack-a-value-reverse-concatenation-like-in-verilog">How do I unpack a value (“reverse concatenation”) like in Verilog?</a></li>
   <li><a href="#how-do-i-do-subword-assignment-assign-to-some-bits-in-a-uint">How do I do subword assignment (assign to some bits in a UInt)?</a></li>
   <li><a href="#how-do-i-create-an-optional-io">How do I create an optional I/O?</a></li>
+  <li><a href="#how-do-i-minimize-the-number-of-bits-used-in-an-output-vector">How do I minimize the number of bits used in an output vector</a></li>
   <li>Predictable Naming
     <ul>
       <li><a href="#how-do-i-get-chisel-to-name-signals-properly-in-blocks-like-whenwithclockandreset">How do I get Chisel to name signals properly in blocks like when/withClockAndReset?</a></li>
@@ -362,6 +363,44 @@ The reason for this is that subword assignment generally hints at a better abstr
 <span class="o">}</span>
 </code></pre></div></div>
 
+<h3 id="how-do-i-minimize-the-number-of-bits-used-in-an-output-vector">How do I minimize the number of bits used in an output vector?</h3>
+
+<p>Use inferred width and a <code class="language-plaintext highlighter-rouge">Seq</code> instead of a <code class="language-plaintext highlighter-rouge">Vec</code>:</p>
+
+<p>Consider:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3._</span>
+
+<span class="c1">// Count the number of set bits up to and including each bit position</span>
+<span class="k">class</span> <span class="nc">CountBits</span><span class="o">(</span><span class="n">width</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">MultiIOModule</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">bits</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="nv">width</span><span class="o">.</span><span class="py">W</span><span class="o">)))</span>
+  <span class="k">val</span> <span class="nv">countSequence</span> <span class="k">=</span> <span class="nv">Seq</span><span class="o">.</span><span class="py">tabulate</span><span class="o">(</span><span class="n">width</span><span class="o">)(</span><span class="n">i</span> <span class="k">=&gt;</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">())))</span>
+  <span class="k">val</span> <span class="nv">countVector</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="nc">Vec</span><span class="o">(</span><span class="n">width</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">())))</span>
+  <span class="nv">countSequence</span><span class="o">.</span><span class="py">zipWithIndex</span><span class="o">.</span><span class="py">foreach</span> <span class="o">{</span> <span class="nf">case</span> <span class="o">(</span><span class="n">port</span><span class="o">,</span> <span class="n">i</span><span class="o">)</span> <span class="k">=&gt;</span>
+    <span class="n">port</span> <span class="o">:=</span> <span class="nv">util</span><span class="o">.</span><span class="py">PopCount</span><span class="o">(</span><span class="nf">bits</span><span class="o">(</span><span class="n">i</span><span class="o">,</span> <span class="mi">0</span><span class="o">))</span>
+  <span class="o">}</span>
+  <span class="n">countVector</span> <span class="o">:=</span> <span class="n">countSequence</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Unlike <code class="language-plaintext highlighter-rouge">Vecs</code> which represent a singular Chisel type and must have the same width for every element,
+<code class="language-plaintext highlighter-rouge">Seq</code> is a purely Scala construct, so their elements are independent from the perspective of Chisel and can have different widths.</p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">CountBits</span><span class="p">(</span>
+  <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
+  <span class="kt">input</span>        <span class="n">reset</span><span class="p">,</span>
+  <span class="kt">input</span>  <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="nb">bits</span><span class="p">,</span>
+  <span class="kt">output</span>       <span class="n">countSequence_0</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">countSequence_1</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">countSequence_2</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="p">[</span><span class="mi">2</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">countSequence_3</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="p">[</span><span class="mi">2</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">countVector_0</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="p">[</span><span class="mi">2</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">countVector_1</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="p">[</span><span class="mi">2</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">countVector_2</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="p">[</span><span class="mi">2</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">countVector_3</span>
+<span class="p">);</span>
+</code></pre></div></div>
+
 <h2 id="predictable-naming">Predictable Naming</h2>
 
 <h3 id="how-do-i-get-chisel-to-name-signals-properly-in-blocks-like-whenwithclockandreset">How do I get Chisel to name signals properly in blocks like when/withClockAndReset?</h3>
@@ -462,9 +501,9 @@ The reason for this is that subword assignment generally hints at a better abstr
   <span class="kt">input</span>   <span class="n">clock</span><span class="p">,</span>
   <span class="kt">input</span>   <span class="n">reset</span>
 <span class="p">);</span>
-  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">drink_I</span><span class="p">;</span> <span class="c1">// @[cookbook.md 378:23]</span>
-  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">drink_O</span><span class="p">;</span> <span class="c1">// @[cookbook.md 378:23]</span>
-  <span class="n">Tea</span> <span class="n">drink</span> <span class="p">(</span> <span class="c1">// @[cookbook.md 378:23]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">drink_I</span><span class="p">;</span> <span class="c1">// @[cookbook.md 407:23]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">drink_O</span><span class="p">;</span> <span class="c1">// @[cookbook.md 407:23]</span>
+  <span class="n">Tea</span> <span class="n">drink</span> <span class="p">(</span> <span class="c1">// @[cookbook.md 407:23]</span>
     <span class="p">.</span><span class="n">I</span><span class="p">(</span><span class="n">drink_I</span><span class="p">),</span>
     <span class="p">.</span><span class="n">O</span><span class="p">(</span><span class="n">drink_O</span><span class="p">)</span>
   <span class="p">);</span>
@@ -491,7 +530,7 @@ to a register:</p>
 </code></pre></div></div>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">ChiselStage</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">BadRegConnect</span><span class="o">)</span>
-<span class="c1">// firrtl.passes.CheckHighFormLike$RegWithFlipException:  @[cookbook.md 409:20]: [module BadRegConnect] Register monitor cannot be a bundle type with flips.</span>
+<span class="c1">// firrtl.passes.CheckHighFormLike$RegWithFlipException:  @[cookbook.md 438:20]: [module BadRegConnect] Register monitor cannot be a bundle type with flips.</span>
 </code></pre></div></div>
 
 <p>While there is no construct to “strip direction” in Chisel3, wrapping a type in <code class="language-plaintext highlighter-rouge">Output(...)</code>
