@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.4.3 - chisel3.util.experimental</title>
-          <meta name="description" content="chisel3 3.4.3 - chisel3.util.experimental" />
-          <meta name="keywords" content="chisel3 3.4.3 chisel3.util.experimental" />
+          <title>chisel3 3.5-SNAPSHOT - chisel3.util.experimental</title>
+          <meta name="description" content="chisel3 3.5 - SNAPSHOT - chisel3.util.experimental" />
+          <meta name="keywords" content="chisel3 3.5 SNAPSHOT chisel3.util.experimental" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.4.3</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.5-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -125,7 +125,27 @@ functions
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="chisel3.util">util</a></dd></dl></div>
+    </li><li name="chisel3.util.experimental.decode" visbl="pub" class="indented4 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="decode"></a><a id="decode:decode"></a>
+      <span class="permalink">
+      <a href="../../../chisel3/util/experimental/decode/index.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">package</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="decode/index.html"><span class="name">decode</span></a>
+      </span>
+      
+      
     </li><li class="current-entities indented3">
+                        <a class="object" href="BitSet$.html" title=""></a>
+                        <a class="trait" href="BitSet.html" title="A Set of BitPat represents a set of bit vector with mask."></a>
+                        <a href="BitSet.html" title="A Set of BitPat represents a set of bit vector with mask.">BitSet</a>
+                      </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="object" href="BoringUtils$.html" title="Utilities for generating synthesizable cross module references that &quot;bore&quot; through the hierarchy."></a>
                         <a href="BoringUtils$.html" title="Utilities for generating synthesizable cross module references that &quot;bore&quot; through the hierarchy.">BoringUtils</a>
@@ -161,6 +181,10 @@ functions
                         <span class="separator"></span>
                         <a class="object" href="forceName$.html" title=""></a>
                         <a href="forceName$.html" title="">forceName</a>
+                      </li><li class="current-entities indented3">
+                        <span class="separator"></span>
+                        <a class="object" href="getAnnotations$.html" title=""></a>
+                        <a href="getAnnotations$.html" title="">getAnnotations</a>
                       </li><li class="current-entities indented3">
                         <span class="separator"></span>
                         <a class="object" href="group$.html" title="Marks that a module to be ignored in Dedup Transform in Firrtl pass"></a>
@@ -252,7 +276,23 @@ functions
 
         <div id="types" class="types members">
               <h3>Type Members</h3>
-              <ol><li name="chisel3.util.experimental.BoringUtilsException" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+              <ol><li name="chisel3.util.experimental.BitSet" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
+      <a id="BitSetextendsAnyRef"></a><a id="BitSet:BitSet"></a>
+      <span class="permalink">
+      <a href="../../../chisel3/util/experimental/BitSet.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">sealed </span>
+        <span class="kind">trait</span>
+      </span>
+      <span class="symbol">
+        <a title="A Set of BitPat represents a set of bit vector with mask." href="BitSet.html"><span class="name">BitSet</span></a><span class="result"> extends <a href="../../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">A Set of <a href="../BitPat.html" class="extype" name="chisel3.util.BitPat">BitPat</a> represents a set of bit vector with mask.</p>
+    </li><li name="chisel3.util.experimental.BoringUtilsException" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="BoringUtilsExceptionextendsException"></a><a id="BoringUtilsException:BoringUtilsException"></a>
       <span class="permalink">
       <a href="../../../chisel3/util/experimental/BoringUtilsException.html" title="Permalink">
@@ -280,7 +320,7 @@ functions
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="This is the annotation created when using loadMemoryFromFile, it records the memory, the load file and the format of the file." href="ChiselLoadMemoryAnnotation.html"><span class="name">ChiselLoadMemoryAnnotation</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../../Data.html" class="extype" name="chisel3.Data">Data</a></span>]</span><span class="params">(<span name="target">target: <a href="../../MemBase.html" class="extype" name="chisel3.MemBase">MemBase</a>[<span class="extype" name="chisel3.util.experimental.ChiselLoadMemoryAnnotation.T">T</span>]</span>, <span name="fileName">fileName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="hexOrBinary">hexOrBinary: <span class="extype" name="firrtl.annotations.MemoryLoadFileType.FileType">FileType</span> = <span class="symbol">MemoryLoadFileType.Hex</span></span>)</span><span class="result"> extends <a href="../../experimental/ChiselAnnotation.html" class="extype" name="chisel3.experimental.ChiselAnnotation">ChiselAnnotation</a> with <a href="../../experimental/RunFirrtlTransform.html" class="extype" name="chisel3.experimental.RunFirrtlTransform">RunFirrtlTransform</a> with <a href="https://www.scala-lang.org/api/2.12.13/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.13/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="This is the annotation created when using loadMemoryFromFile, it records the memory, the load file and the format of the file." href="ChiselLoadMemoryAnnotation.html"><span class="name">ChiselLoadMemoryAnnotation</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../../Data.html" class="extype" name="chisel3.Data">Data</a></span>]</span><span class="params">(<span name="target">target: <a href="../../MemBase.html" class="extype" name="chisel3.MemBase">MemBase</a>[<span class="extype" name="chisel3.util.experimental.ChiselLoadMemoryAnnotation.T">T</span>]</span>, <span name="fileName">fileName: <span class="extype" name="scala.Predef.String">String</span></span>, <span name="hexOrBinary">hexOrBinary: <span class="extype" name="firrtl.annotations.MemoryLoadFileType.FileType">FileType</span> = <span class="symbol">MemoryLoadFileType.Hex</span></span>)</span><span class="result"> extends <a href="../../experimental/ChiselAnnotation.html" class="extype" name="chisel3.experimental.ChiselAnnotation">ChiselAnnotation</a> with <a href="../../experimental/RunFirrtlTransform.html" class="extype" name="chisel3.experimental.RunFirrtlTransform">RunFirrtlTransform</a> with <a href="https://www.scala-lang.org/api/2.12.15/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       <p class="shortcomment cmt">This is the annotation created when using <a href="loadMemoryFromFile$.html" class="extype" name="chisel3.util.experimental.loadMemoryFromFile">loadMemoryFromFile</a>, it records the memory, the load file
@@ -338,7 +378,7 @@ and the format of the file.</p></div><dl class="paramcmts block"><dt class="para
         <span class="kind">case class</span>
       </span>
       <span class="symbol">
-        <a title="Links the user-specified name to force to, with the signal/instance in the FIRRTL design" href="ForceNameAnnotation.html"><span class="name">ForceNameAnnotation</span></a><span class="params">(<span name="target">target: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.3/firrtl/annotations/IsMember.html#firrtl.annotations.IsMember" class="extype" name="firrtl.annotations.IsMember">IsMember</a></span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.3/firrtl/annotations/SingleTargetAnnotation.html#firrtl.annotations.SingleTargetAnnotation" class="extype" name="firrtl.annotations.SingleTargetAnnotation">SingleTargetAnnotation</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.3/firrtl/annotations/IsMember.html#firrtl.annotations.IsMember" class="extype" name="firrtl.annotations.IsMember">IsMember</a>] with <a href="https://www.scala-lang.org/api/2.12.13/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.13/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
+        <a title="Links the user-specified name to force to, with the signal/instance in the FIRRTL design" href="ForceNameAnnotation.html"><span class="name">ForceNameAnnotation</span></a><span class="params">(<span name="target">target: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.5-SNAPSHOT/firrtl/annotations/IsMember.html#firrtl.annotations.IsMember" class="extype" name="firrtl.annotations.IsMember">IsMember</a></span>, <span name="name">name: <span class="extype" name="scala.Predef.String">String</span></span>)</span><span class="result"> extends <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.5-SNAPSHOT/firrtl/annotations/SingleTargetAnnotation.html#firrtl.annotations.SingleTargetAnnotation" class="extype" name="firrtl.annotations.SingleTargetAnnotation">SingleTargetAnnotation</a>[<a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.5-SNAPSHOT/firrtl/annotations/IsMember.html#firrtl.annotations.IsMember" class="extype" name="firrtl.annotations.IsMember">IsMember</a>] with <a href="https://www.scala-lang.org/api/2.12.15/scala/Product.html#scala.Product" class="extype" name="scala.Product">Product</a> with <a href="https://www.scala-lang.org/api/2.12.15/scala/Serializable.html#scala.Serializable" class="extype" name="scala.Serializable">Serializable</a></span>
       </span>
       
       <p class="shortcomment cmt">Links the user-specified name to force to, with the signal/instance in the FIRRTL design
@@ -356,7 +396,7 @@ and the format of the file.</p></div><dl class="paramcmts block"><dt class="para
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Forces the name of marked signals to a certain name" href="ForceNamesTransform.html"><span class="name">ForceNamesTransform</span></a><span class="result"> extends <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.3/firrtl/Transform.html#firrtl.Transform" class="extype" name="firrtl.Transform">Transform</a> with <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.3/firrtl/DependencyAPIMigration.html#firrtl.DependencyAPIMigration" class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</a></span>
+        <a title="Forces the name of marked signals to a certain name" href="ForceNamesTransform.html"><span class="name">ForceNamesTransform</span></a><span class="result"> extends <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.5-SNAPSHOT/firrtl/Transform.html#firrtl.Transform" class="extype" name="firrtl.Transform">Transform</a> with <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.5-SNAPSHOT/firrtl/DependencyAPIMigration.html#firrtl.DependencyAPIMigration" class="extype" name="firrtl.DependencyAPIMigration">DependencyAPIMigration</a></span>
       </span>
       
       <p class="shortcomment cmt">Forces the name of marked signals to a certain name</p><div class="fullcomment"><div class="comment cmt"><p>Forces the name of marked signals to a certain name</p><ul><li>If there is a conflict in the enclosing module's namespace, throws an exception</li><li>Renames signals of ground types only. If you rename an intermediate module, it will throw an error</li><li>Renames instances as well (as well as port names)
@@ -418,7 +458,7 @@ Common usages:</li><li>Use to avoid prefixing behavior on specific instances who
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="This transform only is activated if Verilog is being generated (determined by presence of the proper emit annotation) when activated it creates additional Verilog files that contain modules bound to the modules that contain an initializable memory" href="LoadMemoryTransform.html"><span class="name">LoadMemoryTransform</span></a><span class="result"> extends <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.3/firrtl/Transform.html#firrtl.Transform" class="extype" name="firrtl.Transform">Transform</a></span>
+        <a title="This transform only is activated if Verilog is being generated (determined by presence of the proper emit annotation) when activated it creates additional Verilog files that contain modules bound to the modules that contain an initializable memory" href="LoadMemoryTransform.html"><span class="name">LoadMemoryTransform</span></a><span class="result"> extends <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.5-SNAPSHOT/firrtl/Transform.html#firrtl.Transform" class="extype" name="firrtl.Transform">Transform</a></span>
       </span>
       
       <p class="shortcomment cmt">This transform only is activated if Verilog is being generated (determined by presence of the proper emit
@@ -436,7 +476,23 @@ not need this transform to do that.
         <div class="values members">
               <h3>Value Members</h3>
               <ol>
-                <li name="chisel3.util.experimental.BoringUtils" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+                <li name="chisel3.util.experimental.BitSet" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="BitSet"></a><a id="BitSet:BitSet"></a>
+      <span class="permalink">
+      <a href="../../../chisel3/util/experimental/BitSet$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="BitSet$.html"><span class="name">BitSet</span></a>
+      </span>
+      
+      
+    </li><li name="chisel3.util.experimental.BoringUtils" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="BoringUtils"></a><a id="BoringUtils:BoringUtils"></a>
       <span class="permalink">
       <a href="../../../chisel3/util/experimental/BoringUtils$.html" title="Permalink">
@@ -511,6 +567,22 @@ across circuit elaborations.
       </span>
       <span class="symbol">
         <a title="" href="forceName$.html"><span class="name">forceName</span></a>
+      </span>
+      
+      
+    </li><li name="chisel3.util.experimental.getAnnotations" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="getAnnotations"></a><a id="getAnnotations:getAnnotations"></a>
+      <span class="permalink">
+      <a href="../../../chisel3/util/experimental/getAnnotations$.html" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">object</span>
+      </span>
+      <span class="symbol">
+        <a title="" href="getAnnotations$.html"><span class="name">getAnnotations</span></a>
       </span>
       
       

@@ -81,6 +81,7 @@
 - [`@SebastianBoe`](https://github.com/SebastianBoe)
 - [`@seldridge`](https://github.com/seldridge)
 - [`@sequencer`](https://github.com/sequencer)
+- [`@Shorla`](https://github.com/Shorla)
 - [`@shunshou`](https://github.com/shunshou)
 - [`@ShuyunJia`](https://github.com/ShuyunJia)
 - [`@sinofp`](https://github.com/sinofp)

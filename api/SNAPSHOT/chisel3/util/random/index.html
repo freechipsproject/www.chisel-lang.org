@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.4.3 - chisel3.util.random</title>
-          <meta name="description" content="chisel3 3.4.3 - chisel3.util.random" />
-          <meta name="keywords" content="chisel3 3.4.3 chisel3.util.random" />
+          <title>chisel3 3.5-SNAPSHOT - chisel3.util.random</title>
+          <meta name="description" content="chisel3 3.5 - SNAPSHOT - chisel3.util.random" />
+          <meta name="keywords" content="chisel3 3.5 SNAPSHOT chisel3.util.random" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.4.3</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.5-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -296,7 +296,7 @@ reduction operation (<a href="XOR$.html" class="extype" name="chisel3.util.rando
 hardware has support for a run-time programmable seed (via <a href="PRNGIO.html#seed:chisel3.util.Valid[chisel3.Vec[chisel3.Bool]]" class="extmbr" name="chisel3.util.random.PRNGIO#seed">PRNGIO.seed</a>) and conditional increment (via
 <a href="PRNGIO.html#increment:chisel3.Bool" class="extmbr" name="chisel3.util.random.PRNGIO#increment">PRNGIO.increment</a>).</p><p>If the user specifies a seed, then a compile-time check is added that they are not
 initializing the LFSR to a state which will cause it to lock up. If the user does not set a seed, then the least
-significant bit of the state will be set or reset based on the choice of reduction operator.</p><p>In the example below, a 4-bit LFSR Fibonacci LFSR is constructed. The tap points are defined as four and three
+significant bit of the state will be set or reset based on the choice of reduction operator.</p><p>In the example below, a 4-bit LFSR Galois LFSR is constructed. The tap points are defined as four and three
 (using LFSR convention of indexing from one). This results in the hardware configuration shown in the diagram.</p><pre><span class="kw">val</span> lfsr4 = Module(<span class="kw">new</span> GaloisLFSR(<span class="num">4</span>, <span class="std">Set</span>(<span class="num">4</span>, <span class="num">3</span>))
 <span class="cmt">// +-----------------+---------------------------------------------------------+</span>
 <span class="cmt">// |                 |                                                         |</span>
@@ -375,7 +375,7 @@ significant bit of the state will be set or reset based on the choice of reducti
       <p class="shortcomment cmt">A maximal period Galois Linear Feedback Shift Register (LFSR) generator.</p><div class="fullcomment"><div class="comment cmt"><p>A maximal period Galois Linear Feedback Shift Register (LFSR) generator. The maximal period taps are sourced from
 <a href="LFSR$.html#tapsMaxPeriod:Map[Int,Seq[Set[Int]]]" class="extmbr" name="chisel3.util.random.LFSR#tapsMaxPeriod">LFSR.tapsMaxPeriod</a>.</p><pre><span class="kw">val</span> lfsr8 = Module(<span class="kw">new</span> MaxPeriodGaloisLFSR(<span class="num">8</span>))</pre></div></div>
     </li><li name="chisel3.util.random.PRNG" visbl="pub" class="indented0 " data-isabs="true" fullComment="no" group="Ungrouped">
-      <a id="PRNGextendschisel3.Module"></a><a id="PRNG:PRNG"></a>
+      <a id="PRNGextendsModule"></a><a id="PRNG:PRNG"></a>
       <span class="permalink">
       <a href="../../../chisel3/util/random/PRNG.html" title="Permalink">
         <i class="material-icons"></i>
@@ -386,7 +386,7 @@ significant bit of the state will be set or reset based on the choice of reducti
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="An abstract class representing a Pseudo Random Number Generator (PRNG)" href="PRNG.html"><span class="name">PRNG</span></a><span class="result"> extends <a href="../../index.html#Module=chisel3.internal.LegacyModule" class="extmbr" name="chisel3.Module">Module</a></span>
+        <a title="An abstract class representing a Pseudo Random Number Generator (PRNG)" href="PRNG.html"><span class="name">PRNG</span></a><span class="result"> extends <a href="../../Module.html" class="extype" name="chisel3.Module">Module</a></span>
       </span>
       
       <p class="shortcomment cmt">An abstract class representing a Pseudo Random Number Generator (PRNG)</p>

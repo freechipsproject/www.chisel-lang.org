@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.4.3 - chisel3.util.BitPat</title>
-          <meta name="description" content="chisel3 3.4.3 - chisel3.util.BitPat" />
-          <meta name="keywords" content="chisel3 3.4.3 chisel3.util.BitPat" />
+          <title>chisel3 3.5-SNAPSHOT - chisel3.util.BitPat</title>
+          <meta name="description" content="chisel3 3.5 - SNAPSHOT - chisel3.util.BitPat" />
+          <meta name="keywords" content="chisel3 3.5 SNAPSHOT chisel3.util.BitPat" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.4.3</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.5-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -323,6 +323,10 @@ functions
                         <a href="ShiftRegister$.html" title="">ShiftRegister</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
+                        <a class="object" href="ShiftRegisters$.html" title=""></a>
+                        <a href="ShiftRegisters$.html" title="">ShiftRegisters</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
                         <a class="class" href="SwitchContext.html" title="Implementation details for switch."></a>
                         <a href="SwitchContext.html" title="Implementation details for switch.">SwitchContext</a>
                       </li><li class="current-entities indented2">
@@ -363,16 +367,16 @@ functions
                         <a href="log2Up$.html" title="Compute the log2 of a Scala integer, rounded up, with min value of 1.">log2Up</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
+                        <a class="object" href="pla$.html" title=""></a>
+                        <a href="pla$.html" title="">pla</a>
+                      </li><li class="current-entities indented2">
+                        <span class="separator"></span>
                         <a class="object" href="signedBitLength$.html" title=""></a>
                         <a href="signedBitLength$.html" title="">signedBitLength</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="object" href="switch$.html" title="Conditional logic to form a switch block."></a>
                         <a href="switch$.html" title="Conditional logic to form a switch block.">switch</a>
-                      </li><li class="current-entities indented2">
-                        <span class="separator"></span>
-                        <a class="object" href="unless$.html" title=""></a>
-                        <a href="unless$.html" title="">unless</a>
                       </li><li class="current-entities indented2">
                         <span class="separator"></span>
                         <a class="object" href="unsignedBitLength$.html" title=""></a>
@@ -402,14 +406,14 @@ functions
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <span class="name">BitPat</span><span class="result"> extends <a href="../SourceInfoDoc.html" class="extype" name="chisel3.SourceInfoDoc">SourceInfoDoc</a></span>
+        <span class="name">BitPat</span><span class="result"> extends <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a> with <a href="../SourceInfoDoc.html" class="extype" name="chisel3.SourceInfoDoc">SourceInfoDoc</a></span>
       </span>
       </h4>
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Bit patterns are literals with masks, used to represent values with don't
 care bits. Equality comparisons will ignore don't care bits.
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/chipsalliance/chisel3/tree/v3.4.3/src/main/scala/chisel3/util/BitPat.scala#L112" target="_blank">BitPat.scala</a></dd><div class="block">Example:
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/chipsalliance/chisel3/tree/master/src/main/scala/chisel3/util/BitPat.scala#L242" target="_blank">BitPat.scala</a></dd><div class="block">Example:
                <ol><li class="cmt"><p></p><pre><span class="lit">"b10101"</span>.U === BitPat(<span class="lit">"b101??"</span>) <span class="cmt">// evaluates to true.B</span>
 <span class="lit">"b10111"</span>.U === BitPat(<span class="lit">"b101??"</span>) <span class="cmt">// evaluates to true.B</span>
 <span class="lit">"b10001"</span>.U === BitPat(<span class="lit">"b101??"</span>) <span class="cmt">// evaluates to false.B</span></pre></li></ol>
@@ -417,7 +421,7 @@ care bits. Equality comparisons will ignore don't care bits.
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="../SourceInfoDoc.html" class="extype" name="chisel3.SourceInfoDoc">SourceInfoDoc</a>, <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.13/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="../SourceInfoDoc.html" class="extype" name="chisel3.SourceInfoDoc">SourceInfoDoc</a>, <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a>, <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.15/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div></div>
         
 
@@ -443,7 +447,7 @@ care bits. Equality comparisons will ignore don't care bits.
                   <span class="filtertype">Inherited<br />
                   </span>
                   <ol id="linearization">
-                    <li class="in" name="chisel3.util.BitPat"><span>BitPat</span></li><li class="in" name="chisel3.SourceInfoDoc"><span>SourceInfoDoc</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
+                    <li class="in" name="chisel3.util.BitPat"><span>BitPat</span></li><li class="in" name="chisel3.SourceInfoDoc"><span>SourceInfoDoc</span></li><li class="in" name="chisel3.util.experimental.BitSet"><span>BitSet</span></li><li class="in" name="scala.AnyRef"><span>AnyRef</span></li><li class="in" name="scala.Any"><span>Any</span></li>
                   </ol>
                 </div><div class="ancestors">
               <span class="filtertype"></span>
@@ -475,7 +479,7 @@ care bits. Equality comparisons will ignore don't care bits.
         <span class="kind">new</span>
       </span>
       <span class="symbol">
-        <span class="name">BitPat</span><span class="params">(<span name="value">value: <a href="../../scala/index.html#BigInt=scala.math.BigInt" class="extmbr" name="scala.BigInt">BigInt</a></span>, <span name="mask">mask: <a href="../../scala/index.html#BigInt=scala.math.BigInt" class="extmbr" name="scala.BigInt">BigInt</a></span>, <span name="width">width: <a href="https://www.scala-lang.org/api/2.12.13/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span>
+        <span class="name">BitPat</span><span class="params">(<span name="value">value: <a href="../../scala/index.html#BigInt=scala.math.BigInt" class="extmbr" name="scala.BigInt">BigInt</a></span>, <span name="mask">mask: <a href="../../scala/index.html#BigInt=scala.math.BigInt" class="extmbr" name="scala.BigInt">BigInt</a></span>, <span name="width">width: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span>
       </span>
       
       
@@ -489,23 +493,7 @@ care bits. Equality comparisons will ignore don't care bits.
         <div class="values members">
               <h3>Value Members</h3>
               <ol>
-                <li name="chisel3.util.BitPat#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
-      <a id="!=(that:chisel3.UInt):chisel3.Bool"></a><a id="!=(UInt):Bool"></a>
-      <span class="permalink">
-      <a href="../../chisel3/util/BitPat.html#!=(that:chisel3.UInt):chisel3.Bool" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier">macro </span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="that">that: <a href="../UInt.html" class="extype" name="chisel3.UInt">UInt</a></span>)</span><span class="result">: <a href="../Bool.html" class="extype" name="chisel3.Bool">Bool</a></span>
-      </span>
-      
-      
-    </li><li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+                <li name="scala.AnyRef#!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="!=(x$1:Any):Boolean"></a><a id="!=(Any):Boolean"></a>
       <span class="permalink">
       <a href="../../chisel3/util/BitPat.html#!=(x$1:Any):Boolean" title="Permalink">
@@ -517,10 +505,26 @@ care bits. Equality comparisons will ignore don't care bits.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.13/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.15/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+    </li><li name="chisel3.util.BitPat###" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="##(that:chisel3.util.BitPat):chisel3.util.BitPat"></a><a id="##(BitPat):BitPat"></a>
+      <span class="permalink">
+      <a href="../../chisel3/util/BitPat.html###(that:chisel3.util.BitPat):chisel3.util.BitPat" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">macro </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">(<span name="that">that: <a href="" class="extype" name="chisel3.util.BitPat">BitPat</a></span>)</span><span class="result">: <a href="" class="extype" name="chisel3.util.BitPat">BitPat</a></span>
+      </span>
+      
+      
     </li><li name="scala.AnyRef###" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="##():Int"></a>
       <span class="permalink">
@@ -533,7 +537,7 @@ care bits. Equality comparisons will ignore don't care bits.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -565,7 +569,7 @@ care bits. Equality comparisons will ignore don't care bits.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.13/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.15/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -582,6 +586,38 @@ care bits. Equality comparisons will ignore don't care bits.
       </span>
       <span class="symbol">
         <span title="gt4s: $eq$eq$eq" class="name">===</span><span class="params">(<span name="that">that: <a href="../UInt.html" class="extype" name="chisel3.UInt">UInt</a></span>)</span><span class="result">: <a href="../Bool.html" class="extype" name="chisel3.Bool">Bool</a></span>
+      </span>
+      
+      
+    </li><li name="chisel3.util.BitPat#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="apply(x:Int,y:Int):chisel3.util.BitPat"></a><a id="apply(Int,Int):BitPat"></a>
+      <span class="permalink">
+      <a href="../../chisel3/util/BitPat.html#apply(x:Int,y:Int):chisel3.util.BitPat" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">macro </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="x">x: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="y">y: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="" class="extype" name="chisel3.util.BitPat">BitPat</a></span>
+      </span>
+      
+      
+    </li><li name="chisel3.util.BitPat#apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="apply(x:Int):chisel3.util.BitPat"></a><a id="apply(Int):BitPat"></a>
+      <span class="permalink">
+      <a href="../../chisel3/util/BitPat.html#apply(x:Int):chisel3.util.BitPat" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">macro </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">apply</span><span class="params">(<span name="x">x: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="" class="extype" name="chisel3.util.BitPat">BitPat</a></span>
       </span>
       
       
@@ -625,6 +661,56 @@ care bits. Equality comparisons will ignore don't care bits.
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="chisel3.util.BitPat#cover" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="cover(that:chisel3.util.BitPat):Boolean"></a><a id="cover(BitPat):Boolean"></a>
+      <span class="permalink">
+      <a href="../../chisel3/util/BitPat.html#cover(that:chisel3.util.BitPat):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cover</span><span class="params">(<span name="that">that: <a href="" class="extype" name="chisel3.util.BitPat">BitPat</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Check whether this <span class="extype" name="BitSet">BitSet</span> covers that (i.e.</p><div class="fullcomment"><div class="comment cmt"><p>Check whether this <span class="extype" name="BitSet">BitSet</span> covers that (i.e. forall b matches that, b also matches this)
+</p></div><dl class="paramcmts block"><dt class="param">that</dt><dd class="cmt"><p><a href="" class="extype" name="chisel3.util.BitPat">BitPat</a> to be covered</p></dd><dt>returns</dt><dd class="cmt"><p>true if this <span class="extype" name="BitSet">BitSet</span> can cover that <span class="extype" name="BitSet">BitSet</span></p></dd></dl></div>
+    </li><li name="chisel3.util.experimental.BitSet#cover" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="cover(that:chisel3.util.experimental.BitSet):Boolean"></a><a id="cover(BitSet):Boolean"></a>
+      <span class="permalink">
+      <a href="../../chisel3/util/BitPat.html#cover(that:chisel3.util.experimental.BitSet):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">cover</span><span class="params">(<span name="that">that: <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Check whether this <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a> covers that (i.e.</p><div class="fullcomment"><div class="comment cmt"><p>Check whether this <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a> covers that (i.e. forall b matches that, b also matches this)
+</p></div><dl class="paramcmts block"><dt class="param">that</dt><dd class="cmt"><p><a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a> to be covered</p></dd><dt>returns</dt><dd class="cmt"><p>true if this <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a> can cover that <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a></p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a></dd></dl></div>
+    </li><li name="chisel3.util.BitPat#do_##" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="SourceInfoTransformMacro">
+      <a id="do_##(that:chisel3.util.BitPat)(implicitsourceInfo:chisel3.internal.sourceinfo.SourceInfo,implicitcompileOptions:chisel3.CompileOptions):chisel3.util.BitPat"></a><a id="do_##(BitPat)(SourceInfo,CompileOptions):BitPat"></a>
+      <span class="permalink">
+      <a href="../../chisel3/util/BitPat.html#do_##(that:chisel3.util.BitPat)(implicitsourceInfo:chisel3.internal.sourceinfo.SourceInfo,implicitcompileOptions:chisel3.CompileOptions):chisel3.util.BitPat" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span title="gt4s: do_$hash$hash" class="name">do_##</span><span class="params">(<span name="that">that: <a href="" class="extype" name="chisel3.util.BitPat">BitPat</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="sourceInfo">sourceInfo: <span class="extype" name="chisel3.internal.sourceinfo.SourceInfo">SourceInfo</span></span>, <span name="compileOptions">compileOptions: <a href="../CompileOptions.html" class="extype" name="chisel3.CompileOptions">CompileOptions</a></span>)</span><span class="result">: <a href="" class="extype" name="chisel3.util.BitPat">BitPat</a></span>
+      </span>
+      
+      <p class="shortcomment cmt"></p>
     </li><li name="chisel3.util.BitPat#do_=/=" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="SourceInfoTransformMacro">
       <a id="do_=/=(that:chisel3.UInt)(implicitsourceInfo:chisel3.internal.sourceinfo.SourceInfo,implicitcompileOptions:chisel3.CompileOptions):chisel3.Bool"></a><a id="do_=/=(UInt)(SourceInfo,CompileOptions):Bool"></a>
       <span class="permalink">
@@ -657,6 +743,38 @@ care bits. Equality comparisons will ignore don't care bits.
       </span>
       
       <p class="shortcomment cmt"></p>
+    </li><li name="chisel3.util.BitPat#do_apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="SourceInfoTransformMacro">
+      <a id="do_apply(x:Int,y:Int)(implicitsourceInfo:chisel3.internal.sourceinfo.SourceInfo,implicitcompileOptions:chisel3.CompileOptions):chisel3.util.BitPat"></a><a id="do_apply(Int,Int)(SourceInfo,CompileOptions):BitPat"></a>
+      <span class="permalink">
+      <a href="../../chisel3/util/BitPat.html#do_apply(x:Int,y:Int)(implicitsourceInfo:chisel3.internal.sourceinfo.SourceInfo,implicitcompileOptions:chisel3.CompileOptions):chisel3.util.BitPat" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">do_apply</span><span class="params">(<span name="x">x: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>, <span name="y">y: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="sourceInfo">sourceInfo: <span class="extype" name="chisel3.internal.sourceinfo.SourceInfo">SourceInfo</span></span>, <span name="compileOptions">compileOptions: <a href="../CompileOptions.html" class="extype" name="chisel3.CompileOptions">CompileOptions</a></span>)</span><span class="result">: <a href="" class="extype" name="chisel3.util.BitPat">BitPat</a></span>
+      </span>
+      
+      <p class="shortcomment cmt"></p>
+    </li><li name="chisel3.util.BitPat#do_apply" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="SourceInfoTransformMacro">
+      <a id="do_apply(x:Int)(implicitsourceInfo:chisel3.internal.sourceinfo.SourceInfo,implicitcompileOptions:chisel3.CompileOptions):chisel3.util.BitPat"></a><a id="do_apply(Int)(SourceInfo,CompileOptions):BitPat"></a>
+      <span class="permalink">
+      <a href="../../chisel3/util/BitPat.html#do_apply(x:Int)(implicitsourceInfo:chisel3.internal.sourceinfo.SourceInfo,implicitcompileOptions:chisel3.CompileOptions):chisel3.util.BitPat" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">do_apply</span><span class="params">(<span name="x">x: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="sourceInfo">sourceInfo: <span class="extype" name="chisel3.internal.sourceinfo.SourceInfo">SourceInfo</span></span>, <span name="compileOptions">compileOptions: <a href="../CompileOptions.html" class="extype" name="chisel3.CompileOptions">CompileOptions</a></span>)</span><span class="result">: <a href="" class="extype" name="chisel3.util.BitPat">BitPat</a></span>
+      </span>
+      
+      <p class="shortcomment cmt"></p>
     </li><li name="scala.AnyRef#eq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="eq(x$1:AnyRef):Boolean"></a><a id="eq(AnyRef):Boolean"></a>
       <span class="permalink">
@@ -669,14 +787,14 @@ care bits. Equality comparisons will ignore don't care bits.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="equals(x$1:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
+    </li><li name="chisel3.util.experimental.BitSet#equals" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="equals(obj:Any):Boolean"></a><a id="equals(Any):Boolean"></a>
       <span class="permalink">
-      <a href="../../chisel3/util/BitPat.html#equals(x$1:Any):Boolean" title="Permalink">
+      <a href="../../chisel3/util/BitPat.html#equals(obj:Any):Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -685,10 +803,13 @@ care bits. Equality comparisons will ignore don't care bits.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.13/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">equals</span><span class="params">(<span name="obj">obj: <a href="https://www.scala-lang.org/api/2.12.15/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <p class="shortcomment cmt">Test whether two <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a> matches the same set of value
+</p><div class="fullcomment"><div class="comment cmt"><p>Test whether two <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a> matches the same set of value
+</p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>true if two <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a> is same.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a> → AnyRef → Any</dd><dt>Note</dt><dd><span class="cmt"><p>
+This method can be very expensive compared to ordinary == operator between two Objects</p></span></dd></dl></div>
     </li><li name="scala.AnyRef#finalize" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="finalize():Unit"></a>
       <span class="permalink">
@@ -701,7 +822,7 @@ care bits. Equality comparisons will ignore don't care bits.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -730,7 +851,7 @@ care bits. Equality comparisons will ignore don't care bits.
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
-    </li><li name="chisel3.util.BitPat#getWidth" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="chisel3.util.BitPat#getWidth" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="getWidth:Int"></a>
       <span class="permalink">
       <a href="../../chisel3/util/BitPat.html#getWidth:Int" title="Permalink">
@@ -742,10 +863,12 @@ care bits. Equality comparisons will ignore don't care bits.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getWidth</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span class="name">getWidth</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
-      
+      <p class="shortcomment cmt">Get specified width of said BitPat
+</p><div class="fullcomment"><div class="comment cmt"><p>Get specified width of said BitPat
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="chisel3.util.BitPat">BitPat</a> → <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a></dd></dl></div>
     </li><li name="scala.AnyRef#hashCode" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="hashCode():Int"></a>
       <span class="permalink">
@@ -758,13 +881,63 @@ care bits. Equality comparisons will ignore don't care bits.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="chisel3.util.BitPat#intersect" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="intersect(that:chisel3.util.BitPat):chisel3.util.experimental.BitSet"></a><a id="intersect(BitPat):BitSet"></a>
+      <span class="permalink">
+      <a href="../../chisel3/util/BitPat.html#intersect(that:chisel3.util.BitPat):chisel3.util.experimental.BitSet" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">intersect</span><span class="params">(<span name="that">that: <a href="" class="extype" name="chisel3.util.BitPat">BitPat</a></span>)</span><span class="result">: <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Intersect <code>this</code> and <code>that</code> <a href="" class="extype" name="chisel3.util.BitPat">BitPat</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Intersect <code>this</code> and <code>that</code> <a href="" class="extype" name="chisel3.util.BitPat">BitPat</a>.
+</p></div><dl class="paramcmts block"><dt class="param">that</dt><dd class="cmt"><p><a href="" class="extype" name="chisel3.util.BitPat">BitPat</a> to be intersected.</p></dd><dt>returns</dt><dd class="cmt"><p>a <span class="extype" name="BitSet">BitSet</span> containing all elements of <code>this</code> that also belong to <code>that</code>.</p></dd></dl></div>
+    </li><li name="chisel3.util.experimental.BitSet#intersect" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="intersect(that:chisel3.util.experimental.BitSet):chisel3.util.experimental.BitSet"></a><a id="intersect(BitSet):BitSet"></a>
+      <span class="permalink">
+      <a href="../../chisel3/util/BitPat.html#intersect(that:chisel3.util.experimental.BitSet):chisel3.util.experimental.BitSet" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">intersect</span><span class="params">(<span name="that">that: <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a></span>)</span><span class="result">: <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Intersect <code>this</code> and <code>that</code> <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Intersect <code>this</code> and <code>that</code> <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a>.
+</p></div><dl class="paramcmts block"><dt class="param">that</dt><dd class="cmt"><p><a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a> to be intersected.</p></dd><dt>returns</dt><dd class="cmt"><p>a <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a> containing all elements of <code>this</code> that also belong to <code>that</code>.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a></dd></dl></div>
+    </li><li name="chisel3.util.BitPat#isEmpty" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isEmpty:Boolean"></a>
+      <span class="permalink">
+      <a href="../../chisel3/util/BitPat.html#isEmpty:Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">isEmpty</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">whether this <span class="extype" name="BitSet">BitSet</span> is empty (i.e.</p><div class="fullcomment"><div class="comment cmt"><p>whether this <span class="extype" name="BitSet">BitSet</span> is empty (i.e. no value matches)</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="chisel3.util.BitPat">BitPat</a> → <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a></dd></dl></div>
     </li><li name="scala.Any#isInstanceOf" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="isInstanceOf[T0]:Boolean"></a>
       <span class="permalink">
@@ -777,7 +950,7 @@ care bits. Equality comparisons will ignore don't care bits.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
@@ -809,7 +982,7 @@ care bits. Equality comparisons will ignore don't care bits.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -825,7 +998,7 @@ care bits. Equality comparisons will ignore don't care bits.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -844,13 +1017,97 @@ care bits. Equality comparisons will ignore don't care bits.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="chisel3.util.BitPat#overlap" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="overlap(that:chisel3.util.BitPat):Boolean"></a><a id="overlap(BitPat):Boolean"></a>
+      <span class="permalink">
+      <a href="../../chisel3/util/BitPat.html#overlap(that:chisel3.util.BitPat):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">overlap</span><span class="params">(<span name="that">that: <a href="" class="extype" name="chisel3.util.BitPat">BitPat</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Check whether this <a href="" class="extype" name="chisel3.util.BitPat">BitPat</a> overlap with that <a href="" class="extype" name="chisel3.util.BitPat">BitPat</a>, i.e.</p><div class="fullcomment"><div class="comment cmt"><p>Check whether this <a href="" class="extype" name="chisel3.util.BitPat">BitPat</a> overlap with that <a href="" class="extype" name="chisel3.util.BitPat">BitPat</a>, i.e. !(intersect.isEmpty)
+</p></div><dl class="paramcmts block"><dt class="param">that</dt><dd class="cmt"><p><a href="" class="extype" name="chisel3.util.BitPat">BitPat</a> to be checked.</p></dd><dt>returns</dt><dd class="cmt"><p>true if this and that <a href="" class="extype" name="chisel3.util.BitPat">BitPat</a> have overlap.</p></dd></dl></div>
+    </li><li name="chisel3.util.experimental.BitSet#overlap" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="overlap(that:chisel3.util.experimental.BitSet):Boolean"></a><a id="overlap(BitSet):Boolean"></a>
+      <span class="permalink">
+      <a href="../../chisel3/util/BitPat.html#overlap(that:chisel3.util.experimental.BitSet):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">overlap</span><span class="params">(<span name="that">that: <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Check whether this <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a> overlap with that <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a>, i.e.</p><div class="fullcomment"><div class="comment cmt"><p>Check whether this <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a> overlap with that <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a>, i.e. !(intersect.isEmpty)
+</p></div><dl class="paramcmts block"><dt class="param">that</dt><dd class="cmt"><p><a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a> to be checked.</p></dd><dt>returns</dt><dd class="cmt"><p>true if this and that <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a> have overlap.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a></dd></dl></div>
+    </li><li name="chisel3.util.BitPat#rawString" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="rawString:String"></a>
+      <span class="permalink">
+      <a href="../../chisel3/util/BitPat.html#rawString:String" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">rawString</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <p class="shortcomment cmt">Generate raw string of a <a href="" class="extype" name="chisel3.util.BitPat">BitPat</a>.</p>
+    </li><li name="chisel3.util.BitPat#subtract" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="subtract(that:chisel3.util.BitPat):chisel3.util.experimental.BitSet"></a><a id="subtract(BitPat):BitSet"></a>
+      <span class="permalink">
+      <a href="../../chisel3/util/BitPat.html#subtract(that:chisel3.util.BitPat):chisel3.util.experimental.BitSet" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">subtract</span><span class="params">(<span name="that">that: <a href="" class="extype" name="chisel3.util.BitPat">BitPat</a></span>)</span><span class="result">: <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Subtract a <a href="" class="extype" name="chisel3.util.BitPat">BitPat</a> from this.</p><div class="fullcomment"><div class="comment cmt"><p>Subtract a <a href="" class="extype" name="chisel3.util.BitPat">BitPat</a> from this.
+</p></div><dl class="paramcmts block"><dt class="param">that</dt><dd class="cmt"><p>subtrahend <a href="" class="extype" name="chisel3.util.BitPat">BitPat</a>.</p></dd><dt>returns</dt><dd class="cmt"><p>a <span class="extype" name="BitSet">BitSet</span> containing elements of <code>this</code> which are not the elements of <code>that</code>.</p></dd></dl></div>
+    </li><li name="chisel3.util.experimental.BitSet#subtract" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="subtract(that:chisel3.util.experimental.BitSet):chisel3.util.experimental.BitSet"></a><a id="subtract(BitSet):BitSet"></a>
+      <span class="permalink">
+      <a href="../../chisel3/util/BitPat.html#subtract(that:chisel3.util.experimental.BitSet):chisel3.util.experimental.BitSet" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">subtract</span><span class="params">(<span name="that">that: <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a></span>)</span><span class="result">: <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Subtract that from this <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a>.</p><div class="fullcomment"><div class="comment cmt"><p>Subtract that from this <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a>.
+</p></div><dl class="paramcmts block"><dt class="param">that</dt><dd class="cmt"><p>subtrahend <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a>.</p></dd><dt>returns</dt><dd class="cmt"><p>a <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a> containing elements of <code>this</code> which are not the elements of <code>that</code>.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a></dd></dl></div>
     </li><li name="scala.AnyRef#synchronized" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="synchronized[T0](x$1:=&gt;T0):T0"></a><a id="synchronized[T0](⇒T0):T0"></a>
       <span class="permalink">
@@ -867,7 +1124,25 @@ care bits. Equality comparisons will ignore don't care bits.
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
-    </li><li name="scala.AnyRef#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="chisel3.util.BitPat#terms" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="terms:scala.collection.immutable.Set[chisel3.util.BitPat]"></a><a id="terms:Set[BitPat]"></a>
+      <span class="permalink">
+      <a href="../../chisel3/util/BitPat.html#terms:scala.collection.immutable.Set[chisel3.util.BitPat]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">terms</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/collection/immutable/Set.html#scala.collection.immutable.Set" class="extype" name="scala.collection.immutable.Set">Set</a>[<a href="" class="extype" name="chisel3.util.BitPat">BitPat</a>]</span>
+      </span>
+      
+      <p class="shortcomment cmt">all <a href="" class="extype" name="chisel3.util.BitPat">BitPat</a> elements in <a href="#terms:scala.collection.immutable.Set[chisel3.util.BitPat]" class="extmbr" name="chisel3.util.BitPat#terms">terms</a> make up this <span class="extype" name="BitSet">BitSet</span>.</p><div class="fullcomment"><div class="comment cmt"><p>all <a href="" class="extype" name="chisel3.util.BitPat">BitPat</a> elements in <a href="#terms:scala.collection.immutable.Set[chisel3.util.BitPat]" class="extmbr" name="chisel3.util.BitPat#terms">terms</a> make up this <span class="extype" name="BitSet">BitSet</span>.
+all <a href="#terms:scala.collection.immutable.Set[chisel3.util.BitPat]" class="extmbr" name="chisel3.util.BitPat#terms">terms</a> should be have the same width.
+</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="chisel3.util.BitPat">BitPat</a> → <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a></dd></dl></div>
+    </li><li name="chisel3.util.BitPat#toString" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="toString():String"></a>
       <span class="permalink">
       <a href="../../chisel3/util/BitPat.html#toString():String" title="Permalink">
@@ -879,10 +1154,28 @@ care bits. Equality comparisons will ignore don't care bits.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toString</span><span class="params">()</span><span class="result">: <a href="https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#java.lang.String" class="extype" name="java.lang.String">String</a></span>
+        <span class="name">toString</span><span class="params">()</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
       </span>
       
-      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="" class="extype" name="chisel3.util.BitPat">BitPat</a> → <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a> → AnyRef → Any</dd></dl></div>
+    </li><li name="chisel3.util.experimental.BitSet#union" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="union(that:chisel3.util.experimental.BitSet):chisel3.util.experimental.BitSet"></a><a id="union(BitSet):BitSet"></a>
+      <span class="permalink">
+      <a href="../../chisel3/util/BitPat.html#union(that:chisel3.util.experimental.BitSet):chisel3.util.experimental.BitSet" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name">union</span><span class="params">(<span name="that">that: <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a></span>)</span><span class="result">: <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a></span>
+      </span>
+      
+      <p class="shortcomment cmt">Union this and that <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a>
+</p><div class="fullcomment"><div class="comment cmt"><p>Union this and that <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a>
+</p></div><dl class="paramcmts block"><dt class="param">that</dt><dd class="cmt"><p><a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a> to union.</p></dd><dt>returns</dt><dd class="cmt"><p>a <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a> containing all elements of <code>this</code> and <code>that</code>.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a></dd></dl></div>
     </li><li name="chisel3.util.BitPat#value" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
       <a id="value:BigInt"></a>
       <span class="permalink">
@@ -911,7 +1204,7 @@ care bits. Equality comparisons will ignore don't care bits.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -933,7 +1226,7 @@ care bits. Equality comparisons will ignore don't care bits.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.13/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="https://www.scala-lang.org/api/2.12.13/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.15/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -955,7 +1248,7 @@ care bits. Equality comparisons will ignore don't care bits.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.13/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.15/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -967,46 +1260,40 @@ care bits. Equality comparisons will ignore don't care bits.
                 <span class="name">@native</span><span class="args">()</span>
               
         </dd></dl></div>
+    </li><li name="chisel3.util.BitPat#width" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+      <a id="width:Int"></a>
+      <span class="permalink">
+      <a href="../../chisel3/util/BitPat.html#width:Int" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">val</span>
+      </span>
+      <span class="symbol">
+        <span class="name">width</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+      </span>
+      
+      
     </li>
               </ol>
             </div>
 
         
 
-        <div class="values members">
-              <h3>Deprecated Value Members</h3>
-              <ol><li name="chisel3.util.BitPat#do_!=" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="do_!=(that:chisel3.UInt)(implicitsourceInfo:chisel3.internal.sourceinfo.SourceInfo,implicitcompileOptions:chisel3.CompileOptions):chisel3.Bool"></a><a id="do_!=(UInt)(SourceInfo,CompileOptions):Bool"></a>
-      <span class="permalink">
-      <a href="../../chisel3/util/BitPat.html#do_!=(that:chisel3.UInt)(implicitsourceInfo:chisel3.internal.sourceinfo.SourceInfo,implicitcompileOptions:chisel3.CompileOptions):chisel3.Bool" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span title="gt4s: do_$bang$eq. Deprecated: (Since version 3.0) Use '=/=', which avoids potential precedence problems" class="name deprecated">do_!=</span><span class="params">(<span name="that">that: <a href="../UInt.html" class="extype" name="chisel3.UInt">UInt</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="sourceInfo">sourceInfo: <span class="extype" name="chisel3.internal.sourceinfo.SourceInfo">SourceInfo</span></span>, <span name="compileOptions">compileOptions: <a href="../CompileOptions.html" class="extype" name="chisel3.CompileOptions">CompileOptions</a></span>)</span><span class="result">: <a href="../Bool.html" class="extype" name="chisel3.Bool">Bool</a></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Annotations</dt><dd>
-                <span class="name">@chiselRuntimeDeprecated</span><span class="args">()</span>
-              
-                <span class="name">@deprecated</span>
-              
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 3.0)</i> Use '=/=', which avoids potential precedence problems</p></dd></dl></div>
-    </li></ol>
-            </div>
+        
         </div>
 
         <div id="inheritedMembers">
         <div class="parent" name="chisel3.SourceInfoDoc">
               <h3>Inherited from <a href="../SourceInfoDoc.html" class="extype" name="chisel3.SourceInfoDoc">SourceInfoDoc</a></h3>
+            </div><div class="parent" name="chisel3.util.experimental.BitSet">
+              <h3>Inherited from <a href="experimental/BitSet.html" class="extype" name="chisel3.util.experimental.BitSet">BitSet</a></h3>
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.13/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.15/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
             </div>
         
         </div>
@@ -1023,7 +1310,7 @@ care bits. Equality comparisons will ignore don't care bits.
   <br>
   The equivalent public-facing methods do not have the <code>do_</code> prefix or have the same name. Use and look at the
   documentation for those. If you want left shift, use <code>&lt;&lt;</code>, not <code>do_&lt;&lt;</code>. If you want conversion to a
-  <a href="https://www.scala-lang.org/api/2.12.13/scala/collection/Seq.html" class="extype" name="scala.collection.Seq">Seq</a> of <a href="../Bool.html" class="extype" name="chisel3.Bool">Bool</a>s look at the <code>asBools</code> above, not the one below. Users can safely ignore
+  <a href="https://www.scala-lang.org/api/2.12.15/scala/collection/Seq.html" class="extype" name="scala.collection.Seq">Seq</a> of <a href="../Bool.html" class="extype" name="chisel3.Bool">Bool</a>s look at the <code>asBools</code> above, not the one below. Users can safely ignore
   every method in this group! <br> <br>
   🐉🐉🐉 <b>Here be dragons...</b> 🐉🐉🐉
   <br>

@@ -19,7 +19,7 @@ Hardware Compiler Framework</h1><h2></h2><p class="text-center"><a href="https:/
 <h3 id="chisel-dev-meeting">Chisel Dev Meeting</h3>
 <p>Chisel/FIRRTL development meetings happen every Monday and Tuesday from 1100–1200 PT.</p>
 
-<p>Call-in info and meeting notes are available <a href="https://docs.google.com/document/d/1Mpnqigmx6F8jdC77YWP3akp9H2V1bS1b2XiYjVX0brE">here</a>.</p>
+<p>Call-in info and meeting notes are available <a href="https://docs.google.com/document/d/1BLP2DYt59DqI-FgFCcjw8Ddl4K-WU0nHmQu0sZ_wAGo/">here</a>.</p>
 
 <h3 id="chisel-community-conference-2021-shanghai-china">Chisel Community Conference 2021, Shanghai, China.</h3>
 <p>CCC is an annual gathering of Chisel community enthusiasts and technical exchange workshop. 
@@ -133,6 +133,8 @@ For example, in SBT this could be expressed as:</p>
 <span class="c1">// We also recommend using chiseltest for writing unit tests </span>
 <span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"edu.berkeley.cs"</span> <span class="o">%%</span> <span class="s">"chiseltest"</span> <span class="o">%</span> <span class="s">"0.3.4"</span> <span class="o">%</span> <span class="s">"test"</span>
 </code></pre></div></div>
+<h3 id="guide-for-new-contributors">Guide For New Contributors</h3>
+<p>If you are trying to make a contribution to this project, please read <a href="https://github.com/Burnleydev1/chisel3/blob/recent_PR/CONTRIBUTING.md">CONTRIBUTING.md</a></p>
 
 <h3 id="design-verification">Design Verification</h3>
 
@@ -151,6 +153,8 @@ For example, in SBT this could be expressed as:</p>
   <li><a href="https://www.chisel-lang.org/api/latest/chisel3/index.html"><strong>ScalaDoc</strong></a>, a listing, description, and examples of the functionality exposed by Chisel</li>
   <li><a href="https://gitter.im/freechipsproject/chisel3"><strong>Gitter</strong></a>, where you can ask questions or discuss anything Chisel</li>
   <li><a href="https://www.chisel-lang.org"><strong>Website</strong></a> (<a href="https://github.com/freechipsproject/www.chisel-lang.org/">source</a>)</li>
+  <li><a href="https://scastie.scala-lang.org/KtzZQ3nFTea9KoNh0tRqtg"><strong>Scastie (3.5.0-RC1)</strong></a></li>
+  <li><a href="http://www.asic-world.com/verilog/veritut.html"><strong>asic-world</strong></a> If you aren’t familiar with verilog, this is a good tutorial.</li>
 </ul>
 
 <p>If you are migrating from Chisel2, see <a href="https://www.chisel-lang.org/chisel3/chisel3-vs-chisel2.html">the migration guide</a>.</p>
@@ -182,15 +186,16 @@ For example, in SBT this could be expressed as:</p>
 sbt compile
 </code></pre></div></div>
 
-<p>If the compilation succeeded, you can then run the included unit tests by invoking:</p>
+<p>In order to run the following unit tests, you will need several tools on your <code class="language-plaintext highlighter-rouge">PATH</code>, namely
+<a href="https://www.veripool.org/verilator/">verilator</a>,
+<a href="http://www.clifford.at/yosys/">yosys</a>,
+<a href="https://github.com/chipsalliance/espresso">espresso</a>,
+and <a href="https://github.com/Z3Prover/z3">z3</a>.
+Check that each is installed on your <code class="language-plaintext highlighter-rouge">PATH</code> by running <code class="language-plaintext highlighter-rouge">which verilator</code> and so on.</p>
+
+<p>If the compilation succeeded and the dependencies noted above are installed, you can then run the included unit tests by invoking:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sbt test
-</code></pre></div></div>
-
-<p>If you would like to run the tests without the compiler plugin (less common), you can do so by first launching <code class="language-plaintext highlighter-rouge">sbt</code>,
-then running <code class="language-plaintext highlighter-rouge">noPluginTests / test</code>:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sbt
-&gt; noPluginTests / test
 </code></pre></div></div>
 
 <h3 id="running-projects-against-local-chisel">Running Projects Against Local Chisel</h3>

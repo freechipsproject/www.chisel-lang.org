@@ -3,9 +3,9 @@
         <head>
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-          <title>chisel3 3.4.3 - chisel3.util.Pipe.PipeIO</title>
-          <meta name="description" content="chisel3 3.4.3 - chisel3.util.Pipe.PipeIO" />
-          <meta name="keywords" content="chisel3 3.4.3 chisel3.util.Pipe.PipeIO" />
+          <title>chisel3 3.5-SNAPSHOT - chisel3.util.Pipe.PipeIO</title>
+          <meta name="description" content="chisel3 3.5 - SNAPSHOT - chisel3.util.Pipe.PipeIO" />
+          <meta name="keywords" content="chisel3 3.5 SNAPSHOT chisel3.util.Pipe.PipeIO" />
           <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
           
       
@@ -28,7 +28,7 @@
         </head>
         <body>
       <div id="search">
-        <span id="doc-title">chisel3<span id="doc-version">3.4.3</span></span>
+        <span id="doc-title">chisel3<span id="doc-version">3.5-SNAPSHOT</span></span>
         <span class="close-results"><span class="left">&lt;</span> Back</span>
         <div id="textfilter">
           <span class="input">
@@ -110,7 +110,7 @@ functions
 functions
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../index.html" class="extype" name="chisel3">chisel3</a></dd></dl></div>
     </li><li name="chisel3.util.Pipe" visbl="pub" class="indented3 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="Pipe[T&lt;:chisel3.Data]extendschisel3.Module"></a><a id="Pipe[T&lt;:Data]:Pipe[T]"></a>
+      <a id="Pipe[T&lt;:chisel3.Data]extendsModule"></a><a id="Pipe[T&lt;:Data]:Pipe[T]"></a>
       <span class="permalink">
       <a href="../../chisel3/util/Pipe.html" title="Permalink">
         <i class="material-icons"></i>
@@ -121,7 +121,7 @@ functions
         <span class="kind">class</span>
       </span>
       <span class="symbol">
-        <a title="Pipeline module generator parameterized by data type and latency." href="Pipe.html"><span class="name">Pipe</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></span>]</span><span class="result"> extends <a href="../index.html#Module=chisel3.internal.LegacyModule" class="extmbr" name="chisel3.Module">Module</a></span>
+        <a title="Pipeline module generator parameterized by data type and latency." href="Pipe.html"><span class="name">Pipe</span></a><span class="tparams">[<span name="T">T &lt;: <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></span>]</span><span class="result"> extends <a href="../Module.html" class="extype" name="chisel3.Module">Module</a></span>
       </span>
       
       <p class="shortcomment cmt">Pipeline module generator parameterized by data type and latency.</p><div class="fullcomment"><div class="comment cmt"><p>Pipeline module generator parameterized by data type and latency.</p><p>This defines a module with one input, <code>enq</code>, and one output, <code>deq</code>. The input and output are <a href="Valid.html" class="extype" name="chisel3.util.Valid">Valid</a> interfaces
@@ -167,11 +167,11 @@ input for you.
 
       
           <div id="comment" class="fullcommenttop"><div class="comment cmt"><p>Interface for <a href="Pipe.html" class="extype" name="chisel3.util.Pipe">Pipe</a>s composed of a <a href="Valid.html" class="extype" name="chisel3.util.Valid">Valid</a> input and <a href="Valid.html" class="extype" name="chisel3.util.Valid">Valid</a> output
-</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/chipsalliance/chisel3/tree/v3.4.3/src/main/scala/chisel3/util/Valid.scala#L176" target="_blank">Valid.scala</a></dd></dl><div class="toggleContainer block">
+</p></div><dl class="attributes block"> <dt>Source</dt><dd><a href="https://github.com/chipsalliance/chisel3/tree/master/src/main/scala/chisel3/util/Valid.scala#L183" target="_blank">Valid.scala</a></dd></dl><div class="toggleContainer block">
           <span class="toggle">
             Linear Supertypes
           </span>
-          <div class="superTypes hiddenContent"><a href="../Bundle.html" class="extype" name="chisel3.Bundle">Bundle</a>, <a href="../Record.html" class="extype" name="chisel3.Record">Record</a>, <a href="../Aggregate.html" class="extype" name="chisel3.Aggregate">Aggregate</a>, <a href="../Data.html" class="extype" name="chisel3.Data">Data</a>, <a href="../SourceInfoDoc.html" class="extype" name="chisel3.SourceInfoDoc">SourceInfoDoc</a>, <span class="extype" name="chisel3.internal.NamedComponent">NamedComponent</span>, <span class="extype" name="chisel3.internal.HasId">HasId</span>, <span class="extype" name="chisel3.internal.InstanceId">internal.InstanceId</span>, <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.13/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
+          <div class="superTypes hiddenContent"><a href="../Bundle.html" class="extype" name="chisel3.Bundle">Bundle</a>, <a href="../Record.html" class="extype" name="chisel3.Record">Record</a>, <a href="../Aggregate.html" class="extype" name="chisel3.Aggregate">Aggregate</a>, <a href="../Data.html" class="extype" name="chisel3.Data">Data</a>, <a href="../SourceInfoDoc.html" class="extype" name="chisel3.SourceInfoDoc">SourceInfoDoc</a>, <span class="extype" name="chisel3.internal.NamedComponent">NamedComponent</span>, <span class="extype" name="chisel3.internal.HasId">HasId</span>, <span class="extype" name="chisel3.internal.InstanceId">internal.InstanceId</span>, <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a>, <a href="https://www.scala-lang.org/api/2.12.15/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></div>
         </div></div>
         
 
@@ -255,7 +255,7 @@ input for you.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.13/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $bang$eq" class="name">!=</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.15/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -271,7 +271,7 @@ input for you.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span title="gt4s: $hash$hash" class="name">##</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -287,7 +287,7 @@ input for you.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $colon$eq" class="name">:=</span><span class="params">(<span name="that">that: ⇒ <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="sourceInfo">sourceInfo: <span class="extype" name="chisel3.internal.sourceinfo.SourceInfo">SourceInfo</span></span>, <span name="connectionCompileOptions">connectionCompileOptions: <a href="../CompileOptions.html" class="extype" name="chisel3.CompileOptions">CompileOptions</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span title="gt4s: $colon$eq" class="name">:=</span><span class="params">(<span name="that">that: ⇒ <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="sourceInfo">sourceInfo: <span class="extype" name="chisel3.internal.sourceinfo.SourceInfo">SourceInfo</span></span>, <span name="connectionCompileOptions">connectionCompileOptions: <a href="../CompileOptions.html" class="extype" name="chisel3.CompileOptions">CompileOptions</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <p class="shortcomment cmt">Connect this data to that data mono-directionally and element-wise.</p><div class="fullcomment"><div class="comment cmt"><p>Connect this data to that data mono-directionally and element-wise.</p><p>This uses the <span class="extype" name="MonoConnect">MonoConnect</span> algorithm.
@@ -304,7 +304,7 @@ input for you.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $less$greater" class="name">&lt;&gt;</span><span class="params">(<span name="that">that: ⇒ <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="sourceInfo">sourceInfo: <span class="extype" name="chisel3.internal.sourceinfo.SourceInfo">SourceInfo</span></span>, <span name="connectionCompileOptions">connectionCompileOptions: <a href="../CompileOptions.html" class="extype" name="chisel3.CompileOptions">CompileOptions</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span title="gt4s: $less$greater" class="name">&lt;&gt;</span><span class="params">(<span name="that">that: ⇒ <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></span>)</span><span class="params">(<span class="implicit">implicit </span><span name="sourceInfo">sourceInfo: <span class="extype" name="chisel3.internal.sourceinfo.SourceInfo">SourceInfo</span></span>, <span name="connectionCompileOptions">connectionCompileOptions: <a href="../CompileOptions.html" class="extype" name="chisel3.CompileOptions">CompileOptions</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <p class="shortcomment cmt">Connect this data to that data bi-directionally and element-wise.</p><div class="fullcomment"><div class="comment cmt"><p>Connect this data to that data bi-directionally and element-wise.</p><p>This uses the <span class="extype" name="BiConnect">BiConnect</span> algorithm.
@@ -321,7 +321,7 @@ input for you.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.13/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span title="gt4s: $eq$eq" class="name">==</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.15/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef → Any</dd></dl></div>
@@ -341,7 +341,7 @@ input for you.
       </span>
       
       <p class="shortcomment cmt">Implementation of cloneType using runtime reflection.</p><div class="fullcomment"><div class="comment cmt"><p>Implementation of cloneType using runtime reflection. This should _never_ be overridden or called in user-code
-</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../Bundle.html" class="extype" name="chisel3.Bundle">Bundle</a></dd><dt>Note</dt><dd><span class="cmt"><p>This is overridden by the compiler plugin (it is never called when using the plugin)</p></span></dd></dl></div>
+</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../Bundle.html" class="extype" name="chisel3.Bundle">Bundle</a></dd><dt>Note</dt><dd><span class="cmt"><p>This is overridden by the compiler plugin (this implementation is never called)</p></span></dd></dl></div>
     </li><li name="chisel3.Bundle#_usingPlugin" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="_usingPlugin:Boolean"></a>
       <span class="permalink">
@@ -354,7 +354,7 @@ input for you.
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">_usingPlugin</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">_usingPlugin</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <p class="shortcomment cmt">Indicates if a concrete Bundle class was compiled using the compiler plugin</p><div class="fullcomment"><div class="comment cmt"><p>Indicates if a concrete Bundle class was compiled using the compiler plugin</p><p>Used for optimizing Chisel's performance and testing Chisel itself</p></div><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../Bundle.html" class="extype" name="chisel3.Bundle">Bundle</a></dd><dt>Note</dt><dd><span class="cmt"><p>This should not be used in user code!</p></span></dd></dl></div>
@@ -393,9 +393,9 @@ input for you.
 Returns a new Wire of that type. Does not modify existing nodes.</p><p>x.asTypeOf(that) performs the inverse operation of x := that.toBits.
 </p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Data.html" class="extype" name="chisel3.Data">Data</a></dd><dt>Note</dt><dd><span class="cmt"><p>bit widths are NOT checked, may pad or drop bits from input</p></span>, <span class="cmt"><p>that should have known widths</p></span></dd></dl></div>
     </li><li name="chisel3.Data#asUInt" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="asUInt():chisel3.UInt"></a><a id="asUInt():UInt"></a>
+      <a id="asUInt:chisel3.UInt"></a><a id="asUInt:UInt"></a>
       <span class="permalink">
-      <a href="../../chisel3/util/Pipe$PipeIO.html#asUInt():chisel3.UInt" title="Permalink">
+      <a href="../../chisel3/util/Pipe$PipeIO.html#asUInt:chisel3.UInt" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -404,7 +404,7 @@ Returns a new Wire of that type. Does not modify existing nodes.</p><p>x.asTypeO
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">asUInt</span><span class="params">()</span><span class="result">: <a href="../UInt.html" class="extype" name="chisel3.UInt">UInt</a></span>
+        <span class="name">asUInt</span><span class="result">: <a href="../UInt.html" class="extype" name="chisel3.UInt">UInt</a></span>
       </span>
       
       <p class="shortcomment cmt">Reinterpret cast to UInt.</p><div class="fullcomment"><div class="comment cmt"><p>Reinterpret cast to UInt.
@@ -443,26 +443,10 @@ was called, <a href="../Data.html#suggestName(seed:=&gt;String):HasId.this.type"
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">binding</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="chisel3.internal.Binding">Binding</span>]</span>
+        <span class="name">binding</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="chisel3.internal.Binding">Binding</span>]</span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<a href="../index.html" class="extype" name="chisel3">chisel3</a>] </dd><dt>Definition Classes</dt><dd><a href="../Data.html" class="extype" name="chisel3.Data">Data</a></dd></dl></div>
-    </li><li name="chisel3.Data#bindingToString" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="bindingToString:String"></a>
-      <span class="permalink">
-      <a href="../../chisel3/util/Pipe$PipeIO.html#bindingToString:String" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">bindingToString</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
-      </span>
-      
-      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../Data.html" class="extype" name="chisel3.Data">Data</a></dd></dl></div>
     </li><li name="chisel3.Data#binding_=" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
       <a id="binding_=(target:chisel3.internal.Binding):Unit"></a><a id="binding_=(Binding):Unit"></a>
       <span class="permalink">
@@ -475,7 +459,7 @@ was called, <a href="../Data.html#suggestName(seed:=&gt;String):HasId.this.type"
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span title="gt4s: binding_$eq" class="name">binding_=</span><span class="params">(<span name="target">target: <span class="extype" name="chisel3.internal.Binding">Binding</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span title="gt4s: binding_$eq" class="name">binding_=</span><span class="params">(<span name="target">target: <span class="extype" name="chisel3.internal.Binding">Binding</span></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../Data.html" class="extype" name="chisel3.Data">Data</a></dd></dl></div>
@@ -553,23 +537,7 @@ was called, <a href="../Data.html#suggestName(seed:=&gt;String):HasId.this.type"
       <p class="shortcomment cmt">Internal API; Chisel users should look at chisel3.chiselTypeOf(...).</p><div class="fullcomment"><div class="comment cmt"><p>Internal API; Chisel users should look at chisel3.chiselTypeOf(...).</p><p>cloneType must be defined for any Chisel object extending Data.
 It is responsible for constructing a basic copy of the object being cloned.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>a copy of the object.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Bundle.html" class="extype" name="chisel3.Bundle">Bundle</a> → <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></dd></dl></div>
-    </li><li name="chisel3.internal.HasId#computeName" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="computeName(defaultPrefix:Option[String],defaultSeed:Option[String]):Option[String]"></a><a id="computeName(Option[String],Option[String]):Option[String]"></a>
-      <span class="permalink">
-      <a href="../../chisel3/util/Pipe$PipeIO.html#computeName(defaultPrefix:Option[String],defaultSeed:Option[String]):Option[String]" title="Permalink">
-        <i class="material-icons"></i>
-      </a>
-    </span>
-      <span class="modifier_kind">
-        <span class="modifier"></span>
-        <span class="kind">def</span>
-      </span>
-      <span class="symbol">
-        <span class="name">computeName</span><span class="params">(<span name="defaultPrefix">defaultPrefix: <a href="https://www.scala-lang.org/api/2.12.13/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>, <span name="defaultSeed">defaultSeed: <a href="https://www.scala-lang.org/api/2.12.13/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="scala.Predef.String">String</span>]</span>
-      </span>
-      
-      <p class="shortcomment cmt">Computes the name of this HasId, if one exists</p><div class="fullcomment"><div class="comment cmt"><p>Computes the name of this HasId, if one exists</p></div><dl class="paramcmts block"><dt class="param">defaultPrefix</dt><dd class="cmt"><p>Optionally provide a default prefix for computing the name</p></dd><dt class="param">defaultSeed</dt><dd class="cmt"><p>Optionally provide default seed for computing the name</p></dd><dt>returns</dt><dd class="cmt"><p>the name, if it can be computed</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasId</dd></dl></div>
-    </li><li name="chisel3.util.Pipe.PipeIO#deq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+    </li><li name="chisel3.util.Pipe.PipeIO#deq" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Signals">
       <a id="deq:chisel3.util.Valid[T]"></a><a id="deq:Valid[T]"></a>
       <span class="permalink">
       <a href="../../chisel3/util/Pipe$PipeIO.html#deq:chisel3.util.Valid[T]" title="Permalink">
@@ -618,9 +586,9 @@ It is responsible for constructing a basic copy of the object being cloned.
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Aggregate.html" class="extype" name="chisel3.Aggregate">Aggregate</a> → <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></dd></dl></div>
     </li><li name="chisel3.Bundle#elements" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="elements:scala.collection.immutable.ListMap[String,chisel3.Data]"></a><a id="elements:ListMap[String,Data]"></a>
+      <a id="elements:collection.immutable.SeqMap[String,chisel3.Data]"></a><a id="elements:SeqMap[String,Data]"></a>
       <span class="permalink">
-      <a href="../../chisel3/util/Pipe$PipeIO.html#elements:scala.collection.immutable.ListMap[String,chisel3.Data]" title="Permalink">
+      <a href="../../chisel3/util/Pipe$PipeIO.html#elements:collection.immutable.SeqMap[String,chisel3.Data]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -629,7 +597,7 @@ It is responsible for constructing a basic copy of the object being cloned.
         <span class="kind">lazy val</span>
       </span>
       <span class="symbol">
-        <span class="name">elements</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/collection/immutable/ListMap.html#scala.collection.immutable.ListMap" class="extype" name="scala.collection.immutable.ListMap">ListMap</a>[<span class="extype" name="scala.Predef.String">String</span>, <a href="../Data.html" class="extype" name="chisel3.Data">Data</a>]</span>
+        <span class="name">elements</span><span class="result">: <span class="extype" name="scala.collection.immutable.SeqMap">SeqMap</span>[<span class="extype" name="scala.Predef.String">String</span>, <a href="../Data.html" class="extype" name="chisel3.Data">Data</a>]</span>
       </span>
       
       <p class="shortcomment cmt">The collection of <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></p><div class="fullcomment"><div class="comment cmt"><p>The collection of <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></p><p>Elements defined earlier in the Bundle are higher order upon
@@ -645,7 +613,7 @@ bundle.bar := <span class="num">0</span>x5678.U
 <span class="kw">val</span> uint = bundle.asUInt
 assert(uint === <span class="lit">"h12345678"</span>.U) <span class="cmt">// This will pass</span></pre></li></ol>
             </div></dl></div>
-    </li><li name="chisel3.util.Pipe.PipeIO#enq" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Ungrouped">
+    </li><li name="chisel3.util.Pipe.PipeIO#enq" visbl="pub" class="indented0 " data-isabs="false" fullComment="no" group="Signals">
       <a id="enq:chisel3.util.Valid[T]"></a><a id="enq:Valid[T]"></a>
       <span class="permalink">
       <a href="../../chisel3/util/Pipe$PipeIO.html#enq:chisel3.util.Valid[T]" title="Permalink">
@@ -673,7 +641,7 @@ assert(uint === <span class="lit">"h12345678"</span>.U) <span class="cmt">// Thi
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">eq</span><span class="params">(<span name="arg0">arg0: <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -689,7 +657,7 @@ assert(uint === <span class="lit">"h12345678"</span>.U) <span class="cmt">// Thi
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">equals</span><span class="params">(<span name="that">that: <a href="https://www.scala-lang.org/api/2.12.13/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">equals</span><span class="params">(<span name="that">that: <a href="https://www.scala-lang.org/api/2.12.15/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasId → AnyRef → Any</dd></dl></div>
@@ -705,7 +673,7 @@ assert(uint === <span class="lit">"h12345678"</span>.U) <span class="cmt">// Thi
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">finalize</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected[<span class="extype" name="java.lang">lang</span>] </dd><dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -763,7 +731,7 @@ assert(uint === <span class="lit">"h12345678"</span>.U) <span class="cmt">// Thi
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">getWidth</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span class="name">getWidth</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <p class="shortcomment cmt">Returns the width, in bits, if currently known.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the width, in bits, if currently known.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Data.html" class="extype" name="chisel3.Data">Data</a></dd></dl></div>
@@ -779,7 +747,7 @@ assert(uint === <span class="lit">"h12345678"</span>.U) <span class="cmt">// Thi
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hasSeed</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">hasSeed</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <p class="shortcomment cmt"></p><div class="fullcomment"><div class="comment cmt"></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>Whether either autoName or suggestName has been called</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasId</dd></dl></div>
@@ -795,7 +763,7 @@ assert(uint === <span class="lit">"h12345678"</span>.U) <span class="cmt">// Thi
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
+        <span class="name">hashCode</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>HasId → AnyRef → Any</dd></dl></div>
@@ -811,7 +779,7 @@ assert(uint === <span class="lit">"h12345678"</span>.U) <span class="cmt">// Thi
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ignoreSeq</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">ignoreSeq</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <p class="shortcomment cmt">Overridden by <a href="../IgnoreSeqInBundle.html" class="extype" name="chisel3.IgnoreSeqInBundle">IgnoreSeqInBundle</a> to allow arbitrary Seqs of Chisel elements.</p><div class="fullcomment"><div class="comment cmt"><p>Overridden by <a href="../IgnoreSeqInBundle.html" class="extype" name="chisel3.IgnoreSeqInBundle">IgnoreSeqInBundle</a> to allow arbitrary Seqs of Chisel elements.
@@ -844,14 +812,14 @@ assert(uint === <span class="lit">"h12345678"</span>.U) <span class="cmt">// Thi
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">isInstanceOf</span><span class="tparams">[<span name="T0">T0</span>]</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>Any</dd></dl></div>
     </li><li name="chisel3.Data#isLit" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="isLit():Boolean"></a>
+      <a id="isLit:Boolean"></a>
       <span class="permalink">
-      <a href="../../chisel3/util/Pipe$PipeIO.html#isLit():Boolean" title="Permalink">
+      <a href="../../chisel3/util/Pipe$PipeIO.html#isLit:Boolean" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -860,7 +828,7 @@ assert(uint === <span class="lit">"h12345678"</span>.U) <span class="cmt">// Thi
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isLit</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">isLit</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Data.html" class="extype" name="chisel3.Data">Data</a></dd></dl></div>
@@ -876,14 +844,14 @@ assert(uint === <span class="lit">"h12345678"</span>.U) <span class="cmt">// Thi
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">isWidthKnown</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">isWidthKnown</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <p class="shortcomment cmt">Returns whether the width is currently known.</p><div class="fullcomment"><div class="comment cmt"><p>Returns whether the width is currently known.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Data.html" class="extype" name="chisel3.Data">Data</a></dd></dl></div>
     </li><li name="chisel3.Aggregate#litOption" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="litOption():Option[BigInt]"></a>
+      <a id="litOption:Option[BigInt]"></a>
       <span class="permalink">
-      <a href="../../chisel3/util/Pipe$PipeIO.html#litOption():Option[BigInt]" title="Permalink">
+      <a href="../../chisel3/util/Pipe$PipeIO.html#litOption:Option[BigInt]" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -892,16 +860,16 @@ assert(uint === <span class="lit">"h12345678"</span>.U) <span class="cmt">// Thi
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">litOption</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="../../scala/index.html#BigInt=scala.math.BigInt" class="extmbr" name="scala.BigInt">BigInt</a>]</span>
+        <span class="name">litOption</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="../../scala/index.html#BigInt=scala.math.BigInt" class="extmbr" name="scala.BigInt">BigInt</a>]</span>
       </span>
       
       <p class="shortcomment cmt">Return an Aggregate's literal value if it is a literal, None otherwise.</p><div class="fullcomment"><div class="comment cmt"><p>Return an Aggregate's literal value if it is a literal, None otherwise.
 If any element of the aggregate is not a literal with a defined width, the result isn't a literal.
 </p></div><dl class="paramcmts block"><dt>returns</dt><dd class="cmt"><p>an Aggregate's literal value if it is a literal.</p></dd></dl><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Aggregate.html" class="extype" name="chisel3.Aggregate">Aggregate</a> → <a href="../Data.html" class="extype" name="chisel3.Data">Data</a></dd></dl></div>
     </li><li name="chisel3.Data#litValue" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="litValue():BigInt"></a>
+      <a id="litValue:BigInt"></a>
       <span class="permalink">
-      <a href="../../chisel3/util/Pipe$PipeIO.html#litValue():BigInt" title="Permalink">
+      <a href="../../chisel3/util/Pipe$PipeIO.html#litValue:BigInt" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -910,7 +878,7 @@ If any element of the aggregate is not a literal with a defined width, the resul
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">litValue</span><span class="params">()</span><span class="result">: <a href="../../scala/index.html#BigInt=scala.math.BigInt" class="extmbr" name="scala.BigInt">BigInt</a></span>
+        <span class="name">litValue</span><span class="result">: <a href="../../scala/index.html#BigInt=scala.math.BigInt" class="extmbr" name="scala.BigInt">BigInt</a></span>
       </span>
       
       <p class="shortcomment cmt">Returns the literal value if this is a literal that is representable as bits, otherwise crashes.</p><div class="fullcomment"><div class="comment cmt"><p>Returns the literal value if this is a literal that is representable as bits, otherwise crashes.
@@ -927,7 +895,7 @@ If any element of the aggregate is not a literal with a defined width, the resul
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
+        <span class="name">ne</span><span class="params">(<span name="arg0">arg0: <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd></dl></div>
@@ -943,7 +911,7 @@ If any element of the aggregate is not a literal with a defined width, the resul
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notify</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -962,7 +930,7 @@ If any element of the aggregate is not a literal with a defined width, the resul
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">notifyAll</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1065,7 +1033,7 @@ was called, <a href="#suggestName(seed:=&gt;String):HasId.this.type" class="extm
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toAbsoluteTarget</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.3/firrtl/annotations/ReferenceTarget.html#firrtl.annotations.ReferenceTarget" class="extype" name="firrtl.annotations.ReferenceTarget">ReferenceTarget</a></span>
+        <span class="name">toAbsoluteTarget</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.5-SNAPSHOT/firrtl/annotations/ReferenceTarget.html#firrtl.annotations.ReferenceTarget" class="extype" name="firrtl.annotations.ReferenceTarget">ReferenceTarget</a></span>
       </span>
       
       <p class="shortcomment cmt">Returns a FIRRTL IsMember that refers to the absolute path to this object in the elaborated hardware graph</p><div class="fullcomment"><div class="comment cmt"><p>Returns a FIRRTL IsMember that refers to the absolute path to this object in the elaborated hardware graph</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>NamedComponent → InstanceId</dd></dl></div>
@@ -1081,7 +1049,7 @@ was called, <a href="#suggestName(seed:=&gt;String):HasId.this.type" class="extm
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toNamed</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.3/firrtl/annotations/ComponentName.html#firrtl.annotations.ComponentName" class="extype" name="firrtl.annotations.ComponentName">ComponentName</a></span>
+        <span class="name">toNamed</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.5-SNAPSHOT/firrtl/annotations/ComponentName.html#firrtl.annotations.ComponentName" class="extype" name="firrtl.annotations.ComponentName">ComponentName</a></span>
       </span>
       
       <p class="shortcomment cmt">Returns a FIRRTL ComponentName that references this object</p><div class="fullcomment"><div class="comment cmt"><p>Returns a FIRRTL ComponentName that references this object</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>NamedComponent → InstanceId</dd><dt>Note</dt><dd><span class="cmt"><p>Should not be called until circuit elaboration is complete</p></span></dd></dl></div>
@@ -1142,7 +1110,7 @@ assert(uint === <span class="lit">"hbeefdead"</span>.U) <span class="cmt">// Thi
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">toTarget</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.4.3/firrtl/annotations/ReferenceTarget.html#firrtl.annotations.ReferenceTarget" class="extype" name="firrtl.annotations.ReferenceTarget">ReferenceTarget</a></span>
+        <span class="name">toTarget</span><span class="result">: <a href="https://javadoc.io/page/edu.berkeley.cs/firrtl_2.12/1.5-SNAPSHOT/firrtl/annotations/ReferenceTarget.html#firrtl.annotations.ReferenceTarget" class="extype" name="firrtl.annotations.ReferenceTarget">ReferenceTarget</a></span>
       </span>
       
       <p class="shortcomment cmt">Returns a FIRRTL ReferenceTarget that references this object</p><div class="fullcomment"><div class="comment cmt"><p>Returns a FIRRTL ReferenceTarget that references this object</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd>NamedComponent → InstanceId</dd><dt>Note</dt><dd><span class="cmt"><p>Should not be called until circuit elaboration is complete</p></span></dd></dl></div>
@@ -1158,7 +1126,7 @@ assert(uint === <span class="lit">"hbeefdead"</span>.U) <span class="cmt">// Thi
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1180,7 +1148,7 @@ assert(uint === <span class="lit">"hbeefdead"</span>.U) <span class="cmt">// Thi
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.13/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="https://www.scala-lang.org/api/2.12.13/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.15/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>, <span name="arg1">arg1: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1202,7 +1170,7 @@ assert(uint === <span class="lit">"hbeefdead"</span>.U) <span class="cmt">// Thi
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.13/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
+        <span class="name">wait</span><span class="params">(<span name="arg0">arg0: <a href="https://www.scala-lang.org/api/2.12.15/scala/Long.html#scala.Long" class="extype" name="scala.Long">Long</a></span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Unit.html#scala.Unit" class="extype" name="scala.Unit">Unit</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd>AnyRef</dd><dt>Annotations</dt><dd>
@@ -1226,7 +1194,7 @@ assert(uint === <span class="lit">"hbeefdead"</span>.U) <span class="cmt">// Thi
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name">widthOption</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="https://www.scala-lang.org/api/2.12.13/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>
+        <span class="name">widthOption</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>]</span>
       </span>
       
       <p class="shortcomment cmt">Returns Some(width) if the width is known, else None.</p><div class="fullcomment"><div class="comment cmt"><p>Returns Some(width) if the width is known, else None.</p></div><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Data.html" class="extype" name="chisel3.Data">Data</a></dd></dl></div>
@@ -1238,10 +1206,29 @@ assert(uint === <span class="lit">"hbeefdead"</span>.U) <span class="cmt">// Thi
 
         <div class="values members">
               <h3>Deprecated Value Members</h3>
-              <ol><li name="chisel3.Data#litArg" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
-      <a id="litArg():Option[chisel3.internal.firrtl.LitArg]"></a><a id="litArg():Option[LitArg]"></a>
+              <ol><li name="chisel3.Data#asUInt" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="asUInt(dummy:Int*):chisel3.UInt"></a><a id="asUInt(Int*):UInt"></a>
       <span class="permalink">
-      <a href="../../chisel3/util/Pipe$PipeIO.html#litArg():Option[chisel3.internal.firrtl.LitArg]" title="Permalink">
+      <a href="../../chisel3/util/Pipe$PipeIO.html#asUInt(dummy:Int*):chisel3.UInt" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier">final macro </span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version Chisel 3.5) Calling this function with an empty argument list is invalid in Scala 3. Use the form without parentheses instead">asUInt</span><span class="params">(<span name="dummy">dummy: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>*</span>)</span><span class="result">: <a href="../UInt.html" class="extype" name="chisel3.UInt">UInt</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Data.html" class="extype" name="chisel3.Data">Data</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version Chisel 3.5)</i> Calling this function with an empty argument list is invalid in Scala 3. Use the form without parentheses instead</p></dd></dl></div>
+    </li><li name="chisel3.Data#bindingToString" visbl="prt" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="bindingToString:String"></a>
+      <span class="permalink">
+      <a href="../../chisel3/util/Pipe$PipeIO.html#bindingToString:String" title="Permalink">
         <i class="material-icons"></i>
       </a>
     </span>
@@ -1250,15 +1237,70 @@ assert(uint === <span class="lit">"hbeefdead"</span>.U) <span class="cmt">// Thi
         <span class="kind">def</span>
       </span>
       <span class="symbol">
-        <span class="name deprecated" title="Deprecated: (Since version 3.2) litArg is deprecated, use litOption or litTo*Option">litArg</span><span class="params">()</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.13/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<span class="extype" name="chisel3.internal.firrtl.LitArg">LitArg</span>]</span>
+        <span class="name deprecated" title="Deprecated: (Since version Chisel 3.5.0) This was never intended to be visible to user-defined types">bindingToString</span><span class="result">: <span class="extype" name="scala.Predef.String">String</span></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Attributes</dt><dd>protected </dd><dt>Definition Classes</dt><dd><a href="../Data.html" class="extype" name="chisel3.Data">Data</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version Chisel 3.5.0)</i> This was never intended to be visible to user-defined types</p></dd></dl></div>
+    </li><li name="chisel3.Data#isLit" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="isLit(dummy:Int*):Boolean"></a><a id="isLit(Int*):Boolean"></a>
+      <span class="permalink">
+      <a href="../../chisel3/util/Pipe$PipeIO.html#isLit(dummy:Int*):Boolean" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version Chisel 3.5) Calling this function with an empty argument list is invalid in Scala 3. Use the form without parentheses instead">isLit</span><span class="params">(<span name="dummy">dummy: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>*</span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Boolean.html#scala.Boolean" class="extype" name="scala.Boolean">Boolean</a></span>
       </span>
       
       <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Data.html" class="extype" name="chisel3.Data">Data</a></dd><dt>Annotations</dt><dd>
-                <span class="name">@chiselRuntimeDeprecated</span><span class="args">()</span>
-              
                 <span class="name">@deprecated</span>
               
-        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version 3.2)</i> litArg is deprecated, use litOption or litTo*Option</p></dd></dl></div>
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version Chisel 3.5)</i> Calling this function with an empty argument list is invalid in Scala 3. Use the form without parentheses instead</p></dd></dl></div>
+    </li><li name="chisel3.Data#litOption" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="litOption(dummy:Int*):Option[BigInt]"></a><a id="litOption(Int*):Option[BigInt]"></a>
+      <span class="permalink">
+      <a href="../../chisel3/util/Pipe$PipeIO.html#litOption(dummy:Int*):Option[BigInt]" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version Chisel 3.5) Calling this function with an empty argument list is invalid in Scala 3. Use the form without parentheses instead">litOption</span><span class="params">(<span name="dummy">dummy: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>*</span>)</span><span class="result">: <a href="https://www.scala-lang.org/api/2.12.15/scala/Option.html#scala.Option" class="extype" name="scala.Option">Option</a>[<a href="../../scala/index.html#BigInt=scala.math.BigInt" class="extmbr" name="scala.BigInt">BigInt</a>]</span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Data.html" class="extype" name="chisel3.Data">Data</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version Chisel 3.5)</i> Calling this function with an empty argument list is invalid in Scala 3. Use the form without parentheses instead</p></dd></dl></div>
+    </li><li name="chisel3.Data#litValue" visbl="pub" class="indented0 " data-isabs="false" fullComment="yes" group="Ungrouped">
+      <a id="litValue(dummy:Int*):BigInt"></a><a id="litValue(Int*):BigInt"></a>
+      <span class="permalink">
+      <a href="../../chisel3/util/Pipe$PipeIO.html#litValue(dummy:Int*):BigInt" title="Permalink">
+        <i class="material-icons"></i>
+      </a>
+    </span>
+      <span class="modifier_kind">
+        <span class="modifier"></span>
+        <span class="kind">def</span>
+      </span>
+      <span class="symbol">
+        <span class="name deprecated" title="Deprecated: (Since version Chisel 3.5) Calling this function with an empty argument list is invalid in Scala 3. Use the form without parentheses instead">litValue</span><span class="params">(<span name="dummy">dummy: <a href="https://www.scala-lang.org/api/2.12.15/scala/Int.html#scala.Int" class="extype" name="scala.Int">Int</a>*</span>)</span><span class="result">: <a href="../../scala/index.html#BigInt=scala.math.BigInt" class="extmbr" name="scala.BigInt">BigInt</a></span>
+      </span>
+      
+      <div class="fullcomment"><dl class="attributes block"> <dt>Definition Classes</dt><dd><a href="../Data.html" class="extype" name="chisel3.Data">Data</a></dd><dt>Annotations</dt><dd>
+                <span class="name">@deprecated</span>
+              
+        </dd><dt>Deprecated</dt><dd class="cmt"><p><i>(Since version Chisel 3.5)</i> Calling this function with an empty argument list is invalid in Scala 3. Use the form without parentheses instead</p></dd></dl></div>
     </li></ol>
             </div>
         </div>
@@ -1283,7 +1325,7 @@ assert(uint === <span class="lit">"hbeefdead"</span>.U) <span class="cmt">// Thi
             </div><div class="parent" name="scala.AnyRef">
               <h3>Inherited from <a href="../../scala/index.html#AnyRef=Object" class="extmbr" name="scala.AnyRef">AnyRef</a></h3>
             </div><div class="parent" name="scala.Any">
-              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.13/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
+              <h3>Inherited from <a href="https://www.scala-lang.org/api/2.12.15/scala/Any.html#scala.Any" class="extype" name="scala.Any">Any</a></h3>
             </div>
         
         </div>
@@ -1292,6 +1334,9 @@ assert(uint === <span class="lit">"hbeefdead"</span>.U) <span class="cmt">// Thi
         <div class="group" name="Connect">
               <h3>Connect</h3>
               <div class="comment cmt"><p>Utilities for connecting hardware components</p></div>
+            </div><div class="group" name="Signals">
+              <h3>Signals</h3>
+              
             </div><div class="group" name="Ungrouped">
               <h3>Ungrouped</h3>
               
@@ -1303,7 +1348,7 @@ assert(uint === <span class="lit">"hbeefdead"</span>.U) <span class="cmt">// Thi
   <br>
   The equivalent public-facing methods do not have the <code>do_</code> prefix or have the same name. Use and look at the
   documentation for those. If you want left shift, use <code>&lt;&lt;</code>, not <code>do_&lt;&lt;</code>. If you want conversion to a
-  <a href="https://www.scala-lang.org/api/2.12.13/scala/collection/Seq.html" class="extype" name="scala.collection.Seq">Seq</a> of <a href="../Bool.html" class="extype" name="chisel3.Bool">Bool</a>s look at the <code>asBools</code> above, not the one below. Users can safely ignore
+  <a href="https://www.scala-lang.org/api/2.12.15/scala/collection/Seq.html" class="extype" name="scala.collection.Seq">Seq</a> of <a href="../Bool.html" class="extype" name="chisel3.Bool">Bool</a>s look at the <code>asBools</code> above, not the one below. Users can safely ignore
   every method in this group! <br> <br>
   🐉🐉🐉 <b>Here be dragons...</b> 🐉🐉🐉
   <br>
