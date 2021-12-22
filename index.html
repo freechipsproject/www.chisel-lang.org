@@ -31,7 +31,7 @@ Looking forward to CCC 2022! See you then!</p>
 
 <p><a href="https://gitter.im/freechipsproject/chisel3?utm_source=badge&amp;utm_medium=badge&amp;utm_campaign=pr-badge&amp;utm_content=badge"><img src="https://badges.gitter.im/chipsalliance/chisel3.svg" alt="Join the chat at https://gitter.im/freechipsproject/chisel3" /></a>
 <img src="https://github.com/chipsalliance/chisel3/actions/workflows/test.yml/badge.svg" alt="CI" />
-<a href="https://github.com/chipsalliance/chisel3/releases/latest"><img src="https://img.shields.io/github/tag/chipsalliance/chisel3.svg?label=release" alt="GitHub tag (latest SemVer)" /></a></p>
+<a href="https://github.com/chipsalliance/chisel3/releases/latest"><img src="https://img.shields.io/github/v/tag/chipsalliance/chisel3.svg?include_prereleases&amp;sort=semver" alt="GitHub tag (latest SemVer)" /></a></p>
 
 <p><a href="https://www.chisel-lang.org"><strong>Chisel</strong></a> is a hardware design language that facilitates <strong>advanced circuit generation and design reuse for both ASIC and FPGA digital logic designs</strong>.
 Chisel adds hardware construction primitives to the <a href="https://www.scala-lang.org">Scala</a> programming language, providing designers with the power of a modern programming language to write complex, parameterizable circuit generators that produce synthesizable Verilog.
@@ -100,7 +100,7 @@ This generator methodology enables the creation of re-usable components and libr
 </code></pre></div></div>
 
 <p>Alternatively, you may generate some Verilog directly for inspection:</p>
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">verilogString</span> <span class="k">=</span> <span class="o">(</span><span class="k">new</span> <span class="nv">chisel3</span><span class="o">.</span><span class="py">stage</span><span class="o">.</span><span class="py">ChiselStage</span><span class="o">).</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">FirFilter</span><span class="o">(</span><span class="mi">8</span><span class="o">,</span> <span class="nc">Seq</span><span class="o">(</span><span class="mf">0.</span><span class="n">U</span><span class="o">,</span> <span class="mf">1.</span><span class="n">U</span><span class="o">)))</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">verilogString</span> <span class="k">=</span> <span class="nv">chisel3</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">FirFilter</span><span class="o">(</span><span class="mi">8</span><span class="o">,</span> <span class="nc">Seq</span><span class="o">(</span><span class="mf">0.</span><span class="n">U</span><span class="o">,</span> <span class="mf">1.</span><span class="n">U</span><span class="o">)))</span>
 <span class="nf">println</span><span class="o">(</span><span class="n">verilogString</span><span class="o">)</span>
 </code></pre></div></div>
 
@@ -126,12 +126,11 @@ Follow the <a href="https://github.com/freechipsproject/chisel-template">chisel-
 <p>If you insist on setting up your own project from scratch, your project needs to depend on both the chisel3-plugin (Scalac plugin) and the chisel3 library.
 For example, in SBT this could be expressed as:</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// build.sbt</span>
-<span class="n">scalaVersion</span> <span class="o">:=</span> <span class="s">"2.12.13"</span>
-<span class="nf">addCompilerPlugin</span><span class="o">(</span><span class="s">"edu.berkeley.cs"</span> <span class="o">%</span> <span class="s">"chisel3-plugin"</span> <span class="o">%</span> <span class="s">"3.4.4"</span> <span class="n">cross</span> <span class="nv">CrossVersion</span><span class="o">.</span><span class="py">full</span><span class="o">)</span>
-<span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"edu.berkeley.cs"</span> <span class="o">%%</span> <span class="s">"chisel3"</span> <span class="o">%</span> <span class="s">"3.4.4"</span>
-<span class="n">scalacOptions</span> <span class="o">+=</span> <span class="s">"-Xsource:2.11"</span>
+<span class="n">scalaVersion</span> <span class="o">:=</span> <span class="s">"2.13.7"</span>
+<span class="nf">addCompilerPlugin</span><span class="o">(</span><span class="s">"edu.berkeley.cs"</span> <span class="o">%</span> <span class="s">"chisel3-plugin"</span> <span class="o">%</span> <span class="s">"3.5.0-RC2"</span> <span class="n">cross</span> <span class="nv">CrossVersion</span><span class="o">.</span><span class="py">full</span><span class="o">)</span>
+<span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"edu.berkeley.cs"</span> <span class="o">%%</span> <span class="s">"chisel3"</span> <span class="o">%</span> <span class="s">"3.5.0-RC2"</span>
 <span class="c1">// We also recommend using chiseltest for writing unit tests </span>
-<span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"edu.berkeley.cs"</span> <span class="o">%%</span> <span class="s">"chiseltest"</span> <span class="o">%</span> <span class="s">"0.3.4"</span> <span class="o">%</span> <span class="s">"test"</span>
+<span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"edu.berkeley.cs"</span> <span class="o">%%</span> <span class="s">"chiseltest"</span> <span class="o">%</span> <span class="s">"0.5.0-RC2"</span> <span class="o">%</span> <span class="s">"test"</span>
 </code></pre></div></div>
 <h3 id="guide-for-new-contributors">Guide For New Contributors</h3>
 <p>If you are trying to make a contribution to this project, please read <a href="https://github.com/Burnleydev1/chisel3/blob/recent_PR/CONTRIBUTING.md">CONTRIBUTING.md</a></p>
@@ -153,7 +152,7 @@ For example, in SBT this could be expressed as:</p>
   <li><a href="https://www.chisel-lang.org/api/latest/chisel3/index.html"><strong>ScalaDoc</strong></a>, a listing, description, and examples of the functionality exposed by Chisel</li>
   <li><a href="https://gitter.im/freechipsproject/chisel3"><strong>Gitter</strong></a>, where you can ask questions or discuss anything Chisel</li>
   <li><a href="https://www.chisel-lang.org"><strong>Website</strong></a> (<a href="https://github.com/freechipsproject/www.chisel-lang.org/">source</a>)</li>
-  <li><a href="https://scastie.scala-lang.org/KtzZQ3nFTea9KoNh0tRqtg"><strong>Scastie (3.5.0-RC1)</strong></a></li>
+  <li><a href="https://scastie.scala-lang.org/R6wV80vUTr2CwhvouEdidg"><strong>Scastie (3.5.0-RC2)</strong></a></li>
   <li><a href="http://www.asic-world.com/verilog/veritut.html"><strong>asic-world</strong></a> If you aren’t familiar with verilog, this is a good tutorial.</li>
 </ul>
 
@@ -204,7 +203,7 @@ Check that each is installed on your <code class="language-plaintext highlighter
 The repository version can be found in the <a href="build.sbt">build.sbt</a> file.
 As of the time of writing it was:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>version := "3.4-SNAPSHOT"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>version := "3.5-SNAPSHOT"
 </code></pre></div></div>
 
 <p>To publish your version of Chisel to the local Ivy (sbt’s dependency manager) repository, run:</p>
@@ -217,7 +216,7 @@ If you need to un-publish your local copy of Chisel, remove the directory genera
 
 <p>In order to have your projects use this version of Chisel, you should update the <code class="language-plaintext highlighter-rouge">libraryDependencies</code> setting in your project’s build.sbt file to:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>libraryDependencies += "edu.berkeley.cs" %% "chisel3" % "3.4-SNAPSHOT"
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>libraryDependencies += "edu.berkeley.cs" %% "chisel3" % "3.5-SNAPSHOT"
 </code></pre></div></div>
 
 <h3 id="building-chisel-with-firrtl-in-the-same-sbt-project">Building Chisel with FIRRTL in the same SBT Project</h3>
@@ -289,27 +288,18 @@ testing infrastructure. These can also be used as part of custom flows.</li>
 
 <h3 id="which-version-should-i-use">Which version should I use?</h3>
 
-<p>The chisel eco-system (<code class="language-plaintext highlighter-rouge">chisel3</code>, <code class="language-plaintext highlighter-rouge">firrtl</code>, <code class="language-plaintext highlighter-rouge">dsptools</code>, <code class="language-plaintext highlighter-rouge">firrtl-interpreter</code>, <code class="language-plaintext highlighter-rouge">treadle</code>, <code class="language-plaintext highlighter-rouge">diagrammer</code>) use a form of semantic versioning:
- major versions are identified by two leading numbers, separated by a dot (i.e., <code class="language-plaintext highlighter-rouge">3.2</code>), minor versions by a single number following the major version, separated by a dot.
- We maintain API compatibility within a major version (i.e., <code class="language-plaintext highlighter-rouge">3.2.12</code> should be API-compatible with <code class="language-plaintext highlighter-rouge">3.2.0</code>), but do not guarantee API compatibility between major versions
- (i.e., APIs may change between <code class="language-plaintext highlighter-rouge">3.1.8</code> and <code class="language-plaintext highlighter-rouge">3.2.0</code>).
- We may introduce new definitions or add additional parameters to existing definitions in a minor release, but we do our best to maintain compatibility with previous minor releases of a major release - code that worked in <code class="language-plaintext highlighter-rouge">3.2.0</code> should continue to work un-modified in <code class="language-plaintext highlighter-rouge">3.2.10</code>.</p>
+<p>We encourage Chisel users (as opposed to Chisel developers), to use the latest release version of Chisel.
+This <a href="https://github.com/freechipsproject/chisel-template">chisel-template</a> repository is kept up-to-date, depending on the most recent version of Chisel.
+The recommended version is also captured near the top of this README, and in the <a href="https://github.com/chipsalliance/chisel3/releases">Github releases</a> section of this repo.
+If you encounter an issue with a released version of Chisel, please file an issue on GitHub mentioning the Chisel version and provide a simple test case (if possible).
+Try to reproduce the issue with the associated latest minor release (to verify that the issue hasn’t been addressed).</p>
 
-<p>We encourage chisel users (rather than chisel developers), to use release versions of chisel.
- The chisel web site (and GitHub repository) should indicate the current release version.
- If you encounter an issue with a released version of chisel, please file an issue on GitHub mentioning the chisel version and provide a simple test case (if possible).
- Try to reproduce the issue with the associated latest minor release (to verify that the issue hasn’t been addressed).</p>
+<p>For more information on our versioning policy and what versions of the various Chisel ecosystem projects work together, see <a href="https://www.chisel-lang.org/chisel3/docs/appendix/versioning.html">Chisel Project Versioning</a>.</p>
 
-<p>If you’re developing a chisel library (or <code class="language-plaintext highlighter-rouge">chisel</code> itself), you’ll probably want to work closer to the tip of the development trunk.
- By default, the master branches of the chisel repositories are configured to build and publish their version of the code as <code class="language-plaintext highlighter-rouge">Z.Y-SNAPSHOT</code>.
- We try to publish an updated SNAPSHOT every two weeks.
- There is no guarantee of API compatibility between SNAPSHOT versions, but we publish date-stamped <code class="language-plaintext highlighter-rouge">Z.Y-yyyymmdd-SNAPSHOT</code> versions which will not change.
- The code in <code class="language-plaintext highlighter-rouge">Z.Y-SNAPSHOT</code> should match the code in the most recent <code class="language-plaintext highlighter-rouge">Z.Y-yyyymmdd-SNAPSHOT</code> version, the differences being the chisel library dependencies:
- <code class="language-plaintext highlighter-rouge">Z.Y-SNAPSHOT</code>s depend on <code class="language-plaintext highlighter-rouge">V.U-SNAPSHOT</code>s and <code class="language-plaintext highlighter-rouge">Z.Y-yyyymmdd-SNAPSHOT</code>s will depend on <code class="language-plaintext highlighter-rouge">V.U-yyyymmdd-SNAPSHOT</code>s.
- <strong>NOTE</strong>: Prior to the <code class="language-plaintext highlighter-rouge">v3.2-20191030-SNAPSHOT</code> version, we used <code class="language-plaintext highlighter-rouge">Z.Y-mmddyy-SNAPSHOT</code> to tag and name published SNAPSHOTs.</p>
-
-<p>If you’re developing a library (or another chisel tool), you should probably work with date-stamped SNAPSHOTs until your library or tool is ready to be published (to ensure a consistent API).
- Prior to publishing, you should verify your code against generic (no date-stamp) SNAPSHOTs, or locally published clones of the current master branches of chisel dependencies.</p>
+<p>If you’re developing a Chisel library (or <code class="language-plaintext highlighter-rouge">chisel3</code> itself), you’ll probably want to work closer to the tip of the development trunk.
+By default, the master branches of the chisel repositories are configured to build and publish their version of the code as <code class="language-plaintext highlighter-rouge">Z.Y-SNAPSHOT</code>.
+Updated SNAPSHOTs are publised on every push to master.
+You are encouraged to do your development against the latest SNAPSHOT, but note that neither API nor ABI compatibility is guaranteed so your code may break at any time.</p>
 
 </div></div></section><section class="technologies"><div class="container"><div class="row">
             <div class="col-md-4"><div class="first-icon-wrapper"></div><h3>Scala</h3><p>Chisel is powered by Scala and brings all the power of object-oriented and functional programming to type-safe hardware design and generation.</p></div>
