@@ -84,6 +84,7 @@
 - [`@Shorla`](https://github.com/Shorla)
 - [`@shunshou`](https://github.com/shunshou)
 - [`@ShuyunJia`](https://github.com/ShuyunJia)
+- [`@SihaoLiu`](https://github.com/SihaoLiu)
 - [`@sinofp`](https://github.com/sinofp)
 - [`@sterin`](https://github.com/sterin)
 - [`@stevobailey`](https://github.com/stevobailey)
