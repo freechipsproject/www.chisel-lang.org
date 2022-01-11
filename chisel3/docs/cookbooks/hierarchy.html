@@ -129,7 +129,9 @@ The list of valid types are:</p>
 <span class="k">class</span> <span class="nc">MyModule</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
   <span class="nd">@public</span> <span class="k">val</span> <span class="nv">x</span> <span class="k">=</span> <span class="nc">NotValidType</span>
 <span class="o">}</span>
-<span class="c1">// error: @public is only legal within a class marked @instantiable and only on vals of type Data, BaseModule, IsInstantiable, IsLookupable, or Instance[_], or in an Iterable or Option</span>
+<span class="c1">// error: @public is only legal within a class or trait marked @instantiable, and only on vals of type Data, BaseModule, IsInstantiable, IsLookupable, or Instance[_], or in an Iterable, Option, or Either</span>
+<span class="c1">// val x = chisel3.stage.ChiselStage.emitFirrtl(new Top)</span>
+<span class="c1">//     ^</span>
 </code></pre></div></div>
 
 <h2 id="how-do-i-make-my-parameters-accessible-from-an-instance">How do I make my parameters accessible from an instance?</h2>
@@ -265,7 +267,7 @@ The width of the <code class="language-plaintext highlighter-rouge">AddTwo</code
 
 <p>Select functions can be applied after a module has been elaborated, either in a Chisel Aspect or in a parent module applied to a child module.</p>
 
-<p>There are six hierarchy-specific functions, which either return <code class="language-plaintext highlighter-rouge">Instance</code>’s or <code class="language-plaintext highlighter-rouge">Definition</code>’s:</p>
+<p>There are seven hierarchy-specific functions, which (with the exception of <code class="language-plaintext highlighter-rouge">ios</code>) either return <code class="language-plaintext highlighter-rouge">Instance</code>’s or <code class="language-plaintext highlighter-rouge">Definition</code>’s:</p>
 <ul>
   <li><code class="language-plaintext highlighter-rouge">instancesIn(parent)</code>: Return all instances directly instantiated locally within <code class="language-plaintext highlighter-rouge">parent</code></li>
   <li><code class="language-plaintext highlighter-rouge">instancesOf[type](parent)</code>: Return all instances of provided <code class="language-plaintext highlighter-rouge">type</code> directly instantiated locally within <code class="language-plaintext highlighter-rouge">parent</code></li>
@@ -273,6 +275,7 @@ The width of the <code class="language-plaintext highlighter-rouge">AddTwo</code
   <li><code class="language-plaintext highlighter-rouge">definitionsIn</code>: Return definitions of all instances directly instantiated locally within <code class="language-plaintext highlighter-rouge">parent</code></li>
   <li><code class="language-plaintext highlighter-rouge">definitionsOf[type]</code>: Return definitions of all instances of provided <code class="language-plaintext highlighter-rouge">type</code> directly instantiated locally within <code class="language-plaintext highlighter-rouge">parent</code></li>
   <li><code class="language-plaintext highlighter-rouge">allDefinitionsOf[type]</code>: Return all definitions of instances of provided <code class="language-plaintext highlighter-rouge">type</code> directly and indirectly instantiated, locally and deeply, starting from <code class="language-plaintext highlighter-rouge">root</code></li>
+  <li><code class="language-plaintext highlighter-rouge">ios</code>: Returns all the I/Os of the provided definition or instance.</li>
 </ul>
 
 <p>To demonstrate this, consider the following. We mock up an example where we are using the <code class="language-plaintext highlighter-rouge">Select.allInstancesOf</code> and <code class="language-plaintext highlighter-rouge">Select.allDefinitionsOf</code> to annotate instances and the definition of <code class="language-plaintext highlighter-rouge">EmptyModule</code>. When converting the <code class="language-plaintext highlighter-rouge">ChiselAnnotation</code> to firrtl’s <code class="language-plaintext highlighter-rouge">Annotation</code>, we print out the resulting <code class="language-plaintext highlighter-rouge">Target</code>. As shown, despite <code class="language-plaintext highlighter-rouge">EmptyModule</code> actually only being elaborated once, we still provide different targets depending on how the instance or definition is selected.</p>
@@ -315,6 +318,61 @@ The width of the <code class="language-plaintext highlighter-rouge">AddTwo</code
 instance: ~Top|Top/instance:TwoEmptyModules/i0:EmptyModule
 instance: ~Top|Top/instance:TwoEmptyModules/i1:EmptyModule
 definition: ~Top|EmptyModule
+</code></pre></div></div>
+
+<p>You can also use <code class="language-plaintext highlighter-rouge">Select.ios</code> on either a <code class="language-plaintext highlighter-rouge">Definition</code> or an <code class="language-plaintext highlighter-rouge">Instance</code> to annotate the I/Os appropriately:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">case</span> <span class="k">class</span> <span class="nc">MyIOAnnotation</span><span class="o">(</span><span class="n">m</span><span class="k">:</span> <span class="kt">Data</span><span class="o">,</span> <span class="n">tag</span><span class="k">:</span> <span class="kt">String</span><span class="o">)</span> <span class="k">extends</span> <span class="nv">experimental</span><span class="o">.</span><span class="py">ChiselAnnotation</span> <span class="o">{</span>
+  <span class="k">def</span> <span class="nf">toFirrtl</span> <span class="k">=</span> <span class="o">{</span>
+    <span class="nf">println</span><span class="o">(</span><span class="n">tag</span> <span class="o">+</span> <span class="s">": "</span> <span class="o">+</span> <span class="nv">m</span><span class="o">.</span><span class="py">toTarget</span><span class="o">)</span>
+    <span class="nc">EmptyAnnotation</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+
+<span class="nd">@instantiable</span>
+<span class="k">class</span> <span class="nc">InOutModule</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
+  <span class="nd">@public</span> <span class="k">val</span> <span class="nv">in</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">()))</span>
+  <span class="nd">@public</span> <span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="nc">Bool</span><span class="o">()))</span>
+  <span class="n">out</span> <span class="o">:=</span> <span class="n">in</span>
+<span class="o">}</span>
+
+<span class="nd">@instantiable</span>
+<span class="k">class</span> <span class="nc">TwoInOutModules</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">in</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Input</span><span class="o">(</span><span class="nc">Bool</span><span class="o">()))</span>
+  <span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="nc">Bool</span><span class="o">()))</span>
+  <span class="k">val</span> <span class="nv">definition</span> <span class="k">=</span> <span class="nc">Definition</span><span class="o">(</span><span class="k">new</span> <span class="nc">InOutModule</span><span class="o">)</span>
+  <span class="k">val</span> <span class="nv">i0</span>         <span class="k">=</span> <span class="nc">Instance</span><span class="o">(</span><span class="n">definition</span><span class="o">)</span>
+  <span class="k">val</span> <span class="nv">i1</span>         <span class="k">=</span> <span class="nc">Instance</span><span class="o">(</span><span class="n">definition</span><span class="o">)</span>
+  <span class="nv">i0</span><span class="o">.</span><span class="py">in</span> <span class="o">:=</span> <span class="n">in</span>
+  <span class="nv">i1</span><span class="o">.</span><span class="py">in</span> <span class="o">:=</span> <span class="nv">i0</span><span class="o">.</span><span class="py">out</span>
+  <span class="n">out</span> <span class="o">:=</span> <span class="nv">i1</span><span class="o">.</span><span class="py">out</span>
+<span class="o">}</span>
+
+<span class="k">class</span> <span class="nc">InOutTop</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">definition</span> <span class="k">=</span> <span class="nc">Definition</span><span class="o">(</span><span class="k">new</span> <span class="nc">TwoInOutModules</span><span class="o">)</span>
+  <span class="k">val</span> <span class="nv">instance</span>   <span class="k">=</span> <span class="nc">Instance</span><span class="o">(</span><span class="n">definition</span><span class="o">)</span>
+  <span class="nv">aop</span><span class="o">.</span><span class="py">Select</span><span class="o">.</span><span class="py">allInstancesOf</span><span class="o">[</span><span class="kt">InOutModule</span><span class="o">](</span><span class="n">instance</span><span class="o">).</span><span class="py">foreach</span> <span class="o">{</span> <span class="n">i</span> <span class="k">=&gt;</span>
+    <span class="nv">aop</span><span class="o">.</span><span class="py">Select</span><span class="o">.</span><span class="py">ios</span><span class="o">(</span><span class="n">i</span><span class="o">).</span><span class="py">foreach</span> <span class="o">{</span> <span class="n">io</span> <span class="k">=&gt;</span>
+      <span class="nv">experimental</span><span class="o">.</span><span class="py">annotate</span><span class="o">(</span><span class="nc">MyIOAnnotation</span><span class="o">(</span><span class="n">io</span><span class="o">,</span> <span class="s">"instance io"</span><span class="o">))</span>
+  <span class="o">}}</span>
+  <span class="nv">aop</span><span class="o">.</span><span class="py">Select</span><span class="o">.</span><span class="py">allDefinitionsOf</span><span class="o">[</span><span class="kt">InOutModule</span><span class="o">](</span><span class="n">instance</span><span class="o">).</span><span class="py">foreach</span> <span class="o">{</span> <span class="n">d</span> <span class="k">=&gt;</span>
+    <span class="nv">aop</span><span class="o">.</span><span class="py">Select</span><span class="o">.</span><span class="py">ios</span><span class="o">(</span><span class="n">d</span><span class="o">).</span><span class="py">foreach</span> <span class="o">{</span><span class="n">io</span> <span class="k">=&gt;</span>
+      <span class="nv">experimental</span><span class="o">.</span><span class="py">annotate</span><span class="o">(</span><span class="nc">MyIOAnnotation</span><span class="o">(</span><span class="n">io</span><span class="o">,</span> <span class="s">"definition io"</span><span class="o">))</span>
+  <span class="o">}}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>instance io: ~InOutTop|InOutTop/instance:TwoInOutModules/i0:InOutModule&gt;clock
+instance io: ~InOutTop|InOutTop/instance:TwoInOutModules/i0:InOutModule&gt;reset
+instance io: ~InOutTop|InOutTop/instance:TwoInOutModules/i0:InOutModule&gt;in
+instance io: ~InOutTop|InOutTop/instance:TwoInOutModules/i0:InOutModule&gt;out
+instance io: ~InOutTop|InOutTop/instance:TwoInOutModules/i1:InOutModule&gt;clock
+instance io: ~InOutTop|InOutTop/instance:TwoInOutModules/i1:InOutModule&gt;reset
+instance io: ~InOutTop|InOutTop/instance:TwoInOutModules/i1:InOutModule&gt;in
+instance io: ~InOutTop|InOutTop/instance:TwoInOutModules/i1:InOutModule&gt;out
+definition io: ~InOutTop|InOutModule&gt;clock
+definition io: ~InOutTop|InOutModule&gt;reset
+definition io: ~InOutTop|InOutModule&gt;in
+definition io: ~InOutTop|InOutModule&gt;out
 </code></pre></div></div>
 </section></div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/highlight/highlight.pack.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/verilog.min.js"></script><script src="/lunr/lunr.js"></script><script>
 // For all code blocks, copy the language from the containing div
