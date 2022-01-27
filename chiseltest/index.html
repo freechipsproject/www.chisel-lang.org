@@ -18,7 +18,7 @@ easy to read and write (understandability), and compose (for better test code re
 
 <h2 id="installation">Installation</h2>
 <p>To use chisel-testers as a managed dependency, add this in your build.sbt:</p>
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"edu.berkeley.cs"</span> <span class="o">%%</span> <span class="s">"chiseltest"</span> <span class="o">%</span> <span class="s">"0.5.0-RC2"</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">libraryDependencies</span> <span class="o">+=</span> <span class="s">"edu.berkeley.cs"</span> <span class="o">%%</span> <span class="s">"chiseltest"</span> <span class="o">%</span> <span class="s">"0.5.0"</span>
 </code></pre></div></div>
 
 <p>If you are also directly depending on the <code class="language-plaintext highlighter-rouge">chisel3</code> library, please
@@ -195,6 +195,7 @@ with the new <code class="language-plaintext highlighter-rouge">test</code> synt
 
 <p>Hardware testers are synthesizeable tests, most often extending the <code class="language-plaintext highlighter-rouge">BasicTester</code> class provided by <code class="language-plaintext highlighter-rouge">chisel3</code>.
 You can now directly <a href="https://github.com/ucb-bar/chiseltest/blob/master/src/test/scala/chiseltest/tests/HardwareTestsTest.scala">use these tests with <code class="language-plaintext highlighter-rouge">chiseltest</code> through the <code class="language-plaintext highlighter-rouge">runUntilStop</code> function</a>.</p>
+
 </section></div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/highlight/highlight.pack.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/verilog.min.js"></script><script src="/lunr/lunr.js"></script><script>
 // For all code blocks, copy the language from the containing div
 // to the inner code tag (where hljs expects it to be)
