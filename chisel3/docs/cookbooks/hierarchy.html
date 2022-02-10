@@ -129,7 +129,7 @@ The list of valid types are:</p>
 <span class="k">class</span> <span class="nc">MyModule</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
   <span class="nd">@public</span> <span class="k">val</span> <span class="nv">x</span> <span class="k">=</span> <span class="nc">NotValidType</span>
 <span class="o">}</span>
-<span class="c1">// error: @public is only legal within a class or trait marked @instantiable, and only on vals of type Data, BaseModule, IsInstantiable, IsLookupable, or Instance[_], or in an Iterable, Option, or Either</span>
+<span class="c1">// error: @public is only legal within a class or trait marked @instantiable, and only on vals of type Data, BaseModule, IsInstantiable, IsLookupable, or Instance[_], or in an Iterable, Option, Either, or Tuple2</span>
 <span class="c1">// val x = chisel3.stage.ChiselStage.emitFirrtl(new Top)</span>
 <span class="c1">//     ^</span>
 </code></pre></div></div>
