@@ -41,6 +41,7 @@
 - [`@grebe`](https://github.com/grebe)
 - [`@hcook`](https://github.com/hcook)
 - [`@hngenc`](https://github.com/hngenc)
+- [`@howardlau1999`](https://github.com/howardlau1999)
 - [`@huytbvo`](https://github.com/huytbvo)
 - [`@ingallsj`](https://github.com/ingallsj)
 - [`@jackbackrack`](https://github.com/jackbackrack)
