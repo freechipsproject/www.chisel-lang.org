@@ -31,6 +31,11 @@ ga('send', 'pageview');
       <li><a href="#how-do-i-create-a-reg-of-type-vec">How do I create a Reg of type Vec?</a></li>
     </ul>
   </li>
+  <li>Bundles
+    <ul>
+      <li><a href="#aliased-bundle-fields">How do I deal with aliased Bundle fields?</a></li>
+    </ul>
+  </li>
   <li><a href="#how-do-i-create-a-finite-state-machine-fsm">How do I create a finite state machine?</a></li>
   <li><a href="#how-do-i-unpack-a-value-reverse-concatenation-like-in-verilog">How do I unpack a value (“reverse concatenation”) like in Verilog?</a></li>
   <li><a href="#how-do-i-do-subword-assignment-assign-to-some-bits-in-a-uint">How do I do subword assignment (assign to some bits in a UInt)?</a></li>
@@ -235,6 +240,154 @@ you are tying off, you can use <code class="language-plaintext highlighter-rouge
 <span class="o">}</span>
 </code></pre></div></div>
 
+<h2 id="bundles">Bundles</h2>
+
+<h3 id="-how-do-i-deal-with-aliased-bundle-fields"><a name="aliased-bundle-fields"></a> How do I deal with aliased Bundle fields?</h3>
+
+<p>Following the <code class="language-plaintext highlighter-rouge">gen</code> pattern when creating Bundles can result in some opaque error messages:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">AliasedBundle</span><span class="o">[</span><span class="kt">T</span> <span class="k">&lt;:</span> <span class="kt">Data</span><span class="o">](</span><span class="n">gen</span><span class="k">:</span> <span class="kt">T</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">foo</span> <span class="k">=</span> <span class="n">gen</span>
+  <span class="k">val</span> <span class="nv">bar</span> <span class="k">=</span> <span class="n">gen</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">getVerilogString</span><span class="o">(</span><span class="k">new</span> <span class="nc">Top</span><span class="o">(</span><span class="k">new</span> <span class="nc">AliasedBundle</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">))))</span>
+<span class="c1">// chisel3.AliasedAggregateFieldException: AliasedBundle contains aliased fields named (bar,foo)</span>
+<span class="c1">// 	at ... ()</span>
+<span class="c1">// 	at repl.MdocSession$App9$Top$$anonfun$40$$anonfun$apply$23.apply(cookbook.md:223)</span>
+<span class="c1">// 	at repl.MdocSession$App9$Top$$anonfun$40$$anonfun$apply$23.apply(cookbook.md:223)</span>
+<span class="c1">// 	at chisel3.internal.prefix$.apply(prefix.scala:48)</span>
+<span class="c1">// 	at repl.MdocSession$App9$Top$$anonfun$40.apply(cookbook.md:223)</span>
+<span class="c1">// 	at repl.MdocSession$App9$Top$$anonfun$40.apply(cookbook.md)</span>
+<span class="c1">// 	at chisel3.internal.plugin.package$.autoNameRecursively(package.scala:33)</span>
+<span class="c1">// 	at repl.MdocSession$App9$Top.&lt;init&gt;(cookbook.md:223)</span>
+<span class="c1">// 	at repl.MdocSession$App9$$anonfun$45$$anonfun$apply$25.apply(cookbook.md:242)</span>
+<span class="c1">// 	at repl.MdocSession$App9$$anonfun$45$$anonfun$apply$25.apply(cookbook.md:242)</span>
+<span class="c1">// 	at ... ()</span>
+<span class="c1">// 	at ... (Stack trace trimmed to user code only. Rerun with --full-stacktrace to see the full stack trace)</span>
+</code></pre></div></div>
+
+<p>This error is saying that fields <code class="language-plaintext highlighter-rouge">foo</code> and <code class="language-plaintext highlighter-rouge">bar</code> of <code class="language-plaintext highlighter-rouge">AliasedBundle</code> are the
+exact same object in memory.
+This is a problem for Chisel because we need to be able to distinguish uses of
+<code class="language-plaintext highlighter-rouge">foo</code> and <code class="language-plaintext highlighter-rouge">bar</code> but cannot when they are referentially the same.</p>
+
+<p>Note that the following example looks different but will give you exactly the same issue:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">AlsoAliasedBundle</span><span class="o">[</span><span class="kt">T</span> <span class="k">&lt;:</span> <span class="kt">Data</span><span class="o">](</span><span class="k">val</span> <span class="nv">gen</span><span class="k">:</span> <span class="kt">T</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
+                                <span class="c1">// ^ This val makes `gen` a field, just like `foo`</span>
+  <span class="k">val</span> <span class="nv">foo</span> <span class="k">=</span> <span class="n">gen</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>By making <code class="language-plaintext highlighter-rouge">gen</code> a <code class="language-plaintext highlighter-rouge">val</code>, it becomes a public field of the <code class="language-plaintext highlighter-rouge">class</code>, just like <code class="language-plaintext highlighter-rouge">foo</code>.</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">getVerilogString</span><span class="o">(</span><span class="k">new</span> <span class="nc">Top</span><span class="o">(</span><span class="k">new</span> <span class="nc">AlsoAliasedBundle</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">))))</span>
+<span class="c1">// chisel3.AliasedAggregateFieldException: AlsoAliasedBundle contains aliased fields named (foo,gen)</span>
+<span class="c1">// 	at ... ()</span>
+<span class="c1">// 	at repl.MdocSession$App9$Top$$anonfun$40$$anonfun$apply$23.apply(cookbook.md:223)</span>
+<span class="c1">// 	at repl.MdocSession$App9$Top$$anonfun$40$$anonfun$apply$23.apply(cookbook.md:223)</span>
+<span class="c1">// 	at chisel3.internal.prefix$.apply(prefix.scala:48)</span>
+<span class="c1">// 	at repl.MdocSession$App9$Top$$anonfun$40.apply(cookbook.md:223)</span>
+<span class="c1">// 	at repl.MdocSession$App9$Top$$anonfun$40.apply(cookbook.md)</span>
+<span class="c1">// 	at chisel3.internal.plugin.package$.autoNameRecursively(package.scala:33)</span>
+<span class="c1">// 	at repl.MdocSession$App9$Top.&lt;init&gt;(cookbook.md:223)</span>
+<span class="c1">// 	at repl.MdocSession$App9$$anonfun$48$$anonfun$apply$26.apply(cookbook.md:261)</span>
+<span class="c1">// 	at repl.MdocSession$App9$$anonfun$48$$anonfun$apply$26.apply(cookbook.md:261)</span>
+<span class="c1">// 	at ... ()</span>
+<span class="c1">// 	at ... (Stack trace trimmed to user code only. Rerun with --full-stacktrace to see the full stack trace)</span>
+</code></pre></div></div>
+
+<p>There are several ways to solve this issue with their own advantages and disadvantages.</p>
+
+<h4 id="1-0-arity-function-parameters">1. 0-arity function parameters</h4>
+
+<p>Instead of passing an object as a parameter, you can pass a 0-arity function (a function with no arguments):</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">UsingAFunctionBundle</span><span class="o">[</span><span class="kt">T</span> <span class="k">&lt;:</span> <span class="kt">Data</span><span class="o">](</span><span class="n">gen</span><span class="k">:</span> <span class="o">()</span> <span class="o">=&gt;</span> <span class="n">T</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">foo</span> <span class="k">=</span> <span class="nf">gen</span><span class="o">()</span>
+  <span class="k">val</span> <span class="nv">bar</span> <span class="k">=</span> <span class="nf">gen</span><span class="o">()</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Note that the type of <code class="language-plaintext highlighter-rouge">gen</code> is now <code class="language-plaintext highlighter-rouge">() =&gt; T</code>.
+Because it is now a function and not a subtype of <code class="language-plaintext highlighter-rouge">Data</code>, you can safely make <code class="language-plaintext highlighter-rouge">gen</code> a <code class="language-plaintext highlighter-rouge">val</code> without
+it becoming a hardware field of the <code class="language-plaintext highlighter-rouge">Bundle</code>.</p>
+
+<p>Note that this also means you must pass <code class="language-plaintext highlighter-rouge">gen</code> as a function, for example:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">getVerilogString</span><span class="o">(</span><span class="k">new</span> <span class="nc">Top</span><span class="o">(</span><span class="k">new</span> <span class="nc">UsingAFunctionBundle</span><span class="o">(()</span> <span class="k">=&gt;</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">))))</span>
+</code></pre></div></div>
+
+<p><a name="aliased-warning"></a> <strong>Warning</strong>: you must ensure that <code class="language-plaintext highlighter-rouge">gen</code> creates fresh objects rather than capturing an already constructed value:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">MisusedFunctionArguments</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
+  <span class="c1">// This usage is correct</span>
+  <span class="k">val</span> <span class="nv">in</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Input</span><span class="o">(</span><span class="k">new</span> <span class="nc">UsingAFunctionBundle</span><span class="o">(()</span> <span class="k">=&gt;</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">))))</span>
+
+  <span class="c1">// This usage is incorrect</span>
+  <span class="k">val</span> <span class="nv">fizz</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">)</span>
+  <span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="k">new</span> <span class="nc">UsingAFunctionBundle</span><span class="o">(()</span> <span class="k">=&gt;</span> <span class="n">fizz</span><span class="o">)))</span>
+<span class="o">}</span>
+<span class="nf">getVerilogString</span><span class="o">(</span><span class="k">new</span> <span class="nc">MisusedFunctionArguments</span><span class="o">)</span>
+<span class="c1">// chisel3.AutoClonetypeException: Automatically cloned UsingAFunctionBundle has field 'foo' aliased with base UsingAFunctionBundle. In the future, this will be solved automatically by the compiler plugin. For now, ensure Chisel types used in the Bundle definition are passed through constructor arguments, or wrapped in Input(...), Output(...), or Flipped(...) if appropriate. As a last resort, you can override cloneType manually.</span>
+<span class="c1">// 	at ... ()</span>
+<span class="c1">// 	at repl.MdocSession$App9$$anonfun$52$MisusedFunctionArguments$1$$anonfun$55$$anonfun$apply$31.apply(cookbook.md:292)</span>
+<span class="c1">// 	at repl.MdocSession$App9$$anonfun$52$MisusedFunctionArguments$1$$anonfun$55$$anonfun$apply$31.apply(cookbook.md:292)</span>
+<span class="c1">// 	at chisel3.internal.prefix$.apply(prefix.scala:48)</span>
+<span class="c1">// 	at repl.MdocSession$App9$$anonfun$52$MisusedFunctionArguments$1$$anonfun$55.apply(cookbook.md:292)</span>
+<span class="c1">// 	at repl.MdocSession$App9$$anonfun$52$MisusedFunctionArguments$1$$anonfun$55.apply(cookbook.md)</span>
+<span class="c1">// 	at chisel3.internal.plugin.package$.autoNameRecursively(package.scala:33)</span>
+<span class="c1">// 	at repl.MdocSession$App9$$anonfun$52$MisusedFunctionArguments$1.&lt;init&gt;(cookbook.md:292)</span>
+<span class="c1">// 	at repl.MdocSession$App9$$anonfun$52$$anonfun$apply$33.apply(cookbook.md:294)</span>
+<span class="c1">// 	at repl.MdocSession$App9$$anonfun$52$$anonfun$apply$33.apply(cookbook.md:294)</span>
+<span class="c1">// 	at ... ()</span>
+<span class="c1">// 	at ... (Stack trace trimmed to user code only. Rerun with --full-stacktrace to see the full stack trace)</span>
+</code></pre></div></div>
+<p>In the above example, value <code class="language-plaintext highlighter-rouge">fizz</code> and fields <code class="language-plaintext highlighter-rouge">foo</code> and <code class="language-plaintext highlighter-rouge">bar</code> of <code class="language-plaintext highlighter-rouge">out</code> are all the same object in memory.</p>
+
+<h4 id="2-by-name-function-parameters">2. By-name function parameters</h4>
+
+<p>Functionally the same as (1) but with more subtle syntax, you can use <a href="https://docs.scala-lang.org/tour/by-name-parameters.html">Scala by-name function parameters</a>:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">UsingByNameParameters</span><span class="o">[</span><span class="kt">T</span> <span class="k">&lt;:</span> <span class="kt">Data</span><span class="o">](</span><span class="n">gen</span><span class="k">:</span> <span class="o">=&gt;</span> <span class="n">T</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">foo</span> <span class="k">=</span> <span class="n">gen</span>
+  <span class="k">val</span> <span class="nv">bar</span> <span class="k">=</span> <span class="n">gen</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>With this usage, you do not include <code class="language-plaintext highlighter-rouge">() =&gt;</code> when passing the argument:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">getVerilogString</span><span class="o">(</span><span class="k">new</span> <span class="nc">Top</span><span class="o">(</span><span class="k">new</span> <span class="nc">UsingByNameParameters</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">))))</span>
+</code></pre></div></div>
+
+<p>Note that as this is just syntactic sugar over (1), the <a href="#aliased-warning">same warning applies</a>.</p>
+
+<h4 id="3-directioned-bundle-fields">3. Directioned Bundle fields</h4>
+
+<p>You can alternatively wrap the fields with <code class="language-plaintext highlighter-rouge">Output(...)</code>, which creates fresh instances of the passed argument.
+Chisel treats <code class="language-plaintext highlighter-rouge">Output</code> as the “default direction” so if all fields are outputs, the <code class="language-plaintext highlighter-rouge">Bundle</code> is functionally equivalent to a <code class="language-plaintext highlighter-rouge">Bundle</code> with no directioned fields.</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">DirectionedBundle</span><span class="o">[</span><span class="kt">T</span> <span class="k">&lt;:</span> <span class="kt">Data</span><span class="o">](</span><span class="n">gen</span><span class="k">:</span> <span class="kt">T</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">foo</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="n">gen</span><span class="o">)</span>
+  <span class="k">val</span> <span class="nv">bar</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="n">gen</span><span class="o">)</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>This approach is admittedly a little ugly and may mislead others reading the code because it implies that this Bundle is intended to be used as an <code class="language-plaintext highlighter-rouge">Output</code>.</p>
+
+<h4 id="4-call-clonetype-directly">4. Call <code class="language-plaintext highlighter-rouge">.cloneType</code> directly</h4>
+
+<p>You can also just call <code class="language-plaintext highlighter-rouge">.cloneType</code> on your <code class="language-plaintext highlighter-rouge">gen</code> argument directly.
+While we try to hide this implementation detail from the user, <code class="language-plaintext highlighter-rouge">.cloneType</code> is the mechanism by which Chisel creates fresh instances of <code class="language-plaintext highlighter-rouge">Data</code> objects:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">UsingCloneTypeBundle</span><span class="o">[</span><span class="kt">T</span> <span class="k">&lt;:</span> <span class="kt">Data</span><span class="o">](</span><span class="n">gen</span><span class="k">:</span> <span class="kt">T</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">foo</span> <span class="k">=</span> <span class="nv">gen</span><span class="o">.</span><span class="py">cloneType</span>
+  <span class="k">val</span> <span class="nv">bar</span> <span class="k">=</span> <span class="nv">gen</span><span class="o">.</span><span class="py">cloneType</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
 <h3 id="how-do-i-create-a-finite-state-machine-fsm">How do I create a finite state machine (FSM)?</h3>
 
 <p>The advised way is to use <a href="https://www.chisel-lang.org/api/latest/chisel3/experimental/index.html#ChiselEnum=chisel3.experimental.EnumFactory"><code class="language-plaintext highlighter-rouge">ChiselEnum</code></a> to construct enumerated types representing the state of the FSM.
@@ -348,9 +501,9 @@ Below, the left-hand side connection to <code class="language-plaintext highligh
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span><span class="k">new</span> <span class="nc">ChiselStage</span><span class="o">).</span><span class="py">execute</span><span class="o">(</span><span class="nc">Array</span><span class="o">(</span><span class="s">"-X"</span><span class="o">,</span> <span class="s">"verilog"</span><span class="o">),</span> <span class="nc">Seq</span><span class="o">(</span><span class="k">new</span> <span class="nc">ChiselGeneratorAnnotation</span><span class="o">(()</span> <span class="k">=&gt;</span> <span class="k">new</span> <span class="nc">Foo</span><span class="o">)))</span>
 <span class="c1">// chisel3.internal.ChiselException: Cannot reassign to read-only Foo.?: OpResult[Bool]</span>
 <span class="c1">// 	at ... ()</span>
-<span class="c1">// 	at repl.MdocSession$App11$Foo.&lt;init&gt;(cookbook.md:318)</span>
-<span class="c1">// 	at repl.MdocSession$App11$$anonfun$63$$anonfun$apply$35.apply(cookbook.md:326)</span>
-<span class="c1">// 	at repl.MdocSession$App11$$anonfun$63$$anonfun$apply$35.apply(cookbook.md:326)</span>
+<span class="c1">// 	at repl.MdocSession$App16$Foo.&lt;init&gt;(cookbook.md:450)</span>
+<span class="c1">// 	at repl.MdocSession$App16$$anonfun$90$$anonfun$apply$47.apply(cookbook.md:458)</span>
+<span class="c1">// 	at repl.MdocSession$App16$$anonfun$90$$anonfun$apply$47.apply(cookbook.md:458)</span>
 <span class="c1">// 	at ... ()</span>
 <span class="c1">// 	at ... (Stack trace trimmed to user code only. Rerun with --full-stacktrace to see the full stack trace)</span>
 </code></pre></div></div>
@@ -544,9 +697,9 @@ The reason for this is that subword assignment generally hints at a better abstr
   <span class="kt">input</span>   <span class="n">clock</span><span class="p">,</span>
   <span class="kt">input</span>   <span class="n">reset</span>
 <span class="p">);</span>
-  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">drink_I</span><span class="p">;</span> <span class="c1">// @[cookbook.md 459:23]</span>
-  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">drink_O</span><span class="p">;</span> <span class="c1">// @[cookbook.md 459:23]</span>
-  <span class="n">Tea</span> <span class="n">drink</span> <span class="p">(</span> <span class="c1">// @[cookbook.md 459:23]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">drink_I</span><span class="p">;</span> <span class="c1">// @[cookbook.md 591:23]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">drink_O</span><span class="p">;</span> <span class="c1">// @[cookbook.md 591:23]</span>
+  <span class="n">Tea</span> <span class="n">drink</span> <span class="p">(</span> <span class="c1">// @[cookbook.md 591:23]</span>
     <span class="p">.</span><span class="n">I</span><span class="p">(</span><span class="n">drink_I</span><span class="p">),</span>
     <span class="p">.</span><span class="n">O</span><span class="p">(</span><span class="n">drink_O</span><span class="p">)</span>
   <span class="p">);</span>
@@ -573,7 +726,7 @@ to a register:</p>
 </code></pre></div></div>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">ChiselStage</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">BadRegConnect</span><span class="o">)</span>
-<span class="c1">// firrtl.passes.CheckHighFormLike$RegWithFlipException:  @[cookbook.md 490:20]: [module BadRegConnect] Register monitor cannot be a bundle type with flips.</span>
+<span class="c1">// firrtl.passes.CheckHighFormLike$RegWithFlipException:  @[cookbook.md 622:20]: [module BadRegConnect] Register monitor cannot be a bundle type with flips.</span>
 </code></pre></div></div>
 
 <p>While there is no construct to “strip direction” in Chisel3, wrapping a type in <code class="language-plaintext highlighter-rouge">Output(...)</code>
