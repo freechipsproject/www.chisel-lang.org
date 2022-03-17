@@ -165,32 +165,32 @@ function prepareIdxAndDocMap() {
     {
       "title": "FIRRTL API Documentation",
       "url": "/api/firrtl/",
-      "content": "FIRRTL API Documentation We host only the latest minor version for each major version to keep the size down for website hosting. Please see the page about Versioning for more information about major and minor versioning and binary compatibility. 1.5.0 1.4.4 1.3.3 1.2.8 1.1.7 1.0.2"
+      "content": "FIRRTL API Documentation We host only the latest minor version for each major version to keep the size down for website hosting. Please see the page about Versioning for more information about major and minor versioning and binary compatibility. 1.5.2 1.4.4 1.3.3 1.2.8 1.1.7 1.0.2"
     } ,    
     {
       "title": "Diagrammer API Documentation",
       "url": "/api/diagrammer/",
-      "content": "Diagrammer API Documentation We host only the latest minor version for each major version to keep the size down for website hosting. Please see the page about Versioning for more information about major and minor versioning and binary compatibility. 1.5.0 1.3.4 1.2.3 1.1.8 1.0.2"
+      "content": "Diagrammer API Documentation We host only the latest minor version for each major version to keep the size down for website hosting. Please see the page about Versioning for more information about major and minor versioning and binary compatibility. 1.5.2 1.3.4 1.2.3 1.1.8 1.0.2"
     } ,    
     {
       "title": "Chisel Testers API Documentation",
       "url": "/api/chisel-testers/",
-      "content": "Chisel Testers API Documentation We host only the latest minor version for each major version to keep the size down for website hosting. Please see the page about Versioning for more information about major and minor versioning and binary compatibility. 2.5.0 1.5.4 1.4.3 1.3.8 1.2.10 1.1.2"
+      "content": "Chisel Testers API Documentation We host only the latest minor version for each major version to keep the size down for website hosting. Please see the page about Versioning for more information about major and minor versioning and binary compatibility. 2.5.2 1.5.4 1.4.3 1.3.8 1.2.10 1.1.2"
     } ,    
     {
       "title": "ChiselTest API Documentation",
       "url": "/api/chiseltest/",
-      "content": "ChiselTest API Documentation We host only the latest minor version for each major version to keep the size down for website hosting. Please see the page about Versioning for more information about major and minor versioning and binary compatibility. 0.5.0 0.3.4 0.2.3 0.1.8"
+      "content": "ChiselTest API Documentation We host only the latest minor version for each major version to keep the size down for website hosting. Please see the page about Versioning for more information about major and minor versioning and binary compatibility. 0.5.2 0.3.4 0.2.3 0.1.8"
     } ,    
     {
       "title": "Treadle API Documentation",
       "url": "/api/treadle/",
-      "content": "Treadle API Documentation We host only the latest minor version for each major version to keep the size down for website hosting. Please see the page about Versioning for more information about major and minor versioning and binary compatibility. 1.5.0 1.3.4 1.2.3 1.1.8 1.0.5"
+      "content": "Treadle API Documentation We host only the latest minor version for each major version to keep the size down for website hosting. Please see the page about Versioning for more information about major and minor versioning and binary compatibility. 1.5.2 1.3.4 1.2.3 1.1.8 1.0.5"
     } ,    
     {
       "title": "Chisel API Documentation",
       "url": "/api/",
-      "content": "Chisel API Documentation We host only the latest minor version for each major version to keep the size down for website hosting. Please see the page about Versioning for more information about major and minor versioning and binary compatibility. 3.5.0 3.4.4 3.3.3 3.2.8 3.1.8 3.0.2"
+      "content": "Chisel API Documentation We host only the latest minor version for each major version to keep the size down for website hosting. Please see the page about Versioning for more information about major and minor versioning and binary compatibility. 3.5.2 3.4.4 3.3.3 3.2.8 3.1.8 3.0.2"
     } ,    
     {
       "title": "ChiselTest",
@@ -265,7 +265,7 @@ function prepareIdxAndDocMap() {
     {
       "title": "Ports",
       "url": "/chisel3/docs/explanations/ports.html",
-      "content": "Ports Ports are used as interfaces to hardware components. A port is simply any Data object that has directions assigned to its members. Chisel provides port constructors to allow a direction to be added (input or output) to an object at construction time. Primitive port constructors wrap the type of the port in Input or Output. An example port declaration is as follows: class Decoupled extends Bundle { val ready = Output(Bool()) val data = Input(UInt(32.W)) val valid = Input(Bool()) } After defining Decoupled, it becomes a new type that can be used as needed for module interfaces or for named collections of wires. By folding directions into the object declarations, Chisel is able to provide powerful wiring constructs described later. Inspecting Module ports (Chisel 3.2+) Chisel 3.2 introduced DataMirror.modulePorts which can be used to inspect the IOs of any Chisel module (this includes modules in both import chisel3._ and import Chisel._, as well as BlackBoxes from each package). Here is an example of how to use this API: import chisel3.experimental.DataMirror import chisel3.stage.{ChiselGeneratorAnnotation, ChiselStage} class Adder extends Module { val a = IO(Input(UInt(8.W))) val b = IO(Input(UInt(8.W))) val c = IO(Output(UInt(8.W))) c := a +&amp; b } class Test extends Module { val adder = Module(new Adder) // for debug only adder.a := DontCare adder.b := DontCare // Inspect ports of adder // See the result below. DataMirror.modulePorts(adder).foreach { case (name, port) =&gt; { println(s\"Found port $name: $port\") }} } (new ChiselStage).execute(Array.empty, Seq(ChiselGeneratorAnnotation(() =&gt; new Test))) // Found port clock: Adder.clock: IO[Clock] // Found port reset: Adder.reset: IO[Reset] // Found port a: Adder.a: IO[UInt&lt;8&gt;] // Found port b: Adder.b: IO[UInt&lt;8&gt;] // Found port c: Adder.c: IO[UInt&lt;8&gt;] // res0: firrtl.AnnotationSeq = firrtl.AnnotationSeq@7631082d"
+      "content": "Ports Ports are used as interfaces to hardware components. A port is simply any Data object that has directions assigned to its members. Chisel provides port constructors to allow a direction to be added (input or output) to an object at construction time. Primitive port constructors wrap the type of the port in Input or Output. An example port declaration is as follows: class Decoupled extends Bundle { val ready = Output(Bool()) val data = Input(UInt(32.W)) val valid = Input(Bool()) } After defining Decoupled, it becomes a new type that can be used as needed for module interfaces or for named collections of wires. By folding directions into the object declarations, Chisel is able to provide powerful wiring constructs described later. Inspecting Module ports (Chisel 3.2+) Chisel 3.2 introduced DataMirror.modulePorts which can be used to inspect the IOs of any Chisel module (this includes modules in both import chisel3._ and import Chisel._, as well as BlackBoxes from each package). Here is an example of how to use this API: import chisel3.experimental.DataMirror import chisel3.stage.{ChiselGeneratorAnnotation, ChiselStage} class Adder extends Module { val a = IO(Input(UInt(8.W))) val b = IO(Input(UInt(8.W))) val c = IO(Output(UInt(8.W))) c := a +&amp; b } class Test extends Module { val adder = Module(new Adder) // for debug only adder.a := DontCare adder.b := DontCare // Inspect ports of adder // See the result below. DataMirror.modulePorts(adder).foreach { case (name, port) =&gt; { println(s\"Found port $name: $port\") }} } (new ChiselStage).execute(Array.empty, Seq(ChiselGeneratorAnnotation(() =&gt; new Test))) // Found port clock: Adder.clock: IO[Clock] // Found port reset: Adder.reset: IO[Reset] // Found port a: Adder.a: IO[UInt&lt;8&gt;] // Found port b: Adder.b: IO[UInt&lt;8&gt;] // Found port c: Adder.c: IO[UInt&lt;8&gt;] // res0: firrtl.AnnotationSeq = firrtl.AnnotationSeq@9fb3cf0"
     } ,    
     {
       "title": "Printing",
