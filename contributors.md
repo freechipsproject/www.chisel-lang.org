@@ -96,6 +96,7 @@
 - [`@vidhatre`](https://github.com/vidhatre)
 - [`@wunderabt`](https://github.com/wunderabt)
 - [`@yqszxx`](https://github.com/yqszxx)
+- [`@yuchangyuan`](https://github.com/yuchangyuan)
 - [`@yunsup`](https://github.com/yunsup)
 - [`@zhemao`](https://github.com/zhemao)
 - [`@zhongzc`](https://github.com/zhongzc)
