@@ -40,6 +40,7 @@ ga('send', 'pageview');
   <li><a href="#how-do-i-unpack-a-value-reverse-concatenation-like-in-verilog">How do I unpack a value (“reverse concatenation”) like in Verilog?</a></li>
   <li><a href="#how-do-i-do-subword-assignment-assign-to-some-bits-in-a-uint">How do I do subword assignment (assign to some bits in a UInt)?</a></li>
   <li><a href="#how-do-i-create-an-optional-io">How do I create an optional I/O?</a></li>
+  <li><a href="#how-do-i-create-io-without-a-prefix">How do I create I/O without a prefix?</a></li>
   <li><a href="#how-do-i-minimize-the-number-of-bits-used-in-an-output-vector">How do I minimize the number of bits used in an output vector</a></li>
   <li>Predictable Naming
     <ul>
@@ -559,6 +560,60 @@ The reason for this is that subword assignment generally hints at a better abstr
 <span class="o">}</span>
 </code></pre></div></div>
 
+<h3 id="how-do-i-create-io-without-a-prefix">How do I create I/O without a prefix?</h3>
+
+<p>In most cases, you can simply call <code class="language-plaintext highlighter-rouge">IO</code> multiple times:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3._</span>
+
+<span class="k">class</span> <span class="nc">MyModule</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">in</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">)))</span>
+  <span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">)))</span>
+
+  <span class="n">out</span> <span class="o">:=</span> <span class="n">in</span> <span class="o">+%</span> <span class="mf">1.</span><span class="n">U</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">MyModule</span><span class="p">(</span>
+  <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
+  <span class="kt">input</span>        <span class="n">reset</span><span class="p">,</span>
+  <span class="kt">input</span>  <span class="p">[</span><span class="mi">7</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="p">[</span><span class="mi">7</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span>
+<span class="p">);</span>
+  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="mh">8'h1</span><span class="p">;</span> <span class="c1">// @[cookbook.md 538:13]</span>
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
+<p>If you have a <code class="language-plaintext highlighter-rouge">Bundle</code> from which you would like to create ports without the
+normal <code class="language-plaintext highlighter-rouge">val</code> prefix, you can use <code class="language-plaintext highlighter-rouge">FlatIO</code>:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3._</span>
+<span class="k">import</span> <span class="nn">chisel3.experimental.FlatIO</span>
+
+<span class="k">class</span> <span class="nc">MyBundle</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">foo</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">))</span>
+  <span class="k">val</span> <span class="nv">bar</span> <span class="k">=</span> <span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">))</span>
+<span class="o">}</span>
+
+<span class="k">class</span> <span class="nc">MyModule</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">FlatIO</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyBundle</span><span class="o">)</span>
+
+  <span class="nv">io</span><span class="o">.</span><span class="py">bar</span> <span class="o">:=</span> <span class="nv">io</span><span class="o">.</span><span class="py">foo</span> <span class="o">+%</span> <span class="mf">1.</span><span class="n">U</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>Note that <code class="language-plaintext highlighter-rouge">io_</code> is nowhere to be seen!</p>
+
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">MyModule</span><span class="p">(</span>
+  <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
+  <span class="kt">input</span>        <span class="n">reset</span><span class="p">,</span>
+  <span class="kt">input</span>  <span class="p">[</span><span class="mi">7</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">foo</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="p">[</span><span class="mi">7</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">bar</span>
+<span class="p">);</span>
+  <span class="k">assign</span> <span class="n">bar</span> <span class="o">=</span> <span class="n">foo</span> <span class="o">+</span> <span class="mh">8'h1</span><span class="p">;</span> <span class="c1">// @[cookbook.md 569:20]</span>
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
 <h3 id="how-do-i-minimize-the-number-of-bits-used-in-an-output-vector">How do I minimize the number of bits used in an output vector?</h3>
 
 <p>Use inferred width and a <code class="language-plaintext highlighter-rouge">Seq</code> instead of a <code class="language-plaintext highlighter-rouge">Vec</code>:</p>
@@ -697,9 +752,9 @@ The reason for this is that subword assignment generally hints at a better abstr
   <span class="kt">input</span>   <span class="n">clock</span><span class="p">,</span>
   <span class="kt">input</span>   <span class="n">reset</span>
 <span class="p">);</span>
-  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">drink_I</span><span class="p">;</span> <span class="c1">// @[cookbook.md 591:23]</span>
-  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">drink_O</span><span class="p">;</span> <span class="c1">// @[cookbook.md 591:23]</span>
-  <span class="n">Tea</span> <span class="n">drink</span> <span class="p">(</span> <span class="c1">// @[cookbook.md 591:23]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">drink_I</span><span class="p">;</span> <span class="c1">// @[cookbook.md 645:23]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">drink_O</span><span class="p">;</span> <span class="c1">// @[cookbook.md 645:23]</span>
+  <span class="n">Tea</span> <span class="n">drink</span> <span class="p">(</span> <span class="c1">// @[cookbook.md 645:23]</span>
     <span class="p">.</span><span class="n">I</span><span class="p">(</span><span class="n">drink_I</span><span class="p">),</span>
     <span class="p">.</span><span class="n">O</span><span class="p">(</span><span class="n">drink_O</span><span class="p">)</span>
   <span class="p">);</span>
@@ -726,7 +781,7 @@ to a register:</p>
 </code></pre></div></div>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">ChiselStage</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">BadRegConnect</span><span class="o">)</span>
-<span class="c1">// firrtl.passes.CheckHighFormLike$RegWithFlipException:  @[cookbook.md 622:20]: [module BadRegConnect] Register monitor cannot be a bundle type with flips.</span>
+<span class="c1">// firrtl.passes.CheckHighFormLike$RegWithFlipException:  @[cookbook.md 676:20]: [module BadRegConnect] Register monitor cannot be a bundle type with flips.</span>
 </code></pre></div></div>
 
 <p>While there is no construct to “strip direction” in Chisel3, wrapping a type in <code class="language-plaintext highlighter-rouge">Output(...)</code>
