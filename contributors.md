@@ -4,7 +4,6 @@
 - [`@albert-magyar`](https://github.com/albert-magyar)
 - [`@albertchen-sifive`](https://github.com/albertchen-sifive)
 - [`@andreaTP`](https://github.com/andreaTP)
-- [`@anniej-sifive`](https://github.com/anniej-sifive)
 - [`@aswaterman`](https://github.com/aswaterman)
 - [`@azidar`](https://github.com/azidar)
 - [`@AzureSkyResearch`](https://github.com/AzureSkyResearch)
