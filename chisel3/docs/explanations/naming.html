@@ -29,10 +29,10 @@ systemic name-stability issues, please refer to the naming <a href="../cookbooks
 <span class="k">import</span> <span class="nn">chisel3.stage.ChiselStage</span>
 </code></pre></div></div>
 
-<p>With the release of Chisel 3.4, users should add the following line to their build.sbt settings to get the improved
-naming:</p>
+<p>With the release of Chisel 3.5, users are required to add the following line to
+their build.sbt settings:</p>
 
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// chiselVersion is the String version (eg. "3.4.0")</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// chiselVersion is the String version (eg. "3.5.3")</span>
 <span class="nf">addCompilerPlugin</span><span class="o">(</span><span class="s">"edu.berkeley.cs"</span> <span class="o">%</span> <span class="s">"chisel3-plugin"</span> <span class="o">%</span> <span class="n">chiselVersion</span> <span class="n">cross</span> <span class="nv">CrossVersion</span><span class="o">.</span><span class="py">full</span><span class="o">)</span>
 </code></pre></div></div>
 
@@ -93,6 +93,36 @@ side of the val declaration:</p>
 <span class="k">endmodule</span>
 </code></pre></div></div>
 
+<p>Prefixing can also be derived from the name of signals on the left-hand side of a connection.
+While this is not implemented via the compiler plugin, the behavior should feel similar:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ConnectPrefixing</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">in</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">2.</span><span class="n">W</span><span class="o">)))</span>
+  <span class="c1">// val in = autoNameRecursively("in")(prefix("in")(IO(Input(UInt(2.W)))))</span>
+
+  <span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">2.</span><span class="n">W</span><span class="o">)))</span>
+  <span class="c1">// val out = autoNameRecursively("out")(prefix("out")(IO(Output(UInt(2.W)))))</span>
+
+  <span class="n">out</span> <span class="o">:=</span> <span class="o">{</span> <span class="c1">// technically this is not wrapped in autoNameRecursively nor prefix</span>
+    <span class="c1">// But the Chisel runtime will still use the name of `out` as a prefix</span>
+    <span class="k">val</span> <span class="nv">double</span> <span class="k">=</span> <span class="n">in</span> <span class="o">*</span> <span class="n">in</span>
+    <span class="c1">// val double = autoNameRecursively("double")(prefix("double")(in * in))</span>
+    <span class="n">double</span> <span class="o">+</span> <span class="mf">1.</span><span class="n">U</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">ConnectPrefixing</span><span class="p">(</span>
+  <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
+  <span class="kt">input</span>        <span class="n">reset</span><span class="p">,</span>
+  <span class="kt">input</span>  <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span>
+<span class="p">);</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out_double</span> <span class="o">=</span> <span class="n">in</span> <span class="o">*</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 76:21]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">out_T_1</span> <span class="o">=</span> <span class="n">out_double</span> <span class="o">+</span> <span class="mh">4'h1</span><span class="p">;</span> <span class="c1">// @[naming.md 78:12]</span>
+  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="mi">_</span><span class="n">out_T_1</span><span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">];</span> <span class="c1">// @[naming.md 74:7]</span>
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
 <p>Note that the naming also works if the hardware type is nested in an <code class="language-plaintext highlighter-rouge">Option</code> or a subtype of <code class="language-plaintext highlighter-rouge">Iterable</code>:</p>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Example3</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
@@ -117,9 +147,9 @@ side of the val declaration:</p>
   <span class="kt">input</span>  <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in</span><span class="p">,</span>
   <span class="kt">output</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span>
 <span class="p">);</span>
-  <span class="kt">wire</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">opt_T</span> <span class="o">=</span> <span class="n">in</span> <span class="o">*</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 74:20]</span>
-  <span class="kt">wire</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">opt</span> <span class="o">=</span> <span class="mh">4'h3</span> <span class="o">+</span> <span class="mi">_</span><span class="n">opt_T</span><span class="p">;</span> <span class="c1">// @[naming.md 76:22]</span>
-  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="n">opt</span> <span class="o">+</span> <span class="mh">4'h1</span><span class="p">;</span> <span class="c1">// @[naming.md 80:18]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">opt_T</span> <span class="o">=</span> <span class="n">in</span> <span class="o">*</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 99:20]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">opt</span> <span class="o">=</span> <span class="mh">4'h3</span> <span class="o">+</span> <span class="mi">_</span><span class="n">opt_T</span><span class="p">;</span> <span class="c1">// @[naming.md 101:22]</span>
+  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="n">opt</span> <span class="o">+</span> <span class="mh">4'h1</span><span class="p">;</span> <span class="c1">// @[naming.md 105:18]</span>
 <span class="k">endmodule</span>
 </code></pre></div></div>
 
@@ -138,7 +168,7 @@ side of the val declaration:</p>
   <span class="kt">input</span>  <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in</span><span class="p">,</span>
   <span class="kt">output</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span>
 <span class="p">);</span>
-  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 98:7]</span>
+  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 123:7]</span>
 <span class="k">endmodule</span>
 </code></pre></div></div>
 
@@ -148,7 +178,7 @@ Users who desire a prefix are encouraged to provide one as <a href="#prefixing">
 <h3 id="prefixing">Prefixing</h3>
 
 <p>As shown above, the compiler plugin automatically attempts to prefix some of your signals for you. However, you as a
-user can also add your own prefixes. This is especially for ECO-type fixes where you need to add some logic to a module
+user can also add your own prefixes. This is especially useful for ECO-type fixes where you need to add some logic to a module
 but don’t want to influence other names in the module.</p>
 
 <p>In the following example, we prefix additional logic with “ECO”, where <code class="language-plaintext highlighter-rouge">Example4</code> is pre-ECO and <code class="language-plaintext highlighter-rouge">Example5</code> is post-ECO:</p>
@@ -177,9 +207,9 @@ but don’t want to influence other names in the module.</p>
   <span class="kt">input</span>  <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in</span><span class="p">,</span>
   <span class="kt">output</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span>
 <span class="p">);</span>
-  <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">add_T_1</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 115:16]</span>
-  <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">add</span> <span class="o">=</span> <span class="mi">_</span><span class="n">add_T_1</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 115:21]</span>
-  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="n">add</span> <span class="o">+</span> <span class="mh">2'h1</span><span class="p">;</span> <span class="c1">// @[naming.md 117:14]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">add_T_1</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 140:16]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">add</span> <span class="o">=</span> <span class="mi">_</span><span class="n">add_T_1</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 140:21]</span>
+  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="n">add</span> <span class="o">+</span> <span class="mh">2'h1</span><span class="p">;</span> <span class="c1">// @[naming.md 142:14]</span>
 <span class="k">endmodule</span>
 <span class="k">module</span> <span class="n">Example5</span><span class="p">(</span>
   <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
@@ -187,10 +217,10 @@ but don’t want to influence other names in the module.</p>
   <span class="kt">input</span>  <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in</span><span class="p">,</span>
   <span class="kt">output</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span>
 <span class="p">);</span>
-  <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">add_T_1</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 125:16]</span>
-  <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">add</span> <span class="o">=</span> <span class="mi">_</span><span class="n">add_T_1</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 125:21]</span>
-  <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">out_ECO_T_1</span> <span class="o">=</span> <span class="n">add</span> <span class="o">+</span> <span class="mh">2'h1</span><span class="p">;</span> <span class="c1">// @[naming.md 127:30]</span>
-  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="mi">_</span><span class="n">out_ECO_T_1</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 127:36]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">add_T_1</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 150:16]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">add</span> <span class="o">=</span> <span class="mi">_</span><span class="n">add_T_1</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 150:21]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">out_ECO_T_1</span> <span class="o">=</span> <span class="n">add</span> <span class="o">+</span> <span class="mh">2'h1</span><span class="p">;</span> <span class="c1">// @[naming.md 152:30]</span>
+  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="mi">_</span><span class="n">out_ECO_T_1</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 152:36]</span>
 <span class="k">endmodule</span>
 </code></pre></div></div>
 
@@ -211,8 +241,8 @@ but don’t want to influence other names in the module.</p>
   <span class="kt">input</span>  <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in</span><span class="p">,</span>
   <span class="kt">output</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span>
 <span class="p">);</span>
-  <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">add_foo_T_1</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 147:32]</span>
-  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="mi">_</span><span class="n">add_foo_T_1</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 147:37]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">add_foo_T_1</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 172:32]</span>
+  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="mi">_</span><span class="n">add_foo_T_1</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 172:37]</span>
 <span class="k">endmodule</span>
 </code></pre></div></div>
 
@@ -234,8 +264,8 @@ don’t want the prefixing behavior. In this case, you can use the <code class="
   <span class="kt">input</span>  <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in</span><span class="p">,</span>
   <span class="kt">output</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span>
 <span class="p">);</span>
-  <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">T_1</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 166:27]</span>
-  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="mi">_</span><span class="n">T_1</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 166:32]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">T_1</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 191:27]</span>
+  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="mi">_</span><span class="n">T_1</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 191:32]</span>
 <span class="k">endmodule</span>
 </code></pre></div></div>
 
@@ -259,8 +289,123 @@ name will still be prefixed (including by the plugin). You can always use the <c
   <span class="kt">input</span>  <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in</span><span class="p">,</span>
   <span class="kt">output</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span>
 <span class="p">);</span>
-  <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">add_foo</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 185:23]</span>
-  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="n">add_foo</span><span class="p">;</span> <span class="c1">// @[naming.md 185:17]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">add_foo</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 210:23]</span>
+  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="n">add_foo</span><span class="p">;</span> <span class="c1">// @[naming.md 210:17]</span>
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
+<p>Note that using <code class="language-plaintext highlighter-rouge">.suggestName</code> does <strong>not</strong> affect prefixes derived from val names;
+however, it <em>can</em> affect prefixes derived from connections (eg. <code class="language-plaintext highlighter-rouge">:=</code>):</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ConnectionPrefixExample</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">in0</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">2.</span><span class="n">W</span><span class="o">)))</span>
+  <span class="k">val</span> <span class="nv">in1</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">2.</span><span class="n">W</span><span class="o">)))</span>
+
+  <span class="k">val</span> <span class="nv">out0</span> <span class="k">=</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="nv">port</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">()))</span>
+    <span class="c1">// Even though this suggestName is before mul, the prefix used in this scope</span>
+    <span class="c1">// is derived from `val out0`, so this does not affect the name of mul</span>
+    <span class="nv">port</span><span class="o">.</span><span class="py">suggestName</span><span class="o">(</span><span class="s">"foo"</span><span class="o">)</span>
+    <span class="c1">// out0_mul</span>
+    <span class="k">val</span> <span class="nv">mul</span> <span class="k">=</span> <span class="n">in0</span> <span class="o">*</span> <span class="n">in1</span>
+    <span class="n">port</span> <span class="o">:=</span> <span class="n">mul</span> <span class="o">+</span> <span class="mf">1.</span><span class="n">U</span>
+    <span class="n">port</span>
+  <span class="o">}</span>
+
+  <span class="k">val</span> <span class="nv">out1</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">()))</span>
+  <span class="k">val</span> <span class="nv">out2</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">()))</span>
+
+  <span class="n">out1</span> <span class="o">:=</span> <span class="o">{</span>
+    <span class="c1">// out1_sum</span>
+    <span class="k">val</span> <span class="nv">sum</span> <span class="k">=</span> <span class="n">in0</span> <span class="o">+</span> <span class="n">in1</span>
+    <span class="n">sum</span> <span class="o">+</span> <span class="mf">1.</span><span class="n">U</span>
+  <span class="o">}</span>
+  <span class="c1">// Comes after so does *not* affect prefix above</span>
+  <span class="nv">out1</span><span class="o">.</span><span class="py">suggestName</span><span class="o">(</span><span class="s">"bar"</span><span class="o">)</span>
+
+  <span class="c1">// Comes before so *does* affect prefix below</span>
+  <span class="nv">out2</span><span class="o">.</span><span class="py">suggestName</span><span class="o">(</span><span class="s">"fizz"</span><span class="o">)</span>
+  <span class="n">out2</span> <span class="o">:=</span> <span class="o">{</span>
+    <span class="c1">// fizz_diff</span>
+    <span class="k">val</span> <span class="nv">diff</span> <span class="k">=</span> <span class="n">in0</span> <span class="o">-</span> <span class="n">in1</span>
+    <span class="n">diff</span> <span class="o">+</span> <span class="mf">1.</span><span class="n">U</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">ConnectionPrefixExample</span><span class="p">(</span>
+  <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
+  <span class="kt">input</span>        <span class="n">reset</span><span class="p">,</span>
+  <span class="kt">input</span>  <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in0</span><span class="p">,</span>
+  <span class="kt">input</span>  <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in1</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">foo</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">bar</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">fizz</span>
+<span class="p">);</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out0_mul</span> <span class="o">=</span> <span class="n">in0</span> <span class="o">*</span> <span class="n">in1</span><span class="p">;</span> <span class="c1">// @[naming.md 235:19]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out1_sum</span> <span class="o">=</span> <span class="n">in0</span> <span class="o">+</span> <span class="n">in1</span><span class="p">;</span> <span class="c1">// @[naming.md 245:19]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">fizz_diff</span> <span class="o">=</span> <span class="n">in0</span> <span class="o">-</span> <span class="n">in1</span><span class="p">;</span> <span class="c1">// @[naming.md 255:20]</span>
+  <span class="k">assign</span> <span class="n">foo</span> <span class="o">=</span> <span class="n">out0_mul</span> <span class="o">+</span> <span class="mh">4'h1</span><span class="p">;</span> <span class="c1">// @[naming.md 236:17]</span>
+  <span class="k">assign</span> <span class="n">bar</span> <span class="o">=</span> <span class="n">out1_sum</span> <span class="o">+</span> <span class="mh">2'h1</span><span class="p">;</span> <span class="c1">// @[naming.md 246:9]</span>
+  <span class="k">assign</span> <span class="n">fizz</span> <span class="o">=</span> <span class="n">fizz_diff</span> <span class="o">+</span> <span class="mh">2'h1</span><span class="p">;</span> <span class="c1">// @[naming.md 256:10]</span>
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
+<p>As this example illustrates, this behavior is slightly inconsistent so is subject to change in a future version of Chisel.</p>
+
+<h3 id="behavior-for-unnamed-signals-aka-temporaries">Behavior for “Unnamed signals” (aka “Temporaries”)</h3>
+
+<p>If you want to signify that the name of a signal does not matter, you can prefix the name of your val with <code class="language-plaintext highlighter-rouge">_</code>.
+Chisel will preserve the convention of leading <code class="language-plaintext highlighter-rouge">_</code> signifying an unnamed signal across prefixes.
+For example:</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">TemporaryExample</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">in0</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">2.</span><span class="n">W</span><span class="o">)))</span>
+  <span class="k">val</span> <span class="nv">in1</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">2.</span><span class="n">W</span><span class="o">)))</span>
+
+  <span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="nv">port</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">()))</span>
+    <span class="k">val</span> <span class="nv">_sum</span> <span class="k">=</span> <span class="n">in0</span> <span class="o">+</span> <span class="n">in1</span>
+    <span class="n">port</span> <span class="o">:=</span> <span class="nc">_sum</span> <span class="o">+</span> <span class="mf">1.</span><span class="n">U</span>
+    <span class="n">port</span>
+  <span class="o">}</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">TemporaryExample</span><span class="p">(</span>
+  <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
+  <span class="kt">input</span>        <span class="n">reset</span><span class="p">,</span>
+  <span class="kt">input</span>  <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in0</span><span class="p">,</span>
+  <span class="kt">input</span>  <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in1</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span>
+<span class="p">);</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">out_sum</span> <span class="o">=</span> <span class="n">in0</span> <span class="o">+</span> <span class="n">in1</span><span class="p">;</span> <span class="c1">// @[naming.md 276:20]</span>
+  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="mi">_</span><span class="n">out_sum</span> <span class="o">+</span> <span class="mh">2'h1</span><span class="p">;</span> <span class="c1">// @[naming.md 277:18]</span>
+<span class="k">endmodule</span>
+</code></pre></div></div>
+
+<p>If an unnamed signal is itself used to generate a prefix, the leading <code class="language-plaintext highlighter-rouge">_</code> will be ignored to avoid double <code class="language-plaintext highlighter-rouge">__</code> in the names of further nested signals.</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">TemporaryPrefixExample</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">in0</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">2.</span><span class="n">W</span><span class="o">)))</span>
+  <span class="k">val</span> <span class="nv">in1</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">2.</span><span class="n">W</span><span class="o">)))</span>
+  <span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="nc">UInt</span><span class="o">()))</span>
+
+  <span class="k">val</span> <span class="nv">_sum</span> <span class="k">=</span> <span class="o">{</span>
+    <span class="k">val</span> <span class="nv">x</span> <span class="k">=</span> <span class="n">in0</span> <span class="o">+</span> <span class="n">in1</span>
+    <span class="n">x</span> <span class="o">+</span> <span class="mf">1.</span><span class="n">U</span>
+  <span class="o">}</span>
+  <span class="n">out</span> <span class="o">:=</span> <span class="nc">_sum</span> <span class="o">&amp;</span> <span class="mh">0x2</span><span class="o">.</span><span class="py">U</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">TemporaryPrefixExample</span><span class="p">(</span>
+  <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
+  <span class="kt">input</span>        <span class="n">reset</span><span class="p">,</span>
+  <span class="kt">input</span>  <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in0</span><span class="p">,</span>
+  <span class="kt">input</span>  <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in1</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span>
+<span class="p">);</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">sum_x</span> <span class="o">=</span> <span class="n">in0</span> <span class="o">+</span> <span class="n">in1</span><span class="p">;</span> <span class="c1">// @[naming.md 298:17]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">1</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">sum</span> <span class="o">=</span> <span class="n">sum_x</span> <span class="o">+</span> <span class="mh">2'h1</span><span class="p">;</span> <span class="c1">// @[naming.md 299:7]</span>
+  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="mi">_</span><span class="n">sum</span> <span class="o">&amp;</span> <span class="mh">2'h2</span><span class="p">;</span> <span class="c1">// @[naming.md 301:15]</span>
 <span class="k">endmodule</span>
 </code></pre></div></div>
 
@@ -286,8 +431,8 @@ names more stable and is highly recommended to do.</p>
   <span class="kt">input</span>  <span class="p">[</span><span class="mi">7</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in</span><span class="p">,</span>
   <span class="kt">output</span> <span class="p">[</span><span class="mi">7</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span>
 <span class="p">);</span>
-  <span class="kt">wire</span> <span class="p">[</span><span class="mi">7</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">add_foo</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 205:23]</span>
-  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="n">add_foo</span><span class="p">;</span> <span class="c1">// @[naming.md 205:17]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">7</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">add_foo</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 319:23]</span>
+  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="n">add_foo</span><span class="p">;</span> <span class="c1">// @[naming.md 319:17]</span>
 <span class="k">endmodule</span>
 <span class="k">module</span> <span class="n">EXAMPLE9WITHWIDTH1</span><span class="p">(</span>
   <span class="kt">input</span>   <span class="n">clock</span><span class="p">,</span>
@@ -295,8 +440,8 @@ names more stable and is highly recommended to do.</p>
   <span class="kt">input</span>   <span class="n">in</span><span class="p">,</span>
   <span class="kt">output</span>  <span class="n">out</span>
 <span class="p">);</span>
-  <span class="kt">wire</span>  <span class="n">add_foo</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 205:23]</span>
-  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="n">add_foo</span><span class="p">;</span> <span class="c1">// @[naming.md 205:17]</span>
+  <span class="kt">wire</span>  <span class="n">add_foo</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="n">in</span><span class="p">;</span> <span class="c1">// @[naming.md 319:23]</span>
+  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="n">add_foo</span><span class="p">;</span> <span class="c1">// @[naming.md 319:17]</span>
 <span class="k">endmodule</span>
 </code></pre></div></div>
 

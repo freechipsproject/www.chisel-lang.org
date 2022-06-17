@@ -29,6 +29,7 @@ ga('send', 'pageview');
       <li><a href="#can-i-make-a-2D-or-3D-Vector">Can I make a 2D or 3D Vector?</a></li>
       <li><a href="#how-do-i-create-a-vector-of-registers">How do I create a Vector of Registers?</a></li>
       <li><a href="#how-do-i-create-a-reg-of-type-vec">How do I create a Reg of type Vec?</a></li>
+      <li><a href="#how-do-i-partially-reset-an-aggregate-reg">How do I partially reset an Aggregate Reg?</a></li>
     </ul>
   </li>
   <li>Bundles
@@ -241,6 +242,41 @@ you are tying off, you can use <code class="language-plaintext highlighter-rouge
 <span class="o">}</span>
 </code></pre></div></div>
 
+<h3 id="how-do-i-partially-reset-an-aggregate-reg">How do I partially reset an Aggregate Reg?</h3>
+
+<p>The easiest way is to use a partially-specified <a href="#../appendix/experimental-features#bundle-literals">Bundle Literal</a>
+or <a href="#../appendix/experimental-features#vec-literals">Vec Literal</a> to match the type of the Reg.</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3._</span>
+<span class="k">import</span> <span class="nn">chisel3.experimental.BundleLiterals._</span>
+
+<span class="k">class</span> <span class="nc">MyBundle</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">foo</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">)</span>
+  <span class="k">val</span> <span class="nv">bar</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">)</span>
+<span class="o">}</span>
+
+<span class="k">class</span> <span class="nc">MyModule</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
+  <span class="c1">// Only .foo will be reset, .bar will have no reset value</span>
+  <span class="k">val</span> <span class="nv">reg</span> <span class="k">=</span> <span class="nc">RegInit</span><span class="o">((</span><span class="k">new</span> <span class="nc">MyBundle</span><span class="o">).</span><span class="py">Lit</span><span class="o">(</span><span class="nv">_</span><span class="o">.</span><span class="py">foo</span> <span class="o">-&gt;</span> <span class="mf">123.</span><span class="n">U</span><span class="o">))</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
+<p>If your initial value is not a literal, or if you just prefer, you can use a
+Wire as the initial value for the Reg. Simply connect fields to <code class="language-plaintext highlighter-rouge">DontCare</code> that
+you do not wish to be reset.</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">MyModule2</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">reg</span> <span class="k">=</span> <span class="nc">RegInit</span><span class="o">({</span>
+    <span class="c1">// The wire could be constructed before the reg rather than in the RegInit scope,</span>
+    <span class="c1">// but this style has nice lexical scoping behavior, keeping the Wire private</span>
+    <span class="k">val</span> <span class="nv">init</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyBundle</span><span class="o">)</span>
+    <span class="n">init</span> <span class="o">:=</span> <span class="nc">DontCare</span> <span class="c1">// No fields will be reset</span>
+    <span class="nv">init</span><span class="o">.</span><span class="py">foo</span> <span class="o">:=</span> <span class="mf">123.</span><span class="n">U</span> <span class="c1">// Last connect override, .foo is reset</span>
+    <span class="n">init</span>
+  <span class="o">})</span>
+<span class="o">}</span>
+</code></pre></div></div>
+
 <h2 id="bundles">Bundles</h2>
 
 <h3 id="-how-do-i-deal-with-aliased-bundle-fields"><a name="aliased-bundle-fields"></a> How do I deal with aliased Bundle fields?</h3>
@@ -256,15 +292,15 @@ you are tying off, you can use <code class="language-plaintext highlighter-rouge
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">getVerilogString</span><span class="o">(</span><span class="k">new</span> <span class="nc">Top</span><span class="o">(</span><span class="k">new</span> <span class="nc">AliasedBundle</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">))))</span>
 <span class="c1">// chisel3.AliasedAggregateFieldException: AliasedBundle contains aliased fields named (bar,foo)</span>
 <span class="c1">// 	at ... ()</span>
-<span class="c1">// 	at repl.MdocSession$App9$Top$$anonfun$40$$anonfun$apply$23.apply(cookbook.md:223)</span>
-<span class="c1">// 	at repl.MdocSession$App9$Top$$anonfun$40$$anonfun$apply$23.apply(cookbook.md:223)</span>
+<span class="c1">// 	at repl.MdocSession$App10$Top$$anonfun$45$$anonfun$apply$29.apply(cookbook.md:262)</span>
+<span class="c1">// 	at repl.MdocSession$App10$Top$$anonfun$45$$anonfun$apply$29.apply(cookbook.md:262)</span>
 <span class="c1">// 	at chisel3.internal.prefix$.apply(prefix.scala:48)</span>
-<span class="c1">// 	at repl.MdocSession$App9$Top$$anonfun$40.apply(cookbook.md:223)</span>
-<span class="c1">// 	at repl.MdocSession$App9$Top$$anonfun$40.apply(cookbook.md)</span>
+<span class="c1">// 	at repl.MdocSession$App10$Top$$anonfun$45.apply(cookbook.md:262)</span>
+<span class="c1">// 	at repl.MdocSession$App10$Top$$anonfun$45.apply(cookbook.md)</span>
 <span class="c1">// 	at chisel3.internal.plugin.package$.autoNameRecursively(package.scala:33)</span>
-<span class="c1">// 	at repl.MdocSession$App9$Top.&lt;init&gt;(cookbook.md:223)</span>
-<span class="c1">// 	at repl.MdocSession$App9$$anonfun$45$$anonfun$apply$25.apply(cookbook.md:242)</span>
-<span class="c1">// 	at repl.MdocSession$App9$$anonfun$45$$anonfun$apply$25.apply(cookbook.md:242)</span>
+<span class="c1">// 	at repl.MdocSession$App10$Top.&lt;init&gt;(cookbook.md:262)</span>
+<span class="c1">// 	at repl.MdocSession$App10$$anonfun$50$$anonfun$apply$31.apply(cookbook.md:281)</span>
+<span class="c1">// 	at repl.MdocSession$App10$$anonfun$50$$anonfun$apply$31.apply(cookbook.md:281)</span>
 <span class="c1">// 	at ... ()</span>
 <span class="c1">// 	at ... (Stack trace trimmed to user code only. Rerun with --full-stacktrace to see the full stack trace)</span>
 </code></pre></div></div>
@@ -287,15 +323,15 @@ This is a problem for Chisel because we need to be able to distinguish uses of
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">getVerilogString</span><span class="o">(</span><span class="k">new</span> <span class="nc">Top</span><span class="o">(</span><span class="k">new</span> <span class="nc">AlsoAliasedBundle</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">))))</span>
 <span class="c1">// chisel3.AliasedAggregateFieldException: AlsoAliasedBundle contains aliased fields named (foo,gen)</span>
 <span class="c1">// 	at ... ()</span>
-<span class="c1">// 	at repl.MdocSession$App9$Top$$anonfun$40$$anonfun$apply$23.apply(cookbook.md:223)</span>
-<span class="c1">// 	at repl.MdocSession$App9$Top$$anonfun$40$$anonfun$apply$23.apply(cookbook.md:223)</span>
+<span class="c1">// 	at repl.MdocSession$App10$Top$$anonfun$45$$anonfun$apply$29.apply(cookbook.md:262)</span>
+<span class="c1">// 	at repl.MdocSession$App10$Top$$anonfun$45$$anonfun$apply$29.apply(cookbook.md:262)</span>
 <span class="c1">// 	at chisel3.internal.prefix$.apply(prefix.scala:48)</span>
-<span class="c1">// 	at repl.MdocSession$App9$Top$$anonfun$40.apply(cookbook.md:223)</span>
-<span class="c1">// 	at repl.MdocSession$App9$Top$$anonfun$40.apply(cookbook.md)</span>
+<span class="c1">// 	at repl.MdocSession$App10$Top$$anonfun$45.apply(cookbook.md:262)</span>
+<span class="c1">// 	at repl.MdocSession$App10$Top$$anonfun$45.apply(cookbook.md)</span>
 <span class="c1">// 	at chisel3.internal.plugin.package$.autoNameRecursively(package.scala:33)</span>
-<span class="c1">// 	at repl.MdocSession$App9$Top.&lt;init&gt;(cookbook.md:223)</span>
-<span class="c1">// 	at repl.MdocSession$App9$$anonfun$48$$anonfun$apply$26.apply(cookbook.md:261)</span>
-<span class="c1">// 	at repl.MdocSession$App9$$anonfun$48$$anonfun$apply$26.apply(cookbook.md:261)</span>
+<span class="c1">// 	at repl.MdocSession$App10$Top.&lt;init&gt;(cookbook.md:262)</span>
+<span class="c1">// 	at repl.MdocSession$App10$$anonfun$53$$anonfun$apply$32.apply(cookbook.md:300)</span>
+<span class="c1">// 	at repl.MdocSession$App10$$anonfun$53$$anonfun$apply$32.apply(cookbook.md:300)</span>
 <span class="c1">// 	at ... ()</span>
 <span class="c1">// 	at ... (Stack trace trimmed to user code only. Rerun with --full-stacktrace to see the full stack trace)</span>
 </code></pre></div></div>
@@ -334,15 +370,15 @@ it becoming a hardware field of the <code class="language-plaintext highlighter-
 <span class="nf">getVerilogString</span><span class="o">(</span><span class="k">new</span> <span class="nc">MisusedFunctionArguments</span><span class="o">)</span>
 <span class="c1">// chisel3.AutoClonetypeException: Automatically cloned UsingAFunctionBundle has field 'foo' aliased with base UsingAFunctionBundle. In the future, this will be solved automatically by the compiler plugin. For now, ensure Chisel types used in the Bundle definition are passed through constructor arguments, or wrapped in Input(...), Output(...), or Flipped(...) if appropriate. As a last resort, you can override cloneType manually.</span>
 <span class="c1">// 	at ... ()</span>
-<span class="c1">// 	at repl.MdocSession$App9$$anonfun$52$MisusedFunctionArguments$1$$anonfun$55$$anonfun$apply$31.apply(cookbook.md:292)</span>
-<span class="c1">// 	at repl.MdocSession$App9$$anonfun$52$MisusedFunctionArguments$1$$anonfun$55$$anonfun$apply$31.apply(cookbook.md:292)</span>
+<span class="c1">// 	at repl.MdocSession$App10$$anonfun$57$MisusedFunctionArguments$1$$anonfun$60$$anonfun$apply$37.apply(cookbook.md:331)</span>
+<span class="c1">// 	at repl.MdocSession$App10$$anonfun$57$MisusedFunctionArguments$1$$anonfun$60$$anonfun$apply$37.apply(cookbook.md:331)</span>
 <span class="c1">// 	at chisel3.internal.prefix$.apply(prefix.scala:48)</span>
-<span class="c1">// 	at repl.MdocSession$App9$$anonfun$52$MisusedFunctionArguments$1$$anonfun$55.apply(cookbook.md:292)</span>
-<span class="c1">// 	at repl.MdocSession$App9$$anonfun$52$MisusedFunctionArguments$1$$anonfun$55.apply(cookbook.md)</span>
+<span class="c1">// 	at repl.MdocSession$App10$$anonfun$57$MisusedFunctionArguments$1$$anonfun$60.apply(cookbook.md:331)</span>
+<span class="c1">// 	at repl.MdocSession$App10$$anonfun$57$MisusedFunctionArguments$1$$anonfun$60.apply(cookbook.md)</span>
 <span class="c1">// 	at chisel3.internal.plugin.package$.autoNameRecursively(package.scala:33)</span>
-<span class="c1">// 	at repl.MdocSession$App9$$anonfun$52$MisusedFunctionArguments$1.&lt;init&gt;(cookbook.md:292)</span>
-<span class="c1">// 	at repl.MdocSession$App9$$anonfun$52$$anonfun$apply$33.apply(cookbook.md:294)</span>
-<span class="c1">// 	at repl.MdocSession$App9$$anonfun$52$$anonfun$apply$33.apply(cookbook.md:294)</span>
+<span class="c1">// 	at repl.MdocSession$App10$$anonfun$57$MisusedFunctionArguments$1.&lt;init&gt;(cookbook.md:331)</span>
+<span class="c1">// 	at repl.MdocSession$App10$$anonfun$57$$anonfun$apply$39.apply(cookbook.md:333)</span>
+<span class="c1">// 	at repl.MdocSession$App10$$anonfun$57$$anonfun$apply$39.apply(cookbook.md:333)</span>
 <span class="c1">// 	at ... ()</span>
 <span class="c1">// 	at ... (Stack trace trimmed to user code only. Rerun with --full-stacktrace to see the full stack trace)</span>
 </code></pre></div></div>
@@ -502,9 +538,9 @@ Below, the left-hand side connection to <code class="language-plaintext highligh
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span><span class="k">new</span> <span class="nc">ChiselStage</span><span class="o">).</span><span class="py">execute</span><span class="o">(</span><span class="nc">Array</span><span class="o">(</span><span class="s">"-X"</span><span class="o">,</span> <span class="s">"verilog"</span><span class="o">),</span> <span class="nc">Seq</span><span class="o">(</span><span class="k">new</span> <span class="nc">ChiselGeneratorAnnotation</span><span class="o">(()</span> <span class="k">=&gt;</span> <span class="k">new</span> <span class="nc">Foo</span><span class="o">)))</span>
 <span class="c1">// chisel3.internal.ChiselException: Cannot reassign to read-only Foo.?: OpResult[Bool]</span>
 <span class="c1">// 	at ... ()</span>
-<span class="c1">// 	at repl.MdocSession$App16$Foo.&lt;init&gt;(cookbook.md:450)</span>
-<span class="c1">// 	at repl.MdocSession$App16$$anonfun$90$$anonfun$apply$47.apply(cookbook.md:458)</span>
-<span class="c1">// 	at repl.MdocSession$App16$$anonfun$90$$anonfun$apply$47.apply(cookbook.md:458)</span>
+<span class="c1">// 	at repl.MdocSession$App17$Foo.&lt;init&gt;(cookbook.md:489)</span>
+<span class="c1">// 	at repl.MdocSession$App17$$anonfun$95$$anonfun$apply$53.apply(cookbook.md:497)</span>
+<span class="c1">// 	at repl.MdocSession$App17$$anonfun$95$$anonfun$apply$53.apply(cookbook.md:497)</span>
 <span class="c1">// 	at ... ()</span>
 <span class="c1">// 	at ... (Stack trace trimmed to user code only. Rerun with --full-stacktrace to see the full stack trace)</span>
 </code></pre></div></div>
@@ -580,7 +616,7 @@ The reason for this is that subword assignment generally hints at a better abstr
   <span class="kt">input</span>  <span class="p">[</span><span class="mi">7</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in</span><span class="p">,</span>
   <span class="kt">output</span> <span class="p">[</span><span class="mi">7</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span>
 <span class="p">);</span>
-  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="mh">8'h1</span><span class="p">;</span> <span class="c1">// @[cookbook.md 538:13]</span>
+  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="mh">8'h1</span><span class="p">;</span> <span class="c1">// @[cookbook.md 577:13]</span>
 <span class="k">endmodule</span>
 </code></pre></div></div>
 
@@ -610,7 +646,7 @@ normal <code class="language-plaintext highlighter-rouge">val</code> prefix, you
   <span class="kt">input</span>  <span class="p">[</span><span class="mi">7</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">foo</span><span class="p">,</span>
   <span class="kt">output</span> <span class="p">[</span><span class="mi">7</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">bar</span>
 <span class="p">);</span>
-  <span class="k">assign</span> <span class="n">bar</span> <span class="o">=</span> <span class="n">foo</span> <span class="o">+</span> <span class="mh">8'h1</span><span class="p">;</span> <span class="c1">// @[cookbook.md 569:20]</span>
+  <span class="k">assign</span> <span class="n">bar</span> <span class="o">=</span> <span class="n">foo</span> <span class="o">+</span> <span class="mh">8'h1</span><span class="p">;</span> <span class="c1">// @[cookbook.md 608:20]</span>
 <span class="k">endmodule</span>
 </code></pre></div></div>
 
@@ -752,9 +788,9 @@ normal <code class="language-plaintext highlighter-rouge">val</code> prefix, you
   <span class="kt">input</span>   <span class="n">clock</span><span class="p">,</span>
   <span class="kt">input</span>   <span class="n">reset</span>
 <span class="p">);</span>
-  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">drink_I</span><span class="p">;</span> <span class="c1">// @[cookbook.md 645:23]</span>
-  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">drink_O</span><span class="p">;</span> <span class="c1">// @[cookbook.md 645:23]</span>
-  <span class="n">Tea</span> <span class="n">drink</span> <span class="p">(</span> <span class="c1">// @[cookbook.md 645:23]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">drink_I</span><span class="p">;</span> <span class="c1">// @[cookbook.md 684:23]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">drink_O</span><span class="p">;</span> <span class="c1">// @[cookbook.md 684:23]</span>
+  <span class="n">Tea</span> <span class="n">drink</span> <span class="p">(</span> <span class="c1">// @[cookbook.md 684:23]</span>
     <span class="p">.</span><span class="n">I</span><span class="p">(</span><span class="n">drink_I</span><span class="p">),</span>
     <span class="p">.</span><span class="n">O</span><span class="p">(</span><span class="n">drink_O</span><span class="p">)</span>
   <span class="p">);</span>
@@ -781,7 +817,7 @@ to a register:</p>
 </code></pre></div></div>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">ChiselStage</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">BadRegConnect</span><span class="o">)</span>
-<span class="c1">// firrtl.passes.CheckHighFormLike$RegWithFlipException:  @[cookbook.md 676:20]: [module BadRegConnect] Register monitor cannot be a bundle type with flips.</span>
+<span class="c1">// firrtl.passes.CheckHighFormLike$RegWithFlipException:  @[cookbook.md 715:20]: [module BadRegConnect] Register monitor cannot be a bundle type with flips.</span>
 </code></pre></div></div>
 
 <p>While there is no construct to “strip direction” in Chisel3, wrapping a type in <code class="language-plaintext highlighter-rouge">Output(...)</code>

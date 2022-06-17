@@ -17,6 +17,7 @@ ga('send', 'pageview');
   <li><a href="#fixed-point">FixedPoint</a></li>
   <li><a href="#module-variants">Module Variants</a></li>
   <li><a href="#bundle-literals">Bundle Literals</a></li>
+  <li><a href="#vec-literals">Vec Literals</a></li>
   <li><a href="#interval-type">Interval Type</a></li>
   <li><a href="#loading-memories">Loading Memories for simulation or FPGA initialization</a></li>
 </ul>
@@ -65,7 +66,10 @@ new ways of defining Modules</p>
 <span class="k">endmodule</span>
 </code></pre></div></div>
 
-<p>Partial specification is allowed, defaulting any unconnected fields to 0 (regardless of type).</p>
+<p>Partial specification is allowed, which results in “invalidated fields” as
+described in <a href="../explanations/unconnected-wires">Unconnected Wires</a>.
+Note that this can be used with <code class="language-plaintext highlighter-rouge">RegInit</code> to construct partially reset registers as
+described in the <a href="../cookbooks/cookbook#how-do-i-partially-reset-an-aggregate-reg">Cookbook</a>.</p>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Example2</span> <span class="k">extends</span> <span class="nc">RawModule</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyBundle</span><span class="o">))</span>
@@ -155,9 +159,10 @@ They can be constructed in two forms, with type and length inferred as in:</p>
 </code></pre></div></div>
 
 <p>The following examples all use the explicit form.
-With the explicit form partial specification is allowed.
-When used with as a <code class="language-plaintext highlighter-rouge">Reg</code> <code class="language-plaintext highlighter-rouge">reset</code> value, only specified indices of the <code class="language-plaintext highlighter-rouge">Reg</code>’s <code class="language-plaintext highlighter-rouge">Vec</code>
-will be reset</p>
+With the explicit form partial specification is allowed, which results in
+“invalidated fields” as described in <a href="../explanations/unconnected-wires">Unconnected Wires</a>.
+Note that this can be used with <code class="language-plaintext highlighter-rouge">RegInit</code> to construct partially reset registers as
+described in the <a href="../cookbooks/cookbook#how-do-i-partially-reset-an-aggregate-reg">Cookbook</a>.</p>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">VecExample2</span> <span class="k">extends</span> <span class="nc">RawModule</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="nc">Vec</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">4.</span><span class="n">W</span><span class="o">))))</span>
