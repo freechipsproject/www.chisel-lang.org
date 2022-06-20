@@ -89,7 +89,6 @@
 - [`@sinofp`](https://github.com/sinofp)
 - [`@sterin`](https://github.com/sterin)
 - [`@stevobailey`](https://github.com/stevobailey)
-- [`@terpstra`](https://github.com/terpstra)
 - [`@TsaiAnson`](https://github.com/TsaiAnson)
 - [`@ucbjrl`](https://github.com/ucbjrl)
 - [`@vidhatre`](https://github.com/vidhatre)
