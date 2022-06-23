@@ -57,6 +57,7 @@
 - [`@learning-chip`](https://github.com/learning-chip)
 - [`@ljwljwljwljw`](https://github.com/ljwljwljwljw)
 - [`@lmy441900`](https://github.com/lmy441900)
+- [`@lsteveol`](https://github.com/lsteveol)
 - [`@lu-ping`](https://github.com/lu-ping)
 - [`@marmbrus`](https://github.com/marmbrus)
 - [`@Martoni`](https://github.com/Martoni)
