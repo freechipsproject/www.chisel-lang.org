@@ -55,6 +55,7 @@
 - [`@kammoh`](https://github.com/kammoh)
 - [`@kasanovic`](https://github.com/kasanovic)
 - [`@learning-chip`](https://github.com/learning-chip)
+- [`@liuyic00`](https://github.com/liuyic00)
 - [`@ljwljwljwljw`](https://github.com/ljwljwljwljw)
 - [`@lmy441900`](https://github.com/lmy441900)
 - [`@lsteveol`](https://github.com/lsteveol)
