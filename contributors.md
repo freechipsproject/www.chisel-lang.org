@@ -101,3 +101,4 @@
 - [`@zhemao`](https://github.com/zhemao)
 - [`@zhongzc`](https://github.com/zhongzc)
 - [`@zhutmost`](https://github.com/zhutmost)
+- [`@zyedidia`](https://github.com/zyedidia)

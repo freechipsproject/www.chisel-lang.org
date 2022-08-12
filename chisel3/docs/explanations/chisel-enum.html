@@ -21,6 +21,7 @@ In contrast with <code class="language-plaintext highlighter-rouge">Chisel.util.
 <span class="k">import</span> <span class="nn">chisel3.util._</span>
 <span class="k">import</span> <span class="nn">chisel3.stage.ChiselStage</span>
 <span class="k">import</span> <span class="nn">chisel3.experimental.ChiselEnum</span>
+<span class="k">import</span> <span class="nn">chisel3.experimental.suppressEnumCastWarning</span>
 </code></pre></div></div>
 
 <p>Below we see ChiselEnum being used as mux select for a RISC-V core. While wrapping the object in a package is not required, it is highly recommended as it allows for the type to be used in multiple files more easily.</p>
@@ -71,8 +72,8 @@ In contrast with <code class="language-plaintext highlighter-rouge">Chisel.util.
   <span class="kt">input</span>  <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">io_pcOut</span><span class="p">,</span>
   <span class="kt">output</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">io_aluMux1Out</span>
 <span class="p">);</span>
-  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">GEN_0</span> <span class="o">=</span> <span class="n">io_aluMux1Sel</span> <span class="o">?</span> <span class="n">io_pcOut</span> <span class="o">:</span> <span class="mh">32'h0</span><span class="p">;</span> <span class="c1">// @[chisel-enum.md 69:17 71:26 76:21]</span>
-  <span class="k">assign</span> <span class="n">io_aluMux1Out</span> <span class="o">=</span> <span class="o">~</span><span class="n">io_aluMux1Sel</span> <span class="o">?</span> <span class="n">io_rs1Out</span> <span class="o">:</span> <span class="mi">_</span><span class="n">GEN_0</span><span class="p">;</span> <span class="c1">// @[chisel-enum.md 71:26 73:21]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="mi">_</span><span class="n">GEN_0</span> <span class="o">=</span> <span class="n">io_aluMux1Sel</span> <span class="o">?</span> <span class="n">io_pcOut</span> <span class="o">:</span> <span class="mh">32'h0</span><span class="p">;</span> <span class="c1">// @[chisel-enum.md 72:17 74:26 79:21]</span>
+  <span class="k">assign</span> <span class="n">io_aluMux1Out</span> <span class="o">=</span> <span class="o">~</span><span class="n">io_aluMux1Sel</span> <span class="o">?</span> <span class="n">io_rs1Out</span> <span class="o">:</span> <span class="mi">_</span><span class="n">GEN_0</span><span class="p">;</span> <span class="c1">// @[chisel-enum.md 74:26 76:21]</span>
 <span class="k">endmodule</span>
 </code></pre></div></div>
 
@@ -133,7 +134,7 @@ it.</p>
 <p>However, if you cast from a <code class="language-plaintext highlighter-rouge">UInt</code> to an Enum type when there are undefined states in the Enum values
 that the <code class="language-plaintext highlighter-rouge">UInt</code> could hit, you will see a warning like the following:</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[[33mwarn[0m] chisel-enum.md:139: Casting non-literal UInt to repl.MdocSession$App$Opcode. You can use repl.MdocSession$App$Opcode.safe to cast without this warning. in class repl.MdocSession$App$FromUInt$$anonfun$40
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[[33mwarn[0m] chisel-enum.md:142: Casting non-literal UInt to repl.MdocSession$App$Opcode. You can use repl.MdocSession$App$Opcode.safe to cast without this warning. in class repl.MdocSession$App$FromUInt$$anonfun$40
 [[33mwarn[0m] There were [33m1 warning(s)[0m during hardware elaboration.
 </code></pre></div></div>
 
@@ -155,6 +156,24 @@ to a <code class="language-plaintext highlighter-rouge">Bool</code> indicating i
 <p>Now there will be no warning:</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+</code></pre></div></div>
+
+<p>You can also suppress the warning by using <code class="language-plaintext highlighter-rouge">suppressEnumCastWarning</code>. This is
+primarily used for casting from [[UInt]] to a Bundle type that contains an
+Enum, where the [[UInt]] is known to be valid for the Bundle type.</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">MyBundle</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">addr</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">)</span>
+  <span class="k">val</span> <span class="nv">op</span> <span class="k">=</span> <span class="nc">Opcode</span><span class="o">()</span>
+<span class="o">}</span>
+
+<span class="k">class</span> <span class="nc">SuppressedFromUInt</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">in</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">15.</span><span class="n">W</span><span class="o">)))</span>
+  <span class="k">val</span> <span class="nv">out</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyBundle</span><span class="o">()))</span>
+  <span class="n">suppressEnumCastWarning</span> <span class="o">{</span>
+    <span class="n">out</span> <span class="o">:=</span> <span class="nv">in</span><span class="o">.</span><span class="py">asTypeOf</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyBundle</span><span class="o">)</span>
+  <span class="o">}</span>
+<span class="o">}</span>
 </code></pre></div></div>
 
 <h2 id="testing">Testing</h2>
