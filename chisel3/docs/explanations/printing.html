@@ -20,17 +20,17 @@ ga('send', 'pageview');
 
 <h3 id="scala-style">Scala-style</h3>
 
-<p>Chisel also supports printf in a style similar to <a href="http://docs.scala-lang.org/overviews/core/string-interpolation.html">Scala’s String Interpolation</a>. Chisel provides a custom string interpolator <code class="language-plaintext highlighter-rouge">p</code> which can be used as follows:</p>
+<p>Chisel also supports printf in a style similar to <a href="http://docs.scala-lang.org/overviews/core/string-interpolation.html">Scala’s String Interpolation</a>. Chisel provides a custom string interpolator <code class="language-plaintext highlighter-rouge">cf</code> which follows C-style format specifiers (see section <a href="#c-style">C-style</a> below). Here’s a few examples of using the <code class="language-plaintext highlighter-rouge">cf</code> interpolator:</p>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">myUInt</span> <span class="k">=</span> <span class="mf">33.</span><span class="n">U</span>
-<span class="nf">printf</span><span class="o">(</span><span class="n">p</span><span class="s">"myUInt = $myUInt"</span><span class="o">)</span> <span class="c1">// myUInt = 33</span>
+<span class="nf">printf</span><span class="o">(</span><span class="n">cf</span><span class="s">"myUInt = $myUInt"</span><span class="o">)</span> <span class="c1">// myUInt = 33</span>
 </code></pre></div></div>
 
-<p>Note that when concatenating <code class="language-plaintext highlighter-rouge">p"..."</code> strings, you need to start with a <code class="language-plaintext highlighter-rouge">p"..."</code> string:</p>
+<p>Note that when concatenating <code class="language-plaintext highlighter-rouge">cf"..."</code> strings, you need to start with a <code class="language-plaintext highlighter-rouge">cf"..."</code> string:</p>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Does not interpolate the second string</span>
 <span class="k">val</span> <span class="nv">myUInt</span> <span class="k">=</span> <span class="mf">33.</span><span class="n">U</span>
-<span class="nf">printf</span><span class="o">(</span><span class="s">"my normal string"</span> <span class="o">+</span> <span class="n">p</span><span class="s">"myUInt = $myUInt"</span><span class="o">)</span>
+<span class="nf">printf</span><span class="o">(</span><span class="s">"my normal string"</span> <span class="o">+</span> <span class="n">cf</span><span class="s">"myUInt = $myUInt"</span><span class="o">)</span>
 </code></pre></div></div>
 
 <h4 id="simple-formatting">Simple formatting</h4>
@@ -39,21 +39,19 @@ ga('send', 'pageview');
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">myUInt</span> <span class="k">=</span> <span class="mf">33.</span><span class="n">U</span>
 <span class="c1">// Hexadecimal</span>
-<span class="nf">printf</span><span class="o">(</span><span class="n">p</span><span class="s">"myUInt = 0x${Hexadecimal(myUInt)}"</span><span class="o">)</span> <span class="c1">// myUInt = 0x21 // myUInt = 0x21</span>
+<span class="nf">printf</span><span class="o">(</span><span class="n">cf</span><span class="s">"myUInt = 0x$myUInt%x"</span><span class="o">)</span> <span class="c1">// myUInt = 0x21 // myUInt = 0x21</span>
 <span class="c1">// Binary</span>
-<span class="nf">printf</span><span class="o">(</span><span class="n">p</span><span class="s">"myUInt = ${Binary(myUInt)}"</span><span class="o">)</span> <span class="c1">// myUInt = 100001 // myUInt = 100001</span>
+<span class="nf">printf</span><span class="o">(</span><span class="n">cf</span><span class="s">"myUInt = $myUInt%b"</span><span class="o">)</span> <span class="c1">// myUInt = 100001 // myUInt = 100001</span>
 <span class="c1">// Character</span>
-<span class="nf">printf</span><span class="o">(</span><span class="n">p</span><span class="s">"myUInt = ${Character(myUInt)}"</span><span class="o">)</span> <span class="c1">// myUInt = !</span>
+<span class="nf">printf</span><span class="o">(</span><span class="n">cf</span><span class="s">"myUInt = $myUInt%c"</span><span class="o">)</span> <span class="c1">// myUInt = !</span>
 </code></pre></div></div>
-
-<p>We recognize that the format specifiers are verbose, so we are working on a more concise syntax.</p>
 
 <h4 id="aggregate-data-types">Aggregate data-types</h4>
 
 <p>Chisel provides default custom “pretty-printing” for Vecs and Bundles. The default printing of a Vec is similar to printing a Seq or List in Scala while printing a Bundle is similar to printing a Scala Map.</p>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">val</span> <span class="nv">myVec</span> <span class="k">=</span> <span class="nc">VecInit</span><span class="o">(</span><span class="mf">5.</span><span class="n">U</span><span class="o">,</span> <span class="mf">10.</span><span class="n">U</span><span class="o">,</span> <span class="mf">13.</span><span class="n">U</span><span class="o">)</span>
-<span class="nf">printf</span><span class="o">(</span><span class="n">p</span><span class="s">"myVec = $myVec"</span><span class="o">)</span> <span class="c1">// myVec = Vec(5, 10, 13) // myVec = Vec(5, 10, 13)</span>
+<span class="nf">printf</span><span class="o">(</span><span class="n">cf</span><span class="s">"myVec = $myVec"</span><span class="o">)</span> <span class="c1">// myVec = Vec(5, 10, 13) // myVec = Vec(5, 10, 13)</span>
 
 <span class="k">val</span> <span class="nv">myBundle</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">foo</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">()</span>
@@ -61,7 +59,7 @@ ga('send', 'pageview');
 <span class="o">})</span>
 <span class="nv">myBundle</span><span class="o">.</span><span class="py">foo</span> <span class="o">:=</span> <span class="mf">3.</span><span class="n">U</span>
 <span class="nv">myBundle</span><span class="o">.</span><span class="py">bar</span> <span class="o">:=</span> <span class="mf">11.</span><span class="n">U</span>
-<span class="nf">printf</span><span class="o">(</span><span class="n">p</span><span class="s">"myBundle = $myBundle"</span><span class="o">)</span> <span class="c1">// myBundle = Bundle(a -&gt; 3, b -&gt; 11)</span>
+<span class="nf">printf</span><span class="o">(</span><span class="n">cf</span><span class="s">"myBundle = $myBundle"</span><span class="o">)</span> <span class="c1">// myBundle = Bundle(a -&gt; 3, b -&gt; 11)</span>
 </code></pre></div></div>
 
 <h4 id="custom-printing">Custom Printing</h4>
@@ -75,11 +73,11 @@ ga('send', 'pageview');
   <span class="k">val</span> <span class="nv">data</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">64.</span><span class="n">W</span><span class="o">)</span>
   <span class="k">override</span> <span class="k">def</span> <span class="nf">toPrintable</span><span class="k">:</span> <span class="kt">Printable</span> <span class="o">=</span> <span class="o">{</span>
     <span class="k">val</span> <span class="nv">char</span> <span class="k">=</span> <span class="nc">Mux</span><span class="o">(</span><span class="n">valid</span><span class="o">,</span> <span class="sc">'v'</span><span class="o">.</span><span class="py">U</span><span class="o">,</span> <span class="sc">'-'</span><span class="o">.</span><span class="py">U</span><span class="o">)</span>
-    <span class="n">p</span><span class="s">"Message:\n"</span> <span class="o">+</span>
-    <span class="n">p</span><span class="s">"  valid  : ${Character(char)}\n"</span> <span class="o">+</span>
-    <span class="n">p</span><span class="s">"  addr   : 0x${Hexadecimal(addr)}\n"</span> <span class="o">+</span>
-    <span class="n">p</span><span class="s">"  length : $length\n"</span> <span class="o">+</span>
-    <span class="n">p</span><span class="s">"  data   : 0x${Hexadecimal(data)}\n"</span>
+    <span class="n">cf</span><span class="s">"Message:\n"</span> <span class="o">+</span>
+    <span class="n">cf</span><span class="s">"  valid  : $char%c\n"</span> <span class="o">+</span>
+    <span class="n">cf</span><span class="s">"  addr   : $addr%x\n"</span> <span class="o">+</span>
+    <span class="n">cf</span><span class="s">"  length : $length\n"</span> <span class="o">+</span>
+    <span class="n">cf</span><span class="s">"  data   : $data%x\n"</span>
   <span class="o">}</span>
 <span class="o">}</span>
 
@@ -89,7 +87,7 @@ ga('send', 'pageview');
 <span class="nv">myMessage</span><span class="o">.</span><span class="py">length</span> <span class="o">:=</span> <span class="mf">10.</span><span class="n">U</span>
 <span class="nv">myMessage</span><span class="o">.</span><span class="py">data</span> <span class="o">:=</span> <span class="s">"hdeadbeef"</span><span class="o">.</span><span class="py">U</span>
 
-<span class="nf">printf</span><span class="o">(</span><span class="n">p</span><span class="s">"$myMessage"</span><span class="o">)</span>
+<span class="nf">printf</span><span class="o">(</span><span class="n">cf</span><span class="s">"$myMessage"</span><span class="o">)</span>
 </code></pre></div></div>
 
 <p>Which prints the following:</p>
@@ -101,7 +99,7 @@ ga('send', 'pageview');
   data   : 0x00000000deadbeef
 </code></pre></div></div>
 
-<p>Notice the use of <code class="language-plaintext highlighter-rouge">+</code> between <code class="language-plaintext highlighter-rouge">p</code> interpolated “strings”. The results of <code class="language-plaintext highlighter-rouge">p</code> interpolation can be concatenated by using the <code class="language-plaintext highlighter-rouge">+</code> operator. For more information, please see the documentation</p>
+<p>Notice the use of <code class="language-plaintext highlighter-rouge">+</code> between <code class="language-plaintext highlighter-rouge">cf</code> interpolated “strings”. The results of <code class="language-plaintext highlighter-rouge">cf</code> interpolation can be concatenated by using the <code class="language-plaintext highlighter-rouge">+</code> operator.</p>
 
 <h3 id="c-style">C-Style</h3>
 

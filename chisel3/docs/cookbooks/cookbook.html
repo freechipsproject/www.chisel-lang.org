@@ -75,7 +75,7 @@ ga('send', 'pageview');
   <span class="nv">bundle</span><span class="o">.</span><span class="py">foo</span> <span class="o">:=</span> <span class="mh">0xc</span><span class="o">.</span><span class="py">U</span>
   <span class="nv">bundle</span><span class="o">.</span><span class="py">bar</span> <span class="o">:=</span> <span class="mh">0x3</span><span class="o">.</span><span class="py">U</span>
   <span class="k">val</span> <span class="nv">uint</span> <span class="k">=</span> <span class="nv">bundle</span><span class="o">.</span><span class="py">asUInt</span>
-  <span class="nf">printf</span><span class="o">(</span><span class="n">p</span><span class="s">"$uint"</span><span class="o">)</span> <span class="c1">// 195</span>
+  <span class="nf">printf</span><span class="o">(</span><span class="n">cf</span><span class="s">"$uint"</span><span class="o">)</span> <span class="c1">// 195</span>
 
   <span class="c1">// Test</span>
   <span class="nf">assert</span><span class="o">(</span><span class="n">uint</span> <span class="o">===</span> <span class="mh">0xc3</span><span class="o">.</span><span class="py">U</span><span class="o">)</span>
@@ -97,7 +97,7 @@ ga('send', 'pageview');
   <span class="k">val</span> <span class="nv">uint</span> <span class="k">=</span> <span class="mh">0xb4</span><span class="o">.</span><span class="py">U</span>
   <span class="k">val</span> <span class="nv">bundle</span> <span class="k">=</span> <span class="nv">uint</span><span class="o">.</span><span class="py">asTypeOf</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyBundle</span><span class="o">)</span>
   
-  <span class="nf">printf</span><span class="o">(</span><span class="n">p</span><span class="s">"$bundle"</span><span class="o">)</span> <span class="c1">// Bundle(foo -&gt; 11, bar -&gt; 4)</span>
+  <span class="nf">printf</span><span class="o">(</span><span class="n">cf</span><span class="s">"$bundle"</span><span class="o">)</span> <span class="c1">// Bundle(foo -&gt; 11, bar -&gt; 4)</span>
 
   <span class="c1">// Test</span>
   <span class="nf">assert</span><span class="o">(</span><span class="nv">bundle</span><span class="o">.</span><span class="py">foo</span> <span class="o">===</span> <span class="mh">0xb</span><span class="o">.</span><span class="py">U</span><span class="o">)</span>
@@ -143,7 +143,7 @@ you are tying off, you can use <code class="language-plaintext highlighter-rouge
   <span class="k">val</span> <span class="nv">uint</span> <span class="k">=</span> <span class="mh">0xc</span><span class="o">.</span><span class="py">U</span>
   <span class="k">val</span> <span class="nv">vec</span> <span class="k">=</span> <span class="nc">VecInit</span><span class="o">(</span><span class="nv">uint</span><span class="o">.</span><span class="py">asBools</span><span class="o">)</span>
 
-  <span class="nf">printf</span><span class="o">(</span><span class="n">p</span><span class="s">"$vec"</span><span class="o">)</span> <span class="c1">// Vec(0, 0, 1, 1)</span>
+  <span class="nf">printf</span><span class="o">(</span><span class="n">cf</span><span class="s">"$vec"</span><span class="o">)</span> <span class="c1">// Vec(0, 0, 1, 1)</span>
 
   <span class="c1">// Test</span>
   <span class="nf">assert</span><span class="o">(</span><span class="nf">vec</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span> <span class="o">===</span> <span class="nv">false</span><span class="o">.</span><span class="py">B</span><span class="o">)</span>
@@ -163,7 +163,7 @@ you are tying off, you can use <code class="language-plaintext highlighter-rouge
   <span class="k">val</span> <span class="nv">vec</span> <span class="k">=</span> <span class="nc">VecInit</span><span class="o">(</span><span class="nv">true</span><span class="o">.</span><span class="py">B</span><span class="o">,</span> <span class="nv">false</span><span class="o">.</span><span class="py">B</span><span class="o">,</span> <span class="nv">true</span><span class="o">.</span><span class="py">B</span><span class="o">,</span> <span class="nv">true</span><span class="o">.</span><span class="py">B</span><span class="o">)</span>
   <span class="k">val</span> <span class="nv">uint</span> <span class="k">=</span> <span class="nv">vec</span><span class="o">.</span><span class="py">asUInt</span>
 
-  <span class="nf">printf</span><span class="o">(</span><span class="n">p</span><span class="s">"$uint"</span><span class="o">)</span> <span class="c1">// 13</span>
+  <span class="nf">printf</span><span class="o">(</span><span class="n">cf</span><span class="s">"$uint"</span><span class="o">)</span> <span class="c1">// 13</span>
 
   <span class="c1">// Test</span>
   <span class="c1">// (remember leftmost Bool in Vec is low order bit)</span>
