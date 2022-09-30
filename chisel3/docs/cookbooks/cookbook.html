@@ -70,7 +70,7 @@ ga('send', 'pageview');
   <span class="k">val</span> <span class="nv">bar</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">4.</span><span class="n">W</span><span class="o">)</span>
 <span class="o">}</span>
 
-<span class="k">class</span> <span class="nc">Foo</span> <span class="k">extends</span> <span class="nc">RawModule</span> <span class="o">{</span>
+<span class="k">class</span> <span class="nc">Foo</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">bundle</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyBundle</span><span class="o">)</span>
   <span class="nv">bundle</span><span class="o">.</span><span class="py">foo</span> <span class="o">:=</span> <span class="mh">0xc</span><span class="o">.</span><span class="py">U</span>
   <span class="nv">bundle</span><span class="o">.</span><span class="py">bar</span> <span class="o">:=</span> <span class="mh">0x3</span><span class="o">.</span><span class="py">U</span>
@@ -93,7 +93,7 @@ ga('send', 'pageview');
   <span class="k">val</span> <span class="nv">bar</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">4.</span><span class="n">W</span><span class="o">)</span>
 <span class="o">}</span>
 
-<span class="k">class</span> <span class="nc">Foo</span> <span class="k">extends</span> <span class="nc">RawModule</span> <span class="o">{</span>
+<span class="k">class</span> <span class="nc">Foo</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">uint</span> <span class="k">=</span> <span class="mh">0xb4</span><span class="o">.</span><span class="py">U</span>
   <span class="k">val</span> <span class="nv">bundle</span> <span class="k">=</span> <span class="nv">uint</span><span class="o">.</span><span class="py">asTypeOf</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyBundle</span><span class="o">)</span>
   
@@ -118,7 +118,7 @@ you are tying off, you can use <code class="language-plaintext highlighter-rouge
   <span class="k">val</span> <span class="nv">bar</span> <span class="k">=</span> <span class="nc">Vec</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">1.</span><span class="n">W</span><span class="o">))</span>
 <span class="o">}</span>
 
-<span class="k">class</span> <span class="nc">Foo</span><span class="o">(</span><span class="n">typ</span><span class="k">:</span> <span class="kt">MyBundle</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">RawModule</span> <span class="o">{</span>
+<span class="k">class</span> <span class="nc">Foo</span><span class="o">(</span><span class="n">typ</span><span class="k">:</span> <span class="kt">MyBundle</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">bundleA</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="n">typ</span><span class="o">))</span>
   <span class="k">val</span> <span class="nv">bundleB</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="n">typ</span><span class="o">))</span>
   
@@ -139,7 +139,7 @@ you are tying off, you can use <code class="language-plaintext highlighter-rouge
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3._</span>
 
-<span class="k">class</span> <span class="nc">Foo</span> <span class="k">extends</span> <span class="nc">RawModule</span> <span class="o">{</span>
+<span class="k">class</span> <span class="nc">Foo</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">uint</span> <span class="k">=</span> <span class="mh">0xc</span><span class="o">.</span><span class="py">U</span>
   <span class="k">val</span> <span class="nv">vec</span> <span class="k">=</span> <span class="nc">VecInit</span><span class="o">(</span><span class="nv">uint</span><span class="o">.</span><span class="py">asBools</span><span class="o">)</span>
 
@@ -159,7 +159,7 @@ you are tying off, you can use <code class="language-plaintext highlighter-rouge
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3._</span>
 
-<span class="k">class</span> <span class="nc">Foo</span> <span class="k">extends</span> <span class="nc">RawModule</span> <span class="o">{</span>
+<span class="k">class</span> <span class="nc">Foo</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">vec</span> <span class="k">=</span> <span class="nc">VecInit</span><span class="o">(</span><span class="nv">true</span><span class="o">.</span><span class="py">B</span><span class="o">,</span> <span class="nv">false</span><span class="o">.</span><span class="py">B</span><span class="o">,</span> <span class="nv">true</span><span class="o">.</span><span class="py">B</span><span class="o">,</span> <span class="nv">true</span><span class="o">.</span><span class="py">B</span><span class="o">)</span>
   <span class="k">val</span> <span class="nv">uint</span> <span class="k">=</span> <span class="nv">vec</span><span class="o">.</span><span class="py">asUInt</span>
 
@@ -227,7 +227,7 @@ you are tying off, you can use <code class="language-plaintext highlighter-rouge
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3._</span>
 
-<span class="k">class</span> <span class="nc">Foo</span> <span class="k">extends</span> <span class="nc">RawModule</span> <span class="o">{</span>
+<span class="k">class</span> <span class="nc">Foo</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">regOfVec</span> <span class="k">=</span> <span class="nc">Reg</span><span class="o">(</span><span class="nc">Vec</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="nc">UInt</span><span class="o">(</span><span class="mf">32.</span><span class="n">W</span><span class="o">)))</span> <span class="c1">// Register of 32-bit UInts</span>
   <span class="nf">regOfVec</span><span class="o">(</span><span class="mi">0</span><span class="o">)</span> <span class="o">:=</span> <span class="mf">123.</span><span class="n">U</span>                   <span class="c1">// Assignments to elements of the Vec</span>
   <span class="nf">regOfVec</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span> <span class="o">:=</span> <span class="mf">456.</span><span class="n">U</span>
@@ -292,15 +292,15 @@ you do not wish to be reset.</p>
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">getVerilogString</span><span class="o">(</span><span class="k">new</span> <span class="nc">Top</span><span class="o">(</span><span class="k">new</span> <span class="nc">AliasedBundle</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">))))</span>
 <span class="c1">// chisel3.AliasedAggregateFieldException: AliasedBundle contains aliased fields named (bar,foo)</span>
 <span class="c1">// 	at ... ()</span>
-<span class="c1">// 	at repl.MdocSession$App10$Top$$anonfun$45$$anonfun$apply$29.apply(cookbook.md:262)</span>
-<span class="c1">// 	at repl.MdocSession$App10$Top$$anonfun$45$$anonfun$apply$29.apply(cookbook.md:262)</span>
+<span class="c1">// 	at repl.MdocSession$App17$Top$$anonfun$59$$anonfun$apply$29.apply(cookbook.md:301)</span>
+<span class="c1">// 	at repl.MdocSession$App17$Top$$anonfun$59$$anonfun$apply$29.apply(cookbook.md:301)</span>
 <span class="c1">// 	at chisel3.internal.prefix$.apply(prefix.scala:48)</span>
-<span class="c1">// 	at repl.MdocSession$App10$Top$$anonfun$45.apply(cookbook.md:262)</span>
-<span class="c1">// 	at repl.MdocSession$App10$Top$$anonfun$45.apply(cookbook.md)</span>
+<span class="c1">// 	at repl.MdocSession$App17$Top$$anonfun$59.apply(cookbook.md:301)</span>
+<span class="c1">// 	at repl.MdocSession$App17$Top$$anonfun$59.apply(cookbook.md)</span>
 <span class="c1">// 	at chisel3.internal.plugin.package$.autoNameRecursively(package.scala:33)</span>
-<span class="c1">// 	at repl.MdocSession$App10$Top.&lt;init&gt;(cookbook.md:262)</span>
-<span class="c1">// 	at repl.MdocSession$App10$$anonfun$50$$anonfun$apply$31.apply(cookbook.md:281)</span>
-<span class="c1">// 	at repl.MdocSession$App10$$anonfun$50$$anonfun$apply$31.apply(cookbook.md:281)</span>
+<span class="c1">// 	at repl.MdocSession$App17$Top.&lt;init&gt;(cookbook.md:301)</span>
+<span class="c1">// 	at repl.MdocSession$App17$$anonfun$64$$anonfun$apply$31.apply(cookbook.md:320)</span>
+<span class="c1">// 	at repl.MdocSession$App17$$anonfun$64$$anonfun$apply$31.apply(cookbook.md:320)</span>
 <span class="c1">// 	at ... ()</span>
 <span class="c1">// 	at ... (Stack trace trimmed to user code only. Rerun with --full-stacktrace to see the full stack trace)</span>
 </code></pre></div></div>
@@ -323,15 +323,15 @@ This is a problem for Chisel because we need to be able to distinguish uses of
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">getVerilogString</span><span class="o">(</span><span class="k">new</span> <span class="nc">Top</span><span class="o">(</span><span class="k">new</span> <span class="nc">AlsoAliasedBundle</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">))))</span>
 <span class="c1">// chisel3.AliasedAggregateFieldException: AlsoAliasedBundle contains aliased fields named (foo,gen)</span>
 <span class="c1">// 	at ... ()</span>
-<span class="c1">// 	at repl.MdocSession$App10$Top$$anonfun$45$$anonfun$apply$29.apply(cookbook.md:262)</span>
-<span class="c1">// 	at repl.MdocSession$App10$Top$$anonfun$45$$anonfun$apply$29.apply(cookbook.md:262)</span>
+<span class="c1">// 	at repl.MdocSession$App17$Top$$anonfun$59$$anonfun$apply$29.apply(cookbook.md:301)</span>
+<span class="c1">// 	at repl.MdocSession$App17$Top$$anonfun$59$$anonfun$apply$29.apply(cookbook.md:301)</span>
 <span class="c1">// 	at chisel3.internal.prefix$.apply(prefix.scala:48)</span>
-<span class="c1">// 	at repl.MdocSession$App10$Top$$anonfun$45.apply(cookbook.md:262)</span>
-<span class="c1">// 	at repl.MdocSession$App10$Top$$anonfun$45.apply(cookbook.md)</span>
+<span class="c1">// 	at repl.MdocSession$App17$Top$$anonfun$59.apply(cookbook.md:301)</span>
+<span class="c1">// 	at repl.MdocSession$App17$Top$$anonfun$59.apply(cookbook.md)</span>
 <span class="c1">// 	at chisel3.internal.plugin.package$.autoNameRecursively(package.scala:33)</span>
-<span class="c1">// 	at repl.MdocSession$App10$Top.&lt;init&gt;(cookbook.md:262)</span>
-<span class="c1">// 	at repl.MdocSession$App10$$anonfun$53$$anonfun$apply$32.apply(cookbook.md:300)</span>
-<span class="c1">// 	at repl.MdocSession$App10$$anonfun$53$$anonfun$apply$32.apply(cookbook.md:300)</span>
+<span class="c1">// 	at repl.MdocSession$App17$Top.&lt;init&gt;(cookbook.md:301)</span>
+<span class="c1">// 	at repl.MdocSession$App17$$anonfun$67$$anonfun$apply$32.apply(cookbook.md:339)</span>
+<span class="c1">// 	at repl.MdocSession$App17$$anonfun$67$$anonfun$apply$32.apply(cookbook.md:339)</span>
 <span class="c1">// 	at ... ()</span>
 <span class="c1">// 	at ... (Stack trace trimmed to user code only. Rerun with --full-stacktrace to see the full stack trace)</span>
 </code></pre></div></div>
@@ -370,15 +370,15 @@ it becoming a hardware field of the <code class="language-plaintext highlighter-
 <span class="nf">getVerilogString</span><span class="o">(</span><span class="k">new</span> <span class="nc">MisusedFunctionArguments</span><span class="o">)</span>
 <span class="c1">// chisel3.AutoClonetypeException: Automatically cloned UsingAFunctionBundle has field 'foo' aliased with base UsingAFunctionBundle. In the future, this will be solved automatically by the compiler plugin. For now, ensure Chisel types used in the Bundle definition are passed through constructor arguments, or wrapped in Input(...), Output(...), or Flipped(...) if appropriate. As a last resort, you can override cloneType manually.</span>
 <span class="c1">// 	at ... ()</span>
-<span class="c1">// 	at repl.MdocSession$App10$$anonfun$57$MisusedFunctionArguments$1$$anonfun$60$$anonfun$apply$37.apply(cookbook.md:331)</span>
-<span class="c1">// 	at repl.MdocSession$App10$$anonfun$57$MisusedFunctionArguments$1$$anonfun$60$$anonfun$apply$37.apply(cookbook.md:331)</span>
+<span class="c1">// 	at repl.MdocSession$App17$$anonfun$71$MisusedFunctionArguments$1$$anonfun$74$$anonfun$apply$37.apply(cookbook.md:370)</span>
+<span class="c1">// 	at repl.MdocSession$App17$$anonfun$71$MisusedFunctionArguments$1$$anonfun$74$$anonfun$apply$37.apply(cookbook.md:370)</span>
 <span class="c1">// 	at chisel3.internal.prefix$.apply(prefix.scala:48)</span>
-<span class="c1">// 	at repl.MdocSession$App10$$anonfun$57$MisusedFunctionArguments$1$$anonfun$60.apply(cookbook.md:331)</span>
-<span class="c1">// 	at repl.MdocSession$App10$$anonfun$57$MisusedFunctionArguments$1$$anonfun$60.apply(cookbook.md)</span>
+<span class="c1">// 	at repl.MdocSession$App17$$anonfun$71$MisusedFunctionArguments$1$$anonfun$74.apply(cookbook.md:370)</span>
+<span class="c1">// 	at repl.MdocSession$App17$$anonfun$71$MisusedFunctionArguments$1$$anonfun$74.apply(cookbook.md)</span>
 <span class="c1">// 	at chisel3.internal.plugin.package$.autoNameRecursively(package.scala:33)</span>
-<span class="c1">// 	at repl.MdocSession$App10$$anonfun$57$MisusedFunctionArguments$1.&lt;init&gt;(cookbook.md:331)</span>
-<span class="c1">// 	at repl.MdocSession$App10$$anonfun$57$$anonfun$apply$39.apply(cookbook.md:333)</span>
-<span class="c1">// 	at repl.MdocSession$App10$$anonfun$57$$anonfun$apply$39.apply(cookbook.md:333)</span>
+<span class="c1">// 	at repl.MdocSession$App17$$anonfun$71$MisusedFunctionArguments$1.&lt;init&gt;(cookbook.md:370)</span>
+<span class="c1">// 	at repl.MdocSession$App17$$anonfun$71$$anonfun$apply$39.apply(cookbook.md:372)</span>
+<span class="c1">// 	at repl.MdocSession$App17$$anonfun$71$$anonfun$apply$39.apply(cookbook.md:372)</span>
 <span class="c1">// 	at ... ()</span>
 <span class="c1">// 	at ... (Stack trace trimmed to user code only. Rerun with --full-stacktrace to see the full stack trace)</span>
 </code></pre></div></div>
@@ -505,7 +505,7 @@ Frequently, this structured type is used prolifically in the design, and has bee
 
 <p>The easiest way to accomplish this in Chisel would be:</p>
 
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Foo</span> <span class="k">extends</span> <span class="nc">RawModule</span> <span class="o">{</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Foo</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">z</span> <span class="k">=</span> <span class="nc">Wire</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">9.</span><span class="n">W</span><span class="o">))</span>
   <span class="n">z</span> <span class="o">:=</span> <span class="nc">DontCare</span> <span class="c1">// This is a dummy connection</span>
   <span class="k">val</span> <span class="nv">unpacked</span> <span class="k">=</span> <span class="nv">z</span><span class="o">.</span><span class="py">asTypeOf</span><span class="o">(</span><span class="k">new</span> <span class="nc">MyBundle</span><span class="o">)</span>
@@ -523,7 +523,7 @@ Frequently, this structured type is used prolifically in the design, and has bee
 Below, the left-hand side connection to <code class="language-plaintext highlighter-rouge">io.out(0)</code> is not allowed.</p>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3._</span>
-<span class="k">import</span> <span class="nn">chisel3.stage.</span><span class="o">{</span><span class="nc">ChiselStage</span><span class="o">,</span> <span class="nc">ChiselGeneratorAnnotation</span><span class="o">}</span>
+<span class="k">import</span> <span class="nn">chisel3.stage.ChiselStage</span>
 
 <span class="k">class</span> <span class="nc">Foo</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
@@ -535,12 +535,12 @@ Below, the left-hand side connection to <code class="language-plaintext highligh
 </code></pre></div></div>
 
 <p>If you try to compile this, you will get an error.</p>
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">(</span><span class="k">new</span> <span class="nc">ChiselStage</span><span class="o">).</span><span class="py">execute</span><span class="o">(</span><span class="nc">Array</span><span class="o">(</span><span class="s">"-X"</span><span class="o">,</span> <span class="s">"verilog"</span><span class="o">),</span> <span class="nc">Seq</span><span class="o">(</span><span class="k">new</span> <span class="nc">ChiselGeneratorAnnotation</span><span class="o">(()</span> <span class="k">=&gt;</span> <span class="k">new</span> <span class="nc">Foo</span><span class="o">)))</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">getVerilogString</span><span class="o">(</span><span class="k">new</span> <span class="nc">Foo</span><span class="o">)</span>
 <span class="c1">// chisel3.internal.ChiselException: Cannot reassign to read-only Foo.?: OpResult[Bool]</span>
 <span class="c1">// 	at ... ()</span>
-<span class="c1">// 	at repl.MdocSession$App17$Foo.&lt;init&gt;(cookbook.md:489)</span>
-<span class="c1">// 	at repl.MdocSession$App17$$anonfun$95$$anonfun$apply$53.apply(cookbook.md:497)</span>
-<span class="c1">// 	at repl.MdocSession$App17$$anonfun$95$$anonfun$apply$53.apply(cookbook.md:497)</span>
+<span class="c1">// 	at repl.MdocSession$App26$Foo.&lt;init&gt;(cookbook.md:540)</span>
+<span class="c1">// 	at repl.MdocSession$App26$$anonfun$113$$anonfun$apply$53.apply(cookbook.md:548)</span>
+<span class="c1">// 	at repl.MdocSession$App26$$anonfun$113$$anonfun$apply$53.apply(cookbook.md:548)</span>
 <span class="c1">// 	at ... ()</span>
 <span class="c1">// 	at ... (Stack trace trimmed to user code only. Rerun with --full-stacktrace to see the full stack trace)</span>
 </code></pre></div></div>
@@ -616,7 +616,7 @@ The reason for this is that subword assignment generally hints at a better abstr
   <span class="kt">input</span>  <span class="p">[</span><span class="mi">7</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">in</span><span class="p">,</span>
   <span class="kt">output</span> <span class="p">[</span><span class="mi">7</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">out</span>
 <span class="p">);</span>
-  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="mh">8'h1</span><span class="p">;</span> <span class="c1">// @[cookbook.md 577:13]</span>
+  <span class="k">assign</span> <span class="n">out</span> <span class="o">=</span> <span class="n">in</span> <span class="o">+</span> <span class="mh">8'h1</span><span class="p">;</span> <span class="c1">// @[cookbook.md 646:13]</span>
 <span class="k">endmodule</span>
 </code></pre></div></div>
 
@@ -646,7 +646,7 @@ normal <code class="language-plaintext highlighter-rouge">val</code> prefix, you
   <span class="kt">input</span>  <span class="p">[</span><span class="mi">7</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">foo</span><span class="p">,</span>
   <span class="kt">output</span> <span class="p">[</span><span class="mi">7</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">bar</span>
 <span class="p">);</span>
-  <span class="k">assign</span> <span class="n">bar</span> <span class="o">=</span> <span class="n">foo</span> <span class="o">+</span> <span class="mh">8'h1</span><span class="p">;</span> <span class="c1">// @[cookbook.md 608:20]</span>
+  <span class="k">assign</span> <span class="n">bar</span> <span class="o">=</span> <span class="n">foo</span> <span class="o">+</span> <span class="mh">8'h1</span><span class="p">;</span> <span class="c1">// @[cookbook.md 677:20]</span>
 <span class="k">endmodule</span>
 </code></pre></div></div>
 
@@ -696,7 +696,9 @@ normal <code class="language-plaintext highlighter-rouge">val</code> prefix, you
 
 <h3 id="how-do-i-get-chisel-to-name-the-results-of-vector-reads-properly">How do I get Chisel to name the results of vector reads properly?</h3>
 <p>Currently, name information is lost when using dynamic indexing. For example:</p>
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Foo</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3._</span>
+
+<span class="k">class</span> <span class="nc">Foo</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
     <span class="k">val</span> <span class="nv">in</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">Vec</span><span class="o">(</span><span class="mi">4</span><span class="o">,</span> <span class="nc">Bool</span><span class="o">()))</span>
     <span class="k">val</span> <span class="nv">idx</span> <span class="k">=</span> <span class="nc">Input</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">2.</span><span class="n">W</span><span class="o">))</span>
@@ -711,6 +713,7 @@ normal <code class="language-plaintext highlighter-rouge">val</code> prefix, you
 </code></pre></div></div>
 
 <p>The above code loses the <code class="language-plaintext highlighter-rouge">x</code> name, instead using <code class="language-plaintext highlighter-rouge">_GEN_3</code> (the other <code class="language-plaintext highlighter-rouge">_GEN_*</code> signals are expected).</p>
+
 <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">Foo</span><span class="p">(</span>
   <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
   <span class="kt">input</span>        <span class="n">reset</span><span class="p">,</span>
@@ -722,13 +725,10 @@ normal <code class="language-plaintext highlighter-rouge">val</code> prefix, you
   <span class="kt">input</span>        <span class="n">io_en</span><span class="p">,</span>
   <span class="kt">output</span>       <span class="n">io_out</span>
 <span class="p">);</span>
-  <span class="kt">wire</span>  <span class="mi">_</span><span class="n">GEN_1</span><span class="p">;</span> <span class="c1">// @[main.scala 15:13]</span>
-  <span class="kt">wire</span>  <span class="mi">_</span><span class="n">GEN_2</span><span class="p">;</span> <span class="c1">// @[main.scala 15:13]</span>
-  <span class="kt">wire</span>  <span class="mi">_</span><span class="n">GEN_3</span><span class="p">;</span> <span class="c1">// @[main.scala 15:13]</span>
-  <span class="k">assign</span> <span class="mi">_</span><span class="n">GEN_1</span> <span class="o">=</span> <span class="mh">2'h1</span> <span class="o">==</span> <span class="n">io_idx</span> <span class="o">?</span> <span class="n">io_in_1</span> <span class="o">:</span> <span class="n">io_in_0</span><span class="p">;</span> <span class="c1">// @[main.scala 15:13]</span>
-  <span class="k">assign</span> <span class="mi">_</span><span class="n">GEN_2</span> <span class="o">=</span> <span class="mh">2'h2</span> <span class="o">==</span> <span class="n">io_idx</span> <span class="o">?</span> <span class="n">io_in_2</span> <span class="o">:</span> <span class="mi">_</span><span class="n">GEN_1</span><span class="p">;</span> <span class="c1">// @[main.scala 15:13]</span>
-  <span class="k">assign</span> <span class="mi">_</span><span class="n">GEN_3</span> <span class="o">=</span> <span class="mh">2'h3</span> <span class="o">==</span> <span class="n">io_idx</span> <span class="o">?</span> <span class="n">io_in_3</span> <span class="o">:</span> <span class="mi">_</span><span class="n">GEN_2</span><span class="p">;</span> <span class="c1">// @[main.scala 15:13]</span>
-  <span class="k">assign</span> <span class="n">io_out</span> <span class="o">=</span> <span class="mi">_</span><span class="n">GEN_3</span> <span class="o">&amp;</span> <span class="n">io_en</span><span class="p">;</span> <span class="c1">// @[main.scala 16:10]</span>
+  <span class="kt">wire</span>  <span class="mi">_</span><span class="n">GEN_1</span> <span class="o">=</span> <span class="mh">2'h1</span> <span class="o">==</span> <span class="n">io_idx</span> <span class="o">?</span> <span class="n">io_in_1</span> <span class="o">:</span> <span class="n">io_in_0</span><span class="p">;</span> <span class="c1">// @[cookbook.md 734:{13,13}]</span>
+  <span class="kt">wire</span>  <span class="mi">_</span><span class="n">GEN_2</span> <span class="o">=</span> <span class="mh">2'h2</span> <span class="o">==</span> <span class="n">io_idx</span> <span class="o">?</span> <span class="n">io_in_2</span> <span class="o">:</span> <span class="mi">_</span><span class="n">GEN_1</span><span class="p">;</span> <span class="c1">// @[cookbook.md 734:{13,13}]</span>
+  <span class="kt">wire</span>  <span class="mi">_</span><span class="n">GEN_3</span> <span class="o">=</span> <span class="mh">2'h3</span> <span class="o">==</span> <span class="n">io_idx</span> <span class="o">?</span> <span class="n">io_in_3</span> <span class="o">:</span> <span class="mi">_</span><span class="n">GEN_2</span><span class="p">;</span> <span class="c1">// @[cookbook.md 734:{13,13}]</span>
+  <span class="k">assign</span> <span class="n">io_out</span> <span class="o">=</span> <span class="mi">_</span><span class="n">GEN_3</span> <span class="o">&amp;</span> <span class="n">io_en</span><span class="p">;</span> <span class="c1">// @[cookbook.md 734:13]</span>
 <span class="k">endmodule</span>
 </code></pre></div></div>
 
@@ -737,7 +737,7 @@ normal <code class="language-plaintext highlighter-rouge">val</code> prefix, you
 </code></pre></div></div>
 
 <p>Which produces:</p>
-<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">Foo</span><span class="p">(</span>
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">Foo2</span><span class="p">(</span>
   <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
   <span class="kt">input</span>        <span class="n">reset</span><span class="p">,</span>
   <span class="kt">input</span>        <span class="n">io_in_0</span><span class="p">,</span>
@@ -748,15 +748,13 @@ normal <code class="language-plaintext highlighter-rouge">val</code> prefix, you
   <span class="kt">input</span>        <span class="n">io_en</span><span class="p">,</span>
   <span class="kt">output</span>       <span class="n">io_out</span>
 <span class="p">);</span>
-  <span class="kt">wire</span>  <span class="mi">_</span><span class="n">GEN_1</span><span class="p">;</span>
-  <span class="kt">wire</span>  <span class="mi">_</span><span class="n">GEN_2</span><span class="p">;</span>
-  <span class="kt">wire</span>  <span class="n">x</span><span class="p">;</span>
-  <span class="k">assign</span> <span class="mi">_</span><span class="n">GEN_1</span> <span class="o">=</span> <span class="mh">2'h1</span> <span class="o">==</span> <span class="n">io_idx</span> <span class="o">?</span> <span class="n">io_in_1</span> <span class="o">:</span> <span class="n">io_in_0</span><span class="p">;</span>
-  <span class="k">assign</span> <span class="mi">_</span><span class="n">GEN_2</span> <span class="o">=</span> <span class="mh">2'h2</span> <span class="o">==</span> <span class="n">io_idx</span> <span class="o">?</span> <span class="n">io_in_2</span> <span class="o">:</span> <span class="mi">_</span><span class="n">GEN_1</span><span class="p">;</span>
-  <span class="k">assign</span> <span class="n">x</span> <span class="o">=</span> <span class="mh">2'h3</span> <span class="o">==</span> <span class="n">io_idx</span> <span class="o">?</span> <span class="n">io_in_3</span> <span class="o">:</span> <span class="mi">_</span><span class="n">GEN_2</span><span class="p">;</span>
-  <span class="k">assign</span> <span class="n">io_out</span> <span class="o">=</span> <span class="n">x</span> <span class="o">&amp;</span> <span class="n">io_en</span><span class="p">;</span> <span class="c1">// @[main.scala 16:10]</span>
+  <span class="kt">wire</span>  <span class="mi">_</span><span class="n">GEN_1</span> <span class="o">=</span> <span class="mh">2'h1</span> <span class="o">==</span> <span class="n">io_idx</span> <span class="o">?</span> <span class="n">io_in_1</span> <span class="o">:</span> <span class="n">io_in_0</span><span class="p">;</span> <span class="c1">// @[cookbook.md 756:{19,19}]</span>
+  <span class="kt">wire</span>  <span class="mi">_</span><span class="n">GEN_2</span> <span class="o">=</span> <span class="mh">2'h2</span> <span class="o">==</span> <span class="n">io_idx</span> <span class="o">?</span> <span class="n">io_in_2</span> <span class="o">:</span> <span class="mi">_</span><span class="n">GEN_1</span><span class="p">;</span> <span class="c1">// @[cookbook.md 756:{19,19}]</span>
+  <span class="kt">wire</span>  <span class="n">x</span> <span class="o">=</span> <span class="mh">2'h3</span> <span class="o">==</span> <span class="n">io_idx</span> <span class="o">?</span> <span class="n">io_in_3</span> <span class="o">:</span> <span class="mi">_</span><span class="n">GEN_2</span><span class="p">;</span> <span class="c1">// @[cookbook.md 756:{19,19}]</span>
+  <span class="k">assign</span> <span class="n">io_out</span> <span class="o">=</span> <span class="n">x</span> <span class="o">&amp;</span> <span class="n">io_en</span><span class="p">;</span> <span class="c1">// @[cookbook.md 757:13]</span>
 <span class="k">endmodule</span>
 </code></pre></div></div>
+
 <h3 id="how-can-i-dynamically-setparametrize-the-name-of-a-module">How can I dynamically set/parametrize the name of a module?</h3>
 
 <p>You can override the <code class="language-plaintext highlighter-rouge">desiredName</code> function. This works with normal Chisel modules and <code class="language-plaintext highlighter-rouge">BlackBox</code>es. Example:</p>
@@ -779,18 +777,14 @@ normal <code class="language-plaintext highlighter-rouge">val</code> prefix, you
 </code></pre></div></div>
 
 <p>Elaborating the Chisel module <code class="language-plaintext highlighter-rouge">Salt</code> yields our “desired names” for <code class="language-plaintext highlighter-rouge">Salt</code> and <code class="language-plaintext highlighter-rouge">Coffee</code> in the output Verilog:</p>
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3.stage.ChiselStage</span>
-
-<span class="nv">ChiselStage</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">Salt</span><span class="o">)</span>
-</code></pre></div></div>
 
 <div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">SodiumMonochloride</span><span class="p">(</span>
   <span class="kt">input</span>   <span class="n">clock</span><span class="p">,</span>
   <span class="kt">input</span>   <span class="n">reset</span>
 <span class="p">);</span>
-  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">drink_I</span><span class="p">;</span> <span class="c1">// @[cookbook.md 684:23]</span>
-  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">drink_O</span><span class="p">;</span> <span class="c1">// @[cookbook.md 684:23]</span>
-  <span class="n">Tea</span> <span class="n">drink</span> <span class="p">(</span> <span class="c1">// @[cookbook.md 684:23]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">drink_I</span><span class="p">;</span> <span class="c1">// @[cookbook.md 788:23]</span>
+  <span class="kt">wire</span> <span class="p">[</span><span class="mi">31</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">drink_O</span><span class="p">;</span> <span class="c1">// @[cookbook.md 788:23]</span>
+  <span class="n">Tea</span> <span class="n">drink</span> <span class="p">(</span> <span class="c1">// @[cookbook.md 788:23]</span>
     <span class="p">.</span><span class="n">I</span><span class="p">(</span><span class="n">drink_I</span><span class="p">),</span>
     <span class="p">.</span><span class="n">O</span><span class="p">(</span><span class="n">drink_O</span><span class="p">)</span>
   <span class="p">);</span>
@@ -805,7 +799,9 @@ normal <code class="language-plaintext highlighter-rouge">val</code> prefix, you
 <p>Given a bidirectional port like a <code class="language-plaintext highlighter-rouge">Decoupled</code>, you will get an error if you try to connect it directly
 to a register:</p>
 
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3.util.Decoupled</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3._</span>
+<span class="k">import</span> <span class="nn">chisel3.stage.ChiselStage</span>
+<span class="k">import</span> <span class="nn">chisel3.util.Decoupled</span>
 <span class="k">class</span> <span class="nc">BadRegConnect</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
     <span class="k">val</span> <span class="nv">enq</span> <span class="k">=</span> <span class="nc">Decoupled</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">))</span>
@@ -817,7 +813,7 @@ to a register:</p>
 </code></pre></div></div>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">ChiselStage</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">BadRegConnect</span><span class="o">)</span>
-<span class="c1">// firrtl.passes.CheckHighFormLike$RegWithFlipException:  @[cookbook.md 715:20]: [module BadRegConnect] Register monitor cannot be a bundle type with flips.</span>
+<span class="c1">// firrtl.passes.CheckHighFormLike$RegWithFlipException:  @[cookbook.md 819:20]: [module BadRegConnect] Register monitor cannot be a bundle type with flips.</span>
 </code></pre></div></div>
 
 <p>While there is no construct to “strip direction” in Chisel3, wrapping a type in <code class="language-plaintext highlighter-rouge">Output(...)</code>
@@ -825,7 +821,9 @@ to a register:</p>
 set all of the individual elements to output direction.
 This will have the desired result when used to construct a Register:</p>
 
-<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3.util.Decoupled</span>
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3._</span>
+<span class="k">import</span> <span class="nn">chisel3.stage.ChiselStage</span>
+<span class="k">import</span> <span class="nn">chisel3.util.Decoupled</span>
 <span class="k">class</span> <span class="nc">CoercedRegConnect</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
   <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{</span>
     <span class="k">val</span> <span class="nv">enq</span> <span class="k">=</span> <span class="nc">Flipped</span><span class="o">(</span><span class="nc">Decoupled</span><span class="o">(</span><span class="nc">UInt</span><span class="o">(</span><span class="mf">8.</span><span class="n">W</span><span class="o">)))</span>
