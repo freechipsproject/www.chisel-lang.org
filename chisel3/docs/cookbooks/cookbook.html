@@ -773,6 +773,8 @@ normal <code class="language-plaintext highlighter-rouge">val</code> prefix, you
     <span class="k">val</span> <span class="nv">io</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bundle</span> <span class="o">{})</span>
     <span class="k">val</span> <span class="nv">drink</span> <span class="k">=</span> <span class="nc">Module</span><span class="o">(</span><span class="k">new</span> <span class="nc">Coffee</span><span class="o">)</span>
     <span class="k">override</span> <span class="k">def</span> <span class="nf">desiredName</span> <span class="k">=</span> <span class="s">"SodiumMonochloride"</span>
+
+    <span class="nv">drink</span><span class="o">.</span><span class="py">io</span><span class="o">.</span><span class="py">I</span> <span class="o">:=</span> <span class="mf">42.</span><span class="n">U</span>
 <span class="o">}</span>
 </code></pre></div></div>
 
@@ -788,7 +790,7 @@ normal <code class="language-plaintext highlighter-rouge">val</code> prefix, you
     <span class="p">.</span><span class="n">I</span><span class="p">(</span><span class="n">drink_I</span><span class="p">),</span>
     <span class="p">.</span><span class="n">O</span><span class="p">(</span><span class="n">drink_O</span><span class="p">)</span>
   <span class="p">);</span>
-  <span class="k">assign</span> <span class="n">drink_I</span> <span class="o">=</span> <span class="mh">32'h0</span><span class="p">;</span>
+  <span class="k">assign</span> <span class="n">drink_I</span> <span class="o">=</span> <span class="mh">32'h2a</span><span class="p">;</span> <span class="c1">// @[cookbook.md 791:16]</span>
 <span class="k">endmodule</span>
 </code></pre></div></div>
 
@@ -813,7 +815,7 @@ to a register:</p>
 </code></pre></div></div>
 
 <div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">ChiselStage</span><span class="o">.</span><span class="py">emitVerilog</span><span class="o">(</span><span class="k">new</span> <span class="nc">BadRegConnect</span><span class="o">)</span>
-<span class="c1">// firrtl.passes.CheckHighFormLike$RegWithFlipException:  @[cookbook.md 819:20]: [module BadRegConnect] Register monitor cannot be a bundle type with flips.</span>
+<span class="c1">// firrtl.passes.CheckHighFormLike$RegWithFlipException:  @[cookbook.md 821:20]: [module BadRegConnect] Register monitor cannot be a bundle type with flips.</span>
 </code></pre></div></div>
 
 <p>While there is no construct to “strip direction” in Chisel3, wrapping a type in <code class="language-plaintext highlighter-rouge">Output(...)</code>
