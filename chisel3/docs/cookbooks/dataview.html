@@ -19,6 +19,7 @@ ga('send', 'pageview');
     <ul>
       <li><a href="#how-do-i-view-a-bundle-as-a-parent-type-superclass">How do I view a Bundle as a parent type (superclass)?</a></li>
       <li><a href="#how-do-i-view-a-bundle-as-a-parent-type-when-the-parent-type-is-abstract-like-a-trait">How do I view a Bundle as a parent type when the parent type is abstract (like a trait)?</a></li>
+      <li><a href="#how-can-i-use-viewas-instead-of-viewassupertypetype">How can I use <code class="language-plaintext highlighter-rouge">.viewAs</code> instead of <code class="language-plaintext highlighter-rouge">.viewAsSupertype(type)</code>?</a></li>
     </ul>
   </li>
 </ul>
@@ -176,6 +177,47 @@ As indicated in the comment, abstract methods must still be implemented.
 This is the same that happens when one writes <code class="language-plaintext highlighter-rouge">new Bundle {}</code>,
 the curly braces create a new concrete subclass; however, because <code class="language-plaintext highlighter-rouge">Bundle</code> has no abstract methods,
 the contents of the body can be empty.</p>
+
+<h3 id="how-can-i-use-viewas-instead-of-viewassupertypetype">How can I use <code class="language-plaintext highlighter-rouge">.viewAs</code> instead of <code class="language-plaintext highlighter-rouge">.viewAsSupertype(type)</code>?</h3>
+
+<p>While <code class="language-plaintext highlighter-rouge">viewAsSupertype</code> is helpful for one-off casts, the need to provide a type template object
+each time can be onerous.
+Because of the subtyping relationship, you can use <code class="language-plaintext highlighter-rouge">PartialDataView.supertype</code> to create a
+<code class="language-plaintext highlighter-rouge">DataView</code> from a Bundle type to a parent type by just providing the function to construct an
+instance of the parent type from an instance of the child type.
+The mapping of corresponding fields is automatically determined by Chisel to be the fields defined
+in the supertype.</p>
+
+<div class="language-scala highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nn">chisel3._</span>
+<span class="k">import</span> <span class="nn">chisel3.experimental.dataview._</span>
+
+<span class="k">class</span> <span class="nc">Foo</span><span class="o">(</span><span class="n">x</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Bundle</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">foo</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="nv">x</span><span class="o">.</span><span class="py">W</span><span class="o">)</span>
+<span class="o">}</span>
+<span class="k">class</span> <span class="nc">Bar</span><span class="o">(</span><span class="k">val</span> <span class="nv">x</span><span class="k">:</span> <span class="kt">Int</span><span class="o">)</span> <span class="k">extends</span> <span class="nc">Foo</span><span class="o">(</span><span class="n">x</span><span class="o">)</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">bar</span> <span class="k">=</span> <span class="nc">UInt</span><span class="o">(</span><span class="nv">x</span><span class="o">.</span><span class="py">W</span><span class="o">)</span>
+<span class="o">}</span>
+<span class="c1">// Define a DataView without having to specify the mapping!</span>
+<span class="k">implicit</span> <span class="k">val</span> <span class="nv">view</span> <span class="k">=</span> <span class="nv">PartialDataView</span><span class="o">.</span><span class="py">supertype</span><span class="o">[</span><span class="kt">Bar</span>, <span class="kt">Foo</span><span class="o">](</span><span class="n">b</span> <span class="k">=&gt;</span> <span class="k">new</span> <span class="nc">Foo</span><span class="o">(</span><span class="nv">b</span><span class="o">.</span><span class="py">x</span><span class="o">))</span>
+
+<span class="k">class</span> <span class="nc">MyModule</span> <span class="k">extends</span> <span class="nc">Module</span> <span class="o">{</span>
+  <span class="k">val</span> <span class="nv">foo</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Input</span><span class="o">(</span><span class="k">new</span> <span class="nc">Foo</span><span class="o">(</span><span class="mi">8</span><span class="o">)))</span>
+  <span class="k">val</span> <span class="nv">bar</span> <span class="k">=</span> <span class="nc">IO</span><span class="o">(</span><span class="nc">Output</span><span class="o">(</span><span class="k">new</span> <span class="nc">Bar</span><span class="o">(</span><span class="mi">8</span><span class="o">)))</span>
+  <span class="nv">bar</span><span class="o">.</span><span class="py">viewAs</span><span class="o">[</span><span class="kt">Foo</span><span class="o">]</span> <span class="o">:=</span> <span class="n">foo</span> <span class="c1">// bar.foo := foo.foo</span>
+  <span class="nv">bar</span><span class="o">.</span><span class="py">bar</span> <span class="o">:=</span> <span class="mf">123.</span><span class="n">U</span>       <span class="c1">// all fields need to be connected</span>
+<span class="o">}</span>
+</code></pre></div></div>
+<div class="language-verilog highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">module</span> <span class="n">MyModule</span><span class="p">(</span>
+  <span class="kt">input</span>        <span class="n">clock</span><span class="p">,</span>
+  <span class="kt">input</span>        <span class="n">reset</span><span class="p">,</span>
+  <span class="kt">input</span>  <span class="p">[</span><span class="mi">7</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">foo_foo</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="p">[</span><span class="mi">7</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">bar_foo</span><span class="p">,</span>
+  <span class="kt">output</span> <span class="p">[</span><span class="mi">7</span><span class="o">:</span><span class="mi">0</span><span class="p">]</span> <span class="n">bar_bar</span>
+<span class="p">);</span>
+  <span class="k">assign</span> <span class="n">bar_foo</span> <span class="o">=</span> <span class="n">foo_foo</span><span class="p">;</span> <span class="c1">// @[dataview.md 206:19]</span>
+  <span class="k">assign</span> <span class="n">bar_bar</span> <span class="o">=</span> <span class="mh">8'h7b</span><span class="p">;</span> <span class="c1">// @[dataview.md 207:11]</span>
+<span class="k">endmodule</span>
+</code></pre></div></div>
 </section></div></div></div></div><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="/highlight/highlight.pack.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/verilog.min.js"></script><script src="/lunr/lunr.js"></script><script>
 // For all code blocks, copy the language from the containing div
 // to the inner code tag (where hljs expects it to be)
