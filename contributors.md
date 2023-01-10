@@ -72,6 +72,7 @@
 - [`@pranith`](https://github.com/pranith)
 - [`@ptorru`](https://github.com/ptorru)
 - [`@rachelzoll`](https://github.com/rachelzoll)
+- [`@Ravencus`](https://github.com/Ravencus)
 - [`@richardxia`](https://github.com/richardxia)
 - [`@rupertlssmith`](https://github.com/rupertlssmith)
 - [`@ryan-lund`](https://github.com/ryan-lund)
