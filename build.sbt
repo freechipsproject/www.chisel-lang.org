@@ -47,11 +47,6 @@ lazy val micrositeSettings = Seq(
       Map("title" -> "Home",
           "section" -> "home",
           "technologies" -> technologies)),
-    file("chisel-testers/README.md") -> ExtraMdFileConfig(
-      "chisel-testers/index.md", "docs",
-      Map("title" -> "Testers",
-          "section" -> "chisel-testers",
-          "position" -> "2")),
     file("chiseltest/README.md") -> ExtraMdFileConfig(
       "chiseltest/index.md", "docs",
       Map("title" -> "ChiselTest",
