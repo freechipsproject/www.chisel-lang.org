@@ -48,6 +48,10 @@ options:
         url: chisel3/docs/explanations/supported-hardware.html
         menu_type: chisel3
         menu_section: supported-hardware
+      - title: Connectable
+        url: chisel3/docs/explanations/connectable.html
+        menu_type: chisel3
+        menu_section: connectable
       - title: Data Types
         url: chisel3/docs/explanations/data-types.html
         menu_type: chisel3
@@ -148,6 +152,14 @@ options:
         url: chisel3/docs/explanations/chisel-type-vs-scala-type.html
         menu_type: chisel3
         menu_section: chisel-type-vs-scala-type
+      - title: Decoders
+        url: chisel3/docs/explanations/decoder.html
+        menu_type: chisel3
+        menu_section: decoders
+      - title: Source Locators
+        url: chisel3/docs/explanations/source-locators.html
+        menu_type: chisel3
+        menu_section: source-locators
   - title: Appendix
     url: chisel3/docs/appendix/appendix.html
     menu_type: chisel3
@@ -180,6 +192,8 @@ options:
     nested_options:
       - title: Latest
         url: api/chisel3/latest/
+      - title: 3.6
+        url: api/chisel3/3.6/
       - title: 3.5
         url: api/chisel3/3.5/
       - title: 3.4
@@ -188,25 +202,6 @@ options:
         url: api/3.3.3/
       - title: 3.2
         url: api/3.2.8/
-
-  # Testers Site
-  - title: Testers
-    url: chisel-testers/
-    menu_type: chisel-testers
-  - title: API Documentation
-    url: api/chisel-testers/
-    menu_type: chisel-testers
-    nested_options:
-      - title: Latest
-        url: api/chisel-testers/latest
-      - title: 2.5
-        url: api/chisel-testers/2.5
-      - title: 1.5
-        url: api/chisel-testers/1.5
-      - title: 1.4
-        url: api/chisel-testers/1.4
-      - title: 1.3
-        url: api/chisel-testers/1.3
 
   # Chisel Test (chisel-testers2)
   - title: ChiselTest
@@ -218,6 +213,8 @@ options:
     nested_options:
       - title: Latest
         url: api/chiseltest/latest
+      - title: 0.6
+        url: api/chiseltest/0.6
       - title: 0.5
         url: api/chiseltest/0.5
       - title: 0.3
@@ -237,6 +234,8 @@ options:
     nested_options:
       - title: Latest
         url: api/firrtl/latest
+      - title: 1.6
+        url: api/firrtl/1.6
       - title: 1.5
         url: api/firrtl/1.5
       - title: 1.4
@@ -264,6 +263,8 @@ options:
     nested_options:
       - title: Latest
         url: api/treadle/latest
+      - title: 1.6
+        url: api/treadle/1.6
       - title: 1.5
         url: api/treadle/1.5
       - title: 1.3
@@ -283,6 +284,8 @@ options:
     nested_options:
       - title: Latest
         url: api/diagrammer/latest
+      - title: 1.6
+        url: api/diagrammer/1.6
       - title: 1.5
         url: api/diagrammer/1.5
       - title: 1.3
