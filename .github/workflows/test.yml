@@ -16,20 +16,20 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Setup Scala
-        uses: olafurpg/setup-scala@v10
+        uses: actions/setup-java@v3
         with:
-          java-version: adopt@1.8
-      - name: Cache Scala
-        uses: coursier/cache-action@v5
+          distribution: 'adopt'
+          java-version: '8'
+          cache: 'sbt'
       - name: Calculate API Docs Cache Key
         id: calc-key
         run: |
           KEY=$(make --always-make --dry-run apis-${{ matrix.project }} | sha256sum | awk '{print $1}')
           echo "::set-output name=cache_key::${KEY}"
       - name: Cache API Docs
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: build/api/${{ matrix.project }}
           key: ${{ runner.os }}-${{ matrix.project }}-${{ steps.calc-key.outputs.cache_key }}
@@ -41,7 +41,7 @@ jobs:
       - name: Tar build artifacts
         run: tar zcf build/api/${{ matrix.project }}.tar.gz build/api/${{ matrix.project }}
       - name: Share API Docs
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: ${{ matrix.project }}-api-docs
           path: build/api/${{ matrix.project }}.tar.gz
@@ -53,13 +53,15 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
       - name: Setup Scala
-        uses: olafurpg/setup-scala@v10
+        uses: actions/setup-java@v3
         with:
-          java-version: adopt@1.8
-      - name: Cache Scala
-        uses: coursier/cache-action@v5
+          distribution: 'adopt'
+          java-version: '8'
+          cache: 'sbt'
+      - name: Install CIRCT
+        uses: ./.github/workflows/install-circt
       - name: Setup Ruby
         uses: actions/setup-ruby@v1
       - name: Setup Jekyll
@@ -67,7 +69,7 @@ jobs:
           gem install jekyll -v 4.2.0
           gem install jekyll-redirect-from
       - name: Download all built API docs
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v3
         with:
           path: artifacts
       - name: Untar build artifacts
