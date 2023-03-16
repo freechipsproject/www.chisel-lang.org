@@ -28,13 +28,13 @@ lazy val micrositeSettings = Seq(
   micrositeBaseUrl := "",
   micrositeAuthor := "the Chisel/FIRRTL Developers",
   micrositeTwitter := "@chisel_lang",
-  micrositeGithubOwner := "freechipsproject",
-  micrositeGithubRepo := "chisel3",
+  micrositeGithubOwner := "chipsalliance",
+  micrositeGithubRepo := "chisel",
   micrositeGithubLinks := false,
   micrositeShareOnSocial := false,
   micrositeDocumentationUrl := "chisel3/",
   micrositeDocumentationLabelDescription := "Documentation",
-  micrositeGitterChannelUrl := "freechipsproject/chisel3",
+  micrositeGitterChannelUrl := "chipsalliance/chisel",
   micrositeHighlightLanguages ++= Seq("verilog"),
   mdocIn := file("docs/src/main/tut"),
   /* Copy markdown files from each of the submodules to build out the website:
@@ -108,7 +108,7 @@ lazy val contributors =
       determineContributors := {
         import java.io.{File, PrintWriter}
         val uniqueContributors =
-          Seq( GitHubRepository("chipsalliance", "chisel3"),
+          Seq( GitHubRepository("chipsalliance", "chisel"),
                GitHubRepository("chipsalliance", "firrtl"),
                GitHubRepository("chipsalliance", "treadle"),
                GitHubRepository("ucb-bar", "chiseltest"),
