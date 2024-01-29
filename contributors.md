@@ -35,7 +35,6 @@
 - [`@eymay`](https://github.com/eymay)
 - [`@felixonmars`](https://github.com/felixonmars)
 - [`@ferresb`](https://github.com/ferresb)
-- [`@GeorgeLyon`](https://github.com/GeorgeLyon)
 - [`@grebe`](https://github.com/grebe)
 - [`@hcook`](https://github.com/hcook)
 - [`@hngenc`](https://github.com/hngenc)
