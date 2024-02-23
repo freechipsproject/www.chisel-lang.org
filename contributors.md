@@ -12,6 +12,7 @@
 - [`@carlosedp`](https://github.com/carlosedp)
 - [`@ccelio`](https://github.com/ccelio)
 - [`@chick`](https://github.com/chick)
+- [`@chiselbot`](https://github.com/chiselbot)
 - [`@colin4124`](https://github.com/colin4124)
 - [`@colinschmidt`](https://github.com/colinschmidt)
 - [`@danluu`](https://github.com/danluu)
