@@ -228,6 +228,9 @@ options:
   - title: FIRRTL
     url: firrtl/
     menu_type: firrtl
+  - title: Stage/Phase
+    url: firrtl/stage-phase
+    menu_type: firrtl
   - title: API Documentation
     url: api/firrtl/
     menu_type: firrtl
