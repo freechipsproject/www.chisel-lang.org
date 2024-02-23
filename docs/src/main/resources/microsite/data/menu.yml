@@ -35,6 +35,10 @@ options:
         url: chisel3/docs/cookbooks/hierarchy.html
         menu_type: chisel3
         menu_section: hierarchy-cookbook
+       - title: Verilog-Chisel Coobook
+        url: chisel3/docs/cookbooks/two-side-column.html
+        menu_type: chisel3
+        menu_section: hierarchy-cookbook
   - title: Explanations
     url: chisel3/docs/explanations/explanations.html
     menu_type: chisel3
